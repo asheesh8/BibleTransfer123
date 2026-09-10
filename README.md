@@ -80,6 +80,13 @@ npm run serve:card    # serve it on this machine's network
 same Wi-Fi opens that address and has the whole library with no internet at all.
 That is what a VillageServer Pi does; this is the same thing on a laptop.
 
+If you put the card on a Pi, serve it with `packer/serve.py`, not a bare
+`python3 -m http.server`. Python's built-in server ignores byte-range requests,
+and **iOS Safari will not play video from a server that can't answer one** —
+every iPhone in the room would get a dead player. `serve.py` answers ranges
+properly (206, suffix ranges, 416), and it is also what introduces two phones
+for Nearby with no internet. nginx or Apache serve ranges too, but not Nearby.
+
 `./card` is gitignored. Tens of gigabytes of media belongs on a microSD card,
 never in the repo and never in a Vercel deploy.
 
