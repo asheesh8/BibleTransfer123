@@ -1,0 +1,100 @@
+"""Normalise a source catalogue into the flat asset list EasyTransfer packs.
+
+The source today is GawahiiTV's `data/resources.json` (112 Digital Bible Society
+resources in Sindhi and Urdu). Nothing here is specific to that file beyond
+`from_gawahi()` — swap that one function to pack a different library.
+"""
+import dataclasses, json, pathlib
+from .util import safe_name, is_file_url
+
+# Roles, in the order a resource is worth packing. `cover` is tiny and always
+# worth it; `view` is what the app plays or reads; `download` is the bundle a
+# visitor copies to their phone.
+ROLES = ("cover", "view", "download")
+
+
+@dataclasses.dataclass
+class Asset:
+    rid: str            # owning resource id
+    role: str           # cover | view | download
+    url: str            # where to fetch it from
+    rel: str            # path under the card's media/ root
+    label: str = ""     # shown in the app's download list
+    n: int = 0          # chapter number, for chaptered films
+    title: str = ""     # chapter title
+    nbytes: int = 0     # filled in by sizes.probe(); 0 means unknown
+
+    @property
+    def key(self):
+        return self.rel
+
+
+def load(path):
+    with open(path, encoding="utf-8") as fh:
+        return json.load(fh)
+
+
+def assets_for(r):
+    """Every packable file a resource exposes, as Assets.
+
+    Resources whose only links are landing pages (the 52 `link` partner entries)
+    yield nothing but a cover — they stay in the app as "needs internet" cards
+    rather than being dropped, because a Raspberry Pi with an uplink can still
+    reach them.
+    """
+    rid = r["id"]
+    out = []
+
+    if r.get("cover"):
+        ext = pathlib.PurePosixPath(r["cover"].split("?")[0]).suffix or ".jpg"
+        out.append(Asset(rid, "cover", r["cover"], f"{rid}/cover{ext}", "Cover"))
+
+    play = r.get("play") or {}
+    kind = play.get("kind")
+
+    if kind == "chapters":
+        for it in play["items"]:
+            out.append(Asset(rid, "view", play["base"] + it["file"],
+                             f"{rid}/{safe_name(it['file'])}",
+                             label=it["title"], n=it["n"], title=it["title"]))
+    elif kind == "file":
+        for q in ("hd", "sd"):
+            if play.get(q):
+                out.append(Asset(rid, "view", play[q],
+                                 f"{rid}/{q}-{safe_name(play[q])}", label=q.upper()))
+    elif kind == "audio-collection" and play.get("sample"):
+        out.append(Asset(rid, "view", play["sample"],
+                         f"{rid}/{safe_name(play['sample'])}", label="Audio"))
+    # audio-bible chapters are generated from a fileset pattern — 1,189 files per
+    # Bible. They are packed through their download ZIP instead, below.
+
+    read = r.get("read") or {}
+    if read.get("url"):
+        out.append(Asset(rid, "view", read["url"],
+                         f"{rid}/{safe_name(read['url'])}", label="Read"))
+
+    for d in (r.get("downloads") or []):
+        if not is_file_url(d["url"]):
+            continue                      # a landing page, not a file
+        out.append(Asset(rid, "download", d["url"],
+                         f"{rid}/{safe_name(d['url'])}", label=d["label"]))
+
+    # Two links can resolve to the same file — a historic scan's `read` PDF is
+    # usually also its only download. Keep the first, which carries the better role.
+    seen, uniq = set(), []
+    for a in out:
+        if a.rel in seen:
+            continue
+        seen.add(a.rel)
+        uniq.append(a)
+    return uniq
+
+
+def index(catalog):
+    """resource id -> resource."""
+    return {r["id"]: r for r in catalog["resources"]}
+
+
+def all_assets(catalog):
+    """resource id -> [Asset]."""
+    return {r["id"]: assets_for(r) for r in catalog["resources"]}

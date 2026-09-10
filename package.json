@@ -1,0 +1,13 @@
+{
+  "name": "easytransfer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Packs a media library onto a microSD card, with an offline app that opens itself.",
+  "scripts": {
+    "dev": "python3 packer/serve.py 8095",
+    "preview": "python3 packer/easytransfer.py preview && python3 packer/serve.py 8095",
+    "plan": "python3 packer/easytransfer.py plan --profile standard",
+    "catalog": "python3 packer/easytransfer.py preview",
+    "list": "python3 packer/easytransfer.py list"
+  }
+}

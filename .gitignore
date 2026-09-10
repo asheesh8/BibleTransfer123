@@ -1,0 +1,6 @@
+.DS_Store
+.cache/
+.testcard/
+__pycache__/
+*.pyc
+*.part

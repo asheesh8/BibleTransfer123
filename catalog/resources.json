@@ -1,0 +1,4548 @@
+{
+ "generated": "Digital Bible Society (dbs.org) — Sindhi & Urdu collections",
+ "note": "All media streams and downloads point at the original DBS / partner CDNs. Nothing is re-hosted.",
+ "languages": {
+  "snd": {
+   "code": "snd",
+   "name": "Sindhi",
+   "native": "سنڌي",
+   "script": "arab",
+   "dir": "rtl",
+   "font": "naskh",
+   "speakers": "~30 million",
+   "region": "Sindh, Pakistan & India",
+   "blurb": "An Indo-Aryan language native to Sindh, written in an extended Arabic script."
+  },
+  "urd": {
+   "code": "urd",
+   "name": "Urdu",
+   "native": "اردو",
+   "script": "arab",
+   "dir": "rtl",
+   "font": "nastaliq",
+   "speakers": "~230 million",
+   "region": "Pakistan & India",
+   "blurb": "The national language of Pakistan, written in the Nastaliq style of the Perso-Arabic script."
+  }
+ },
+ "types": {
+  "film": {
+   "label": "Films",
+   "icon": "film",
+   "blurb": "Feature films, gospel dramas and short teaching video."
+  },
+  "audio-bible": {
+   "label": "Audio Bibles",
+   "icon": "audio",
+   "blurb": "Chapter-by-chapter spoken Scripture."
+  },
+  "audio": {
+   "label": "Audio Collections",
+   "icon": "wave",
+   "blurb": "Scripture-based recordings, teaching sets and songs."
+  },
+  "scripture": {
+   "label": "Scripture Text",
+   "icon": "book",
+   "blurb": "Full Bible and New Testament text to read or download."
+  },
+  "historic": {
+   "label": "Historic Scans",
+   "icon": "scan",
+   "blurb": "Scanned pages of historic printed Scripture."
+  },
+  "link": {
+   "label": "Partner Links",
+   "icon": "link",
+   "blurb": "Resources hosted by partner organisations."
+  }
+ },
+ "resources": [
+  {
+   "id": "snd-film-jesus",
+   "lang": "snd",
+   "type": "film",
+   "title": "JESUS",
+   "org": "Jesus Film Project",
+   "duration": "2:07:53",
+   "year": "1979",
+   "cover": "https://meta.dbs.org/data/data-video/covers/Jesus/jesus.jpg",
+   "desc": "The life of Jesus told from the Gospel of Luke — the most translated film in history, dubbed into Sindhi. 61 chapters.",
+   "play": {
+    "kind": "chapters",
+    "base": "https://video.dbs.org/Jesus/chapters/snd_sindhi/",
+    "items": [
+     {
+      "n": 1,
+      "title": "The Beginning",
+      "file": "snd_jesus_chapter_01_the_beginning_1_jf6101_0_0_low.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Birth of Jesus",
+      "file": "snd_jesus_chapter_02_birth_of_jesus_1_jf6102_0_0_low.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Childhood of Jesus",
+      "file": "snd_jesus_chapter_03_childhood_of_jesus_1_jf6103_0_0_low.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Baptism of Jesus by John",
+      "file": "snd_jesus_chapter_04_baptism_of_jesus_by_john_1_jf6104_0_0_low.mp4"
+     },
+     {
+      "n": 5,
+      "title": "The Devil Tempts Jesus",
+      "file": "snd_jesus_chapter_05_the_devil_tempts_jesus_1_jf6105_0_0_low.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Jesus Proclaims Fulfillment of the Scriptures",
+      "file": "snd_jesus_chapter_06_jesus_proclaims_fulfillment_of_the_scriptures_1_jf6106_0_0_low.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Parable of the Pharisee and Tax Collector",
+      "file": "snd_jesus_chapter_07_parable_of_the_pharisee_and_tax_collector_1_jf6107_0_0_low.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Miraculous Catch of Fish",
+      "file": "snd_jesus_chapter_08_miraculous_catch_of_fish_1_jf6108_0_0_low.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Jairuss Daughter Brought Back to Life",
+      "file": "snd_jesus_chapter_09_jairuss_daughter_brought_back_to_life_1_jf6109_0_0_low.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Disciples Chosen",
+      "file": "snd_jesus_chapter_10_disciples_chosen_1_jf6110_0_0_low.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Beatitudes",
+      "file": "snd_jesus_chapter_11_beatitudes_1_jf6111_0_0_low.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Sermon on the Mount",
+      "file": "snd_jesus_chapter_12_sermon_on_the_mount_1_jf6112_0_0_low.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Blessed are Those who Hear and Obey",
+      "file": "snd_jesus_chapter_13_blessed_are_those_who_hear_and_obey_1_jf6113_0_0_low.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Sinful Woman Forgiven",
+      "file": "snd_jesus_chapter_14_sinful_woman_forgiven_1_jf6114_0_0_low.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Women Disciples",
+      "file": "snd_jesus_chapter_15_women_disciples_1_jf6115_0_0_low.mp4"
+     },
+     {
+      "n": 16,
+      "title": "John the Baptist in Prison",
+      "file": "snd_jesus_chapter_16_john_the_baptist_in_prison_1_jf6116_0_0_low.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Parable of the Sower and the Seed",
+      "file": "snd_jesus_chapter_17_parable_of_the_sower_and_the_seed_1_jf6117_0_0_low.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Parable of the Lamp",
+      "file": "snd_jesus_chapter_18_parable_of_the_lamp_1_jf6118_0_0_low.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Jesus Calms the Storm",
+      "file": "snd_jesus_chapter_19_jesus_calms_the_storm_1_jf6119_0_0_low.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Healing of the Demoniac",
+      "file": "snd_jesus_chapter_20_healing_of_the_demoniac_1_jf6120_0_0_low.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Jesus Feeds 5000",
+      "file": "snd_jesus_chapter_21_jesus_feeds_5000_1_jf6121_0_0_low.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Peter Declares Jesus to be the Christ",
+      "file": "snd_jesus_chapter_22_peter_declares_jesus_to_be_the_christ_1_jf6122_0_0_low.mp4"
+     },
+     {
+      "n": 23,
+      "title": "The Transfiguration",
+      "file": "snd_jesus_chapter_23_the_transfiguration_1_jf6123_0_0_low.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Jesus Heals Boy From Evil Spirit",
+      "file": "snd_jesus_chapter_24_jesus_heals_boy_from_evil_spirit_1_jf6124_0_0_low.mp4"
+     },
+     {
+      "n": 25,
+      "title": "The Lords Prayer",
+      "file": "snd_jesus_chapter_25_the_lords_prayer_1_jf6125_0_0_low.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Teaching About Prayer and Faith",
+      "file": "snd_jesus_chapter_26_teaching_about_prayer_and_faith_1_jf6126_0_0_low.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Woe to Those who Cause Others to Sin",
+      "file": "snd_jesus_chapter_27_woe_to_those_who_cause_others_to_sin_1_jf6127_0_0_low.mp4"
+     },
+     {
+      "n": 28,
+      "title": "The Kingdom of God as a Mustard Seed",
+      "file": "snd_jesus_chapter_28_the_kingdom_of_god_as_a_mustard_seed_1_jf6128_0_0_low.mp4"
+     },
+     {
+      "n": 29,
+      "title": "Jesus Spends Time with Sinners",
+      "file": "snd_jesus_chapter_29_jesus_spends_time_with_sinners_1_jf6129_0_0_low.mp4"
+     },
+     {
+      "n": 30,
+      "title": "Healing on the Sabbath",
+      "file": "snd_jesus_chapter_30_healing_on_the_sabbath_1_jf6130_0_0_low.mp4"
+     },
+     {
+      "n": 31,
+      "title": "Parable of the Good Samaritan",
+      "file": "snd_jesus_chapter_31_parable_of_the_good_samaritan_1_jf6131_0_0_low.mp4"
+     },
+     {
+      "n": 32,
+      "title": "Healing of Bartimaeus",
+      "file": "snd_jesus_chapter_32_healing_of_bartimaeus_1_jf6132_0_0_low.mp4"
+     },
+     {
+      "n": 33,
+      "title": "Jesus and Zaccheus",
+      "file": "snd_jesus_chapter_33_jesus_and_zaccheus_1_jf6133_0_0_low.mp4"
+     },
+     {
+      "n": 34,
+      "title": "Jesus Predicts his Death and Resurrection",
+      "file": "snd_jesus_chapter_34_jesus_predicts_his_death_and_resurrection_1_jf6134_0_0_low.mp4"
+     },
+     {
+      "n": 35,
+      "title": "Jesuss Triumphal Entry",
+      "file": "snd_jesus_chapter_35_jesuss_triumphal_entry_1_jf6135_0_0_low.mp4"
+     },
+     {
+      "n": 36,
+      "title": "Jesus Weeps Over Jerusalem",
+      "file": "snd_jesus_chapter_36_jesus_weeps_over_jerusalem_1_jf6136_0_0_low.mp4"
+     },
+     {
+      "n": 37,
+      "title": "Jesus Drives Out Money Changers",
+      "file": "snd_jesus_chapter_37_jesus_drives_out_money_changers_1_jf6137_0_0_low.mp4"
+     },
+     {
+      "n": 38,
+      "title": "Widows Offering",
+      "file": "snd_jesus_chapter_38_widows_offering_1_jf6138_0_0_low.mp4"
+     },
+     {
+      "n": 39,
+      "title": "Annas Questions Jesuss Authority",
+      "file": "snd_jesus_chapter_39_annas_questions_jesuss_authority_1_jf6139_0_0_low.mp4"
+     },
+     {
+      "n": 40,
+      "title": "Parable of the Vineyard and Tenants",
+      "file": "snd_jesus_chapter_40_parable_of_the_vineyard_and_tenants_1_jf6140_0_0_low.mp4"
+     },
+     {
+      "n": 41,
+      "title": "Paying Taxes to Caesar",
+      "file": "snd_jesus_chapter_41_paying_taxes_to_caesar_1_jf6141_0_0_low.mp4"
+     },
+     {
+      "n": 42,
+      "title": "The Last Supper",
+      "file": "snd_jesus_chapter_42_the_last_supper_1_jf6142_0_0_low.mp4"
+     },
+     {
+      "n": 43,
+      "title": "Upper Room Teaching",
+      "file": "snd_jesus_chapter_43_upper_room_teaching_1_jf6143_0_0_low.mp4"
+     },
+     {
+      "n": 44,
+      "title": "Jesus is Betrayed and Arrested",
+      "file": "snd_jesus_chapter_44_jesus_is_betrayed_and_arrested_1_jf6144_0_0_low.mp4"
+     },
+     {
+      "n": 45,
+      "title": "Peter Disowns Jesus",
+      "file": "snd_jesus_chapter_45_peter_disowns_jesus_1_jf6145_0_0_low.mp4"
+     },
+     {
+      "n": 46,
+      "title": "Jesus is Mocked and Questioned",
+      "file": "snd_jesus_chapter_46_jesus_is_mocked_and_questioned_1_jf6146_0_0_low.mp4"
+     },
+     {
+      "n": 47,
+      "title": "Jesus is Brought to Pilate",
+      "file": "snd_jesus_chapter_47_jesus_is_brought_to_pilate_1_jf6147_0_0_low.mp4"
+     },
+     {
+      "n": 48,
+      "title": "Jesus is Brought to Herod",
+      "file": "snd_jesus_chapter_48_jesus_is_brought_to_herod_1_jf6148_0_0_low.mp4"
+     },
+     {
+      "n": 49,
+      "title": "Jesus is Sentenced",
+      "file": "snd_jesus_chapter_49_jesus_is_sentenced_1_jf6149_0_0_low.mp4"
+     },
+     {
+      "n": 50,
+      "title": "Jesus Carries his Cross",
+      "file": "snd_jesus_chapter_50_jesus_carries_his_cross_1_jf6150_0_0_low.mp4"
+     },
+     {
+      "n": 51,
+      "title": "Jesus is Crucified",
+      "file": "snd_jesus_chapter_51_jesus_is_crucified_1_jf6151_0_0_low.mp4"
+     },
+     {
+      "n": 52,
+      "title": "Soldiers Gamble for Jesuss Clothes",
+      "file": "snd_jesus_chapter_52_soldiers_gamble_for_jesuss_clothes_1_jf6152_0_0_low.mp4"
+     },
+     {
+      "n": 53,
+      "title": "Sign on the Cross",
+      "file": "snd_jesus_chapter_53_sign_on_the_cross_1_jf6153_0_0_low.mp4"
+     },
+     {
+      "n": 54,
+      "title": "Crucified Convicts",
+      "file": "snd_jesus_chapter_54_crucified_convicts_1_jf6154_0_0_low.mp4"
+     },
+     {
+      "n": 55,
+      "title": "Death of Jesus",
+      "file": "snd_jesus_chapter_55_death_of_jesus_1_jf6155_0_0_low.mp4"
+     },
+     {
+      "n": 56,
+      "title": "Burial of Jesus",
+      "file": "snd_jesus_chapter_56_burial_of_jesus_1_jf6156_0_0_low.mp4"
+     },
+     {
+      "n": 57,
+      "title": "Angels At the Tomb",
+      "file": "snd_jesus_chapter_57_angels_at_the_tomb_1_jf6157_0_0_low.mp4"
+     },
+     {
+      "n": 58,
+      "title": "The Tomb is Empty",
+      "file": "snd_jesus_chapter_58_the_tomb_is_empty_1_jf6158_0_0_low.mp4"
+     },
+     {
+      "n": 59,
+      "title": "Resurrected Jesus Appears",
+      "file": "snd_jesus_chapter_59_resurrected_jesus_appears_1_jf6159_0_0_low.mp4"
+     },
+     {
+      "n": 60,
+      "title": "Great Commission and Ascension",
+      "file": "snd_jesus_chapter_60_great_commission_and_ascension_1_jf6160_0_0_low.mp4"
+     },
+     {
+      "n": 61,
+      "title": "Invitation to Know Jesus Personally",
+      "file": "snd_jesus_chapter_61_invitation_to_know_jesus_personally_1_jf6161_0_0_low.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "All chapters — SD",
+     "url": "https://download.dbs.org/Jesus/snd_sindhi/snd_jesus_chapters_low.zip",
+     "size": "~187 MB"
+    },
+    {
+     "label": "All chapters — HD",
+     "url": "https://download.dbs.org/Jesus/snd_sindhi/snd_jesus_chapters_high.zip",
+     "size": "~2.1 GB"
+    }
+   ],
+   "source": "https://dbs.org/video/jesus/snd_sindhi_jesus",
+   "read": null,
+   "native": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "snd-film-magdalena",
+   "lang": "snd",
+   "type": "film",
+   "title": "Magdalena",
+   "org": "Jesus Film Project",
+   "duration": "58:24",
+   "cover": "https://meta.dbs.org/data/data-video/covers/Magdalena/magdalena.jpg",
+   "desc": "The gospel story told through the eyes of the women who followed Jesus. Made for women's ministry.",
+   "source": "https://dbs.org/video/magdalena/snd_sindhi_magdalena",
+   "downloads": [
+    {
+     "label": "Director's Cut (Jesus Film Project)",
+     "url": "https://arc.gt/vayj5?apiSessionId=5f876510570d97.52460100",
+     "external": true
+    }
+   ],
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "snd-film-prophets-story",
+   "lang": "snd",
+   "type": "film",
+   "title": "The Prophets' Story",
+   "native": "نبين جو قصو",
+   "org": "Create International",
+   "duration": "0:09:16",
+   "cover": "https://meta.dbs.org/data/data-video/covers/PS/snd_Prophets_Story_%D9%86%D8%A8%D9%8A%D9%86_%D8%AC%D9%88_%D9%82%D8%B5%D9%88_Sindhi_of_Pakistan_%D8%B3%D9%86%DA%8C%D9%8A_%D9%81%D9%84%D9%85.jpg",
+   "desc": "A short animated telling of the prophets, leading to Isa al-Masih — made for Muslim-background audiences.",
+   "play": {
+    "kind": "file",
+    "hd": "https://dbs.org/cdn/video/PS/films/snd_Prophets_Story_%D9%86%D8%A8%D9%8A%D9%86_%D8%AC%D9%88_%D9%82%D8%B5%D9%88_Sindhi_of_Pakistan_%D8%B3%D9%86%DA%8C%D9%8A_%D9%81%D9%84%D9%85.mp4"
+   },
+   "downloads": [
+    {
+     "label": "MP4 (Create International)",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/PS/The-Prophets-Story_Sindhi_SND.mp4",
+     "external": true
+    }
+   ],
+   "source": "https://dbs.org/video/ps/snd_ps_sindhi_of_pakistan",
+   "read": null,
+   "year": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "snd-film-lumo-mark",
+   "lang": "snd",
+   "type": "film",
+   "title": "LUMO: The Gospel of Mark",
+   "org": "LUMO Project",
+   "cover": "https://meta.dbs.org/data/data-video/covers/Lumo-Mark/lumo_mark.webp",
+   "desc": "The Gospel of Mark filmed word for word, with the Sindhi Scripture text as the only narration. 16 parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "https://video.dbs.org/Lumo-Mark/films_low/snd_Sindhi-India_Mark_India-Sindhi-Translation_low/",
+    "items": [
+     {
+      "n": 1,
+      "title": "Part 1",
+      "file": "snd_LUMO_Sindhi-India_Mark_India-Sindhi-Translation_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Part 2",
+      "file": "snd_LUMO_Sindhi-India_Mark_India-Sindhi-Translation_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Part 3",
+      "file": "snd_LUMO_Sindhi-India_Mark_India-Sindhi-Translation_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Part 4",
+      "file": "snd_LUMO_Sindhi-India_Mark_India-Sindhi-Translation_04_360.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Part 5",
+      "file": "snd_LUMO_Sindhi-India_Mark_India-Sindhi-Translation_05_360.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Part 6",
+      "file": "snd_LUMO_Sindhi-India_Mark_India-Sindhi-Translation_06_360.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Part 7",
+      "file": "snd_LUMO_Sindhi-India_Mark_India-Sindhi-Translation_07_360.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Part 8",
+      "file": "snd_LUMO_Sindhi-India_Mark_India-Sindhi-Translation_08_360.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Part 9",
+      "file": "snd_LUMO_Sindhi-India_Mark_India-Sindhi-Translation_09_360.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Part 10",
+      "file": "snd_LUMO_Sindhi-India_Mark_India-Sindhi-Translation_10_360.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Part 11",
+      "file": "snd_LUMO_Sindhi-India_Mark_India-Sindhi-Translation_11_360.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Part 12",
+      "file": "snd_LUMO_Sindhi-India_Mark_India-Sindhi-Translation_12_360.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Part 13",
+      "file": "snd_LUMO_Sindhi-India_Mark_India-Sindhi-Translation_13_360.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Part 14",
+      "file": "snd_LUMO_Sindhi-India_Mark_India-Sindhi-Translation_14_360.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Part 15",
+      "file": "snd_LUMO_Sindhi-India_Mark_India-Sindhi-Translation_15_360.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Part 16",
+      "file": "snd_LUMO_Sindhi-India_Mark_India-Sindhi-Translation_16_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-mark/snd_sindhi-india_mark",
+   "downloads": [],
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "snd-film-hope",
+   "lang": "snd",
+   "type": "film",
+   "title": "The HOPE",
+   "org": "Mars Hill Productions",
+   "duration": "1:19:21",
+   "cover": "https://meta.dbs.org/data/data-video/covers/HOPE/snd_sindhi.webp",
+   "desc": "The whole biblical story from creation to Christ in one film — a survey of Scripture in 36 scenes.",
+   "play": {
+    "kind": "file",
+    "hd": "https://dbs.org/cdn/video/HOPE/films/snd_sindhi_the_hope.mp4",
+    "sd": "https://dbs.org/cdn/video/HOPE/films_low/snd_sindhi_the_hope_low.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Voice-only version (Mars Hill)",
+     "url": "https://www.mars-hill.org/the-hope/store/the-sindhi-hope-%D8%A7%D9%8F%D9%85%D9%8A%D8%AF-voice-only-version",
+     "external": true
+    }
+   ],
+   "source": "https://dbs.org/video/hope/snd_sindhi_the_hope",
+   "read": null,
+   "native": null,
+   "year": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "snd-film-ibible",
+   "lang": "snd",
+   "type": "film",
+   "title": "iBible: Salvation Story",
+   "org": "RevelationMedia",
+   "duration": "9:17",
+   "cover": "https://meta.dbs.org/data/data-video/covers/ibible/snd-sindhi-ibible_salvation.webp",
+   "desc": "A short animated overview of the story of salvation, from Genesis to the resurrection.",
+   "play": {
+    "kind": "file",
+    "hd": "https://dbs.org/cdn/video/ibible/films/snd-sindhi-ibible_salvation-hd.mp4",
+    "sd": "https://dbs.org/cdn/video/ibible/films_low/snd-sindhi-ibible_salvation-sd.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Download (ZIP)",
+     "url": "https://download.dbs.org/ibible/snd-sindhi-ibible_salvation.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/ibible/snd-sindhi-ibible_salvation",
+   "read": null,
+   "native": null,
+   "year": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "snd-film-deaf",
+   "lang": "snd",
+   "type": "film",
+   "title": "Rescue Project Deaf Gospel",
+   "org": "Jesus Film Project",
+   "cover": "https://meta.dbs.org/data/data-video/covers/DeafProject/rescue_project_deaf_gospel.jpg",
+   "desc": "The gospel presented in sign language for Deaf audiences.",
+   "source": "https://dbs.org/video/deafproject/snd_sindhi_rescue_project_deaf_gospel",
+   "downloads": [],
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "snd-film-heart-family",
+   "lang": "snd",
+   "type": "film",
+   "title": "Heart of the Family",
+   "org": "Create International",
+   "desc": "A dramatised story of a family encountering the gospel, made for Sindhi audiences.",
+   "play": {
+    "kind": "file",
+    "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/s/Sindhi_2023A/SindhiEV.mp4"
+   },
+   "downloads": [
+    {
+     "label": "MP4 (Create International)",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/s/Sindhi_2023A/SindhiEV.mp4",
+     "external": true
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/snd",
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "snd-ab-sndpbs",
+   "lang": "snd",
+   "type": "audio-bible",
+   "title": "Sindhi Bible",
+   "native": "سندھی بائبل",
+   "org": "Davar Partners",
+   "year": "1962",
+   "scope": "New Testament",
+   "stats": "260 chapters · 28h 6m",
+   "desc": "The Sindhi New Testament read aloud in full, chapter by chapter.",
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "SNDPBS_DAVR_NT_N",
+    "version": "SNDPBS",
+    "testaments": [
+     "NT"
+    ]
+   },
+   "downloads": [
+    {
+     "label": "Complete audio (ZIP)",
+     "url": "https://scripture.dbs.org/audio_zip/SNDPBS_DAVR_NT_N.zip"
+    }
+   ],
+   "source": "https://dbs.org/bibles/audio/SNDPBS_DAVR_NT_N",
+   "read": null,
+   "duration": null,
+   "cover": null,
+   "license": null,
+   "langName": "Sindhi",
+   "typeLabel": "Audio Bibles"
+  },
+  {
+   "id": "snd-ab-sndpbs00854",
+   "lang": "snd",
+   "type": "audio-bible",
+   "title": "Hindu Sindi New Testament",
+   "native": "پوِتر شاستر يسوع مسيح جي خوشخبري",
+   "org": "Davar Partners",
+   "scope": "New Testament",
+   "desc": "A Sindhi New Testament recording using Hindu Sindhi vocabulary.",
+   "play": null,
+   "downloads": [
+    {
+     "label": "Complete audio (ZIP)",
+     "url": "https://scripture.dbs.org/audio_zip/SNDPBS00854_DAVR_NT_N.zip"
+    }
+   ],
+   "source": "https://dbs.org/bibles/audio/SNDPBS00854_DAVR_NT_N",
+   "read": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "langName": "Sindhi",
+   "typeLabel": "Audio Bibles"
+  },
+  {
+   "id": "snd-ab-snd1890",
+   "lang": "snd",
+   "type": "audio-bible",
+   "title": "Sindhi New Testament",
+   "native": "Khudawund Yasūʻ masīḥ ju Injīl",
+   "org": "Faith Comes By Hearing",
+   "year": "1890",
+   "scope": "New Testament & Portions",
+   "stats": "68 chapters · 8h 20m",
+   "desc": "The 1890 Sindhi New Testament, recorded by Faith Comes By Hearing.",
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "SND1890_FCBH_NP_N",
+    "version": "SND1890",
+    "testaments": [
+     "NT"
+    ]
+   },
+   "downloads": [
+    {
+     "label": "Complete audio (ZIP)",
+     "url": "https://scripture.dbs.org/audio_zip/SND1890_FCBH_NP_N.zip"
+    }
+   ],
+   "source": "https://dbs.org/bibles/audio/SND1890_FCBH_NP_N",
+   "read": null,
+   "duration": null,
+   "cover": null,
+   "license": null,
+   "langName": "Sindhi",
+   "typeLabel": "Audio Bibles"
+  },
+  {
+   "id": "snd-ac-grn",
+   "lang": "snd",
+   "type": "audio",
+   "title": "Good News +11",
+   "org": "Global Recordings Network",
+   "stats": "417 recordings",
+   "desc": "Twelve Scripture-based audio programmes — Good News, the eight-part Look, Listen & Live series, Words of Life, Romans and Scripture songs.",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/snd_GlobalRecordings_sindhi/Charan/Charan%20Good%20News%2065157/Charan%20Good%20News%20001%20Picture%201%20In%20the%20Beginning%2065157.mp3"
+   },
+   "downloads": [
+    {
+     "label": "Complete collection — high quality",
+     "url": "https://media.dbs.org/audio/grn/snd_GlobalRecordings_sindhi_high.zip"
+    },
+    {
+     "label": "Complete collection — low bandwidth",
+     "url": "https://media.dbs.org/audio/grn/snd_GlobalRecordings_sindhi_low.zip"
+    }
+   ],
+   "source": "https://dbs.org/audio/collections/grn/snd_GlobalRecordings_sindhi",
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Audio Collections"
+  },
+  {
+   "id": "snd-ac-soj",
+   "lang": "snd",
+   "type": "audio",
+   "title": "Story of Jesus",
+   "org": "Story of Jesus",
+   "stats": "8 recordings",
+   "desc": "The life of Jesus as a narrated audio drama, in eight parts plus a continuous version.",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/soj/snd_StoryJesus_sindhi_full.mp3"
+   },
+   "downloads": [
+    {
+     "label": "All eight parts (ZIP)",
+     "url": "https://media.dbs.org/audio/soj/snd_StoryJesus_sindhi.zip"
+    },
+    {
+     "label": "Continuous version (ZIP)",
+     "url": "https://media.dbs.org/audio/soj/snd_StoryJesus_sindhi_full.zip"
+    }
+   ],
+   "source": "https://dbs.org/audio/collections/soj/snd_StoryJesus_sindhi",
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Audio Collections"
+  },
+  {
+   "id": "snd-hist-sindhi-1890-new-testament",
+   "lang": "snd",
+   "type": "historic",
+   "title": "Sindhi (1890) New Testament",
+   "native": "نئين عهدنامو",
+   "year": "1890",
+   "org": "Digital Bible Society Archive",
+   "cover": "https://scripture.dbs.org/covers/small/Sindhi-1890-New-Testament.webp",
+   "desc": "Scanned pages of the 1890 printed edition. Read in the browser or download the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Sindhi-1890-New-Testament.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Sindhi-1890-New-Testament.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Sindhi-1890-New-Testament",
+   "play": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "snd-hist-sindhi-john-print",
+   "lang": "snd",
+   "type": "historic",
+   "title": "Sindhi — John",
+   "native": "يوحنا",
+   "year": "2009",
+   "org": "Digital Bible Society Archive",
+   "cover": "https://scripture.dbs.org/covers/small/Sindhi-John-print.webp",
+   "desc": "Scanned pages of the 2009 printed edition. Read in the browser or download the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Sindhi-John-print.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Sindhi-John-print.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Sindhi-John-print",
+   "play": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "snd-hist-sindhi-mark-print",
+   "lang": "snd",
+   "type": "historic",
+   "title": "Sindhi — Mark",
+   "native": "مرقس",
+   "year": "2009",
+   "org": "Digital Bible Society Archive",
+   "cover": "https://scripture.dbs.org/covers/small/Sindhi-Mark-print.webp",
+   "desc": "Scanned pages of the 2009 printed edition. Read in the browser or download the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Sindhi-Mark-print.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Sindhi-Mark-print.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Sindhi-Mark-print",
+   "play": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "snd-hist-sindhi-new-testament-print",
+   "lang": "snd",
+   "type": "historic",
+   "title": "Sindhi — New Testament",
+   "native": "نئين عهدنامو",
+   "year": "2009",
+   "org": "Digital Bible Society Archive",
+   "cover": "https://scripture.dbs.org/covers/small/Sindhi-New-Testament-print.webp",
+   "desc": "Scanned pages of the 2009 printed edition. Read in the browser or download the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Sindhi-New-Testament-print.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Sindhi-New-Testament-print.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Sindhi-New-Testament-print",
+   "play": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "urd-film-jesus",
+   "lang": "urd",
+   "type": "film",
+   "title": "JESUS",
+   "org": "Jesus Film Project",
+   "duration": "2:07:53",
+   "year": "1979",
+   "cover": "https://meta.dbs.org/data/data-video/covers/Jesus/jesus.jpg",
+   "desc": "The life of Jesus told from the Gospel of Luke — the most translated film in history, dubbed into Urdu. 61 chapters.",
+   "play": {
+    "kind": "chapters",
+    "base": "https://video.dbs.org/Jesus/chapters/urd_urdu/",
+    "items": [
+     {
+      "n": 1,
+      "title": "The Beginning",
+      "file": "urd_jesus_chapter_01_the_beginning_1_jf6101_0_0_low.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Birth of Jesus",
+      "file": "urd_jesus_chapter_02_birth_of_jesus_1_jf6102_0_0_low.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Childhood of Jesus",
+      "file": "urd_jesus_chapter_03_childhood_of_jesus_1_jf6103_0_0_low.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Baptism of Jesus by John",
+      "file": "urd_jesus_chapter_04_baptism_of_jesus_by_john_1_jf6104_0_0_low.mp4"
+     },
+     {
+      "n": 5,
+      "title": "The Devil Tempts Jesus",
+      "file": "urd_jesus_chapter_05_the_devil_tempts_jesus_1_jf6105_0_0_low.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Jesus Proclaims Fulfillment of the Scriptures",
+      "file": "urd_jesus_chapter_06_jesus_proclaims_fulfillment_of_the_scriptures_1_jf6106_0_0_low.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Parable of the Pharisee and Tax Collector",
+      "file": "urd_jesus_chapter_07_parable_of_the_pharisee_and_tax_collector_1_jf6107_0_0_low.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Miraculous Catch of Fish",
+      "file": "urd_jesus_chapter_08_miraculous_catch_of_fish_1_jf6108_0_0_low.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Jairuss Daughter Brought Back to Life",
+      "file": "urd_jesus_chapter_09_jairuss_daughter_brought_back_to_life_1_jf6109_0_0_low.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Disciples Chosen",
+      "file": "urd_jesus_chapter_10_disciples_chosen_1_jf6110_0_0_low.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Beatitudes",
+      "file": "urd_jesus_chapter_11_beatitudes_1_jf6111_0_0_low.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Sermon on the Mount",
+      "file": "urd_jesus_chapter_12_sermon_on_the_mount_1_jf6112_0_0_low.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Blessed are Those who Hear and Obey",
+      "file": "urd_jesus_chapter_13_blessed_are_those_who_hear_and_obey_1_jf6113_0_0_low.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Sinful Woman Forgiven",
+      "file": "urd_jesus_chapter_14_sinful_woman_forgiven_1_jf6114_0_0_low.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Women Disciples",
+      "file": "urd_jesus_chapter_15_women_disciples_1_jf6115_0_0_low.mp4"
+     },
+     {
+      "n": 16,
+      "title": "John the Baptist in Prison",
+      "file": "urd_jesus_chapter_16_john_the_baptist_in_prison_1_jf6116_0_0_low.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Parable of the Sower and the Seed",
+      "file": "urd_jesus_chapter_17_parable_of_the_sower_and_the_seed_1_jf6117_0_0_low.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Parable of the Lamp",
+      "file": "urd_jesus_chapter_18_parable_of_the_lamp_1_jf6118_0_0_low.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Jesus Calms the Storm",
+      "file": "urd_jesus_chapter_19_jesus_calms_the_storm_1_jf6119_0_0_low.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Healing of the Demoniac",
+      "file": "urd_jesus_chapter_20_healing_of_the_demoniac_1_jf6120_0_0_low.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Jesus Feeds 5000",
+      "file": "urd_jesus_chapter_21_jesus_feeds_5000_1_jf6121_0_0_low.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Peter Declares Jesus to be the Christ",
+      "file": "urd_jesus_chapter_22_peter_declares_jesus_to_be_the_christ_1_jf6122_0_0_low.mp4"
+     },
+     {
+      "n": 23,
+      "title": "The Transfiguration",
+      "file": "urd_jesus_chapter_23_the_transfiguration_1_jf6123_0_0_low.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Jesus Heals Boy From Evil Spirit",
+      "file": "urd_jesus_chapter_24_jesus_heals_boy_from_evil_spirit_1_jf6124_0_0_low.mp4"
+     },
+     {
+      "n": 25,
+      "title": "The Lords Prayer",
+      "file": "urd_jesus_chapter_25_the_lords_prayer_1_jf6125_0_0_low.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Teaching About Prayer and Faith",
+      "file": "urd_jesus_chapter_26_teaching_about_prayer_and_faith_1_jf6126_0_0_low.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Woe to Those who Cause Others to Sin",
+      "file": "urd_jesus_chapter_27_woe_to_those_who_cause_others_to_sin_1_jf6127_0_0_low.mp4"
+     },
+     {
+      "n": 28,
+      "title": "The Kingdom of God as a Mustard Seed",
+      "file": "urd_jesus_chapter_28_the_kingdom_of_god_as_a_mustard_seed_1_jf6128_0_0_low.mp4"
+     },
+     {
+      "n": 29,
+      "title": "Jesus Spends Time with Sinners",
+      "file": "urd_jesus_chapter_29_jesus_spends_time_with_sinners_1_jf6129_0_0_low.mp4"
+     },
+     {
+      "n": 30,
+      "title": "Healing on the Sabbath",
+      "file": "urd_jesus_chapter_30_healing_on_the_sabbath_1_jf6130_0_0_low.mp4"
+     },
+     {
+      "n": 31,
+      "title": "Parable of the Good Samaritan",
+      "file": "urd_jesus_chapter_31_parable_of_the_good_samaritan_1_jf6131_0_0_low.mp4"
+     },
+     {
+      "n": 32,
+      "title": "Healing of Bartimaeus",
+      "file": "urd_jesus_chapter_32_healing_of_bartimaeus_1_jf6132_0_0_low.mp4"
+     },
+     {
+      "n": 33,
+      "title": "Jesus and Zaccheus",
+      "file": "urd_jesus_chapter_33_jesus_and_zaccheus_1_jf6133_0_0_low.mp4"
+     },
+     {
+      "n": 34,
+      "title": "Jesus Predicts his Death and Resurrection",
+      "file": "urd_jesus_chapter_34_jesus_predicts_his_death_and_resurrection_1_jf6134_0_0_low.mp4"
+     },
+     {
+      "n": 35,
+      "title": "Jesuss Triumphal Entry",
+      "file": "urd_jesus_chapter_35_jesuss_triumphal_entry_1_jf6135_0_0_low.mp4"
+     },
+     {
+      "n": 36,
+      "title": "Jesus Weeps Over Jerusalem",
+      "file": "urd_jesus_chapter_36_jesus_weeps_over_jerusalem_1_jf6136_0_0_low.mp4"
+     },
+     {
+      "n": 37,
+      "title": "Jesus Drives Out Money Changers",
+      "file": "urd_jesus_chapter_37_jesus_drives_out_money_changers_1_jf6137_0_0_low.mp4"
+     },
+     {
+      "n": 38,
+      "title": "Widows Offering",
+      "file": "urd_jesus_chapter_38_widows_offering_1_jf6138_0_0_low.mp4"
+     },
+     {
+      "n": 39,
+      "title": "Annas Questions Jesuss Authority",
+      "file": "urd_jesus_chapter_39_annas_questions_jesuss_authority_1_jf6139_0_0_low.mp4"
+     },
+     {
+      "n": 40,
+      "title": "Parable of the Vineyard and Tenants",
+      "file": "urd_jesus_chapter_40_parable_of_the_vineyard_and_tenants_1_jf6140_0_0_low.mp4"
+     },
+     {
+      "n": 41,
+      "title": "Paying Taxes to Caesar",
+      "file": "urd_jesus_chapter_41_paying_taxes_to_caesar_1_jf6141_0_0_low.mp4"
+     },
+     {
+      "n": 42,
+      "title": "The Last Supper",
+      "file": "urd_jesus_chapter_42_the_last_supper_1_jf6142_0_0_low.mp4"
+     },
+     {
+      "n": 43,
+      "title": "Upper Room Teaching",
+      "file": "urd_jesus_chapter_43_upper_room_teaching_1_jf6143_0_0_low.mp4"
+     },
+     {
+      "n": 44,
+      "title": "Jesus is Betrayed and Arrested",
+      "file": "urd_jesus_chapter_44_jesus_is_betrayed_and_arrested_1_jf6144_0_0_low.mp4"
+     },
+     {
+      "n": 45,
+      "title": "Peter Disowns Jesus",
+      "file": "urd_jesus_chapter_45_peter_disowns_jesus_1_jf6145_0_0_low.mp4"
+     },
+     {
+      "n": 46,
+      "title": "Jesus is Mocked and Questioned",
+      "file": "urd_jesus_chapter_46_jesus_is_mocked_and_questioned_1_jf6146_0_0_low.mp4"
+     },
+     {
+      "n": 47,
+      "title": "Jesus is Brought to Pilate",
+      "file": "urd_jesus_chapter_47_jesus_is_brought_to_pilate_1_jf6147_0_0_low.mp4"
+     },
+     {
+      "n": 48,
+      "title": "Jesus is Brought to Herod",
+      "file": "urd_jesus_chapter_48_jesus_is_brought_to_herod_1_jf6148_0_0_low.mp4"
+     },
+     {
+      "n": 49,
+      "title": "Jesus is Sentenced",
+      "file": "urd_jesus_chapter_49_jesus_is_sentenced_1_jf6149_0_0_low.mp4"
+     },
+     {
+      "n": 50,
+      "title": "Jesus Carries his Cross",
+      "file": "urd_jesus_chapter_50_jesus_carries_his_cross_1_jf6150_0_0_low.mp4"
+     },
+     {
+      "n": 51,
+      "title": "Jesus is Crucified",
+      "file": "urd_jesus_chapter_51_jesus_is_crucified_1_jf6151_0_0_low.mp4"
+     },
+     {
+      "n": 52,
+      "title": "Soldiers Gamble for Jesuss Clothes",
+      "file": "urd_jesus_chapter_52_soldiers_gamble_for_jesuss_clothes_1_jf6152_0_0_low.mp4"
+     },
+     {
+      "n": 53,
+      "title": "Sign on the Cross",
+      "file": "urd_jesus_chapter_53_sign_on_the_cross_1_jf6153_0_0_low.mp4"
+     },
+     {
+      "n": 54,
+      "title": "Crucified Convicts",
+      "file": "urd_jesus_chapter_54_crucified_convicts_1_jf6154_0_0_low.mp4"
+     },
+     {
+      "n": 55,
+      "title": "Death of Jesus",
+      "file": "urd_jesus_chapter_55_death_of_jesus_1_jf6155_0_0_low.mp4"
+     },
+     {
+      "n": 56,
+      "title": "Burial of Jesus",
+      "file": "urd_jesus_chapter_56_burial_of_jesus_1_jf6156_0_0_low.mp4"
+     },
+     {
+      "n": 57,
+      "title": "Angels At the Tomb",
+      "file": "urd_jesus_chapter_57_angels_at_the_tomb_1_jf6157_0_0_low.mp4"
+     },
+     {
+      "n": 58,
+      "title": "The Tomb is Empty",
+      "file": "urd_jesus_chapter_58_the_tomb_is_empty_1_jf6158_0_0_low.mp4"
+     },
+     {
+      "n": 59,
+      "title": "Resurrected Jesus Appears",
+      "file": "urd_jesus_chapter_59_resurrected_jesus_appears_1_jf6159_0_0_low.mp4"
+     },
+     {
+      "n": 60,
+      "title": "Great Commission and Ascension",
+      "file": "urd_jesus_chapter_60_great_commission_and_ascension_1_jf6160_0_0_low.mp4"
+     },
+     {
+      "n": 61,
+      "title": "Invitation to Know Jesus Personally",
+      "file": "urd_jesus_chapter_61_invitation_to_know_jesus_personally_1_jf6161_0_0_low.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "All chapters — SD",
+     "url": "https://download.dbs.org/Jesus/urd_urdu/urd_jesus_chapters_low.zip",
+     "size": "~187 MB"
+    },
+    {
+     "label": "All chapters — HD",
+     "url": "https://download.dbs.org/Jesus/urd_urdu/urd_jesus_chapters_high.zip",
+     "size": "~2.1 GB"
+    }
+   ],
+   "source": "https://dbs.org/video/jesus/urd_urdu_jesus",
+   "read": null,
+   "native": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "urd-film-john",
+   "lang": "urd",
+   "type": "film",
+   "title": "Gospel of John",
+   "org": "Visual Bible Int.",
+   "duration": "3:03:13",
+   "cover": "https://meta.dbs.org/data/data-video/covers/John/gospel_of_john.jpg",
+   "desc": "The Gospel of John filmed in full, word for word. 49 chapters.",
+   "play": {
+    "kind": "chapters",
+    "base": "https://video.dbs.org/John/chapters/urd_urdu/",
+    "items": [
+     {
+      "n": 1,
+      "title": "Gods Word Becomes Flesh",
+      "file": "urd_Gospel_of_John_chapter_01_gods_word_becomes_flesh_2_GOJ4901_0_0_low.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Testimony of John the Baptist",
+      "file": "urd_Gospel_of_John_chapter_02_testimony_of_john_the_baptist_2_GOJ4902_0_0_low.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Jesus Gathers Disciples",
+      "file": "urd_Gospel_of_John_chapter_03_jesus_gathers_disciples_2_GOJ4903_0_0_low.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Wedding in Cana",
+      "file": "urd_Gospel_of_John_chapter_04_wedding_in_cana_2_GOJ4904_0_0_low.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Cleaning the Temple",
+      "file": "urd_Gospel_of_John_chapter_05_cleaning_the_temple_2_GOJ4905_0_0_low.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Talk with Nicodemus",
+      "file": "urd_Gospel_of_John_chapter_06_talk_with_nicodemus_2_GOJ4906_0_0_low.mp4"
+     },
+     {
+      "n": 7,
+      "title": "The Baptists Confirmation",
+      "file": "urd_Gospel_of_John_chapter_07_the_baptists_confirmation_2_GOJ4907_0_0_low.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Samaritan Woman",
+      "file": "urd_Gospel_of_John_chapter_08_samaritan_woman_2_GOJ4908_0_0_low.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Samaritan Village",
+      "file": "urd_Gospel_of_John_chapter_09_samaritan_village_2_GOJ4909_0_0_low.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Officials Son Healed",
+      "file": "urd_Gospel_of_John_chapter_10_officials_son_healed_2_GOJ4910_0_0_low.mp4"
+     },
+     {
+      "n": 11,
+      "title": "A Paralytic Healed",
+      "file": "urd_Gospel_of_John_chapter_11_a_paralytic_healed_2_GOJ4911_0_0_low.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Claim to be the Son",
+      "file": "urd_Gospel_of_John_chapter_12_claim_to_be_the_son_2_GOJ4912_0_0_low.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Witness to the Son",
+      "file": "urd_Gospel_of_John_chapter_13_witness_to_the_son_2_GOJ4913_0_0_low.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Feeding 5000",
+      "file": "urd_Gospel_of_John_chapter_14_feeding_5000_2_GOJ4914_0_0_low.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Sea Walking",
+      "file": "urd_Gospel_of_John_chapter_15_sea_walking_2_GOJ4915_0_0_low.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Bread of Life",
+      "file": "urd_Gospel_of_John_chapter_16_bread_of_life_2_GOJ4916_0_0_low.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Falling Away",
+      "file": "urd_Gospel_of_John_chapter_17_falling_away_2_GOJ4917_0_0_low.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Confronting Hypocritical Leaders",
+      "file": "urd_Gospel_of_John_chapter_18_confronting_hypocritical_leaders_2_GOJ4918_0_0_low.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Disagreement who is Jesus",
+      "file": "urd_Gospel_of_John_chapter_19_disagreement_who_is_jesus_2_GOJ4919_0_0_low.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Adulterous Woman",
+      "file": "urd_Gospel_of_John_chapter_20_adulterous_woman_2_GOJ4920_0_0_low.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Who are You",
+      "file": "urd_Gospel_of_John_chapter_21_who_are_you_2_GOJ4921_0_0_low.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Great Confrontation",
+      "file": "urd_Gospel_of_John_chapter_22_great_confrontation_2_GOJ4922_0_0_low.mp4"
+     },
+     {
+      "n": 23,
+      "title": "Blind Man Healed",
+      "file": "urd_Gospel_of_John_chapter_23_blind_man_healed_2_GOJ4923_0_0_low.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Pharisees Interrogate the Blind Man",
+      "file": "urd_Gospel_of_John_chapter_24_pharisees_interrogate_the_blind_man_2_GOJ4924_0_0_low.mp4"
+     },
+     {
+      "n": 25,
+      "title": "The Good Shepherd",
+      "file": "urd_Gospel_of_John_chapter_25_the_good_shepherd_2_GOJ4925_0_0_low.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Are You Messiah",
+      "file": "urd_Gospel_of_John_chapter_26_are_you_messiah_2_GOJ4926_0_0_low.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Lazarus Dies",
+      "file": "urd_Gospel_of_John_chapter_27_lazarus_dies_2_GOJ4927_0_0_low.mp4"
+     },
+     {
+      "n": 28,
+      "title": "Mary and Martha Mourn",
+      "file": "urd_Gospel_of_John_chapter_28_mary_and_martha_mourn_2_GOJ4928_0_0_low.mp4"
+     },
+     {
+      "n": 29,
+      "title": "Lazarus Rises",
+      "file": "urd_Gospel_of_John_chapter_29_lazarus_rises_2_GOJ4929_0_0_low.mp4"
+     },
+     {
+      "n": 30,
+      "title": "Triumphal Entry and Results",
+      "file": "urd_Gospel_of_John_chapter_30_triumphal_entry_and_results_2_GOJ4930_0_0_low.mp4"
+     },
+     {
+      "n": 31,
+      "title": "Divided Opinions",
+      "file": "urd_Gospel_of_John_chapter_31_divided_opinions_2_GOJ4931_0_0_low.mp4"
+     },
+     {
+      "n": 32,
+      "title": "Last Supper",
+      "file": "urd_Gospel_of_John_chapter_32_last_supper_2_GOJ4932_0_0_low.mp4"
+     },
+     {
+      "n": 33,
+      "title": "Betrayal and Denial Foretold",
+      "file": "urd_Gospel_of_John_chapter_33_betrayal_and_denial_foretold_2_GOJ4933_0_0_low.mp4"
+     },
+     {
+      "n": 34,
+      "title": "Jesus Comforts his Disciples",
+      "file": "urd_Gospel_of_John_chapter_34_jesus_comforts_his_disciples_2_GOJ4934_0_0_low.mp4"
+     },
+     {
+      "n": 35,
+      "title": "Jesus Promises the Holy Spirit",
+      "file": "urd_Gospel_of_John_chapter_35_jesus_promises_the_holy_spirit_2_GOJ4935_0_0_low.mp4"
+     },
+     {
+      "n": 36,
+      "title": "The Vine and the Branches",
+      "file": "urd_Gospel_of_John_chapter_36_the_vine_and_the_branches_2_GOJ4936_0_0_low.mp4"
+     },
+     {
+      "n": 37,
+      "title": "The Worlds Hatred",
+      "file": "urd_Gospel_of_John_chapter_37_the_worlds_hatred_2_GOJ4937_0_0_low.mp4"
+     },
+     {
+      "n": 38,
+      "title": "The Work of the Holy Spirit",
+      "file": "urd_Gospel_of_John_chapter_38_the_work_of_the_holy_spirit_2_GOJ4938_0_0_low.mp4"
+     },
+     {
+      "n": 39,
+      "title": "Grief Will Turn to Joy",
+      "file": "urd_Gospel_of_John_chapter_39_grief_will_turn_to_joy_2_GOJ4939_0_0_low.mp4"
+     },
+     {
+      "n": 40,
+      "title": "Jesus Prays to be Glorified",
+      "file": "urd_Gospel_of_John_chapter_40_jesus_prays_to_be_glorified_2_GOJ4940_0_0_low.mp4"
+     },
+     {
+      "n": 41,
+      "title": "The Arrest of Jesus and Peters Denial",
+      "file": "urd_Gospel_of_John_chapter_41_the_arrest_of_jesus_and_peters_denial_2_GOJ4941_0_0_low.mp4"
+     },
+     {
+      "n": 42,
+      "title": "My Kingdom is not of This World",
+      "file": "urd_Gospel_of_John_chapter_42_my_kingdom_is_not_of_this_world_2_GOJ4942_0_0_low.mp4"
+     },
+     {
+      "n": 43,
+      "title": "Jesus Sentenced to be Crucified",
+      "file": "urd_Gospel_of_John_chapter_43_jesus_sentenced_to_be_crucified_2_GOJ4943_0_0_low.mp4"
+     },
+     {
+      "n": 44,
+      "title": "The Crucifixion of Jesus",
+      "file": "urd_Gospel_of_John_chapter_44_the_crucifixion_of_jesus_2_GOJ4944_0_0_low.mp4"
+     },
+     {
+      "n": 45,
+      "title": "Jesus is Alive",
+      "file": "urd_Gospel_of_John_chapter_45_jesus_is_alive_2_GOJ4945_0_0_low.mp4"
+     },
+     {
+      "n": 46,
+      "title": "Doubting Thomas",
+      "file": "urd_Gospel_of_John_chapter_46_doubting_thomas_2_GOJ4946_0_0_low.mp4"
+     },
+     {
+      "n": 47,
+      "title": "Miraculous Catch",
+      "file": "urd_Gospel_of_John_chapter_47_miraculous_catch_2_GOJ4947_0_0_low.mp4"
+     },
+     {
+      "n": 48,
+      "title": "Do You Love Me",
+      "file": "urd_Gospel_of_John_chapter_48_do_you_love_me_2_GOJ4948_0_0_low.mp4"
+     },
+     {
+      "n": 49,
+      "title": "How to Know Jesus Personally",
+      "file": "urd_Gospel_of_John_chapter_49_how_to_know_jesus_personally_2_GOJ4949_0_0_low.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "All chapters — SD",
+     "url": "https://download.dbs.org/John/urd_urdu/urd_Gospel_of_John_chapters_low.zip"
+    },
+    {
+     "label": "All chapters — HD",
+     "url": "https://download.dbs.org/John/urd_urdu/urd_Gospel_of_John_chapters_high.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/john/urd_urdu_gospel_of_john",
+   "read": null,
+   "native": null,
+   "year": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "urd-film-savior",
+   "lang": "urd",
+   "type": "film",
+   "title": "The Savior",
+   "org": "Jesus Film Project",
+   "duration": "2:11:53",
+   "cover": "https://meta.dbs.org/data/data-video/covers/Savior/the_savior.jpg",
+   "desc": "A feature-length life of Christ, produced for South Asian audiences.",
+   "downloads": [
+    {
+     "label": "Ep 0 — Trailer",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Urdu_0-The-Savior-Trailer.mp4",
+     "external": true
+    },
+    {
+     "label": "Ep 1 — Jesus' Birth",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Urdu_1-Jesus-Birth_sm.mp4",
+     "external": true
+    },
+    {
+     "label": "Ep 2 — Jesus' Baptism",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Urdu_2-Jesus-Baptism.mp4",
+     "external": true
+    },
+    {
+     "label": "Ep 3 — Woman at the Well",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Urdu_3-Woman-at-the-Well_sm.mp4",
+     "external": true
+    },
+    {
+     "label": "Ep 4 — Sowing of the Word",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Urdu_4-Sowing-of-the-Word_sm.mp4",
+     "external": true
+    },
+    {
+     "label": "Ep 5 — The Good Samaritan",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Urdu_5-The-Good-Samaritan_sm.mp4",
+     "external": true
+    },
+    {
+     "label": "Ep 6 — The Lord's Prayer",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Urdu_6-The-Lords-Prayer.mp4",
+     "external": true
+    },
+    {
+     "label": "Ep 7 — Golgotha",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Urdu_7-Golgotha_sm.mp4",
+     "external": true
+    },
+    {
+     "label": "Ep 8 — Jesus is Risen",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Urdu_8-Jesus-is-Risen.mp4",
+     "external": true
+    }
+   ],
+   "play": {
+    "kind": "chapters",
+    "base": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/",
+    "items": [
+     {
+      "n": 0,
+      "title": "Trailer",
+      "file": "Urdu_0-The-Savior-Trailer.mp4"
+     },
+     {
+      "n": 1,
+      "title": "Jesus' Birth",
+      "file": "Urdu_1-Jesus-Birth_sm.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Jesus' Baptism",
+      "file": "Urdu_2-Jesus-Baptism.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Woman at the Well",
+      "file": "Urdu_3-Woman-at-the-Well_sm.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Sowing of the Word",
+      "file": "Urdu_4-Sowing-of-the-Word_sm.mp4"
+     },
+     {
+      "n": 5,
+      "title": "The Good Samaritan",
+      "file": "Urdu_5-The-Good-Samaritan_sm.mp4"
+     },
+     {
+      "n": 6,
+      "title": "The Lord's Prayer",
+      "file": "Urdu_6-The-Lords-Prayer.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Golgotha",
+      "file": "Urdu_7-Golgotha_sm.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Jesus is Risen",
+      "file": "Urdu_8-Jesus-is-Risen.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/savior/urd_urdu_the_savior",
+   "read": null,
+   "native": null,
+   "year": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "urd-film-savior-indian",
+   "lang": "urd",
+   "type": "film",
+   "title": "The Savior (Indian Urdu)",
+   "org": "Jesus Film Project",
+   "duration": "2:11:53",
+   "cover": "https://meta.dbs.org/data/data-video/covers/Savior/the_savior.jpg",
+   "desc": "The Savior in the Indian Urdu dialect.",
+   "source": "https://dbs.org/video/savior/urd_urdu-indian_the_savior",
+   "downloads": [],
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "urd-film-magdalena",
+   "lang": "urd",
+   "type": "film",
+   "title": "Magdalena",
+   "org": "Jesus Film Project",
+   "duration": "58:24",
+   "cover": "https://meta.dbs.org/data/data-video/covers/Magdalena/magdalena.jpg",
+   "desc": "The gospel story told through the eyes of the women who followed Jesus. Made for women's ministry.",
+   "downloads": [
+    {
+     "label": "Director's Cut (Jesus Film Project)",
+     "url": "https://arc.gt/z22xk?apiSessionId=5f87687b8c6657.50571365",
+     "external": true
+    }
+   ],
+   "source": "https://dbs.org/video/magdalena/urd_urdu_magdalena",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "urd-film-storyjesus",
+   "lang": "urd",
+   "type": "film",
+   "title": "Story of Jesus for Children",
+   "org": "Jesus Film Project",
+   "duration": "1:01:19",
+   "cover": "https://meta.dbs.org/data/data-video/covers/StoryJesus/story_of_jesus_for_children.jpg",
+   "desc": "The life of Jesus retold for children, through the eyes of the children who met him.",
+   "downloads": [
+    {
+     "label": "Watch (Jesus Film Project)",
+     "url": "https://arc.gt/b4b68?apiSessionId=5f876878ef08f1.74306904",
+     "external": true
+    }
+   ],
+   "source": "https://dbs.org/video/storyjesus/urd_urdu_story_of_jesus_for_children",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "urd-film-prophets-story",
+   "lang": "urd",
+   "type": "film",
+   "title": "The Prophets' Story",
+   "native": "نبیوں کی کہانی",
+   "org": "Create International",
+   "duration": "0:07:09",
+   "cover": "https://meta.dbs.org/data/data-video/covers/PS/urd_Prophets_Story_%D9%86%D8%A8%DB%8C%D9%88%DA%BA_%DA%A9%DB%8C_%DA%A9%DB%81%D8%A7%D9%86%DB%8C_Urdu_%D8%A7%D8%B1%D8%AF%D9%88_%D9%81%D9%84%D9%85.jpg",
+   "desc": "A short animated telling of the prophets, leading to Isa al-Masih — made for Muslim-background audiences.",
+   "play": {
+    "kind": "file",
+    "hd": "https://dbs.org/cdn/video/PS/films/urd_Prophets_Story_%D9%86%D8%A8%DB%8C%D9%88%DA%BA_%DA%A9%DB%8C_%DA%A9%DB%81%D8%A7%D9%86%DB%8C_Urdu_%D8%A7%D8%B1%D8%AF%D9%88_%D9%81%D9%84%D9%85.mp4"
+   },
+   "downloads": [
+    {
+     "label": "MP4 (Create International)",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/PS/The-Prophets-Story_Urdu.mp4",
+     "external": true
+    }
+   ],
+   "source": "https://dbs.org/video/ps/urd_ps_urdu",
+   "read": null,
+   "year": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "urd-film-king-of-glory",
+   "lang": "urd",
+   "type": "film",
+   "title": "King of Glory",
+   "native": "جلال کا بادشاہ",
+   "org": "ROCK International",
+   "duration": "3:42:13",
+   "cover": "https://meta.dbs.org/data/data-video/covers/ROCK/urd-urdu_%D8%AC%D9%84%D8%A7%D9%84_%DA%A9%D8%A7_%D8%A8%D8%A7%D8%AF%D8%B4%D8%A7%DB%81_king_of_glory_full.jpg",
+   "desc": "The whole Bible narrative in 70 scenes of illustrated storytelling — built for oral learners.",
+   "play": {
+    "kind": "file",
+    "hd": "https://dbs.org/cdn/video/ROCK/films/urd-urdu/urd-urdu_%D8%AC%D9%84%D8%A7%D9%84_%DA%A9%D8%A7_%D8%A8%D8%A7%D8%AF%D8%B4%D8%A7%DB%81_king_of_glory_full.mp4",
+    "sd": "https://dbs.org/cdn/video/ROCK/films/urd-urdu/urd-urdu_%D8%AC%D9%84%D8%A7%D9%84_%DA%A9%D8%A7_%D8%A8%D8%A7%D8%AF%D8%B4%D8%A7%DB%81_king_of_glory_full_low.mp4"
+   },
+   "downloads": [
+    {
+     "label": "King of Glory (ROCK International)",
+     "url": "https://rockintl.org/rock-video/urdu-king-of-glory/",
+     "external": true
+    }
+   ],
+   "source": "https://dbs.org/video/rock/urd-urdu",
+   "read": null,
+   "year": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "urd-film-bp-overview",
+   "lang": "urd",
+   "type": "film",
+   "title": "BibleProject: Book Overviews",
+   "org": "BibleProject",
+   "duration": "11:27:49",
+   "cover": "https://meta.dbs.org/data/data-video/covers/BP/overview_ot-tanak.webp",
+   "desc": "Animated overviews of every book of the Bible — the literary design and message of each, book by book.",
+   "downloads": [
+    {
+     "label": "Old Testament overviews — SD",
+     "url": "https://download.dbs.org/BP/urd-urdu/urd_BibleProject_Book_Overview_OT_low.zip"
+    },
+    {
+     "label": "Old Testament overviews — HD",
+     "url": "https://download.dbs.org/BP/urd-urdu/urd_BibleProject_Book_Overview_OT.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/bp/urd-urdu-overview",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "urd-film-bp-themes",
+   "lang": "urd",
+   "type": "film",
+   "title": "BibleProject: Themes",
+   "org": "BibleProject",
+   "duration": "30:59",
+   "cover": "https://meta.dbs.org/data/data-video/covers/BP/theme_the-messiah.webp",
+   "desc": "Short animated films tracing the big themes that run across the whole Bible.",
+   "downloads": [
+    {
+     "label": "Theme videos — SD",
+     "url": "https://download.dbs.org/BP/urd-urdu/urd_BibleProject_Theme_Video_low.zip"
+    },
+    {
+     "label": "Theme videos — HD",
+     "url": "https://download.dbs.org/BP/urd-urdu/urd_BibleProject_Theme_Video.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/bp/urd-urdu-themes",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "urd-film-lumo-john",
+   "lang": "urd",
+   "type": "film",
+   "title": "LUMO: The Gospel of John",
+   "org": "LUMO Project",
+   "cover": "https://meta.dbs.org/data/data-video/covers/Lumo-John/lumo_john.webp",
+   "desc": "The Gospel of John filmed word for word, with the Urdu Scripture text as the only narration. 21 parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "https://video.dbs.org/Lumo-John/films_low/urd_Urdu_John_Revised-Urdu-Bible_low/",
+    "items": [
+     {
+      "n": 1,
+      "title": "Part 1",
+      "file": "urd_LUMO_Urdu_John_Revised-Urdu-Bible_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Part 2",
+      "file": "urd_LUMO_Urdu_John_Revised-Urdu-Bible_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Part 3",
+      "file": "urd_LUMO_Urdu_John_Revised-Urdu-Bible_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Part 4",
+      "file": "urd_LUMO_Urdu_John_Revised-Urdu-Bible_04_360.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Part 5",
+      "file": "urd_LUMO_Urdu_John_Revised-Urdu-Bible_05_360.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Part 6",
+      "file": "urd_LUMO_Urdu_John_Revised-Urdu-Bible_06_360.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Part 7",
+      "file": "urd_LUMO_Urdu_John_Revised-Urdu-Bible_07_360.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Part 8",
+      "file": "urd_LUMO_Urdu_John_Revised-Urdu-Bible_08_360.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Part 9",
+      "file": "urd_LUMO_Urdu_John_Revised-Urdu-Bible_09_360.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Part 10",
+      "file": "urd_LUMO_Urdu_John_Revised-Urdu-Bible_10_360.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Part 11",
+      "file": "urd_LUMO_Urdu_John_Revised-Urdu-Bible_11_360.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Part 12",
+      "file": "urd_LUMO_Urdu_John_Revised-Urdu-Bible_12_360.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Part 13",
+      "file": "urd_LUMO_Urdu_John_Revised-Urdu-Bible_13_360.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Part 14",
+      "file": "urd_LUMO_Urdu_John_Revised-Urdu-Bible_14_360.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Part 15",
+      "file": "urd_LUMO_Urdu_John_Revised-Urdu-Bible_15_360.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Part 16",
+      "file": "urd_LUMO_Urdu_John_Revised-Urdu-Bible_16_360.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Part 17",
+      "file": "urd_LUMO_Urdu_John_Revised-Urdu-Bible_17_360.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Part 18",
+      "file": "urd_LUMO_Urdu_John_Revised-Urdu-Bible_18_360.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Part 19",
+      "file": "urd_LUMO_Urdu_John_Revised-Urdu-Bible_19_360.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Part 20",
+      "file": "urd_LUMO_Urdu_John_Revised-Urdu-Bible_20_360.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Part 21",
+      "file": "urd_LUMO_Urdu_John_Revised-Urdu-Bible_21_360.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "Lumo: John (MP4)",
+     "url": "https://odi-anusaran.s3.ap-south-1.amazonaws.com/downloads/video/lumo/lumo-urd-4-john.mp4",
+     "external": true
+    }
+   ],
+   "source": "https://dbs.org/video/lumo-john/urd_urdu_john",
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "urd-film-lumo-acts",
+   "lang": "urd",
+   "type": "film",
+   "title": "LUMO: Acts of the Apostles",
+   "org": "LUMO Project",
+   "cover": "https://meta.dbs.org/data/data-video/covers/Lumo-Acts/acts.webp",
+   "desc": "The book of Acts filmed word for word from the Urdu Scripture text.",
+   "play": {
+    "kind": "chapters",
+    "base": "https://video.dbs.org/Lumo-Acts/films_low/urd_Urdu_Acts_Revised-Urdu-Bible/",
+    "items": [
+     {
+      "n": 0,
+      "title": "Complete film",
+      "file": "urd_Acts_Urdu_Revised-Urdu-Bible_full_360.mp4"
+     },
+     {
+      "n": 1,
+      "title": "Part 1",
+      "file": "urd_Acts_Urdu_Revised-Urdu-Bible_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Part 2",
+      "file": "urd_Acts_Urdu_Revised-Urdu-Bible_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Part 3",
+      "file": "urd_Acts_Urdu_Revised-Urdu-Bible_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Part 4",
+      "file": "urd_Acts_Urdu_Revised-Urdu-Bible_04_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-acts/urd_urdu_acts",
+   "downloads": [],
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "urd-film-lumo-covenant",
+   "lang": "urd",
+   "type": "film",
+   "title": "LUMO: The Covenant",
+   "org": "LUMO Project",
+   "cover": "https://meta.dbs.org/data/data-video/covers/Lumo-Covenant/covenant.webp",
+   "desc": "The covenant story of Scripture in twelve filmed parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "https://video.dbs.org/Lumo-Covenant/films_low/urd_Urdu_Covenant_Revised-Urdu-Bible/",
+    "items": [
+     {
+      "n": 1,
+      "title": "Part 1",
+      "file": "urd_Covenant_Urdu_Revised-Urdu-Bible_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Part 2",
+      "file": "urd_Covenant_Urdu_Revised-Urdu-Bible_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Part 3",
+      "file": "urd_Covenant_Urdu_Revised-Urdu-Bible_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Part 4",
+      "file": "urd_Covenant_Urdu_Revised-Urdu-Bible_04_360.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Part 5",
+      "file": "urd_Covenant_Urdu_Revised-Urdu-Bible_05_360.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Part 6",
+      "file": "urd_Covenant_Urdu_Revised-Urdu-Bible_06_360.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Part 7",
+      "file": "urd_Covenant_Urdu_Revised-Urdu-Bible_07_360.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Part 8",
+      "file": "urd_Covenant_Urdu_Revised-Urdu-Bible_08_360.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Part 9",
+      "file": "urd_Covenant_Urdu_Revised-Urdu-Bible_09_360.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Part 10",
+      "file": "urd_Covenant_Urdu_Revised-Urdu-Bible_10_360.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Part 11",
+      "file": "urd_Covenant_Urdu_Revised-Urdu-Bible_11_360.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Part 12",
+      "file": "urd_Covenant_Urdu_Revised-Urdu-Bible_12_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-covenant/urd_urdu_covenant",
+   "downloads": [],
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "urd-film-lumo-mark",
+   "lang": "urd",
+   "type": "film",
+   "title": "LUMO: The Gospel of Mark",
+   "org": "LUMO Project",
+   "cover": "https://meta.dbs.org/data/data-video/covers/Lumo-Mark/lumo_mark.webp",
+   "desc": "The Gospel of Mark filmed word for word from the Urdu Scripture text.",
+   "play": {
+    "kind": "file",
+    "hd": "https://odi-anusaran.s3.ap-south-1.amazonaws.com/downloads/video/lumo/lumo-urd-2-mark.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Lumo: Mark (MP4)",
+     "url": "https://odi-anusaran.s3.ap-south-1.amazonaws.com/downloads/video/lumo/lumo-urd-2-mark.mp4",
+     "external": true
+    },
+    {
+     "label": "Lumo: Matthew (MP4)",
+     "url": "https://odi-anusaran.s3.ap-south-1.amazonaws.com/downloads/video/lumo/lumo-urd-1-matthew.mp4",
+     "external": true
+    },
+    {
+     "label": "Lumo: Luke (MP4)",
+     "url": "https://odi-anusaran.s3.ap-south-1.amazonaws.com/downloads/video/lumo/lumo-urd-3-luke.mp4",
+     "external": true
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/urd",
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "urd-film-hope",
+   "lang": "urd",
+   "type": "film",
+   "title": "The HOPE",
+   "org": "Mars Hill Productions",
+   "duration": "1:19:17",
+   "cover": "https://meta.dbs.org/data/data-video/covers/HOPE/urd_urdu.webp",
+   "desc": "The whole biblical story from creation to Christ in one film — a survey of Scripture in 36 scenes.",
+   "play": {
+    "kind": "file",
+    "hd": "https://dbs.org/cdn/video/HOPE/films/urd_urdu_the_hope.mp4",
+    "sd": "https://dbs.org/cdn/video/HOPE/films_low/urd_urdu_the_hope_low.mp4"
+   },
+   "downloads": [
+    {
+     "label": "All 36 events (ZIP)",
+     "url": "https://download.dbs.org/HOPE/urd_urdu_the_hope_events.zip"
+    },
+    {
+     "label": "Voice-only version (Mars Hill)",
+     "url": "https://www.mars-hill.org/the-hope/store/the-urdu-hope%D8%A7%D8%B3-%D8%A7%D9%85%DB%8C%D8%AF-%D9%BE%D8%B1-voice-only-version",
+     "external": true
+    }
+   ],
+   "source": "https://dbs.org/video/hope/urd_urdu_the_hope",
+   "read": null,
+   "native": null,
+   "year": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "urd-film-ibible",
+   "lang": "urd",
+   "type": "film",
+   "title": "iBible: Salvation Story",
+   "org": "RevelationMedia",
+   "duration": "9:17",
+   "cover": "https://meta.dbs.org/data/data-video/covers/ibible/urd-urdu-ibible_salvation.webp",
+   "desc": "A short animated overview of the story of salvation, from Genesis to the resurrection.",
+   "play": {
+    "kind": "file",
+    "hd": "https://dbs.org/cdn/video/ibible/films/urd-urdu-ibible_salvation-hd.mp4",
+    "sd": "https://dbs.org/cdn/video/ibible/films_low/urd-urdu-ibible_salvation-sd.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Download (ZIP)",
+     "url": "https://download.dbs.org/ibible/urd-urdu-ibible_salvation.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/ibible/urd-urdu-ibible_salvation",
+   "read": null,
+   "native": null,
+   "year": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "urd-film-matthew",
+   "lang": "urd",
+   "type": "film",
+   "title": "The Visual Bible: Matthew",
+   "org": "Visual Bible Int.",
+   "duration": "4:11:24",
+   "cover": "https://meta.dbs.org/data/data-video/covers/Matthew/matthew.webp",
+   "desc": "The Gospel of Matthew filmed word for word — the complete text, nothing added.",
+   "play": {
+    "kind": "file",
+    "hd": "https://dbs.org/cdn/video/Matthew/films/urd-matthew-vb-urdu/urd-matthew-vb-urdu.mp4"
+   },
+   "downloads": [
+    {
+     "label": "All chapters (ZIP)",
+     "url": "https://download.dbs.org/Matthew/urd-matthew-vb-urdu/urd-matthew-vb-urdu-chapters.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/matthew/urd-matthew-vb-urdu",
+   "read": null,
+   "native": null,
+   "year": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "urd-film-acts",
+   "lang": "urd",
+   "type": "film",
+   "title": "The Visual Bible: Acts",
+   "org": "Visual Bible Int.",
+   "duration": "3:09:09",
+   "cover": "https://meta.dbs.org/data/data-video/covers/Acts_VB/book_of_acts.webp",
+   "desc": "The book of Acts filmed word for word — the complete text, nothing added.",
+   "play": {
+    "kind": "file",
+    "hd": "https://dbs.org/cdn/video/Acts_VB/films/urd-acts-vb-urdu/urd-acts-vb-urdu.mp4"
+   },
+   "downloads": [
+    {
+     "label": "All chapters (ZIP)",
+     "url": "https://download.dbs.org/Acts_VB/urd-acts-vb-urdu/urd-acts-vb-urdu-chapters.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/acts_vb/urd-acts-vb-urdu",
+   "read": null,
+   "native": null,
+   "year": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "urd-film-deaf",
+   "lang": "urd",
+   "type": "film",
+   "title": "Rescue Project Deaf Gospel",
+   "org": "Jesus Film Project",
+   "duration": "28:17",
+   "cover": "https://meta.dbs.org/data/data-video/covers/DeafProject/rescue_project_deaf_gospel.jpg",
+   "desc": "The gospel presented in sign language for Deaf audiences.",
+   "source": "https://dbs.org/video/deafproject/urd_urdu_rescue_project_deaf_gospel",
+   "downloads": [],
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "urd-film-jtt",
+   "lang": "urd",
+   "type": "film",
+   "title": "Journey to Truth",
+   "org": "Create International",
+   "stats": "8 episodes",
+   "desc": "An eight-part drama series following one man's search for truth — made for Muslim-background audiences.",
+   "play": {
+    "kind": "chapters",
+    "base": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/JTT/URD/",
+    "items": [
+     {
+      "n": 1,
+      "title": "He Said, It's Been Said",
+      "file": "JTT-1_Urdu.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Extensive Questions",
+      "file": "JTT-2_Urdu.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Give and Take",
+      "file": "JTT-3_Urdu.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Beginning of Light",
+      "file": "JTT-4_Urdu.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Authority of Forgiveness",
+      "file": "JTT-5_Urdu.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Miracle of Love",
+      "file": "JTT-6_Urdu.mp4"
+     },
+     {
+      "n": 7,
+      "title": "A Real Dream",
+      "file": "JTT-7_Urdu.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Freedom",
+      "file": "JTT-8_Urdu.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/discover/languages/urd",
+   "downloads": [],
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "urd-film-gathering",
+   "lang": "urd",
+   "type": "film",
+   "title": "A Gathering of the Followers of Isa",
+   "org": "Create International",
+   "desc": "A short film introducing a community of followers of Isa. Available with Arabic or English subtitles.",
+   "play": {
+    "kind": "chapters",
+    "base": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000C/u/Urdu_0036C/",
+    "items": [
+     {
+      "n": 1,
+      "title": "Urdu",
+      "file": "UrduCG_sm.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Arabic subtitles",
+      "file": "UrduCG_ArabSub_sm.mp4"
+     },
+     {
+      "n": 3,
+      "title": "English subtitles",
+      "file": "UrduCG_EngSub_sm.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/discover/languages/urd",
+   "downloads": [],
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "urd-film-lost-coin",
+   "lang": "urd",
+   "type": "film",
+   "title": "The Lost Coin",
+   "org": "Create International",
+   "desc": "The parable of the lost coin, dramatised. Available with or without English subtitles.",
+   "play": {
+    "kind": "chapters",
+    "base": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/",
+    "items": [
+     {
+      "n": 1,
+      "title": "Urdu",
+      "file": "1.The_Lost_Coin_in_Urdu.mp4"
+     },
+     {
+      "n": 2,
+      "title": "English subtitles",
+      "file": "1.The_Lost_Coin_in_Urdu_EngSub.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/discover/languages/urd",
+   "downloads": [],
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "urd-film-greatest-sacrifice",
+   "lang": "urd",
+   "type": "film",
+   "title": "The Greatest Sacrifice",
+   "org": "Create International",
+   "desc": "A short evangelistic film on sacrifice and redemption, made for Urdu-speaking audiences.",
+   "play": {
+    "kind": "file",
+    "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/u/Urdu_0003A/UrduEV_sm.mp4"
+   },
+   "source": "https://dbs.org/discover/languages/urd",
+   "downloads": [],
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "urd-film-life-of-jesus",
+   "lang": "urd",
+   "type": "film",
+   "title": "Life of Jesus (Gospel of John)",
+   "org": "Jesus Film Project",
+   "desc": "The Gospel of John presented as a feature film.",
+   "downloads": [
+    {
+     "label": "Watch (Jesus Film Project)",
+     "url": "https://arc.gt/a2xjf?apiSessionId=5f87687c98a8e7.56667943",
+     "external": true
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/urd",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "urd-text-urdoub",
+   "lang": "urd",
+   "type": "scripture",
+   "title": "The Open Urdu Bible (Devanagari)",
+   "native": "उर्दू बाइबिल",
+   "org": "Bridge Connectivity Solutions",
+   "year": "2017",
+   "desc": "A full Urdu Bible in Devanagari script.",
+   "license": "CC BY-SA 4.0",
+   "read": {
+    "kind": "pdf",
+    "url": "https://bibles.dbs.org/URDOUB/pdf/URDOUB.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://bibles.dbs.org/URDOUB/pdf/URDOUB.pdf"
+    },
+    {
+     "label": "EPUB",
+     "url": "https://bibles.dbs.org/URDOUB/epub/URDOUB.epub"
+    },
+    {
+     "label": "HTML (ZIP)",
+     "url": "https://bibles.dbs.org/URDOUB/html_URDOUB.zip"
+    }
+   ],
+   "source": "https://dbs.org/bibles/URDOUB",
+   "play": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "urd-text-urdgeo",
+   "lang": "urd",
+   "type": "scripture",
+   "title": "Urdu Geo Version (UGV)",
+   "native": "اردو جیو ورژن",
+   "org": "Geolink Resource Consultants",
+   "year": "2010",
+   "desc": "A modern Urdu translation in the Perso-Arabic script.",
+   "license": null,
+   "read": {
+    "kind": "pdf",
+    "url": "https://bibles.dbs.org/URDGEO/pdf/URDGEO.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://bibles.dbs.org/URDGEO/pdf/URDGEO.pdf"
+    },
+    {
+     "label": "EPUB",
+     "url": "https://bibles.dbs.org/URDGEO/epub/URDGEO.epub"
+    },
+    {
+     "label": "HTML (ZIP)",
+     "url": "https://bibles.dbs.org/URDGEO/html_URDGEO.zip"
+    }
+   ],
+   "source": "https://dbs.org/bibles/URDGEO",
+   "play": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "urd-text-urdgeod",
+   "lang": "urd",
+   "type": "scripture",
+   "title": "Urdu Geo Version (Devanagari)",
+   "native": "किताब-ए मुक़द्दस",
+   "org": "Geolink Resource Consultants",
+   "year": "2010",
+   "desc": "The Urdu Geo Version set in Devanagari for Hindi-script readers.",
+   "license": null,
+   "read": {
+    "kind": "pdf",
+    "url": "https://bibles.dbs.org/URDGEOD/pdf/URDGEOD.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://bibles.dbs.org/URDGEOD/pdf/URDGEOD.pdf"
+    },
+    {
+     "label": "EPUB",
+     "url": "https://bibles.dbs.org/URDGEOD/epub/URDGEOD.epub"
+    },
+    {
+     "label": "HTML (ZIP)",
+     "url": "https://bibles.dbs.org/URDGEOD/html_URDGEOD.zip"
+    }
+   ],
+   "source": "https://dbs.org/bibles/URDGEOD",
+   "play": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "urd-text-urderv",
+   "lang": "urd",
+   "type": "scripture",
+   "title": "Urdu: Easy-to-Read Version",
+   "native": "پڑھنے کے لئے آسان",
+   "org": "World Bible Translation Center",
+   "year": "2003",
+   "desc": "A plain-language Urdu New Testament, written for readers of every level.",
+   "license": null,
+   "read": {
+    "kind": "pdf",
+    "url": "https://bibles.dbs.org/URDERV/pdf/URDERV.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://bibles.dbs.org/URDERV/pdf/URDERV.pdf"
+    },
+    {
+     "label": "EPUB",
+     "url": "https://bibles.dbs.org/URDERV/epub/URDERV.epub"
+    },
+    {
+     "label": "HTML (ZIP)",
+     "url": "https://bibles.dbs.org/URDERV/html_URDERV.zip"
+    }
+   ],
+   "source": "https://dbs.org/bibles/URDERV",
+   "play": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "urd-text-urdpnt",
+   "lang": "urd",
+   "type": "scripture",
+   "title": "Urdu Bible (URDPNT)",
+   "native": "Kitáb i Muqaddas",
+   "org": "Pakistan Bible Society",
+   "year": "2016",
+   "desc": "A complete Urdu Bible.",
+   "license": null,
+   "read": {
+    "kind": "pdf",
+    "url": "https://bibles.dbs.org/URDPNT/pdf/URDPNT.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://bibles.dbs.org/URDPNT/pdf/URDPNT.pdf"
+    },
+    {
+     "label": "EPUB",
+     "url": "https://bibles.dbs.org/URDPNT/epub/URDPNT.epub"
+    },
+    {
+     "label": "HTML (ZIP)",
+     "url": "https://bibles.dbs.org/URDPNT/html_URDPNT.zip"
+    }
+   ],
+   "source": "https://dbs.org/bibles/URDPNT",
+   "play": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "urd-ab-urdbsi",
+   "lang": "urd",
+   "type": "audio-bible",
+   "title": "Urdu Old Version",
+   "org": "Davar Partners",
+   "year": "2003",
+   "scope": "Full Bible",
+   "stats": "1,189 chapters · 91h 39m",
+   "desc": "The complete Urdu Bible read aloud — every chapter of both testaments.",
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "URDBSI_DAVR_FB_N",
+    "version": "URDBSI",
+    "testaments": [
+     "OT",
+     "NT"
+    ]
+   },
+   "downloads": [
+    {
+     "label": "Complete audio (ZIP)",
+     "url": "https://scripture.dbs.org/audio_zip/URDBSI_DAVR_FB_N.zip"
+    }
+   ],
+   "source": "https://dbs.org/bibles/audio/URDBSI_DAVR_FB_N",
+   "read": null,
+   "native": null,
+   "duration": null,
+   "cover": null,
+   "license": null,
+   "langName": "Urdu",
+   "typeLabel": "Audio Bibles"
+  },
+  {
+   "id": "urd-ab-urdb43",
+   "lang": "urd",
+   "type": "audio-bible",
+   "title": "Urdu Bible (1943)",
+   "native": "Kitab Muqaddas Yaani Purana Aur Naya Auhad Naama",
+   "org": "ISA",
+   "year": "1943",
+   "scope": "Full Bible",
+   "stats": "1,189 chapters · 107h 17m",
+   "desc": "The 1943 Urdu Bible read aloud in full — the classic literary text.",
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "URDB43_ISA_FB_N",
+    "version": "URDB43",
+    "testaments": [
+     "OT",
+     "NT"
+    ]
+   },
+   "downloads": [
+    {
+     "label": "Complete audio (ZIP)",
+     "url": "https://scripture.dbs.org/audio_zip/URDB43_ISA_FB_N.zip"
+    }
+   ],
+   "source": "https://dbs.org/bibles/audio/URDB43_ISA_FB_N",
+   "read": null,
+   "duration": null,
+   "cover": null,
+   "license": null,
+   "langName": "Urdu",
+   "typeLabel": "Audio Bibles"
+  },
+  {
+   "id": "urd-ab-urdbcs",
+   "lang": "urd",
+   "type": "audio-bible",
+   "title": "Urdu Indian Revised Version",
+   "native": "इंडियन रिवाइज्ड वर्जन उर्दू",
+   "org": "Davar Partners",
+   "scope": "Full Bible",
+   "desc": "The Indian Revised Version of the Urdu Bible, read aloud in full.",
+   "play": null,
+   "downloads": [
+    {
+     "label": "Complete audio (ZIP)",
+     "url": "https://scripture.dbs.org/audio_zip/URDBCS_DAVR_FB_N.zip"
+    }
+   ],
+   "source": "https://dbs.org/bibles/audio/URDBCS_DAVR_FB_N",
+   "read": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "langName": "Urdu",
+   "typeLabel": "Audio Bibles"
+  },
+  {
+   "id": "urd-ac-grn",
+   "lang": "urd",
+   "type": "audio",
+   "title": "Words of Life +12",
+   "org": "Global Recordings Network",
+   "stats": "338 recordings · 660 MB",
+   "desc": "Thirteen Scripture-based audio programmes — Words of Life, the eight-part Look, Listen & Live series, Good News, Portrait of Jesus and Scripture songs.",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/urd_GlobalRecordings_urdu/Rewa%20Urdu/Rewa%20Urdu%20Words%20of%20Life%2018261/Rewa%20Urdu%20Words%20of%20Life%20001%20Everyone%20Must%20Stand%20Before%20God%2018261.mp3"
+   },
+   "downloads": [
+    {
+     "label": "Complete collection — high quality",
+     "url": "https://media.dbs.org/audio/grn/urd_GlobalRecordings_urdu_high.zip"
+    },
+    {
+     "label": "Complete collection — low bandwidth",
+     "url": "https://media.dbs.org/audio/grn/urd_GlobalRecordings_urdu_low.zip"
+    }
+   ],
+   "source": "https://dbs.org/audio/collections/grn/urd_GlobalRecordings_urdu",
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Audio Collections"
+  },
+  {
+   "id": "urd-ac-soj",
+   "lang": "urd",
+   "type": "audio",
+   "title": "Story of Jesus",
+   "org": "Story of Jesus",
+   "stats": "8 recordings · 123 MB",
+   "desc": "The life of Jesus as a narrated audio drama, in eight parts plus a continuous version.",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/soj/urd_StoryJesus_urdu_full.mp3"
+   },
+   "downloads": [
+    {
+     "label": "All eight parts (ZIP)",
+     "url": "https://media.dbs.org/audio/soj/urd_StoryJesus_urdu.zip"
+    },
+    {
+     "label": "Continuous version (ZIP)",
+     "url": "https://media.dbs.org/audio/soj/urd_StoryJesus_urdu_full.zip"
+    }
+   ],
+   "source": "https://dbs.org/audio/collections/soj/urd_StoryJesus_urdu",
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Audio Collections"
+  },
+  {
+   "id": "urd-ac-rock-righteousness",
+   "lang": "urd",
+   "type": "audio",
+   "title": "The Way of Righteousness",
+   "org": "ROCK International",
+   "desc": "A chronological audio journey through the prophets and the message of the Injil.",
+   "downloads": [
+    {
+     "label": "Listen (ROCK International)",
+     "url": "https://rockintl.org/rock-audio/the-way-of-righteousness-urdu/",
+     "external": true
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/urd",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Audio Collections"
+  },
+  {
+   "id": "urd-hist-urdu-1855-psalms-zabur-aur-git",
+   "lang": "urd",
+   "type": "historic",
+   "title": "Urdu (1855) Psalms",
+   "native": "زبور اور گیت",
+   "year": "1855",
+   "org": "Digital Bible Society Archive",
+   "cover": "https://scripture.dbs.org/covers/small/Urdu-1855-Psalms-Zabur-aur-git.webp",
+   "desc": "Scanned pages of the 1855 printed edition. Read in the browser or download the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Urdu-1855-Psalms-Zabur-aur-git.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Urdu-1855-Psalms-Zabur-aur-git.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Urdu-1855-Psalms-Zabur-aur-git",
+   "play": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "urd-hist-urdu-1860-new-testament",
+   "lang": "urd",
+   "type": "historic",
+   "title": "Urdu (1860) New Testament",
+   "native": "نیا عہد نامہ",
+   "year": "1860",
+   "org": "Digital Bible Society Archive",
+   "cover": "https://scripture.dbs.org/covers/small/Urdu-1860-New-Testament.webp",
+   "desc": "Scanned pages of the 1860 printed edition. Read in the browser or download the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Urdu-1860-New-Testament.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Urdu-1860-New-Testament.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Urdu-1860-New-Testament",
+   "play": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "urd-hist-urdu-1870-psalms-dua-i-amim-ki-kitab-aur-sakraminton-ki-tartib",
+   "lang": "urd",
+   "type": "historic",
+   "title": "Urdu (1870) Psalms & Book of Common Prayer",
+   "native": "زبور",
+   "year": "1870",
+   "org": "Digital Bible Society Archive",
+   "cover": "https://scripture.dbs.org/covers/small/Urdu-1870-Psalms-Dua-i-amim-ki-kitab-aur-sakraminton-ki-tartib.webp",
+   "desc": "Scanned pages of the 1870 printed edition. Read in the browser or download the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Urdu-1870-Psalms-Dua-i-amim-ki-kitab-aur-sakraminton-ki-tartib.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Urdu-1870-Psalms-Dua-i-amim-ki-kitab-aur-sakraminton-ki-tartib.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Urdu-1870-Psalms-Dua-i-amim-ki-kitab-aur-sakraminton-ki-tartib",
+   "play": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "urd-hist-urdu-1943-bible-kitab-muqaddas-yaani-purana-aur-naya-auhad-naama",
+   "lang": "urd",
+   "type": "historic",
+   "title": "Urdu (1943) Bible",
+   "native": "بائبل",
+   "year": "1943",
+   "org": "Digital Bible Society Archive",
+   "cover": "https://scripture.dbs.org/covers/small/Urdu-1943-Bible-Kitab-Muqaddas-Yaani-Purana-Aur-Naya-Auhad-Naama.webp",
+   "desc": "Scanned pages of the 1943 printed edition. Read in the browser or download the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Urdu-1943-Bible-Kitab-Muqaddas-Yaani-Purana-Aur-Naya-Auhad-Naama.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Urdu-1943-Bible-Kitab-Muqaddas-Yaani-Purana-Aur-Naya-Auhad-Naama.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Urdu-1943-Bible-Kitab-Muqaddas-Yaani-Purana-Aur-Naya-Auhad-Naama",
+   "play": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "urd-hist-urdu-2006-wbtc-new-testament",
+   "lang": "urd",
+   "type": "historic",
+   "title": "Urdu ERV New Testament",
+   "native": "نیا عہد نامہ",
+   "year": "2006",
+   "org": "Digital Bible Society Archive",
+   "cover": "https://scripture.dbs.org/covers/small/Urdu-2006-WBTC-New-Testament.webp",
+   "desc": "Scanned pages of the 2006 printed edition. Read in the browser or download the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Urdu-2006-WBTC-New-Testament.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Urdu-2006-WBTC-New-Testament.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Urdu-2006-WBTC-New-Testament",
+   "play": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "urd-hist-urdu-john-print",
+   "lang": "urd",
+   "type": "historic",
+   "title": "Urdu — John",
+   "native": "یوحنا",
+   "year": "2003",
+   "org": "Digital Bible Society Archive",
+   "cover": "https://scripture.dbs.org/covers/small/Urdu-John-print.webp",
+   "desc": "Scanned pages of the 2003 printed edition. Read in the browser or download the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Urdu-John-print.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Urdu-John-print.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Urdu-John-print",
+   "play": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "urd-hist-urdu-latin-bible-print",
+   "lang": "urd",
+   "type": "historic",
+   "title": "Urdu (Latin) Bible",
+   "native": "Kitab Muqaddas",
+   "year": "2017",
+   "org": "Digital Bible Society Archive",
+   "cover": "https://scripture.dbs.org/covers/small/Urdu-Latin-Bible-print.webp",
+   "desc": "Scanned pages of the 2017 printed edition. Read in the browser or download the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Urdu-Latin-Bible-print.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Urdu-Latin-Bible-print.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Urdu-Latin-Bible-print",
+   "play": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "urd-hist-urdu-latin-new-testament-print",
+   "lang": "urd",
+   "type": "historic",
+   "title": "Urdu (Latin) New Testament",
+   "native": "Naya Ahd Nama",
+   "year": "2017",
+   "org": "Digital Bible Society Archive",
+   "cover": "https://scripture.dbs.org/covers/small/Urdu-Latin-New-Testament-print.webp",
+   "desc": "Scanned pages of the 2017 printed edition. Read in the browser or download the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Urdu-Latin-New-Testament-print.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Urdu-Latin-New-Testament-print.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Urdu-Latin-New-Testament-print",
+   "play": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "snd-link-grn-64432",
+   "lang": "snd",
+   "type": "link",
+   "title": "Good News",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/64432",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/64432",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "snd-link-grn-65157",
+   "lang": "snd",
+   "type": "link",
+   "title": "Good News",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/65157",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/65157",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "snd-link-grn-64991",
+   "lang": "snd",
+   "type": "link",
+   "title": "Good News",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/64991",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/64991",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "snd-link-grn-64269",
+   "lang": "snd",
+   "type": "link",
+   "title": "Good News",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/64269",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/64269",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "snd-link-grn-21240",
+   "lang": "snd",
+   "type": "link",
+   "title": "Good News (Hindu)",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/21240",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/21240",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "snd-link-grn-74906",
+   "lang": "snd",
+   "type": "link",
+   "title": "Good News (Muslim)",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/74906",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/74906",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "snd-link-grn-64277",
+   "lang": "snd",
+   "type": "link",
+   "title": "Look, Listen & Live 1",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/64277",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/64277",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "snd-link-grn-64278",
+   "lang": "snd",
+   "type": "link",
+   "title": "Look, Listen & Live 2 — Mighty Men of God",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/64278",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/64278",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "snd-link-grn-64279",
+   "lang": "snd",
+   "type": "link",
+   "title": "Look, Listen & Live 3 — Victory through God",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/64279",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/64279",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "snd-link-grn-64280",
+   "lang": "snd",
+   "type": "link",
+   "title": "Look, Listen & Live 4 — Servants of God",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/64280",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/64280",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "snd-link-grn-64281",
+   "lang": "snd",
+   "type": "link",
+   "title": "Look, Listen & Live 5 — On Trial for God",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/64281",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/64281",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "snd-link-grn-64282",
+   "lang": "snd",
+   "type": "link",
+   "title": "Look, Listen & Live 6 — Jesus, Teacher & Healer",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/64282",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/64282",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "snd-link-grn-64283",
+   "lang": "snd",
+   "type": "link",
+   "title": "Look, Listen & Live 7 — Jesus, Lord & Saviour",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/64283",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/64283",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "snd-link-grn-64284",
+   "lang": "snd",
+   "type": "link",
+   "title": "Look, Listen & Live 8 — Acts of the Holy Spirit",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/64284",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/64284",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "snd-link-grn-65779",
+   "lang": "snd",
+   "type": "link",
+   "title": "Romans",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/65779",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/65779",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "snd-link-grn-80662",
+   "lang": "snd",
+   "type": "link",
+   "title": "Scripture & Songs",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/80662",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/80662",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "snd-link-grn-3721",
+   "lang": "snd",
+   "type": "link",
+   "title": "Words of Life 1 (Hindu)",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/3721",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/3721",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "snd-link-grn-3751",
+   "lang": "snd",
+   "type": "link",
+   "title": "Words of Life 1 (Muslim)",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/3751",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/3751",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "snd-link-grn-9530",
+   "lang": "snd",
+   "type": "link",
+   "title": "Words of Life 2 (Hindu)",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/9530",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/9530",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "snd-link-grn-7021",
+   "lang": "snd",
+   "type": "link",
+   "title": "Words of Life 2 (Muslim)",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/7021",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/7021",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-grn-18261",
+   "lang": "urd",
+   "type": "link",
+   "title": "Words of Life",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/18261",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/18261",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-grn-21531",
+   "lang": "urd",
+   "type": "link",
+   "title": "Words of Life",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/21531",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/21531",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-grn-2781",
+   "lang": "urd",
+   "type": "link",
+   "title": "Words of Life (Hindu)",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/2781",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/2781",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-grn-2740",
+   "lang": "urd",
+   "type": "link",
+   "title": "Words of Life (Muslim) 1",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/2740",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/2740",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-grn-2741",
+   "lang": "urd",
+   "type": "link",
+   "title": "Words of Life (Muslim) 2",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/2741",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/2741",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-grn-64434",
+   "lang": "urd",
+   "type": "link",
+   "title": "Ai Khuda Uncha Ho Tera Naam — Lord, Your Name Be Lifted High",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/64434",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/64434",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-grn-64433",
+   "lang": "urd",
+   "type": "link",
+   "title": "Good News",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/64433",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/64433",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-grn-74723",
+   "lang": "urd",
+   "type": "link",
+   "title": "Look, Listen & Live 1",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/74723",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/74723",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-grn-74724",
+   "lang": "urd",
+   "type": "link",
+   "title": "Look, Listen & Live 2 — Mighty Men of God",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/74724",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/74724",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-grn-74725",
+   "lang": "urd",
+   "type": "link",
+   "title": "Look, Listen & Live 3 — Victory through God",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/74725",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/74725",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-grn-74726",
+   "lang": "urd",
+   "type": "link",
+   "title": "Look, Listen & Live 4 — Servants of God",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/74726",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/74726",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-grn-74727",
+   "lang": "urd",
+   "type": "link",
+   "title": "Look, Listen & Live 5 — On Trial for God",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/74727",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/74727",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-grn-77480",
+   "lang": "urd",
+   "type": "link",
+   "title": "Look, Listen & Live 6 — Jesus, Teacher & Healer",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/77480",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/77480",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-grn-77490",
+   "lang": "urd",
+   "type": "link",
+   "title": "Look, Listen & Live 7 — Jesus, Lord & Saviour",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/77490",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/77490",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-grn-77500",
+   "lang": "urd",
+   "type": "link",
+   "title": "Look, Listen & Live 8 — Acts of the Holy Spirit",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/77500",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/77500",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-grn-31590",
+   "lang": "urd",
+   "type": "link",
+   "title": "Portrait of Jesus",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programme, free to stream and download.",
+   "downloads": [
+    {
+     "label": "Open on globalrecordings.net",
+     "url": "https://globalrecordings.net/en/program/31590",
+     "external": true
+    }
+   ],
+   "source": "https://globalrecordings.net/en/program/31590",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "snd-link-fb-sndclb",
+   "lang": "snd",
+   "type": "link",
+   "title": "Sindhi Common Language New Testament (2009)",
+   "org": "find.bible",
+   "desc": "Translation record and availability on find.bible.",
+   "downloads": [
+    {
+     "label": "Open on find.bible",
+     "url": "https://find.bible/?abbr=SNDCLB",
+     "external": true
+    }
+   ],
+   "source": "https://find.bible/?abbr=SNDCLB",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "snd-link-fb-sndzzzp",
+   "lang": "snd",
+   "type": "link",
+   "title": "Sindhi Bible",
+   "org": "find.bible",
+   "desc": "Translation record and availability on find.bible.",
+   "downloads": [
+    {
+     "label": "Open on find.bible",
+     "url": "https://find.bible/?abbr=SNDZZZP",
+     "external": true
+    }
+   ],
+   "source": "https://find.bible/?abbr=SNDZZZP",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "snd-link-fb-snd1890",
+   "lang": "snd",
+   "type": "link",
+   "title": "Sindhi New Testament (1890)",
+   "org": "find.bible",
+   "desc": "Translation record and availability on find.bible.",
+   "downloads": [
+    {
+     "label": "Open on find.bible",
+     "url": "https://find.bible/?abbr=SND1890",
+     "external": true
+    }
+   ],
+   "source": "https://find.bible/?abbr=SND1890",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Sindhi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-fb-urdrom",
+   "lang": "urd",
+   "type": "link",
+   "title": "Bible in Romanized Urdu",
+   "org": "find.bible",
+   "desc": "Translation record and availability on find.bible.",
+   "downloads": [
+    {
+     "label": "Open on find.bible",
+     "url": "https://find.bible/?abbr=URDROM",
+     "external": true
+    }
+   ],
+   "source": "https://find.bible/?abbr=URDROM",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-fb-urdbsi",
+   "lang": "urd",
+   "type": "link",
+   "title": "Urdu Old Version",
+   "org": "find.bible",
+   "desc": "Translation record and availability on find.bible.",
+   "downloads": [
+    {
+     "label": "Open on find.bible",
+     "url": "https://find.bible/?abbr=URDBSI",
+     "external": true
+    }
+   ],
+   "source": "https://find.bible/?abbr=URDBSI",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-fb-urdurv",
+   "lang": "urd",
+   "type": "link",
+   "title": "Revised Urdu Holy Bible",
+   "org": "find.bible",
+   "desc": "Translation record and availability on find.bible.",
+   "downloads": [
+    {
+     "label": "Open on find.bible",
+     "url": "https://find.bible/?abbr=URDURV",
+     "external": true
+    }
+   ],
+   "source": "https://find.bible/?abbr=URDURV",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-fb-urdb43",
+   "lang": "urd",
+   "type": "link",
+   "title": "Urdu Bible",
+   "org": "find.bible",
+   "desc": "Translation record and availability on find.bible.",
+   "downloads": [
+    {
+     "label": "Open on find.bible",
+     "url": "https://find.bible/?abbr=URDB43",
+     "external": true
+    }
+   ],
+   "source": "https://find.bible/?abbr=URDB43",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-fb-urdold",
+   "lang": "urd",
+   "type": "link",
+   "title": "Urdu Bible (Portions)",
+   "org": "find.bible",
+   "desc": "Translation record and availability on find.bible.",
+   "downloads": [
+    {
+     "label": "Open on find.bible",
+     "url": "https://find.bible/?abbr=URDOLD",
+     "external": true
+    }
+   ],
+   "source": "https://find.bible/?abbr=URDOLD",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-fb-urdbsp",
+   "lang": "urd",
+   "type": "link",
+   "title": "Urdu Bible Society Version (Pakistan)",
+   "org": "find.bible",
+   "desc": "Translation record and availability on find.bible.",
+   "downloads": [
+    {
+     "label": "Open on find.bible",
+     "url": "https://find.bible/?abbr=URDBSP",
+     "external": true
+    }
+   ],
+   "source": "https://find.bible/?abbr=URDBSP",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-fb-urdzzzp",
+   "lang": "urd",
+   "type": "link",
+   "title": "Contemporary Urdu New Testament",
+   "org": "find.bible",
+   "desc": "Translation record and availability on find.bible.",
+   "downloads": [
+    {
+     "label": "Open on find.bible",
+     "url": "https://find.bible/?abbr=URDZZZP",
+     "external": true
+    }
+   ],
+   "source": "https://find.bible/?abbr=URDZZZP",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-fb-urdnubv",
+   "lang": "urd",
+   "type": "link",
+   "title": "New Urdu Bible Version",
+   "org": "find.bible",
+   "desc": "Translation record and availability on find.bible.",
+   "downloads": [
+    {
+     "label": "Open on find.bible",
+     "url": "https://find.bible/?abbr=URDNUBV",
+     "external": true
+    }
+   ],
+   "source": "https://find.bible/?abbr=URDNUBV",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-fb-urdfgb",
+   "lang": "urd",
+   "type": "link",
+   "title": "Roman Urdu Geo Bible",
+   "org": "find.bible",
+   "desc": "Translation record and availability on find.bible.",
+   "downloads": [
+    {
+     "label": "Open on find.bible",
+     "url": "https://find.bible/?abbr=URDFGB",
+     "external": true
+    }
+   ],
+   "source": "https://find.bible/?abbr=URDFGB",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-lw-415",
+   "lang": "urd",
+   "type": "link",
+   "title": "An Invitation",
+   "org": "Lifewords",
+   "desc": "Printed Scripture booklet, available to order or read online.",
+   "downloads": [
+    {
+     "label": "Open on Lifewords",
+     "url": "https://resources.lifewords.global/urdu/415-an-invitation-urdu-9780721309705.html",
+     "external": true
+    }
+   ],
+   "source": "https://resources.lifewords.global/urdu/415-an-invitation-urdu-9780721309705.html",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-lw-439",
+   "lang": "urd",
+   "type": "link",
+   "title": "Finding Hope",
+   "org": "Lifewords",
+   "desc": "Printed Scripture booklet, available to order or read online.",
+   "downloads": [
+    {
+     "label": "Open on Lifewords",
+     "url": "https://resources.lifewords.global/urdu/439-finding-hope-urdu-9780721310008.html",
+     "external": true
+    }
+   ],
+   "source": "https://resources.lifewords.global/urdu/439-finding-hope-urdu-9780721310008.html",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-lw-443",
+   "lang": "urd",
+   "type": "link",
+   "title": "The Way to Life",
+   "org": "Lifewords",
+   "desc": "Printed Scripture booklet, available to order or read online.",
+   "downloads": [
+    {
+     "label": "Open on Lifewords",
+     "url": "https://resources.lifewords.global/urdu/443-urdu-the-way-to-life-9780721310060.html",
+     "external": true
+    }
+   ],
+   "source": "https://resources.lifewords.global/urdu/443-urdu-the-way-to-life-9780721310060.html",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "urd-link-rock-ogom",
+   "lang": "urd",
+   "type": "link",
+   "title": "One God, One Message",
+   "org": "ROCK International",
+   "desc": "A book-length journey through the prophets and the gospel.",
+   "downloads": [
+    {
+     "label": "Open on rockintl.org",
+     "url": "https://rockintl.org/rock-document/urdu-one-god-one-message/",
+     "external": true
+    }
+   ],
+   "source": "https://rockintl.org/rock-document/urdu-one-god-one-message/",
+   "play": null,
+   "read": null,
+   "native": null,
+   "year": null,
+   "duration": null,
+   "stats": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "langName": "Urdu",
+   "typeLabel": "Partner Links"
+  }
+ ]
+}

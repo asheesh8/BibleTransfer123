@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>The Library</title>
+<meta name="description" content="Films, Scripture and audio you can keep — no internet needed.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="assets/icon/apple-touch-icon.png">
+<link rel="icon" href="assets/icon/favicon-32.png" sizes="32x32">
+<meta name="theme-color" content="#4E1F64">
+<!-- iOS reads these instead of the manifest for Add to Home Screen. -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Library">
+<link rel="stylesheet" href="assets/css/app.css">
+<!-- Applied before first paint so an RTL language never flashes left-to-right. -->
+<script>
+  try {
+    var l = localStorage.getItem('et.lang');
+    if (l) {
+      document.documentElement.setAttribute('lang', l);
+      document.documentElement.setAttribute('dir', l === 'en' ? 'ltr' : 'rtl');
+    }
+    var t = localStorage.getItem('et.theme');
+    if (t) document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+</script>
+</head>
+<body>
+
+<main class="wrap" id="main">
+  <section class="hero stack" style="padding:1.6rem 0 .5rem">
+    <div id="hero-art" class="center" aria-hidden="true"></div>
+    <h1 class="center" data-i18n="home.greet">What would you like today?</h1>
+    <p class="center muted" id="hero-count"></p>
+  </section>
+
+  <nav class="stack" id="types" aria-label="Categories"></nav>
+
+  <div id="install" hidden style="margin-top:1.6rem"></div>
+
+  <nav class="stack" id="actions" style="margin-top:1.6rem"></nav>
+
+  <footer class="foot-nav">
+    <p id="built" class="muted"></p>
+    <p class="muted" style="font-size:.86rem">
+      Free to receive and free to pass on. Never charge anyone for this.
+    </p>
+  </footer>
+</main>
+
+<script src="data/catalog.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/art.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>

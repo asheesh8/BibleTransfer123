@@ -1,0 +1,498 @@
+/* ============================================================================
+   EasyTransfer — the on-card library app.
+
+   Constraints this stylesheet is written under, all of them load-bearing:
+
+   · It runs from file:// on a microSD card as often as from a Raspberry Pi, so
+     there is no CDN, no webfont and no build step. Everything is here or on the
+     card next to it.
+   · It is read outdoors, in sun, on a cracked shared phone, by someone who may
+     be reading slowly. Hence the size of everything, the contrast floor, and the
+     refusal to use grey text on grey.
+   · Two of its three languages are cursive Arabic script, where habits that are
+     harmless in Latin — letter-spacing, mid-word breaks — render words broken.
+     See "Arabic script" at the bottom; those rules are not optional.
+   ========================================================================= */
+
+:root {
+  /* Purple and gold are sampled from the ichthys in Gawahi's own logo, warmed
+     toward cream so a page of cards reads friendly rather than institutional. */
+  --ground:      #FFFBF2;
+  --surface:     #FFFFFF;
+  --sunk:        #F6EEE1;
+
+  --ink:         #2A1B33;
+  --ink-soft:    #6B5A75;
+
+  --purple:      #6B2E86;
+  --purple-deep: #4E1F64;
+  --purple-wash: #F3EAF7;
+
+  --gold:        #E8A317;
+  --gold-deep:   #B87D06;
+  --gold-wash:   #FDF3DC;
+
+  --green:       #3FA65C;
+  --green-deep:  #2E7D45;
+  --green-wash:  #E9F6ED;
+
+  --sky:         #2E86AB;
+  --sky-deep:    #1F6182;
+  --sky-wash:    #E7F2F8;
+
+  --line:        #EADFD0;
+  --line-strong: #D9C8B2;
+
+  --r-sm: 12px;
+  --r:    18px;
+  --r-lg: 26px;
+  --r-pill: 999px;
+
+  --press: 4px;          /* how far a chunky button travels when pressed */
+  --tap:   56px;         /* minimum touch target — thumbs, not cursors */
+
+  --wrap: 62rem;
+  --gap:  1rem;
+}
+/* Dark mode is a real field condition — evening, indoors, a projector room.
+   Only the tokens change; nothing below needs to know. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground: #191221;  --surface: #221A2C;  --sunk: #2C2237;
+    --ink: #F6EFFA;     --ink-soft: #BCA9C8;
+    --purple: #C79AD9;  --purple-deep: #9B6BB0; --purple-wash: #2E2139;
+    --gold: #F0B942;    --gold-deep: #C38F1E;   --gold-wash: #35291A;
+    --green: #62C57D;   --green-deep: #3F9257;  --green-wash: #1E2E23;
+    --sky: #6BB6D6;     --sky-deep: #3E88A8;    --sky-wash: #1B2A33;
+    --line: #3A2E47;    --line-strong: #4E3F5E;
+  }
+}
+:root[data-theme="dark"] {
+  --ground: #191221;  --surface: #221A2C;  --sunk: #2C2237;
+  --ink: #F6EFFA;     --ink-soft: #BCA9C8;
+  --purple: #C79AD9;  --purple-deep: #9B6BB0; --purple-wash: #2E2139;
+  --gold: #F0B942;    --gold-deep: #C38F1E;   --gold-wash: #35291A;
+  --green: #62C57D;   --green-deep: #3F9257;  --green-wash: #1E2E23;
+  --sky: #6BB6D6;     --sky-deep: #3E88A8;    --sky-wash: #1B2A33;
+  --line: #3A2E47;    --line-strong: #4E3F5E;
+}
+
+/* ------------------------------------------------------------------ base */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ---------------------------------------------------------------- locked
+
+   The page does not move except by scrolling down. On a shared phone, held
+   one-handed, half the accidental gestures are pinches and two-finger drags,
+   and an app that slides off-centre and stays there reads as broken to someone
+   who has no idea they did it — and no idea how to undo it.
+
+   · touch-action: pan-y      one axis. Pinch-zoom and double-tap zoom cannot fire.
+   · overscroll-behavior      no rubber-band past the ends, no pull-to-refresh.
+   · overflow-x: clip         nothing can push the layout sideways.
+   · text-size-adjust         stops mobile Safari reflowing type on rotate.
+
+   Paired with `user-scalable=no` in every page's viewport tag.
+
+   The trade: pinch-to-zoom is gone, which is a real accessibility loss. It is
+   paid for by a 17px base, a 56px minimum touch target and a contrast floor
+   around 14:1 — the page is built to be readable without zooming rather than
+   readable once you have zoomed. */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  touch-action: pan-y;
+  overscroll-behavior: none;
+  overflow-x: clip;
+  height: 100%;
+}
+
+body {
+  touch-action: pan-y;
+  overscroll-behavior: none;
+  overflow-x: clip;
+  min-height: 100%;
+  /* iOS shows a grey flash and a magnifier on long-press. Neither means
+     anything here, and both look like a fault. */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font: 500 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; font-weight: 800; letter-spacing: -.015em; }
+h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); }
+h2 { font-size: clamp(1.35rem, 3.4vw, 1.8rem); }
+h3 { font-size: 1.15rem; }
+p  { margin: 0 0 1em; }
+a  { color: var(--purple); }
+
+img, svg, video { max-width: 100%; display: block; }
+
+/* A dragged image or button is a UI that has come loose. Prose stays
+   selectable — someone may want to copy an address or a filename out of it. */
+img, svg, video, .btn, .tile, .res, .fchip, .chip, .top, .steps > li::before {
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+p, li, h1, h2, h3, code, input { -webkit-user-select: text; user-select: text; }
+
+/* Taps register immediately instead of waiting out a double-tap that can no
+   longer happen. */
+.btn, .tile, .res, .fchip, a, button, select, input { touch-action: manipulation; }
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 1.1rem; }
+.stack > * + * { margin-top: var(--gap); }
+.muted { color: var(--ink-soft); }
+.center { text-align: center; }
+[hidden] { display: none !important; }
+
+.sr {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ---------------------------------------------------------------- header */
+
+.top {
+  position: sticky; top: 0; z-index: 40;
+  background: color-mix(in srgb, var(--ground) 92%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--line);
+}
+.top .wrap {
+  display: flex; align-items: center; gap: .6rem;
+  min-height: 64px;
+}
+.brand {
+  display: flex; align-items: center; gap: .55rem;
+  font-weight: 800; font-size: 1.05rem; color: var(--ink);
+  text-decoration: none; margin-inline-end: auto;
+}
+.brand svg { width: 30px; height: 30px; flex: none; }
+
+/* --------------------------------------------------------------- buttons */
+
+/* The chunky button: a solid face sitting on a darker edge, which the press
+   collapses. It reads as physically pressable at arm's length in sunlight,
+   which a flat rectangle does not. */
+.btn {
+  --face: var(--purple);
+  --edge: var(--purple-deep);
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: .5rem;
+  min-height: var(--tap);
+  padding: .85rem 1.4rem;
+  border: 0;
+  border-radius: var(--r);
+  background: var(--face);
+  box-shadow: 0 var(--press) 0 var(--edge);
+  color: #fff;
+  font: inherit; font-weight: 800; font-size: 1.02rem;
+  text-decoration: none; text-align: center;
+  cursor: pointer;
+  transform: translateY(0);
+  transition: transform .06s ease, box-shadow .06s ease, filter .15s ease;
+}
+.btn:hover { filter: brightness(1.06); }
+.btn:active {
+  transform: translateY(var(--press));
+  box-shadow: 0 0 0 var(--edge);
+}
+.btn[disabled] { opacity: .45; pointer-events: none; }
+
+.btn.green { --face: var(--green); --edge: var(--green-deep); }
+.btn.gold  { --face: var(--gold);  --edge: var(--gold-deep); color: #3A2A05; }
+.btn.sky   { --face: var(--sky);   --edge: var(--sky-deep); }
+
+.btn.ghost {
+  --face: var(--surface); --edge: var(--line-strong);
+  color: var(--ink);
+  border: 2px solid var(--line-strong);
+}
+.btn.block { width: 100%; }
+.btn.big   { min-height: 64px; font-size: 1.12rem; padding: 1rem 1.6rem; }
+.btn svg   { width: 22px; height: 22px; flex: none; }
+
+.btn-row { display: flex; flex-wrap: wrap; gap: .7rem; }
+.btn-row .btn { flex: 1 1 10rem; }
+
+/* ----------------------------------------------------------------- cards */
+
+.card {
+  background: var(--surface);
+  border: 2px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 1.2rem;
+}
+.card.flat { box-shadow: none; }
+
+/* A tile is a card you tap: the whole thing is the target. */
+.tile {
+  display: flex; align-items: center; gap: .9rem;
+  background: var(--surface);
+  border: 2px solid var(--line);
+  border-bottom-width: 5px;
+  border-radius: var(--r-lg);
+  padding: 1rem 1.1rem;
+  color: inherit; text-decoration: none;
+  min-height: 84px;
+  transition: transform .08s ease, border-color .15s ease, background .15s ease;
+}
+.tile:hover { border-color: var(--purple); background: var(--purple-wash); }
+.tile:active { transform: translateY(3px); border-bottom-width: 2px; margin-bottom: 3px; }
+.tile .ico {
+  width: 54px; height: 54px; flex: none;
+  display: grid; place-items: center;
+  border-radius: var(--r);
+  background: var(--purple-wash); color: var(--purple);
+}
+.tile .ico svg { width: 30px; height: 30px; }
+.tile > span:not(.ico):not(.chev) { min-width: 0; }
+.tile .t { display: block; font-weight: 800; font-size: 1.08rem; }
+.tile .s { display: block; color: var(--ink-soft); font-size: .92rem; }
+.tile .chev { margin-inline-start: auto; color: var(--line-strong); flex: none; }
+
+.grid {
+  display: grid; gap: .8rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+}
+
+/* ------------------------------------------------------- resource cards */
+
+.res {
+  display: flex; flex-direction: column;
+  background: var(--surface);
+  border: 2px solid var(--line);
+  border-bottom-width: 5px;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  color: inherit; text-decoration: none;
+  transition: transform .08s ease, border-color .15s ease;
+}
+.res:hover { border-color: var(--purple); }
+.res:active { transform: translateY(3px); border-bottom-width: 2px; margin-bottom: 3px; }
+.thumb {
+  aspect-ratio: 16 / 10;
+  background: var(--sunk) center/cover no-repeat;
+  display: grid; place-items: center;
+  color: var(--purple);
+}
+.res .thumb { border-bottom: 2px solid var(--line); }
+.thumb > svg { width: 46px; height: 46px; opacity: .5; }
+.res .body { padding: .85rem .95rem 1rem; display: flex; flex-direction: column; gap: .3rem; flex: 1; }
+.res .name { font-weight: 800; font-size: 1.02rem; line-height: 1.3; }
+.res .meta { color: var(--ink-soft); font-size: .88rem; }
+.res .foot { margin-top: auto; padding-top: .55rem; display: flex; gap: .4rem; flex-wrap: wrap; }
+
+/* ----------------------------------------------------------------- chips */
+
+.chip {
+  display: inline-flex; align-items: center; gap: .35rem;
+  padding: .3rem .7rem;
+  border-radius: var(--r-pill);
+  background: var(--sunk); color: var(--ink-soft);
+  border: 1.5px solid transparent;
+  font-size: .82rem; font-weight: 700;
+  white-space: nowrap;
+}
+.chip svg { width: 15px; height: 15px; }
+.chip.offline { background: var(--green-wash); color: var(--green-deep); }
+.chip.online  { background: var(--gold-wash);  color: var(--gold-deep); }
+.chip.lang    { background: var(--purple-wash); color: var(--purple); }
+
+.flabel {
+  margin: 1rem 0 .45rem;
+  font-size: .8rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: .06em;
+  color: var(--ink-soft);
+}
+/* Uppercase-with-tracking is a Latin device; in Arabic script it breaks the
+   joins, and there is no case to change. */
+html[dir="rtl"] .flabel { text-transform: none; font-size: .95rem; }
+
+/* A filter chip is a chip you press. */
+.filters { display: flex; gap: .5rem; flex-wrap: wrap; }
+.fchip {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: .4rem;
+  min-height: 46px;
+  padding: .55rem 1rem;
+  border-radius: var(--r-pill);
+  border: 2px solid var(--line-strong);
+  background: var(--surface); color: var(--ink);
+  font: inherit; font-weight: 700; font-size: .95rem;
+  cursor: pointer;
+}
+.fchip svg { width: 20px; height: 20px; flex: none; }
+.fchip[aria-pressed="true"] {
+  background: var(--purple); border-color: var(--purple-deep); color: #fff;
+}
+
+/* ----------------------------------------------------------------- input */
+
+.search { position: relative; }
+.search svg {
+  position: absolute; inset-inline-start: 1rem; top: 50%;
+  transform: translateY(-50%); width: 22px; height: 22px;
+  color: var(--ink-soft); pointer-events: none;
+}
+input[type="search"], input[type="text"], select {
+  width: 100%;
+  min-height: var(--tap);
+  /* Logical, not physical: in an RTL page the icon sits on the right and the
+     text must start clear of it. `padding-left` would put the gap on the wrong
+     side and the placeholder would run straight through the magnifier. */
+  padding: .9rem 1rem;
+  padding-inline-start: 3rem;
+  border: 2px solid var(--line-strong);
+  border-radius: var(--r);
+  background: var(--surface); color: var(--ink);
+  font: inherit; font-weight: 600;
+  -webkit-appearance: none; appearance: none;
+}
+select { padding-inline-start: 1rem; }
+input[type="search"]::-webkit-search-cancel-button { margin-inline-start: .5rem; }
+input::placeholder { color: var(--ink-soft); font-weight: 500; }
+
+/* ----------------------------------------------------------------- steps */
+
+/* The share and view walkthroughs. Numbered, one action each, big enough to
+   follow while holding two phones. */
+.steps { list-style: none; margin: 0; padding: 0; counter-reset: s; }
+.steps > li {
+  counter-increment: s;
+  position: relative;
+  /* Logical: the number circle sits on the inline-start edge, which is the
+     right in an RTL page. Physical padding-left leaves no room for it there
+     and the heading runs underneath the number. */
+  padding: 0 0 1.5rem;
+  padding-inline-start: 3.4rem;
+  border-inline-start: 3px solid var(--line);
+  margin-inline-start: 1.35rem;
+}
+.steps > li:last-child { border-color: transparent; padding-bottom: 0; }
+.steps > li::before {
+  content: counter(s);
+  position: absolute; inset-inline-start: -1.5rem; top: -.15rem;
+  width: 2.9rem; height: 2.9rem;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--purple); color: #fff;
+  font-weight: 800; font-size: 1.1rem;
+  box-shadow: 0 0 0 5px var(--ground);
+}
+.steps h3 { margin: .35rem 0 .3rem; }
+.steps p  { margin: 0 0 .4rem; color: var(--ink-soft); }
+
+/* ----------------------------------------------------------------- notes */
+
+.note {
+  border: 2px solid var(--line);
+  border-inline-start: 6px solid var(--gold);
+  border-radius: var(--r);
+  background: var(--gold-wash);
+  padding: .9rem 1.1rem;
+}
+.note.good { border-inline-start-color: var(--green); background: var(--green-wash); }
+.note.info { border-inline-start-color: var(--sky);   background: var(--sky-wash); }
+.note strong { display: block; margin-bottom: .15rem; }
+
+/* --------------------------------------------------------------- sheets */
+
+.sheet-back {
+  position: fixed; inset: 0; z-index: 60;
+  background: rgba(20, 10, 26, .55);
+  display: grid; align-items: end; justify-items: center;
+}
+.sheet {
+  width: min(40rem, 100%);
+  max-height: 88vh; overflow: auto;
+  /* The sheet scrolls; the page behind it must not scroll with it. */
+  overscroll-behavior: contain;
+  background: var(--ground);
+  border-radius: var(--r-lg) var(--r-lg) 0 0;
+  border-top: 3px solid var(--line);
+  padding: 1.4rem 1.1rem 2rem;
+  animation: rise .18s ease-out;
+}
+@keyframes rise { from { transform: translateY(14px); opacity: .6 } }
+@media (min-width: 40rem) {
+  .sheet-back { align-items: center; }
+  .sheet { border-radius: var(--r-lg); border: 3px solid var(--line); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sheet { animation: none; }
+  * { transition-duration: .01ms !important; }
+}
+
+/* ---------------------------------------------------------------- footer */
+
+.foot-nav {
+  margin-top: 3rem; padding: 1.6rem 0 2.5rem;
+  border-top: 2px solid var(--line);
+  color: var(--ink-soft); font-size: .92rem;
+}
+
+/* ============================================================ Arabic script
+
+   Urdu and Sindhi join their letters. Several defaults that are invisible in
+   Latin actively break them, so they are switched off wherever the interface
+   is running in an Arabic script — and Latin runs opt back in via .latin.  */
+
+html[dir="rtl"] body {
+  font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", "Geeza Pro",
+               "Urdu Typesetting", serif;
+  line-height: 2.1;                 /* Nastaliq hangs far below the baseline */
+}
+html[lang="snd"] body {
+  font-family: "Noto Naskh Arabic", "Geeza Pro", "Traditional Arabic", serif;
+  line-height: 1.95;                /* Naskh is shallower and sits tighter */
+}
+
+/* Any tracking at all pulls the joins apart and renders words as loose glyphs. */
+html[dir="rtl"] * { letter-spacing: 0 !important; }
+
+/* break-word would sever a word between two joined letters. */
+html[dir="rtl"] body { overflow-wrap: normal; word-break: normal; }
+
+/* Headings at body leading open a chasm; step them back down. */
+html[dir="rtl"] h1 { line-height: 1.45; }
+html[dir="rtl"] h2 { line-height: 1.55; }
+html[dir="rtl"] h3 { line-height: 1.7; }
+
+/* Descenders collide with control borders without extra room. */
+html[dir="rtl"] .btn,
+html[dir="rtl"] .fchip { padding-top: 1.05rem; padding-bottom: 1.05rem; }
+
+/* Catalogue data — titles, publisher names — stays English. Inside an RTL page
+   it needs its own face and its own direction or it zig-zags between the two. */
+.latin {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  direction: ltr;
+  unicode-bidi: isolate;
+  text-align: start;
+  letter-spacing: normal !important;
+  line-height: 1.4;
+}
+
+/* An element whose entire content is a numeral: "112", "06:00", "2:07:53".
+   Without isolation the bidi algorithm renders "200+" as "+200". Only ever put
+   this on elements that hold nothing but the number. */
+.num { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+
+/* Chevrons and arrows point the other way in an RTL page. */
+html[dir="rtl"] .flip { transform: scaleX(-1); }
