@@ -25,10 +25,21 @@ BAR = 34
 TTY = sys.stderr.isatty()
 
 
-def _draw(line):
-    """Redraw in place on a terminal; say nothing when piped to a file."""
+_last_log = [0]
+
+
+def _draw(line, i=None, n=None, every=25):
+    """Redraw in place on a terminal.
+
+    Piped to a file — a long `nohup` build is the usual case — carriage returns
+    would produce one unreadable line, so instead a plain progress line is
+    written every `every` items. Silence for half an hour looks like a hang.
+    """
     if TTY:
         print("\r" + line, end="", file=sys.stderr)
+    elif i is not None and (i - _last_log[0] >= every or i == n):
+        _last_log[0] = i
+        print(line.strip(), file=sys.stderr, flush=True)
 
 
 def _bar(done, total):
@@ -66,7 +77,7 @@ def _sized(cat, assets, args, needed_ids=None):
               f"({len(flat) - pending} cached)…", file=sys.stderr)
 
         def tick(i, n, a):
-            _draw(f"  {_bar(i, n)} {i}/{n}")
+            _draw(f"  {_bar(i, n)} {i}/{n}", i, n)
 
         F.probe(flat, cache, workers=args.workers, on_each=tick)
         if TTY:
@@ -166,7 +177,7 @@ def cmd_build(args):
     def tick(i, n, res):
         if res.status == "fail":
             failures.append(res)
-        _draw(f"  {_bar(i, n)} {i}/{n}  {res.asset.rel[:38]:<38}")
+        _draw(f"  {_bar(i, n)} {i}/{n}  {res.asset.rel[:38]:<38}", i, n, every=10)
 
     results = F.download(flat, media, workers=args.workers, on_done=tick)
     print("\n")

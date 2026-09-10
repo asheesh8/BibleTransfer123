@@ -68,6 +68,21 @@ python3 packer/serve.py 8080
 
 ---
 
+## The offline copy
+
+```bash
+npm run card          # download the media into ./card  (~21 GB, resumable)
+npm run verify:card   # every file present and the right size
+npm run serve:card    # serve it on this machine's network
+```
+
+`serve:card` prints a LAN address as well as localhost — anyone who joins the
+same Wi-Fi opens that address and has the whole library with no internet at all.
+That is what a VillageServer Pi does; this is the same thing on a laptop.
+
+`./card` is gitignored. Tens of gigabytes of media belongs on a microSD card,
+never in the repo and never in a Vercel deploy.
+
 ## The profiles
 
 | Profile | Card | What goes on it |
@@ -154,12 +169,22 @@ reading slowly.
 
 ### Installable, and locked in place
 
-The app is a PWA — `manifest.webmanifest`, a service worker, and real icons. Over
-HTTPS (Vercel) or from a VillageServer Pi, Android offers **Install** and iOS
-offers **Add to Home Screen** from the Safari share sheet. It then opens full
-screen from its own icon. `help.html` walks through both by hand, because iOS
-never fires `beforeinstallprompt` and a button that appears on half the phones in
-a room is worse than none.
+The app is a PWA — `manifest.webmanifest`, a service worker, and real icons. It
+then opens full screen from its own icon. Where that works is not uniform, and
+the difference matters in the field:
+
+| Served from | Android install | iOS Add to Home Screen |
+|---|---|---|
+| Vercel (HTTPS) | yes — prompt, plus the in-app button | yes, via the Safari share sheet |
+| A Pi over plain HTTP | **no** — service workers need a secure context | yes |
+| A microSD card (`file://`) | no | no |
+
+Service workers require HTTPS or localhost, so a Pi serving plain HTTP over a LAN
+IP cannot register one and Chrome will not offer to install. Registration is
+guarded and fails quietly; **the library itself works exactly the same either
+way** — installing only changes how it is launched. `help.html` walks through
+both platforms by hand, because iOS never fires `beforeinstallprompt` and a
+button that appears on half the phones in a room is worse than none.
 
 The service worker caches the **app shell only**. Media is explicitly excluded —
 copying a packed card's tens of gigabytes into the Cache API would duplicate the

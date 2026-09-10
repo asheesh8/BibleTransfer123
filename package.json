@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "python3 packer/serve.py 8095",
     "preview": "python3 packer/easytransfer.py preview && python3 packer/serve.py 8095",
+    "card": "python3 packer/easytransfer.py build --profile standard --out ./card",
+    "serve:card": "python3 packer/serve.py 8095 --root ./card",
+    "verify:card": "python3 packer/easytransfer.py verify --out ./card",
     "plan": "python3 packer/easytransfer.py plan --profile standard",
     "catalog": "python3 packer/easytransfer.py preview",
     "list": "python3 packer/easytransfer.py list"
