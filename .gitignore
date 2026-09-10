@@ -4,3 +4,8 @@
 __pycache__/
 *.pyc
 *.part
+
+# A built card. Tens of gigabytes of media that belongs on a microSD card,
+# never in git and never in a Vercel deploy.
+card/
+*.card/
