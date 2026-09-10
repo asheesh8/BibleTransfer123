@@ -207,6 +207,56 @@ window.ET = (function () {
     return html + '</div>';
   }
 
+  /* The interface language and the language the content is SPOKEN in are
+     different things, and conflating them is how an English reader tapped an
+     English title and heard Sindhi. Choosing a language picks both: English
+     shows English films, اردو shows Urdu, سنڌي shows Sindhi. The library can
+     still browse the others on purpose. */
+  var CONTENT = { en: 'eng', ur: 'urd', snd: 'snd' };
+  function contentLang() {
+    var ui = (ET.i18n && ET.i18n.current()) || 'en';
+    return CONTENT[ui] || 'eng';
+  }
+  function inMyLanguage(r) { return r.lang === contentLang(); }
+
+  /* Standard book numbering — matches the DBS CDN audio layout,
+     e.g. NT_URDBSI/40_Matthew/40_Matthew_001.mp3 (from GawahiiTV's sheet.js). */
+  var BOOKS = {
+    OT: [[1,'Genesis',50],[2,'Exodus',40],[3,'Leviticus',27],[4,'Numbers',36],[5,'Deuteronomy',34],
+      [6,'Joshua',24],[7,'Judges',21],[8,'Ruth',4],[9,'1Samuel',31],[10,'2Samuel',24],[11,'1Kings',22],
+      [12,'2Kings',25],[13,'1Chronicles',29],[14,'2Chronicles',36],[15,'Ezra',10],[16,'Nehemiah',13],
+      [17,'Esther',10],[18,'Job',42],[19,'Psalms',150],[20,'Proverbs',31],[21,'Ecclesiastes',12],
+      [22,'SongofSongs',8],[23,'Isaiah',66],[24,'Jeremiah',52],[25,'Lamentations',5],[26,'Ezekiel',48],
+      [27,'Daniel',12],[28,'Hosea',14],[29,'Joel',3],[30,'Amos',9],[31,'Obadiah',1],[32,'Jonah',4],
+      [33,'Micah',7],[34,'Nahum',3],[35,'Habakkuk',3],[36,'Zephaniah',3],[37,'Haggai',2],
+      [38,'Zechariah',14],[39,'Malachi',4]],
+    NT: [[40,'Matthew',28],[41,'Mark',16],[42,'Luke',24],[43,'John',21],[44,'Acts',28],[45,'Romans',16],
+      [46,'1Corinthians',16],[47,'2Corinthians',13],[48,'Galatians',6],[49,'Ephesians',6],
+      [50,'Philippians',4],[51,'Colossians',4],[52,'1Thessalonians',5],[53,'2Thessalonians',3],
+      [54,'1Timothy',6],[55,'2Timothy',4],[56,'Titus',3],[57,'Philemon',1],[58,'Hebrews',13],
+      [59,'James',5],[60,'1Peter',5],[61,'2Peter',3],[62,'1John',5],[63,'2John',1],[64,'3John',1],
+      [65,'Jude',1],[66,'Revelation',22]]
+  };
+  function pad(n, w) { n = String(n); while (n.length < (w || 2)) n = '0' + n; return n; }
+  function bookName(b) { return b.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/^(\d)/, '$1 '); }
+  function audioBibleUrl(play, testament, num, name, ch) {
+    return 'https://dbs.org/cdn/audio/' + play.fileset + '/' + testament + '_' + play.version +
+      '/' + pad(num) + '_' + name + '/' + pad(num) + '_' + name + '_' + pad(ch, 3) + '.mp3';
+  }
+
+  /* The step header every guided flow uses: numbered dots joined by a bar,
+     ticked as they complete, and "Step 2 of 4" in words for anyone who does not
+     read the dots. Same shape in Save and Nearby, so learning one teaches both. */
+  function stepper(count, at) {
+    var dots = [];
+    for (var i = 0; i < count; i++) {
+      var cls = i < at ? 'done' : i === at ? 'on' : '';
+      dots.push('<span class="dot ' + cls + '">' + (i < at ? icon('check') : '<span class="num">' + (i + 1) + '</span>') + '</span>');
+    }
+    return '<div class="stepper" aria-hidden="true">' + dots.join('<span class="bar"></span>') + '</div>' +
+      '<p class="step-of">' + (ET.i18n ? ET.i18n.h('save.of', { done: at + 1, total: count }) : '') + '</p>';
+  }
+
   function typeIcon(t) {
     return { film: 'film', 'audio-bible': 'book', audio: 'wave',
              scripture: 'book', historic: 'scan', link: 'link' }[t] || 'link';
@@ -265,6 +315,8 @@ window.ET = (function () {
     canInstall: canInstall, onInstallable: onInstallable,
     promptInstall: promptInstall, standalone: standalone,
     $: $, $$: $$, theme: theme, library: library, byId: byId, header: header,
-    sheet: sheet, typeIcon: typeIcon, thumb: thumb
+    sheet: sheet, typeIcon: typeIcon, thumb: thumb, stepper: stepper,
+    contentLang: contentLang, inMyLanguage: inMyLanguage,
+    BOOKS: BOOKS, pad: pad, bookName: bookName, audioBibleUrl: audioBibleUrl
   };
 })();

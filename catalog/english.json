@@ -1,0 +1,893 @@
+{
+ "generated": "Digital Bible Society (dbs.org) — English, built to match the Sindhi & Urdu collections",
+ "languages": {
+  "eng": {
+   "code": "eng",
+   "name": "English",
+   "native": "English",
+   "script": "latn",
+   "dir": "ltr",
+   "font": "latin",
+   "speakers": "~1.5 billion",
+   "region": "Worldwide",
+   "blurb": "The same films, Scripture and audio, in English."
+  }
+ },
+ "resources": [
+  {
+   "id": "eng-film-jesus",
+   "type": "film",
+   "title": "JESUS",
+   "org": "Jesus Film Project",
+   "duration": "2:07:53",
+   "year": "1979",
+   "cover": "https://meta.dbs.org/data/data-video/covers/Jesus/jesus.jpg",
+   "desc": "The life of Jesus told from the Gospel of Luke — the most translated film in history. 61 chapters.",
+   "play": {
+    "kind": "chapters",
+    "base": "https://video.dbs.org/Jesus/chapters/eng_english/",
+    "items": [
+     {
+      "n": 1,
+      "title": "The Beginning",
+      "file": "eng_jesus_chapter_01_the_beginning_1_jf6101_0_0_low.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Birth of Jesus",
+      "file": "eng_jesus_chapter_02_birth_of_jesus_1_jf6102_0_0_low.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Childhood of Jesus",
+      "file": "eng_jesus_chapter_03_childhood_of_jesus_1_jf6103_0_0_low.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Baptism of Jesus by John",
+      "file": "eng_jesus_chapter_04_baptism_of_jesus_by_john_1_jf6104_0_0_low.mp4"
+     },
+     {
+      "n": 5,
+      "title": "The Devil Tempts Jesus",
+      "file": "eng_jesus_chapter_05_the_devil_tempts_jesus_1_jf6105_0_0_low.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Jesus Proclaims Fulfillment of the Scriptures",
+      "file": "eng_jesus_chapter_06_jesus_proclaims_fulfillment_of_the_scriptures_1_jf6106_0_0_low.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Parable of the Pharisee and Tax Collector",
+      "file": "eng_jesus_chapter_07_parable_of_the_pharisee_and_tax_collector_1_jf6107_0_0_low.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Miraculous Catch of Fish",
+      "file": "eng_jesus_chapter_08_miraculous_catch_of_fish_1_jf6108_0_0_low.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Jairuss Daughter Brought Back to Life",
+      "file": "eng_jesus_chapter_09_jairuss_daughter_brought_back_to_life_1_jf6109_0_0_low.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Disciples Chosen",
+      "file": "eng_jesus_chapter_10_disciples_chosen_1_jf6110_0_0_low.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Beatitudes",
+      "file": "eng_jesus_chapter_11_beatitudes_1_jf6111_0_0_low.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Sermon on the Mount",
+      "file": "eng_jesus_chapter_12_sermon_on_the_mount_1_jf6112_0_0_low.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Blessed are Those who Hear and Obey",
+      "file": "eng_jesus_chapter_13_blessed_are_those_who_hear_and_obey_1_jf6113_0_0_low.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Sinful Woman Forgiven",
+      "file": "eng_jesus_chapter_14_sinful_woman_forgiven_1_jf6114_0_0_low.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Women Disciples",
+      "file": "eng_jesus_chapter_15_women_disciples_1_jf6115_0_0_low.mp4"
+     },
+     {
+      "n": 16,
+      "title": "John the Baptist in Prison",
+      "file": "eng_jesus_chapter_16_john_the_baptist_in_prison_1_jf6116_0_0_low.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Parable of the Sower and the Seed",
+      "file": "eng_jesus_chapter_17_parable_of_the_sower_and_the_seed_1_jf6117_0_0_low.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Parable of the Lamp",
+      "file": "eng_jesus_chapter_18_parable_of_the_lamp_1_jf6118_0_0_low.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Jesus Calms the Storm",
+      "file": "eng_jesus_chapter_19_jesus_calms_the_storm_1_jf6119_0_0_low.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Healing of the Demoniac",
+      "file": "eng_jesus_chapter_20_healing_of_the_demoniac_1_jf6120_0_0_low.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Jesus Feeds 5000",
+      "file": "eng_jesus_chapter_21_jesus_feeds_5000_1_jf6121_0_0_low.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Peter Declares Jesus to be the Christ",
+      "file": "eng_jesus_chapter_22_peter_declares_jesus_to_be_the_christ_1_jf6122_0_0_low.mp4"
+     },
+     {
+      "n": 23,
+      "title": "The Transfiguration",
+      "file": "eng_jesus_chapter_23_the_transfiguration_1_jf6123_0_0_low.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Jesus Heals Boy From Evil Spirit",
+      "file": "eng_jesus_chapter_24_jesus_heals_boy_from_evil_spirit_1_jf6124_0_0_low.mp4"
+     },
+     {
+      "n": 25,
+      "title": "The Lords Prayer",
+      "file": "eng_jesus_chapter_25_the_lords_prayer_1_jf6125_0_0_low.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Teaching About Prayer and Faith",
+      "file": "eng_jesus_chapter_26_teaching_about_prayer_and_faith_1_jf6126_0_0_low.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Woe to Those who Cause Others to Sin",
+      "file": "eng_jesus_chapter_27_woe_to_those_who_cause_others_to_sin_1_jf6127_0_0_low.mp4"
+     },
+     {
+      "n": 28,
+      "title": "The Kingdom of God as a Mustard Seed",
+      "file": "eng_jesus_chapter_28_the_kingdom_of_god_as_a_mustard_seed_1_jf6128_0_0_low.mp4"
+     },
+     {
+      "n": 29,
+      "title": "Jesus Spends Time with Sinners",
+      "file": "eng_jesus_chapter_29_jesus_spends_time_with_sinners_1_jf6129_0_0_low.mp4"
+     },
+     {
+      "n": 30,
+      "title": "Healing on the Sabbath",
+      "file": "eng_jesus_chapter_30_healing_on_the_sabbath_1_jf6130_0_0_low.mp4"
+     },
+     {
+      "n": 31,
+      "title": "Parable of the Good Samaritan",
+      "file": "eng_jesus_chapter_31_parable_of_the_good_samaritan_1_jf6131_0_0_low.mp4"
+     },
+     {
+      "n": 32,
+      "title": "Healing of Bartimaeus",
+      "file": "eng_jesus_chapter_32_healing_of_bartimaeus_1_jf6132_0_0_low.mp4"
+     },
+     {
+      "n": 33,
+      "title": "Jesus and Zaccheus",
+      "file": "eng_jesus_chapter_33_jesus_and_zaccheus_1_jf6133_0_0_low.mp4"
+     },
+     {
+      "n": 34,
+      "title": "Jesus Predicts his Death and Resurrection",
+      "file": "eng_jesus_chapter_34_jesus_predicts_his_death_and_resurrection_1_jf6134_0_0_low.mp4"
+     },
+     {
+      "n": 35,
+      "title": "Jesuss Triumphal Entry",
+      "file": "eng_jesus_chapter_35_jesuss_triumphal_entry_1_jf6135_0_0_low.mp4"
+     },
+     {
+      "n": 36,
+      "title": "Jesus Weeps Over Jerusalem",
+      "file": "eng_jesus_chapter_36_jesus_weeps_over_jerusalem_1_jf6136_0_0_low.mp4"
+     },
+     {
+      "n": 37,
+      "title": "Jesus Drives Out Money Changers",
+      "file": "eng_jesus_chapter_37_jesus_drives_out_money_changers_1_jf6137_0_0_low.mp4"
+     },
+     {
+      "n": 38,
+      "title": "Widows Offering",
+      "file": "eng_jesus_chapter_38_widows_offering_1_jf6138_0_0_low.mp4"
+     },
+     {
+      "n": 39,
+      "title": "Annas Questions Jesuss Authority",
+      "file": "eng_jesus_chapter_39_annas_questions_jesuss_authority_1_jf6139_0_0_low.mp4"
+     },
+     {
+      "n": 40,
+      "title": "Parable of the Vineyard and Tenants",
+      "file": "eng_jesus_chapter_40_parable_of_the_vineyard_and_tenants_1_jf6140_0_0_low.mp4"
+     },
+     {
+      "n": 41,
+      "title": "Paying Taxes to Caesar",
+      "file": "eng_jesus_chapter_41_paying_taxes_to_caesar_1_jf6141_0_0_low.mp4"
+     },
+     {
+      "n": 42,
+      "title": "The Last Supper",
+      "file": "eng_jesus_chapter_42_the_last_supper_1_jf6142_0_0_low.mp4"
+     },
+     {
+      "n": 43,
+      "title": "Upper Room Teaching",
+      "file": "eng_jesus_chapter_43_upper_room_teaching_1_jf6143_0_0_low.mp4"
+     },
+     {
+      "n": 44,
+      "title": "Jesus is Betrayed and Arrested",
+      "file": "eng_jesus_chapter_44_jesus_is_betrayed_and_arrested_1_jf6144_0_0_low.mp4"
+     },
+     {
+      "n": 45,
+      "title": "Peter Disowns Jesus",
+      "file": "eng_jesus_chapter_45_peter_disowns_jesus_1_jf6145_0_0_low.mp4"
+     },
+     {
+      "n": 46,
+      "title": "Jesus is Mocked and Questioned",
+      "file": "eng_jesus_chapter_46_jesus_is_mocked_and_questioned_1_jf6146_0_0_low.mp4"
+     },
+     {
+      "n": 47,
+      "title": "Jesus is Brought to Pilate",
+      "file": "eng_jesus_chapter_47_jesus_is_brought_to_pilate_1_jf6147_0_0_low.mp4"
+     },
+     {
+      "n": 48,
+      "title": "Jesus is Brought to Herod",
+      "file": "eng_jesus_chapter_48_jesus_is_brought_to_herod_1_jf6148_0_0_low.mp4"
+     },
+     {
+      "n": 49,
+      "title": "Jesus is Sentenced",
+      "file": "eng_jesus_chapter_49_jesus_is_sentenced_1_jf6149_0_0_low.mp4"
+     },
+     {
+      "n": 50,
+      "title": "Jesus Carries his Cross",
+      "file": "eng_jesus_chapter_50_jesus_carries_his_cross_1_jf6150_0_0_low.mp4"
+     },
+     {
+      "n": 51,
+      "title": "Jesus is Crucified",
+      "file": "eng_jesus_chapter_51_jesus_is_crucified_1_jf6151_0_0_low.mp4"
+     },
+     {
+      "n": 52,
+      "title": "Soldiers Gamble for Jesuss Clothes",
+      "file": "eng_jesus_chapter_52_soldiers_gamble_for_jesuss_clothes_1_jf6152_0_0_low.mp4"
+     },
+     {
+      "n": 53,
+      "title": "Sign on the Cross",
+      "file": "eng_jesus_chapter_53_sign_on_the_cross_1_jf6153_0_0_low.mp4"
+     },
+     {
+      "n": 54,
+      "title": "Crucified Convicts",
+      "file": "eng_jesus_chapter_54_crucified_convicts_1_jf6154_0_0_low.mp4"
+     },
+     {
+      "n": 55,
+      "title": "Death of Jesus",
+      "file": "eng_jesus_chapter_55_death_of_jesus_1_jf6155_0_0_low.mp4"
+     },
+     {
+      "n": 56,
+      "title": "Burial of Jesus",
+      "file": "eng_jesus_chapter_56_burial_of_jesus_1_jf6156_0_0_low.mp4"
+     },
+     {
+      "n": 57,
+      "title": "Angels At the Tomb",
+      "file": "eng_jesus_chapter_57_angels_at_the_tomb_1_jf6157_0_0_low.mp4"
+     },
+     {
+      "n": 58,
+      "title": "The Tomb is Empty",
+      "file": "eng_jesus_chapter_58_the_tomb_is_empty_1_jf6158_0_0_low.mp4"
+     },
+     {
+      "n": 59,
+      "title": "Resurrected Jesus Appears",
+      "file": "eng_jesus_chapter_59_resurrected_jesus_appears_1_jf6159_0_0_low.mp4"
+     },
+     {
+      "n": 60,
+      "title": "Great Commission and Ascension",
+      "file": "eng_jesus_chapter_60_great_commission_and_ascension_1_jf6160_0_0_low.mp4"
+     },
+     {
+      "n": 61,
+      "title": "Invitation to Know Jesus Personally",
+      "file": "eng_jesus_chapter_61_invitation_to_know_jesus_personally_1_jf6161_0_0_low.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "All chapters — SD",
+     "url": "https://download.dbs.org/Jesus/eng_english/eng_jesus_chapters_low.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/jesus/eng_english_jesus",
+   "lang": "eng",
+   "langName": "English",
+   "read": null,
+   "native": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "typeLabel": "Films"
+  },
+  {
+   "id": "eng-film-john",
+   "type": "film",
+   "title": "Gospel of John",
+   "org": "Visual Bible Int.",
+   "duration": "3:03:13",
+   "cover": "https://meta.dbs.org/data/data-video/covers/John/gospel_of_john.jpg",
+   "desc": "The Gospel of John filmed in full, word for word. 49 chapters.",
+   "play": {
+    "kind": "chapters",
+    "base": "https://video.dbs.org/John/chapters/eng_english/",
+    "items": [
+     {
+      "n": 1,
+      "title": "Gods Word Becomes Flesh",
+      "file": "eng_Gospel_of_John_chapter_01_gods_word_becomes_flesh_2_GOJ4901_0_0_low.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Testimony of John the Baptist",
+      "file": "eng_Gospel_of_John_chapter_02_testimony_of_john_the_baptist_2_GOJ4902_0_0_low.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Jesus Gathers Disciples",
+      "file": "eng_Gospel_of_John_chapter_03_jesus_gathers_disciples_2_GOJ4903_0_0_low.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Wedding in Cana",
+      "file": "eng_Gospel_of_John_chapter_04_wedding_in_cana_2_GOJ4904_0_0_low.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Cleaning the Temple",
+      "file": "eng_Gospel_of_John_chapter_05_cleaning_the_temple_2_GOJ4905_0_0_low.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Talk with Nicodemus",
+      "file": "eng_Gospel_of_John_chapter_06_talk_with_nicodemus_2_GOJ4906_0_0_low.mp4"
+     },
+     {
+      "n": 7,
+      "title": "The Baptists Confirmation",
+      "file": "eng_Gospel_of_John_chapter_07_the_baptists_confirmation_2_GOJ4907_0_0_low.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Samaritan Woman",
+      "file": "eng_Gospel_of_John_chapter_08_samaritan_woman_2_GOJ4908_0_0_low.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Samaritan Village",
+      "file": "eng_Gospel_of_John_chapter_09_samaritan_village_2_GOJ4909_0_0_low.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Officials Son Healed",
+      "file": "eng_Gospel_of_John_chapter_10_officials_son_healed_2_GOJ4910_0_0_low.mp4"
+     },
+     {
+      "n": 11,
+      "title": "A Paralytic Healed",
+      "file": "eng_Gospel_of_John_chapter_11_a_paralytic_healed_2_GOJ4911_0_0_low.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Claim to be the Son",
+      "file": "eng_Gospel_of_John_chapter_12_claim_to_be_the_son_2_GOJ4912_0_0_low.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Witness to the Son",
+      "file": "eng_Gospel_of_John_chapter_13_witness_to_the_son_2_GOJ4913_0_0_low.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Feeding 5000",
+      "file": "eng_Gospel_of_John_chapter_14_feeding_5000_2_GOJ4914_0_0_low.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Sea Walking",
+      "file": "eng_Gospel_of_John_chapter_15_sea_walking_2_GOJ4915_0_0_low.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Bread of Life",
+      "file": "eng_Gospel_of_John_chapter_16_bread_of_life_2_GOJ4916_0_0_low.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Falling Away",
+      "file": "eng_Gospel_of_John_chapter_17_falling_away_2_GOJ4917_0_0_low.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Confronting Hypocritical Leaders",
+      "file": "eng_Gospel_of_John_chapter_18_confronting_hypocritical_leaders_2_GOJ4918_0_0_low.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Disagreement who is Jesus",
+      "file": "eng_Gospel_of_John_chapter_19_disagreement_who_is_jesus_2_GOJ4919_0_0_low.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Adulterous Woman",
+      "file": "eng_Gospel_of_John_chapter_20_adulterous_woman_2_GOJ4920_0_0_low.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Who are You",
+      "file": "eng_Gospel_of_John_chapter_21_who_are_you_2_GOJ4921_0_0_low.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Great Confrontation",
+      "file": "eng_Gospel_of_John_chapter_22_great_confrontation_2_GOJ4922_0_0_low.mp4"
+     },
+     {
+      "n": 23,
+      "title": "Blind Man Healed",
+      "file": "eng_Gospel_of_John_chapter_23_blind_man_healed_2_GOJ4923_0_0_low.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Pharisees Interrogate the Blind Man",
+      "file": "eng_Gospel_of_John_chapter_24_pharisees_interrogate_the_blind_man_2_GOJ4924_0_0_low.mp4"
+     },
+     {
+      "n": 25,
+      "title": "The Good Shepherd",
+      "file": "eng_Gospel_of_John_chapter_25_the_good_shepherd_2_GOJ4925_0_0_low.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Are You Messiah",
+      "file": "eng_Gospel_of_John_chapter_26_are_you_messiah_2_GOJ4926_0_0_low.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Lazarus Dies",
+      "file": "eng_Gospel_of_John_chapter_27_lazarus_dies_2_GOJ4927_0_0_low.mp4"
+     },
+     {
+      "n": 28,
+      "title": "Mary and Martha Mourn",
+      "file": "eng_Gospel_of_John_chapter_28_mary_and_martha_mourn_2_GOJ4928_0_0_low.mp4"
+     },
+     {
+      "n": 29,
+      "title": "Lazarus Rises",
+      "file": "eng_Gospel_of_John_chapter_29_lazarus_rises_2_GOJ4929_0_0_low.mp4"
+     },
+     {
+      "n": 30,
+      "title": "Triumphal Entry and Results",
+      "file": "eng_Gospel_of_John_chapter_30_triumphal_entry_and_results_2_GOJ4930_0_0_low.mp4"
+     },
+     {
+      "n": 31,
+      "title": "Divided Opinions",
+      "file": "eng_Gospel_of_John_chapter_31_divided_opinions_2_GOJ4931_0_0_low.mp4"
+     },
+     {
+      "n": 32,
+      "title": "Last Supper",
+      "file": "eng_Gospel_of_John_chapter_32_last_supper_2_GOJ4932_0_0_low.mp4"
+     },
+     {
+      "n": 33,
+      "title": "Betrayal and Denial Foretold",
+      "file": "eng_Gospel_of_John_chapter_33_betrayal_and_denial_foretold_2_GOJ4933_0_0_low.mp4"
+     },
+     {
+      "n": 34,
+      "title": "Jesus Comforts his Disciples",
+      "file": "eng_Gospel_of_John_chapter_34_jesus_comforts_his_disciples_2_GOJ4934_0_0_low.mp4"
+     },
+     {
+      "n": 35,
+      "title": "Jesus Promises the Holy Spirit",
+      "file": "eng_Gospel_of_John_chapter_35_jesus_promises_the_holy_spirit_2_GOJ4935_0_0_low.mp4"
+     },
+     {
+      "n": 36,
+      "title": "The Vine and the Branches",
+      "file": "eng_Gospel_of_John_chapter_36_the_vine_and_the_branches_2_GOJ4936_0_0_low.mp4"
+     },
+     {
+      "n": 37,
+      "title": "The Worlds Hatred",
+      "file": "eng_Gospel_of_John_chapter_37_the_worlds_hatred_2_GOJ4937_0_0_low.mp4"
+     },
+     {
+      "n": 38,
+      "title": "The Work of the Holy Spirit",
+      "file": "eng_Gospel_of_John_chapter_38_the_work_of_the_holy_spirit_2_GOJ4938_0_0_low.mp4"
+     },
+     {
+      "n": 39,
+      "title": "Grief Will Turn to Joy",
+      "file": "eng_Gospel_of_John_chapter_39_grief_will_turn_to_joy_2_GOJ4939_0_0_low.mp4"
+     },
+     {
+      "n": 40,
+      "title": "Jesus Prays to be Glorified",
+      "file": "eng_Gospel_of_John_chapter_40_jesus_prays_to_be_glorified_2_GOJ4940_0_0_low.mp4"
+     },
+     {
+      "n": 41,
+      "title": "The Arrest of Jesus and Peters Denial",
+      "file": "eng_Gospel_of_John_chapter_41_the_arrest_of_jesus_and_peters_denial_2_GOJ4941_0_0_low.mp4"
+     },
+     {
+      "n": 42,
+      "title": "My Kingdom is not of This World",
+      "file": "eng_Gospel_of_John_chapter_42_my_kingdom_is_not_of_this_world_2_GOJ4942_0_0_low.mp4"
+     },
+     {
+      "n": 43,
+      "title": "Jesus Sentenced to be Crucified",
+      "file": "eng_Gospel_of_John_chapter_43_jesus_sentenced_to_be_crucified_2_GOJ4943_0_0_low.mp4"
+     },
+     {
+      "n": 44,
+      "title": "The Crucifixion of Jesus",
+      "file": "eng_Gospel_of_John_chapter_44_the_crucifixion_of_jesus_2_GOJ4944_0_0_low.mp4"
+     },
+     {
+      "n": 45,
+      "title": "Jesus is Alive",
+      "file": "eng_Gospel_of_John_chapter_45_jesus_is_alive_2_GOJ4945_0_0_low.mp4"
+     },
+     {
+      "n": 46,
+      "title": "Doubting Thomas",
+      "file": "eng_Gospel_of_John_chapter_46_doubting_thomas_2_GOJ4946_0_0_low.mp4"
+     },
+     {
+      "n": 47,
+      "title": "Miraculous Catch",
+      "file": "eng_Gospel_of_John_chapter_47_miraculous_catch_2_GOJ4947_0_0_low.mp4"
+     },
+     {
+      "n": 48,
+      "title": "Do You Love Me",
+      "file": "eng_Gospel_of_John_chapter_48_do_you_love_me_2_GOJ4948_0_0_low.mp4"
+     },
+     {
+      "n": 49,
+      "title": "How to Know Jesus Personally",
+      "file": "eng_Gospel_of_John_chapter_49_how_to_know_jesus_personally_2_GOJ4949_0_0_low.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "All chapters — SD",
+     "url": "https://download.dbs.org/John/eng_english/eng_Gospel_of_John_chapters_low.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/john/eng_english_gospel_of_john",
+   "lang": "eng",
+   "langName": "English",
+   "read": null,
+   "native": null,
+   "year": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "typeLabel": "Films"
+  },
+  {
+   "id": "eng-film-hope",
+   "type": "film",
+   "title": "The HOPE",
+   "org": "Mars Hill Productions",
+   "duration": "1:19:21",
+   "cover": "https://meta.dbs.org/data/data-video/covers/HOPE/eng_english.webp",
+   "desc": "The whole biblical story from creation to Christ in one film — a survey of Scripture in 36 scenes.",
+   "play": {
+    "kind": "file",
+    "hd": "https://dbs.org/cdn/video/HOPE/films/eng_english_the_hope.mp4",
+    "sd": "https://dbs.org/cdn/video/HOPE/films_low/eng_english_the_hope_low.mp4"
+   },
+   "source": "https://dbs.org/video/hope/eng_english_the_hope",
+   "lang": "eng",
+   "langName": "English",
+   "downloads": [],
+   "read": null,
+   "native": null,
+   "year": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "typeLabel": "Films"
+  },
+  {
+   "id": "eng-film-ibible",
+   "type": "film",
+   "title": "iBible: Salvation Story",
+   "org": "RevelationMedia",
+   "duration": "9:17",
+   "cover": "https://meta.dbs.org/data/data-video/covers/ibible/eng-english-ibible_salvation.webp",
+   "desc": "A short animated overview of the story of salvation, from Genesis to the resurrection.",
+   "play": {
+    "kind": "file",
+    "hd": "https://dbs.org/cdn/video/ibible/films/eng-english-ibible_salvation-hd.mp4",
+    "sd": "https://dbs.org/cdn/video/ibible/films_low/eng-english-ibible_salvation-sd.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Download (ZIP)",
+     "url": "https://download.dbs.org/ibible/eng-english-ibible_salvation.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/ibible/eng-english-ibible_salvation",
+   "lang": "eng",
+   "langName": "English",
+   "read": null,
+   "native": null,
+   "year": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "typeLabel": "Films"
+  },
+  {
+   "id": "eng-ac-soj",
+   "type": "audio",
+   "title": "Story of Jesus",
+   "org": "Story of Jesus",
+   "stats": "8 recordings",
+   "desc": "The life of Jesus as a narrated audio drama, in eight parts plus a continuous version.",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/soj/eng_StoryJesus_english_full.mp3"
+   },
+   "downloads": [
+    {
+     "label": "All eight parts (ZIP)",
+     "url": "https://media.dbs.org/audio/soj/eng_StoryJesus_english.zip"
+    }
+   ],
+   "source": "https://dbs.org/audio/collections/soj/eng_StoryJesus_english",
+   "lang": "eng",
+   "langName": "English",
+   "read": null,
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "typeLabel": "Audio Collections"
+  },
+  {
+   "id": "eng-ac-grn",
+   "type": "audio",
+   "title": "Global Recordings — English",
+   "org": "Global Recordings Network",
+   "desc": "Scripture-based audio programmes and songs in simple English. The complete set is several gigabytes, so it is offered as a download rather than packed onto cards.",
+   "downloads": [
+    {
+     "label": "Complete collection (ZIP, ~6 GB)",
+     "url": "https://media.dbs.org/audio/grn/eng_GlobalRecordings_english_high.zip"
+    }
+   ],
+   "source": "https://dbs.org/audio/collections/grn/eng_GlobalRecordings_english",
+   "lang": "eng",
+   "langName": "English",
+   "play": null,
+   "read": null,
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "typeLabel": "Audio Collections"
+  },
+  {
+   "id": "eng-text-engweb",
+   "type": "scripture",
+   "title": "World English Bible",
+   "org": "eBible.org",
+   "year": "2000",
+   "desc": "A modern English translation in the public domain — free to copy, print and share without restriction.",
+   "license": "Public Domain",
+   "read": {
+    "kind": "pdf",
+    "url": "https://bibles.dbs.org/ENGWEB/pdf/ENGWEB.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://bibles.dbs.org/ENGWEB/pdf/ENGWEB.pdf"
+    },
+    {
+     "label": "EPUB",
+     "url": "https://bibles.dbs.org/ENGWEB/epub/ENGWEB.epub"
+    }
+   ],
+   "source": "https://dbs.org/bibles/ENGWEB",
+   "lang": "eng",
+   "langName": "English",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "scope": null,
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "eng-text-engbsb",
+   "type": "scripture",
+   "title": "Berean Standard Bible",
+   "org": "Bible Hub",
+   "year": "2022",
+   "desc": "A clear, accurate modern translation, released to the public domain in 2023.",
+   "license": "Public Domain",
+   "read": {
+    "kind": "pdf",
+    "url": "https://bibles.dbs.org/ENGBSB/pdf/ENGBSB.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://bibles.dbs.org/ENGBSB/pdf/ENGBSB.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/ENGBSB",
+   "lang": "eng",
+   "langName": "English",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "scope": null,
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "eng-text-engkjv",
+   "type": "scripture",
+   "title": "King James Version",
+   "org": "Public Domain",
+   "year": "1611",
+   "desc": "The classic 1769 standardised text of the Authorised Version.",
+   "license": "Public Domain",
+   "read": {
+    "kind": "pdf",
+    "url": "https://bibles.dbs.org/ENGKJV/pdf/ENGKJV.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://bibles.dbs.org/ENGKJV/pdf/ENGKJV.pdf"
+    },
+    {
+     "label": "EPUB",
+     "url": "https://bibles.dbs.org/ENGKJV/epub/ENGKJV.epub"
+    }
+   ],
+   "source": "https://dbs.org/bibles/ENGKJV",
+   "lang": "eng",
+   "langName": "English",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "scope": null,
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "eng-hist-english-1425-wycliffe-new-testament",
+   "type": "historic",
+   "title": "Wycliffe New Testament (1425)",
+   "year": "1425",
+   "org": "Digital Bible Society Archive",
+   "cover": "https://scripture.dbs.org/covers/small/English-1425-Wycliffe-New-Testament.webp",
+   "desc": "A hand-copied manuscript of the first complete English New Testament. Read in the browser or download the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/English-1425-Wycliffe-New-Testament.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/English-1425-Wycliffe-New-Testament.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/English-1425-Wycliffe-New-Testament",
+   "lang": "eng",
+   "langName": "English",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "eng-hist-english-1390-wycliffe-bible-nt",
+   "type": "historic",
+   "title": "Wycliffe Bible — New Testament (1390)",
+   "year": "1390",
+   "org": "Digital Bible Society Archive",
+   "cover": "https://scripture.dbs.org/covers/small/English-1390-Wycliffe-Bible-NT.webp",
+   "desc": "One of the earliest English Scripture manuscripts. A large, high-resolution scan. Read in the browser or download the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/English-1390-Wycliffe-Bible-NT.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/English-1390-Wycliffe-Bible-NT.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/English-1390-Wycliffe-Bible-NT",
+   "lang": "eng",
+   "langName": "English",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "typeLabel": "Historic Scans"
+  }
+ ]
+}

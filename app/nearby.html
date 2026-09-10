@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-<title>Resource</title>
+<title>Send to a phone nearby</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="assets/icon/apple-touch-icon.png">
 <link rel="icon" href="assets/icon/favicon-32.png" sizes="32x32">
@@ -29,10 +29,10 @@
 <body>
 <main class="wrap" id="main">
   <p style="margin:1rem 0 .4rem">
-    <a class="btn ghost" href="library.html" id="back" style="min-height:46px;padding:.5rem 1rem">
+    <a class="btn ghost" href="index.html" id="back" style="min-height:46px;padding:.5rem 1rem">
       <span id="back-ico"></span><span data-i18n="item.back">Back</span></a>
   </p>
-  <div id="item"></div>
+  <div id="nearby" class="card" style="margin-top:.6rem"></div>
   <div class="foot-nav"></div>
 </main>
 
@@ -40,6 +40,7 @@
 <script src="assets/js/core.js"></script>
 <script src="assets/js/i18n.js"></script>
 <script src="assets/js/save.js"></script>
-<script src="assets/js/item.js"></script>
+<script src="assets/vendor/peerjs.min.js"></script>
+<script src="assets/js/nearby.js"></script>
 </body>
 </html>

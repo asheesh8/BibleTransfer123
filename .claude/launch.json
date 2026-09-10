@@ -3,12 +3,12 @@
   "configurations": [
     {
       "name": "library",
-      "runtimeExecutable": "npm",
+      "runtimeExecutable": "python3",
       "runtimeArgs": [
-        "run",
-        "dev"
+        "packer/serve.py",
+        "8102"
       ],
-      "port": 8095
+      "port": 8102
     }
   ]
 }

@@ -13,7 +13,7 @@ properly so seeking inside a two-hour film works.
 Pointed at a built card, this is the whole offline library on a local network —
 no internet, and anyone who joins can watch, read and save.
 """
-import functools, http.server, mimetypes, pathlib, socketserver, sys
+import functools, http.server, json, mimetypes, pathlib, re, socketserver, sys, threading, time, urllib.parse
 
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parent / "app"
@@ -25,7 +25,82 @@ mimetypes.add_type("image/webp", ".webp")
 mimetypes.add_type("application/epub+zip", ".epub")
 
 
+# ------------------------------------------------------------------ nearby
+# Two phones on the same page need to swap a few hundred bytes of connection
+# details before WebRTC can join them directly. On the web edition a public
+# broker does that; here this server does it, which is what lets Nearby work on
+# a village network with no internet at all. Only the handshake passes through
+# — the file itself goes phone to phone.
+#
+#   GET  /signal/ping                 is local signalling available?
+#   POST /signal/<room>/<to>          leave a message for <to>
+#   GET  /signal/<room>/<me>?wait=25  collect messages, waiting up to 25 s
+MAIL = {}
+MAIL_LOCK = threading.Condition()
+MAIL_TTL = 600
+NAME = re.compile(r"^[A-Za-z0-9_-]{1,40}$")
+
+
+def _expire():
+    now = time.time()
+    for k in list(MAIL):
+        MAIL[k] = [m for m in MAIL[k] if now - m[0] < MAIL_TTL]
+        if not MAIL[k]:
+            del MAIL[k]
+
+
 class Handler(http.server.SimpleHTTPRequestHandler):
+    def _json(self, code, obj):
+        body = json.dumps(obj).encode()
+        self.send_response(code)
+        self.send_header("Content-Type", "application/json")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        self.wfile.write(body)
+
+    def _route(self):
+        u = urllib.parse.urlparse(self.path)
+        parts = u.path.split("/")
+        return u, parts
+
+    def do_GET(self):
+        u, parts = self._route()
+        if u.path == "/signal/ping":
+            return self._json(200, {"ok": True, "kind": "local"})
+        if len(parts) == 4 and parts[1] == "signal":
+            room, me = parts[2], parts[3]
+            if not (NAME.match(room) and NAME.match(me)):
+                return self._json(400, {"error": "bad name"})
+            q = urllib.parse.parse_qs(u.query)
+            wait = min(max(float((q.get("wait") or ["25"])[0]), 0), 30)
+            key, deadline = f"{room}:{me}", time.time() + wait
+            with MAIL_LOCK:
+                while not MAIL.get(key) and time.time() < deadline:
+                    MAIL_LOCK.wait(max(0.05, deadline - time.time()))
+                msgs = MAIL.pop(key, [])
+                _expire()
+            return self._json(200, [m[1] for m in msgs])
+        return super().do_GET()
+
+    def do_POST(self):
+        u, parts = self._route()
+        if len(parts) == 4 and parts[1] == "signal":
+            room, to = parts[2], parts[3]
+            if not (NAME.match(room) and NAME.match(to)):
+                return self._json(400, {"error": "bad name"})
+            n = int(self.headers.get("content-length") or 0)
+            if n <= 0 or n > 64 * 1024:
+                return self._json(413, {"error": "size"})
+            try:
+                msg = json.loads(self.rfile.read(n))
+            except Exception:
+                return self._json(400, {"error": "json"})
+            with MAIL_LOCK:
+                MAIL.setdefault(f"{room}:{to}", []).append((time.time(), msg))
+                MAIL_LOCK.notify_all()
+            return self._json(200, {"ok": True})
+        self.send_error(405)
+
     def end_headers(self):
         self.send_header("Cache-Control", "no-store, must-revalidate")
         self.send_header("Accept-Ranges", "bytes")

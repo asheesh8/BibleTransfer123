@@ -6,16 +6,25 @@
 
   function render() {
     var lib = ET.library();
-    var R = lib.resources;
+    var ALL = lib.resources;
+    // Only what is spoken in the language this person chose. Everything else is
+    // one tap away in the library, but it is never what they land on.
+    var mine = ET.contentLang();
+    var R = ALL.filter(ET.inMyLanguage);
+    var L = lib.languages[mine] || {};
     var offline = R.filter(function (r) { return r.offline; }).length;
+    // A card says which shelves need a signal; the web edition streams it all.
+    var onCard = (lib.counts && lib.counts.offline) > 0;
+    var ready = R.filter(function (r) { return r.offline || r.play || r.read; }).length;
 
     ET.$('#hero-art').innerHTML = ET.art.home();
 
-    ET.$('#hero-count').textContent =
-      t('home.offline', { n: offline, total: R.length });
+    // On a card, say what works with no signal. On the web everything streams,
+    // so say how much there is to watch and read in their language.
+    ET.$('#hero-count').textContent = offline
+      ? t('home.offline', { n: offline, total: R.length })
+      : t('home.ready', { n: ready, lang: L.native || L.name || '' });
 
-    // Categories, biggest first — a shelf with three things on it is not worth
-    // a tap, and an empty one is worth less than that.
     var counts = {};
     R.forEach(function (r) { counts[r.type] = (counts[r.type] || 0) + 1; });
 
@@ -25,20 +34,22 @@
     }).map(function (ty) {
       var n = counts[ty];
       var off = R.filter(function (r) { return r.type === ty && r.offline; }).length;
-      return '<a class="tile" href="library.html?type=' + ty + '">' +
+      return '<a class="tile" href="library.html?type=' + ty + '&lang=' + mine + '">' +
         '<span class="ico">' + ET.icon(ET.typeIcon(ty)) + '</span>' +
         '<span><span class="t">' + ET.esc(t('type.' + ty)) + '</span>' +
         // The 'link' shelf IS the needs-internet shelf, so captioning it that
         // way again just says the same word twice.
         '<span class="s"><span class="num">' + n + '</span>' +
-        (off < n && ty !== 'link' ? ' · ' + ET.esc(t('ui.needsnet')) : '') +
+        (onCard && off < n && ty !== 'link' ? ' · ' + ET.esc(t('ui.needsnet')) : '') +
         '</span></span>' +
         '<span class="chev flip">' + ET.icon('chev') + '</span></a>';
     }).join('');
 
     ET.$('#actions').innerHTML = [
-      ['library.html', 'search', 'home.browse', 'home.browse.sub', { n: R.length }],
+      ['library.html?lang=' + mine, 'search', 'home.browse', 'home.browse.sub', { n: R.length }],
+      ['nearby.html', 'wifi', 'home.nearby', 'home.nearby.sub', null],
       ['share.html', 'share', 'home.share', 'home.share.sub', null],
+      ['library.html', 'globe', 'home.other', 'home.other.sub', { n: ALL.length }],
       ['help.html', 'folder', 'home.help', 'home.help.sub', null]
     ].map(function (a) {
       return '<a class="tile" href="' + a[0] + '">' +

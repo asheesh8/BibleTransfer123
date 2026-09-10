@@ -8,15 +8,15 @@
 
    VERSION must change whenever the shell changes, or an installed copy keeps
    serving the old one. `easytransfer build` rewrites it. */
-var VERSION = 'shell-v1';
+var VERSION = 'shell-v4';
 
 var SHELL = [
-  'index.html', 'library.html', 'item.html', 'share.html', 'help.html',
+  'index.html', 'library.html', 'item.html', 'share.html', 'help.html', 'nearby.html',
   'manifest.webmanifest',
   'assets/css/app.css',
   'assets/js/core.js', 'assets/js/i18n.js', 'assets/js/art.js',
   'assets/js/home.js', 'assets/js/library.js', 'assets/js/item.js',
-  'assets/js/share.js', 'assets/js/help.js',
+  'assets/js/share.js', 'assets/js/help.js', 'assets/js/save.js', 'assets/js/nearby.js', 'assets/vendor/peerjs.min.js',
   'assets/icon/icon-192.png', 'assets/icon/icon-512.png',
   'data/catalog.js'
 ];
@@ -43,22 +43,41 @@ self.addEventListener('activate', function (e) {
   );
 });
 
+/* Only the files in SHELL are ever served from the cache. Everything else —
+   Nearby's signalling, the library's media, a publisher's CDN — goes straight
+   to the network untouched.
+
+   It used to be the other way round (cache any same-origin GET, skip /media/),
+   and that silently broke Nearby on a Pi: the "any messages for me?" poll has
+   the same URL every time, so after the first answer the worker kept handing
+   back that same stored OFFER instead of asking the server. An allow-list
+   cannot make that mistake with a URL it has never heard of. */
+var SCOPE = new URL(self.registration.scope).pathname;
+var SHELL_PATHS = SHELL.map(function (p) { return SCOPE + p; });
+
+function shellPath(url) {
+  var path = url.pathname === SCOPE ? SCOPE + 'index.html' : url.pathname;
+  return SHELL_PATHS.indexOf(path) === -1 ? null : path;
+}
+
 self.addEventListener('fetch', function (e) {
   var req = e.request;
   if (req.method !== 'GET') return;
-
   var url = new URL(req.url);
-  if (url.origin !== self.location.origin) return;      // publisher CDNs: leave alone
-  if (url.pathname.indexOf('/media/') !== -1) return;   // never cache the library itself
+  if (url.origin !== self.location.origin) return;
+  var path = shellPath(url);
+  if (!path) return;
 
-  // Shell: cache first so it opens instantly and works with the Pi switched
-  // off, but refresh in the background so a rebuilt card is picked up.
+  // Cache first so the shell opens instantly and works with the Pi switched
+  // off, but refresh in the background so a rebuild is picked up. Keyed by
+  // path alone: item.html?id=a and item.html?id=b are the same page.
+  var key = new Request(path);
   e.respondWith(
-    caches.match(req).then(function (hit) {
+    caches.match(key).then(function (hit) {
       var live = fetch(req).then(function (res) {
         if (res && res.ok) {
           var copy = res.clone();
-          caches.open(VERSION).then(function (c) { c.put(req, copy); });
+          caches.open(VERSION).then(function (c) { c.put(key, copy); });
         }
         return res;
       }).catch(function () { return hit; });

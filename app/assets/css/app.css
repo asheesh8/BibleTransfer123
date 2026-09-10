@@ -319,6 +319,23 @@ p, li, h1, h2, h3, code, input { -webkit-user-select: text; user-select: text; }
 .chip.offline { background: var(--green-wash); color: var(--green-deep); }
 .chip.online  { background: var(--gold-wash);  color: var(--gold-deep); }
 .chip.lang    { background: var(--purple-wash); color: var(--purple); }
+.chip.stream  { background: var(--sky-wash); color: var(--sky-deep); }
+
+.player {
+  width: 100%; aspect-ratio: 16 / 9;
+  border-radius: var(--r-lg); background: #000;
+  border: 2px solid var(--line);
+}
+.picker { display: flex; gap: .6rem; align-items: end; flex-wrap: wrap; margin-top: .7rem; }
+.picker > label { width: 100%; margin: 0; }
+.picker > select { flex: 1 1 12rem; }
+.picker.two > div { flex: 1 1 9rem; }
+.picker .flabel { margin: 0 0 .35rem; }
+.pdf {
+  width: 100%; height: 70vh; margin-top: 1rem;
+  border: 2px solid var(--line); border-radius: var(--r-lg);
+  background: var(--sunk);
+}
 
 .flabel {
   margin: 1rem 0 .45rem;
@@ -442,8 +459,83 @@ input::placeholder { color: var(--ink-soft); font-weight: 500; }
 }
 @media (prefers-reduced-motion: reduce) {
   .sheet { animation: none; }
+  .meter > span.busy { animation: none; }
   * { transition-duration: .01ms !important; }
 }
+
+/* --------------------------------------------------------- guided flows
+
+   Save and Nearby share one shape: a row of numbered dots, "Step 2 of 4", one
+   question per screen, and a big bar while anything is moving. */
+
+.stepper { display: flex; align-items: center; margin: .2rem 0 .4rem; }
+.stepper .dot {
+  width: 34px; height: 34px; flex: none;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  border: 2.5px solid var(--line-strong);
+  background: var(--surface); color: var(--ink-soft);
+  font-weight: 800; font-size: .95rem;
+}
+.stepper .dot svg { width: 18px; height: 18px; }
+.stepper .dot.on   { border-color: var(--purple); background: var(--purple); color: #fff; }
+.stepper .dot.done { border-color: var(--green-deep); background: var(--green); color: #fff; }
+.stepper .bar { flex: 1; height: 3px; background: var(--line); margin: 0 .3rem; border-radius: 2px; }
+.step-of { margin: 0 0 .2rem; color: var(--ink-soft); font-size: .85rem; font-weight: 700; }
+
+.meter {
+  height: 22px; border-radius: var(--r-pill);
+  background: var(--sunk); border: 2px solid var(--line);
+  overflow: hidden;
+}
+.meter > span {
+  display: block; height: 100%; width: 0;
+  background: var(--green);
+  border-radius: var(--r-pill);
+  transition: width .2s linear;
+}
+/* No content-length: say "working" honestly instead of a bar that lies. */
+.meter > span.busy {
+  width: 40% !important;
+  animation: sweep 1.2s ease-in-out infinite;
+}
+@keyframes sweep { 0% { transform: translateX(-100%) } 100% { transform: translateX(250%) } }
+html[dir="rtl"] .meter > span.busy { animation-direction: reverse; }
+
+.done-mark {
+  width: 84px; height: 84px; margin: .6rem auto .4rem;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--green); color: #fff;
+  box-shadow: 0 5px 0 var(--green-deep);
+}
+.done-mark svg { width: 46px; height: 46px; stroke-width: 3; }
+
+/* A pairing code people read aloud across a room. */
+.code {
+  font: 800 clamp(2.4rem, 12vw, 3.4rem)/1 ui-monospace, "SF Mono", Menlo, monospace;
+  letter-spacing: .18em !important;
+  text-align: center; direction: ltr; unicode-bidi: isolate;
+  padding: 1rem .5rem;
+  border: 3px dashed var(--purple);
+  border-radius: var(--r-lg);
+  background: var(--purple-wash); color: var(--purple);
+}
+.code-input {
+  font: 800 2rem/1 ui-monospace, "SF Mono", Menlo, monospace !important;
+  letter-spacing: .3em !important;
+  text-align: center; direction: ltr;
+  padding: .9rem !important;
+}
+
+.spin {
+  display: inline-block; width: 1em; height: 1em; vertical-align: -.15em;
+  margin-inline-end: .5em;
+  border: 2.5px solid var(--line-strong); border-top-color: var(--purple);
+  border-radius: 50%;
+  animation: turn .8s linear infinite;
+}
+@keyframes turn { to { transform: rotate(360deg) } }
 
 /* ---------------------------------------------------------------- footer */
 

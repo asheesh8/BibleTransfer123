@@ -30,8 +30,30 @@ class Asset:
 
 
 def load(path):
+    """The source catalogue, plus every other catalogue sitting beside it.
+
+    `resources.json` is GawahiiTV's Sindhi and Urdu library, copied verbatim.
+    Other languages arrive as sibling files — `english.json`, written by
+    `build_english.py` — and are merged in here rather than edited into the
+    GawahiiTV copy, so that file can be refreshed from upstream at any time.
+    """
+    path = pathlib.Path(path)
     with open(path, encoding="utf-8") as fh:
-        return json.load(fh)
+        base = json.load(fh)
+    seen = {r["id"] for r in base["resources"]}
+    for extra in sorted(path.parent.glob("*.json")):
+        if extra.resolve() == path.resolve():
+            continue
+        with open(extra, encoding="utf-8") as fh:
+            more = json.load(fh)
+        if not isinstance(more, dict) or "resources" not in more:
+            continue
+        base.setdefault("languages", {}).update(more.get("languages", {}))
+        for r in more["resources"]:
+            if r["id"] not in seen:
+                base["resources"].append(r)
+                seen.add(r["id"])
+    return base
 
 
 def assets_for(r):

@@ -218,7 +218,8 @@ def cmd_build(args):
 
     app_dir = B.write_app(out, APP_SRC,
                           stamp=datetime.datetime.now().strftime('%Y%m%d-%H%M%S'))
-    library = B.card_catalog(cat, landed, prof, C.index(cat))
+    library = B.card_catalog(cat, landed, prof, C.index(cat),
+                             sizes=F.SizeCache(CACHE).data)
     B.write_catalog(app_dir, library)
     B.write_manifest(out, landed, library)
     _write_readme(out, library, prof)
@@ -267,7 +268,8 @@ def cmd_preview(args):
     unpacked card is."""
     cat, assets = _load(args)
     prof = P.PROFILES["standard"]
-    library = B.card_catalog(cat, [], prof, C.index(cat))
+    library = B.card_catalog(cat, [], prof, C.index(cat),
+                             sizes=F.SizeCache(CACHE).data)
     library["profile"] = "preview"
     n = B.write_catalog(APP_SRC, library)
     print(f"\n  Wrote {APP_SRC / 'data' / 'catalog.js'} — {human(n)} of catalogue, "

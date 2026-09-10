@@ -8,10 +8,13 @@
   var t = ET.i18n.t;
   var lib = ET.library();
 
+  // A link that names a language (or asks for all with lang=all) wins;
+  // otherwise the shelf opens on the language this person chose.
+  var urlLang = ET.qs('lang');
   var state = {
     q: ET.qs('q') || '',
     type: ET.qs('type') || '',
-    lang: ET.qs('lang') || ''
+    lang: urlLang === 'all' ? '' : (urlLang || ET.contentLang())
   };
 
   var TYPES = ['film', 'scripture', 'audio-bible', 'audio', 'historic', 'link'];
@@ -61,7 +64,7 @@
     var p = [];
     if (state.q) p.push('q=' + encodeURIComponent(state.q));
     if (state.type) p.push('type=' + state.type);
-    if (state.lang) p.push('lang=' + state.lang);
+    p.push('lang=' + (state.lang || 'all'));
     var url = location.pathname + (p.length ? '?' + p.join('&') : '');
     // Some browsers refuse replaceState on a file:// origin. Keeping the URL in
     // step with the filters is a convenience; it is not worth a broken page.
@@ -131,5 +134,6 @@
   ET.i18n.apply();
   // apply() invokes every listener, so a listener must never call apply() back.
   // render() only rewrites the dynamic regions; apply() handles [data-i18n].
-  ET.i18n.onChange(render);
+  // Switching the interface language switches the shelf with it.
+  ET.i18n.onChange(function () { state.lang = ET.contentLang(); render(); });
 })(window.ET);

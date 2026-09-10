@@ -152,6 +152,81 @@ CDN — including fonts. All of that is deliberate.
 
 ---
 
+## Languages — content follows the one you choose
+
+Choosing **English**, **اردو** or **سنڌي** picks two things at once: the language
+of the interface, and the language the films, Scripture and audio are *spoken
+or written in*. Home and the library open on that language only; the others are
+one tap away under "Other languages". Every item says **Spoken in English** /
+**Written in Urdu** before anyone presses play.
+
+This fixes a real bug: the GawahiiTV catalogue had no English at all, so an
+English reader tapped an English title and heard Sindhi.
+
+English comes from `packer/build_english.py`, which writes
+`catalog/english.json`. DBS hosts the same films under the same URL patterns
+with the language code swapped, so it builds the matching set — *JESUS* (61
+chapters), *Gospel of John*, *The HOPE*, *iBible*, *Story of Jesus* audio, three
+public-domain Bibles (World English, Berean Standard, King James) and two
+Wycliffe manuscripts — then **probes every URL** and keeps only what the server
+actually serves. `catalog.load()` merges any sibling catalogue into
+GawahiiTV's, so that copy stays untouched and refreshable.
+
+## The web edition streams
+
+A resource that is not packed on a card carries its publisher's URLs instead,
+so the same app **plays locally off a card and streams on Vercel**. 58
+resources play or open on the web: chaptered films, single films with a
+low-data / HD switch, audio collections, PDFs in the page, and the four audio
+Bibles with a book-and-chapter picker that carries on into the next chapter.
+
+Every DBS CDN answers with `access-control-allow-origin: *`, which is what makes
+in-page saving and phone-to-phone relaying possible from any site. (If you test
+with `curl`, send a browser user-agent — the CDN refuses curl's.) Create
+International's films sit in an S3 bucket whose dotted name breaks the
+virtual-host certificate, so `build.secure()` rewrites them to path-style HTTPS.
+
+## Saving, step by step, inside the page
+
+**Save to my phone** opens a four-step sheet: what → where → saving → done.
+
+- **Where** offers *Choose a folder* and *Choose the name and place* on browsers
+  with the File System Access API (Chrome and Edge on computers), writing
+  straight to disk and remembering the folder for next time; everywhere else it
+  is *Save to Downloads*, and step 4 says in words where the file went.
+- **Saving** is a real progress bar — bytes fetched in the page — with Stop.
+- **All 61 chapters** saves as 61 files into the chosen folder.
+- Files over 400 MB on a browser without folder access go to the browser's own
+  download manager rather than into memory, which would crash a phone's tab.
+
+## Nearby — phone to phone, from the page
+
+**Send to a phone nearby**: one phone taps Send and shows a 6-digit code, the
+other taps Receive and types it. The receiver sees what is coming and its size,
+accepts (optionally into a folder), both watch the progress, and the receiver
+gets **Send it to someone else** — which makes what just arrived the next thing
+it sends. The chain, built in.
+
+WebRTC joins the two browsers directly; **the file never touches a server**.
+Only the few hundred bytes that introduce the phones travel through a
+middleman, and which one depends on where the page is served:
+
+| Served from | Introduced by | Needs internet |
+|---|---|---|
+| `packer/serve.py` (a Pi, a laptop) | `serve.py` itself — `/signal/` | **no** |
+| Vercel | PeerJS's free public broker | yes |
+| A card (`file://`) | nothing — the page says so and offers the guides | — |
+
+The broker is spoken to through the official PeerJS client, vendored at
+`app/assets/vendor/peerjs.min.js` (MIT, 1.5.4). An earlier hand-written version
+of its protocol connected fine and then had every relayed message silently
+dropped; the official client works first time. It is a third-party service: it
+sees the pairing, never the file.
+
+Verified with two and three browsers: a 10,024,538-byte PDF arrives
+byte-for-byte, over both the local and the broker path, and onward through a
+second hop.
+
 ## The app
 
 Designed for a cracked shared phone, in sunlight, held by someone who may be
@@ -186,7 +261,10 @@ way** — installing only changes how it is launched. `help.html` walks through
 both platforms by hand, because iOS never fires `beforeinstallprompt` and a
 button that appears on half the phones in a room is worse than none.
 
-The service worker caches the **app shell only**. Media is explicitly excluded —
+The service worker caches **an explicit allow-list of the app's own files and
+nothing else**. It used to cache any same-origin GET, which silently broke
+Nearby: the "any messages for me?" poll has the same URL every time, so the
+worker kept replaying the first answer. Media is excluded for a second reason —
 copying a packed card's tens of gigabytes into the Cache API would duplicate the
 library into the phone's own storage and fill the device. `easytransfer build`
 stamps the worker's cache name, so a rebuilt card is never shadowed by an
