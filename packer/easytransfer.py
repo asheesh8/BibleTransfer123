@@ -192,8 +192,24 @@ def cmd_build(args):
             print(f"    · {r.asset.rel[:50]:<50} {r.error}")
         if len(failures) > 10:
             print(f"    … and {len(failures) - 10} more")
-        print("  Re-run the same build command — finished files are skipped and "
-              "part-files resume.")
+        dead = [r for r in failures if r.error.startswith(("HTTP 403", "HTTP 404", "HTTP 410"))]
+        if dead:
+            print(f"\n  {len(dead)} of those are gone at the source (403/404) — re-running "
+                  f"will not bring them back.\n  Their resources stay on the card with "
+                  f"whatever else did download.")
+        if len(dead) < len(failures):
+            print("  For the rest, re-run the same command — finished files are skipped "
+                  "and part-files resume.")
+
+    # Record the size each file actually has, not the size probed at plan time.
+    # They differ for some CDN images, and the manifest is what `verify` checks
+    # against — a probed size there would fail a card that is perfectly fine.
+    cache = F.SizeCache(CACHE)
+    for r in results:
+        if r.status in ("ok", "have") and r.nbytes:
+            r.asset.nbytes = r.nbytes
+            cache.put(r.asset.url, r.nbytes)
+    cache.save()
 
     # Only advertise what actually landed.
     on_disk = {r.asset.rel for r in results if r.status in ("ok", "have")}

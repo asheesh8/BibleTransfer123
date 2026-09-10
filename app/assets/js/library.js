@@ -39,11 +39,7 @@
   }
 
   function card(r) {
-    var art = r.cover || r.coverOnline;
-    var thumb = art
-      ? '<div class="thumb" style="background-image:url(\'' +
-        ET.esc(art).replace(/'/g, "\\'") + '\')"></div>'
-      : '<div class="thumb">' + ET.icon(ET.typeIcon(r.type)) + '</div>';
+    var thumb = ET.thumb(r);
 
     var badge = r.offline
       ? '<span class="chip offline">' + ET.icon('check') + ET.esc(t('item.offline')) + '</span>'

@@ -98,10 +98,13 @@ def _fetch_one(asset, root, retries=3):
     dest = pathlib.Path(root) / asset.rel
     part = dest.with_suffix(dest.suffix + ".part")
 
+    # A file only ever gets its final name by the rename at the end of a
+    # completed, validated download — partial data lives in `.part`. So a file
+    # that exists under its real name is finished. Comparing it to the probed
+    # size instead would delete good files whenever the probe was wrong, which
+    # it sometimes is (see below).
     if dest.exists() and dest.stat().st_size > 0:
-        if not asset.nbytes or dest.stat().st_size == asset.nbytes:
-            return Result(asset, "have", dest.stat().st_size)
-        dest.unlink()                       # truncated by an earlier run
+        return Result(asset, "have", dest.stat().st_size)
 
     dest.parent.mkdir(parents=True, exist_ok=True)
     last = ""
@@ -117,6 +120,16 @@ def _fetch_one(asset, root, retries=3):
                 mode = "ab" if (have and resp.status == 206) else "wb"
                 if mode == "wb":
                     have = 0
+
+                # What THIS response promises, which is what the file is judged
+                # against. The size probed at plan time is for planning only:
+                # meta.dbs.org answers a probe with one length and a download
+                # with another for the same cover image, and trusting the probe
+                # threw away thirteen complete, valid files.
+                expect = 0
+                cl = resp.headers.get("content-length")
+                if cl and cl.isdigit():
+                    expect = have + int(cl)
                 with open(part, mode) as fh:
                     while True:
                         buf = resp.read(CHUNK)
@@ -124,9 +137,10 @@ def _fetch_one(asset, root, retries=3):
                             break
                         fh.write(buf)
             size = part.stat().st_size
-            if asset.nbytes and size != asset.nbytes:
-                last = f"size mismatch: got {size}, expected {asset.nbytes}"
-                part.unlink(missing_ok=True)
+            if expect and size != expect:
+                # The connection closed before the server finished. Keep the
+                # part-file: the next attempt resumes from here.
+                last = f"short read: got {size} of {expect} bytes"
                 continue
             part.replace(dest)
             return Result(asset, "ok", size)

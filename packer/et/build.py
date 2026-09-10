@@ -32,7 +32,10 @@ def card_catalog(catalog, chosen, profile, all_index):
     for r in catalog["resources"]:
         rid = r["id"]
         mine = {a.rel: a for a in packed.get(rid, [])}
-        offline = any(a.role == "view" for a in mine.values())
+        # Offline means something on the card can be opened or saved — not only
+        # something the app can play inline. An audio Bible that ships as one
+        # ZIP is fully on the card; calling it "needs internet" was false.
+        offline = any(a.role in ("view", "download") for a in mine.values())
 
         def local(url):
             for a in mine.values():

@@ -57,17 +57,8 @@
   }
 
   function hero() {
-    var art = r.cover || r.coverOnline;
-    if (art) {
-      return '<div class="thumb" style="aspect-ratio:16/9;border-radius:var(--r-lg);' +
-        'border:2px solid var(--line);background-image:url(\'' +
-        ET.esc(art).replace(/'/g, "\\'") + '\');background-size:cover;' +
-        'background-position:center"></div>';
-    }
-    return '<div class="thumb" style="aspect-ratio:16/9;border-radius:var(--r-lg);' +
-      'border:2px solid var(--line);display:grid;place-items:center;' +
-      'background:var(--sunk);color:var(--purple)">' +
-      ET.icon(ET.typeIcon(r.type)) + '</div>';
+    return ET.thumb(r, 'aspect-ratio:16/9;border-radius:var(--r-lg);' +
+                       'border:2px solid var(--line)');
   }
 
   function render() {

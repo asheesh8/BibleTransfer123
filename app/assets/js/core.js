@@ -189,6 +189,24 @@ window.ET = (function () {
     return { el: back.firstChild, close: close };
   }
 
+  /* Artwork with a guaranteed fallback.
+
+     Online-only resources carry the publisher's cover URL. With no connection
+     that load fails, and a CSS background-image fails silently into an empty
+     grey box. Instead the type icon is always drawn, and the cover is an <img>
+     laid over it that removes itself on error — so offline the icon shows
+     through, and online the artwork covers it. */
+  function thumb(r, extraStyle) {
+    var art = r.cover || r.coverOnline;
+    var html = '<div class="thumb"' + (extraStyle ? ' style="' + extraStyle + '"' : '') + '>' +
+               icon(typeIcon(r.type));
+    if (art) {
+      html += '<img src="' + esc(art) + '" alt="" loading="lazy" decoding="async" ' +
+              'onerror="this.remove()">';
+    }
+    return html + '</div>';
+  }
+
   function typeIcon(t) {
     return { film: 'film', 'audio-bible': 'book', audio: 'wave',
              scripture: 'book', historic: 'scan', link: 'link' }[t] || 'link';
@@ -247,6 +265,6 @@ window.ET = (function () {
     canInstall: canInstall, onInstallable: onInstallable,
     promptInstall: promptInstall, standalone: standalone,
     $: $, $$: $$, theme: theme, library: library, byId: byId, header: header,
-    sheet: sheet, typeIcon: typeIcon
+    sheet: sheet, typeIcon: typeIcon, thumb: thumb
   };
 })();

@@ -79,7 +79,10 @@ def select(catalog, assets, profile, langs=None, only=None):
             continue
 
         want = [a for a in assets.get(rid, []) if _wanted(a, r, profile)]
-        if not want:
+        # A cover alone is artwork, not something anyone can watch, read or
+        # save. Counting it made the plan promise resources the card could not
+        # deliver — "55 work offline" when several were just a picture.
+        if not any(a.role != "cover" for a in want):
             skipped.append((r, "nothing packable — needs internet"))
             continue
 
