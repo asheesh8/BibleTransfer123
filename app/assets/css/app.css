@@ -14,67 +14,70 @@
      See "Arabic script" at the bottom; those rules are not optional.
    ========================================================================= */
 
+/* Dark is the default, following the Bible app this was modelled on. Light is
+   still a tap away in the header, and matters outdoors: a bright screen is
+   easier to read in the sun than a dark one. All three theme states are
+   covered — no choice (system), an explicit light, an explicit dark. */
 :root {
-  /* Purple and gold are sampled from the ichthys in Gawahi's own logo, warmed
-     toward cream so a page of cards reads friendly rather than institutional. */
-  --ground:      #FFFBF2;
-  --surface:     #FFFFFF;
-  --sunk:        #F6EEE1;
+  --ground:      #0E0B12;
+  --surface:     #191520;
+  --sunk:        #221C2C;
+  --raised:      #2A2333;
 
-  --ink:         #2A1B33;
-  --ink-soft:    #6B5A75;
+  --ink:         #F7F3FA;
+  --ink-soft:    #A99EB6;
 
-  --purple:      #6B2E86;
-  --purple-deep: #4E1F64;
-  --purple-wash: #F3EAF7;
+  --purple:      #C79AD9;
+  --purple-deep: #8A55A6;
+  --purple-wash: #2C2038;
 
-  --gold:        #E8A317;
-  --gold-deep:   #B87D06;
-  --gold-wash:   #FDF3DC;
+  --gold:        #F0B942;
+  --gold-deep:   #C38F1E;
+  --gold-wash:   #33281A;
 
-  --green:       #3FA65C;
-  --green-deep:  #2E7D45;
-  --green-wash:  #E9F6ED;
+  --green:       #4FBE72;
+  --green-deep:  #379053;
+  --green-wash:  #16281D;
 
-  --sky:         #2E86AB;
-  --sky-deep:    #1F6182;
-  --sky-wash:    #E7F2F8;
+  --sky:         #5BAFD0;
+  --sky-deep:    #3A88A8;
+  --sky-wash:    #17262E;
 
-  --line:        #EADFD0;
-  --line-strong: #D9C8B2;
+  --line:        #2E2739;
+  --line-strong: #43394F;
 
   --r-sm: 12px;
   --r:    18px;
   --r-lg: 26px;
   --r-pill: 999px;
 
-  --press: 4px;          /* how far a chunky button travels when pressed */
-  --tap:   56px;         /* minimum touch target — thumbs, not cursors */
+  --press: 4px;
+  --tap:   56px;
+  --tabbar: 78px;
 
   --wrap: 62rem;
   --gap:  1rem;
 }
-/* Dark mode is a real field condition — evening, indoors, a projector room.
-   Only the tokens change; nothing below needs to know. */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --ground: #191221;  --surface: #221A2C;  --sunk: #2C2237;
-    --ink: #F6EFFA;     --ink-soft: #BCA9C8;
-    --purple: #C79AD9;  --purple-deep: #9B6BB0; --purple-wash: #2E2139;
-    --gold: #F0B942;    --gold-deep: #C38F1E;   --gold-wash: #35291A;
-    --green: #62C57D;   --green-deep: #3F9257;  --green-wash: #1E2E23;
-    --sky: #6BB6D6;     --sky-deep: #3E88A8;    --sky-wash: #1B2A33;
-    --line: #3A2E47;    --line-strong: #4E3F5E;
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --ground: #FFFBF2;  --surface: #FFFFFF;  --sunk: #F6EEE1;  --raised: #FFFFFF;
+    --ink: #2A1B33;     --ink-soft: #6B5A75;
+    --purple: #6B2E86;  --purple-deep: #4E1F64; --purple-wash: #F3EAF7;
+    --gold: #E8A317;    --gold-deep: #B87D06;   --gold-wash: #FDF3DC;
+    --green: #3FA65C;   --green-deep: #2E7D45;  --green-wash: #E9F6ED;
+    --sky: #2E86AB;     --sky-deep: #1F6182;    --sky-wash: #E7F2F8;
+    --line: #EADFD0;    --line-strong: #D9C8B2;
   }
 }
-:root[data-theme="dark"] {
-  --ground: #191221;  --surface: #221A2C;  --sunk: #2C2237;
-  --ink: #F6EFFA;     --ink-soft: #BCA9C8;
-  --purple: #C79AD9;  --purple-deep: #9B6BB0; --purple-wash: #2E2139;
-  --gold: #F0B942;    --gold-deep: #C38F1E;   --gold-wash: #35291A;
-  --green: #62C57D;   --green-deep: #3F9257;  --green-wash: #1E2E23;
-  --sky: #6BB6D6;     --sky-deep: #3E88A8;    --sky-wash: #1B2A33;
-  --line: #3A2E47;    --line-strong: #4E3F5E;
+:root[data-theme="light"] {
+  --ground: #FFFBF2;  --surface: #FFFFFF;  --sunk: #F6EEE1;  --raised: #FFFFFF;
+  --ink: #2A1B33;     --ink-soft: #6B5A75;
+  --purple: #6B2E86;  --purple-deep: #4E1F64; --purple-wash: #F3EAF7;
+  --gold: #E8A317;    --gold-deep: #B87D06;   --gold-wash: #FDF3DC;
+  --green: #3FA65C;   --green-deep: #2E7D45;  --green-wash: #E9F6ED;
+  --sky: #2E86AB;     --sky-deep: #1F6182;    --sky-wash: #E7F2F8;
+  --line: #EADFD0;    --line-strong: #D9C8B2;
 }
 
 /* ------------------------------------------------------------------ base */
@@ -164,6 +167,139 @@ p, li, h1, h2, h3, code, input { -webkit-user-select: text; user-select: text; }
   outline-offset: 3px;
   border-radius: 6px;
 }
+
+/* ============================================================ app chrome
+
+   Shaped after the Bible app in the reference recording: a fixed bar of four
+   destinations at the bottom, thumbs-first, so no screen needs its own way
+   back. Anything deeper than a destination (a resource, a guided flow) keeps
+   its own Back control. */
+
+.tabbar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+  height: calc(var(--tabbar) + env(safe-area-inset-bottom));
+  padding-bottom: env(safe-area-inset-bottom);
+  display: grid; grid-auto-flow: column; grid-auto-columns: 1fr;
+  align-items: center;
+  background: color-mix(in srgb, var(--surface) 96%, transparent);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--line);
+}
+.tabbar a {
+  display: grid; justify-items: center; gap: 3px;
+  padding: 8px 4px; min-height: 58px;
+  color: var(--ink-soft); text-decoration: none;
+  font-size: .72rem; font-weight: 700;
+  border-radius: var(--r);
+}
+.tabbar a svg { width: 25px; height: 25px; }
+.tabbar a[aria-current="page"] { color: var(--ink); }
+.tabbar a[aria-current="page"] .pipe {
+  background: var(--purple-wash); color: var(--purple);
+}
+.tabbar .pipe {
+  display: grid; place-items: center;
+  width: 58px; height: 32px; border-radius: var(--r-pill);
+}
+body.has-tabs { padding-bottom: calc(var(--tabbar) + env(safe-area-inset-bottom) + 1rem); }
+html[dir="rtl"] .tabbar a { font-size: .78rem; }
+
+/* ------------------------------------------------------------- greeting */
+.greet { padding: 1.2rem 0 .3rem; display: grid; gap: .15rem; }
+.greet h1 { font-size: clamp(1.9rem, 7vw, 2.4rem); margin: 0; }
+.greet .eyebrow {
+  font-size: .76rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--purple); margin: 0;
+}
+html[dir="rtl"] .greet .eyebrow { text-transform: none; letter-spacing: 0; font-size: .95rem; }
+.greet .muted { margin: .25rem 0 0; }
+
+/* ------------------------------------------------------------- list row
+
+   One row, one thing, one action — thumbnail, two lines of text, and a pill
+   that says what tapping it does. Repeated down the library and inside every
+   shelf, so learning one row teaches the whole app. */
+.row-list { display: grid; gap: 2px; }
+.rowi {
+  display: grid; grid-template-columns: 62px 1fr auto; gap: .85rem;
+  align-items: center;
+  padding: .7rem .2rem;
+  color: inherit; text-decoration: none;
+  border-radius: var(--r);
+}
+.rowi:hover { background: var(--sunk); }
+.rowi:active { background: var(--raised); }
+.rowi .art {
+  width: 62px; height: 62px; border-radius: 14px; overflow: hidden;
+  background: var(--sunk); position: relative;
+  display: grid; place-items: center; color: var(--purple);
+}
+.rowi .art svg { width: 26px; height: 26px; opacity: .65; }
+.rowi .art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; max-width: none; }
+.rowi .meta { min-width: 0; display: grid; gap: 2px; }
+.rowi .kicker {
+  font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--ink-soft);
+}
+html[dir="rtl"] .rowi .kicker { text-transform: none; letter-spacing: 0; font-size: .82rem; }
+.rowi .name { font-weight: 800; font-size: 1.02rem; line-height: 1.25; }
+.rowi .sub { color: var(--ink-soft); font-size: .88rem; }
+.rowi .go {
+  flex: none; min-height: 40px; padding: .5rem 1.1rem;
+  border-radius: var(--r-pill);
+  background: var(--raised); color: var(--ink);
+  font-weight: 800; font-size: .92rem;
+  border: 1px solid var(--line-strong);
+  display: inline-flex; align-items: center; gap: .4rem;
+}
+.rowi .go svg { width: 16px; height: 16px; }
+.rowi:hover .go { background: var(--purple); border-color: var(--purple); color: #fff; }
+
+/* ---------------------------------------------------------------- shelves */
+.shelf { display: grid; gap: .6rem; margin-top: 1.7rem; }
+.shelf-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.shelf-head h2 { font-size: 1.32rem; margin: 0; }
+.shelf-head a { font-size: .92rem; font-weight: 700; text-decoration: none; color: var(--purple); }
+.rail-x {
+  display: grid; grid-auto-flow: column; grid-auto-columns: 46%;
+  gap: .7rem; overflow-x: auto; scroll-snap-type: x mandatory;
+  /* Kept inside the page gutter: bleeding to the screen edge clipped the
+     first poster, which is the one most likely to be tapped. */
+  padding-bottom: .3rem;
+  scrollbar-width: none;
+}
+.rail-x::-webkit-scrollbar { display: none; }
+.rail-x > * { scroll-snap-align: start; }
+@media (min-width: 40rem) { .rail-x { grid-auto-columns: 22%; } }
+.poster { display: grid; gap: .45rem; color: inherit; text-decoration: none; }
+.poster .art {
+  aspect-ratio: 3 / 4; border-radius: 16px; overflow: hidden; position: relative;
+  background: var(--sunk); display: grid; place-items: center; color: var(--purple);
+}
+.poster .art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; max-width: none; }
+.poster .art svg { width: 30px; height: 30px; opacity: .6; }
+.poster .name { font-weight: 700; font-size: .93rem; line-height: 1.25; }
+.poster .sub { color: var(--ink-soft); font-size: .8rem; }
+.poster:active { opacity: .7; }
+
+/* ------------------------------------------------------------ hero card */
+.hero-card {
+  position: relative; overflow: hidden;
+  border-radius: var(--r-lg);
+  background: var(--purple-wash);
+  padding: 1.3rem;
+  display: grid; gap: .5rem;
+  color: inherit; text-decoration: none;
+  min-height: 150px; align-content: end;
+  border: 1px solid var(--line);
+}
+.hero-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; max-width: none; }
+.hero-card .veil { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14,11,18,.15), rgba(14,11,18,.88)); }
+.hero-card > * { position: relative; }
+.hero-card.shot { color: #fff; }
+.hero-card .kicker { font-size: .74rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; opacity: .9; }
+.hero-card h2 { font-size: 1.5rem; margin: 0; }
+.hero-card .sub { opacity: .85; font-size: .93rem; }
 
 /* ---------------------------------------------------------------- header */
 

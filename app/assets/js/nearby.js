@@ -674,8 +674,7 @@
 
   // ------------------------------------------------------------------- start
   ET.header('nearby');
-  ET.$('#back-ico').innerHTML = ET.icon('back', 'flip');
-  if (item) ET.$('#back').href = 'item.html?id=' + encodeURIComponent(item.id);
+  ET.tabbar('nearby.html');
   root = ET.$('#nearby');
   window.addEventListener('beforeunload', reset);
 

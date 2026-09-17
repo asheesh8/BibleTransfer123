@@ -98,7 +98,7 @@
   }
 
   ET.header('help');
-  ET.$('#back-ico').innerHTML = ET.icon('back', 'flip');
+  ET.tabbar('help.html');
   render();
   ET.i18n.apply();
   ET.i18n.onChange(render);

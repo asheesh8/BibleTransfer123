@@ -41,23 +41,19 @@
     return true;
   }
 
+  /* Every resource is the same row everywhere in the app: artwork, what kind
+     of thing it is, its name, and one pill saying what a tap does. */
   function card(r) {
-    var thumb = ET.thumb(r);
-
-    var badge = r.offline
-      ? '<span class="chip offline">' + ET.icon('check') + ET.esc(t('item.offline')) + '</span>'
-      : '<span class="chip online">' + ET.icon('warn') + ET.esc(t('ui.needsnet')) + '</span>';
-
-    return '<a class="res" href="item.html?id=' + encodeURIComponent(r.id) + '">' +
-      thumb +
-      '<div class="body">' +
-        '<div class="name latin">' + ET.esc(r.title) + '</div>' +
-        '<div class="meta latin">' + ET.esc([r.org, r.year, r.duration]
-            .filter(Boolean).join(' · ')) + '</div>' +
-        '<div class="foot">' + badge +
-          '<span class="chip lang">' + ET.esc(t('type.' + r.type)) + '</span>' +
-        '</div>' +
-      '</div></a>';
+    var kicker = t('type.' + r.type);
+    var verb = r.play ? t('act.watch') : r.read ? t('act.read') : t('act.open');
+    if (r.type === 'audio' || r.type === 'audio-bible') verb = t('act.listen');
+    if (!r.play && !r.read && !(r.files || []).length) verb = t('act.visit');
+    var bits = [r.langName, r.duration || r.stats, r.org].filter(Boolean);
+    return ET.row(r, {
+      kicker: kicker + (r.offline ? ' · ' + t('item.offline') : ''),
+      sub: bits.join(' · '),
+      verb: verb
+    });
   }
 
   function syncUrl() {
@@ -87,9 +83,13 @@
         ET.esc(t('lib.all')) + '</button>'].concat(
         langs.map(function (code) {
           var L = lib.languages[code];
+          // English's "native" name is just English — printing both said it twice.
+          var same = (L.native || '') === L.name;
           return '<button class="fchip" data-lang="' + code + '" aria-pressed="' +
-            (state.lang === code) + '"><span dir="rtl">' + ET.esc(L.native) +
-            '</span> <span class="latin">' + ET.esc(L.name) + '</span></button>';
+            (state.lang === code) + '">' +
+            (same ? '<span class="latin">' + ET.esc(L.name) + '</span>'
+                  : '<span dir="rtl">' + ET.esc(L.native) + '</span> <span class="latin">' +
+                    ET.esc(L.name) + '</span>') + '</button>';
         })).join('');
 
     ET.$$('#type-filters [data-type]').forEach(function (b) {
@@ -115,7 +115,7 @@
   }
 
   ET.header('library');
-  ET.$('#back-ico').innerHTML = ET.icon('back', 'flip');
+  ET.tabbar('library.html');
   ET.$('#search-ico').innerHTML = ET.icon('search');
   ET.$('#empty-art').innerHTML = ET.art.empty();
 

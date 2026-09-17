@@ -1,0 +1,777 @@
+<title>How the Library Travels</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@500;600&family=Noto+Nastaliq+Urdu:wght@600&family=Noto+Naskh+Arabic:wght@600&display=swap">
+<style>
+/* One deliberate world: night, and the lantern's light. Single-theme on
+   purpose — every colour is painted explicitly so the deck holds on any host. */
+:root {
+  --night: #170D1F;
+  --dusk: #251632;
+  --dusk-2: #312042;
+  --plum: #6B2E86;
+  --lamp: #F2B33D;
+  --flame: #FFD98A;
+  --parch: #F6EDE1;
+  --mist: #B8A7C4;
+  --leaf: #5FC27E;
+  --line: rgba(246, 237, 225, .13);
+
+  /* the app's own UI, inside the phone screens */
+  --app-ground: #FFFBF2;
+  --app-ink: #2A1B33;
+  --app-soft: #6B5A75;
+  --app-purple: #6B2E86;
+  --app-purple-deep: #4E1F64;
+  --app-wash: #F3EAF7;
+  --app-green: #3FA65C;
+  --app-green-deep: #2E7D45;
+  --app-sky: #2E86AB;
+  --app-sky-deep: #1F6182;
+  --app-line: #EADFD0;
+
+  --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body: "Atkinson Hyperlegible", "Verdana", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --urdu: "Noto Nastaliq Urdu", "Geeza Pro", serif;
+  --sindhi: "Noto Naskh Arabic", "Geeza Pro", serif;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--night); color: var(--parch); }
+body {
+  font: 400 clamp(17px, 1.35vw, 21px)/1.55 var(--body);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 { font-family: var(--display); font-weight: 750; margin: 0; text-wrap: balance; letter-spacing: -.02em; }
+p { margin: 0; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--lamp); outline-offset: 3px; border-radius: 8px; }
+
+/* ------------------------------------------------------------ the deck */
+.deck { position: fixed; inset: 0 0 76px 0; }
+.slide {
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  padding: clamp(22px, 4.5vh, 64px) clamp(20px, 6vw, 96px);
+  overflow-y: auto;
+  opacity: 0; visibility: hidden; transform: translateY(10px);
+  transition: opacity .4s ease, transform .4s ease, visibility 0s linear .4s;
+}
+.slide.on { opacity: 1; visibility: visible; transform: none; transition: opacity .4s ease, transform .4s ease; }
+.frame { width: min(1180px, 100%); display: grid; gap: clamp(18px, 3vh, 34px); }
+
+.eyebrow {
+  font: 600 13px/1 var(--mono); text-transform: uppercase; letter-spacing: .16em;
+  color: var(--lamp);
+}
+.h1 { font-size: clamp(42px, 6.2vw, 94px); line-height: .98; letter-spacing: -.035em; }
+.h2 { font-size: clamp(30px, 3.9vw, 56px); line-height: 1.04; }
+.lede { font-size: clamp(19px, 1.7vw, 26px); color: var(--mist); max-width: 34ch; }
+.lede b, .mist b { color: var(--parch); font-weight: 700; }
+.mist { color: var(--mist); }
+.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.urdu { font-family: var(--urdu); line-height: 1.9; }
+.sindhi { font-family: var(--sindhi); line-height: 1.7; }
+
+/* ----------------------------------------------------------- controls */
+.bar {
+  position: fixed; left: 0; right: 0; bottom: 0; height: 76px;
+  display: flex; align-items: center; gap: 18px;
+  padding: 0 clamp(16px, 4vw, 48px);
+  border-top: 1px solid var(--line);
+  background: rgba(23, 13, 31, .92);
+  backdrop-filter: blur(8px);
+}
+.rail { flex: 1 1 0; display: flex; gap: 6px; align-items: center; min-width: 0; overflow: hidden; }
+.rail button {
+  flex: 1 1 0; height: 8px; min-width: 0; padding: 0; border: 0; border-radius: 99px;
+  background: var(--dusk-2); cursor: pointer;
+}
+.rail button[aria-current="true"] { background: var(--lamp); box-shadow: 0 0 14px rgba(242, 179, 61, .55); }
+.rail button.seen { background: #5b4570; }
+.where { display: grid; line-height: 1.2; min-width: 0; }
+.where .chap { font: 600 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--lamp); }
+.where .count { font: 500 14px/1.4 var(--mono); color: var(--mist); }
+.nav { display: flex; gap: 10px; }
+.nav button {
+  min-width: 52px; height: 48px; padding: 0 18px;
+  border: 1.5px solid var(--line); border-radius: 14px; background: var(--dusk);
+  font: 700 16px/1 var(--body); cursor: pointer;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.nav button.go { background: var(--lamp); border-color: var(--lamp); color: var(--night); }
+.nav button:disabled { opacity: .35; cursor: default; }
+.nav svg { width: 18px; height: 18px; }
+
+/* --------------------------------------------------------------- title */
+.title { grid-template-columns: 1.25fr 1fr; align-items: center; gap: clamp(24px, 5vw, 80px); }
+.title .words { display: grid; gap: 26px; }
+.title .h1 .glow { color: var(--lamp); text-shadow: 0 0 44px rgba(242, 179, 61, .35); }
+.langs { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: baseline; font-size: 22px; }
+.langs span { color: var(--parch); }
+.hint { font: 500 14px/1.4 var(--mono); color: var(--mist); }
+.hint kbd { font: 600 13px/1 var(--mono); padding: 4px 8px; border: 1px solid var(--line); border-radius: 6px; color: var(--parch); }
+.lamp-wrap { position: relative; display: grid; place-items: center; }
+.lamp-wrap::before {
+  content: ""; position: absolute; width: 118%; aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 217, 138, .34) 0%, rgba(242, 179, 61, .12) 38%, rgba(23, 13, 31, 0) 68%);
+  animation: breathe 5s ease-in-out infinite;
+}
+@keyframes breathe { 50% { transform: scale(1.06); opacity: .8; } }
+.lamp-wrap svg { position: relative; width: min(360px, 70vw); height: auto; }
+
+/* ------------------------------------------------------------ problem */
+.trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2vw, 28px); }
+.trio article { display: grid; gap: 12px; align-content: start; padding-top: 22px; border-top: 2px solid var(--line); }
+.trio h3 { font-size: clamp(22px, 2vw, 30px); }
+.trio .tag { font: 600 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--lamp); }
+
+/* ------------------------------------------------------------- figures */
+.figs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--line); }
+.fig { padding: 26px 24px 8px 0; display: grid; gap: 10px; align-content: start; }
+.fig + .fig { padding-left: 24px; border-left: 1px solid var(--line); }
+.fig .n { font: 700 clamp(46px, 5.4vw, 80px)/.9 var(--display); letter-spacing: -.04em; color: var(--flame); font-variant-numeric: tabular-nums; }
+.fig .n small { font-size: .42em; letter-spacing: 0; color: var(--lamp); margin-left: 4px; }
+.fig .k { font-weight: 700; font-size: clamp(18px, 1.5vw, 22px); }
+.fig .d { color: var(--mist); font-size: 16px; }
+
+/* ------------------------------------------------------------- 3 ways */
+.ways { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(14px, 1.8vw, 24px); }
+.way { background: var(--dusk); border-radius: 22px; padding: 26px; display: grid; gap: 14px; align-content: start; border: 1px solid var(--line); }
+.way svg { width: 46px; height: 46px; }
+.way h3 { font-size: 26px; }
+.way ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.way li { display: flex; gap: 10px; color: var(--mist); font-size: 17px; }
+.way li::before { content: ""; flex: none; width: 7px; height: 7px; margin-top: .6em; border-radius: 50%; background: var(--lamp); }
+.way .need { font: 500 13px/1.4 var(--mono); color: var(--parch); padding-top: 12px; border-top: 1px dashed var(--line); }
+
+/* ------------------------------------------------------------ diagrams */
+.diagram { width: 100%; overflow-x: auto; }
+.diagram svg { display: block; width: 100%; min-width: 640px; height: auto; }
+.split { display: grid; grid-template-columns: 1.5fr 1fr; gap: clamp(20px, 3vw, 48px); align-items: center; }
+.points { display: grid; gap: 18px; }
+.point { display: grid; gap: 4px; padding-left: 18px; border-left: 3px solid var(--dusk-2); }
+.point.gold { border-left-color: var(--lamp); }
+.point strong { font-family: var(--display); font-size: clamp(20px, 1.7vw, 25px); font-weight: 700; }
+.point span { color: var(--mist); }
+
+/* ------------------------------------------------------ the phone demo */
+.demo { grid-template-columns: minmax(260px, .9fr) 1.3fr; align-items: center; gap: clamp(20px, 3vw, 48px); }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.steps li { display: grid; grid-template-columns: 40px 1fr; gap: 14px; padding: 12px 14px; border-radius: 16px; cursor: pointer; transition: background .25s; }
+.steps li .dot {
+  width: 40px; height: 40px; border-radius: 50%;
+  display: grid; place-items: center;
+  font: 600 16px/1 var(--mono);
+  border: 2px solid var(--dusk-2); color: var(--mist);
+}
+.steps li b { display: block; font-family: var(--display); font-size: 21px; font-weight: 700; line-height: 1.25; }
+.steps li span { color: var(--mist); font-size: 16px; display: none; }
+.steps li.done .dot { background: var(--leaf); border-color: var(--leaf); color: var(--night); }
+.steps li.on { background: var(--dusk); }
+.steps li.on .dot { background: var(--lamp); border-color: var(--lamp); color: var(--night); }
+.steps li.on span { display: block; margin-top: 4px; }
+.demo-ctl { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+.demo-ctl button {
+  height: 46px; padding: 0 18px; border-radius: 14px; cursor: pointer;
+  border: 1.5px solid var(--line); background: var(--dusk); font-weight: 700;
+}
+.demo-ctl .next { background: var(--lamp); border-color: var(--lamp); color: var(--night); }
+
+.pair { position: relative; display: flex; justify-content: center; align-items: center; gap: clamp(28px, 6vw, 110px); }
+.pair .who { position: absolute; top: -34px; font: 600 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--lamp); }
+.pair .stream { position: absolute; left: 50%; top: 50%; width: clamp(28px, 6vw, 110px); height: 4px; transform: translate(-50%, -50%); border-radius: 4px; background: var(--dusk-2); overflow: hidden; }
+.pair .stream::after { content: ""; position: absolute; inset: 0; width: 40%; background: linear-gradient(90deg, rgba(255, 217, 138, 0), var(--flame), rgba(255, 217, 138, 0)); opacity: 0; }
+.demo[data-step="4"] .pair .stream::after { opacity: 1; animation: flow 1s linear infinite; }
+.demo[data-step="2"] .pair .stream, .demo[data-step="3"] .pair .stream { background: repeating-linear-gradient(90deg, var(--mist) 0 6px, transparent 6px 12px); opacity: .5; }
+@keyframes flow { from { transform: translateX(-100%); } to { transform: translateX(260%); } }
+
+.phone {
+  position: relative;
+  width: clamp(178px, 17vw, 228px); aspect-ratio: 9 / 18.6;
+  padding: 10px; border-radius: 34px;
+  background: #0C0712; border: 2px solid #3B2A4B;
+  box-shadow: 0 34px 60px -26px rgba(0, 0, 0, .8);
+}
+.phone::before { content: ""; position: absolute; top: 16px; left: 50%; width: 30%; height: 7px; transform: translateX(-50%); border-radius: 9px; background: #0C0712; z-index: 2; }
+.scr {
+  position: relative; height: 100%; border-radius: 25px; overflow: hidden;
+  background: var(--app-ground); color: var(--app-ink);
+  font: 400 11px/1.4 var(--body);
+}
+.state {
+  position: absolute; inset: 0; padding: 32px 12px 12px;
+  display: flex; flex-direction: column; gap: 8px;
+  opacity: 0; transform: translateY(6px); transition: opacity .3s, transform .3s;
+}
+.demo[data-step="1"] .s1, .demo[data-step="2"] .s2, .demo[data-step="3"] .s3,
+.demo[data-step="4"] .s4, .demo[data-step="5"] .s5 { opacity: 1; transform: none; }
+.m-top { display: flex; align-items: center; gap: 5px; font: 700 10px/1 var(--body); color: var(--app-ink); padding-bottom: 6px; border-bottom: 1px solid var(--app-line); }
+.m-top i { width: 12px; height: 14px; border-radius: 3px 3px 4px 4px; background: #E8A317; }
+.m-dots { display: flex; align-items: center; gap: 3px; }
+.m-dots b { width: 13px; height: 13px; border-radius: 50%; border: 1.5px solid #D9C8B2; background: #fff; }
+.m-dots b.d { background: var(--app-green); border-color: var(--app-green-deep); }
+.m-dots b.o { background: var(--app-purple); border-color: var(--app-purple); }
+.m-dots em { flex: 1; height: 1.5px; background: var(--app-line); }
+.m-h { font: 700 14px/1.2 var(--body); color: var(--app-ink); }
+.m-s { color: var(--app-soft); font-size: 10px; }
+.m-tile { display: flex; align-items: center; gap: 7px; padding: 8px; border: 1.5px solid var(--app-line); border-bottom-width: 3px; border-radius: 11px; background: #fff; font-weight: 700; font-size: 11px; }
+.m-tile.sel { border-color: var(--app-purple); background: var(--app-wash); }
+.m-tile i { width: 22px; height: 22px; border-radius: 7px; background: var(--app-wash); flex: none; }
+.m-tile.sel i { background: var(--app-purple); }
+.m-btn { display: grid; place-items: center; height: 28px; border-radius: 9px; font-weight: 700; font-size: 10.5px; color: #fff; background: var(--app-purple); box-shadow: 0 3px 0 var(--app-purple-deep); }
+.m-btn.g { background: var(--app-green); box-shadow: 0 3px 0 var(--app-green-deep); }
+.m-btn.s { background: var(--app-sky); box-shadow: 0 3px 0 var(--app-sky-deep); }
+.m-btn.w { background: #fff; color: var(--app-ink); border: 1.5px solid #D9C8B2; box-shadow: 0 3px 0 #D9C8B2; }
+.m-code { font: 600 22px/1 var(--mono); letter-spacing: .12em; text-align: center; padding: 12px 4px; border: 2px dashed var(--app-purple); border-radius: 12px; background: var(--app-wash); color: var(--app-purple); }
+.m-in { font: 600 18px/1 var(--mono); letter-spacing: .14em; text-align: center; padding: 10px 4px; border: 2px solid #D9C8B2; border-radius: 10px; background: #fff; }
+.m-note { padding: 8px; border-radius: 9px; background: #E7F2F8; border-left: 4px solid var(--app-sky); font-size: 10px; }
+.m-note.g { background: #E9F6ED; border-left-color: var(--app-green); }
+.m-meter { height: 11px; border-radius: 99px; background: #F6EEE1; border: 1.5px solid var(--app-line); overflow: hidden; }
+.m-meter b { display: block; height: 100%; width: 64%; background: var(--app-green); border-radius: 99px; }
+.demo[data-step="4"] .m-meter b { animation: fill 2.4s ease-out infinite; }
+@keyframes fill { from { width: 6%; } to { width: 100%; } }
+.m-check { width: 46px; height: 46px; margin: 6px auto 0; border-radius: 50%; background: var(--app-green); box-shadow: 0 3px 0 var(--app-green-deep); display: grid; place-items: center; }
+.m-check svg { width: 24px; height: 24px; }
+.m-center { text-align: center; }
+.m-spin { display: inline-block; width: 9px; height: 9px; margin-right: 4px; border-radius: 50%; border: 1.5px solid #D9C8B2; border-top-color: var(--app-purple); animation: spin .8s linear infinite; vertical-align: -1px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* --------------------------------------------------------- introducers */
+.rows { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.row { display: grid; grid-template-columns: 220px 1fr 180px; gap: 24px; align-items: center; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.row .place { font-family: var(--display); font-weight: 700; font-size: clamp(20px, 1.8vw, 26px); }
+.row .how { color: var(--mist); }
+.row .how b { color: var(--parch); }
+.pill { justify-self: start; font: 600 13px/1 var(--mono); letter-spacing: .06em; padding: 9px 12px; border-radius: 99px; white-space: nowrap; }
+.pill.yes { background: rgba(95, 194, 126, .16); color: var(--leaf); }
+.pill.net { background: rgba(242, 179, 61, .16); color: var(--lamp); }
+.pill.no { background: rgba(184, 167, 196, .14); color: var(--mist); }
+
+/* -------------------------------------------------------------- saving */
+.save4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.sv { display: grid; gap: 12px; align-content: start; }
+.sv .lbl { display: flex; align-items: center; gap: 10px; font-family: var(--display); font-weight: 700; font-size: 22px; }
+.sv .lbl .num { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--lamp); color: var(--night); font-size: 15px; font-family: var(--mono); }
+.sv .card { background: var(--app-ground); color: var(--app-ink); border-radius: 18px; padding: 14px; display: grid; gap: 8px; font-size: 13px; min-height: 196px; align-content: start; }
+.sv .card .m-tile { font-size: 12.5px; }
+.sv p.mist { font-size: 15px; }
+
+/* ----------------------------------------------------------- languages */
+.tongues { display: grid; gap: 14px; }
+.tongue { display: grid; grid-template-columns: 170px 44px 1fr; align-items: center; gap: 18px; padding: 16px 22px; border-radius: 20px; background: var(--dusk); border: 1px solid var(--line); }
+.tongue .pick { font-size: 28px; font-weight: 700; }
+.tongue .pick.en { font-family: var(--display); }
+.tongue svg { width: 40px; height: 20px; }
+.tongue .gets { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+.tongue .gets strong { font-family: var(--display); font-size: 24px; }
+.chip { font: 600 13px/1 var(--mono); padding: 8px 11px; border-radius: 99px; background: rgba(107, 46, 134, .45); color: var(--parch); letter-spacing: .02em; }
+.beforeafter { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.ba { padding: 16px 20px; border-radius: 16px; border: 1px solid var(--line); }
+.ba .tag { font: 600 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; }
+.ba.before .tag { color: var(--mist); }
+.ba.after { border-color: rgba(95, 194, 126, .5); }
+.ba.after .tag { color: var(--leaf); }
+.ba p { margin-top: 8px; }
+
+/* -------------------------------------------------------------- matrix */
+.matrix { width: 100%; overflow-x: auto; }
+table { width: 100%; min-width: 720px; border-collapse: collapse; font-size: 17px; }
+th, td { padding: 15px 16px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+thead th { font: 600 13px/1.3 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--lamp); border-bottom: 2px solid var(--line); }
+thead th small { display: block; margin-top: 4px; letter-spacing: .02em; text-transform: none; color: var(--mist); font-weight: 500; }
+tbody th { font-family: var(--display); font-size: 20px; font-weight: 700; width: 24%; }
+td { color: var(--mist); }
+td .mk { display: inline-flex; align-items: center; gap: 8px; color: var(--parch); font-weight: 700; }
+td .mk::before { content: ""; width: 12px; height: 12px; border-radius: 50%; flex: none; }
+td .mk.y::before { background: var(--leaf); }
+td .mk.p::before { background: var(--lamp); }
+td .mk.n::before { background: transparent; border: 2px solid var(--mist); }
+td small { display: block; font-size: 14px; margin-top: 3px; }
+
+/* --------------------------------------------------------------- limits */
+.limits { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; }
+.limit { display: grid; grid-template-columns: 28px 1fr; gap: 12px; padding: 16px 0; border-top: 1px solid var(--line); }
+.limit svg { width: 22px; height: 22px; margin-top: 3px; }
+.limit b { display: block; font-family: var(--display); font-size: 20px; font-weight: 700; }
+.limit span { color: var(--mist); font-size: 16px; }
+.close { font-family: var(--display); font-size: clamp(22px, 2.2vw, 32px); font-weight: 650; line-height: 1.25; max-width: 32ch; }
+.close em { font-style: normal; color: var(--lamp); }
+
+/* ----------------------------------------------------------- narrow */
+@media (max-width: 900px) {
+  .title, .split, .demo { grid-template-columns: 1fr; }
+  .title .lamp-wrap { order: -1; }
+  .lamp-wrap svg { width: 150px; }
+  .trio, .ways, .limits, .beforeafter { grid-template-columns: 1fr; }
+  .figs { grid-template-columns: 1fr 1fr; }
+  .fig:nth-child(3) { padding-left: 0; border-left: 0; }
+  .save4 { grid-template-columns: 1fr 1fr; }
+  .row { grid-template-columns: 1fr; gap: 8px; }
+  .tongue { grid-template-columns: 1fr; gap: 8px; }
+  .tongue svg { transform: rotate(90deg); }
+  .steps li span { display: none !important; }
+  .where .chap { display: none; }
+  .slide { place-items: start center; }
+}
+@media (max-width: 560px) {
+  .nav button .t { display: none; }
+  .bar { gap: 12px; }
+  .rail { gap: 3px; }
+  .nav button { min-width: 48px; padding: 0 12px; }
+  .phone { width: 150px; }
+  .save4 { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+
+<main class="deck" id="deck" aria-roledescription="slideshow" aria-label="How the Library travels">
+
+  <!-- 1 ─────────────────────────────────────────── title -->
+  <section class="slide on" data-chapter="Start" aria-label="Title">
+    <div class="frame title">
+      <div class="words">
+        <p class="eyebrow">EasyTransfer · VillageServer Initiative</p>
+        <h1 class="h1">Scripture that <span class="glow">travels</span> phone to phone.</h1>
+        <p class="lede">Films, Bibles and audio — watched, saved and passed on, <b>with or without the internet.</b></p>
+        <div class="langs"><span>English</span><span class="urdu">اردو</span><span class="sindhi">سنڌي</span></div>
+        <p class="hint">Press <kbd>→</kbd> or tap <b>Next</b> · swipe on a phone</p>
+      </div>
+      <div class="lamp-wrap" aria-hidden="true">
+        <svg viewBox="0 0 48 48">
+          <path d="M24 0v6" stroke="#B87D06" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M18 6h12a2 2 0 0 1 0 4H18a2 2 0 0 1 0-4z" fill="#B87D06"/>
+          <path d="M14 12h20l3 22a5 5 0 0 1-5 5.6H16A5 5 0 0 1 11 34z" fill="#F2B33D"/>
+          <path d="M17 15h14l2.2 17a3 3 0 0 1-3 3.4H17.8a3 3 0 0 1-3-3.4z" fill="#FFF1CC"/>
+          <ellipse cx="24" cy="27" rx="5.2" ry="6.6" fill="#F2B33D"/>
+          <circle cx="21.5" cy="25" r="1.5" fill="#3A1650"/>
+          <circle cx="26.5" cy="25" r="1.5" fill="#3A1650"/>
+          <path d="M21.7 29.6a3.2 3.2 0 0 0 4.6 0" stroke="#3A1650" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+          <path d="M12 41h24" stroke="#B87D06" stroke-width="3.4" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 ─────────────────────────────────────────── problem -->
+  <section class="slide" data-chapter="Why" aria-label="The problem">
+    <div class="frame">
+      <p class="eyebrow">The problem</p>
+      <h2 class="h2">Three things stop Scripture reaching a village.</h2>
+      <div class="trio">
+        <article>
+          <p class="tag">No signal</p>
+          <h3>A website shows nothing without the internet.</h3>
+          <p class="mist">Gawahi streams everything from the web. In a village with no connection, that is an empty screen.</p>
+        </article>
+        <article>
+          <p class="tag">Wrong voice</p>
+          <h3>Tap an English title, hear Sindhi.</h3>
+          <p class="mist">The library had no English at all, so the first English film played the Sindhi soundtrack. We caught it in testing.</p>
+        </article>
+        <article>
+          <p class="tag">Lost files</p>
+          <h3>Downloaded is not the same as found.</h3>
+          <p class="mist">A file someone saved but cannot find again has failed just as completely as one that never arrived.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 ─────────────────────────────────────────── today -->
+  <section class="slide" data-chapter="Today" aria-label="What works today">
+    <div class="frame">
+      <p class="eyebrow">What works today</p>
+      <h2 class="h2">One app, checked file by file.</h2>
+      <div class="figs">
+        <div class="fig">
+          <p class="n">123</p>
+          <p class="k">resources</p>
+          <p class="d">Films, Bibles, audio · <span class="num">72</span> Urdu · <span class="num">40</span> Sindhi · <span class="num">11</span> English</p>
+        </div>
+        <div class="fig">
+          <p class="n">55</p>
+          <p class="k">work with no internet</p>
+          <p class="d">On one <span class="num">32 GB</span> card · all <span class="num">456</span> files checked for size</p>
+        </div>
+        <div class="fig">
+          <p class="n">58</p>
+          <p class="k">stream on the web</p>
+          <p class="d">Films, audio Bibles across <span class="num">66</span> books, Bibles to read</p>
+        </div>
+        <div class="fig">
+          <p class="n">~1<small>sec</small></p>
+          <p class="k">to pair two phones</p>
+          <p class="d">Then the file goes straight across, byte for byte</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 ─────────────────────────────────────────── three ways -->
+  <section class="slide" data-chapter="Reach" aria-label="Three ways in">
+    <div class="frame">
+      <p class="eyebrow">Three ways in</p>
+      <h2 class="h2">The same library reaches people three ways.</h2>
+      <div class="ways">
+        <article class="way">
+          <svg viewBox="0 0 48 48" fill="none" stroke="#F2B33D" stroke-width="2.6" stroke-linejoin="round"><rect x="9" y="6" width="30" height="36" rx="5"/><path d="M17 6v12l3.5-2.5L24 18V6"/></svg>
+          <h3>A card in the post</h3>
+          <ul><li>A microSD card and adapter, sent to a vetted applicant</li><li>Tap START-HERE and the library opens</li><li>Watch, read and save — nothing to install</li></ul>
+          <p class="need">Needs: a phone with a card slot or reader</p>
+        </article>
+        <article class="way">
+          <svg viewBox="0 0 48 48" fill="none" stroke="#F2B33D" stroke-width="2.6" stroke-linecap="round"><path d="M8 19a23 23 0 0 1 32 0"/><path d="M14 25.5a14 14 0 0 1 20 0"/><path d="M20 32a6 6 0 0 1 8 0"/><circle cx="24" cy="38.5" r="1.8" fill="#F2B33D"/></svg>
+          <h3>The village Wi-Fi</h3>
+          <ul><li>A Raspberry Pi — or any laptop — serves the card</li><li>Everyone who joins gets the whole library</li><li>Phones can send files to each other, still offline</li></ul>
+          <p class="need">Needs: power and a Pi · no internet</p>
+        </article>
+        <article class="way">
+          <svg viewBox="0 0 48 48" fill="none" stroke="#F2B33D" stroke-width="2.6"><circle cx="24" cy="24" r="17"/><path d="M7 24h34M24 7c6 6 6 28 0 34M24 7c-6 6-6 28 0 34"/></svg>
+          <h3>The web link</h3>
+          <ul><li>Everything streams from the Digital Bible Society</li><li>Put it on the home screen like an app</li><li>Save and send phone to phone from the page</li></ul>
+          <p class="need">Needs: an internet connection</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 ─────────────────────────────────────────── big idea -->
+  <section class="slide" data-chapter="Transfer" aria-label="How transfer works">
+    <div class="frame">
+      <p class="eyebrow">How phone-to-phone works</p>
+      <h2 class="h2">The file goes straight across.</h2>
+      <div class="split">
+        <div class="diagram" aria-hidden="true">
+          <svg viewBox="0 0 800 380">
+            <!-- introducer -->
+            <circle cx="400" cy="66" r="42" fill="#251632" stroke="#B8A7C4" stroke-width="2" stroke-dasharray="5 6"/>
+            <text x="400" y="62" text-anchor="middle" fill="#F6EDE1" font-family="Bricolage Grotesque, sans-serif" font-size="17" font-weight="700">Introducer</text>
+            <text x="400" y="82" text-anchor="middle" fill="#B8A7C4" font-family="IBM Plex Mono, monospace" font-size="11">Pi · or web broker</text>
+            <path d="M205 150 C 250 90, 320 70, 358 68" fill="none" stroke="#B8A7C4" stroke-width="2" stroke-dasharray="4 7"/>
+            <path d="M595 150 C 550 90, 480 70, 442 68" fill="none" stroke="#B8A7C4" stroke-width="2" stroke-dasharray="4 7"/>
+            <text x="250" y="96" text-anchor="end" fill="#B8A7C4" font-family="IBM Plex Mono, monospace" font-size="12">“I'm 399 586”</text>
+            <text x="550" y="96" fill="#B8A7C4" font-family="IBM Plex Mono, monospace" font-size="12">“Found you”</text>
+
+            <!-- the file's path -->
+            <path id="lightpath" d="M232 262 C 330 318, 470 318, 568 262" fill="none" stroke="#F2B33D" stroke-width="7" stroke-linecap="round" opacity=".35"/>
+            <path d="M232 262 C 330 318, 470 318, 568 262" fill="none" stroke="#FFD98A" stroke-width="2.5" stroke-linecap="round"/>
+            <g class="packets">
+              <circle r="9" fill="#FFD98A"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#lightpath"/></animateMotion></circle>
+              <circle r="9" fill="#FFD98A"><animateMotion dur="2.4s" begin="0.8s" repeatCount="indefinite"><mpath href="#lightpath"/></animateMotion></circle>
+              <circle r="9" fill="#FFD98A"><animateMotion dur="2.4s" begin="1.6s" repeatCount="indefinite"><mpath href="#lightpath"/></animateMotion></circle>
+            </g>
+            <text x="400" y="352" text-anchor="middle" fill="#F2B33D" font-family="IBM Plex Mono, monospace" font-size="13" font-weight="600">THE FILE · PHONE TO PHONE</text>
+
+            <!-- phone A -->
+            <rect x="120" y="150" width="112" height="210" rx="22" fill="#0C0712" stroke="#3B2A4B" stroke-width="2"/>
+            <rect x="130" y="160" width="92" height="190" rx="15" fill="#FFFBF2"/>
+            <rect x="142" y="178" width="68" height="40" rx="8" fill="#F3EAF7"/>
+            <text x="176" y="203" text-anchor="middle" fill="#6B2E86" font-family="IBM Plex Mono, monospace" font-size="13" font-weight="600">399 586</text>
+            <rect x="142" y="230" width="68" height="22" rx="6" fill="#3FA65C"/>
+            <text x="176" y="245" text-anchor="middle" fill="#FFFFFF" font-family="Atkinson Hyperlegible, sans-serif" font-size="11" font-weight="700">Send</text>
+            <text x="176" y="336" text-anchor="middle" fill="#6B5A75" font-family="Atkinson Hyperlegible, sans-serif" font-size="11">Sender</text>
+
+            <!-- phone B -->
+            <rect x="568" y="150" width="112" height="210" rx="22" fill="#0C0712" stroke="#3B2A4B" stroke-width="2"/>
+            <rect x="578" y="160" width="92" height="190" rx="15" fill="#FFFBF2"/>
+            <rect x="590" y="178" width="68" height="40" rx="8" fill="#FFFFFF" stroke="#D9C8B2" stroke-width="2"/>
+            <text x="624" y="203" text-anchor="middle" fill="#2A1B33" font-family="IBM Plex Mono, monospace" font-size="13" font-weight="600">399 586</text>
+            <rect x="590" y="230" width="68" height="22" rx="6" fill="#2E86AB"/>
+            <text x="624" y="245" text-anchor="middle" fill="#FFFFFF" font-family="Atkinson Hyperlegible, sans-serif" font-size="11" font-weight="700">Receive</text>
+            <text x="624" y="336" text-anchor="middle" fill="#6B5A75" font-family="Atkinson Hyperlegible, sans-serif" font-size="11">Receiver</text>
+          </svg>
+        </div>
+        <div class="points">
+          <p class="point gold"><strong>The file never touches a server.</strong><span>It travels directly from one phone to the other.</span></p>
+          <p class="point"><strong>An introducer only swaps the handshake.</strong><span>A few hundred bytes so the phones can find each other — like meeting through a friend, then talking face to face.</span></p>
+          <p class="point"><strong>A six-digit code pairs them.</strong><span>One phone shows it, the other person types it in.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 ─────────────────────────────────────────── step demo -->
+  <section class="slide" data-chapter="Transfer" data-builds="demo" aria-label="Transfer step by step">
+    <div class="frame demo" id="demo" data-step="1">
+      <div>
+        <p class="eyebrow">Step by step</p>
+        <h2 class="h2" style="margin:10px 0 18px">Five taps, two phones.</h2>
+        <ol class="steps" id="steps">
+          <li data-go="1"><span class="dot">1</span><div><b>Pick your role</b><span>One phone taps Send. The other taps Receive.</span></div></li>
+          <li data-go="2"><span class="dot">2</span><div><b>Swap a number</b><span>The sender's phone shows six digits. The other person types them in.</span></div></li>
+          <li data-go="3"><span class="dot">3</span><div><b>Choose, then accept</b><span>The sender picks the file. The receiver sees its name and size first, then accepts — or picks a folder.</span></div></li>
+          <li data-go="4"><span class="dot">4</span><div><b>Watch it move</b><span>Both phones fill the same bar. On the village Wi-Fi, none of it touches the internet.</span></div></li>
+          <li data-go="5"><span class="dot">5</span><div><b>Pass it on</b><span>The receiver can open it, save it, or send it straight to the next person.</span></div></li>
+        </ol>
+        <div class="demo-ctl">
+          <button type="button" id="d-back">Back</button>
+          <button type="button" class="next" id="d-next">Next step</button>
+        </div>
+      </div>
+
+      <div class="pair" aria-live="polite">
+        <div class="stream" aria-hidden="true"></div>
+        <div class="phone" aria-label="Sender's phone">
+          <span class="who" style="left:0">Sender</span>
+          <div class="scr">
+            <div class="state s1"><div class="m-top"><i></i>The Library</div><div class="m-dots"><b class="o"></b><em></em><b></b><em></em><b></b><em></em><b></b><em></em><b></b></div><p class="m-h">Which phone is this?</p><div class="m-tile sel"><i></i>Send<br>I have the file</div><div class="m-tile"><i></i>Receive</div></div>
+            <div class="state s2"><div class="m-top"><i></i>The Library</div><div class="m-dots"><b class="d"></b><em></em><b class="o"></b><em></em><b></b><em></em><b></b><em></em><b></b></div><p class="m-h">Connect the two phones</p><p class="m-s">YOUR CODE</p><div class="m-code">399 586</div><p class="m-s">On the other phone, tap Receive and type this number.</p><p class="m-s"><span class="m-spin"></span>Waiting for the other phone…</p></div>
+            <div class="state s3"><div class="m-top"><i></i>The Library</div><div class="m-dots"><b class="d"></b><em></em><b class="d"></b><em></em><b class="o"></b><em></em><b></b><em></em><b></b></div><p class="m-h">Choose what to send</p><div class="m-note g">✓ Connected — iPhone</div><div class="m-tile sel"><i></i>Send “Berean Standard Bible”<br>PDF · 5.7 MB</div><div class="m-tile"><i></i>Choose a file from this phone</div></div>
+            <div class="state s4"><div class="m-top"><i></i>The Library</div><div class="m-dots"><b class="d"></b><em></em><b class="d"></b><em></em><b class="d"></b><em></em><b class="o"></b><em></em><b></b></div><p class="m-h">Sending · iPhone</p><p class="m-s">Berean Standard Bible.pdf</p><div class="m-meter"><b></b></div><p class="m-s num">3.7 MB / 5.7 MB</p></div>
+            <div class="state s5"><div class="m-top"><i></i>The Library</div><div class="m-dots"><b class="d"></b><em></em><b class="d"></b><em></em><b class="d"></b><em></em><b class="d"></b><em></em><b class="o"></b></div><div class="m-check"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></div><p class="m-h m-center">Sent → iPhone</p><div class="m-note g">Now let them do it: ask them to send it on, while you watch.</div><div class="m-btn">Send something else</div></div>
+          </div>
+        </div>
+        <div class="phone" aria-label="Receiver's phone">
+          <span class="who" style="right:0">Receiver</span>
+          <div class="scr">
+            <div class="state s1"><div class="m-top"><i></i>The Library</div><div class="m-dots"><b class="o"></b><em></em><b></b><em></em><b></b><em></em><b></b><em></em><b></b></div><p class="m-h">Which phone is this?</p><div class="m-tile"><i></i>Send</div><div class="m-tile sel"><i></i>Receive<br>I want the file</div></div>
+            <div class="state s2"><div class="m-top"><i></i>The Library</div><div class="m-dots"><b class="d"></b><em></em><b class="o"></b><em></em><b></b><em></em><b></b><em></em><b></b></div><p class="m-h">Connect the two phones</p><p class="m-s">TYPE THE NUMBER SHOWN ON THE OTHER PHONE</p><div class="m-in">399 586</div><div class="m-btn">Connect</div></div>
+            <div class="state s3"><div class="m-top"><i></i>The Library</div><div class="m-dots"><b class="d"></b><em></em><b class="d"></b><em></em><b class="o"></b><em></em><b></b><em></em><b></b></div><p class="m-h">Choose what to send</p><div class="m-note"><b>Android phone wants to send you:</b><br>Berean Standard Bible.pdf · 5.7 MB</div><div class="m-btn g">Accept</div><div class="m-btn w">Accept and choose a folder</div><div class="m-btn w">No thanks</div></div>
+            <div class="state s4"><div class="m-top"><i></i>The Library</div><div class="m-dots"><b class="d"></b><em></em><b class="d"></b><em></em><b class="d"></b><em></em><b class="o"></b><em></em><b></b></div><p class="m-h">Receiving · Android</p><p class="m-s">Berean Standard Bible.pdf</p><div class="m-meter"><b></b></div><p class="m-s num">3.7 MB / 5.7 MB</p></div>
+            <div class="state s5"><div class="m-top"><i></i>The Library</div><div class="m-dots"><b class="d"></b><em></em><b class="d"></b><em></em><b class="d"></b><em></em><b class="d"></b><em></em><b class="o"></b></div><div class="m-check"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></div><p class="m-h m-center">Received ← Android</p><div class="m-btn g">Open it now</div><div class="m-btn w">Save</div><div class="m-btn s">Send it to someone else</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 ─────────────────────────────────────────── introducers -->
+  <section class="slide" data-chapter="Transfer" aria-label="Who introduces the phones">
+    <div class="frame">
+      <p class="eyebrow">Who does the introducing</p>
+      <h2 class="h2">Where you open the library decides who introduces the phones.</h2>
+      <div class="rows">
+        <div class="row"><p class="place">On the village Wi-Fi</p><p class="how"><b>The Pi does it itself.</b> The server that holds the card passes the handshake between the two phones. Nothing leaves the building.</p><span class="pill yes">No internet</span></div>
+        <div class="row"><p class="place">On the web link</p><p class="how"><b>PeerJS, a free public service.</b> It sees that two phones paired — never what they sent.</p><span class="pill net">Needs internet</span></div>
+        <div class="row"><p class="place">Straight off a card</p><p class="how"><b>Nothing can introduce them.</b> The app says so, and walks through AirDrop, Quick Share, a cable or the card itself instead.</p><span class="pill no">Guides instead</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 ─────────────────────────────────────────── the chain -->
+  <section class="slide" data-chapter="Transfer" aria-label="Every receiver becomes a sender">
+    <div class="frame">
+      <p class="eyebrow">The chain</p>
+      <h2 class="h2">Every receiver becomes a sender.</h2>
+      <div class="diagram" aria-hidden="true">
+        <svg viewBox="0 0 900 250">
+          <path id="hop1" d="M178 125 C 250 60, 320 60, 392 125" fill="none" stroke="#F2B33D" stroke-width="3" stroke-linecap="round"/>
+          <path id="hop2" d="M508 125 C 580 60, 650 60, 722 125" fill="none" stroke="#F2B33D" stroke-width="3" stroke-linecap="round"/>
+          <g class="packets">
+            <circle r="8" fill="#FFD98A"><animateMotion dur="2.2s" repeatCount="indefinite"><mpath href="#hop1"/></animateMotion></circle>
+            <circle r="8" fill="#FFD98A"><animateMotion dur="2.2s" begin="1.1s" repeatCount="indefinite"><mpath href="#hop2"/></animateMotion></circle>
+          </g>
+          <g font-family="Bricolage Grotesque, sans-serif" font-weight="700" text-anchor="middle">
+            <rect x="80" y="40" width="98" height="176" rx="20" fill="#0C0712" stroke="#3B2A4B" stroke-width="2"/>
+            <rect x="89" y="49" width="80" height="158" rx="14" fill="#FFFBF2"/>
+            <text x="129" y="138" fill="#6B2E86" font-size="40">A</text>
+            <rect x="401" y="40" width="98" height="176" rx="20" fill="#0C0712" stroke="#3B2A4B" stroke-width="2"/>
+            <rect x="410" y="49" width="80" height="158" rx="14" fill="#FFFBF2"/>
+            <text x="450" y="138" fill="#6B2E86" font-size="40">B</text>
+            <rect x="731" y="40" width="98" height="176" rx="20" fill="#0C0712" stroke="#3B2A4B" stroke-width="2"/>
+            <rect x="740" y="49" width="80" height="158" rx="14" fill="#FFFBF2"/>
+            <text x="780" y="138" fill="#6B2E86" font-size="40">C</text>
+          </g>
+          <rect x="412" y="168" width="76" height="28" rx="8" fill="#2E86AB"/>
+          <text x="450" y="186" text-anchor="middle" fill="#FFFFFF" font-family="Atkinson Hyperlegible, sans-serif" font-size="10" font-weight="700">Send it on</text>
+        </svg>
+      </div>
+      <div class="split" style="grid-template-columns:1fr 1fr">
+        <p class="point gold"><strong>“Send it to someone else” is on every received file.</strong><span>What just arrived becomes the next thing that phone sends — one tap, no searching for it.</span></p>
+        <p class="point"><strong>Tested over two hops.</strong><span>A <span class="num">10,024,538</span>-byte Bible went A → B → C and arrived identical, byte for byte. It is VillageServer's rule — let them do the next one while you watch — built into a button.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 ─────────────────────────────────────────── saving -->
+  <section class="slide" data-chapter="Saving" aria-label="Saving in the page">
+    <div class="frame">
+      <p class="eyebrow">Saving</p>
+      <h2 class="h2">Saving never leaves the page.</h2>
+      <div class="save4">
+        <div class="sv">
+          <p class="lbl"><span class="num">1</span>What</p>
+          <div class="card"><div class="m-tile sel"><i></i>PDF · 9.6 MB</div><div class="m-tile"><i></i>EPUB · 3.5 MB</div></div>
+          <p class="mist">Pick the file. Skipped when there is only one.</p>
+        </div>
+        <div class="sv">
+          <p class="lbl"><span class="num">2</span>Where</p>
+          <div class="card"><div class="m-tile sel"><i></i>Choose a folder</div><div class="m-tile"><i></i>Choose the name and place</div><div class="m-tile"><i></i>Save to Downloads</div></div>
+          <p class="mist">A real folder on this device — remembered for next time.</p>
+        </div>
+        <div class="sv">
+          <p class="lbl"><span class="num">3</span>Saving</p>
+          <div class="card"><p style="font-weight:700">iBible — Video HD</p><div class="m-meter"><b style="width:68%"></b></div><p class="num" style="color:#6B5A75">229.3 MB / 337.2 MB</p><div class="m-btn w">Stop</div></div>
+          <p class="mist">Real bytes, a real bar, and a Stop that stops.</p>
+        </div>
+        <div class="sv">
+          <p class="lbl"><span class="num">4</span>Done</p>
+          <div class="card"><p style="font-weight:700;text-align:center">It is on this device</p><p style="text-align:center;color:#6B5A75">Saved to your Downloads folder</p><div class="m-btn g">Open it now</div><div class="m-btn s">Send it to a phone nearby</div></div>
+          <p class="mist">Says where it went, in words — then open it or pass it on.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 ────────────────────────────────────────── languages -->
+  <section class="slide" data-chapter="Language" aria-label="Pick a language, hear that language">
+    <div class="frame">
+      <p class="eyebrow">Language</p>
+      <h2 class="h2">Pick a language, hear that language.</h2>
+      <div class="tongues">
+        <div class="tongue"><span class="pick en">English</span><svg viewBox="0 0 40 20" fill="none" stroke="#F2B33D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10h34M28 3l8 7-8 7"/></svg><div class="gets"><strong>JESUS</strong><span class="chip">Spoken in English</span><span class="mist"><span class="num">61</span> chapters · plus John, The HOPE, 3 Bibles</span></div></div>
+        <div class="tongue"><span class="pick urdu">اردو</span><svg viewBox="0 0 40 20" fill="none" stroke="#F2B33D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10h34M28 3l8 7-8 7"/></svg><div class="gets"><strong>JESUS</strong><span class="chip">Spoken in Urdu</span><span class="mist"><span class="num">61</span> chapters · <span class="num">72</span> Urdu resources in all</span></div></div>
+        <div class="tongue"><span class="pick sindhi">سنڌي</span><svg viewBox="0 0 40 20" fill="none" stroke="#F2B33D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10h34M28 3l8 7-8 7"/></svg><div class="gets"><strong>JESUS</strong><span class="chip">Spoken in Sindhi</span><span class="mist"><span class="num">61</span> chapters · <span class="num">40</span> Sindhi resources in all</span></div></div>
+      </div>
+      <div class="beforeafter">
+        <div class="ba before"><p class="tag">Before</p><p>Choosing English changed the buttons, not the films. An English title played in Sindhi.</p></div>
+        <div class="ba after"><p class="tag">Now</p><p>Your choice picks what is shown <em style="font-style:normal;color:#F6EDE1">and</em> what is spoken. Every item says its language before you press play.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 ────────────────────────────────────────── matrix -->
+  <section class="slide" data-chapter="Where" aria-label="What works where">
+    <div class="frame">
+      <p class="eyebrow">At a glance</p>
+      <h2 class="h2">What works where.</h2>
+      <div class="matrix">
+        <table>
+          <thead><tr><th scope="col"></th><th scope="col">Card<small>opened from the phone</small></th><th scope="col">Village Wi-Fi<small>a Pi serves the card</small></th><th scope="col">Web link<small>Vercel</small></th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Watch &amp; read</th><td><span class="mk y">Yes</span><small><span class="num">55</span> resources on the card</small></td><td><span class="mk y">Yes</span><small>the same <span class="num">55</span>, to everyone who joins</small></td><td><span class="mk y">Yes</span><small><span class="num">58</span> resources stream</small></td></tr>
+            <tr><th scope="row">Save to the phone</th><td><span class="mk y">Yes</span></td><td><span class="mk y">Yes</span></td><td><span class="mk y">Yes</span><small>with a progress bar</small></td></tr>
+            <tr><th scope="row">Send to a phone nearby</th><td><span class="mk n">No</span><small>guides for AirDrop, Quick Share, cable</small></td><td><span class="mk y">Yes</span><small>with no internet</small></td><td><span class="mk y">Yes</span><small>through a public broker</small></td></tr>
+            <tr><th scope="row">Home-screen app</th><td><span class="mk n">No</span></td><td><span class="mk p">iPhone only</span><small>Android needs HTTPS</small></td><td><span class="mk y">Yes</span></td></tr>
+            <tr><th scope="row">Needs internet</th><td><span class="mk y">No</span></td><td><span class="mk y">No</span></td><td><span class="mk p">Yes</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12 ────────────────────────────────────────── limits -->
+  <section class="slide" data-chapter="Next" aria-label="Before it goes to the field">
+    <div class="frame">
+      <p class="eyebrow">Before it goes to the field</p>
+      <h2 class="h2">What still needs doing.</h2>
+      <div class="limits">
+        <p class="limit"><svg viewBox="0 0 24 24" fill="none" stroke="#F2B33D" stroke-width="2.2"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/></svg><span><b>Try it on two real phones.</b>Every test so far ran in a desktop browser standing in for phones.</span></p>
+        <p class="limit"><svg viewBox="0 0 24 24" fill="none" stroke="#F2B33D" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg><span><b>Urdu and Sindhi need a native speaker.</b>The wording is a draft, and some new screens still fall back to English.</span></p>
+        <p class="limit"><svg viewBox="0 0 24 24" fill="none" stroke="#F2B33D" stroke-width="2.2" stroke-linecap="round"><path d="M4.5 9.5a11 11 0 0 1 15 0M7.5 13a7 7 0 0 1 9 0"/><path d="M4 4l16 16"/></svg><span><b>Same Wi-Fi works; different mobile networks may not.</b>Pairing phones on separate carriers needs a relay server.</span></p>
+        <p class="limit"><svg viewBox="0 0 24 24" fill="none" stroke="#F2B33D" stroke-width="2.2" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5z"/></svg><span><b>Android opens PDFs outside the page.</b>A built-in reader (about 1 MB) would keep reading in the app.</span></p>
+        <p class="limit"><svg viewBox="0 0 24 24" fill="none" stroke="#F2B33D" stroke-width="2.2" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/></svg><span><b>Confirm rights with each publisher.</b>Free to receive is not the same as licensed to copy onto cards.</span></p>
+        <p class="limit"><svg viewBox="0 0 24 24" fill="none" stroke="#F2B33D" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><b>The web broker is free, with no uptime promise.</b>The village Wi-Fi does not depend on it.</span></p>
+      </div>
+      <p class="close">The card, the Wi-Fi and the web link are <em>one app</em>. Build it once — it reaches people three ways, and every person it reaches can pass it on.</p>
+    </div>
+  </section>
+</main>
+
+<nav class="bar" aria-label="Slides">
+  <div class="where"><span class="chap" id="chap">Start</span><span class="count" id="count">1 / 12</span></div>
+  <div class="rail" id="rail"></div>
+  <div class="nav">
+    <button type="button" id="prev" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg><span class="t">Back</span></button>
+    <button type="button" class="go" id="next" aria-label="Next slide"><span class="t">Next</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+</nav>
+
+<script>
+(function () {
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var rail = document.getElementById('rail');
+  var at = 0;
+  var demo = document.getElementById('demo');
+  var steps = Array.prototype.slice.call(document.querySelectorAll('#steps li'));
+  var MAXSTEP = steps.length;
+
+  // Motion off: freeze the light where it is rather than animate it.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    Array.prototype.forEach.call(document.querySelectorAll('animateMotion'), function (a) {
+      a.setAttribute('dur', '0.001s'); a.setAttribute('repeatCount', '1'); a.setAttribute('fill', 'freeze');
+    });
+  }
+
+  slides.forEach(function (s, i) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('aria-label', 'Slide ' + (i + 1) + ': ' + s.getAttribute('aria-label'));
+    b.addEventListener('click', function () { go(i); });
+    rail.appendChild(b);
+    if (i) s.setAttribute('aria-hidden', 'true');
+  });
+
+  function step(n) {
+    n = Math.max(1, Math.min(MAXSTEP, n));
+    demo.setAttribute('data-step', String(n));
+    steps.forEach(function (li, k) {
+      li.classList.toggle('on', k + 1 === n);
+      li.classList.toggle('done', k + 1 < n);
+    });
+    document.getElementById('d-next').textContent = n === MAXSTEP ? 'Start over' : 'Next step';
+  }
+  function cur() { return +demo.getAttribute('data-step'); }
+
+  function go(n) {
+    n = Math.max(0, Math.min(slides.length - 1, n));
+    slides[at].classList.remove('on');
+    slides[at].setAttribute('aria-hidden', 'true');
+    at = n;
+    slides[at].classList.add('on');
+    slides[at].removeAttribute('aria-hidden');
+    slides[at].scrollTop = 0;
+    document.getElementById('chap').textContent = slides[at].getAttribute('data-chapter');
+    document.getElementById('count').textContent = (at + 1) + ' / ' + slides.length;
+    Array.prototype.forEach.call(rail.children, function (b, i) {
+      b.setAttribute('aria-current', i === at ? 'true' : 'false');
+      b.classList.toggle('seen', i < at);
+    });
+    document.getElementById('prev').disabled = at === 0;
+    document.getElementById('next').disabled = at === slides.length - 1;
+    try { history.replaceState(null, '', '#' + (at + 1)); } catch (e) {}
+  }
+
+  // The step-through slide builds: → walks the five taps before moving on.
+  function next() {
+    if (slides[at].getAttribute('data-builds') && cur() < MAXSTEP) return step(cur() + 1);
+    go(at + 1);
+  }
+  function prev() {
+    if (slides[at].getAttribute('data-builds') && cur() > 1) return step(cur() - 1);
+    go(at - 1);
+  }
+
+  document.getElementById('next').addEventListener('click', next);
+  document.getElementById('prev').addEventListener('click', prev);
+  document.getElementById('d-next').addEventListener('click', function () { step(cur() === MAXSTEP ? 1 : cur() + 1); });
+  document.getElementById('d-back').addEventListener('click', function () { step(cur() - 1); });
+  steps.forEach(function (li) { li.addEventListener('click', function () { step(+li.getAttribute('data-go')); }); });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.target.closest && e.target.closest('button') && (e.key === ' ' || e.key === 'Enter')) return;
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); next(); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); prev(); }
+    else if (e.key === 'Home') go(0);
+    else if (e.key === 'End') go(slides.length - 1);
+  });
+
+  var x0 = null, y0 = null;
+  document.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
+  document.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.4) { dx < 0 ? next() : prev(); }
+    x0 = null;
+  }, { passive: true });
+
+  step(1);
+  var h = parseInt((location.hash || '').slice(1), 10);
+  go(h >= 1 && h <= slides.length ? h - 1 : 0);
+})();
+</script>

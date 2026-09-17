@@ -152,8 +152,8 @@ window.ET = (function () {
     el.className = 'top';
     el.innerHTML =
       '<div class="wrap">' +
-        '<a class="brand" href="index.html">' + lantern(30) +
-          '<span data-i18n="app.name">The Library</span></a>' +
+        '<span class="brand">' + lantern(30) +
+          '<span data-i18n="app.name">The Library</span></span>' +
         '<button class="fchip" id="et-lang" aria-label="Language">' +
           icon('globe') + '<span id="et-lang-label"></span></button>' +
         '<button class="fchip" id="et-theme" aria-label="Light or dark">' +
@@ -169,6 +169,55 @@ window.ET = (function () {
     });
     $('#et-lang').addEventListener('click', function () { ET.i18n.picker(); });
     if (active) { /* reserved for nav highlighting */ }
+  }
+
+  /* The four destinations. Everything else in the app is reached from one of
+     them, which is why no destination needs a Back button of its own. */
+  var TABS = [
+    ['index.html',   'home',   'tab.home'],
+    ['library.html', 'search', 'tab.library'],
+    ['nearby.html',  'share',  'tab.send'],
+    ['help.html',    'book',   'tab.guide']
+  ];
+
+  function tabbar(here) {
+    var el = document.createElement('nav');
+    el.className = 'tabbar';
+    el.setAttribute('aria-label', 'Main');
+    el.innerHTML = TABS.map(function (tb) {
+      var on = tb[0] === here;
+      return '<a href="' + tb[0] + '"' + (on ? ' aria-current="page"' : '') + '>' +
+        '<span class="pipe">' + icon(tb[1]) + '</span>' +
+        '<span data-i18n="' + tb[2] + '"></span></a>';
+    }).join('');
+    document.body.appendChild(el);
+    document.body.classList.add('has-tabs');
+  }
+
+  /* A row: artwork, what it is, what it is called, and one pill saying what a
+     tap does. The library, the shelves and search all render the same one. */
+  function row(r, action) {
+    var art = r.cover || r.coverOnline;
+    return '<a class="rowi" href="item.html?id=' + encodeURIComponent(r.id) + '">' +
+      '<span class="art">' + icon(typeIcon(r.type)) +
+        (art ? '<img src="' + esc(art) + '" alt="" loading="lazy" decoding="async" onerror="this.remove()">' : '') +
+      '</span>' +
+      '<span class="meta">' +
+        '<span class="kicker">' + esc(action.kicker) + '</span>' +
+        '<span class="name latin">' + esc(r.title) + '</span>' +
+        '<span class="sub latin">' + esc(action.sub) + '</span>' +
+      '</span>' +
+      '<span class="go">' + esc(action.verb) + '</span></a>';
+  }
+
+  function poster(r, sub) {
+    var art = r.cover || r.coverOnline;
+    return '<a class="poster" href="item.html?id=' + encodeURIComponent(r.id) + '">' +
+      '<span class="art">' + icon(typeIcon(r.type)) +
+        (art ? '<img src="' + esc(art) + '" alt="" loading="lazy" decoding="async" onerror="this.remove()">' : '') +
+      '</span>' +
+      '<span class="name latin">' + esc(r.title) + '</span>' +
+      (sub ? '<span class="sub">' + esc(sub) + '</span>' : '') + '</a>';
   }
 
   // -------------------------------------------------------------- sheets
@@ -316,6 +365,7 @@ window.ET = (function () {
     promptInstall: promptInstall, standalone: standalone,
     $: $, $$: $$, theme: theme, library: library, byId: byId, header: header,
     sheet: sheet, typeIcon: typeIcon, thumb: thumb, stepper: stepper,
+    tabbar: tabbar, row: row, poster: poster,
     contentLang: contentLang, inMyLanguage: inMyLanguage,
     BOOKS: BOOKS, pad: pad, bookName: bookName, audioBibleUrl: audioBibleUrl
   };

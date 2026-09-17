@@ -1,0 +1,1546 @@
+{
+ "generated": "Digital Bible Society (dbs.org) — Pashto, built from the open dataset",
+ "languages": {
+  "pus": {
+   "name": "Pashto",
+   "native": "پښتو",
+   "script": "arab",
+   "dir": "rtl",
+   "font": "naskh",
+   "speakers": "~40 million",
+   "region": "Afghanistan & Pakistan",
+   "blurb": "The main language of southern and eastern Afghanistan and north-western Pakistan, written in an extended Arabic script.",
+   "code": "pus"
+  }
+ },
+ "resources": [
+  {
+   "id": "pus-film-the-savior-pbu",
+   "lang": "pus",
+   "type": "film",
+   "title": "The Savior",
+   "org": "Create International",
+   "scope": "Northern Pashto",
+   "desc": "The life of Christ told in 9 short parts, made for Northern Pashto audiences.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 0,
+      "title": "0. The Savior Trailer",
+      "file": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Pashto_0-The-Savior-Trailer.mp4"
+     },
+     {
+      "n": 1,
+      "title": "1. Jesus' Birth",
+      "file": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Pashto_1-Jesus-Birth_sm.mp4"
+     },
+     {
+      "n": 2,
+      "title": "2. Jesus' Baptism",
+      "file": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Pashto_2-Jesus-Baptism.mp4"
+     },
+     {
+      "n": 3,
+      "title": "3. Woman at the Well",
+      "file": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Pashto_3-Woman-at-the-Well_sm.mp4"
+     },
+     {
+      "n": 4,
+      "title": "4. Sowing of the Word",
+      "file": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Pashto_4-Sowing-the-Word_sm.mp4"
+     },
+     {
+      "n": 5,
+      "title": "5. The Good Samaritan",
+      "file": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Pashto_5-The-Good-Samaritan_sm.mp4"
+     },
+     {
+      "n": 6,
+      "title": "6. The Lord's Prayer",
+      "file": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Pashto_6-The-Lords-Prayer.mp4"
+     },
+     {
+      "n": 7,
+      "title": "7. Golgotha",
+      "file": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Pashto_7-Golgotha_sm.mp4"
+     },
+     {
+      "n": 8,
+      "title": "8. Jesus is Risen",
+      "file": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Pashto_8-Jesus-is-Risen.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "0. The Savior Trailer",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Pashto_0-The-Savior-Trailer.mp4"
+    },
+    {
+     "label": "1. Jesus' Birth",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Pashto_1-Jesus-Birth_sm.mp4"
+    },
+    {
+     "label": "2. Jesus' Baptism",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Pashto_2-Jesus-Baptism.mp4"
+    },
+    {
+     "label": "3. Woman at the Well",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Pashto_3-Woman-at-the-Well_sm.mp4"
+    },
+    {
+     "label": "4. Sowing of the Word",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Pashto_4-Sowing-the-Word_sm.mp4"
+    },
+    {
+     "label": "5. The Good Samaritan",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Pashto_5-The-Good-Samaritan_sm.mp4"
+    },
+    {
+     "label": "6. The Lord's Prayer",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Pashto_6-The-Lords-Prayer.mp4"
+    },
+    {
+     "label": "7. Golgotha",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Pashto_7-Golgotha_sm.mp4"
+    },
+    {
+     "label": "8. Jesus is Risen",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/Savior/Pashto_8-Jesus-is-Risen.mp4"
+    }
+   ],
+   "read": null,
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "source": null,
+   "langName": "Pashto",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "pus-film-the-prophets-story-pbu",
+   "lang": "pus",
+   "type": "film",
+   "title": "The Prophets' Story (Northern)",
+   "org": "Create International",
+   "scope": "Northern Pashto",
+   "desc": "A short film in Northern Pashto.",
+   "play": {
+    "kind": "file",
+    "hd": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/PS/The-Prophets-Story_Pashto-Northern_sm.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Video",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/PS/The-Prophets-Story_Pashto-Northern_sm.mp4"
+    }
+   ],
+   "read": null,
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "source": null,
+   "langName": "Pashto",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "pus-film-the-prophets-story-pbt",
+   "lang": "pus",
+   "type": "film",
+   "title": "The Prophets' Story (Southern)",
+   "org": "Create International",
+   "scope": "Southern Pashto",
+   "desc": "A short film in Southern Pashto.",
+   "play": {
+    "kind": "file",
+    "hd": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/PS/The-Prophets-Story_Pashto-Southern_sm.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Video",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/PS/The-Prophets-Story_Pashto-Southern_sm.mp4"
+    }
+   ],
+   "read": null,
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "source": null,
+   "langName": "Pashto",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "pus-film-jesus",
+   "type": "film",
+   "title": "JESUS",
+   "org": "Jesus Film Project",
+   "duration": "2:07:53",
+   "year": "1979",
+   "scope": "Eastern Afghan",
+   "desc": "The life of Jesus told from the Gospel of Luke — the most translated film in history. 61 chapters.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "The Beginning",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_01_the-beginning_1_jf6101-0-0_low.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Birth of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_02_birth-of-jesus_1_jf6102-0-0_low.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Childhood of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_03_childhood-of-jesus_1_jf6103-0-0_low.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Baptism of Jesus by John",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_04_baptism-of-jesus-by-john_1_jf6104-0-0_low.mp4"
+     },
+     {
+      "n": 5,
+      "title": "The Devil Tempts Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_05_the-devil-tempts-jesus_1_jf6105-0-0_low.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Jesus Proclaims Fulfillment of the Scriptures",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_06_jesus-proclaims-fulfillment-of-the-scriptures_1_jf6106-0-0_low.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Parable of the Pharisee and Tax Collector",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_07_parable-of-the-pharisee-and-tax-collector_1_jf6107-0-0_low.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Miraculous Catch of Fish",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_08_miraculous-catch-of-fish_1_jf6108-0-0_low.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Jairuss Daughter Brought Back to Life",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_09_jairuss-daughter-brought-back-to-life_1_jf6109-0-0_low.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Disciples Chosen",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_10_disciples-chosen_1_jf6110-0-0_low.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Beatitudes",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_11_beatitudes_1_jf6111-0-0_low.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Sermon on the Mount",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_12_sermon-on-the-mount_1_jf6112-0-0_low.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Blessed are Those who Hear and Obey",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_13_blessed-are-those-who-hear-and-obey_1_jf6113-0-0_low.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Sinful Woman Forgiven",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_14_sinful-woman-forgiven_1_jf6114-0-0_low.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Women Disciples",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_15_women-disciples_1_jf6115-0-0_low.mp4"
+     },
+     {
+      "n": 16,
+      "title": "John the Baptist in Prison",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_16_john-the-baptist-in-prison_1_jf6116-0-0_low.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Parable of the Sower and the Seed",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_17_parable-of-the-sower-and-the-seed_1_jf6117-0-0_low.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Parable of the Lamp",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_18_parable-of-the-lamp_1_jf6118-0-0_low.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Jesus Calms the Storm",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_19_jesus-calms-the-storm_1_jf6119-0-0_low.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Healing of the Demoniac",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_20_healing-of-the-demoniac_1_jf6120-0-0_low.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Jesus Feeds 5000",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_21_jesus-feeds-5000_1_jf6121-0-0_low.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Peter Declares Jesus to be the Christ",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_22_peter-declares-jesus-to-be-the-christ_1_jf6122-0-0_low.mp4"
+     },
+     {
+      "n": 23,
+      "title": "The Transfiguration",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_23_the-transfiguration_1_jf6123-0-0_low.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Jesus Heals Boy From Evil Spirit",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_24_jesus-heals-boy-from-evil-spirit_1_jf6124-0-0_low.mp4"
+     },
+     {
+      "n": 25,
+      "title": "The Lords Prayer",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_25_the-lords-prayer_1_jf6125-0-0_low.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Teaching About Prayer and Faith",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_26_teaching-about-prayer-and-faith_1_jf6126-0-0_low.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Woe to Those who Cause Others to Sin",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_27_woe-to-those-who-cause-others-to-sin_1_jf6127-0-0_low.mp4"
+     },
+     {
+      "n": 28,
+      "title": "The Kingdom of God as a Mustard Seed",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_28_the-kingdom-of-god-as-a-mustard-seed_1_jf6128-0-0_low.mp4"
+     },
+     {
+      "n": 29,
+      "title": "Jesus Spends Time with Sinners",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_29_jesus-spends-time-with-sinners_1_jf6129-0-0_low.mp4"
+     },
+     {
+      "n": 30,
+      "title": "Healing on the Sabbath",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_30_healing-on-the-sabbath_1_jf6130-0-0_low.mp4"
+     },
+     {
+      "n": 31,
+      "title": "Parable of the Good Samaritan",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_31_parable-of-the-good-samaritan_1_jf6131-0-0_low.mp4"
+     },
+     {
+      "n": 32,
+      "title": "Healing of Bartimaeus",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_32_healing-of-bartimaeus_1_jf6132-0-0_low.mp4"
+     },
+     {
+      "n": 33,
+      "title": "Jesus and Zaccheus",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_33_jesus-and-zaccheus_1_jf6133-0-0_low.mp4"
+     },
+     {
+      "n": 34,
+      "title": "Jesus Predicts his Death and Resurrection",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_34_jesus-predicts-his-death-and-resurrection_1_jf6134-0-0_low.mp4"
+     },
+     {
+      "n": 35,
+      "title": "Jesuss Triumphal Entry",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_35_jesuss-triumphal-entry_1_jf6135-0-0_low.mp4"
+     },
+     {
+      "n": 36,
+      "title": "Jesus Weeps Over Jerusalem",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_36_jesus-weeps-over-jerusalem_1_jf6136-0-0_low.mp4"
+     },
+     {
+      "n": 37,
+      "title": "Jesus Drives Out Money Changers",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_37_jesus-drives-out-money-changers_1_jf6137-0-0_low.mp4"
+     },
+     {
+      "n": 38,
+      "title": "Widows Offering",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_38_widows-offering_1_jf6138-0-0_low.mp4"
+     },
+     {
+      "n": 39,
+      "title": "Annas Questions Jesuss Authority",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_39_annas-questions-jesuss-authority_1_jf6139-0-0_low.mp4"
+     },
+     {
+      "n": 40,
+      "title": "Parable of the Vineyard and Tenants",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_40_parable-of-the-vineyard-and-tenants_1_jf6140-0-0_low.mp4"
+     },
+     {
+      "n": 41,
+      "title": "Paying Taxes to Caesar",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_41_paying-taxes-to-caesar_1_jf6141-0-0_low.mp4"
+     },
+     {
+      "n": 42,
+      "title": "The Last Supper",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_42_the-last-supper_1_jf6142-0-0_low.mp4"
+     },
+     {
+      "n": 43,
+      "title": "Upper Room Teaching",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_43_upper-room-teaching_1_jf6143-0-0_low.mp4"
+     },
+     {
+      "n": 44,
+      "title": "Jesus is Betrayed and Arrested",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_44_jesus-is-betrayed-and-arrested_1_jf6144-0-0_low.mp4"
+     },
+     {
+      "n": 45,
+      "title": "Peter Disowns Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_45_peter-disowns-jesus_1_jf6145-0-0_low.mp4"
+     },
+     {
+      "n": 46,
+      "title": "Jesus is Mocked and Questioned",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_46_jesus-is-mocked-and-questioned_1_jf6146-0-0_low.mp4"
+     },
+     {
+      "n": 47,
+      "title": "Jesus is Brought to Pilate",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_47_jesus-is-brought-to-pilate_1_jf6147-0-0_low.mp4"
+     },
+     {
+      "n": 48,
+      "title": "Jesus is Brought to Herod",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_48_jesus-is-brought-to-herod_1_jf6148-0-0_low.mp4"
+     },
+     {
+      "n": 49,
+      "title": "Jesus is Sentenced",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_49_jesus-is-sentenced_1_jf6149-0-0_low.mp4"
+     },
+     {
+      "n": 50,
+      "title": "Jesus Carries his Cross",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_50_jesus-carries-his-cross_1_jf6150-0-0_low.mp4"
+     },
+     {
+      "n": 51,
+      "title": "Jesus is Crucified",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_51_jesus-is-crucified_1_jf6151-0-0_low.mp4"
+     },
+     {
+      "n": 52,
+      "title": "Soldiers Gamble for Jesuss Clothes",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_52_soldiers-gamble-for-jesuss-clothes_1_jf6152-0-0_low.mp4"
+     },
+     {
+      "n": 53,
+      "title": "Sign on the Cross",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_53_sign-on-the-cross_1_jf6153-0-0_low.mp4"
+     },
+     {
+      "n": 54,
+      "title": "Crucified Convicts",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_54_crucified-convicts_1_jf6154-0-0_low.mp4"
+     },
+     {
+      "n": 55,
+      "title": "Death of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_55_death-of-jesus_1_jf6155-0-0_low.mp4"
+     },
+     {
+      "n": 56,
+      "title": "Burial of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_56_burial-of-jesus_1_jf6156-0-0_low.mp4"
+     },
+     {
+      "n": 57,
+      "title": "Angels At the Tomb",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_57_angels-at-the-tomb_1_jf6157-0-0_low.mp4"
+     },
+     {
+      "n": 58,
+      "title": "The Tomb is Empty",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_58_the-tomb-is-empty_1_jf6158-0-0_low.mp4"
+     },
+     {
+      "n": 59,
+      "title": "Resurrected Jesus Appears",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_59_resurrected-jesus-appears_1_jf6159-0-0_low.mp4"
+     },
+     {
+      "n": 60,
+      "title": "Great Commission and Ascension",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_60_great-commission-and-ascension_1_jf6160-0-0_low.mp4"
+     },
+     {
+      "n": 61,
+      "title": "Invitation to Know Jesus Personally",
+      "file": "https://video.dbs.org/Jesus/chapters/pbu_pashto-eastern-afghan/pbu_jesus_chapter_61_invitation-to-know-jesus-personally_1_jf6161-0-0_low.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "All chapters — SD",
+     "url": "https://download.dbs.org/Jesus/pbu_pashto-eastern-afghan/pbu_jesus_chapters_low.zip"
+    },
+    {
+     "label": "All chapters — HD",
+     "url": "https://download.dbs.org/Jesus/pbu_pashto-eastern-afghan/pbu_jesus_chapters_high.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/jesus/pbu_pashto-eastern-afghan_jesus",
+   "lang": "pus",
+   "read": null,
+   "native": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Pashto",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "pus-film-lumo-matthew",
+   "type": "film",
+   "title": "LUMO: The Gospel of Matthew",
+   "org": "LUMO Project",
+   "scope": "Yousafzai",
+   "desc": "Matthew filmed word for word, with the Pashto Scripture text as the only narration. 28 parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Matthew 1",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Matthew 2",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Matthew 3",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Matthew 4",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_04_360.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Matthew 5",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_05_360.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Matthew 6",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_06_360.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Matthew 7",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_07_360.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Matthew 8",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_08_360.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Matthew 9",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_09_360.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Matthew 10",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_10_360.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Matthew 11",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_11_360.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Matthew 12",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_12_360.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Matthew 13",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_13_360.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Matthew 14",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_14_360.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Matthew 15",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_15_360.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Matthew 16",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_16_360.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Matthew 17",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_17_360.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Matthew 18",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_18_360.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Matthew 19",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_19_360.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Matthew 20",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_20_360.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Matthew 21",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_21_360.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Matthew 22",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_22_360.mp4"
+     },
+     {
+      "n": 23,
+      "title": "Matthew 23",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_23_360.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Matthew 24",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_24_360.mp4"
+     },
+     {
+      "n": 25,
+      "title": "Matthew 25",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_25_360.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Matthew 26",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_26_360.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Matthew 27",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_27_360.mp4"
+     },
+     {
+      "n": 28,
+      "title": "Matthew 28",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pbu_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Matthew_Direct-Translation-FCBH_28_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-matthew/pbu_pashto-yousafzai_matthew",
+   "lang": "pus",
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Pashto",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "pus-film-lumo-mark",
+   "type": "film",
+   "title": "LUMO: The Gospel of Mark",
+   "org": "LUMO Project",
+   "scope": "Yousafzai",
+   "desc": "Mark filmed word for word, narrated only by the Pashto Scripture text. 16 parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Mark 1",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pbu_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Mark 2",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pbu_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Mark 3",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pbu_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Mark 4",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pbu_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_04_360.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Mark 5",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pbu_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_05_360.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Mark 6",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pbu_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_06_360.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Mark 7",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pbu_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_07_360.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Mark 8",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pbu_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_08_360.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Mark 9",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pbu_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_09_360.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Mark 10",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pbu_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_10_360.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Mark 11",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pbu_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_11_360.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Mark 12",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pbu_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_12_360.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Mark 13",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pbu_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_13_360.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Mark 14",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pbu_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_14_360.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Mark 15",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pbu_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_15_360.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Mark 16",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pbu_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Mark_Direct-Translation-FCBH_16_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-mark/pbu_pashto-yousafzai_mark",
+   "lang": "pus",
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Pashto",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "pus-film-lumo-luke",
+   "type": "film",
+   "title": "LUMO: The Gospel of Luke",
+   "org": "LUMO Project",
+   "scope": "Yousafzai",
+   "desc": "Luke filmed word for word, narrated only by the Pashto Scripture text. 24 parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Luke 1",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pbu_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Luke 2",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pbu_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Luke 3",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pbu_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Luke 4",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pbu_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_04_360.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Luke 5",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pbu_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_05_360.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Luke 6",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pbu_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_06_360.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Luke 7",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pbu_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_07_360.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Luke 8",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pbu_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_08_360.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Luke 9",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pbu_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_09_360.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Luke 10",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pbu_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_10_360.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Luke 11",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pbu_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_11_360.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Luke 12",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pbu_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_12_360.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Luke 13",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pbu_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_13_360.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Luke 14",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pbu_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_14_360.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Luke 15",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pbu_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_15_360.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Luke 16",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pbu_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_16_360.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Luke 17",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pbu_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_17_360.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Luke 18",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pbu_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_18_360.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Luke 19",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pbu_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_19_360.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Luke 20",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pbu_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_20_360.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Luke 21",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pbu_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_21_360.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Luke 22",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pbu_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_22_360.mp4"
+     },
+     {
+      "n": 23,
+      "title": "Luke 23",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pbu_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_23_360.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Luke 24",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pbu_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_Luke_Direct-Translation-FCBH_24_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-luke/pbu_pashto-yousafzai_luke",
+   "lang": "pus",
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Pashto",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "pus-film-lumo-john",
+   "type": "film",
+   "title": "LUMO: The Gospel of John",
+   "org": "LUMO Project",
+   "scope": "Yousafzai",
+   "desc": "John filmed word for word, narrated only by the Pashto Scripture text. 21 parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "John 1",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pbu_Pashto-Yousafzai_John_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_John_Direct-Translation-FCBH_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "John 2",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pbu_Pashto-Yousafzai_John_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_John_Direct-Translation-FCBH_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "John 3",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pbu_Pashto-Yousafzai_John_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_John_Direct-Translation-FCBH_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "John 4",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pbu_Pashto-Yousafzai_John_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_John_Direct-Translation-FCBH_04_360.mp4"
+     },
+     {
+      "n": 5,
+      "title": "John 5",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pbu_Pashto-Yousafzai_John_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_John_Direct-Translation-FCBH_05_360.mp4"
+     },
+     {
+      "n": 6,
+      "title": "John 6",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pbu_Pashto-Yousafzai_John_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_John_Direct-Translation-FCBH_06_360.mp4"
+     },
+     {
+      "n": 7,
+      "title": "John 7",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pbu_Pashto-Yousafzai_John_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_John_Direct-Translation-FCBH_07_360.mp4"
+     },
+     {
+      "n": 8,
+      "title": "John 8",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pbu_Pashto-Yousafzai_John_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_John_Direct-Translation-FCBH_08_360.mp4"
+     },
+     {
+      "n": 9,
+      "title": "John 9",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pbu_Pashto-Yousafzai_John_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_John_Direct-Translation-FCBH_09_360.mp4"
+     },
+     {
+      "n": 10,
+      "title": "John 10",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pbu_Pashto-Yousafzai_John_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_John_Direct-Translation-FCBH_10_360.mp4"
+     },
+     {
+      "n": 11,
+      "title": "John 11",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pbu_Pashto-Yousafzai_John_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_John_Direct-Translation-FCBH_11_360.mp4"
+     },
+     {
+      "n": 12,
+      "title": "John 12",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pbu_Pashto-Yousafzai_John_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_John_Direct-Translation-FCBH_12_360.mp4"
+     },
+     {
+      "n": 13,
+      "title": "John 13",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pbu_Pashto-Yousafzai_John_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_John_Direct-Translation-FCBH_13_360.mp4"
+     },
+     {
+      "n": 14,
+      "title": "John 14",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pbu_Pashto-Yousafzai_John_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_John_Direct-Translation-FCBH_14_360.mp4"
+     },
+     {
+      "n": 15,
+      "title": "John 15",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pbu_Pashto-Yousafzai_John_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_John_Direct-Translation-FCBH_15_360.mp4"
+     },
+     {
+      "n": 16,
+      "title": "John 16",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pbu_Pashto-Yousafzai_John_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_John_Direct-Translation-FCBH_16_360.mp4"
+     },
+     {
+      "n": 17,
+      "title": "John 17",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pbu_Pashto-Yousafzai_John_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_John_Direct-Translation-FCBH_17_360.mp4"
+     },
+     {
+      "n": 18,
+      "title": "John 18",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pbu_Pashto-Yousafzai_John_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_John_Direct-Translation-FCBH_18_360.mp4"
+     },
+     {
+      "n": 19,
+      "title": "John 19",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pbu_Pashto-Yousafzai_John_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_John_Direct-Translation-FCBH_19_360.mp4"
+     },
+     {
+      "n": 20,
+      "title": "John 20",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pbu_Pashto-Yousafzai_John_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_John_Direct-Translation-FCBH_20_360.mp4"
+     },
+     {
+      "n": 21,
+      "title": "John 21",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pbu_Pashto-Yousafzai_John_Direct-Translation-FCBH_low/pbu_LUMO_Pashto-Yousafzai_John_Direct-Translation-FCBH_21_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-john/pbu_pashto-yousafzai_john",
+   "lang": "pus",
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Pashto",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "pus-ab-pbupbs",
+   "type": "audio-bible",
+   "title": "Pakistani Yousafzai Pashto Bible",
+   "native": "کِتابِ مقدس",
+   "org": "Davar Partners",
+   "year": "2019",
+   "scope": "New Testament",
+   "stats": "260 chapters · 25h 5m",
+   "desc": "The Pashto New Testament read aloud in full, chapter by chapter.",
+   "downloads": [
+    {
+     "label": "Complete audio (ZIP)",
+     "url": "https://scripture.dbs.org/audio_zip/PBUPBS_DAVR_NT_N.zip",
+     "size": "582.8 MB"
+    }
+   ],
+   "source": "https://dbs.org/bibles/audio/PBUPBS_DAVR_NT_N",
+   "lang": "pus",
+   "play": null,
+   "read": null,
+   "duration": null,
+   "cover": null,
+   "license": null,
+   "links": null,
+   "langName": "Pashto",
+   "typeLabel": "Audio Bibles"
+  },
+  {
+   "id": "pus-ab-pbuleyd",
+   "type": "audio-bible",
+   "title": "Pashto John — Leyden",
+   "native": "انجيل شريف",
+   "org": "Davar Partners",
+   "year": "1939",
+   "desc": "The Leyden Pashto Scripture, read aloud.",
+   "downloads": [
+    {
+     "label": "Complete audio (ZIP)",
+     "url": "https://scripture.dbs.org/audio_zip/PBULEYD_DAVR_FB_N.zip"
+    }
+   ],
+   "source": "https://dbs.org/bibles/audio/PBULEYD_DAVR_FB_N",
+   "lang": "pus",
+   "play": null,
+   "read": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Pashto",
+   "typeLabel": "Audio Bibles"
+  },
+  {
+   "id": "pus-ac-grn",
+   "type": "audio",
+   "title": "Words of Life +1",
+   "org": "Global Recordings Network",
+   "stats": "54 recordings · 99.5 MB",
+   "desc": "Scripture-based audio programmes in Northern Pashto, Khatak, Marwat and Dera Ismail Khan — Words of Life, Good News and more.",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/pbu_GlobalRecordings_pashto_northern/Pashto%20Northern/Pashto%20Northern%20Good%20News%2065159/Pashto%20Northern%20Good%20News%20001%20Picture%201%20In%20the%20Beginning%2065159.mp3"
+   },
+   "downloads": [
+    {
+     "label": "Complete collection — high quality",
+     "url": "https://media.dbs.org/audio/grn/pbu_GlobalRecordings_pashto_northern_high.zip"
+    },
+    {
+     "label": "Complete collection — low bandwidth",
+     "url": "https://media.dbs.org/audio/grn/pbu_GlobalRecordings_pashto_northern_low.zip"
+    }
+   ],
+   "source": "https://dbs.org/audio/collections/grn/pbu_GlobalRecordings_pashto_northern",
+   "lang": "pus",
+   "read": null,
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Pashto",
+   "typeLabel": "Audio Collections"
+  },
+  {
+   "id": "pus-ac-soj",
+   "type": "audio",
+   "title": "Story of Jesus",
+   "org": "Story of Jesus",
+   "stats": "8 recordings · 123.2 MB",
+   "desc": "The life of Jesus as a narrated audio drama, in eight parts plus a continuous version.",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/soj/pbu_StoryJesus_pbu_full.mp3"
+   },
+   "downloads": [
+    {
+     "label": "All eight parts (ZIP)",
+     "url": "https://media.dbs.org/audio/soj/pbu_StoryJesus_pbu.zip"
+    },
+    {
+     "label": "Continuous version (ZIP)",
+     "url": "https://media.dbs.org/audio/soj/pbu_StoryJesus_pbu_full.zip"
+    }
+   ],
+   "source": "https://dbs.org/audio/collections/soj/pbu_StoryJesus_pbu",
+   "lang": "pus",
+   "read": null,
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Pashto",
+   "typeLabel": "Audio Collections"
+  },
+  {
+   "id": "pus-hist-pashto-1890-bible-vol.-1-4",
+   "lang": "pus",
+   "type": "historic",
+   "title": "Bible Vol. 1–4",
+   "org": "Digital Bible Society Archive",
+   "year": "1890",
+   "cover": "https://scripture.dbs.org/covers/small/Pashto-1890-Bible-Vol.-1-4.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Pashto-1890-Bible-Vol.-1-4.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Pashto-1890-Bible-Vol.-1-4.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Pashto-1890-Bible-Vol.-1-4",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Pashto",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "pus-hist-pashto-1890-new-testament",
+   "lang": "pus",
+   "type": "historic",
+   "title": "New Testament",
+   "org": "Digital Bible Society Archive",
+   "year": "1890",
+   "cover": "https://scripture.dbs.org/covers/small/Pashto-1890-New-Testament.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Pashto-1890-New-Testament.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Pashto-1890-New-Testament.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Pashto-1890-New-Testament",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Pashto",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "pus-hist-pashto-1890-pentateuch-in-pashtu-northern-genesis-portion",
+   "lang": "pus",
+   "type": "historic",
+   "title": "Pentateuch Genesis Portion",
+   "org": "Digital Bible Society Archive",
+   "year": "1890",
+   "cover": "https://scripture.dbs.org/covers/small/Pashto-1890-Pentateuch-In-Pashtu-Northern-Genesis-Portion.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Pashto-1890-Pentateuch-In-Pashtu-Northern-Genesis-Portion.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Pashto-1890-Pentateuch-In-Pashtu-Northern-Genesis-Portion.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Pashto-1890-Pentateuch-In-Pashtu-Northern-Genesis-Portion",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Pashto",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "pus-hist-pashto-1939-john-leyden-wdl-17767",
+   "lang": "pus",
+   "type": "historic",
+   "title": "John Leyden",
+   "org": "Digital Bible Society Archive",
+   "year": "1939",
+   "cover": "https://scripture.dbs.org/covers/small/Pashto-1939-John-Leyden-WDL-17767.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Pashto-1939-John-Leyden-WDL-17767.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Pashto-1939-John-Leyden-WDL-17767.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Pashto-1939-John-Leyden-WDL-17767",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Pashto",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "pus-hist-pashto-john-print",
+   "lang": "pus",
+   "type": "historic",
+   "title": "John",
+   "org": "Digital Bible Society Archive",
+   "year": null,
+   "cover": "https://scripture.dbs.org/covers/small/Pashto-John-print.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Pashto-John-print.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Pashto-John-print.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Pashto-John-print",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Pashto",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "pus-text-online",
+   "lang": "pus",
+   "type": "scripture",
+   "title": "Pashto Bibles to read online",
+   "org": "Various publishers",
+   "desc": "6 Pashto translations that their publishers host themselves. They open in a browser and need a connection.",
+   "links": [
+    {
+     "label": "The Book of Proverbs in Yusufzai Pashto (2015)",
+     "url": "https://dbs.org/bibles/PBUPRO"
+    },
+    {
+     "label": "Pashto John - Leyden (1939)",
+     "url": "https://dbs.org/bibles/PBULEYD"
+    },
+    {
+     "label": "Northern Pashto Old Bible (1890)",
+     "url": "https://dbs.org/bibles/PBUOLD"
+    },
+    {
+     "label": "Pakistani Yousafzai Pashto Bible (2019)",
+     "url": "https://dbs.org/bibles/PBUPBS"
+    },
+    {
+     "label": "The New Testament in Pashto (1996)",
+     "url": "https://dbs.org/bibles/PBTPNT"
+    },
+    {
+     "label": "The Bible in Pashto (1996)",
+     "url": "https://dbs.org/bibles/PSTBIB"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pbu",
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Pashto",
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "pus-link-arc-gt",
+   "lang": "pus",
+   "type": "link",
+   "title": "Jesus Film Project",
+   "org": "Jesus Film Project",
+   "desc": "4 Pashto items. Full films on the publisher's own player.",
+   "links": [
+    {
+     "label": "JESUS",
+     "url": "https://arc.gt/8sf5i?apiSessionId=5f8761f6b5f2c3.69613106"
+    },
+    {
+     "label": "JESUS",
+     "url": "https://arc.gt/altnu?apiSessionId=5f8761fcae2af6.51958083"
+    },
+    {
+     "label": "Magdalena - Director's Cut",
+     "url": "https://arc.gt/0qypb?apiSessionId=5f8761f829feb7.39890449"
+    },
+    {
+     "label": "Magdalena - Director's Cut",
+     "url": "https://arc.gt/7rcax?apiSessionId=5f8761fe715333.10893437"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Pashto",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "pus-link-globalrecordings-net",
+   "lang": "pus",
+   "type": "link",
+   "title": "Global Recordings Network",
+   "org": "Global Recordings Network",
+   "desc": "13 Pashto items. Scripture-based recordings, told simply. Each programme plays on the publisher's own site.",
+   "links": [
+    {
+     "label": "Good News",
+     "url": "https://globalrecordings.net/en/program/65159"
+    },
+    {
+     "label": "Good News for Men",
+     "url": "https://globalrecordings.net/en/program/74740"
+    },
+    {
+     "label": "Good News for Women",
+     "url": "https://globalrecordings.net/en/program/21141"
+    },
+    {
+     "label": "Songs & Scripture",
+     "url": "https://globalrecordings.net/en/program/74619"
+    },
+    {
+     "label": "Words of Life",
+     "url": "https://globalrecordings.net/en/program/3641"
+    },
+    {
+     "label": "Words of Life",
+     "url": "https://globalrecordings.net/en/program/6320"
+    },
+    {
+     "label": "Words of Life",
+     "url": "https://globalrecordings.net/en/program/6341"
+    },
+    {
+     "label": "Words of Life",
+     "url": "https://globalrecordings.net/en/program/6360"
+    },
+    {
+     "label": "Words of Life",
+     "url": "https://globalrecordings.net/en/program/6361"
+    },
+    {
+     "label": "Words of Life",
+     "url": "https://globalrecordings.net/en/program/6370"
+    },
+    {
+     "label": "Words of Life",
+     "url": "https://globalrecordings.net/en/program/6371"
+    },
+    {
+     "label": "Words of Life",
+     "url": "https://globalrecordings.net/en/program/6380"
+    },
+    {
+     "label": "Words of Life for Women",
+     "url": "https://globalrecordings.net/en/program/12950"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Pashto",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "pus-link-rockintl-org",
+   "lang": "pus",
+   "type": "link",
+   "title": "ROCK International",
+   "org": "ROCK International",
+   "desc": "2 Pashto items. Teaching and Scripture resources from the publisher.",
+   "links": [
+    {
+     "label": "KING of GLORY",
+     "url": "https://rockintl.org/rock-video/pashto-king-of-glory/"
+    },
+    {
+     "label": "The WAY of RIGHTEOUSNESS",
+     "url": "https://rockintl.org/rock-video/portuguese-rei-da-gloria-king-of-glory/"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Pashto",
+   "typeLabel": "Partner Links"
+  }
+ ]
+}

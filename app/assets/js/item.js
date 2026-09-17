@@ -20,6 +20,7 @@
   }
 
   document.title = r.title;
+  ET.store.set('et.last', r.id);   // Home offers this back as "Carry on"
   var lib = ET.library();
   var L = lib.languages[r.lang] || {};
   var isText = r.type === 'scripture' || r.type === 'historic';
@@ -283,6 +284,7 @@
   }
 
   ET.header();
+  ET.tabbar();
   ET.$('#back-ico').innerHTML = ET.icon('back', 'flip');
   ET.$('#back').href = 'library.html?type=' + r.type + '&lang=' + r.lang;
   render();

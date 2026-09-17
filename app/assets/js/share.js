@@ -207,6 +207,7 @@
   }
 
   ET.header('share');
+  ET.tabbar();
   ET.$('#back-ico').innerHTML = ET.icon('back', 'flip');
   if (item) ET.$('#back').href = 'item.html?id=' + encodeURIComponent(item.id);
   render();
