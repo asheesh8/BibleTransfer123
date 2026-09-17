@@ -232,8 +232,10 @@
     var rows = [];
     if (canNative) rows.push(['native', 'share', 'share.native', 'share.native.sub']);
     if (web) rows.push(['copy', 'link', 'share.copy', '']);
+    // Sending a file lives in one place: Send. It falls back to the printed
+    // routes itself when two phones cannot pair, so listing them here too was
+    // the same door twice.
     rows.push(['nearby', 'wifi', 'share.nearby', 'share.nearby.sub']);
-    rows.push(['howto', 'phone', 'share.howto', 'share.howto.sub']);
 
     var s = ET.sheet(
       '<h2>' + h('share.sheet') + '</h2>' +
@@ -258,8 +260,6 @@
           copy(url, b);
         } else if (k === 'nearby') {
           location.href = 'nearby.html?id=' + encodeURIComponent(r.id);
-        } else {
-          location.href = 'share.html?id=' + encodeURIComponent(r.id);
         }
       });
     });

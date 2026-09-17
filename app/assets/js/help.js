@@ -5,7 +5,7 @@
    just as completely as one that never downloaded. */
 (function (ET) {
   'use strict';
-  var t = ET.i18n.t, tOr = ET.i18n.tOr, tOrHTML = ET.i18n.tOrHTML;
+  var t = ET.i18n.t, h = ET.i18n.h, tOr = ET.i18n.tOr, tOrHTML = ET.i18n.tOrHTML;
 
   var SECTIONS = [
     {
@@ -93,6 +93,13 @@
       tOrHTML('help.golden.p', 'The moment to find out a file is broken is now, ' +
         'while the card is still in your hand — not next week in front of a room ' +
         'of people waiting.') + '</p></div>';
+
+    // The only route into the device-by-device guides from here.
+    out += '<a class="tile" href="share.html" style="margin-top:1rem">' +
+      '<span class="ico">' + ET.icon('phone') + '</span>' +
+      '<span><span class="t">' + h('share.howto') + '</span>' +
+      '<span class="s">' + h('share.howto.sub') + '</span></span>' +
+      '<span class="chev flip">' + ET.icon('chev') + '</span></a>';
 
     ET.$('#help').innerHTML = out;
   }

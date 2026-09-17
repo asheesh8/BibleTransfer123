@@ -35,7 +35,8 @@
       '<p class="muted">' + (onCard
         ? h('home.offline', { n: offline, total: R.length })
         : h('home.ready', { n: R.filter(function (r) { return r.play || r.read; }).length,
-                            lang: L.name || '' })) + '</p></header>';
+                            // A language names itself in its own script.
+                            lang: L.native || L.name || '' })) + '</p></header>';
 
     // ---- carry on
     var last = lastOpened();

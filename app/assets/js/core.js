@@ -167,7 +167,13 @@ window.ET = (function () {
       theme(now);
       this.innerHTML = icon(now === 'dark' ? 'sun' : 'moon');
     });
-    $('#et-lang').addEventListener('click', function () { ET.i18n.picker(); });
+    $('#et-lang').addEventListener('click', function () {
+      store.set('et.langknown', '1');            // they found it; stop pointing
+      var hint = $('#et-hint');
+      if (hint) hint.remove();
+      ET.i18n.picker();
+    });
+    langHint();
     if (active) { /* reserved for nav highlighting */ }
   }
 
@@ -220,6 +226,61 @@ window.ET = (function () {
       (sub ? '<span class="sub">' + esc(sub) + '</span>' : '') + '</a>';
   }
 
+  /* A small arrow under the language button, saying "tap to change language"
+     and cycling that sentence through every language the app speaks.
+
+     Someone who opens the library in a language they cannot read has to find
+     this button to get out, and a globe on its own does not say so. It cycles
+     rather than picking one language because the reader we most need to reach
+     is exactly the one who cannot read the current one. It points once, and
+     never again after the button has been used. */
+  function langHint() {
+    if (store.get('et.langknown', '') === '1') return;
+    var btn = $('#et-lang');
+    if (!btn) return;
+
+    var el = document.createElement('div');
+    el.className = 'lang-hint';
+    el.id = 'et-hint';
+    el.innerHTML = '<span class="beak"></span><span class="say" id="et-hint-say"></span>';
+    document.body.appendChild(el);
+
+    function place() {
+      var r = btn.getBoundingClientRect();
+      el.style.top = (r.bottom + window.scrollY + 10) + 'px';
+      // Centred under the button, then nudged back inside the screen.
+      var left = r.left + r.width / 2 - el.offsetWidth / 2;
+      left = Math.max(10, Math.min(left, document.documentElement.clientWidth - el.offsetWidth - 10));
+      el.style.left = left + 'px';
+      el.style.setProperty('--beak', (r.left + r.width / 2 - left) + 'px');
+    }
+
+    var langs = ET.i18n.langs, at = 0;
+    var say = $('#et-hint-say', el);
+    function show() {
+      var l = langs[at % langs.length];
+      say.textContent = ET.i18n.say('ui.changelang', l.code);
+      say.setAttribute('dir', l.dir);
+      say.setAttribute('lang', l.code);
+      el.classList.remove('in');
+      void el.offsetWidth;                        // restart the fade
+      el.classList.add('in');
+      place();
+      at += 1;
+    }
+    show();
+    // Someone who cannot read this language needs the rotation; someone who
+    // has asked for less motion just gets their own language, held still.
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var timer = setInterval(function () {
+        if (!document.body.contains(el)) { clearInterval(timer); return; }
+        show();
+      }, 2600);
+    }
+    window.addEventListener('resize', place);
+    el.addEventListener('click', function () { btn.click(); });
+  }
+
   // -------------------------------------------------------------- sheets
   function sheet(html) {
     var back = document.createElement('div');
@@ -261,7 +322,7 @@ window.ET = (function () {
      English title and heard Sindhi. Choosing a language picks both: English
      shows English films, اردو shows Urdu, سنڌي shows Sindhi. The library can
      still browse the others on purpose. */
-  var CONTENT = { en: 'eng', ur: 'urd', snd: 'snd' };
+  var CONTENT = { en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus' };
   function contentLang() {
     var ui = (ET.i18n && ET.i18n.current()) || 'en';
     return CONTENT[ui] || 'eng';

@@ -19,7 +19,8 @@
   var LANGS = [
     { code: 'en',  name: 'English', native: 'English', dir: 'ltr' },
     { code: 'ur',  name: 'Urdu',    native: 'اردو',    dir: 'rtl' },
-    { code: 'snd', name: 'Sindhi',  native: 'سنڌي',    dir: 'rtl' }
+    { code: 'snd', name: 'Sindhi',  native: 'سنڌي',    dir: 'rtl' },
+    { code: 'ps',  name: 'Pashto',  native: 'پښتو',    dir: 'rtl' }
   ];
 
   var STRINGS = {
@@ -202,6 +203,7 @@
       "act.listen": "Listen",
       "act.open": "Open",
       "act.visit": "Visit",
+      "ui.changelang": "Tap to change language",
       'ui.close': 'Close',
       'ui.cancel': 'Cancel',
       'ui.lang': 'Language',
@@ -351,6 +353,7 @@
       "act.listen": "سنیں",
       "act.open": "کھولیں",
       "act.visit": "جائیں",
+      "ui.changelang": "زبان بدلنے کے لیے دبائیں",
       'ui.close': 'بند کریں',
       'ui.cancel': 'منسوخ',
       'ui.lang': 'زبان',
@@ -500,10 +503,125 @@
       "act.listen": "ٻڌو",
       "act.open": "کوليو",
       "act.visit": "وڃو",
+      "ui.changelang": "ٻولي مٽائڻ لاءِ دٻايو",
       'ui.close': 'بند ڪريو',
       'ui.cancel': 'منسوخ',
       'ui.lang': 'ٻولي',
       'ui.needsnet': 'انٽرنيٽ گهرجي'
+    },
+    ps: {
+      "app.name": "کتابتون",
+      "app.tagline": "فلمونه، مقدس کلام او غږ — پرته له انټرنټه.",
+      "home.greet": "نن څه غواړئ؟",
+      "home.ready": "په {lang} کې {n} شیان د کتلو، لوستلو او اورېدلو لپاره",
+      "home.offline": "له دې څخه {n} انټرنټ ته اړتیا نلري",
+      "home.browse": "ټول وګورئ",
+      "home.browse.sub": "ټول {n} شیان",
+      "home.continue": "دوام ورکړئ",
+      "home.seeall": "ټول {n} وګورئ",
+      "home.share": "ماته ووایاست چې څنګه یې واستوم",
+      "home.share.sub": "له دې ځایه هر څه بل موبایل ته واستوئ",
+      "home.nearby": "نږدې موبایل ته واستوئ",
+      "home.nearby.sub": "دواړه موبایلونه په همدې پاڼه کې — نه تار، نه ایپ",
+      "home.other": "نورې ژبې",
+      "home.other.sub": "هر څه، ټول {n} شیان",
+      "home.help": "خوندي شوي شیان څنګه پرانیزم؟",
+      "home.help.sub": "فایلونه چېرته ځي او بیا یې څنګه ومومم",
+      "home.pick": "خپله ژبه وټاکئ",
+      "home.pick.sub": "تاسو دا هر وخت بدلولی شئ",
+      "lib.title": "په دې کارت کې ټول څه",
+      "lib.search": "په نوم ولټوئ",
+      "lib.all": "ټول",
+      "lib.count": "له ټولو {total} څخه {n} ښودل شوي",
+      "lib.none": "هېڅ شی ونه موندل شو",
+      "lib.none.sub": "لنډ لفظ ولیکئ، یا «ټول» کېکاږئ.",
+      "lib.kind": "ډول",
+      "lib.lang": "ژبه",
+      "lib.clear": "پاک کړئ",
+      "tab.home": "کور",
+      "tab.library": "کتابتون",
+      "tab.send": "لېږل",
+      "tab.guide": "لارښود",
+      "act.watch": "وګورئ",
+      "act.read": "ولولئ",
+      "act.listen": "واورئ",
+      "act.open": "پرانیزئ",
+      "act.visit": "ورشئ",
+      "type.film": "فلمونه",
+      "type.audio-bible": "غږیز بائبل",
+      "type.audio": "غږ",
+      "type.scripture": "مقدس کلام",
+      "type.historic": "زاړه نسخې",
+      "type.link": "انټرنټ ته اړتیا",
+      "item.play": "چالان کړئ",
+      "item.read": "ولولئ",
+      "item.save": "په خپل موبایل کې خوندي کړئ",
+      "item.share": "دا واستوئ",
+      "item.chapters": "برخې",
+      "item.chapter": "برخه {n}",
+      "item.files": "هغه شیان چې خوندي کېدای شي",
+      "item.offline": "پرته له انټرنټه کار کوي",
+      "item.online": "انټرنټ ته اړتیا لري",
+      "item.online.why": "دا شی په کارت کې خوندي نه دی. یوازې هغه وخت پرانیستل کېږي چې موبایل انټرنټ ولري.",
+      "item.spoken": "ژبه: {lang}",
+      "item.written": "لیکنه: {lang}",
+      "item.stream": "په انټرنټ چالانېږي",
+      "item.stream.read": "په انټرنټ پرانیستل کېږي",
+      "item.sd": "لږ ډېټا",
+      "item.hd": "HD",
+      "item.quality": "انځور",
+      "item.book": "کتاب",
+      "item.chapter.pick": "باب",
+      "item.next": "بله برخه",
+      "item.back": "شاته",
+      "item.more": "د خپروونکي له لوري نور",
+      "save.step.what": "وټاکئ چې څه خوندي کړئ",
+      "save.step.where": "وټاکئ چې چېرته کېښودل شي",
+      "save.step.go": "خوندي کېږي",
+      "save.step.done": "خوندي شو",
+      "save.folder": "فولډر وټاکئ",
+      "save.default": "په Downloads کې خوندي کړئ",
+      "save.stop": "ودروئ",
+      "save.done.title": "دا په دې موبایل کې دی",
+      "save.open": "اوس یې پرانیزئ",
+      "save.next": "نږدې موبایل ته واستوئ",
+      "save.fail": "دا بشپړ نه شو",
+      "save.retry": "بیا هڅه وکړئ",
+      "save.back": "شاته",
+      "share.sheet": "دا واستوئ",
+      "share.native": "لینک واستوئ",
+      "share.copy": "لینک کاپي کړئ",
+      "share.copied": "لینک کاپي شو",
+      "share.nearby": "فایل نږدې موبایل ته واستوئ",
+      "share.howto": "نورې لارې، ګام په ګام",
+      "nearby.title": "نږدې موبایل ته واستوئ",
+      "nearby.send": "واستوئ",
+      "nearby.receive": "ترلاسه کړئ",
+      "nearby.step.role": "دا کوم موبایل دی؟",
+      "nearby.step.pair": "دواړه موبایلونه ونښلوئ",
+      "nearby.step.pick": "وټاکئ چې څه واستوئ",
+      "nearby.step.move": "لېږل کېږي",
+      "nearby.step.done": "ترسره شو",
+      "nearby.code": "ستاسو کوډ",
+      "nearby.join": "ونښلوئ",
+      "nearby.waiting": "د بل موبایل انتظار…",
+      "nearby.connected": "ونښتل",
+      "nearby.sent": "واستول شو",
+      "nearby.got": "ترلاسه شو",
+      "nearby.again": "بل څه واستوئ",
+      "nearby.restart": "بیا پیل کړئ",
+      "nearby.fail": "ونه نښلېدل",
+      "nearby.accept": "ومنئ",
+      "nearby.decline": "نه، مننه",
+      "nearby.passon": "بل چا ته یې واستوئ",
+      "nearby.save": "خوندي کړئ",
+      "help.title": "خوندي شوي شیان پرانیستل",
+      "help.back": "کتابتون ته بېرته",
+      "ui.changelang": "ژبه بدلولو لپاره کېکاږئ",
+      "ui.close": "بند کړئ",
+      "ui.cancel": "لغوه",
+      "ui.lang": "ژبه",
+      "ui.needsnet": "انټرنټ ته اړتیا",
     }
   };
 
@@ -521,6 +639,13 @@
       });
     }
     return s;
+  }
+
+  /* One string in a language that is not the current one — for the hint that
+     cycles "tap to change language" through all of them. */
+  function say(key, code) {
+    var d = STRINGS[code];
+    return (d && d[key]) || STRINGS.en[key] || key;
   }
 
   function meta(code) {
@@ -638,6 +763,6 @@
     return s;
   }
 
-  ET.i18n = { t: t, h: h, tOr: tOr, tOrHTML: tOrHTML, set: set, apply: apply, onChange: onChange, picker: picker,
+  ET.i18n = { t: t, h: h, say: say, tOr: tOr, tOrHTML: tOrHTML, set: set, apply: apply, onChange: onChange, picker: picker,
               chosen: chosen, langs: LANGS, meta: meta, current: function () { return current || 'en'; } };
 })(window.ET);
