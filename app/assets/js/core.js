@@ -245,9 +245,10 @@ window.ET = (function () {
     el.innerHTML = '<span class="beak"></span><span class="say" id="et-hint-say"></span>';
     document.body.appendChild(el);
 
+    // Anchored to the viewport, because the header it points at is sticky.
     function place() {
       var r = btn.getBoundingClientRect();
-      el.style.top = (r.bottom + window.scrollY + 10) + 'px';
+      el.style.top = (r.bottom + 10) + 'px';
       // Centred under the button, then nudged back inside the screen.
       var left = r.left + r.width / 2 - el.offsetWidth / 2;
       left = Math.max(10, Math.min(left, document.documentElement.clientWidth - el.offsetWidth - 10));
@@ -257,7 +258,21 @@ window.ET = (function () {
 
     var langs = ET.i18n.langs, at = 0;
     var say = $('#et-hint-say', el);
+
+    /* It belongs to the top of the page, not to the reader's whole journey
+       down it. The moment they scroll, it goes; it comes back only if they
+       return to the top, where it is pointing at something they can see. */
+    function atTop() { return (window.scrollY || document.documentElement.scrollTop || 0) < 8; }
+    var parked = false;
+    function onScroll() {
+      var top = atTop();
+      if (!top && !parked) { parked = true; el.hidden = true; }
+      else if (top && parked) { parked = false; el.hidden = false; show(); }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+
     function show() {
+      if (parked) return;
       var l = langs[at % langs.length];
       say.textContent = ET.i18n.say('ui.changelang', l.code);
       say.setAttribute('dir', l.dir);
@@ -273,7 +288,11 @@ window.ET = (function () {
     // has asked for less motion just gets their own language, held still.
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       var timer = setInterval(function () {
-        if (!document.body.contains(el)) { clearInterval(timer); return; }
+        if (!document.body.contains(el)) {
+          clearInterval(timer);
+          window.removeEventListener('scroll', onScroll);
+          return;
+        }
         show();
       }, 2600);
     }

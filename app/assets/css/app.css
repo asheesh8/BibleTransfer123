@@ -326,7 +326,7 @@ html[dir="rtl"] .rowi .kicker { text-transform: none; letter-spacing: 0; font-si
    language they cannot read must be able to find, so it points at itself and
    says so in every language in turn. */
 .lang-hint {
-  position: absolute; z-index: 45;
+  position: fixed; z-index: 45;
   display: flex; align-items: center; gap: .4rem;
   padding: .55rem .85rem;
   border-radius: var(--r-pill);
