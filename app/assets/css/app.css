@@ -605,6 +605,7 @@ input::placeholder { color: var(--ink-soft); font-weight: 500; }
 .note.good { border-inline-start-color: var(--green); background: var(--green-wash); }
 .note.info { border-inline-start-color: var(--sky);   background: var(--sky-wash); }
 .note strong { display: block; margin-bottom: .15rem; }
+.note strong svg { width: 20px; height: 20px; display: inline-block; vertical-align: -4px; }
 
 /* --------------------------------------------------------------- sheets */
 
