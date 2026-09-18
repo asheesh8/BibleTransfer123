@@ -386,6 +386,42 @@ window.ET = (function () {
       '<p class="step-of">' + (ET.i18n ? ET.i18n.h('save.of', { done: at + 1, total: count }) : '') + '</p>';
   }
 
+  /* ---------------------------------------------------------- safety
+
+     A blob URL runs in the origin that made it. So a file arriving over
+     Nearby, opened with "Open it now", would execute as this app if it were
+     allowed to be HTML — reading its storage, its saved folder handle, its
+     service worker. A phone handed to a stranger for ten seconds is enough.
+
+     So the type is decided here from the file extension, never from what the
+     sender claimed, and anything not on this list is handed over as a plain
+     download that no browser will execute. */
+  var SAFE_TYPES = {
+    mp4: 'video/mp4', m4v: 'video/mp4', webm: 'video/webm', mov: 'video/quicktime',
+    mp3: 'audio/mpeg', m4a: 'audio/mp4', ogg: 'audio/ogg', oga: 'audio/ogg', wav: 'audio/wav',
+    jpg: 'image/jpeg', jpeg: 'image/jpeg', png: 'image/png', gif: 'image/gif', webp: 'image/webp',
+    pdf: 'application/pdf', txt: 'text/plain', epub: 'application/epub+zip', zip: 'application/zip'
+  };
+  function safeType(name) {
+    var m = /\.([a-z0-9]{1,5})$/i.exec(String(name || ''));
+    return (m && SAFE_TYPES[m[1].toLowerCase()]) || 'application/octet-stream';
+  }
+  /* Can this be opened in a tab without handing the opener our origin? */
+  function openable(name) {
+    var t = safeType(name);
+    return /^(video|audio|image)\//.test(t) || t === 'application/pdf' || t === 'text/plain';
+  }
+
+  /* Catalogue links land in href. esc() makes them safe as text but leaves the
+     scheme alone, so `javascript:` would still run on tap. Only ordinary web
+     links and relative paths get through. */
+  function safeUrl(u) {
+    u = String(u == null ? '' : u).trim();
+    if (/^(https?:|mailto:)/i.test(u)) return u;
+    if (/^[a-z][a-z0-9+.-]*:/i.test(u)) return '';     // javascript:, data:, file:, …
+    return u;                                           // relative path on the card
+  }
+
   function typeIcon(t) {
     return { film: 'film', 'audio-bible': 'book', audio: 'wave',
              scripture: 'book', historic: 'scan', link: 'link' }[t] || 'link';
@@ -446,6 +482,7 @@ window.ET = (function () {
     $: $, $$: $$, theme: theme, library: library, byId: byId, header: header,
     sheet: sheet, typeIcon: typeIcon, thumb: thumb, stepper: stepper,
     tabbar: tabbar, row: row, poster: poster,
+    safeType: safeType, openable: openable, safeUrl: safeUrl,
     contentLang: contentLang, inMyLanguage: inMyLanguage,
     BOOKS: BOOKS, pad: pad, bookName: bookName, audioBibleUrl: audioBibleUrl
   };

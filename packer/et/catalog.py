@@ -5,7 +5,7 @@ resources in Sindhi and Urdu). Nothing here is specific to that file beyond
 `from_gawahi()` — swap that one function to pack a different library.
 """
 import dataclasses, json, pathlib
-from .util import safe_name, is_file_url
+from .util import safe_name, safe_id, is_file_url, fetchable
 
 # Roles, in the order a resource is worth packing. `cover` is tiny and always
 # worth it; `view` is what the app plays or reads; `download` is the bundle a
@@ -65,11 +65,12 @@ def assets_for(r):
     reach them.
     """
     rid = r["id"]
+    folder = safe_id(rid)        # the id names a folder on the card
     out = []
 
     if r.get("cover"):
         ext = pathlib.PurePosixPath(r["cover"].split("?")[0]).suffix or ".jpg"
-        out.append(Asset(rid, "cover", r["cover"], f"{rid}/cover{ext}", "Cover"))
+        out.append(Asset(rid, "cover", r["cover"], f"{folder}/cover{ext}", "Cover"))
 
     play = r.get("play") or {}
     kind = play.get("kind")
@@ -77,29 +78,29 @@ def assets_for(r):
     if kind == "chapters":
         for it in play["items"]:
             out.append(Asset(rid, "view", play["base"] + it["file"],
-                             f"{rid}/{safe_name(it['file'])}",
+                             f"{folder}/{safe_name(it['file'])}",
                              label=it["title"], n=it["n"], title=it["title"]))
     elif kind == "file":
         for q in ("hd", "sd"):
             if play.get(q):
                 out.append(Asset(rid, "view", play[q],
-                                 f"{rid}/{q}-{safe_name(play[q])}", label=q.upper()))
+                                 f"{folder}/{q}-{safe_name(play[q])}", label=q.upper()))
     elif kind == "audio-collection" and play.get("sample"):
         out.append(Asset(rid, "view", play["sample"],
-                         f"{rid}/{safe_name(play['sample'])}", label="Audio"))
+                         f"{folder}/{safe_name(play['sample'])}", label="Audio"))
     # audio-bible chapters are generated from a fileset pattern — 1,189 files per
     # Bible. They are packed through their download ZIP instead, below.
 
     read = r.get("read") or {}
     if read.get("url"):
         out.append(Asset(rid, "view", read["url"],
-                         f"{rid}/{safe_name(read['url'])}", label="Read"))
+                         f"{folder}/{safe_name(read['url'])}", label="Read"))
 
     for d in (r.get("downloads") or []):
-        if not is_file_url(d["url"]):
-            continue                      # a landing page, not a file
+        if not is_file_url(d["url"]) or not fetchable(d["url"]):
+            continue                      # a landing page, or somewhere we will not go
         out.append(Asset(rid, "download", d["url"],
-                         f"{rid}/{safe_name(d['url'])}", label=d["label"]))
+                         f"{folder}/{safe_name(d['url'])}", label=d["label"]))
 
     # Two links can resolve to the same file — a historic scan's `read` PDF is
     # usually also its only download. Keep the first, which carries the better role.

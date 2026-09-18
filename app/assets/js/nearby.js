@@ -548,8 +548,13 @@
       on('again', pick);
     } else if (m.t === 'file') {
       var f = S.incoming.files[m.i];
-      label(f.name, m.i, S.incoming.files.length);
-      cur = { i: m.i, name: f.name, type: f.type, parts: [], q: Promise.resolve(), writer: null };
+      // The sender chose this name. Strip it back to a bare filename before it
+      // reaches the filesystem, and decide the type from the extension rather
+      // than from anything the sender said it was.
+      var safeName = ET.save.clean(f.name) || 'file';
+      label(safeName, m.i, S.incoming.files.length);
+      cur = { i: m.i, name: safeName, type: ET.safeType(safeName),
+              parts: [], q: Promise.resolve(), writer: null };
       if (S.dir) {
         var c = cur;
         c.q = S.dir.getFileHandle(f.name, { create: true }).then(function (fh) {
@@ -562,7 +567,7 @@
       S.writes = (S.writes || Promise.resolve()).then(function () {
         return c2.q.then(function () {
           if (c2.writer) return c2.writer.close().then(function () { S.got.push({ name: c2.name, handle: c2.handle }); });
-          S.got.push({ name: c2.name, blob: new Blob(c2.parts, { type: c2.type || '' }) });
+          S.got.push({ name: c2.name, blob: new Blob(c2.parts, { type: c2.type }) });
         });
       });
     } else if (m.t === 'end') {
@@ -611,10 +616,17 @@
 
   function received() {
     var rows = S.got.map(function (g, i) {
+      // Open in a tab only for things a browser shows rather than runs.
+      // Everything else is save-only — a blob URL opened from here would carry
+      // this app's origin with it.
       var open = g.blob
-        ? '<a class="btn green" target="_blank" rel="noopener" href="' + URL.createObjectURL(g.blob) + '">' + ET.icon('play') + h('save.open') + '</a>' +
+        ? (ET.openable(g.name)
+            ? '<a class="btn green" target="_blank" rel="noopener" href="' + URL.createObjectURL(g.blob) + '">' + ET.icon('play') + h('save.open') + '</a>'
+            : '') +
           '<a class="btn ghost" download="' + ET.esc(g.name) + '" href="' + URL.createObjectURL(g.blob) + '">' + ET.icon('save') + h('nearby.save') + '</a>'
-        : '<button class="btn green" data-open="' + i + '">' + ET.icon('play') + h('save.open') + '</button>';
+        : (ET.openable(g.name)
+            ? '<button class="btn green" data-open="' + i + '">' + ET.icon('play') + h('save.open') + '</button>'
+            : '');
       return '<div class="card" style="padding:.9rem"><p class="latin" style="font-weight:800;margin:0 0 .6rem">' +
         ET.esc(g.name) + '</p><div class="btn-row">' + open + '</div></div>';
     }).join('');

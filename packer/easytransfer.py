@@ -14,6 +14,7 @@ import argparse, collections, dataclasses, datetime, pathlib, shutil, sys, textw
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from et import build as B, catalog as C, fetch as F, profiles as P
+from et import util as U
 from et.util import human
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -242,7 +243,11 @@ def cmd_verify(args):
 
     missing, wrong, ok = [], [], 0
     for e in m["entries"]:
-        p = out / B.MEDIA_DIRNAME / e["rel"]
+        try:
+            p = U.inside(out / B.MEDIA_DIRNAME, e["rel"])
+        except ValueError:
+            wrong.append((e, -1))        # manifest points outside the card
+            continue
         if not p.exists():
             missing.append(e)
         elif e["bytes"] and p.stat().st_size != e["bytes"]:

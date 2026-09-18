@@ -1,5 +1,5 @@
 """Small shared helpers."""
-import hashlib, re, unicodedata, urllib.parse
+import hashlib, pathlib, re, unicodedata, urllib.parse
 
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
                     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"}
@@ -50,3 +50,39 @@ def safe_name(url, fallback="file"):
 
 def is_file_url(url):
     return url.lower().split("?")[0].endswith(FILE_EXT)
+
+
+def safe_id(rid, fallback="item"):
+    """A resource id is used as a folder name on the card, so it is not allowed
+    to contain a path. A catalogue with an id of `../../../../tmp/x` otherwise
+    writes straight out of the card and into the filesystem."""
+    rid = re.sub(r"[^A-Za-z0-9._-]", "-", str(rid or "")).strip("-.")
+    return rid[:80] or fallback
+
+
+def inside(root, *parts):
+    """Resolve a path under `root` and refuse anything that climbs out."""
+    root = pathlib.Path(root).resolve()
+    p = (root.joinpath(*parts)).resolve()
+    if p != root and root not in p.parents:
+        raise ValueError(f"path escapes {root}: {p}")
+    return p
+
+
+ALLOWED_SCHEMES = ("http", "https")
+BLOCKED_HOSTS = re.compile(
+    r"^(localhost|127\.|0\.|10\.|192\.168\.|169\.254\.|172\.(1[6-9]|2\d|3[01])\.|\[?::1\]?)",
+    re.I)
+
+
+def fetchable(url):
+    """Only ordinary public web URLs. A catalogue is data, and data must not be
+    able to point the packer at the machine it runs on or at a cloud metadata
+    service."""
+    try:
+        u = urllib.parse.urlparse(url)
+    except Exception:
+        return False
+    if u.scheme.lower() not in ALLOWED_SCHEMES:
+        return False
+    return not BLOCKED_HOSTS.match(u.hostname or "")

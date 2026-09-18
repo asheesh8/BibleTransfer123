@@ -6,7 +6,7 @@ usually run on. Downloads resume — a 2.1 GB film that dies at 80% picks up whe
 it stopped rather than starting over.
 """
 import concurrent.futures, json, os, pathlib, threading, time, urllib.error, urllib.request
-from .util import UA, human
+from .util import UA, human, inside, fetchable
 
 TIMEOUT = 30
 CHUNK = 1 << 18          # 256 KB
@@ -95,7 +95,14 @@ class Result:
 
 
 def _fetch_one(asset, root, retries=3):
-    dest = pathlib.Path(root) / asset.rel
+    # A catalogue is untrusted input: neither the URL nor the path it lands in
+    # is taken on trust.
+    if not fetchable(asset.url):
+        return Result(asset, "fail", 0, "refused: not a public http(s) URL")
+    try:
+        dest = inside(root, asset.rel)
+    except ValueError as e:
+        return Result(asset, "fail", 0, str(e))
     part = dest.with_suffix(dest.suffix + ".part")
 
     # A file only ever gets its final name by the rename at the end of a

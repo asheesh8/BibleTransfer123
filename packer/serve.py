@@ -37,8 +37,41 @@ mimetypes.add_type("application/epub+zip", ".epub")
 #   GET  /signal/<room>/<me>?wait=25  collect messages, waiting up to 25 s
 MAIL = {}
 MAIL_LOCK = threading.Condition()
-MAIL_TTL = 600
 NAME = re.compile(r"^[A-Za-z0-9_-]{1,40}$")
+
+# This server listens on the whole network, and on a village Wi-Fi that network
+# is whoever is in range. A pairing mailbox therefore has to survive strangers:
+#
+#  · caps, so nobody can fill a Raspberry Pi's memory from a phone — 300 rooms
+#    of 60 KB arrived in a tenth of a second during testing, unbounded;
+#  · a short life, because a handshake is used within seconds;
+#  · a per-address rate limit, because six-digit codes can otherwise be
+#    enumerated fast enough to sit on somebody else's pairing.
+#
+# None of this makes the mailbox private — see PAIRING PRIVACY at the bottom.
+MAIL_TTL = 120
+MAX_ROOMS = 256
+MAX_PER_ROOM = 32
+RATE_BURST = 60           # requests per address per window
+RATE_WINDOW = 10.0
+
+HITS = {}
+HITS_LOCK = threading.Lock()
+
+
+def _allowed(ip):
+    now = time.time()
+    with HITS_LOCK:
+        q = HITS.setdefault(ip, [])
+        while q and now - q[0] > RATE_WINDOW:
+            q.pop(0)
+        if len(q) >= RATE_BURST:
+            return False
+        q.append(now)
+        if len(HITS) > 512:
+            for k in [k for k, v in HITS.items() if not v or now - v[-1] > 300]:
+                HITS.pop(k, None)
+    return True
 
 
 def _expire():
@@ -46,6 +79,10 @@ def _expire():
     for k in list(MAIL):
         MAIL[k] = [m for m in MAIL[k] if now - m[0] < MAIL_TTL]
         if not MAIL[k]:
+            del MAIL[k]
+    # Still too many? Drop the oldest rooms rather than grow without limit.
+    if len(MAIL) > MAX_ROOMS:
+        for k in sorted(MAIL, key=lambda k: MAIL[k][-1][0])[:len(MAIL) - MAX_ROOMS]:
             del MAIL[k]
 
 
@@ -65,6 +102,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
     def do_GET(self):
         u, parts = self._route()
+        if u.path.startswith("/signal/") and not _allowed(self.client_address[0]):
+            return self._json(429, {"error": "slow down"})
         if u.path == "/signal/ping":
             return self._json(200, {"ok": True, "kind": "local"})
         if len(parts) == 4 and parts[1] == "signal":
@@ -84,6 +123,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
     def do_POST(self):
         u, parts = self._route()
+        if u.path.startswith("/signal/") and not _allowed(self.client_address[0]):
+            return self._json(429, {"error": "slow down"})
         if len(parts) == 4 and parts[1] == "signal":
             room, to = parts[2], parts[3]
             if not (NAME.match(room) and NAME.match(to)):
@@ -96,7 +137,11 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             except Exception:
                 return self._json(400, {"error": "json"})
             with MAIL_LOCK:
-                MAIL.setdefault(f"{room}:{to}", []).append((time.time(), msg))
+                box = MAIL.setdefault(f"{room}:{to}", [])
+                if len(box) >= MAX_PER_ROOM:
+                    box.pop(0)                   # a stale handshake, not a queue
+                box.append((time.time(), msg))
+                _expire()
                 MAIL_LOCK.notify_all()
             return self._json(200, {"ok": True})
         self.send_error(405)
@@ -168,6 +213,16 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             sys.stderr.write("  404  %s\n" % (args[0] if args else ""))
 
 
+    def list_directory(self, path):
+        """No listings. A folder without an index is simply not there.
+
+        The default handler prints every filename in it, which on a card hands
+        a stranger on the same Wi-Fi a map of the whole library and its
+        manifest for free."""
+        self.send_error(404, "No listing")
+        return None
+
+
 class Server(socketserver.ThreadingTCPServer):
     allow_reuse_address = True
     daemon_threads = True
@@ -221,6 +276,11 @@ def main():
         print(f"    this computer   http://localhost:{port}")
         print(f"    other devices   http://{lan_address()}:{port}")
         print(f"  (ctrl-c to stop)")
+        print()
+        print("  PAIRING PRIVACY: anyone on this network can read and write the")
+        print("  handshake mailbox if they know the 6-digit code. The file itself")
+        print("  never passes through here — it goes phone to phone — but do not")
+        print("  treat a code as a secret on a network you do not trust.")
         try:
             httpd.serve_forever()
         except KeyboardInterrupt:

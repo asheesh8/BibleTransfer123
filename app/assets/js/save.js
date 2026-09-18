@@ -240,7 +240,7 @@
       S.ctrl = null;
       var last = S.done[S.done.length - 1] || {};
       var openBtn = '';
-      if (last.blob) {
+      if (last.blob && ET.openable(S.jobs[S.jobs.length - 1].name)) {
         S.blobUrl = URL.createObjectURL(last.blob);
         openBtn = '<a class="btn green block" target="_blank" rel="noopener" href="' + S.blobUrl + '">' +
           ET.icon('play') + h('save.open') + '</a>';
@@ -323,7 +323,9 @@
         }
         return pump().then(function () {
           if (w) return w.stream.close().then(function () { return { handle: w.handle }; });
-          var blob = new Blob(parts, { type: res.headers.get('content-type') || '' });
+          // Decided from the filename, not from the server's header: a blob
+          // URL we later open would run in this app's origin if it were HTML.
+          var blob = new Blob(parts, { type: ET.safeType(job.name) });
           var a = document.createElement('a');
           a.href = URL.createObjectURL(blob);
           a.download = job.name;

@@ -137,7 +137,7 @@
     if (links.length) {
       html += '<p class="flabel" style="margin-top:1.6rem">' + h('item.more') + '</p>' +
         '<div class="stack">' + links.map(function (l) {
-          return '<a class="tile" href="' + ET.esc(l.url) + '" target="_blank" rel="noopener">' +
+          return '<a class="tile" href="' + ET.esc(ET.safeUrl(l.url)) + '" target="_blank" rel="noopener">' +
             '<span class="ico">' + ET.icon('link') + '</span>' +
             '<span><span class="t latin">' + ET.esc(l.label) + '</span></span>' +
             '<span class="chev flip">' + ET.icon('chev') + '</span></a>';
