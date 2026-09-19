@@ -6,9 +6,9 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": [
         "packer/serve.py",
-        "8110"
+        "8120"
       ],
-      "port": 8110
+      "port": 8120
     }
   ]
 }

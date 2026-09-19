@@ -5,7 +5,7 @@ then fetch the files in a way that survives the connection a build like this is
 usually run on. Downloads resume — a 2.1 GB film that dies at 80% picks up where
 it stopped rather than starting over.
 """
-import concurrent.futures, json, os, pathlib, threading, time, urllib.error, urllib.request
+import concurrent.futures, json, os, pathlib, shutil, threading, time, urllib.error, urllib.request
 from .util import UA, human, inside, fetchable
 
 TIMEOUT = 30
@@ -65,7 +65,9 @@ def head_size(url):
 
 
 def probe(assets, cache, workers=8, on_each=None):
-    """Fill in .nbytes on every asset. Cached URLs cost nothing."""
+    """Fill in .nbytes on every asset. Cached URLs cost nothing, and a file
+    already on disk was measured when the catalogue was imported."""
+    assets = [a for a in assets if not a.src]
     todo = [a for a in assets if cache.get(a.url) is None]
     for a in assets:
         cached = cache.get(a.url)
@@ -94,7 +96,32 @@ class Result:
         self.asset, self.status, self.nbytes, self.error = asset, status, nbytes, error
 
 
+def _copy_one(asset, root):
+    """A language imported from a folder is already on this machine, so the
+    build is a copy, not a download — 24 GB that never touches the network."""
+    try:
+        dest = inside(root, asset.rel)
+    except ValueError as e:
+        return Result(asset, "fail", 0, str(e))
+    src = pathlib.Path(asset.src)
+    if not src.is_file():
+        return Result(asset, "fail", 0, "source file is gone")
+    if dest.exists() and dest.stat().st_size == src.stat().st_size:
+        return Result(asset, "have", dest.stat().st_size)
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    tmp = dest.with_suffix(dest.suffix + ".part")
+    try:
+        shutil.copyfile(src, tmp)
+        tmp.replace(dest)
+        return Result(asset, "ok", dest.stat().st_size)
+    except Exception as e:
+        tmp.unlink(missing_ok=True)
+        return Result(asset, "fail", 0, f"{type(e).__name__}: {e}")
+
+
 def _fetch_one(asset, root, retries=3):
+    if asset.src:
+        return _copy_one(asset, root)
     # A catalogue is untrusted input: neither the URL nor the path it lands in
     # is taken on trust.
     if not fetchable(asset.url):

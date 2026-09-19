@@ -718,6 +718,25 @@ html[dir="rtl"] .meter > span.busy { animation-direction: reverse; }
   color: var(--ink-soft); font-size: .92rem;
 }
 
+/* Chinese sets in the reader's own system face — Simplified for Mandarin,
+   Traditional for Cantonese — and wants a little more line height than Latin
+   because the characters are dense. */
+html[lang="cmn"] body,
+html[lang="yue"] body {
+  font-family: "PingFang SC", "PingFang HK", "Hiragino Sans GB", "Microsoft YaHei",
+               "Noto Sans CJK SC", "Source Han Sans SC", system-ui, sans-serif;
+  line-height: 1.75;
+}
+html[lang="yue"] body { font-family: "PingFang HK", "PingFang TC", "Microsoft JhengHei",
+               "Noto Sans CJK TC", "Source Han Sans TC", system-ui, sans-serif; }
+/* Chinese has no letter case and no word spaces: uppercase tracking on a label
+   just pushes the characters apart. */
+html[lang="cmn"] .kicker, html[lang="yue"] .kicker,
+html[lang="cmn"] .flabel, html[lang="yue"] .flabel,
+html[lang="cmn"] .eyebrow, html[lang="yue"] .eyebrow {
+  text-transform: none; letter-spacing: 0; font-size: .82rem;
+}
+
 /* ============================================================ Arabic script
 
    Urdu and Sindhi join their letters. Several defaults that are invisible in

@@ -71,6 +71,17 @@ def card_catalog(catalog, chosen, profile, all_index, sizes=None):
                     return f"{MEDIA_HREF}/{a.rel}"
             return None
 
+        # A source entry is either a URL to fetch or a file already on disk;
+        # both are looked up by the same key.
+        def ref(entry, key="url"):
+            if isinstance(entry, dict) and entry.get("local"):
+                return "local:" + entry["local"]
+            return entry.get(key) if isinstance(entry, dict) else entry
+
+        # Imported languages have no public URL to fall back on: if the files
+        # were not packed, there is nothing the web edition can play.
+        card_only = bool(r.get("source_root"))
+
         cover = next((f"{MEDIA_HREF}/{a.rel}" for a in mine.values()
                       if a.role == "cover"), None)
 
@@ -82,6 +93,8 @@ def card_catalog(catalog, chosen, profile, all_index, sizes=None):
                 items = [{"n": a.n, "title": a.title, "file": f"{MEDIA_HREF}/{a.rel}"}
                          for a in sorted(mine.values(), key=lambda x: x.n)
                          if a.role == "view" and a.n]
+            elif card_only:
+                items = []
             else:
                 items = [{"n": it["n"], "title": it["title"],
                           "file": secure(src["base"] + it["file"])} for it in src["items"]]
@@ -99,8 +112,10 @@ def card_catalog(catalog, chosen, profile, all_index, sizes=None):
                 play = {"kind": "video", "file": sd or hd}
                 if hd and sd:
                     play["hd"], play["sd"] = hd, sd
-        elif kind == "audio-collection" and src.get("sample"):
-            play = {"kind": "audio", "file": local(src["sample"]) or secure(src["sample"])}
+        elif kind == "audio-collection" and (src.get("sample") or src.get("local")):
+            f = local(ref(src)) if src.get("local") else (local(src["sample"]) or secure(src["sample"]))
+            if f:
+                play = {"kind": "audio", "file": f}
         elif kind == "audio-bible":
             # Chapter URLs are generated from the fileset in the app: 1,189 of
             # them for a full Bible is not something to list in a catalogue.
@@ -108,8 +123,11 @@ def card_catalog(catalog, chosen, profile, all_index, sizes=None):
                     "version": src["version"], "testaments": src["testaments"]}
 
         read = None
-        if (r.get("read") or {}).get("url"):
-            read = {"kind": "pdf", "file": local(r["read"]["url"]) or secure(r["read"]["url"])}
+        rd = r.get("read") or {}
+        if rd.get("url") or rd.get("local"):
+            f = local(ref(rd)) or (None if card_only else secure(rd.get("url")))
+            if f:
+                read = {"kind": "pdf", "file": f}
 
         # ---- files: what the reader can save.
         files = []
@@ -117,6 +135,8 @@ def card_catalog(catalog, chosen, profile, all_index, sizes=None):
             files = [{"label": a.label or "Download",
                       "file": f"{MEDIA_HREF}/{a.rel}", "bytes": a.nbytes}
                      for a in mine.values() if a.role in ("view", "download") and not a.n]
+        elif card_only:
+            files = []            # nothing the web edition can offer
         else:
             if kind == "file":
                 for q in ("sd", "hd"):
@@ -146,8 +166,10 @@ def card_catalog(catalog, chosen, profile, all_index, sizes=None):
                 uniq.append(f)
         files = uniq
 
+        # Only entries that name a URL can be a link; a file on disk cannot.
         links = [{"label": d["label"], "url": secure(d["url"])}
-                 for d in (r.get("downloads") or []) if not is_file_url(d["url"])]
+                 for d in (r.get("downloads") or [])
+                 if d.get("url") and not is_file_url(d["url"])]
 
         out.append({
             "id": rid, "lang": r["lang"], "type": r["type"],
@@ -163,6 +185,9 @@ def card_catalog(catalog, chosen, profile, all_index, sizes=None):
             # and one with none falls back to the type icon.
             "coverOnline": secure(r.get("cover")) or None,
             "offline": offline,
+            # True when the only copies are on a card, so the app can say that
+            # rather than implying a connection would help.
+            "cardOnly": card_only and not offline,
             "play": play, "read": read, "files": files, "links": links,
             "source": r.get("source"),
         })

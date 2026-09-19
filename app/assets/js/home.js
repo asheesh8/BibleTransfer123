@@ -29,14 +29,18 @@
     var out = '';
 
     // ---- greeting
+    var ready = R.filter(function (r) { return r.play || r.read; }).length;
+    var onlyCard = R.filter(function (r) { return r.cardOnly; }).length;
+    // A language whose files exist only on a card has nothing to stream, and
+    // saying "0 to watch" above a full shelf is worse than saying where it is.
+    var line = onCard ? h('home.offline', { n: offline, total: R.length })
+      : (ready === 0 && onlyCard)
+        ? h('home.oncard', { n: R.length })
+        : h('home.ready', { n: ready, lang: L.native || L.name || '' });
     out += '<header class="greet">' +
       '<p class="eyebrow">' + h('home.greet') + '</p>' +
       '<h1>' + ET.esc(L.native || L.name || '') + '</h1>' +
-      '<p class="muted">' + (onCard
-        ? h('home.offline', { n: offline, total: R.length })
-        : h('home.ready', { n: R.filter(function (r) { return r.play || r.read; }).length,
-                            // A language names itself in its own script.
-                            lang: L.native || L.name || '' })) + '</p></header>';
+      '<p class="muted">' + line + '</p></header>';
 
     // ---- carry on
     var last = lastOpened();

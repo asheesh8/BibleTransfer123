@@ -5,7 +5,7 @@ resources in Sindhi and Urdu). Nothing here is specific to that file beyond
 `from_gawahi()` — swap that one function to pack a different library.
 """
 import dataclasses, json, pathlib
-from .util import safe_name, safe_id, is_file_url, fetchable
+from .util import safe_name, safe_local, safe_id, is_file_url, fetchable
 
 # Roles, in the order a resource is worth packing. `cover` is tiny and always
 # worth it; `view` is what the app plays or reads; `download` is the bundle a
@@ -23,6 +23,7 @@ class Asset:
     n: int = 0          # chapter number, for chaptered films
     title: str = ""     # chapter title
     nbytes: int = 0     # filled in by sizes.probe(); 0 means unknown
+    src: str = ""       # a file already on this machine, to copy not download
 
     @property
     def key(self):
@@ -56,6 +57,21 @@ def load(path):
     return base
 
 
+def _local(r, rel, role, folder, label="", n=0, title=""):
+    """An asset that already exists on this machine.
+
+    `url` carries a `local:` reference so everything downstream — the packed
+    catalogue's lookups, the manifest — can keep matching on one field, while
+    `src` says where to copy it from.
+    """
+    src = pathlib.Path(r["source_root"]) / rel
+    return Asset(r["id"], role, "local:" + rel,
+                 f"{folder}/{safe_local(pathlib.PurePath(rel).name)}",
+                 label=label, n=n, title=title,
+                 nbytes=src.stat().st_size if src.exists() else 0,
+                 src=str(src))
+
+
 def assets_for(r):
     """Every packable file a resource exposes, as Assets.
 
@@ -74,6 +90,27 @@ def assets_for(r):
 
     play = r.get("play") or {}
     kind = play.get("kind")
+
+    # A language imported from a folder already has its files; nothing to fetch.
+    if r.get("source_root"):
+        if kind == "chapters":
+            for it in play["items"]:
+                out.append(_local(r, it["local"], "view", folder,
+                                  label=it.get("title", ""), n=it["n"], title=it.get("title", "")))
+        elif kind == "audio-collection" and play.get("local"):
+            out.append(_local(r, play["local"], "view", folder, label="Audio"))
+        if (r.get("read") or {}).get("local"):
+            out.append(_local(r, r["read"]["local"], "view", folder, label="Read"))
+        for d in (r.get("downloads") or []):
+            if d.get("local"):
+                out.append(_local(r, d["local"], "download", folder, label=d.get("label", "Download")))
+        seen, uniq = set(), []
+        for a in out:
+            if a.rel in seen:
+                continue
+            seen.add(a.rel)
+            uniq.append(a)
+        return uniq
 
     if kind == "chapters":
         for it in play["items"]:

@@ -47,7 +47,7 @@
     var kicker = t('type.' + r.type);
     var verb = r.play ? t('act.watch') : r.read ? t('act.read') : t('act.open');
     if (r.type === 'audio' || r.type === 'audio-bible') verb = t('act.listen');
-    if (!r.play && !r.read && !(r.files || []).length) verb = t('act.visit');
+    if (!r.play && !r.read && !(r.files || []).length) verb = r.cardOnly ? t('act.oncard') : t('act.visit');
     var bits = [r.langName, r.duration || r.stats, r.org].filter(Boolean);
     return ET.row(r, {
       kicker: kicker + (r.offline ? ' · ' + t('item.offline') : ''),

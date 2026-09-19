@@ -56,7 +56,8 @@ def safe_id(rid, fallback="item"):
     """A resource id is used as a folder name on the card, so it is not allowed
     to contain a path. A catalogue with an id of `../../../../tmp/x` otherwise
     writes straight out of the card and into the filesystem."""
-    rid = re.sub(r"[^A-Za-z0-9._-]", "-", str(rid or "")).strip("-.")
+    rid = re.sub(r"[^A-Za-z0-9._-]", "-", str(rid or ""))
+    rid = re.sub(r"-{2,}", "-", rid).strip("-.")
     return rid[:80] or fallback
 
 
@@ -86,3 +87,17 @@ def fetchable(url):
     if u.scheme.lower() not in ALLOWED_SCHEMES:
         return False
     return not BLOCKED_HOSTS.match(u.hostname or "")
+
+
+def safe_local(name, fallback="file"):
+    """Clean a filename that a person already chose.
+
+    `safe_name` is for CDN URLs and mangles anything readable; these names —
+    "01 - The Beginning.mp4" — are the point, so only what a card filesystem
+    genuinely refuses is removed, and spaces stay.
+    """
+    name = unicodedata.normalize("NFKC", str(name))
+    name = re.sub(r'[<>:"/\\|?*]', "", name)
+    name = "".join(c for c in name if ord(c) >= 32)
+    name = re.sub(r"\s+", " ", name).strip(" .")
+    return name[:120] or fallback

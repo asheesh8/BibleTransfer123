@@ -69,8 +69,10 @@ def _load(args):
 
 def _sized(cat, assets, args, needed_ids=None):
     """Probe every asset we might pack, with a progress line."""
+    # Files already on this machine were measured when they were imported;
+    # only URLs need asking about.
     flat = [a for rid, lst in assets.items() for a in lst
-            if needed_ids is None or rid in needed_ids]
+            if (needed_ids is None or rid in needed_ids) and not a.src]
     cache = F.SizeCache(CACHE)
     pending = sum(1 for a in flat if cache.get(a.url) is None)
     if pending:

@@ -11,6 +11,7 @@
 
   if (!r) {
     ET.header();
+    ET.tabbar();                 // a dead end still needs a way out
     ET.$('#item').innerHTML =
       '<div class="card center"><h2>Not in this library</h2>' +
       '<p class="muted">That item is not here.</p>' +
@@ -102,7 +103,9 @@
       ? '<span class="chip offline">' + ET.icon('check') + h('item.offline') + '</span>'
       : (r.play || r.read)
         ? '<span class="chip stream">' + ET.icon('wifi') + h(r.play ? 'item.stream' : 'item.stream.read') + '</span>'
-        : '<span class="chip online">' + ET.icon('warn') + h('ui.needsnet') + '</span>';
+        : r.cardOnly
+          ? '<span class="chip online">' + ET.icon('card') + h('item.cardonly') + '</span>'
+          : '<span class="chip online">' + ET.icon('warn') + h('ui.needsnet') + '</span>';
 
     // What language this is actually in, before anyone presses play.
     var tongue = '<span class="chip lang">' + ET.icon('globe') +
@@ -121,8 +124,11 @@
       '</div>';
 
     if (!r.offline && !r.play && !r.read) {
-      html += '<div class="note" style="margin-top:1rem"><strong>' + h('item.online') + '</strong>' +
-        '<p style="margin:.2rem 0 0">' + h('item.online.why') + '</p></div>';
+      // A file that only exists on a card is not waiting for a connection.
+      html += '<div class="note" style="margin-top:1rem"><strong>' +
+        h(r.cardOnly ? 'item.cardonly' : 'item.online') + '</strong>' +
+        '<p style="margin:.2rem 0 0">' +
+        h(r.cardOnly ? 'item.cardonly.why' : 'item.online.why') + '</p></div>';
     }
 
     html += reader();
