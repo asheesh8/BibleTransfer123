@@ -63,6 +63,18 @@ LANGUAGES = {
         "historic_prefix": "Swahili-",
         "historic_exclude": {"Swahili-Giryama-1892-Luke"},
     },
+    "hin": {
+        "name": "Hindi", "native": "हिन्दी", "script": "deva", "dir": "ltr", "font": "devanagari",
+        "speakers": "~341 million", "region": "India",
+        "blurb": "One of India's principal languages, written in the Devanagari script.",
+        "isos": ["hin"],
+        "historic": "hindi",
+        "historic_prefix": "Hindi-",
+        "historic_extra": {"Hindustani-Urdu-1878-Bible-Kitab-i-Muqaddas-Arabic"},
+        "bible_native": {"HINOLD": "सरल हिन्दी बाइबल"},
+        "online_native": "ऑनलाइन पढ़ने के लिए हिन्दी बाइबलें",
+        "group_native": {"Moksh: Story": "मोक्ष की कहानियाँ"},
+    },
 }
 
 # Publishers whose pages are worth listing but cannot be downloaded.
@@ -123,6 +135,27 @@ def _guz_jesus():
         {"n": i + 1, "title": titlecase(slug),
          "file": f"{base}guz_jesus_chapter_{i+1:02d}_{slug}_1_jf61{i+1:02d}_0_0_low.mp4"}
         for i, slug in enumerate(JESUS_SLUGS)]}
+
+def _hindi_jesus():
+    from et.slugs import JESUS_SLUGS, titlecase
+    base = f"{V}/Jesus/chapters/hin_hindi/"
+    return {"kind": "chapters", "base": "", "items": [
+        {"n": i + 1, "title": titlecase(slug),
+         "file": f"{base}hin_jesus_chapter_{i+1:02d}_{slug}_1_jf61{i+1:02d}_0_0_low.mp4"}
+        for i, slug in enumerate(JESUS_SLUGS)]}
+
+def _hindi_john():
+    from et.slugs import JOHN_SLUGS, titlecase
+    base = f"{V}/John/chapters/hin_hindi/"
+    return {"kind": "chapters", "base": "", "items": [
+        {"n": i + 1, "title": titlecase(slug),
+         "file": f"{base}hin_Gospel_of_John_chapter_{i+1:02d}_{slug}_2_GOJ49{i+1:02d}_0_0_low.mp4"}
+        for i, slug in enumerate(JOHN_SLUGS)]}
+
+def _hindi_lumo(gospel, edition, n):
+    base = f"{V}/Lumo-{gospel}/films_low/hin_Hindi_{gospel}_{edition}_low"
+    template = f"{base}/hin_LUMO_Hindi_{gospel}_{edition}_{{i:02d}}_360.mp4"
+    return _chapters(template, n, gospel)
 
 def _audio_bible(fileset, version, testaments=("OT", "NT")):
     return {"kind": "audio-bible", "fileset": fileset, "version": version,
@@ -310,6 +343,117 @@ EXTRA = {
              downloads=[{"label": "Complete collection (ZIP)", "url": "https://storysets.s3.amazonaws.com/swh/Swahili_Storyset.zip"}],
              source="https://dbs.org/audio/collections/srun/swh_storyset_swahili"),
     ],
+    "hin": [
+        dict(id="hin-film-john", type="film", title="Gospel of John", native="यूहन्ना रचित सुसमाचार",
+             org="Jesus Film Project", desc="The Gospel of John in 49 short chapters.",
+             play=_hindi_john(),
+             downloads=[{"label": "सभी अध्याय — कम डेटा", "url": f"{DL}/John/hin_hindi/hin_Gospel_of_John_chapters_low.zip"},
+                        {"label": "सभी अध्याय — HD", "url": f"{DL}/John/hin_hindi/hin_Gospel_of_John_chapters_high.zip"}],
+             source="https://dbs.org/video/john/hin_hindi_gospel_of_john"),
+        dict(id="hin-film-jesus", type="film", title="JESUS", native="यीशु",
+             org="Jesus Film Project", year="1979",
+             desc="The life of Jesus from the Gospel of Luke, divided into 61 chapters.",
+             play=_hindi_jesus(),
+             downloads=[{"label": "सभी अध्याय — कम डेटा", "url": f"{DL}/Jesus/hin_hindi/hin_jesus_chapters_low.zip"},
+                        {"label": "सभी अध्याय — HD", "url": f"{DL}/Jesus/hin_hindi/hin_jesus_chapters_high.zip"}],
+             source="https://dbs.org/video/jesus/hin_hindi_jesus"),
+        dict(id="hin-film-lumo-john", type="film", title="LUMO: The Gospel of John", native="लूमो: यूहन्ना रचित सुसमाचार", org="LUMO Project",
+             desc="John filmed word for word in 21 parts.",
+             play=_hindi_lumo("John", "Hindi-Contemporary-Version", 21),
+             source="https://dbs.org/video/lumo-john/hin_hindi_john"),
+        dict(id="hin-film-lumo-mark", type="film", title="LUMO: The Gospel of Mark", native="लूमो: मरकुस रचित सुसमाचार", org="LUMO Project",
+             desc="Mark filmed word for word in 16 parts.",
+             play=_hindi_lumo("Mark", "New-Hindi-Version-2017", 16),
+             source="https://dbs.org/video/lumo-mark/hin_hindi_mark"),
+        dict(id="hin-film-lumo-acts", type="film", title="LUMO: Acts of the Apostles", native="लूमो: प्रेरितों के काम", org="LUMO Project",
+             desc="Acts of the Apostles in four parts.",
+             play=_chapters(f"{V}/Lumo-Acts/films_low/hin_Hindi_Acts_2019-Hindi-Contemporary-Version/"
+                            "hin_Acts_Hindi_2019-Hindi-Contemporary-Version_{i:02d}_360.mp4", 4, "Part"),
+             source="https://dbs.org/video/lumo-acts/hin_hindi_acts"),
+        dict(id="hin-film-lumo-covenant", type="film", title="LUMO: The Covenant", native="लूमो: वाचा", org="LUMO Project",
+             desc="The Bible's covenant story in 12 parts.",
+             play=_chapters(f"{V}/Lumo-Covenant/films_low/hin_Hindi_Covenant_Hindi-Contemporary-Version/"
+                            "hin_Covenant_Hindi_Hindi-Contemporary-Version_{i:02d}_360.mp4", 12, "Part"),
+             source="https://dbs.org/video/lumo-covenant/hin_hindi_covenant"),
+        dict(id="hin-film-bible-slides", type="film", title="Bible Slides", native="बाइबल चित्र", org="Digital Bible Society",
+             desc="An illustrated Bible overview in three parts.",
+             play=_chapters(f"{V}/Bible_Slides/chapters/hin_hindi/hin_hindi_chapter_{{i:02d}}.mp4", 3, "Part"),
+             downloads=[{"label": "पूरा संग्रह (ZIP)", "url": f"{DL}/Bible_Slides/hin_hindi.zip"}],
+             source="https://dbs.org/video/bible_slides/hin_hindi_bible_slides"),
+        dict(id="hin-film-hope", type="film", title="The HOPE", native="आशा", org="Mars Hill Productions",
+             desc="God's redemptive story from creation to Christ in 36 events.",
+             play=_chapters(f"{V}/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_{{i:02d}}_low.mp4", 36, "Event"),
+             downloads=[{"label": "सभी भाग (ZIP)", "url": f"{DL}/HOPE/hin_hindi_the_hope_events.zip"}],
+             source="https://dbs.org/video/hope/hin_hindi_the_hope"),
+        dict(id="hin-film-matthew", type="film", title="The Visual Bible: Matthew", native="दृश्य बाइबल: मत्ती", org="Visual Bible International",
+             desc="The Gospel of Matthew presented word for word in 28 chapters.",
+             play=_chapters(f"{V}/Matthew/chapters/hin-matthew-vb-hindi/"
+                            "hin-matthew-vb-hindi-02-chapter-{i:02d}.mp4", 28, "Matthew"),
+             downloads=[{"label": "सभी अध्याय (ZIP)", "url": f"{DL}/Matthew/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapters.zip"}],
+             source="https://dbs.org/video/matthew/hin-matthew-vb-hindi"),
+        dict(id="hin-film-acts", type="film", title="The Visual Bible: Acts", native="दृश्य बाइबल: प्रेरितों के काम", org="Visual Bible International",
+             desc="The book of Acts presented word for word in 28 chapters.",
+             play=_chapters(f"{V}/Acts_VB/chapters/hin-acts-vb-hindi/"
+                            "hin-acts-vb-hindi-chapter-{i:02d}.mp4", 28, "Acts"),
+             downloads=[{"label": "सभी अध्याय (ZIP)", "url": f"{DL}/Acts_VB/hin-acts-vb-hindi/hin-acts-vb-hindi-chapters.zip"}],
+             source="https://dbs.org/video/acts_vb/hin-acts-vb-hindi"),
+        *[dict(id=f"hin-film-{slug}", type="film", title=title, native=native, org=org,
+               desc=desc, links=[{"label": "Watch on DBS", "url": url}], source=url)
+          for slug, title, native, org, desc, url in [
+              ("magdalena", "Magdalena", "मगदलीना", "Jesus Film Project", "The story of Jesus through the eyes of Mary Magdalene.", "https://dbs.org/video/magdalena/hin_hindi_magdalena"),
+              ("story-jesus", "Story of Jesus for Children", "बच्चों के लिए यीशु की कहानी", "Jesus Film Project", "The story of Jesus told for children.", "https://dbs.org/video/storyjesus/hin_hindi_story_of_jesus_for_children"),
+              ("savior", "The Savior", "उद्धारकर्ता", "The Savior Film", "The life of Jesus in Hindi.", "https://dbs.org/video/savior/hin_hindi_the_savior"),
+              ("king-glory", "King of Glory", "महिमा का राजा", "ROCK International", "The Bible's story of the King of Glory.", "https://dbs.org/video/rock/hin-hindi"),
+              ("creation-christ", "Creation to Christ", "सृष्टि से मसीह तक", "Create International", "The Bible story from creation to Christ.", "https://dbs.org/video/c2c/hin-creation-hindi"),
+              ("bp-overviews", "BibleProject: Overviews", "बाइबल की रूपरेखा", "BibleProject", "Hindi overview videos for the books of the Bible.", "https://dbs.org/video/bp/hin-hindi-overview"),
+              ("bp-themes", "BibleProject: Themes", "बाइबल के विषय", "BibleProject", "Hindi videos explaining major themes in Scripture.", "https://dbs.org/video/bp/hin-hindi-themes"),
+              ("ibible", "iBible: Salvation Story", "उद्धार की कहानी", "RevelationMedia", "An animated presentation of the Bible's message of salvation.", "https://dbs.org/video/ibible/hin-hindi-ibible_salvation"),
+              ("deaf-gospel", "Rescue Project Deaf Gospel", "बधिर सुसमाचार", "Deaf Bible Society", "A visual Gospel presentation for Deaf audiences.", "https://dbs.org/video/deafproject/hin_hindi_rescue_project_deaf_gospel"),
+          ]],
+        dict(id="hin-ab-hcv-davar", type="audio-bible", title="Hindi Contemporary Version", native="हिंदी समकालीन संस्करण",
+             org="Davar Partners", scope="Full Bible", stats="1,189 chapters · 103h 39m",
+             desc="The complete Hindi Contemporary Version, read chapter by chapter.",
+             play=_audio_bible("HINHCV_DAVR_FB_N", "HINHCV"),
+             downloads=[{"label": "पूरा ऑडियो (ZIP)", "url": f"{SCRIPTURE}/audio_zip/HINHCV_DAVR_FB_N.zip"}],
+             source="https://dbs.org/bibles/audio/HINHCV_DAVR_FB_N"),
+        dict(id="hin-ab-hcv-fcbh", type="audio-bible", title="Hindi Contemporary Version — FCBH", native="हिंदी समकालीन संस्करण",
+             org="Faith Comes By Hearing", scope="Full Bible", desc="The complete Hindi Contemporary Version from Faith Comes By Hearing.",
+             play=_audio_bible("HINHCV_FCBH_FB_N", "HINHCV"),
+             downloads=[{"label": "पूरा ऑडियो (ZIP)", "url": f"{SCRIPTURE}/audio_zip/HINHCV_FCBH_FB_N.zip"}],
+             source="https://dbs.org/bibles/audio/HINHCV_DAVR_FB_N"),
+        dict(id="hin-ab-hcv-fcbh-nt", type="audio-bible", title="Hindi Contemporary Version — New Testament", native="हिंदी समकालीन संस्करण",
+             org="Faith Comes By Hearing", scope="New Testament", desc="The Hindi Contemporary New Testament, read chapter by chapter.",
+             play=_audio_bible("HINHCV_FCBH_NT_N", "HINHCV", ("NT",)),
+             downloads=[{"label": "पूरा ऑडियो (ZIP)", "url": f"{SCRIPTURE}/audio_zip/HINHCV_FCBH_NT_N.zip"}],
+             source="https://dbs.org/bibles/audio/HINHCV_DAVR_FB_N"),
+        dict(id="hin-ab-bsi", type="audio-bible", title="Hindi Bible", native="धर्मशास्त्र", org="Davar Partners",
+             year="1970", scope="Full Bible", desc="The Hindi Bible read chapter by chapter.",
+             play=_audio_bible("HINBSI_DAVR_FB_N", "HINBSI"),
+             downloads=[{"label": "पूरा ऑडियो (ZIP)", "url": f"{SCRIPTURE}/audio_zip/HINBSI_DAVR_FB_N.zip"}],
+             source="https://dbs.org/bibles/audio/HINBSI_DAVR_FB_N"),
+        dict(id="hin-ab-tgh", type="audio-bible", title="Hindi Holy Bible (Portions)", native="हिन्दी बाइबल",
+             org="International Scripture Audio", year="1851", scope="Full Bible",
+             desc="Historic Hindi Scripture read chapter by chapter.",
+             play=_audio_bible("HINTGH_ISA_FB_N", "HINTGH"),
+             downloads=[{"label": "पूरा ऑडियो (ZIP)", "url": f"{SCRIPTURE}/audio_zip/HINTGH_ISA_FB_N.zip"}],
+             source="https://dbs.org/bibles/audio/HINTGH_ISA_FB_N"),
+        dict(id="hin-ac-grn", type="audio", title="Hindi Scripture Recordings", native="हिन्दी रिकॉर्डिंग",
+             org="Global Recordings Network", stats="479 recordings · 1.0 GB · 18h 29m",
+             desc="Songs, Good News, Words of Life and Bible teaching across Hindi varieties.",
+             play={"kind": "audio-collection", "sample":
+                   f"{MD}/audio/grn/hin_GlobalRecordings_hindi/Hindi%20Urdu/Hindi%20Urdu%20Songs%2080919/"
+                   "Hindi%20Urdu%20Songs%20001%20O%27Lord%20We%20Are%20At%20Your%20Door%2080919.mp3"},
+             downloads=[{"label": "पूरा संग्रह — अच्छी गुणवत्ता", "url": f"{MD}/audio/grn/hin_GlobalRecordings_hindi_high.zip"},
+                        {"label": "पूरा संग्रह — कम डेटा", "url": f"{MD}/audio/grn/hin_GlobalRecordings_hindi_low.zip"}],
+             source="https://dbs.org/audio/collections/grn/hin_GlobalRecordings_hindi"),
+        dict(id="hin-ac-soj", type="audio", title="Story of Jesus", native="यीशु की कहानी",
+             org="Story of Jesus", stats="7 recordings · 109.2 MB · 1h 36m",
+             desc="The life of Jesus as a Hindi audio drama in seven parts.",
+             play={"kind": "audio-collection", "sample": f"{MD}/audio/soj/hin_StoryJesus_hindi_full.mp3"},
+             downloads=[{"label": "सभी सात भाग (ZIP)", "url": f"{MD}/audio/soj/hin_StoryJesus_hindi.zip"},
+                        {"label": "पूरी रिकॉर्डिंग (ZIP)", "url": f"{MD}/audio/soj/hin_StoryJesus_hindi_full.zip"}],
+             source="https://dbs.org/audio/collections/soj/hin_StoryJesus_hindi"),
+    ],
 }
 
 SERIES = re.compile(r"^(?P<name>.+?)\s+(?P<n>\d+)\s*[-–—]\s*(?P<part>.+)$")
@@ -351,8 +495,9 @@ def alive(url):
             # are browser-checked separately; do not discard them here.
             host = urllib.parse.urlparse(url).netloc
             path = urllib.parse.urlparse(url).path
-            if e.code == 403 and ((host == "video.dbs.org") or
-                                  (host == "dbs.org" and path.startswith("/cdn/video/"))):
+            if e.code == 403 and ((host in {"video.dbs.org", "download.dbs.org"}) or
+                                  (host == "dbs.org" and path.startswith("/cdn/video/")) or
+                                  (host == "scripture.dbs.org" and path.startswith("/audio_zip/"))):
                 return True
             continue
         except Exception:
@@ -381,13 +526,14 @@ def build(code, spec):
     seen_urls = set()
 
     # ---- films and downloadable resources, from every variant
-    films = []          # (iso, title, url)
+    films = []          # (iso, title, vernacular title, url)
     pages = {}          # host -> [(title, url)]
     for iso, rec in records.items():
         rows = (rec.get("films") or []) + (rec.get("resources") or [])
         for row in rows:
             url = (row.get("url") or "").strip()
             title = (row.get("title") or row.get("tt") or "").strip()
+            native = (row.get("title_vernacular") or row.get("tv") or "").strip()
             if not url or not title:
                 continue
             key = secure(url)
@@ -395,20 +541,20 @@ def build(code, spec):
                 continue          # the same film is listed as a film and a resource
             seen_urls.add(key)
             if is_file(url):
-                films.append((iso, title, key))
+                films.append((iso, title, native, key))
             else:
                 host = urllib.parse.urlparse(url).netloc
                 pages.setdefault(host, []).append((title, url))
 
     # ---- fold numbered series into one resource
     groups, singles = {}, []
-    for iso, title, url in films:
+    for iso, title, native, url in films:
         m = SERIES.match(title)
         if m:
             groups.setdefault((iso, m.group("name").strip()), []).append(
                 (int(m.group("n")), m.group("part").strip(), url))
         else:
-            singles.append((iso, title, url))
+            singles.append((iso, title, native, url))
 
     def variant(iso):
         v = spec.get("variants", {}).get(iso)
@@ -419,22 +565,24 @@ def build(code, spec):
         slug = re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
         out.append(dict(
             id=f"{code}-film-{slug}-{iso}", lang=code, type="film", title=name,
+            native=spec.get("group_native", {}).get(name),
             org="Create International", scope=variant(iso),
-            desc=f"The life of Christ told in {len(parts)} short parts, made for {variant(iso) or 'Pashto'} audiences.",
+            desc=f"The life of Christ told in {len(parts)} short parts, made for {variant(iso) or spec['name']} audiences.",
             play={"kind": "chapters", "base": "",
                   "items": [{"n": n, "title": f"{n}. {p}", "file": u} for n, p, u in parts]},
             downloads=[{"label": f"{n}. {p}", "url": u} for n, p, u in parts],
         ))
 
-    for iso, title, url in sorted(singles, key=lambda x: x[1]):
+    for iso, title, native, url in sorted(singles, key=lambda x: x[1]):
         slug = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")[:40]
         kind = "audio" if url.lower().split("?")[0].endswith((".mp3", ".m4a")) else "film"
         play = ({"kind": "audio-collection", "sample": url} if kind == "audio"
                 else {"kind": "file", "hd": url})
+        scope = "Henna version" if "-Henna." in url else variant(iso)
         out.append(dict(
-            id=f"{code}-{kind}-{slug}-{iso}", lang=code, type=kind, title=title,
-            org="Create International", scope=variant(iso),
-            desc=f"A short film in {variant(iso) or 'Pashto'}." if kind == "film" else "",
+            id=f"{code}-{kind}-{slug}-{iso}", lang=code, type=kind, title=title, native=native or None,
+            org="Create International", scope=scope,
+            desc=f"A short film in {variant(iso) or spec['name']}." if kind == "film" else "",
             play=play, downloads=[{"label": "Video" if kind == "film" else "Audio", "url": url}],
         ))
 
@@ -456,6 +604,7 @@ def build(code, spec):
             slug = line.split("/", 1)[1].rsplit(".json", 1)[0]
             matches = (slug.startswith(spec["historic_prefix"]) if spec.get("historic_prefix")
                        else spec["historic"] in slug.lower())
+            matches = matches or slug in spec.get("historic_extra", set())
             if matches and slug not in spec.get("historic_exclude", set()):
                 scans.append(slug)
     for slug in sorted(scans):
@@ -486,12 +635,14 @@ def build(code, spec):
     bibles = []
     for iso, rec in records.items():
         for b in (rec.get("bibles") or []):
-            bibles.append((b.get("abbr"), b.get("title"), b.get("year"), iso))
-    pdfs = probe_all([f"{BIBLES}/{a}/pdf/{a}.pdf" for a, _, _, _ in bibles if a])
-    hosted = [(a, t, y, iso) for a, t, y, iso in bibles if a and pdfs.get(f"{BIBLES}/{a}/pdf/{a}.pdf")]
-    for a, t, y, iso in hosted:
+            abbr = b.get("abbr")
+            native = spec.get("bible_native", {}).get(abbr) or b.get("title_vernacular")
+            bibles.append((abbr, b.get("title"), native, b.get("year"), iso))
+    pdfs = probe_all([f"{BIBLES}/{a}/pdf/{a}.pdf" for a, _, _, _, _ in bibles if a])
+    hosted = [(a, t, n, y, iso) for a, t, n, y, iso in bibles if a and pdfs.get(f"{BIBLES}/{a}/pdf/{a}.pdf")]
+    for a, t, n, y, iso in hosted:
         out.append(dict(
-            id=f"{code}-text-{a.lower()}", lang=code, type="scripture", title=t, year=y,
+            id=f"{code}-text-{a.lower()}", lang=code, type="scripture", title=t, native=n, year=y,
             org="Digital Bible Society", scope=variant(iso),
             desc="The full text, to read in the app or save.",
             read={"kind": "pdf", "url": f"{BIBLES}/{a}/pdf/{a}.pdf"},
@@ -499,16 +650,16 @@ def build(code, spec):
                        {"label": "EPUB", "url": f"{BIBLES}/{a}/epub/{a}.epub"}],
             source=f"https://dbs.org/bibles/{a}",
         ))
-    rest = [(a, t, y, iso) for a, t, y, iso in bibles if (a, t, y, iso) not in hosted]
+    rest = [(a, t, n, y, iso) for a, t, n, y, iso in bibles if (a, t, n, y, iso) not in hosted]
     if rest:
         # One row for every Bible that is only readable on someone else's site,
         # rather than one dead-end row each.
         out.append(dict(
             id=f"{code}-text-online", lang=code, type="scripture",
-            title=f"{spec['name']} Bibles to read online", org="Various publishers",
+            title=f"{spec['name']} Bibles to read online", native=spec.get("online_native"), org="Various publishers",
             desc=f"{len(rest)} {spec['name']} translations that their publishers host themselves. They open in a browser and need a connection.",
             links=[{"label": f"{t}" + (f" ({y})" if y else ""),
-                    "url": f"https://dbs.org/bibles/{a}"} for a, t, y, _ in rest],
+                    "url": f"https://dbs.org/bibles/{a}"} for a, t, _, y, _ in rest],
             source=f"https://dbs.org/discover/languages/{spec['isos'][0]}",
         ))
 
@@ -596,6 +747,14 @@ def build(code, spec):
     for r in keep:
         if titles[r["title"]] > 1 and r.get("scope"):
             r["title"] = f"{r['title']} ({r['scope'].replace(' Pashto', '')})"
+
+    # Some DBS records carry two distinct files with the same display title.
+    # Resource IDs must still be unique so either card can be opened directly.
+    used_ids = _c.Counter()
+    for r in keep:
+        used_ids[r["id"]] += 1
+        if used_ids[r["id"]] > 1:
+            r["id"] = f"{r['id']}-{used_ids[r['id']]}"
 
     lang = {k: spec[k] for k in ("name", "native", "script", "dir", "font", "speakers", "region", "blurb")}
     lang["code"] = code

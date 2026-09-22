@@ -202,6 +202,10 @@ window.ET = (function () {
 
   /* A row: artwork, what it is, what it is called, and one pill saying what a
      tap does. The library, the shelves and search all render the same one. */
+  function displayTitle(r) {
+    return r.native && inMyLanguage(r) ? r.native : r.title;
+  }
+
   function row(r, action) {
     var art = r.cover || r.coverOnline;
     return '<a class="rowi" href="item.html?id=' + encodeURIComponent(r.id) + '">' +
@@ -210,7 +214,7 @@ window.ET = (function () {
       '</span>' +
       '<span class="meta">' +
         '<span class="kicker">' + esc(action.kicker) + '</span>' +
-        '<span class="name latin">' + esc(r.title) + '</span>' +
+        '<span class="name" dir="auto">' + esc(displayTitle(r)) + '</span>' +
         '<span class="sub latin">' + esc(action.sub) + '</span>' +
       '</span>' +
       '<span class="go">' + esc(action.verb) + '</span></a>';
@@ -222,7 +226,7 @@ window.ET = (function () {
       '<span class="art">' + icon(typeIcon(r.type)) +
         (art ? '<img src="' + esc(art) + '" alt="" loading="lazy" decoding="async" onerror="this.remove()">' : '') +
       '</span>' +
-      '<span class="name latin">' + esc(r.title) + '</span>' +
+      '<span class="name" dir="auto">' + esc(displayTitle(r)) + '</span>' +
       (sub ? '<span class="sub">' + esc(sub) + '</span>' : '') + '</a>';
   }
 
@@ -341,7 +345,7 @@ window.ET = (function () {
      English title and heard Sindhi. Choosing a language picks both: English
      shows English films, اردو shows Urdu, سنڌي shows Sindhi. The library can
      still browse the others on purpose. */
-  var CONTENT = { en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh' };
+  var CONTENT = { en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', hi: 'hin' };
   function contentLang() {
     var ui = (ET.i18n && ET.i18n.current()) || 'en';
     return CONTENT[ui] || 'eng';
@@ -366,8 +370,33 @@ window.ET = (function () {
       [59,'James',5],[60,'1Peter',5],[61,'2Peter',3],[62,'1John',5],[63,'2John',1],[64,'3John',1],
       [65,'Jude',1],[66,'Revelation',22]]
   };
+  var LOCAL_BOOKS = {
+    hi: {
+      Genesis:'उत्पत्ति', Exodus:'निर्गमन', Leviticus:'लैव्यव्यवस्था', Numbers:'गिनती',
+      Deuteronomy:'व्यवस्था विवरण', Joshua:'यहोशू', Judges:'न्यायियों', Ruth:'रूत',
+      '1Samuel':'१ शमूएल', '2Samuel':'२ शमूएल', '1Kings':'१ राजा', '2Kings':'२ राजा',
+      '1Chronicles':'१ इतिहास', '2Chronicles':'२ इतिहास', Ezra:'एज्रा', Nehemiah:'नहेम्याह',
+      Esther:'एस्तेर', Job:'अय्यूब', Psalms:'भजन संहिता', Proverbs:'नीतिवचन',
+      Ecclesiastes:'सभोपदेशक', SongofSongs:'श्रेष्ठगीत', Isaiah:'यशायाह', Jeremiah:'यिर्मयाह',
+      Lamentations:'विलापगीत', Ezekiel:'यहेजकेल', Daniel:'दानिय्येल', Hosea:'होशे', Joel:'योएल',
+      Amos:'आमोस', Obadiah:'ओबद्याह', Jonah:'योना', Micah:'मीका', Nahum:'नहूम',
+      Habakkuk:'हबक्कूक', Zephaniah:'सपन्याह', Haggai:'हाग्गै', Zechariah:'जकर्याह', Malachi:'मलाकी',
+      Matthew:'मत्ती', Mark:'मरकुस', Luke:'लूका', John:'यूहन्ना', Acts:'प्रेरितों के काम',
+      Romans:'रोमियों', '1Corinthians':'१ कुरिन्थियों', '2Corinthians':'२ कुरिन्थियों',
+      Galatians:'गलातियों', Ephesians:'इफिसियों', Philippians:'फिलिप्पियों', Colossians:'कुलुस्सियों',
+      '1Thessalonians':'१ थिस्सलुनीकियों', '2Thessalonians':'२ थिस्सलुनीकियों',
+      '1Timothy':'१ तीमुथियुस', '2Timothy':'२ तीमुथियुस', Titus:'तीतुस', Philemon:'फिलेमोन',
+      Hebrews:'इब्रानियों', James:'याकूब', '1Peter':'१ पतरस', '2Peter':'२ पतरस',
+      '1John':'१ यूहन्ना', '2John':'२ यूहन्ना', '3John':'३ यूहन्ना', Jude:'यहूदा',
+      Revelation:'प्रकाशित वाक्य'
+    }
+  };
   function pad(n, w) { n = String(n); while (n.length < (w || 2)) n = '0' + n; return n; }
-  function bookName(b) { return b.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/^(\d)/, '$1 '); }
+  function bookName(b) {
+    var lang = window.ET && window.ET.i18n ? window.ET.i18n.current() : 'en';
+    return (LOCAL_BOOKS[lang] && LOCAL_BOOKS[lang][b]) ||
+      b.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/^(\d)/, '$1 ');
+  }
   function audioBibleUrl(play, testament, num, name, ch) {
     return 'https://dbs.org/cdn/audio/' + play.fileset + '/' + testament + '_' + play.version +
       '/' + pad(num) + '_' + name + '/' + pad(num) + '_' + name + '_' + pad(ch, 3) + '.mp3';
@@ -481,7 +510,7 @@ window.ET = (function () {
     promptInstall: promptInstall, standalone: standalone,
     $: $, $$: $$, theme: theme, library: library, byId: byId, header: header,
     sheet: sheet, typeIcon: typeIcon, thumb: thumb, stepper: stepper,
-    tabbar: tabbar, row: row, poster: poster,
+    tabbar: tabbar, row: row, poster: poster, displayTitle: displayTitle,
     safeType: safeType, openable: openable, safeUrl: safeUrl,
     contentLang: contentLang, inMyLanguage: inMyLanguage,
     BOOKS: BOOKS, pad: pad, bookName: bookName, audioBibleUrl: audioBibleUrl

@@ -116,9 +116,10 @@
       if (preselect != null && files[preselect]) { S.file = files[preselect]; return where(); }
       if (files.length === 1) { S.file = files[0]; return where(); }
       paint(header(0) + '<div class="stack">' + files.map(function (f, i) {
+        var label = f.chapters ? ET.i18n.t('save.allchapters', { n: r.play.items.length }) : f.label;
         return '<button class="tile" data-i="' + i + '" style="width:100%;text-align:start">' +
           '<span class="ico">' + ET.icon(f.chapters ? 'folder' : 'save') + '</span>' +
-          '<span><span class="t latin">' + ET.esc(f.label) + '</span>' +
+          '<span><span class="t" dir="auto">' + ET.esc(label) + '</span>' +
           '<span class="s">' + sizeOf(f) + '</span></span>' +
           '<span class="chev flip">' + ET.icon('chev') + '</span></button>';
       }).join('') + '</div>' +

@@ -1,0 +1,3432 @@
+{
+ "generated": "Digital Bible Society (dbs.org) — Hindi, built from the open dataset",
+ "languages": {
+  "hin": {
+   "name": "Hindi",
+   "native": "हिन्दी",
+   "script": "deva",
+   "dir": "ltr",
+   "font": "devanagari",
+   "speakers": "~341 million",
+   "region": "India",
+   "blurb": "One of India's principal languages, written in the Devanagari script.",
+   "code": "hin"
+  }
+ },
+ "resources": [
+  {
+   "id": "hin-film-moksh-story-hin",
+   "lang": "hin",
+   "type": "film",
+   "title": "Moksh: Story",
+   "native": "मोक्ष की कहानियाँ",
+   "org": "Create International",
+   "scope": "",
+   "desc": "The life of Christ told in 6 short parts, made for Hindi audiences.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "1. Perfect Creation",
+      "file": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Moksh/Moksh-Story1_Perfect-Creation_Hindi.mp4"
+     },
+     {
+      "n": 1,
+      "title": "1. The Beginning",
+      "file": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Moksh/Moksh-Story1_Hindi-Henna.mp4"
+     },
+     {
+      "n": 1,
+      "title": "1. The Beginning",
+      "file": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Moksh/Moksh-Story1_Hindi.mp4"
+     },
+     {
+      "n": 2,
+      "title": "2. Sin, Death and the Curse Enter",
+      "file": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Moksh/Moksh%21-Story2_Sin-death-and-the-curse-enter_Hindi.mp4"
+     },
+     {
+      "n": 2,
+      "title": "2. The Rebellion",
+      "file": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Moksh/Moksh-Story2_Hindi-Henna.mp4"
+     },
+     {
+      "n": 2,
+      "title": "2. The Rebellion",
+      "file": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Moksh/Moksh-Story2_Hindi.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "1. Perfect Creation",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Moksh/Moksh-Story1_Perfect-Creation_Hindi.mp4"
+    },
+    {
+     "label": "1. The Beginning",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Moksh/Moksh-Story1_Hindi-Henna.mp4"
+    },
+    {
+     "label": "1. The Beginning",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Moksh/Moksh-Story1_Hindi.mp4"
+    },
+    {
+     "label": "2. Sin, Death and the Curse Enter",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Moksh/Moksh%21-Story2_Sin-death-and-the-curse-enter_Hindi.mp4"
+    },
+    {
+     "label": "2. The Rebellion",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Moksh/Moksh-Story2_Hindi-Henna.mp4"
+    },
+    {
+     "label": "2. The Rebellion",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Moksh/Moksh-Story2_Hindi.mp4"
+    }
+   ],
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "source": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-a-beautiful-hope-hin",
+   "lang": "hin",
+   "type": "film",
+   "title": "A Beautiful Hope",
+   "native": "ek sundar aasha hai (एक सुंदर आशा है)",
+   "org": "Create International",
+   "scope": "",
+   "desc": "A short film in Hindi.",
+   "play": {
+    "kind": "file",
+    "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/h/Hindi_3020A/Raj-HindiEV.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Video",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/h/Hindi_3020A/Raj-HindiEV.mp4"
+    }
+   ],
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "source": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-a-beautiful-hope-engsub-hin",
+   "lang": "hin",
+   "type": "film",
+   "title": "A Beautiful Hope (EngSub)",
+   "native": "ek sundar aasha hai (एक सुंदर आशा है)",
+   "org": "Create International",
+   "scope": "",
+   "desc": "A short film in Hindi.",
+   "play": {
+    "kind": "file",
+    "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/h/Hindi_3020A/Raj-HindiEV_EngSub_sm.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Video",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/h/Hindi_3020A/Raj-HindiEV_EngSub_sm.mp4"
+    }
+   ],
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "source": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-a-pilgrimage-hin",
+   "lang": "hin",
+   "type": "film",
+   "title": "A Pilgrimage",
+   "native": "teerth (तीर्थ)",
+   "org": "Create International",
+   "scope": "",
+   "desc": "A short film in Hindi.",
+   "play": {
+    "kind": "file",
+    "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/h/Hindi_0042A/HindiEV_sm.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Video",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/h/Hindi_0042A/HindiEV_sm.mp4"
+    }
+   ],
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "source": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-a-pilgrimage-engsub-hin",
+   "lang": "hin",
+   "type": "film",
+   "title": "A Pilgrimage (EngSub)",
+   "native": "teerth (तीर्थ)",
+   "org": "Create International",
+   "scope": "",
+   "desc": "A short film in Hindi.",
+   "play": {
+    "kind": "file",
+    "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/h/Hindi_0042A/HindiEV_EngSub_sm.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Video",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/h/Hindi_0042A/HindiEV_EngSub_sm.mp4"
+    }
+   ],
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "source": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-aasha-hope-engsub-hin",
+   "lang": "hin",
+   "type": "film",
+   "title": "Aasha - Hope (EngSub)",
+   "native": "ek sundar aasha hai (एक सुंदर आशा है)",
+   "org": "Create International",
+   "scope": "",
+   "desc": "A short film in Hindi.",
+   "play": {
+    "kind": "file",
+    "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/h/Hindi_2010A/Hindi_Aasha-Hope_EngSub.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Video",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/h/Hindi_2010A/Hindi_Aasha-Hope_EngSub.mp4"
+    }
+   ],
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "source": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-coconuts-hin",
+   "lang": "hin",
+   "type": "film",
+   "title": "Coconuts",
+   "native": "naariyal (नारियल)",
+   "org": "Create International",
+   "scope": "",
+   "desc": "A short film in Hindi.",
+   "play": {
+    "kind": "file",
+    "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Coconuts_Hindi_sm.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Video",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Coconuts_Hindi_sm.mp4"
+    }
+   ],
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "source": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-coconuts-engsub-hin",
+   "lang": "hin",
+   "type": "film",
+   "title": "Coconuts - EngSub",
+   "native": "naariyal (नारियल)",
+   "org": "Create International",
+   "scope": "",
+   "desc": "A short film in Hindi.",
+   "play": {
+    "kind": "file",
+    "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Coconuts_Hindi_EngSub_sm.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Video",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Coconuts_Hindi_EngSub_sm.mp4"
+    }
+   ],
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "source": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-creation-to-christ-hin",
+   "lang": "hin",
+   "type": "film",
+   "title": "Creation to Christ",
+   "native": "सृजन से मसीह को",
+   "org": "Create International",
+   "scope": "",
+   "desc": "A short film in Hindi.",
+   "play": {
+    "kind": "file",
+    "hd": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/C2C-Hindi_sm.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Video",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/C2C-Hindi_sm.mp4"
+    }
+   ],
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "source": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-moksh-story3-the-solution-hin",
+   "lang": "hin",
+   "type": "film",
+   "title": "Moksh - Story3: The Solution",
+   "native": "मोक्ष: कहानी ३ - सिद्ध समाधान",
+   "org": "Create International",
+   "scope": "",
+   "desc": "A short film in Hindi.",
+   "play": {
+    "kind": "file",
+    "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Moksh/Moksh-Story3_Hindi.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Video",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Moksh/Moksh-Story3_Hindi.mp4"
+    }
+   ],
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "source": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-moksh-story3-the-solution-hin-2",
+   "lang": "hin",
+   "type": "film",
+   "title": "Moksh - Story3: The Solution (Henna version)",
+   "native": "मोक्ष: कहानी ३ - सिद्ध समाधान",
+   "org": "Create International",
+   "scope": "Henna version",
+   "desc": "A short film in Hindi.",
+   "play": {
+    "kind": "file",
+    "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Moksh/Moksh-Story3_Hindi-Henna.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Video",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Moksh/Moksh-Story3_Hindi-Henna.mp4"
+    }
+   ],
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "source": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-moksh-story4-perfect-power1-hin",
+   "lang": "hin",
+   "type": "film",
+   "title": "Moksh - Story4: Perfect Power1",
+   "native": "मोक्ष: कहानी ४ - उत्तम शक्ति १",
+   "org": "Create International",
+   "scope": "",
+   "desc": "A short film in Hindi.",
+   "play": {
+    "kind": "file",
+    "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Moksh/Moksh-Story4_Hindi.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Video",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Moksh/Moksh-Story4_Hindi.mp4"
+    }
+   ],
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "source": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-moksh-story4-perfect-power1-hin-2",
+   "lang": "hin",
+   "type": "film",
+   "title": "Moksh - Story4: Perfect Power1 (Henna version)",
+   "native": "मोक्ष: कहानी ४ - उत्तम शक्ति १",
+   "org": "Create International",
+   "scope": "Henna version",
+   "desc": "A short film in Hindi.",
+   "play": {
+    "kind": "file",
+    "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Moksh/Moksh-Story4_Hindi-Henna.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Video",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Moksh/Moksh-Story4_Hindi-Henna.mp4"
+    }
+   ],
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "source": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-ten-virgins-engsub-hin",
+   "lang": "hin",
+   "type": "film",
+   "title": "Ten Virgins (EngSub)",
+   "native": "das kunvaaree (दस कुंवारी)",
+   "org": "Create International",
+   "scope": "",
+   "desc": "A short film in Hindi.",
+   "play": {
+    "kind": "file",
+    "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/h/Hindi_7001A/Hindi_Ten-Virgins_EngSub.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Video",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/h/Hindi_7001A/Hindi_Ten-Virgins_EngSub.mp4"
+    }
+   ],
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "source": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-the-final-prodigal-hin",
+   "lang": "hin",
+   "type": "film",
+   "title": "The Final Prodigal",
+   "native": "antim ubaoo (अंतिम उबाऊ)",
+   "org": "Create International",
+   "scope": "",
+   "desc": "A short film in Hindi.",
+   "play": {
+    "kind": "file",
+    "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/h/Hindi_2010A/Hindi_The_Final_Prodigal_EngSub.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Video",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/h/Hindi_2010A/Hindi_The_Final_Prodigal_EngSub.mp4"
+    }
+   ],
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "source": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-the-price-of-life-hin",
+   "lang": "hin",
+   "type": "film",
+   "title": "The Price of Life",
+   "native": "jeevan kee keemat (जीवन की कीमत)",
+   "org": "Create International",
+   "scope": "",
+   "desc": "A short film in Hindi.",
+   "play": {
+    "kind": "file",
+    "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/h/Hindi_2018A/Hindi_The-Price-of-Life_Zindagi-Ke-Keemat.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Video",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/h/Hindi_2018A/Hindi_The-Price-of-Life_Zindagi-Ke-Keemat.mp4"
+    }
+   ],
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "source": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-yeshu-satsang-hin",
+   "lang": "hin",
+   "type": "film",
+   "title": "Yeshu Satsang",
+   "native": "यीशु सत्संग",
+   "org": "Create International",
+   "scope": "",
+   "desc": "A short film in Hindi.",
+   "play": {
+    "kind": "file",
+    "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000C/h/Hindi_0042C/HindiCG_sm.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Video",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000C/h/Hindi_0042C/HindiCG_sm.mp4"
+    }
+   ],
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "source": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-yeshu-satsang-engsub-hin",
+   "lang": "hin",
+   "type": "film",
+   "title": "Yeshu Satsang (EngSub)",
+   "native": "यीशु सत्संग",
+   "org": "Create International",
+   "scope": "",
+   "desc": "A short film in Hindi.",
+   "play": {
+    "kind": "file",
+    "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000C/h/Hindi_0042C/HindiCG_EngSub_sm.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Video",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000C/h/Hindi_0042C/HindiCG_EngSub_sm.mp4"
+    }
+   ],
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "source": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-john",
+   "type": "film",
+   "title": "Gospel of John",
+   "native": "यूहन्ना रचित सुसमाचार",
+   "org": "Jesus Film Project",
+   "desc": "The Gospel of John in 49 short chapters.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Gods Word Becomes Flesh",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_01_gods_word_becomes_flesh_2_GOJ4901_0_0_low.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Testimony of John the Baptist",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_02_testimony_of_john_the_baptist_2_GOJ4902_0_0_low.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Jesus Gathers Disciples",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_03_jesus_gathers_disciples_2_GOJ4903_0_0_low.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Wedding in Cana",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_04_wedding_in_cana_2_GOJ4904_0_0_low.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Cleaning the Temple",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_05_cleaning_the_temple_2_GOJ4905_0_0_low.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Talk with Nicodemus",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_06_talk_with_nicodemus_2_GOJ4906_0_0_low.mp4"
+     },
+     {
+      "n": 7,
+      "title": "The Baptists Confirmation",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_07_the_baptists_confirmation_2_GOJ4907_0_0_low.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Samaritan Woman",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_08_samaritan_woman_2_GOJ4908_0_0_low.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Samaritan Village",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_09_samaritan_village_2_GOJ4909_0_0_low.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Officials Son Healed",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_10_officials_son_healed_2_GOJ4910_0_0_low.mp4"
+     },
+     {
+      "n": 11,
+      "title": "A Paralytic Healed",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_11_a_paralytic_healed_2_GOJ4911_0_0_low.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Claim to be the Son",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_12_claim_to_be_the_son_2_GOJ4912_0_0_low.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Witness to the Son",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_13_witness_to_the_son_2_GOJ4913_0_0_low.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Feeding 5000",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_14_feeding_5000_2_GOJ4914_0_0_low.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Sea Walking",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_15_sea_walking_2_GOJ4915_0_0_low.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Bread of Life",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_16_bread_of_life_2_GOJ4916_0_0_low.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Falling Away",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_17_falling_away_2_GOJ4917_0_0_low.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Confronting Hypocritical Leaders",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_18_confronting_hypocritical_leaders_2_GOJ4918_0_0_low.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Disagreement who is Jesus",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_19_disagreement_who_is_jesus_2_GOJ4919_0_0_low.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Adulterous Woman",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_20_adulterous_woman_2_GOJ4920_0_0_low.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Who are You",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_21_who_are_you_2_GOJ4921_0_0_low.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Great Confrontation",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_22_great_confrontation_2_GOJ4922_0_0_low.mp4"
+     },
+     {
+      "n": 23,
+      "title": "Blind Man Healed",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_23_blind_man_healed_2_GOJ4923_0_0_low.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Pharisees Interrogate the Blind Man",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_24_pharisees_interrogate_the_blind_man_2_GOJ4924_0_0_low.mp4"
+     },
+     {
+      "n": 25,
+      "title": "The Good Shepherd",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_25_the_good_shepherd_2_GOJ4925_0_0_low.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Are You Messiah",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_26_are_you_messiah_2_GOJ4926_0_0_low.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Lazarus Dies",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_27_lazarus_dies_2_GOJ4927_0_0_low.mp4"
+     },
+     {
+      "n": 28,
+      "title": "Mary and Martha Mourn",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_28_mary_and_martha_mourn_2_GOJ4928_0_0_low.mp4"
+     },
+     {
+      "n": 29,
+      "title": "Lazarus Rises",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_29_lazarus_rises_2_GOJ4929_0_0_low.mp4"
+     },
+     {
+      "n": 30,
+      "title": "Triumphal Entry and Results",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_30_triumphal_entry_and_results_2_GOJ4930_0_0_low.mp4"
+     },
+     {
+      "n": 31,
+      "title": "Divided Opinions",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_31_divided_opinions_2_GOJ4931_0_0_low.mp4"
+     },
+     {
+      "n": 32,
+      "title": "Last Supper",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_32_last_supper_2_GOJ4932_0_0_low.mp4"
+     },
+     {
+      "n": 33,
+      "title": "Betrayal and Denial Foretold",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_33_betrayal_and_denial_foretold_2_GOJ4933_0_0_low.mp4"
+     },
+     {
+      "n": 34,
+      "title": "Jesus Comforts his Disciples",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_34_jesus_comforts_his_disciples_2_GOJ4934_0_0_low.mp4"
+     },
+     {
+      "n": 35,
+      "title": "Jesus Promises the Holy Spirit",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_35_jesus_promises_the_holy_spirit_2_GOJ4935_0_0_low.mp4"
+     },
+     {
+      "n": 36,
+      "title": "The Vine and the Branches",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_36_the_vine_and_the_branches_2_GOJ4936_0_0_low.mp4"
+     },
+     {
+      "n": 37,
+      "title": "The Worlds Hatred",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_37_the_worlds_hatred_2_GOJ4937_0_0_low.mp4"
+     },
+     {
+      "n": 38,
+      "title": "The Work of the Holy Spirit",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_38_the_work_of_the_holy_spirit_2_GOJ4938_0_0_low.mp4"
+     },
+     {
+      "n": 39,
+      "title": "Grief Will Turn to Joy",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_39_grief_will_turn_to_joy_2_GOJ4939_0_0_low.mp4"
+     },
+     {
+      "n": 40,
+      "title": "Jesus Prays to be Glorified",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_40_jesus_prays_to_be_glorified_2_GOJ4940_0_0_low.mp4"
+     },
+     {
+      "n": 41,
+      "title": "The Arrest of Jesus and Peters Denial",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_41_the_arrest_of_jesus_and_peters_denial_2_GOJ4941_0_0_low.mp4"
+     },
+     {
+      "n": 42,
+      "title": "My Kingdom is not of This World",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_42_my_kingdom_is_not_of_this_world_2_GOJ4942_0_0_low.mp4"
+     },
+     {
+      "n": 43,
+      "title": "Jesus Sentenced to be Crucified",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_43_jesus_sentenced_to_be_crucified_2_GOJ4943_0_0_low.mp4"
+     },
+     {
+      "n": 44,
+      "title": "The Crucifixion of Jesus",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_44_the_crucifixion_of_jesus_2_GOJ4944_0_0_low.mp4"
+     },
+     {
+      "n": 45,
+      "title": "Jesus is Alive",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_45_jesus_is_alive_2_GOJ4945_0_0_low.mp4"
+     },
+     {
+      "n": 46,
+      "title": "Doubting Thomas",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_46_doubting_thomas_2_GOJ4946_0_0_low.mp4"
+     },
+     {
+      "n": 47,
+      "title": "Miraculous Catch",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_47_miraculous_catch_2_GOJ4947_0_0_low.mp4"
+     },
+     {
+      "n": 48,
+      "title": "Do You Love Me",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_48_do_you_love_me_2_GOJ4948_0_0_low.mp4"
+     },
+     {
+      "n": 49,
+      "title": "How to Know Jesus Personally",
+      "file": "https://video.dbs.org/John/chapters/hin_hindi/hin_Gospel_of_John_chapter_49_how_to_know_jesus_personally_2_GOJ4949_0_0_low.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "सभी अध्याय — कम डेटा",
+     "url": "https://download.dbs.org/John/hin_hindi/hin_Gospel_of_John_chapters_low.zip"
+    },
+    {
+     "label": "सभी अध्याय — HD",
+     "url": "https://download.dbs.org/John/hin_hindi/hin_Gospel_of_John_chapters_high.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/john/hin_hindi_gospel_of_john",
+   "lang": "hin",
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-jesus",
+   "type": "film",
+   "title": "JESUS",
+   "native": "यीशु",
+   "org": "Jesus Film Project",
+   "year": "1979",
+   "desc": "The life of Jesus from the Gospel of Luke, divided into 61 chapters.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "The Beginning",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_01_the_beginning_1_jf6101_0_0_low.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Birth of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_02_birth_of_jesus_1_jf6102_0_0_low.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Childhood of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_03_childhood_of_jesus_1_jf6103_0_0_low.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Baptism of Jesus by John",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_04_baptism_of_jesus_by_john_1_jf6104_0_0_low.mp4"
+     },
+     {
+      "n": 5,
+      "title": "The Devil Tempts Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_05_the_devil_tempts_jesus_1_jf6105_0_0_low.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Jesus Proclaims Fulfillment of the Scriptures",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_06_jesus_proclaims_fulfillment_of_the_scriptures_1_jf6106_0_0_low.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Parable of the Pharisee and Tax Collector",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_07_parable_of_the_pharisee_and_tax_collector_1_jf6107_0_0_low.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Miraculous Catch of Fish",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_08_miraculous_catch_of_fish_1_jf6108_0_0_low.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Jairuss Daughter Brought Back to Life",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_09_jairuss_daughter_brought_back_to_life_1_jf6109_0_0_low.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Disciples Chosen",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_10_disciples_chosen_1_jf6110_0_0_low.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Beatitudes",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_11_beatitudes_1_jf6111_0_0_low.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Sermon on the Mount",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_12_sermon_on_the_mount_1_jf6112_0_0_low.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Blessed are Those who Hear and Obey",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_13_blessed_are_those_who_hear_and_obey_1_jf6113_0_0_low.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Sinful Woman Forgiven",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_14_sinful_woman_forgiven_1_jf6114_0_0_low.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Women Disciples",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_15_women_disciples_1_jf6115_0_0_low.mp4"
+     },
+     {
+      "n": 16,
+      "title": "John the Baptist in Prison",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_16_john_the_baptist_in_prison_1_jf6116_0_0_low.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Parable of the Sower and the Seed",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_17_parable_of_the_sower_and_the_seed_1_jf6117_0_0_low.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Parable of the Lamp",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_18_parable_of_the_lamp_1_jf6118_0_0_low.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Jesus Calms the Storm",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_19_jesus_calms_the_storm_1_jf6119_0_0_low.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Healing of the Demoniac",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_20_healing_of_the_demoniac_1_jf6120_0_0_low.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Jesus Feeds 5000",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_21_jesus_feeds_5000_1_jf6121_0_0_low.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Peter Declares Jesus to be the Christ",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_22_peter_declares_jesus_to_be_the_christ_1_jf6122_0_0_low.mp4"
+     },
+     {
+      "n": 23,
+      "title": "The Transfiguration",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_23_the_transfiguration_1_jf6123_0_0_low.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Jesus Heals Boy From Evil Spirit",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_24_jesus_heals_boy_from_evil_spirit_1_jf6124_0_0_low.mp4"
+     },
+     {
+      "n": 25,
+      "title": "The Lords Prayer",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_25_the_lords_prayer_1_jf6125_0_0_low.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Teaching About Prayer and Faith",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_26_teaching_about_prayer_and_faith_1_jf6126_0_0_low.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Woe to Those who Cause Others to Sin",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_27_woe_to_those_who_cause_others_to_sin_1_jf6127_0_0_low.mp4"
+     },
+     {
+      "n": 28,
+      "title": "The Kingdom of God as a Mustard Seed",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_28_the_kingdom_of_god_as_a_mustard_seed_1_jf6128_0_0_low.mp4"
+     },
+     {
+      "n": 29,
+      "title": "Jesus Spends Time with Sinners",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_29_jesus_spends_time_with_sinners_1_jf6129_0_0_low.mp4"
+     },
+     {
+      "n": 30,
+      "title": "Healing on the Sabbath",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_30_healing_on_the_sabbath_1_jf6130_0_0_low.mp4"
+     },
+     {
+      "n": 31,
+      "title": "Parable of the Good Samaritan",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_31_parable_of_the_good_samaritan_1_jf6131_0_0_low.mp4"
+     },
+     {
+      "n": 32,
+      "title": "Healing of Bartimaeus",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_32_healing_of_bartimaeus_1_jf6132_0_0_low.mp4"
+     },
+     {
+      "n": 33,
+      "title": "Jesus and Zaccheus",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_33_jesus_and_zaccheus_1_jf6133_0_0_low.mp4"
+     },
+     {
+      "n": 34,
+      "title": "Jesus Predicts his Death and Resurrection",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_34_jesus_predicts_his_death_and_resurrection_1_jf6134_0_0_low.mp4"
+     },
+     {
+      "n": 35,
+      "title": "Jesuss Triumphal Entry",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_35_jesuss_triumphal_entry_1_jf6135_0_0_low.mp4"
+     },
+     {
+      "n": 36,
+      "title": "Jesus Weeps Over Jerusalem",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_36_jesus_weeps_over_jerusalem_1_jf6136_0_0_low.mp4"
+     },
+     {
+      "n": 37,
+      "title": "Jesus Drives Out Money Changers",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_37_jesus_drives_out_money_changers_1_jf6137_0_0_low.mp4"
+     },
+     {
+      "n": 38,
+      "title": "Widows Offering",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_38_widows_offering_1_jf6138_0_0_low.mp4"
+     },
+     {
+      "n": 39,
+      "title": "Annas Questions Jesuss Authority",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_39_annas_questions_jesuss_authority_1_jf6139_0_0_low.mp4"
+     },
+     {
+      "n": 40,
+      "title": "Parable of the Vineyard and Tenants",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_40_parable_of_the_vineyard_and_tenants_1_jf6140_0_0_low.mp4"
+     },
+     {
+      "n": 41,
+      "title": "Paying Taxes to Caesar",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_41_paying_taxes_to_caesar_1_jf6141_0_0_low.mp4"
+     },
+     {
+      "n": 42,
+      "title": "The Last Supper",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_42_the_last_supper_1_jf6142_0_0_low.mp4"
+     },
+     {
+      "n": 43,
+      "title": "Upper Room Teaching",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_43_upper_room_teaching_1_jf6143_0_0_low.mp4"
+     },
+     {
+      "n": 44,
+      "title": "Jesus is Betrayed and Arrested",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_44_jesus_is_betrayed_and_arrested_1_jf6144_0_0_low.mp4"
+     },
+     {
+      "n": 45,
+      "title": "Peter Disowns Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_45_peter_disowns_jesus_1_jf6145_0_0_low.mp4"
+     },
+     {
+      "n": 46,
+      "title": "Jesus is Mocked and Questioned",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_46_jesus_is_mocked_and_questioned_1_jf6146_0_0_low.mp4"
+     },
+     {
+      "n": 47,
+      "title": "Jesus is Brought to Pilate",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_47_jesus_is_brought_to_pilate_1_jf6147_0_0_low.mp4"
+     },
+     {
+      "n": 48,
+      "title": "Jesus is Brought to Herod",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_48_jesus_is_brought_to_herod_1_jf6148_0_0_low.mp4"
+     },
+     {
+      "n": 49,
+      "title": "Jesus is Sentenced",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_49_jesus_is_sentenced_1_jf6149_0_0_low.mp4"
+     },
+     {
+      "n": 50,
+      "title": "Jesus Carries his Cross",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_50_jesus_carries_his_cross_1_jf6150_0_0_low.mp4"
+     },
+     {
+      "n": 51,
+      "title": "Jesus is Crucified",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_51_jesus_is_crucified_1_jf6151_0_0_low.mp4"
+     },
+     {
+      "n": 52,
+      "title": "Soldiers Gamble for Jesuss Clothes",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_52_soldiers_gamble_for_jesuss_clothes_1_jf6152_0_0_low.mp4"
+     },
+     {
+      "n": 53,
+      "title": "Sign on the Cross",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_53_sign_on_the_cross_1_jf6153_0_0_low.mp4"
+     },
+     {
+      "n": 54,
+      "title": "Crucified Convicts",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_54_crucified_convicts_1_jf6154_0_0_low.mp4"
+     },
+     {
+      "n": 55,
+      "title": "Death of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_55_death_of_jesus_1_jf6155_0_0_low.mp4"
+     },
+     {
+      "n": 56,
+      "title": "Burial of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_56_burial_of_jesus_1_jf6156_0_0_low.mp4"
+     },
+     {
+      "n": 57,
+      "title": "Angels At the Tomb",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_57_angels_at_the_tomb_1_jf6157_0_0_low.mp4"
+     },
+     {
+      "n": 58,
+      "title": "The Tomb is Empty",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_58_the_tomb_is_empty_1_jf6158_0_0_low.mp4"
+     },
+     {
+      "n": 59,
+      "title": "Resurrected Jesus Appears",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_59_resurrected_jesus_appears_1_jf6159_0_0_low.mp4"
+     },
+     {
+      "n": 60,
+      "title": "Great Commission and Ascension",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_60_great_commission_and_ascension_1_jf6160_0_0_low.mp4"
+     },
+     {
+      "n": 61,
+      "title": "Invitation to Know Jesus Personally",
+      "file": "https://video.dbs.org/Jesus/chapters/hin_hindi/hin_jesus_chapter_61_invitation_to_know_jesus_personally_1_jf6161_0_0_low.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "सभी अध्याय — कम डेटा",
+     "url": "https://download.dbs.org/Jesus/hin_hindi/hin_jesus_chapters_low.zip"
+    },
+    {
+     "label": "सभी अध्याय — HD",
+     "url": "https://download.dbs.org/Jesus/hin_hindi/hin_jesus_chapters_high.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/jesus/hin_hindi_jesus",
+   "lang": "hin",
+   "read": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-lumo-john",
+   "type": "film",
+   "title": "LUMO: The Gospel of John",
+   "native": "लूमो: यूहन्ना रचित सुसमाचार",
+   "org": "LUMO Project",
+   "desc": "John filmed word for word in 21 parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "John 1",
+      "file": "https://video.dbs.org/Lumo-John/films_low/hin_Hindi_John_Hindi-Contemporary-Version_low/hin_LUMO_Hindi_John_Hindi-Contemporary-Version_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "John 2",
+      "file": "https://video.dbs.org/Lumo-John/films_low/hin_Hindi_John_Hindi-Contemporary-Version_low/hin_LUMO_Hindi_John_Hindi-Contemporary-Version_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "John 3",
+      "file": "https://video.dbs.org/Lumo-John/films_low/hin_Hindi_John_Hindi-Contemporary-Version_low/hin_LUMO_Hindi_John_Hindi-Contemporary-Version_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "John 4",
+      "file": "https://video.dbs.org/Lumo-John/films_low/hin_Hindi_John_Hindi-Contemporary-Version_low/hin_LUMO_Hindi_John_Hindi-Contemporary-Version_04_360.mp4"
+     },
+     {
+      "n": 5,
+      "title": "John 5",
+      "file": "https://video.dbs.org/Lumo-John/films_low/hin_Hindi_John_Hindi-Contemporary-Version_low/hin_LUMO_Hindi_John_Hindi-Contemporary-Version_05_360.mp4"
+     },
+     {
+      "n": 6,
+      "title": "John 6",
+      "file": "https://video.dbs.org/Lumo-John/films_low/hin_Hindi_John_Hindi-Contemporary-Version_low/hin_LUMO_Hindi_John_Hindi-Contemporary-Version_06_360.mp4"
+     },
+     {
+      "n": 7,
+      "title": "John 7",
+      "file": "https://video.dbs.org/Lumo-John/films_low/hin_Hindi_John_Hindi-Contemporary-Version_low/hin_LUMO_Hindi_John_Hindi-Contemporary-Version_07_360.mp4"
+     },
+     {
+      "n": 8,
+      "title": "John 8",
+      "file": "https://video.dbs.org/Lumo-John/films_low/hin_Hindi_John_Hindi-Contemporary-Version_low/hin_LUMO_Hindi_John_Hindi-Contemporary-Version_08_360.mp4"
+     },
+     {
+      "n": 9,
+      "title": "John 9",
+      "file": "https://video.dbs.org/Lumo-John/films_low/hin_Hindi_John_Hindi-Contemporary-Version_low/hin_LUMO_Hindi_John_Hindi-Contemporary-Version_09_360.mp4"
+     },
+     {
+      "n": 10,
+      "title": "John 10",
+      "file": "https://video.dbs.org/Lumo-John/films_low/hin_Hindi_John_Hindi-Contemporary-Version_low/hin_LUMO_Hindi_John_Hindi-Contemporary-Version_10_360.mp4"
+     },
+     {
+      "n": 11,
+      "title": "John 11",
+      "file": "https://video.dbs.org/Lumo-John/films_low/hin_Hindi_John_Hindi-Contemporary-Version_low/hin_LUMO_Hindi_John_Hindi-Contemporary-Version_11_360.mp4"
+     },
+     {
+      "n": 12,
+      "title": "John 12",
+      "file": "https://video.dbs.org/Lumo-John/films_low/hin_Hindi_John_Hindi-Contemporary-Version_low/hin_LUMO_Hindi_John_Hindi-Contemporary-Version_12_360.mp4"
+     },
+     {
+      "n": 13,
+      "title": "John 13",
+      "file": "https://video.dbs.org/Lumo-John/films_low/hin_Hindi_John_Hindi-Contemporary-Version_low/hin_LUMO_Hindi_John_Hindi-Contemporary-Version_13_360.mp4"
+     },
+     {
+      "n": 14,
+      "title": "John 14",
+      "file": "https://video.dbs.org/Lumo-John/films_low/hin_Hindi_John_Hindi-Contemporary-Version_low/hin_LUMO_Hindi_John_Hindi-Contemporary-Version_14_360.mp4"
+     },
+     {
+      "n": 15,
+      "title": "John 15",
+      "file": "https://video.dbs.org/Lumo-John/films_low/hin_Hindi_John_Hindi-Contemporary-Version_low/hin_LUMO_Hindi_John_Hindi-Contemporary-Version_15_360.mp4"
+     },
+     {
+      "n": 16,
+      "title": "John 16",
+      "file": "https://video.dbs.org/Lumo-John/films_low/hin_Hindi_John_Hindi-Contemporary-Version_low/hin_LUMO_Hindi_John_Hindi-Contemporary-Version_16_360.mp4"
+     },
+     {
+      "n": 17,
+      "title": "John 17",
+      "file": "https://video.dbs.org/Lumo-John/films_low/hin_Hindi_John_Hindi-Contemporary-Version_low/hin_LUMO_Hindi_John_Hindi-Contemporary-Version_17_360.mp4"
+     },
+     {
+      "n": 18,
+      "title": "John 18",
+      "file": "https://video.dbs.org/Lumo-John/films_low/hin_Hindi_John_Hindi-Contemporary-Version_low/hin_LUMO_Hindi_John_Hindi-Contemporary-Version_18_360.mp4"
+     },
+     {
+      "n": 19,
+      "title": "John 19",
+      "file": "https://video.dbs.org/Lumo-John/films_low/hin_Hindi_John_Hindi-Contemporary-Version_low/hin_LUMO_Hindi_John_Hindi-Contemporary-Version_19_360.mp4"
+     },
+     {
+      "n": 20,
+      "title": "John 20",
+      "file": "https://video.dbs.org/Lumo-John/films_low/hin_Hindi_John_Hindi-Contemporary-Version_low/hin_LUMO_Hindi_John_Hindi-Contemporary-Version_20_360.mp4"
+     },
+     {
+      "n": 21,
+      "title": "John 21",
+      "file": "https://video.dbs.org/Lumo-John/films_low/hin_Hindi_John_Hindi-Contemporary-Version_low/hin_LUMO_Hindi_John_Hindi-Contemporary-Version_21_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-john/hin_hindi_john",
+   "lang": "hin",
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-lumo-mark",
+   "type": "film",
+   "title": "LUMO: The Gospel of Mark",
+   "native": "लूमो: मरकुस रचित सुसमाचार",
+   "org": "LUMO Project",
+   "desc": "Mark filmed word for word in 16 parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Mark 1",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/hin_Hindi_Mark_New-Hindi-Version-2017_low/hin_LUMO_Hindi_Mark_New-Hindi-Version-2017_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Mark 2",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/hin_Hindi_Mark_New-Hindi-Version-2017_low/hin_LUMO_Hindi_Mark_New-Hindi-Version-2017_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Mark 3",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/hin_Hindi_Mark_New-Hindi-Version-2017_low/hin_LUMO_Hindi_Mark_New-Hindi-Version-2017_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Mark 4",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/hin_Hindi_Mark_New-Hindi-Version-2017_low/hin_LUMO_Hindi_Mark_New-Hindi-Version-2017_04_360.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Mark 5",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/hin_Hindi_Mark_New-Hindi-Version-2017_low/hin_LUMO_Hindi_Mark_New-Hindi-Version-2017_05_360.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Mark 6",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/hin_Hindi_Mark_New-Hindi-Version-2017_low/hin_LUMO_Hindi_Mark_New-Hindi-Version-2017_06_360.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Mark 7",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/hin_Hindi_Mark_New-Hindi-Version-2017_low/hin_LUMO_Hindi_Mark_New-Hindi-Version-2017_07_360.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Mark 8",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/hin_Hindi_Mark_New-Hindi-Version-2017_low/hin_LUMO_Hindi_Mark_New-Hindi-Version-2017_08_360.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Mark 9",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/hin_Hindi_Mark_New-Hindi-Version-2017_low/hin_LUMO_Hindi_Mark_New-Hindi-Version-2017_09_360.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Mark 10",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/hin_Hindi_Mark_New-Hindi-Version-2017_low/hin_LUMO_Hindi_Mark_New-Hindi-Version-2017_10_360.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Mark 11",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/hin_Hindi_Mark_New-Hindi-Version-2017_low/hin_LUMO_Hindi_Mark_New-Hindi-Version-2017_11_360.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Mark 12",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/hin_Hindi_Mark_New-Hindi-Version-2017_low/hin_LUMO_Hindi_Mark_New-Hindi-Version-2017_12_360.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Mark 13",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/hin_Hindi_Mark_New-Hindi-Version-2017_low/hin_LUMO_Hindi_Mark_New-Hindi-Version-2017_13_360.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Mark 14",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/hin_Hindi_Mark_New-Hindi-Version-2017_low/hin_LUMO_Hindi_Mark_New-Hindi-Version-2017_14_360.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Mark 15",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/hin_Hindi_Mark_New-Hindi-Version-2017_low/hin_LUMO_Hindi_Mark_New-Hindi-Version-2017_15_360.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Mark 16",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/hin_Hindi_Mark_New-Hindi-Version-2017_low/hin_LUMO_Hindi_Mark_New-Hindi-Version-2017_16_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-mark/hin_hindi_mark",
+   "lang": "hin",
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-lumo-acts",
+   "type": "film",
+   "title": "LUMO: Acts of the Apostles",
+   "native": "लूमो: प्रेरितों के काम",
+   "org": "LUMO Project",
+   "desc": "Acts of the Apostles in four parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Part 1",
+      "file": "https://video.dbs.org/Lumo-Acts/films_low/hin_Hindi_Acts_2019-Hindi-Contemporary-Version/hin_Acts_Hindi_2019-Hindi-Contemporary-Version_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Part 2",
+      "file": "https://video.dbs.org/Lumo-Acts/films_low/hin_Hindi_Acts_2019-Hindi-Contemporary-Version/hin_Acts_Hindi_2019-Hindi-Contemporary-Version_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Part 3",
+      "file": "https://video.dbs.org/Lumo-Acts/films_low/hin_Hindi_Acts_2019-Hindi-Contemporary-Version/hin_Acts_Hindi_2019-Hindi-Contemporary-Version_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Part 4",
+      "file": "https://video.dbs.org/Lumo-Acts/films_low/hin_Hindi_Acts_2019-Hindi-Contemporary-Version/hin_Acts_Hindi_2019-Hindi-Contemporary-Version_04_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-acts/hin_hindi_acts",
+   "lang": "hin",
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-lumo-covenant",
+   "type": "film",
+   "title": "LUMO: The Covenant",
+   "native": "लूमो: वाचा",
+   "org": "LUMO Project",
+   "desc": "The Bible's covenant story in 12 parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Part 1",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/hin_Hindi_Covenant_Hindi-Contemporary-Version/hin_Covenant_Hindi_Hindi-Contemporary-Version_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Part 2",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/hin_Hindi_Covenant_Hindi-Contemporary-Version/hin_Covenant_Hindi_Hindi-Contemporary-Version_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Part 3",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/hin_Hindi_Covenant_Hindi-Contemporary-Version/hin_Covenant_Hindi_Hindi-Contemporary-Version_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Part 4",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/hin_Hindi_Covenant_Hindi-Contemporary-Version/hin_Covenant_Hindi_Hindi-Contemporary-Version_04_360.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Part 5",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/hin_Hindi_Covenant_Hindi-Contemporary-Version/hin_Covenant_Hindi_Hindi-Contemporary-Version_05_360.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Part 6",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/hin_Hindi_Covenant_Hindi-Contemporary-Version/hin_Covenant_Hindi_Hindi-Contemporary-Version_06_360.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Part 7",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/hin_Hindi_Covenant_Hindi-Contemporary-Version/hin_Covenant_Hindi_Hindi-Contemporary-Version_07_360.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Part 8",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/hin_Hindi_Covenant_Hindi-Contemporary-Version/hin_Covenant_Hindi_Hindi-Contemporary-Version_08_360.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Part 9",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/hin_Hindi_Covenant_Hindi-Contemporary-Version/hin_Covenant_Hindi_Hindi-Contemporary-Version_09_360.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Part 10",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/hin_Hindi_Covenant_Hindi-Contemporary-Version/hin_Covenant_Hindi_Hindi-Contemporary-Version_10_360.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Part 11",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/hin_Hindi_Covenant_Hindi-Contemporary-Version/hin_Covenant_Hindi_Hindi-Contemporary-Version_11_360.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Part 12",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/hin_Hindi_Covenant_Hindi-Contemporary-Version/hin_Covenant_Hindi_Hindi-Contemporary-Version_12_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-covenant/hin_hindi_covenant",
+   "lang": "hin",
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-bible-slides",
+   "type": "film",
+   "title": "Bible Slides",
+   "native": "बाइबल चित्र",
+   "org": "Digital Bible Society",
+   "desc": "An illustrated Bible overview in three parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Part 1",
+      "file": "https://video.dbs.org/Bible_Slides/chapters/hin_hindi/hin_hindi_chapter_01.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Part 2",
+      "file": "https://video.dbs.org/Bible_Slides/chapters/hin_hindi/hin_hindi_chapter_02.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Part 3",
+      "file": "https://video.dbs.org/Bible_Slides/chapters/hin_hindi/hin_hindi_chapter_03.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "पूरा संग्रह (ZIP)",
+     "url": "https://download.dbs.org/Bible_Slides/hin_hindi.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/bible_slides/hin_hindi_bible_slides",
+   "lang": "hin",
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-hope",
+   "type": "film",
+   "title": "The HOPE",
+   "native": "आशा",
+   "org": "Mars Hill Productions",
+   "desc": "God's redemptive story from creation to Christ in 36 events.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Event 1",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_01_low.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Event 2",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_02_low.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Event 3",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_03_low.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Event 4",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_04_low.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Event 5",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_05_low.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Event 6",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_06_low.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Event 7",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_07_low.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Event 8",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_08_low.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Event 9",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_09_low.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Event 10",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_10_low.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Event 11",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_11_low.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Event 12",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_12_low.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Event 13",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_13_low.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Event 14",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_14_low.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Event 15",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_15_low.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Event 16",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_16_low.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Event 17",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_17_low.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Event 18",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_18_low.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Event 19",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_19_low.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Event 20",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_20_low.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Event 21",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_21_low.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Event 22",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_22_low.mp4"
+     },
+     {
+      "n": 23,
+      "title": "Event 23",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_23_low.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Event 24",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_24_low.mp4"
+     },
+     {
+      "n": 25,
+      "title": "Event 25",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_25_low.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Event 26",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_26_low.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Event 27",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_27_low.mp4"
+     },
+     {
+      "n": 28,
+      "title": "Event 28",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_28_low.mp4"
+     },
+     {
+      "n": 29,
+      "title": "Event 29",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_29_low.mp4"
+     },
+     {
+      "n": 30,
+      "title": "Event 30",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_30_low.mp4"
+     },
+     {
+      "n": 31,
+      "title": "Event 31",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_31_low.mp4"
+     },
+     {
+      "n": 32,
+      "title": "Event 32",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_32_low.mp4"
+     },
+     {
+      "n": 33,
+      "title": "Event 33",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_33_low.mp4"
+     },
+     {
+      "n": 34,
+      "title": "Event 34",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_34_low.mp4"
+     },
+     {
+      "n": 35,
+      "title": "Event 35",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_35_low.mp4"
+     },
+     {
+      "n": 36,
+      "title": "Event 36",
+      "file": "https://video.dbs.org/HOPE/chapters_low/hin_hindi/hin_hindi_the_hope_event_36_low.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "सभी भाग (ZIP)",
+     "url": "https://download.dbs.org/HOPE/hin_hindi_the_hope_events.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/hope/hin_hindi_the_hope",
+   "lang": "hin",
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-matthew",
+   "type": "film",
+   "title": "The Visual Bible: Matthew",
+   "native": "दृश्य बाइबल: मत्ती",
+   "org": "Visual Bible International",
+   "desc": "The Gospel of Matthew presented word for word in 28 chapters.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Matthew 1",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-01.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Matthew 2",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-02.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Matthew 3",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-03.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Matthew 4",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-04.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Matthew 5",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-05.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Matthew 6",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-06.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Matthew 7",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-07.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Matthew 8",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-08.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Matthew 9",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-09.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Matthew 10",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-10.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Matthew 11",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-11.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Matthew 12",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-12.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Matthew 13",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-13.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Matthew 14",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-14.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Matthew 15",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-15.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Matthew 16",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-16.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Matthew 17",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-17.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Matthew 18",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-18.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Matthew 19",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-19.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Matthew 20",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-20.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Matthew 21",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-21.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Matthew 22",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-22.mp4"
+     },
+     {
+      "n": 23,
+      "title": "Matthew 23",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-23.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Matthew 24",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-24.mp4"
+     },
+     {
+      "n": 25,
+      "title": "Matthew 25",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-25.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Matthew 26",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-26.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Matthew 27",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-27.mp4"
+     },
+     {
+      "n": 28,
+      "title": "Matthew 28",
+      "file": "https://video.dbs.org/Matthew/chapters/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapter-28.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "सभी अध्याय (ZIP)",
+     "url": "https://download.dbs.org/Matthew/hin-matthew-vb-hindi/hin-matthew-vb-hindi-02-chapters.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/matthew/hin-matthew-vb-hindi",
+   "lang": "hin",
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-acts",
+   "type": "film",
+   "title": "The Visual Bible: Acts",
+   "native": "दृश्य बाइबल: प्रेरितों के काम",
+   "org": "Visual Bible International",
+   "desc": "The book of Acts presented word for word in 28 chapters.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Acts 1",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-01.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Acts 2",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-02.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Acts 3",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-03.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Acts 4",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-04.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Acts 5",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-05.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Acts 6",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-06.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Acts 7",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-07.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Acts 8",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-08.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Acts 9",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-09.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Acts 10",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-10.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Acts 11",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-11.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Acts 12",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-12.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Acts 13",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-13.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Acts 14",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-14.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Acts 15",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-15.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Acts 16",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-16.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Acts 17",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-17.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Acts 18",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-18.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Acts 19",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-19.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Acts 20",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-20.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Acts 21",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-21.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Acts 22",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-22.mp4"
+     },
+     {
+      "n": 23,
+      "title": "Acts 23",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-23.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Acts 24",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-24.mp4"
+     },
+     {
+      "n": 25,
+      "title": "Acts 25",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-25.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Acts 26",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-26.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Acts 27",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-27.mp4"
+     },
+     {
+      "n": 28,
+      "title": "Acts 28",
+      "file": "https://video.dbs.org/Acts_VB/chapters/hin-acts-vb-hindi/hin-acts-vb-hindi-chapter-28.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "सभी अध्याय (ZIP)",
+     "url": "https://download.dbs.org/Acts_VB/hin-acts-vb-hindi/hin-acts-vb-hindi-chapters.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/acts_vb/hin-acts-vb-hindi",
+   "lang": "hin",
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-magdalena",
+   "type": "film",
+   "title": "Magdalena",
+   "native": "मगदलीना",
+   "org": "Jesus Film Project",
+   "desc": "The story of Jesus through the eyes of Mary Magdalene.",
+   "links": [
+    {
+     "label": "Watch on DBS",
+     "url": "https://dbs.org/video/magdalena/hin_hindi_magdalena"
+    }
+   ],
+   "source": "https://dbs.org/video/magdalena/hin_hindi_magdalena",
+   "lang": "hin",
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-story-jesus",
+   "type": "film",
+   "title": "Story of Jesus for Children",
+   "native": "बच्चों के लिए यीशु की कहानी",
+   "org": "Jesus Film Project",
+   "desc": "The story of Jesus told for children.",
+   "links": [
+    {
+     "label": "Watch on DBS",
+     "url": "https://dbs.org/video/storyjesus/hin_hindi_story_of_jesus_for_children"
+    }
+   ],
+   "source": "https://dbs.org/video/storyjesus/hin_hindi_story_of_jesus_for_children",
+   "lang": "hin",
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-savior",
+   "type": "film",
+   "title": "The Savior",
+   "native": "उद्धारकर्ता",
+   "org": "The Savior Film",
+   "desc": "The life of Jesus in Hindi.",
+   "links": [
+    {
+     "label": "Watch on DBS",
+     "url": "https://dbs.org/video/savior/hin_hindi_the_savior"
+    }
+   ],
+   "source": "https://dbs.org/video/savior/hin_hindi_the_savior",
+   "lang": "hin",
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-king-glory",
+   "type": "film",
+   "title": "King of Glory",
+   "native": "महिमा का राजा",
+   "org": "ROCK International",
+   "desc": "The Bible's story of the King of Glory.",
+   "links": [
+    {
+     "label": "Watch on DBS",
+     "url": "https://dbs.org/video/rock/hin-hindi"
+    }
+   ],
+   "source": "https://dbs.org/video/rock/hin-hindi",
+   "lang": "hin",
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-creation-christ",
+   "type": "film",
+   "title": "Creation to Christ",
+   "native": "सृष्टि से मसीह तक",
+   "org": "Create International",
+   "desc": "The Bible story from creation to Christ.",
+   "links": [
+    {
+     "label": "Watch on DBS",
+     "url": "https://dbs.org/video/c2c/hin-creation-hindi"
+    }
+   ],
+   "source": "https://dbs.org/video/c2c/hin-creation-hindi",
+   "lang": "hin",
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-bp-overviews",
+   "type": "film",
+   "title": "BibleProject: Overviews",
+   "native": "बाइबल की रूपरेखा",
+   "org": "BibleProject",
+   "desc": "Hindi overview videos for the books of the Bible.",
+   "links": [
+    {
+     "label": "Watch on DBS",
+     "url": "https://dbs.org/video/bp/hin-hindi-overview"
+    }
+   ],
+   "source": "https://dbs.org/video/bp/hin-hindi-overview",
+   "lang": "hin",
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-bp-themes",
+   "type": "film",
+   "title": "BibleProject: Themes",
+   "native": "बाइबल के विषय",
+   "org": "BibleProject",
+   "desc": "Hindi videos explaining major themes in Scripture.",
+   "links": [
+    {
+     "label": "Watch on DBS",
+     "url": "https://dbs.org/video/bp/hin-hindi-themes"
+    }
+   ],
+   "source": "https://dbs.org/video/bp/hin-hindi-themes",
+   "lang": "hin",
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-ibible",
+   "type": "film",
+   "title": "iBible: Salvation Story",
+   "native": "उद्धार की कहानी",
+   "org": "RevelationMedia",
+   "desc": "An animated presentation of the Bible's message of salvation.",
+   "links": [
+    {
+     "label": "Watch on DBS",
+     "url": "https://dbs.org/video/ibible/hin-hindi-ibible_salvation"
+    }
+   ],
+   "source": "https://dbs.org/video/ibible/hin-hindi-ibible_salvation",
+   "lang": "hin",
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-film-deaf-gospel",
+   "type": "film",
+   "title": "Rescue Project Deaf Gospel",
+   "native": "बधिर सुसमाचार",
+   "org": "Deaf Bible Society",
+   "desc": "A visual Gospel presentation for Deaf audiences.",
+   "links": [
+    {
+     "label": "Watch on DBS",
+     "url": "https://dbs.org/video/deafproject/hin_hindi_rescue_project_deaf_gospel"
+    }
+   ],
+   "source": "https://dbs.org/video/deafproject/hin_hindi_rescue_project_deaf_gospel",
+   "lang": "hin",
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Hindi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "hin-ab-hcv-davar",
+   "type": "audio-bible",
+   "title": "Hindi Contemporary Version (Full Bible)",
+   "native": "हिंदी समकालीन संस्करण",
+   "org": "Davar Partners",
+   "scope": "Full Bible",
+   "stats": "1,189 chapters · 103h 39m",
+   "desc": "The complete Hindi Contemporary Version, read chapter by chapter.",
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "HINHCV_DAVR_FB_N",
+    "version": "HINHCV",
+    "testaments": [
+     "OT",
+     "NT"
+    ]
+   },
+   "downloads": [
+    {
+     "label": "पूरा ऑडियो (ZIP)",
+     "url": "https://scripture.dbs.org/audio_zip/HINHCV_DAVR_FB_N.zip"
+    }
+   ],
+   "source": "https://dbs.org/bibles/audio/HINHCV_DAVR_FB_N",
+   "lang": "hin",
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "license": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Audio Bibles"
+  },
+  {
+   "id": "hin-ab-hcv-fcbh",
+   "type": "audio-bible",
+   "title": "Hindi Contemporary Version — FCBH",
+   "native": "हिंदी समकालीन संस्करण",
+   "org": "Faith Comes By Hearing",
+   "scope": "Full Bible",
+   "desc": "The complete Hindi Contemporary Version from Faith Comes By Hearing.",
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "HINHCV_FCBH_FB_N",
+    "version": "HINHCV",
+    "testaments": [
+     "OT",
+     "NT"
+    ]
+   },
+   "downloads": [
+    {
+     "label": "पूरा ऑडियो (ZIP)",
+     "url": "https://scripture.dbs.org/audio_zip/HINHCV_FCBH_FB_N.zip"
+    }
+   ],
+   "source": "https://dbs.org/bibles/audio/HINHCV_DAVR_FB_N",
+   "lang": "hin",
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Audio Bibles"
+  },
+  {
+   "id": "hin-ab-hcv-fcbh-nt",
+   "type": "audio-bible",
+   "title": "Hindi Contemporary Version — New Testament",
+   "native": "हिंदी समकालीन संस्करण",
+   "org": "Faith Comes By Hearing",
+   "scope": "New Testament",
+   "desc": "The Hindi Contemporary New Testament, read chapter by chapter.",
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "HINHCV_FCBH_NT_N",
+    "version": "HINHCV",
+    "testaments": [
+     "NT"
+    ]
+   },
+   "downloads": [
+    {
+     "label": "पूरा ऑडियो (ZIP)",
+     "url": "https://scripture.dbs.org/audio_zip/HINHCV_FCBH_NT_N.zip"
+    }
+   ],
+   "source": "https://dbs.org/bibles/audio/HINHCV_DAVR_FB_N",
+   "lang": "hin",
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Audio Bibles"
+  },
+  {
+   "id": "hin-ab-bsi",
+   "type": "audio-bible",
+   "title": "Hindi Bible",
+   "native": "धर्मशास्त्र",
+   "org": "Davar Partners",
+   "year": "1970",
+   "scope": "Full Bible",
+   "desc": "The Hindi Bible read chapter by chapter.",
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "HINBSI_DAVR_FB_N",
+    "version": "HINBSI",
+    "testaments": [
+     "OT",
+     "NT"
+    ]
+   },
+   "downloads": [
+    {
+     "label": "पूरा ऑडियो (ZIP)",
+     "url": "https://scripture.dbs.org/audio_zip/HINBSI_DAVR_FB_N.zip"
+    }
+   ],
+   "source": "https://dbs.org/bibles/audio/HINBSI_DAVR_FB_N",
+   "lang": "hin",
+   "read": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Audio Bibles"
+  },
+  {
+   "id": "hin-ab-tgh",
+   "type": "audio-bible",
+   "title": "Hindi Holy Bible (Portions)",
+   "native": "हिन्दी बाइबल",
+   "org": "International Scripture Audio",
+   "year": "1851",
+   "scope": "Full Bible",
+   "desc": "Historic Hindi Scripture read chapter by chapter.",
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "HINTGH_ISA_FB_N",
+    "version": "HINTGH",
+    "testaments": [
+     "OT",
+     "NT"
+    ]
+   },
+   "downloads": [
+    {
+     "label": "पूरा ऑडियो (ZIP)",
+     "url": "https://scripture.dbs.org/audio_zip/HINTGH_ISA_FB_N.zip"
+    }
+   ],
+   "source": "https://dbs.org/bibles/audio/HINTGH_ISA_FB_N",
+   "lang": "hin",
+   "read": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Audio Bibles"
+  },
+  {
+   "id": "hin-ac-grn",
+   "type": "audio",
+   "title": "Hindi Scripture Recordings",
+   "native": "हिन्दी रिकॉर्डिंग",
+   "org": "Global Recordings Network",
+   "stats": "479 recordings · 1.0 GB · 18h 29m",
+   "desc": "Songs, Good News, Words of Life and Bible teaching across Hindi varieties.",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/hin_GlobalRecordings_hindi/Hindi%20Urdu/Hindi%20Urdu%20Songs%2080919/Hindi%20Urdu%20Songs%20001%20O%27Lord%20We%20Are%20At%20Your%20Door%2080919.mp3"
+   },
+   "downloads": [],
+   "source": "https://dbs.org/audio/collections/grn/hin_GlobalRecordings_hindi",
+   "lang": "hin",
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Audio Collections"
+  },
+  {
+   "id": "hin-ac-soj",
+   "type": "audio",
+   "title": "Story of Jesus",
+   "native": "यीशु की कहानी",
+   "org": "Story of Jesus",
+   "stats": "7 recordings · 109.2 MB · 1h 36m",
+   "desc": "The life of Jesus as a Hindi audio drama in seven parts.",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/soj/hin_StoryJesus_hindi_full.mp3"
+   },
+   "downloads": [],
+   "source": "https://dbs.org/audio/collections/soj/hin_StoryJesus_hindi",
+   "lang": "hin",
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Audio Collections"
+  },
+  {
+   "id": "hin-hist-hindi-1840-bible-hindustani-latin",
+   "lang": "hin",
+   "type": "historic",
+   "title": "Bible Hindustani Latin",
+   "org": "Digital Bible Society Archive",
+   "year": "1840",
+   "cover": "https://scripture.dbs.org/covers/small/Hindi-1840-Bible-Hindustani-Latin.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Hindi-1840-Bible-Hindustani-Latin.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Hindi-1840-Bible-Hindustani-Latin.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Hindi-1840-Bible-Hindustani-Latin",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "hin-hist-hindi-1851-bible-vol-1-presbyterian-mission-press",
+   "lang": "hin",
+   "type": "historic",
+   "title": "Bible Vol 1 Presbyterian Mission Press",
+   "org": "Digital Bible Society Archive",
+   "year": "1851",
+   "cover": "https://scripture.dbs.org/covers/small/Hindi-1851-Bible-Vol-1-Presbyterian-Mission-Press.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Hindi-1851-Bible-Vol-1-Presbyterian-Mission-Press.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Hindi-1851-Bible-Vol-1-Presbyterian-Mission-Press.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Hindi-1851-Bible-Vol-1-Presbyterian-Mission-Press",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "hin-hist-hindi-1851-old-testament",
+   "lang": "hin",
+   "type": "historic",
+   "title": "Old Testament",
+   "org": "Digital Bible Society Archive",
+   "year": "1851",
+   "cover": "https://scripture.dbs.org/covers/small/Hindi-1851-Old-Testament.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Hindi-1851-Old-Testament.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Hindi-1851-Old-Testament.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Hindi-1851-Old-Testament",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "hin-hist-hindi-1879-new-testament",
+   "lang": "hin",
+   "type": "historic",
+   "title": "New Testament",
+   "org": "Digital Bible Society Archive",
+   "year": "1879",
+   "cover": "https://scripture.dbs.org/covers/small/Hindi-1879-New-Testament.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Hindi-1879-New-Testament.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Hindi-1879-New-Testament.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Hindi-1879-New-Testament",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "hin-hist-hindi-1919-bible",
+   "lang": "hin",
+   "type": "historic",
+   "title": "Bible",
+   "org": "Digital Bible Society Archive",
+   "year": "1919",
+   "cover": "https://scripture.dbs.org/covers/small/Hindi-1919-Bible.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Hindi-1919-Bible.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Hindi-1919-Bible.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Hindi-1919-Bible",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "hin-hist-hindi-1987-new-testament",
+   "lang": "hin",
+   "type": "historic",
+   "title": "New Testament",
+   "org": "Digital Bible Society Archive",
+   "year": "1987",
+   "cover": "https://scripture.dbs.org/covers/small/Hindi-1987-New-Testament.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Hindi-1987-New-Testament.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Hindi-1987-New-Testament.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Hindi-1987-New-Testament",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "hin-hist-hindi-2006-wbtc-bible",
+   "lang": "hin",
+   "type": "historic",
+   "title": "WBTC Bible",
+   "org": "Digital Bible Society Archive",
+   "year": "2006",
+   "cover": "https://scripture.dbs.org/covers/small/Hindi-2006-WBTC-Bible.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Hindi-2006-WBTC-Bible.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Hindi-2006-WBTC-Bible.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Hindi-2006-WBTC-Bible",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "hin-hist-hindustani-urdu-1878-bible-kitab-i-muqaddas-arabic",
+   "lang": "hin",
+   "type": "historic",
+   "title": "Hindustani Urdu Bible Kitab i Muqaddas Arabic",
+   "org": "Digital Bible Society Archive",
+   "year": "1878",
+   "cover": "https://scripture.dbs.org/covers/small/Hindustani-Urdu-1878-Bible-Kitab-i-Muqaddas-Arabic.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Hindustani-Urdu-1878-Bible-Kitab-i-Muqaddas-Arabic.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Hindustani-Urdu-1878-Bible-Kitab-i-Muqaddas-Arabic.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Hindustani-Urdu-1878-Bible-Kitab-i-Muqaddas-Arabic",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "hin-text-hinold",
+   "lang": "hin",
+   "type": "scripture",
+   "title": "Hindi Old Version",
+   "native": "सरल हिन्दी बाइबल",
+   "year": 2002,
+   "org": "Digital Bible Society",
+   "scope": "",
+   "desc": "The full text, to read in the app or save.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://bibles.dbs.org/HINOLD/pdf/HINOLD.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://bibles.dbs.org/HINOLD/pdf/HINOLD.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/HINOLD",
+   "play": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "hin-text-hinhcv",
+   "lang": "hin",
+   "type": "scripture",
+   "title": "Hindi Contemporary Version",
+   "native": "हिंदी समकालीन संस्करण",
+   "year": null,
+   "org": "Digital Bible Society",
+   "scope": "",
+   "desc": "The full text, to read in the app or save.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://bibles.dbs.org/HINHCV/pdf/HINHCV.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://bibles.dbs.org/HINHCV/pdf/HINHCV.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/HINHCV",
+   "play": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "hin-text-hinohb",
+   "lang": "hin",
+   "type": "scripture",
+   "title": "The Open Hindi Bible",
+   "native": "हिन्दी बाइबल",
+   "year": 2017,
+   "org": "Digital Bible Society",
+   "scope": "",
+   "desc": "The full text, to read in the app or save.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://bibles.dbs.org/HINOHB/pdf/HINOHB.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://bibles.dbs.org/HINOHB/pdf/HINOHB.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/HINOHB",
+   "play": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "hin-text-hinerv",
+   "lang": "hin",
+   "type": "scripture",
+   "title": "Hindi Easy-to-Read Version",
+   "native": "हिन्दी बाइबिल",
+   "year": 1995,
+   "org": "Digital Bible Society",
+   "scope": "",
+   "desc": "The full text, to read in the app or save.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://bibles.dbs.org/HINERV/pdf/HINERV.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://bibles.dbs.org/HINERV/pdf/HINERV.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/HINERV",
+   "play": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Hindi",
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "hin-text-online",
+   "lang": "hin",
+   "type": "scripture",
+   "title": "Hindi Bibles to read online",
+   "native": "ऑनलाइन पढ़ने के लिए हिन्दी बाइबलें",
+   "org": "Various publishers",
+   "desc": "9 Hindi translations that their publishers host themselves. They open in a browser and need a connection.",
+   "links": [
+    {
+     "label": "Hindi Common Language Bible (2000)",
+     "url": "https://dbs.org/bibles/HINPIL"
+    },
+    {
+     "label": "Hindi New Testament (Latin Orthography) (1841)",
+     "url": "https://dbs.org/bibles/HINHKYM"
+    },
+    {
+     "label": "Indian Revised Version in Hindi",
+     "url": "https://dbs.org/bibles/HINIRV"
+    },
+    {
+     "label": "Hindi Bible (1970)",
+     "url": "https://dbs.org/bibles/HINBSI"
+    },
+    {
+     "label": "Hindi Holy Bible (Roman Script) (1983)",
+     "url": "https://dbs.org/bibles/HINROM"
+    },
+    {
+     "label": "Sab Ki Version (2014)",
+     "url": "https://dbs.org/bibles/HINSKV"
+    },
+    {
+     "label": "Hindi Revised Old Version (2002)",
+     "url": "https://dbs.org/bibles/HINROV"
+    },
+    {
+     "label": "New Testament in Hindi (2003)",
+     "url": "https://dbs.org/bibles/HINTBN"
+    },
+    {
+     "label": "Hindi Holy Bible (Portions) (1851)",
+     "url": "https://dbs.org/bibles/HINTGH"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/hin",
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Hindi",
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "hin-link-arc-gt",
+   "lang": "hin",
+   "type": "link",
+   "title": "Jesus Film Project",
+   "org": "Jesus Film Project",
+   "desc": "12 Hindi items. Full films on the publisher's own player.",
+   "links": [
+    {
+     "label": "JESUS",
+     "url": "https://arc.gt/qp0ez?apiSessionId=5f8756a9284245.85423224"
+    },
+    {
+     "label": "JESUS",
+     "url": "https://arc.gt/qp0ez?apiSessionId=5f8756ecb4a4c3.14496747"
+    },
+    {
+     "label": "JESUS",
+     "url": "https://arc.gt/qp0ez?apiSessionId=5f87570e375a99.60364909"
+    },
+    {
+     "label": "Life of Jesus (Gospel of John)",
+     "url": "https://arc.gt/h38yg?apiSessionId=5f8756ab990473.95816268"
+    },
+    {
+     "label": "Life of Jesus (Gospel of John)",
+     "url": "https://arc.gt/h38yg?apiSessionId=5f8756ee16f554.54558585"
+    },
+    {
+     "label": "Life of Jesus (Gospel of John)",
+     "url": "https://arc.gt/h38yg?apiSessionId=5f87570fabb3c9.31087192"
+    },
+    {
+     "label": "Magdalena - Director's Cut",
+     "url": "https://arc.gt/yrjwr?apiSessionId=5f8756aa904591.72282772"
+    },
+    {
+     "label": "Magdalena - Director's Cut",
+     "url": "https://arc.gt/yrjwr?apiSessionId=5f8756ed695be5.92774779"
+    },
+    {
+     "label": "Magdalena - Director's Cut",
+     "url": "https://arc.gt/yrjwr?apiSessionId=5f87570ee85fd5.18107632"
+    },
+    {
+     "label": "The Story of Jesus for Children",
+     "url": "https://arc.gt/xb5xb?apiSessionId=5f8756a83c0bd5.71685247"
+    },
+    {
+     "label": "The Story of Jesus for Children",
+     "url": "https://arc.gt/xb5xb?apiSessionId=5f8756ec1102b8.70104584"
+    },
+    {
+     "label": "The Story of Jesus for Children",
+     "url": "https://arc.gt/xb5xb?apiSessionId=5f87570d917853.38057462"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Hindi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "hin-link-bibleproject-com",
+   "lang": "hin",
+   "type": "link",
+   "title": "bibleproject.com",
+   "org": "bibleproject.com",
+   "desc": "1 Hindi items. Hosted by the publisher.",
+   "links": [
+    {
+     "label": "Hindi Bible Project Videos",
+     "url": "https://bibleproject.com/hindi"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Hindi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "hin-link-globalrecordings-net",
+   "lang": "hin",
+   "type": "link",
+   "title": "Global Recordings Network",
+   "org": "Global Recordings Network",
+   "desc": "30 Hindi items. Scripture-based recordings, told simply. Each programme plays on the publisher's own site.",
+   "links": [
+    {
+     "label": "Classic Nepali Hymns",
+     "url": "https://globalrecordings.net/en/program/63958"
+    },
+    {
+     "label": "Ek Onmole Prem Ki Katha [Story of Great Love]",
+     "url": "https://globalrecordings.net/en/program/64628"
+    },
+    {
+     "label": "Good News",
+     "url": "https://globalrecordings.net/en/program/22090"
+    },
+    {
+     "label": "Good News & Lord's Prayer",
+     "url": "https://globalrecordings.net/en/program/64254"
+    },
+    {
+     "label": "Look, Listen & Live",
+     "url": "https://globalrecordings.net/en/program/65701"
+    },
+    {
+     "label": "Look, Listen & Live 2 Mighty Men of GOD",
+     "url": "https://globalrecordings.net/en/program/80587"
+    },
+    {
+     "label": "Look, Listen & Live 3 Victory through GOD",
+     "url": "https://globalrecordings.net/en/program/80588"
+    },
+    {
+     "label": "Look, Listen & Live 4 Servants of GOD",
+     "url": "https://globalrecordings.net/en/program/80589"
+    },
+    {
+     "label": "Look, Listen & Live 5 On Trial for GOD",
+     "url": "https://globalrecordings.net/en/program/80590"
+    },
+    {
+     "label": "Look, Listen & Live 6 JESUS - Teacher & Healer",
+     "url": "https://globalrecordings.net/en/program/80591"
+    },
+    {
+     "label": "Look, Listen & Live 7 JESUS - Lord & Saviour",
+     "url": "https://globalrecordings.net/en/program/80592"
+    },
+    {
+     "label": "Look, Listen & Live 8 Acts of the HOLY SPIRIT",
+     "url": "https://globalrecordings.net/en/program/80593"
+    },
+    {
+     "label": "Portrait of Jesus",
+     "url": "https://globalrecordings.net/en/program/35370"
+    },
+    {
+     "label": "Qayamot [Words of Life - Judgement is Coming Soon]",
+     "url": "https://globalrecordings.net/en/program/38352"
+    },
+    {
+     "label": "Songs",
+     "url": "https://globalrecordings.net/en/program/80919"
+    },
+    {
+     "label": "Ujale Ki Or [Towards Light]",
+     "url": "https://globalrecordings.net/en/program/63818"
+    },
+    {
+     "label": "WOL 2 w/ GUJ: Parkali Kohli & HINDI",
+     "url": "https://globalrecordings.net/en/program/8371"
+    },
+    {
+     "label": "Words of Life",
+     "url": "https://globalrecordings.net/en/program/16051"
+    },
+    {
+     "label": "Words of Life",
+     "url": "https://globalrecordings.net/en/program/3110"
+    },
+    {
+     "label": "Words of Life",
+     "url": "https://globalrecordings.net/en/program/32510"
+    },
+    {
+     "label": "Words of Life",
+     "url": "https://globalrecordings.net/en/program/62001"
+    },
+    {
+     "label": "Words of Life",
+     "url": "https://globalrecordings.net/en/program/62044"
+    },
+    {
+     "label": "Words of Life 1",
+     "url": "https://globalrecordings.net/en/program/21280"
+    },
+    {
+     "label": "Words of Life 1 w/ MARWARI, HINDI, etc",
+     "url": "https://globalrecordings.net/en/program/8370"
+    },
+    {
+     "label": "Words of Life 2",
+     "url": "https://globalrecordings.net/en/program/22290"
+    },
+    {
+     "label": "Words of Life 3",
+     "url": "https://globalrecordings.net/en/program/74702"
+    },
+    {
+     "label": "Words of Life for Children",
+     "url": "https://globalrecordings.net/en/program/3501"
+    },
+    {
+     "label": "Words of Life w/ SINDHI: Hindu & HINDI",
+     "url": "https://globalrecordings.net/en/program/10230"
+    },
+    {
+     "label": "Yesu Ne Apanu Bachaya [Jesus Saves You]",
+     "url": "https://globalrecordings.net/en/program/64313"
+    },
+    {
+     "label": "Yesune Apunu Naya Janam Diya [Good News]",
+     "url": "https://globalrecordings.net/en/program/64314"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Hindi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "hin-link-resources-lifewords-global",
+   "lang": "hin",
+   "type": "link",
+   "title": "resources.lifewords.global",
+   "org": "resources.lifewords.global",
+   "desc": "5 Hindi items. Hosted by the publisher.",
+   "links": [
+    {
+     "label": "An invitation",
+     "url": "https://resources.lifewords.global/hindi/358-an-invitation-hindi-9780721307336.html"
+    },
+    {
+     "label": "Encounters with Jesus",
+     "url": "https://resources.lifewords.global/hindi/438-encounters-with-jesus-hindi-9780721309880.html"
+    },
+    {
+     "label": "Finding hope",
+     "url": "https://resources.lifewords.global/hindi/426-finding-hope-hindi-9780721309309.html"
+    },
+    {
+     "label": "The way to life",
+     "url": "https://resources.lifewords.global/hindi/384-the-way-to-life-hindi-9780721308586.html"
+    },
+    {
+     "label": "You matter",
+     "url": "https://resources.lifewords.global/hindi/409-you-matter-hindi-9780721309521.html"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Hindi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "hin-link-rockintl-org",
+   "lang": "hin",
+   "type": "link",
+   "title": "ROCK International",
+   "org": "ROCK International",
+   "desc": "1 Hindi items. Teaching and Scripture resources from the publisher.",
+   "links": [
+    {
+     "label": "KING of GLORY",
+     "url": "https://rockintl.org/rock-video/hindi-king-of-glory/"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Hindi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "hin-link-www-mars-hill-org",
+   "lang": "hin",
+   "type": "link",
+   "title": "www.mars-hill.org",
+   "org": "www.mars-hill.org",
+   "desc": "1 Hindi items. Hosted by the publisher.",
+   "links": [
+    {
+     "label": "The Hindi HOPE",
+     "url": "https://www.mars-hill.org/the-hope/store/the-hindi-hope-%E0%A4%86%E0%A4%B6%E0%A4%BE-voice-only-version"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Hindi",
+   "typeLabel": "Partner Links"
+  }
+ ]
+}

@@ -20,7 +20,7 @@
     return;
   }
 
-  document.title = r.title;
+  document.title = ET.displayTitle(r);
   ET.store.set('et.last', r.id);   // Home offers this back as "Carry on"
   var lib = ET.library();
   var L = lib.languages[r.lang] || {};
@@ -116,8 +116,9 @@
       '<div class="stack" style="margin-top:1rem">' +
         '<div style="display:flex;gap:.4rem;flex-wrap:wrap">' + tongue + where +
           '<span class="chip">' + h('type.' + r.type) + '</span></div>' +
-        '<h1 class="latin" style="margin:.3rem 0 0">' + ET.esc(r.title) + '</h1>' +
-        (r.native ? '<p dir="auto" style="font-size:1.3rem;margin:0">' + ET.esc(r.native) + '</p>' : '') +
+        '<h1 dir="auto" style="margin:.3rem 0 0">' + ET.esc(ET.displayTitle(r)) + '</h1>' +
+        (r.native ? '<p class="latin" style="font-size:1rem;margin:0">' +
+          ET.esc(ET.displayTitle(r) === r.native ? r.title : r.native) + '</p>' : '') +
         '<p class="muted latin" style="margin:0">' + ET.esc([r.org, r.year, r.duration, r.stats]
           .filter(Boolean).join(' · ')) + '</p>' +
         (r.desc ? '<p class="latin">' + ET.esc(r.desc) + '</p>' : '') +

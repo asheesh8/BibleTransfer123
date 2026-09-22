@@ -729,12 +729,22 @@ html[lang="yue"] body {
 }
 html[lang="yue"] body { font-family: "PingFang HK", "PingFang TC", "Microsoft JhengHei",
                "Noto Sans CJK TC", "Source Han Sans TC", system-ui, sans-serif; }
+
+/* Devanagari needs a face with the full headline and conjunct repertoire. */
+html[lang="hi"] body {
+  font-family: "Noto Sans Devanagari", "Kohinoor Devanagari", Mangal,
+               "Nirmala UI", system-ui, sans-serif;
+  line-height: 1.75;
+}
 /* Chinese has no letter case and no word spaces: uppercase tracking on a label
    just pushes the characters apart. */
 html[lang="cmn"] .kicker, html[lang="yue"] .kicker,
 html[lang="cmn"] .flabel, html[lang="yue"] .flabel,
 html[lang="cmn"] .eyebrow, html[lang="yue"] .eyebrow {
   text-transform: none; letter-spacing: 0; font-size: .82rem;
+}
+html[lang="hi"] .kicker, html[lang="hi"] .flabel, html[lang="hi"] .eyebrow {
+  text-transform: none; letter-spacing: 0; font-size: .86rem;
 }
 
 /* ============================================================ Arabic script

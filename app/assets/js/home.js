@@ -50,7 +50,7 @@
         encodeURIComponent(last.id) + '">' +
         (art ? '<img src="' + ET.esc(art) + '" alt="" onerror="this.remove()"><span class="veil"></span>' : '') +
         '<span class="kicker">' + h('home.continue') + '</span>' +
-        '<h2 class="latin">' + ET.esc(last.title) + '</h2>' +
+        '<h2 dir="auto">' + ET.esc(ET.displayTitle(last)) + '</h2>' +
         '<span class="sub latin">' + ET.esc(last.typeLabel || '') + '</span></a>';
     }
 
