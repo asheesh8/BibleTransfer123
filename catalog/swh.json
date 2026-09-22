@@ -1,0 +1,2573 @@
+{
+ "generated": "Digital Bible Society (dbs.org) — Swahili, built from the open dataset",
+ "languages": {
+  "swh": {
+   "name": "Swahili",
+   "native": "Kiswahili",
+   "script": "latn",
+   "dir": "ltr",
+   "font": "latin",
+   "speakers": "150+ million",
+   "region": "East Africa",
+   "blurb": "A major language of East Africa. This shelf combines DBS's Coastal Kiswahili and general Swahili records.",
+   "code": "swh"
+  }
+ },
+ "resources": [
+  {
+   "id": "swh-film-jesus",
+   "type": "film",
+   "title": "JESUS",
+   "org": "Jesus Film Project",
+   "duration": "2:07:53",
+   "year": "1979",
+   "scope": "Kenya and Tanzania",
+   "desc": "The life of Jesus from the Gospel of Luke, divided into 61 easy-to-play chapters.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "The Beginning",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_01_the-beginning_1_jf6101-0-0_low.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Birth of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_02_birth-of-jesus_1_jf6102-0-0_low.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Childhood of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_03_childhood-of-jesus_1_jf6103-0-0_low.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Baptism of Jesus by John",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_04_baptism-of-jesus-by-john_1_jf6104-0-0_low.mp4"
+     },
+     {
+      "n": 5,
+      "title": "The Devil Tempts Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_05_the-devil-tempts-jesus_1_jf6105-0-0_low.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Jesus Proclaims Fulfillment of the Scriptures",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_06_jesus-proclaims-fulfillment-of-the-scriptures_1_jf6106-0-0_low.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Parable of the Pharisee and Tax Collector",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_07_parable-of-the-pharisee-and-tax-collector_1_jf6107-0-0_low.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Miraculous Catch of Fish",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_08_miraculous-catch-of-fish_1_jf6108-0-0_low.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Jairuss Daughter Brought Back to Life",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_09_jairuss-daughter-brought-back-to-life_1_jf6109-0-0_low.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Disciples Chosen",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_10_disciples-chosen_1_jf6110-0-0_low.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Beatitudes",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_11_beatitudes_1_jf6111-0-0_low.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Sermon on the Mount",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_12_sermon-on-the-mount_1_jf6112-0-0_low.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Blessed are Those who Hear and Obey",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_13_blessed-are-those-who-hear-and-obey_1_jf6113-0-0_low.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Sinful Woman Forgiven",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_14_sinful-woman-forgiven_1_jf6114-0-0_low.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Women Disciples",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_15_women-disciples_1_jf6115-0-0_low.mp4"
+     },
+     {
+      "n": 16,
+      "title": "John the Baptist in Prison",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_16_john-the-baptist-in-prison_1_jf6116-0-0_low.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Parable of the Sower and the Seed",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_17_parable-of-the-sower-and-the-seed_1_jf6117-0-0_low.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Parable of the Lamp",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_18_parable-of-the-lamp_1_jf6118-0-0_low.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Jesus Calms the Storm",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_19_jesus-calms-the-storm_1_jf6119-0-0_low.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Healing of the Demoniac",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_20_healing-of-the-demoniac_1_jf6120-0-0_low.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Jesus Feeds 5000",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_21_jesus-feeds-5000_1_jf6121-0-0_low.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Peter Declares Jesus to be the Christ",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_22_peter-declares-jesus-to-be-the-christ_1_jf6122-0-0_low.mp4"
+     },
+     {
+      "n": 23,
+      "title": "The Transfiguration",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_23_the-transfiguration_1_jf6123-0-0_low.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Jesus Heals Boy From Evil Spirit",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_24_jesus-heals-boy-from-evil-spirit_1_jf6124-0-0_low.mp4"
+     },
+     {
+      "n": 25,
+      "title": "The Lords Prayer",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_25_the-lords-prayer_1_jf6125-0-0_low.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Teaching About Prayer and Faith",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_26_teaching-about-prayer-and-faith_1_jf6126-0-0_low.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Woe to Those who Cause Others to Sin",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_27_woe-to-those-who-cause-others-to-sin_1_jf6127-0-0_low.mp4"
+     },
+     {
+      "n": 28,
+      "title": "The Kingdom of God as a Mustard Seed",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_28_the-kingdom-of-god-as-a-mustard-seed_1_jf6128-0-0_low.mp4"
+     },
+     {
+      "n": 29,
+      "title": "Jesus Spends Time with Sinners",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_29_jesus-spends-time-with-sinners_1_jf6129-0-0_low.mp4"
+     },
+     {
+      "n": 30,
+      "title": "Healing on the Sabbath",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_30_healing-on-the-sabbath_1_jf6130-0-0_low.mp4"
+     },
+     {
+      "n": 31,
+      "title": "Parable of the Good Samaritan",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_31_parable-of-the-good-samaritan_1_jf6131-0-0_low.mp4"
+     },
+     {
+      "n": 32,
+      "title": "Healing of Bartimaeus",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_32_healing-of-bartimaeus_1_jf6132-0-0_low.mp4"
+     },
+     {
+      "n": 33,
+      "title": "Jesus and Zaccheus",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_33_jesus-and-zaccheus_1_jf6133-0-0_low.mp4"
+     },
+     {
+      "n": 34,
+      "title": "Jesus Predicts his Death and Resurrection",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_34_jesus-predicts-his-death-and-resurrection_1_jf6134-0-0_low.mp4"
+     },
+     {
+      "n": 35,
+      "title": "Jesuss Triumphal Entry",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_35_jesuss-triumphal-entry_1_jf6135-0-0_low.mp4"
+     },
+     {
+      "n": 36,
+      "title": "Jesus Weeps Over Jerusalem",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_36_jesus-weeps-over-jerusalem_1_jf6136-0-0_low.mp4"
+     },
+     {
+      "n": 37,
+      "title": "Jesus Drives Out Money Changers",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_37_jesus-drives-out-money-changers_1_jf6137-0-0_low.mp4"
+     },
+     {
+      "n": 38,
+      "title": "Widows Offering",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_38_widows-offering_1_jf6138-0-0_low.mp4"
+     },
+     {
+      "n": 39,
+      "title": "Annas Questions Jesuss Authority",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_39_annas-questions-jesuss-authority_1_jf6139-0-0_low.mp4"
+     },
+     {
+      "n": 40,
+      "title": "Parable of the Vineyard and Tenants",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_40_parable-of-the-vineyard-and-tenants_1_jf6140-0-0_low.mp4"
+     },
+     {
+      "n": 41,
+      "title": "Paying Taxes to Caesar",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_41_paying-taxes-to-caesar_1_jf6141-0-0_low.mp4"
+     },
+     {
+      "n": 42,
+      "title": "The Last Supper",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_42_the-last-supper_1_jf6142-0-0_low.mp4"
+     },
+     {
+      "n": 43,
+      "title": "Upper Room Teaching",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_43_upper-room-teaching_1_jf6143-0-0_low.mp4"
+     },
+     {
+      "n": 44,
+      "title": "Jesus is Betrayed and Arrested",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_44_jesus-is-betrayed-and-arrested_1_jf6144-0-0_low.mp4"
+     },
+     {
+      "n": 45,
+      "title": "Peter Disowns Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_45_peter-disowns-jesus_1_jf6145-0-0_low.mp4"
+     },
+     {
+      "n": 46,
+      "title": "Jesus is Mocked and Questioned",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_46_jesus-is-mocked-and-questioned_1_jf6146-0-0_low.mp4"
+     },
+     {
+      "n": 47,
+      "title": "Jesus is Brought to Pilate",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_47_jesus-is-brought-to-pilate_1_jf6147-0-0_low.mp4"
+     },
+     {
+      "n": 48,
+      "title": "Jesus is Brought to Herod",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_48_jesus-is-brought-to-herod_1_jf6148-0-0_low.mp4"
+     },
+     {
+      "n": 49,
+      "title": "Jesus is Sentenced",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_49_jesus-is-sentenced_1_jf6149-0-0_low.mp4"
+     },
+     {
+      "n": 50,
+      "title": "Jesus Carries his Cross",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_50_jesus-carries-his-cross_1_jf6150-0-0_low.mp4"
+     },
+     {
+      "n": 51,
+      "title": "Jesus is Crucified",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_51_jesus-is-crucified_1_jf6151-0-0_low.mp4"
+     },
+     {
+      "n": 52,
+      "title": "Soldiers Gamble for Jesuss Clothes",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_52_soldiers-gamble-for-jesuss-clothes_1_jf6152-0-0_low.mp4"
+     },
+     {
+      "n": 53,
+      "title": "Sign on the Cross",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_53_sign-on-the-cross_1_jf6153-0-0_low.mp4"
+     },
+     {
+      "n": 54,
+      "title": "Crucified Convicts",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_54_crucified-convicts_1_jf6154-0-0_low.mp4"
+     },
+     {
+      "n": 55,
+      "title": "Death of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_55_death-of-jesus_1_jf6155-0-0_low.mp4"
+     },
+     {
+      "n": 56,
+      "title": "Burial of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_56_burial-of-jesus_1_jf6156-0-0_low.mp4"
+     },
+     {
+      "n": 57,
+      "title": "Angels At the Tomb",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_57_angels-at-the-tomb_1_jf6157-0-0_low.mp4"
+     },
+     {
+      "n": 58,
+      "title": "The Tomb is Empty",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_58_the-tomb-is-empty_1_jf6158-0-0_low.mp4"
+     },
+     {
+      "n": 59,
+      "title": "Resurrected Jesus Appears",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_59_resurrected-jesus-appears_1_jf6159-0-0_low.mp4"
+     },
+     {
+      "n": 60,
+      "title": "Great Commission and Ascension",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_60_great-commission-and-ascension_1_jf6160-0-0_low.mp4"
+     },
+     {
+      "n": 61,
+      "title": "Invitation to Know Jesus Personally",
+      "file": "https://video.dbs.org/Jesus/chapters/swh_swahili-kenya/swh_jesus_chapter_61_invitation-to-know-jesus-personally_1_jf6161-0-0_low.mp4"
+     }
+    ]
+   },
+   "downloads": [],
+   "links": [
+    {
+     "label": "Kenya edition on DBS",
+     "url": "https://dbs.org/video/jesus/swh_swahili-kenya_jesus"
+    },
+    {
+     "label": "Tanzania edition on DBS",
+     "url": "https://dbs.org/video/jesus/swh_swahili-tanzania_jesus"
+    }
+   ],
+   "source": "https://dbs.org/video/jesus/swh_swahili-kenya_jesus",
+   "lang": "swh",
+   "read": null,
+   "native": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "langName": "Swahili",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "swh-film-lumo-john",
+   "type": "film",
+   "title": "LUMO: The Gospel of John",
+   "org": "LUMO Project",
+   "desc": "John filmed word for word in 21 parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "John 1",
+      "file": "https://video.dbs.org/Lumo-John/films_low/swh_Swahili_John_Biblia-Habari-Njema_low/swh_LUMO_Swahili_John_Biblia-Habari-Njema_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "John 2",
+      "file": "https://video.dbs.org/Lumo-John/films_low/swh_Swahili_John_Biblia-Habari-Njema_low/swh_LUMO_Swahili_John_Biblia-Habari-Njema_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "John 3",
+      "file": "https://video.dbs.org/Lumo-John/films_low/swh_Swahili_John_Biblia-Habari-Njema_low/swh_LUMO_Swahili_John_Biblia-Habari-Njema_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "John 4",
+      "file": "https://video.dbs.org/Lumo-John/films_low/swh_Swahili_John_Biblia-Habari-Njema_low/swh_LUMO_Swahili_John_Biblia-Habari-Njema_04_360.mp4"
+     },
+     {
+      "n": 5,
+      "title": "John 5",
+      "file": "https://video.dbs.org/Lumo-John/films_low/swh_Swahili_John_Biblia-Habari-Njema_low/swh_LUMO_Swahili_John_Biblia-Habari-Njema_05_360.mp4"
+     },
+     {
+      "n": 6,
+      "title": "John 6",
+      "file": "https://video.dbs.org/Lumo-John/films_low/swh_Swahili_John_Biblia-Habari-Njema_low/swh_LUMO_Swahili_John_Biblia-Habari-Njema_06_360.mp4"
+     },
+     {
+      "n": 7,
+      "title": "John 7",
+      "file": "https://video.dbs.org/Lumo-John/films_low/swh_Swahili_John_Biblia-Habari-Njema_low/swh_LUMO_Swahili_John_Biblia-Habari-Njema_07_360.mp4"
+     },
+     {
+      "n": 8,
+      "title": "John 8",
+      "file": "https://video.dbs.org/Lumo-John/films_low/swh_Swahili_John_Biblia-Habari-Njema_low/swh_LUMO_Swahili_John_Biblia-Habari-Njema_08_360.mp4"
+     },
+     {
+      "n": 9,
+      "title": "John 9",
+      "file": "https://video.dbs.org/Lumo-John/films_low/swh_Swahili_John_Biblia-Habari-Njema_low/swh_LUMO_Swahili_John_Biblia-Habari-Njema_09_360.mp4"
+     },
+     {
+      "n": 10,
+      "title": "John 10",
+      "file": "https://video.dbs.org/Lumo-John/films_low/swh_Swahili_John_Biblia-Habari-Njema_low/swh_LUMO_Swahili_John_Biblia-Habari-Njema_10_360.mp4"
+     },
+     {
+      "n": 11,
+      "title": "John 11",
+      "file": "https://video.dbs.org/Lumo-John/films_low/swh_Swahili_John_Biblia-Habari-Njema_low/swh_LUMO_Swahili_John_Biblia-Habari-Njema_11_360.mp4"
+     },
+     {
+      "n": 12,
+      "title": "John 12",
+      "file": "https://video.dbs.org/Lumo-John/films_low/swh_Swahili_John_Biblia-Habari-Njema_low/swh_LUMO_Swahili_John_Biblia-Habari-Njema_12_360.mp4"
+     },
+     {
+      "n": 13,
+      "title": "John 13",
+      "file": "https://video.dbs.org/Lumo-John/films_low/swh_Swahili_John_Biblia-Habari-Njema_low/swh_LUMO_Swahili_John_Biblia-Habari-Njema_13_360.mp4"
+     },
+     {
+      "n": 14,
+      "title": "John 14",
+      "file": "https://video.dbs.org/Lumo-John/films_low/swh_Swahili_John_Biblia-Habari-Njema_low/swh_LUMO_Swahili_John_Biblia-Habari-Njema_14_360.mp4"
+     },
+     {
+      "n": 15,
+      "title": "John 15",
+      "file": "https://video.dbs.org/Lumo-John/films_low/swh_Swahili_John_Biblia-Habari-Njema_low/swh_LUMO_Swahili_John_Biblia-Habari-Njema_15_360.mp4"
+     },
+     {
+      "n": 16,
+      "title": "John 16",
+      "file": "https://video.dbs.org/Lumo-John/films_low/swh_Swahili_John_Biblia-Habari-Njema_low/swh_LUMO_Swahili_John_Biblia-Habari-Njema_16_360.mp4"
+     },
+     {
+      "n": 17,
+      "title": "John 17",
+      "file": "https://video.dbs.org/Lumo-John/films_low/swh_Swahili_John_Biblia-Habari-Njema_low/swh_LUMO_Swahili_John_Biblia-Habari-Njema_17_360.mp4"
+     },
+     {
+      "n": 18,
+      "title": "John 18",
+      "file": "https://video.dbs.org/Lumo-John/films_low/swh_Swahili_John_Biblia-Habari-Njema_low/swh_LUMO_Swahili_John_Biblia-Habari-Njema_18_360.mp4"
+     },
+     {
+      "n": 19,
+      "title": "John 19",
+      "file": "https://video.dbs.org/Lumo-John/films_low/swh_Swahili_John_Biblia-Habari-Njema_low/swh_LUMO_Swahili_John_Biblia-Habari-Njema_19_360.mp4"
+     },
+     {
+      "n": 20,
+      "title": "John 20",
+      "file": "https://video.dbs.org/Lumo-John/films_low/swh_Swahili_John_Biblia-Habari-Njema_low/swh_LUMO_Swahili_John_Biblia-Habari-Njema_20_360.mp4"
+     },
+     {
+      "n": 21,
+      "title": "John 21",
+      "file": "https://video.dbs.org/Lumo-John/films_low/swh_Swahili_John_Biblia-Habari-Njema_low/swh_LUMO_Swahili_John_Biblia-Habari-Njema_21_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-john/swh_swahili_john",
+   "lang": "swh",
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "swh-film-lumo-luke",
+   "type": "film",
+   "title": "LUMO: The Gospel of Luke",
+   "org": "LUMO Project",
+   "desc": "Luke filmed word for word in 24 parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Luke 1",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/swh_Swahili_Luke_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Luke_Biblia-Habari-Njema_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Luke 2",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/swh_Swahili_Luke_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Luke_Biblia-Habari-Njema_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Luke 3",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/swh_Swahili_Luke_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Luke_Biblia-Habari-Njema_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Luke 4",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/swh_Swahili_Luke_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Luke_Biblia-Habari-Njema_04_360.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Luke 5",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/swh_Swahili_Luke_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Luke_Biblia-Habari-Njema_05_360.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Luke 6",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/swh_Swahili_Luke_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Luke_Biblia-Habari-Njema_06_360.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Luke 7",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/swh_Swahili_Luke_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Luke_Biblia-Habari-Njema_07_360.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Luke 8",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/swh_Swahili_Luke_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Luke_Biblia-Habari-Njema_08_360.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Luke 9",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/swh_Swahili_Luke_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Luke_Biblia-Habari-Njema_09_360.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Luke 10",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/swh_Swahili_Luke_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Luke_Biblia-Habari-Njema_10_360.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Luke 11",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/swh_Swahili_Luke_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Luke_Biblia-Habari-Njema_11_360.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Luke 12",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/swh_Swahili_Luke_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Luke_Biblia-Habari-Njema_12_360.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Luke 13",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/swh_Swahili_Luke_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Luke_Biblia-Habari-Njema_13_360.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Luke 14",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/swh_Swahili_Luke_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Luke_Biblia-Habari-Njema_14_360.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Luke 15",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/swh_Swahili_Luke_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Luke_Biblia-Habari-Njema_15_360.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Luke 16",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/swh_Swahili_Luke_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Luke_Biblia-Habari-Njema_16_360.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Luke 17",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/swh_Swahili_Luke_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Luke_Biblia-Habari-Njema_17_360.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Luke 18",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/swh_Swahili_Luke_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Luke_Biblia-Habari-Njema_18_360.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Luke 19",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/swh_Swahili_Luke_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Luke_Biblia-Habari-Njema_19_360.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Luke 20",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/swh_Swahili_Luke_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Luke_Biblia-Habari-Njema_20_360.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Luke 21",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/swh_Swahili_Luke_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Luke_Biblia-Habari-Njema_21_360.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Luke 22",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/swh_Swahili_Luke_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Luke_Biblia-Habari-Njema_22_360.mp4"
+     },
+     {
+      "n": 23,
+      "title": "Luke 23",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/swh_Swahili_Luke_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Luke_Biblia-Habari-Njema_23_360.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Luke 24",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/swh_Swahili_Luke_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Luke_Biblia-Habari-Njema_24_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-luke/swh_swahili_luke",
+   "lang": "swh",
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "swh-film-lumo-mark",
+   "type": "film",
+   "title": "LUMO: The Gospel of Mark",
+   "org": "LUMO Project",
+   "desc": "Mark filmed word for word in 16 parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Mark 1",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/swh_Swahili_Mark_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Mark_Biblia-Habari-Njema_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Mark 2",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/swh_Swahili_Mark_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Mark_Biblia-Habari-Njema_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Mark 3",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/swh_Swahili_Mark_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Mark_Biblia-Habari-Njema_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Mark 4",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/swh_Swahili_Mark_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Mark_Biblia-Habari-Njema_04_360.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Mark 5",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/swh_Swahili_Mark_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Mark_Biblia-Habari-Njema_05_360.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Mark 6",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/swh_Swahili_Mark_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Mark_Biblia-Habari-Njema_06_360.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Mark 7",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/swh_Swahili_Mark_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Mark_Biblia-Habari-Njema_07_360.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Mark 8",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/swh_Swahili_Mark_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Mark_Biblia-Habari-Njema_08_360.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Mark 9",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/swh_Swahili_Mark_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Mark_Biblia-Habari-Njema_09_360.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Mark 10",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/swh_Swahili_Mark_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Mark_Biblia-Habari-Njema_10_360.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Mark 11",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/swh_Swahili_Mark_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Mark_Biblia-Habari-Njema_11_360.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Mark 12",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/swh_Swahili_Mark_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Mark_Biblia-Habari-Njema_12_360.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Mark 13",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/swh_Swahili_Mark_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Mark_Biblia-Habari-Njema_13_360.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Mark 14",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/swh_Swahili_Mark_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Mark_Biblia-Habari-Njema_14_360.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Mark 15",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/swh_Swahili_Mark_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Mark_Biblia-Habari-Njema_15_360.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Mark 16",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/swh_Swahili_Mark_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Mark_Biblia-Habari-Njema_16_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-mark/swh_swahili_mark",
+   "lang": "swh",
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "swh-film-lumo-matthew",
+   "type": "film",
+   "title": "LUMO: The Gospel of Matthew",
+   "org": "LUMO Project",
+   "desc": "Matthew filmed word for word in 28 parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Matthew 1",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Matthew 2",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Matthew 3",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Matthew 4",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_04_360.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Matthew 5",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_05_360.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Matthew 6",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_06_360.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Matthew 7",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_07_360.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Matthew 8",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_08_360.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Matthew 9",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_09_360.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Matthew 10",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_10_360.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Matthew 11",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_11_360.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Matthew 12",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_12_360.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Matthew 13",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_13_360.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Matthew 14",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_14_360.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Matthew 15",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_15_360.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Matthew 16",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_16_360.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Matthew 17",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_17_360.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Matthew 18",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_18_360.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Matthew 19",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_19_360.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Matthew 20",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_20_360.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Matthew 21",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_21_360.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Matthew 22",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_22_360.mp4"
+     },
+     {
+      "n": 23,
+      "title": "Matthew 23",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_23_360.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Matthew 24",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_24_360.mp4"
+     },
+     {
+      "n": 25,
+      "title": "Matthew 25",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_25_360.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Matthew 26",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_26_360.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Matthew 27",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_27_360.mp4"
+     },
+     {
+      "n": 28,
+      "title": "Matthew 28",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/swh_Swahili_Matthew_Biblia-Habari-Njema_low/swh_LUMO_Swahili_Matthew_Biblia-Habari-Njema_28_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-matthew/swh_swahili_matthew",
+   "lang": "swh",
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "swh-film-lumo-covenant",
+   "type": "film",
+   "title": "LUMO: The Covenant",
+   "org": "LUMO Project",
+   "desc": "The Bible's covenant story in 12 parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Part 1",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/swh_Swahili_Covenant_Kiswahili-Contemporary-Version-Neno/swh_Covenant_Swahili_Kiswahili-Contemporary-Version-Neno_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Part 2",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/swh_Swahili_Covenant_Kiswahili-Contemporary-Version-Neno/swh_Covenant_Swahili_Kiswahili-Contemporary-Version-Neno_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Part 3",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/swh_Swahili_Covenant_Kiswahili-Contemporary-Version-Neno/swh_Covenant_Swahili_Kiswahili-Contemporary-Version-Neno_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Part 4",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/swh_Swahili_Covenant_Kiswahili-Contemporary-Version-Neno/swh_Covenant_Swahili_Kiswahili-Contemporary-Version-Neno_04_360.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Part 5",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/swh_Swahili_Covenant_Kiswahili-Contemporary-Version-Neno/swh_Covenant_Swahili_Kiswahili-Contemporary-Version-Neno_05_360.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Part 6",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/swh_Swahili_Covenant_Kiswahili-Contemporary-Version-Neno/swh_Covenant_Swahili_Kiswahili-Contemporary-Version-Neno_06_360.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Part 7",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/swh_Swahili_Covenant_Kiswahili-Contemporary-Version-Neno/swh_Covenant_Swahili_Kiswahili-Contemporary-Version-Neno_07_360.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Part 8",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/swh_Swahili_Covenant_Kiswahili-Contemporary-Version-Neno/swh_Covenant_Swahili_Kiswahili-Contemporary-Version-Neno_08_360.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Part 9",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/swh_Swahili_Covenant_Kiswahili-Contemporary-Version-Neno/swh_Covenant_Swahili_Kiswahili-Contemporary-Version-Neno_09_360.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Part 10",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/swh_Swahili_Covenant_Kiswahili-Contemporary-Version-Neno/swh_Covenant_Swahili_Kiswahili-Contemporary-Version-Neno_10_360.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Part 11",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/swh_Swahili_Covenant_Kiswahili-Contemporary-Version-Neno/swh_Covenant_Swahili_Kiswahili-Contemporary-Version-Neno_11_360.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Part 12",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/swh_Swahili_Covenant_Kiswahili-Contemporary-Version-Neno/swh_Covenant_Swahili_Kiswahili-Contemporary-Version-Neno_12_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-covenant/swh_swahili_covenant",
+   "lang": "swh",
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "swh-film-hope",
+   "type": "film",
+   "title": "The HOPE",
+   "org": "Mars Hill Productions",
+   "desc": "God's redemptive story from creation to Christ.",
+   "play": {
+    "kind": "file",
+    "hd": "https://dbs.org/cdn/video/HOPE/films/swh_swahili-coastal_the_hope.mp4",
+    "sd": "https://dbs.org/cdn/video/HOPE/films_low/swh_swahili-coastal_the_hope_low.mp4"
+   },
+   "source": "https://dbs.org/video/hope/swh_swahili-coastal_the_hope",
+   "lang": "swh",
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "swh-film-ibible",
+   "type": "film",
+   "title": "iBible: Salvation",
+   "org": "RevelationMedia",
+   "desc": "An animated presentation of the Bible's message of salvation.",
+   "play": {
+    "kind": "file",
+    "hd": "https://dbs.org/cdn/video/ibible/films/swh-swahili-ibible_salvation-hd.mp4",
+    "sd": "https://dbs.org/cdn/video/ibible/films_low/swh-swahili-ibible_salvation-sd.mp4"
+   },
+   "downloads": [],
+   "source": "https://dbs.org/video/ibible/swh-swahili-ibible_salvation",
+   "lang": "swh",
+   "read": null,
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "swh-film-matthew",
+   "type": "film",
+   "title": "The Visual Bible: Matthew",
+   "org": "Visual Bible International",
+   "desc": "The Gospel of Matthew presented word for word in 28 chapters.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Matthew 1",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-01.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Matthew 2",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-02.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Matthew 3",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-03.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Matthew 4",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-04.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Matthew 5",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-05.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Matthew 6",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-06.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Matthew 7",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-07.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Matthew 8",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-08.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Matthew 9",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-09.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Matthew 10",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-10.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Matthew 11",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-11.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Matthew 12",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-12.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Matthew 13",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-13.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Matthew 14",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-14.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Matthew 15",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-15.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Matthew 16",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-16.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Matthew 17",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-17.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Matthew 18",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-18.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Matthew 19",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-19.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Matthew 20",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-20.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Matthew 21",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-21.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Matthew 22",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-22.mp4"
+     },
+     {
+      "n": 23,
+      "title": "Matthew 23",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-23.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Matthew 24",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-24.mp4"
+     },
+     {
+      "n": 25,
+      "title": "Matthew 25",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-25.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Matthew 26",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-26.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Matthew 27",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-27.mp4"
+     },
+     {
+      "n": 28,
+      "title": "Matthew 28",
+      "file": "https://video.dbs.org/Matthew/chapters/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapter-28.mp4"
+     }
+    ]
+   },
+   "downloads": [],
+   "source": "https://dbs.org/video/matthew/swh-matthew-vb-swahili-coastal",
+   "lang": "swh",
+   "read": null,
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "swh-film-acts",
+   "type": "film",
+   "title": "The Visual Bible: Acts",
+   "org": "Visual Bible International",
+   "desc": "The book of Acts presented word for word in 28 chapters.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Acts 1",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-01.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Acts 2",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-02.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Acts 3",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-03.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Acts 4",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-04.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Acts 5",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-05.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Acts 6",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-06.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Acts 7",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-07.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Acts 8",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-08.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Acts 9",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-09.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Acts 10",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-10.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Acts 11",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-11.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Acts 12",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-12.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Acts 13",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-13.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Acts 14",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-14.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Acts 15",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-15.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Acts 16",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-16.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Acts 17",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-17.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Acts 18",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-18.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Acts 19",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-19.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Acts 20",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-20.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Acts 21",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-21.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Acts 22",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-22.mp4"
+     },
+     {
+      "n": 23,
+      "title": "Acts 23",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-23.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Acts 24",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-24.mp4"
+     },
+     {
+      "n": 25,
+      "title": "Acts 25",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-25.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Acts 26",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-26.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Acts 27",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-27.mp4"
+     },
+     {
+      "n": 28,
+      "title": "Acts 28",
+      "file": "https://video.dbs.org/Acts_VB/chapters/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapter-28.mp4"
+     }
+    ]
+   },
+   "downloads": [],
+   "source": "https://dbs.org/video/acts_vb/swh-acts-vb-swahili-coastal",
+   "lang": "swh",
+   "read": null,
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "swh-film-savior",
+   "type": "film",
+   "title": "The Savior",
+   "org": "The Savior Film",
+   "desc": "The life of Jesus in Swahili.",
+   "links": [
+    {
+     "label": "Watch on DBS",
+     "url": "https://dbs.org/video/savior/swh_swahili-kenya_the_savior"
+    }
+   ],
+   "source": "https://dbs.org/video/savior/swh_swahili-kenya_the_savior",
+   "lang": "swh",
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Swahili",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "swh-film-magdalena",
+   "type": "film",
+   "title": "Magdalena",
+   "org": "Jesus Film Project",
+   "desc": "The story of Jesus seen through the eyes of Mary Magdalene.",
+   "links": [
+    {
+     "label": "Watch on DBS",
+     "url": "https://dbs.org/video/magdalena/swh_swahili-tanzania_magdalena"
+    }
+   ],
+   "source": "https://dbs.org/video/magdalena/swh_swahili-tanzania_magdalena",
+   "lang": "swh",
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Swahili",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "swh-film-story-jesus",
+   "type": "film",
+   "title": "The Story of Jesus for Children",
+   "org": "Jesus Film Project",
+   "desc": "The story of Jesus told for children.",
+   "links": [
+    {
+     "label": "Watch on DBS",
+     "url": "https://dbs.org/video/storyjesus/swh_swahili-tanzania_story_of_jesus_for_children"
+    }
+   ],
+   "source": "https://dbs.org/video/storyjesus/swh_swahili-tanzania_story_of_jesus_for_children",
+   "lang": "swh",
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Swahili",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "swh-ab-suv",
+   "type": "audio-bible",
+   "title": "Swahili Union Version",
+   "org": "Davar Partners",
+   "scope": "Full Bible",
+   "desc": "The complete Swahili Union Version read aloud, chapter by chapter.",
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "SWHSUV_ISA_FB_N",
+    "version": "SWHSUV",
+    "testaments": [
+     "OT",
+     "NT"
+    ]
+   },
+   "downloads": [],
+   "source": "https://dbs.org/bibles/audio/SWHSUV_ISA_FB_N",
+   "lang": "swh",
+   "read": null,
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Audio Bibles"
+  },
+  {
+   "id": "swh-ab-1909",
+   "type": "audio-bible",
+   "title": "Swahili Bible 1909",
+   "org": "Davar Partners",
+   "year": "1909",
+   "scope": "Full Bible",
+   "desc": "The 1909 Swahili Bible read aloud, chapter by chapter.",
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "SWH1909_DAVR_FB_N",
+    "version": "SWH1909",
+    "testaments": [
+     "OT",
+     "NT"
+    ]
+   },
+   "downloads": [],
+   "source": "https://dbs.org/bibles/audio/SWH1909_DAVR_FB_N",
+   "lang": "swh",
+   "read": null,
+   "native": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Audio Bibles"
+  },
+  {
+   "id": "swh-ac-grn",
+   "type": "audio",
+   "title": "Swahili Scripture Recordings",
+   "org": "Global Recordings Network",
+   "stats": "961 recordings · 2.8 GB · 49h 46m",
+   "desc": "Good News, Words of Life and Bible teaching programmes from across the Swahili-speaking world.",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/swh_GlobalRecordings_swahili-individual_language/Swahili%20%5BKenya%5D/Swahili%20%5BKenya%5D%20Good%20News%2019381/Swahili%20%5BKenya%5D%20Good%20News%20001%20Introduction%20%28Picture%201%20In%20the%20Beginning%29%2019381.mp3"
+   },
+   "downloads": [],
+   "source": "https://dbs.org/audio/collections/grn/swh_GlobalRecordings_swahili-individual_language",
+   "lang": "swh",
+   "read": null,
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Audio Collections"
+  },
+  {
+   "id": "swh-ac-jacob",
+   "type": "audio",
+   "title": "The Lives of Jacob and Joseph",
+   "org": "Wycliffe Bible Translators",
+   "stats": "17 recordings · 46 MB",
+   "desc": "Songs and narrated Bible stories about Jacob and Joseph.",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/wbt/swh_Maisha_ya_Yakobo_na_Maisha_ya_Yusufu/swh_19_Maisha_ya_Isaka_na_Yakobo_%28wimbo%29.mp3"
+   },
+   "downloads": [],
+   "source": "https://dbs.org/audio/collections/wbt/swh_Maisha_ya_Yakobo_na_Maisha_ya_Yusufu",
+   "lang": "swh",
+   "read": null,
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Audio Collections"
+  },
+  {
+   "id": "swh-ac-abraham",
+   "type": "audio",
+   "title": "Creation and the Life of Abraham",
+   "org": "Wycliffe Bible Translators",
+   "stats": "18 recordings · 47.3 MB",
+   "desc": "Songs and narrated Bible stories from creation through Abraham.",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/wbt/swh_Mungu_aliumba_dunia_na_Maisha_ya_Abrahamu/swh_01_Mungu_aliumba_dunia_%28wimbo%29.mp3"
+   },
+   "downloads": [],
+   "source": "https://dbs.org/audio/collections/wbt/swh_Mungu_aliumba_dunia_na_Maisha_ya_Abrahamu",
+   "lang": "swh",
+   "read": null,
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Audio Collections"
+  },
+  {
+   "id": "swh-ac-storyset",
+   "type": "audio",
+   "title": "Swahili Bible Story Set",
+   "org": "Scripture Resource Network",
+   "stats": "44 recordings · 96.7 MB",
+   "desc": "A chronological collection of Bible stories in Swahili.",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/srun/swh_storyset_swahili/Swahili-01-Uumbaji-Creation_of_the_World.mp3"
+   },
+   "downloads": [
+    {
+     "label": "Complete collection (ZIP)",
+     "url": "https://storysets.s3.amazonaws.com/swh/Swahili_Storyset.zip"
+    }
+   ],
+   "source": "https://dbs.org/audio/collections/srun/swh_storyset_swahili",
+   "lang": "swh",
+   "read": null,
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Audio Collections"
+  },
+  {
+   "id": "swh-hist-swahili-1882-1kings-vitabu-vya-wafalme.-kitabu-cha-kwanza-cha-wafalme",
+   "lang": "swh",
+   "type": "historic",
+   "title": "1Kings Vitabu vya wafalme. Kitabu cha kwanza cha wafalme",
+   "org": "Digital Bible Society Archive",
+   "year": "1882",
+   "cover": "https://scripture.dbs.org/covers/small/Swahili-1882-1Kings-Vitabu-vya-wafalme.-Kitabu-cha-kwanza-cha-wafalme.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Swahili-1882-1Kings-Vitabu-vya-wafalme.-Kitabu-cha-kwanza-cha-wafalme.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Swahili-1882-1Kings-Vitabu-vya-wafalme.-Kitabu-cha-kwanza-cha-wafalme.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Swahili-1882-1Kings-Vitabu-vya-wafalme.-Kitabu-cha-kwanza-cha-wafalme",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "swh-hist-swahili-1882-daniel-kitabu-cha-nabii-danieli",
+   "lang": "swh",
+   "type": "historic",
+   "title": "Daniel Kitabu cha nabii Danieli",
+   "org": "Digital Bible Society Archive",
+   "year": "1882",
+   "cover": "https://scripture.dbs.org/covers/small/Swahili-1882-Daniel-Kitabu-cha-nabii-Danieli.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Swahili-1882-Daniel-Kitabu-cha-nabii-Danieli.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Swahili-1882-Daniel-Kitabu-cha-nabii-Danieli.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Swahili-1882-Daniel-Kitabu-cha-nabii-Danieli",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "swh-hist-swahili-1882-isaiah-isaya",
+   "lang": "swh",
+   "type": "historic",
+   "title": "Isaiah Isaya",
+   "org": "Digital Bible Society Archive",
+   "year": "1882",
+   "cover": "https://scripture.dbs.org/covers/small/Swahili-1882-Isaiah-Isaya.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Swahili-1882-Isaiah-Isaya.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Swahili-1882-Isaiah-Isaya.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Swahili-1882-Isaiah-Isaya",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "swh-hist-swahili-1883-new-testament-kitabu-cha-agano-jipya",
+   "lang": "swh",
+   "type": "historic",
+   "title": "New Testament Kitabu cha Agano Jipya",
+   "org": "Digital Bible Society Archive",
+   "year": "1883",
+   "cover": "https://scripture.dbs.org/covers/small/Swahili-1883-New-Testament-Kitabu-cha-Agano-Jipya.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Swahili-1883-New-Testament-Kitabu-cha-Agano-Jipya.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Swahili-1883-New-Testament-Kitabu-cha-Agano-Jipya.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Swahili-1883-New-Testament-Kitabu-cha-Agano-Jipya",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "swh-hist-swahili-1887-hosea",
+   "lang": "swh",
+   "type": "historic",
+   "title": "Hosea",
+   "org": "Digital Bible Society Archive",
+   "year": "1887",
+   "cover": "https://scripture.dbs.org/covers/small/Swahili-1887-Hosea.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Swahili-1887-Hosea.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Swahili-1887-Hosea.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Swahili-1887-Hosea",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "swh-hist-swahili-1887-numbers-kitabu-cha-'nne-cha-musa-hesabu",
+   "lang": "swh",
+   "type": "historic",
+   "title": "Numbers Kitabu cha 'nne cha Musa Hesabu",
+   "org": "Digital Bible Society Archive",
+   "year": "1887",
+   "cover": "https://scripture.dbs.org/covers/small/Swahili-1887-Numbers-Kitabu-cha-'nne-cha-Musa-Hesabu.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Swahili-1887-Numbers-Kitabu-cha-'nne-cha-Musa-Hesabu.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Swahili-1887-Numbers-Kitabu-cha-'nne-cha-Musa-Hesabu.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Swahili-1887-Numbers-Kitabu-cha-'nne-cha-Musa-Hesabu",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "swh-hist-swahili-1888-song-of-solomon-koheleth",
+   "lang": "swh",
+   "type": "historic",
+   "title": "Song of Solomon Koheleth",
+   "org": "Digital Bible Society Archive",
+   "year": "1888",
+   "cover": "https://scripture.dbs.org/covers/small/Swahili-1888-Song-of-Solomon-Koheleth.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Swahili-1888-Song-of-Solomon-Koheleth.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Swahili-1888-Song-of-Solomon-Koheleth.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Swahili-1888-Song-of-Solomon-Koheleth",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "swh-hist-swahili-1889-bible-dictionary-ny-diksionary-amin-ny-baiboly",
+   "lang": "swh",
+   "type": "historic",
+   "title": "Bible Dictionary Ny Diksionary amin ny Baiboly",
+   "org": "Digital Bible Society Archive",
+   "year": "1889",
+   "cover": "https://scripture.dbs.org/covers/small/Swahili-1889-Bible-Dictionary-Ny-Diksionary-amin-ny-Baiboly.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Swahili-1889-Bible-Dictionary-Ny-Diksionary-amin-ny-Baiboly.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Swahili-1889-Bible-Dictionary-Ny-Diksionary-amin-ny-Baiboly.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Swahili-1889-Bible-Dictionary-Ny-Diksionary-amin-ny-Baiboly",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "swh-hist-swahili-1902-acts-matendo-ya-mitume-kwa-watoto",
+   "lang": "swh",
+   "type": "historic",
+   "title": "Acts Matendo ya mitume kwa watoto",
+   "org": "Digital Bible Society Archive",
+   "year": "1902",
+   "cover": "https://scripture.dbs.org/covers/small/Swahili-1902-Acts-Matendo-ya-mitume-kwa-watoto.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Swahili-1902-Acts-Matendo-ya-mitume-kwa-watoto.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Swahili-1902-Acts-Matendo-ya-mitume-kwa-watoto.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Swahili-1902-Acts-Matendo-ya-mitume-kwa-watoto",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "swh-hist-swahili-1909-new-testament-chuo-cha-maagano-mapya-ya-bwana-wetu-jesu-masihi-mwokozi-wetu",
+   "lang": "swh",
+   "type": "historic",
+   "title": "New Testament Chuo cha Maagano Mapya ya bwana wetu Jesu Masihi mwokozi wetu",
+   "org": "Digital Bible Society Archive",
+   "year": "1909",
+   "cover": "https://scripture.dbs.org/covers/small/Swahili-1909-New-Testament-Chuo-cha-Maagano-Mapya-ya-bwana-wetu-Jesu-Masihi-mwokozi-wetu.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Swahili-1909-New-Testament-Chuo-cha-Maagano-Mapya-ya-bwana-wetu-Jesu-Masihi-mwokozi-wetu.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Swahili-1909-New-Testament-Chuo-cha-Maagano-Mapya-ya-bwana-wetu-Jesu-Masihi-mwokozi-wetu.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Swahili-1909-New-Testament-Chuo-cha-Maagano-Mapya-ya-bwana-wetu-Jesu-Masihi-mwokozi-wetu",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "swh-hist-swahili-1995-genesis-portion",
+   "lang": "swh",
+   "type": "historic",
+   "title": "Genesis Portion",
+   "org": "Digital Bible Society Archive",
+   "year": "1995",
+   "cover": "https://scripture.dbs.org/covers/small/Swahili-1995-Genesis-Portion.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Swahili-1995-Genesis-Portion.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Swahili-1995-Genesis-Portion.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Swahili-1995-Genesis-Portion",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "swh-hist-swahili-genesis-portion-la-sainte-bible-en-swahili-du-zaire",
+   "lang": "swh",
+   "type": "historic",
+   "title": "Genesis Portion La Sainte Bible en Swahili du Zaire",
+   "org": "Digital Bible Society Archive",
+   "year": null,
+   "cover": "https://scripture.dbs.org/covers/small/Swahili-Genesis-Portion-La-Sainte-Bible-en-Swahili-du-Zaire.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Swahili-Genesis-Portion-La-Sainte-Bible-en-Swahili-du-Zaire.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Swahili-Genesis-Portion-La-Sainte-Bible-en-Swahili-du-Zaire.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Swahili-Genesis-Portion-La-Sainte-Bible-en-Swahili-du-Zaire",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "swh-hist-swahili-john-print",
+   "lang": "swh",
+   "type": "historic",
+   "title": "John",
+   "org": "Digital Bible Society Archive",
+   "year": null,
+   "cover": "https://scripture.dbs.org/covers/small/Swahili-John-print.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Swahili-John-print.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Swahili-John-print.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Swahili-John-print",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "swh-hist-swahili-new-testament-book",
+   "lang": "swh",
+   "type": "historic",
+   "title": "New Testament book",
+   "org": "Digital Bible Society Archive",
+   "year": null,
+   "cover": "https://scripture.dbs.org/covers/small/Swahili-New-Testament-book.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Swahili-New-Testament-book.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Swahili-New-Testament-book.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Swahili-New-Testament-book",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "swh-text-swhulb",
+   "lang": "swh",
+   "type": "scripture",
+   "title": "The Door Swahili Bible",
+   "year": 2019,
+   "org": "Digital Bible Society",
+   "scope": "Coastal",
+   "desc": "The full text, to read in the app or save.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://bibles.dbs.org/SWHULB/pdf/SWHULB.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://bibles.dbs.org/SWHULB/pdf/SWHULB.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/SWHULB",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "swh-text-swhbib",
+   "lang": "swh",
+   "type": "scripture",
+   "title": "Kiswahili New Contemporary (New Testament) Biblica",
+   "year": 2018,
+   "org": "Digital Bible Society",
+   "scope": "Coastal",
+   "desc": "The full text, to read in the app or save.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://bibles.dbs.org/SWHBIB/pdf/SWHBIB.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://bibles.dbs.org/SWHBIB/pdf/SWHBIB.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/SWHBIB",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "swh-text-swhpor",
+   "lang": "swh",
+   "type": "scripture",
+   "title": "Swahili Old Bible (NT and OT Portions)",
+   "year": 1850,
+   "org": "Digital Bible Society",
+   "scope": "Coastal",
+   "desc": "The full text, to read in the app or save.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://bibles.dbs.org/SWHPOR/pdf/SWHPOR.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://bibles.dbs.org/SWHPOR/pdf/SWHPOR.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/SWHPOR",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Swahili",
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "swh-text-online",
+   "lang": "swh",
+   "type": "scripture",
+   "title": "Swahili Bibles to read online",
+   "org": "Various publishers",
+   "desc": "10 Swahili translations that their publishers host themselves. They open in a browser and need a connection.",
+   "links": [
+    {
+     "label": "Swahili Roehl Bible 1937 (1937)",
+     "url": "https://dbs.org/bibles/SWH1937"
+    },
+    {
+     "label": "Swahili (Interconfessional) (1995)",
+     "url": "https://dbs.org/bibles/SWHSHN"
+    },
+    {
+     "label": "Swahili, Common Language Bible (1995)",
+     "url": "https://dbs.org/bibles/SWHKSB"
+    },
+    {
+     "label": "Swahili New Testament Portions (1902)",
+     "url": "https://dbs.org/bibles/SWH1909"
+    },
+    {
+     "label": "Swahili Union Version 1997 (1960)",
+     "url": "https://dbs.org/bibles/SWHSUV"
+    },
+    {
+     "label": "Swahili Revised New Testament (1921) (1921)",
+     "url": "https://dbs.org/bibles/SWH1921"
+    },
+    {
+     "label": "Swahili Revised Union Version (2005)",
+     "url": "https://dbs.org/bibles/SWHRUV"
+    },
+    {
+     "label": "Swahili New Testament (Biblica) (1989)",
+     "url": "https://dbs.org/bibles/SWHSNT"
+    },
+    {
+     "label": "Toleo la Awali Swahili Bible (ETR) (2019)",
+     "url": "https://dbs.org/bibles/SWHBLI"
+    },
+    {
+     "label": "Biblia TKU",
+     "url": "https://dbs.org/bibles/SWATBL"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/swh",
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Swahili",
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "swh-link-arc-gt",
+   "lang": "swh",
+   "type": "link",
+   "title": "Jesus Film Project",
+   "org": "Jesus Film Project",
+   "desc": "1 Swahili items. Full films on the publisher's own player.",
+   "links": [
+    {
+     "label": "JESUS",
+     "url": "https://arc.gt/hku7d?apiSessionId=5f8765dfc27513.14882669"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Swahili",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "swh-link-bibleproject-com",
+   "lang": "swh",
+   "type": "link",
+   "title": "bibleproject.com",
+   "org": "bibleproject.com",
+   "desc": "1 Swahili items. Hosted by the publisher.",
+   "links": [
+    {
+     "label": "Swahili Bible Project Videos",
+     "url": "https://bibleproject.com/Swahili"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Swahili",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "swh-link-globalrecordings-net",
+   "lang": "swh",
+   "type": "link",
+   "title": "Global Recordings Network",
+   "org": "Global Recordings Network",
+   "desc": "40 Swahili items. Scripture-based recordings, told simply. Each programme plays on the publisher's own site.",
+   "links": [
+    {
+     "label": "Good News",
+     "url": "https://globalrecordings.net/en/program/19381"
+    },
+    {
+     "label": "Good News",
+     "url": "https://globalrecordings.net/en/program/80910"
+    },
+    {
+     "label": "It is True (M)",
+     "url": "https://globalrecordings.net/en/program/80936"
+    },
+    {
+     "label": "Look, Listen & Live",
+     "url": "https://globalrecordings.net/en/program/72860"
+    },
+    {
+     "label": "Look, Listen & Live",
+     "url": "https://globalrecordings.net/en/program/75123"
+    },
+    {
+     "label": "Look, Listen & Live 1 Beginning with GOD (Sunday Sch)",
+     "url": "https://globalrecordings.net/en/program/81780"
+    },
+    {
+     "label": "Look, Listen & Live 2 Mighty Men of GOD",
+     "url": "https://globalrecordings.net/en/program/72870"
+    },
+    {
+     "label": "Look, Listen & Live 2 Mighty Men of GOD",
+     "url": "https://globalrecordings.net/en/program/75124"
+    },
+    {
+     "label": "Look, Listen & Live 2 Mighty Men of GOD (Sunday Sch)",
+     "url": "https://globalrecordings.net/en/program/81781"
+    },
+    {
+     "label": "Look, Listen & Live 3 Victory through GOD",
+     "url": "https://globalrecordings.net/en/program/72880"
+    },
+    {
+     "label": "Look, Listen & Live 3 Victory through GOD",
+     "url": "https://globalrecordings.net/en/program/75125"
+    },
+    {
+     "label": "Look, Listen & Live 3 Victory through GOD (Sunday Sch)",
+     "url": "https://globalrecordings.net/en/program/81658"
+    },
+    {
+     "label": "Look, Listen & Live 4 Servants of GOD",
+     "url": "https://globalrecordings.net/en/program/72890"
+    },
+    {
+     "label": "Look, Listen & Live 4 Servants of GOD",
+     "url": "https://globalrecordings.net/en/program/75127"
+    },
+    {
+     "label": "Look, Listen & Live 4 Servants of GOD (Sunday Sch)",
+     "url": "https://globalrecordings.net/en/program/81782"
+    },
+    {
+     "label": "Look, Listen & Live 5 On Trial for GOD",
+     "url": "https://globalrecordings.net/en/program/72900"
+    },
+    {
+     "label": "Look, Listen & Live 5 On Trial for GOD",
+     "url": "https://globalrecordings.net/en/program/75126"
+    },
+    {
+     "label": "Look, Listen & Live 5 On Trial for GOD (Sunday Sch)",
+     "url": "https://globalrecordings.net/en/program/81659"
+    },
+    {
+     "label": "Look, Listen & Live 6 JESUS - Teacher & Healer",
+     "url": "https://globalrecordings.net/en/program/72910"
+    },
+    {
+     "label": "Look, Listen & Live 6 JESUS - Teacher & Healer",
+     "url": "https://globalrecordings.net/en/program/75128"
+    },
+    {
+     "label": "Look, Listen & Live 6 JESUS - Teacher & Healer (Sun Sch)",
+     "url": "https://globalrecordings.net/en/program/81783"
+    },
+    {
+     "label": "Look, Listen & Live 7 JESUS - Lord & Saviour",
+     "url": "https://globalrecordings.net/en/program/72920"
+    },
+    {
+     "label": "Look, Listen & Live 7 JESUS - Lord & Saviour",
+     "url": "https://globalrecordings.net/en/program/75129"
+    },
+    {
+     "label": "Look, Listen & Live 7 JESUS - Lord & Saviour (Sun Sch)",
+     "url": "https://globalrecordings.net/en/program/81784"
+    },
+    {
+     "label": "Look, Listen & Live 8 Acts of the HOLY SPIRIT",
+     "url": "https://globalrecordings.net/en/program/74756"
+    },
+    {
+     "label": "Look, Listen & Live 8 Acts of the HOLY SPIRIT",
+     "url": "https://globalrecordings.net/en/program/75130"
+    },
+    {
+     "label": "Look, Listen & Live 8 Acts of the HOLY SPIRIT (Sun Sch)",
+     "url": "https://globalrecordings.net/en/program/81785"
+    },
+    {
+     "label": "Portrait of Jesus",
+     "url": "https://globalrecordings.net/en/program/31490"
+    },
+    {
+     "label": "Songs",
+     "url": "https://globalrecordings.net/en/program/27510"
+    },
+    {
+     "label": "The Living Christ",
+     "url": "https://globalrecordings.net/en/program/80937"
+    },
+    {
+     "label": "The Living Christ - Lessons 1 - 3",
+     "url": "https://globalrecordings.net/en/program/80940"
+    },
+    {
+     "label": "The Living Christ - Lessons 4 - 6",
+     "url": "https://globalrecordings.net/en/program/80941"
+    },
+    {
+     "label": "The Living Christ - Lessons 7 - 9",
+     "url": "https://globalrecordings.net/en/program/80942"
+    },
+    {
+     "label": "The Living Christ Lessons 10 - 12",
+     "url": "https://globalrecordings.net/en/program/80943"
+    },
+    {
+     "label": "The Way (M)",
+     "url": "https://globalrecordings.net/en/program/80876"
+    },
+    {
+     "label": "True Religion",
+     "url": "https://globalrecordings.net/en/program/85234"
+    },
+    {
+     "label": "Ukimwi (AIDS)",
+     "url": "https://globalrecordings.net/en/program/85230"
+    },
+    {
+     "label": "Words of Life 1",
+     "url": "https://globalrecordings.net/en/program/240"
+    },
+    {
+     "label": "Words of Life 2",
+     "url": "https://globalrecordings.net/en/program/241"
+    },
+    {
+     "label": "Words of Life 2",
+     "url": "https://globalrecordings.net/en/program/26921"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Swahili",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "swh-link-my-pcloud-com",
+   "lang": "swh",
+   "type": "link",
+   "title": "my.pcloud.com",
+   "org": "my.pcloud.com",
+   "desc": "1 Swahili items. Hosted by the publisher.",
+   "links": [
+    {
+     "label": "Swahili StoryRunners Stories",
+     "url": "https://my.pcloud.com/publink/show?code=kZojELkZiMj2Abq6Hz4jmz1cK78Q6FKjzw2V"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Swahili",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "swh-link-rockintl-org",
+   "lang": "swh",
+   "type": "link",
+   "title": "ROCK International",
+   "org": "ROCK International",
+   "desc": "4 Swahili items. Teaching and Scripture resources from the publisher.",
+   "links": [
+    {
+     "label": "KING of GLORY",
+     "url": "https://rockintl.org/rock-document/mfalme-wa-utukufu-swahili-king-of-glory/"
+    },
+    {
+     "label": "KING of GLORY",
+     "url": "https://rockintl.org/rock-video/mfalme-wa-utukufu-swahili-king-of-glory/"
+    },
+    {
+     "label": "The WAY of RIGHTEOUSNESS",
+     "url": "https://rockintl.org/rock-document/the-way-of-righteousness-swahili/"
+    },
+    {
+     "label": "Your Story",
+     "url": "https://rockintl.org/rock-document/swahili-your-story/"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Swahili",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "swh-link-www-mars-hill-org",
+   "lang": "swh",
+   "type": "link",
+   "title": "www.mars-hill.org",
+   "org": "www.mars-hill.org",
+   "desc": "1 Swahili items. Hosted by the publisher.",
+   "links": [
+    {
+     "label": "The Swahili HOPE",
+     "url": "https://www.mars-hill.org/the-hope/store/the-swahili-hope-tumaini-storyteller-version"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Swahili",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "swh-link-youtu-be",
+   "lang": "swh",
+   "type": "link",
+   "title": "youtu.be",
+   "org": "youtu.be",
+   "desc": "4 Swahili items. Hosted by the publisher.",
+   "links": [
+    {
+     "label": "Lumo: John",
+     "url": "https://youtu.be/4pFq5UNFNF4"
+    },
+    {
+     "label": "Lumo: Luke",
+     "url": "https://youtu.be/jSuBHYVCplE"
+    },
+    {
+     "label": "Lumo: Mark",
+     "url": "https://youtu.be/u-ejeCN0av8"
+    },
+    {
+     "label": "Lumo: Matthew",
+     "url": "https://youtu.be/nvwDwYxAg6g"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Swahili",
+   "typeLabel": "Partner Links"
+  }
+ ]
+}

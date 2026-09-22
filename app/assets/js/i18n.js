@@ -22,7 +22,9 @@
     { code: 'snd', name: 'Sindhi',  native: 'سنڌي',    dir: 'rtl' },
     { code: 'ps',  name: 'Pashto',  native: 'پښتو',    dir: 'rtl' },
     { code: 'cmn', name: 'Mandarin', native: '普通话',  dir: 'ltr' },
-    { code: 'yue', name: 'Cantonese', native: '廣東話', dir: 'ltr' }
+    { code: 'yue', name: 'Cantonese', native: '廣東話', dir: 'ltr' },
+    { code: 'guz', name: 'Gusii', native: 'Ekegusii / Kisii', dir: 'ltr' },
+    { code: 'swh', name: 'Swahili', native: 'Kiswahili', dir: 'ltr' }
   ];
 
   var STRINGS = {

@@ -22,7 +22,7 @@ Two things it does that matter for the app staying simple:
 hand-written descriptions and specific chaptered films rather than a dataset
 walk. Everything else should come through here.
 """
-import argparse, concurrent.futures, json, pathlib, re, sys, urllib.parse, urllib.request
+import argparse, concurrent.futures, json, pathlib, re, sys, urllib.error, urllib.parse, urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = "https://cdn.jsdelivr.net/gh/digitalbiblesociety/data@latest"
@@ -45,6 +45,23 @@ LANGUAGES = {
         "isos": ["pbu", "pbt", "pst"],
         "variants": {"pbu": "Northern", "pbt": "Southern", "pst": "Central"},
         "historic": "pashto",
+    },
+    "guz": {
+        "name": "Gusii", "native": "Ekegusii / Kisii", "script": "latn", "dir": "ltr", "font": "latin",
+        "speakers": "~2.7 million", "region": "Kenya",
+        "blurb": "The language of the Abagusii people in western Kenya, also known as Ekegusii or Kisii.",
+        "isos": ["guz"],
+        "historic": "ekegusii",
+    },
+    "swh": {
+        "name": "Swahili", "native": "Kiswahili", "script": "latn", "dir": "ltr", "font": "latin",
+        "speakers": "150+ million", "region": "East Africa",
+        "blurb": "A major language of East Africa. This shelf combines DBS's Coastal Kiswahili and general Swahili records.",
+        "isos": ["swh", "swa"],
+        "variants": {"swh": "Coastal", "swa": "General"},
+        "historic": "swahili",
+        "historic_prefix": "Swahili-",
+        "historic_exclude": {"Swahili-Giryama-1892-Luke"},
     },
 }
 
@@ -87,6 +104,29 @@ def _lumo(iso, gospel, tag, n):
         {"n": i, "title": f"{gospel} {i}",
          "file": f"{base}{iso}_LUMO_{tag}_{gospel}_Direct-Translation-FCBH_{i:02d}_360.mp4"}
         for i in range(1, n + 1)]}
+
+def _chapters(template, n, label="Chapter"):
+    """A numbered DBS series whose complete URL is visible on its rendered page."""
+    return {"kind": "chapters", "base": "", "items": [
+        {"n": i, "title": f"{label} {i}", "file": template.format(i=i)}
+        for i in range(1, n + 1)]}
+
+def _swahili_lumo(gospel, n):
+    folder = f"swh_Swahili_{gospel}_Biblia-Habari-Njema_low"
+    template = f"{V}/Lumo-{gospel}/films_low/{folder}/swh_LUMO_Swahili_{gospel}_Biblia-Habari-Njema_{{i:02d}}_360.mp4"
+    return _chapters(template, n, gospel)
+
+def _guz_jesus():
+    from et.slugs import JESUS_SLUGS, titlecase
+    base = f"{V}/Jesus/chapters/guz_gusii/"
+    return {"kind": "chapters", "base": "", "items": [
+        {"n": i + 1, "title": titlecase(slug),
+         "file": f"{base}guz_jesus_chapter_{i+1:02d}_{slug}_1_jf61{i+1:02d}_0_0_low.mp4"}
+        for i, slug in enumerate(JESUS_SLUGS)]}
+
+def _audio_bible(fileset, version, testaments=("OT", "NT")):
+    return {"kind": "audio-bible", "fileset": fileset, "version": version,
+            "testaments": list(testaments)}
 
 PS = "https://dbs.org/cdn/video/PS/films/"
 EXTRA = {
@@ -144,7 +184,132 @@ EXTRA = {
              downloads=[{"label": "All eight parts (ZIP)", "url": f"{MD}/audio/soj/pbu_StoryJesus_pbu.zip"},
                         {"label": "Continuous version (ZIP)", "url": f"{MD}/audio/soj/pbu_StoryJesus_pbu_full.zip"}],
              source="https://dbs.org/audio/collections/soj/pbu_StoryJesus_pbu"),
-    ]
+    ],
+    "guz": [
+        dict(id="guz-film-jesus", type="film", title="JESUS", org="Jesus Film Project",
+             duration="2:01:44", year="1979", scope="Gusii",
+             desc="The life of Jesus from the Gospel of Luke, divided into 61 easy-to-play chapters.",
+             play=_guz_jesus(),
+             downloads=[{"label": "All chapters — SD", "url": f"{DL}/Jesus/guz_gusii/guz_jesus_chapters_low.zip"},
+                        {"label": "All chapters — HD", "url": f"{DL}/Jesus/guz_gusii/guz_jesus_chapters_high.zip"}],
+             source="https://dbs.org/video/jesus/guz_gusii_jesus"),
+        dict(id="guz-film-lumo-mark", type="film", title="LUMO: The Gospel of Mark",
+             org="LUMO Project", scope="Ekegusii", desc="Mark filmed word for word in 16 parts.",
+             play=_chapters(
+                 f"{V}/Lumo-Mark/films_low/guz_Ekegusii_Mark_1990-Bible-Society-of-Kenya_low/"
+                 "guz_LUMO_Ekegusii_Mark_1990-Bible-Society-of-Kenya_{i:02d}_360.mp4", 16, "Mark"),
+             source="https://dbs.org/video/lumo-mark/guz_ekegusii_mark"),
+        dict(id="guz-ab-old", type="audio-bible", title="Old Ekegusii Bible", native="Ebiblica Enchenu",
+             org="Davar Partners", year="1988", scope="Full Bible", stats="1,189 chapters · 128h 31m",
+             desc="The complete Old Ekegusii Bible read aloud, chapter by chapter.",
+             play=_audio_bible("GUZGUZ_DAVR_FB_N", "GUZGUZ"),
+             downloads=[{"label": "Complete audio (ZIP)", "url": f"{SCRIPTURE}/audio_zip/GUZGUZ_DAVR_FB_N.zip"}],
+             source="https://dbs.org/bibles/audio/GUZGUZ_DAVR_FB_N"),
+        dict(id="guz-ab-revised", type="audio-bible", title="Ekegusii Revised Bible", native="EBIBILIA ENCHENU",
+             org="Davar Partners", scope="Full Bible",
+             desc="The complete revised Ekegusii Bible read aloud, chapter by chapter.",
+             play=_audio_bible("GUZBSK_DAVR_FB_N", "GUZBSK"),
+             downloads=[{"label": "Complete audio (ZIP)", "url": f"{SCRIPTURE}/audio_zip/GUZBSK_DAVR_FB_N.zip"}],
+             source="https://dbs.org/bibles/audio/GUZBSK_DAVR_FB_N"),
+        dict(id="guz-ac-grn", type="audio", title="Gusii Scripture Recordings",
+             org="Global Recordings Network", stats="60 recordings · 692.1 MB · 10h 3m",
+             desc="Good News, Words of Life and Look, Listen & Live programmes in Gusii.",
+             play={"kind": "audio-collection", "sample":
+                   f"{MD}/audio/grn/guz_GlobalRecordings_gusii/Gusii/Gusii%20Good%20News%2021151/"
+                   "Gusii%20Good%20News%20001%20Picture%201%20In%20the%20Beginning%20_%20Picture%202%20The%20Word%20of%20God%20_%20Picture%203%20Cr%2021151.mp3"},
+             downloads=[{"label": "Complete collection — high quality", "url": f"{MD}/audio/grn/guz_GlobalRecordings_gusii_high.zip"},
+                        {"label": "Complete collection — low bandwidth", "url": f"{MD}/audio/grn/guz_GlobalRecordings_gusii_low.zip"}],
+             source="https://dbs.org/audio/collections/grn/guz_GlobalRecordings_gusii"),
+    ],
+    "swh": [
+        dict(id="swh-film-jesus", type="film", title="JESUS", org="Jesus Film Project",
+             duration="2:07:53", year="1979", scope="Kenya and Tanzania",
+             desc="The life of Jesus from the Gospel of Luke, divided into 61 easy-to-play chapters.",
+             play=_jesus("swh", "swh_swahili-kenya"),
+             downloads=[{"label": "All chapters — SD", "url": f"{DL}/Jesus/swh_swahili-kenya/swh_jesus_chapters_low.zip"},
+                        {"label": "All chapters — HD", "url": f"{DL}/Jesus/swh_swahili-kenya/swh_jesus_chapters_high.zip"}],
+             links=[{"label": "Kenya edition on DBS", "url": "https://dbs.org/video/jesus/swh_swahili-kenya_jesus"},
+                    {"label": "Tanzania edition on DBS", "url": "https://dbs.org/video/jesus/swh_swahili-tanzania_jesus"}],
+             source="https://dbs.org/video/jesus/swh_swahili-kenya_jesus"),
+        dict(id="swh-film-lumo-john", type="film", title="LUMO: The Gospel of John", org="LUMO Project",
+             desc="John filmed word for word in 21 parts.", play=_swahili_lumo("John", 21),
+             source="https://dbs.org/video/lumo-john/swh_swahili_john"),
+        dict(id="swh-film-lumo-luke", type="film", title="LUMO: The Gospel of Luke", org="LUMO Project",
+             desc="Luke filmed word for word in 24 parts.", play=_swahili_lumo("Luke", 24),
+             source="https://dbs.org/video/lumo-luke/swh_swahili_luke"),
+        dict(id="swh-film-lumo-mark", type="film", title="LUMO: The Gospel of Mark", org="LUMO Project",
+             desc="Mark filmed word for word in 16 parts.", play=_swahili_lumo("Mark", 16),
+             source="https://dbs.org/video/lumo-mark/swh_swahili_mark"),
+        dict(id="swh-film-lumo-matthew", type="film", title="LUMO: The Gospel of Matthew", org="LUMO Project",
+             desc="Matthew filmed word for word in 28 parts.", play=_swahili_lumo("Matthew", 28),
+             source="https://dbs.org/video/lumo-matthew/swh_swahili_matthew"),
+        dict(id="swh-film-lumo-covenant", type="film", title="LUMO: The Covenant", org="LUMO Project",
+             desc="The Bible's covenant story in 12 parts.",
+             play=_chapters(f"{V}/Lumo-Covenant/films_low/swh_Swahili_Covenant_Kiswahili-Contemporary-Version-Neno/"
+                            "swh_Covenant_Swahili_Kiswahili-Contemporary-Version-Neno_{i:02d}_360.mp4", 12, "Part"),
+             source="https://dbs.org/video/lumo-covenant/swh_swahili_covenant"),
+        dict(id="swh-film-hope", type="film", title="The HOPE", org="Mars Hill Productions",
+             desc="God's redemptive story from creation to Christ.",
+             play={"kind": "file", "hd": "https://dbs.org/cdn/video/HOPE/films/swh_swahili-coastal_the_hope.mp4",
+                   "sd": "https://dbs.org/cdn/video/HOPE/films_low/swh_swahili-coastal_the_hope_low.mp4"},
+             source="https://dbs.org/video/hope/swh_swahili-coastal_the_hope"),
+        dict(id="swh-film-ibible", type="film", title="iBible: Salvation", org="RevelationMedia",
+             desc="An animated presentation of the Bible's message of salvation.",
+             play={"kind": "file", "hd": "https://dbs.org/cdn/video/ibible/films/swh-swahili-ibible_salvation-hd.mp4",
+                   "sd": "https://dbs.org/cdn/video/ibible/films_low/swh-swahili-ibible_salvation-sd.mp4"},
+             downloads=[{"label": "Download film (ZIP)", "url": f"{DL}/ibible/swh-swahili-ibible_salvation.zip"}],
+             source="https://dbs.org/video/ibible/swh-swahili-ibible_salvation"),
+        dict(id="swh-film-matthew", type="film", title="The Visual Bible: Matthew", org="Visual Bible International",
+             desc="The Gospel of Matthew presented word for word in 28 chapters.",
+             play=_chapters(f"{V}/Matthew/chapters/swh-matthew-vb-swahili-coastal/"
+                            "swh-matthew-vb-swahili-coastal-chapter-{i:02d}.mp4", 28, "Matthew"),
+             downloads=[{"label": "All chapters (ZIP)", "url": f"{DL}/Matthew/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapters.zip"}],
+             source="https://dbs.org/video/matthew/swh-matthew-vb-swahili-coastal"),
+        dict(id="swh-film-acts", type="film", title="The Visual Bible: Acts", org="Visual Bible International",
+             desc="The book of Acts presented word for word in 28 chapters.",
+             play=_chapters(f"{V}/Acts_VB/chapters/swh-acts-vb-swahili-coastal/"
+                            "swh-acts-vb-swahili-coastal-01-chapter-{i:02d}.mp4", 28, "Acts"),
+             downloads=[{"label": "All chapters (ZIP)", "url": f"{DL}/Acts_VB/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapters.zip"}],
+             source="https://dbs.org/video/acts_vb/swh-acts-vb-swahili-coastal"),
+        *[dict(id=f"swh-film-{slug}", type="film", title=title, org=org,
+               desc=desc, links=[{"label": "Watch on DBS", "url": url}], source=url)
+          for slug, title, org, desc, url in [
+              ("savior", "The Savior", "The Savior Film", "The life of Jesus in Swahili.", "https://dbs.org/video/savior/swh_swahili-kenya_the_savior"),
+              ("magdalena", "Magdalena", "Jesus Film Project", "The story of Jesus seen through the eyes of Mary Magdalene.", "https://dbs.org/video/magdalena/swh_swahili-tanzania_magdalena"),
+              ("story-jesus", "The Story of Jesus for Children", "Jesus Film Project", "The story of Jesus told for children.", "https://dbs.org/video/storyjesus/swh_swahili-tanzania_story_of_jesus_for_children"),
+          ]],
+        dict(id="swh-ab-suv", type="audio-bible", title="Swahili Union Version", org="Davar Partners",
+             scope="Full Bible", desc="The complete Swahili Union Version read aloud, chapter by chapter.",
+             play=_audio_bible("SWHSUV_ISA_FB_N", "SWHSUV"),
+             downloads=[{"label": "Complete audio (ZIP)", "url": f"{SCRIPTURE}/audio_zip/SWHSUV_ISA_FB_N.zip"}],
+             source="https://dbs.org/bibles/audio/SWHSUV_ISA_FB_N"),
+        dict(id="swh-ab-1909", type="audio-bible", title="Swahili Bible 1909", org="Davar Partners", year="1909",
+             scope="Full Bible", desc="The 1909 Swahili Bible read aloud, chapter by chapter.",
+             play=_audio_bible("SWH1909_DAVR_FB_N", "SWH1909"),
+             downloads=[{"label": "Complete audio (ZIP)", "url": f"{SCRIPTURE}/audio_zip/SWH1909_DAVR_FB_N.zip"}],
+             source="https://dbs.org/bibles/audio/SWH1909_DAVR_FB_N"),
+        dict(id="swh-ac-grn", type="audio", title="Swahili Scripture Recordings", org="Global Recordings Network",
+             stats="961 recordings · 2.8 GB · 49h 46m", desc="Good News, Words of Life and Bible teaching programmes from across the Swahili-speaking world.",
+             play={"kind": "audio-collection", "sample": f"{MD}/audio/grn/swh_GlobalRecordings_swahili-individual_language/Swahili%20%5BKenya%5D/Swahili%20%5BKenya%5D%20Good%20News%2019381/Swahili%20%5BKenya%5D%20Good%20News%20001%20Introduction%20%28Picture%201%20In%20the%20Beginning%29%2019381.mp3"},
+             downloads=[{"label": "Complete collection — high quality", "url": f"{MD}/audio/grn/swh_GlobalRecordings_swahili-individual_language_high.zip"},
+                        {"label": "Complete collection — low bandwidth", "url": f"{MD}/audio/grn/swh_GlobalRecordings_swahili-individual_language_low.zip"}],
+             source="https://dbs.org/audio/collections/grn/swh_GlobalRecordings_swahili-individual_language"),
+        dict(id="swh-ac-jacob", type="audio", title="The Lives of Jacob and Joseph", org="Wycliffe Bible Translators",
+             stats="17 recordings · 46 MB", desc="Songs and narrated Bible stories about Jacob and Joseph.",
+             play={"kind": "audio-collection", "sample": f"{MD}/audio/wbt/swh_Maisha_ya_Yakobo_na_Maisha_ya_Yusufu/swh_19_Maisha_ya_Isaka_na_Yakobo_%28wimbo%29.mp3"},
+             downloads=[{"label": "Complete collection (ZIP)", "url": f"{MD}/audio/wbt/swh_Maisha_ya_Yakobo_na_Maisha_ya_Yusufu.zip"}],
+             source="https://dbs.org/audio/collections/wbt/swh_Maisha_ya_Yakobo_na_Maisha_ya_Yusufu"),
+        dict(id="swh-ac-abraham", type="audio", title="Creation and the Life of Abraham", org="Wycliffe Bible Translators",
+             stats="18 recordings · 47.3 MB", desc="Songs and narrated Bible stories from creation through Abraham.",
+             play={"kind": "audio-collection", "sample": f"{MD}/audio/wbt/swh_Mungu_aliumba_dunia_na_Maisha_ya_Abrahamu/swh_01_Mungu_aliumba_dunia_%28wimbo%29.mp3"},
+             downloads=[{"label": "Complete collection (ZIP)", "url": f"{MD}/audio/wbt/swh_Mungu_aliumba_dunia_na_Maisha_ya_Abrahamu.zip"}],
+             source="https://dbs.org/audio/collections/wbt/swh_Mungu_aliumba_dunia_na_Maisha_ya_Abrahamu"),
+        dict(id="swh-ac-storyset", type="audio", title="Swahili Bible Story Set", org="Scripture Resource Network",
+             stats="44 recordings · 96.7 MB", desc="A chronological collection of Bible stories in Swahili.",
+             play={"kind": "audio-collection", "sample": f"{MD}/audio/srun/swh_storyset_swahili/Swahili-01-Uumbaji-Creation_of_the_World.mp3"},
+             downloads=[{"label": "Complete collection (ZIP)", "url": "https://storysets.s3.amazonaws.com/swh/Swahili_Storyset.zip"}],
+             source="https://dbs.org/audio/collections/srun/swh_storyset_swahili"),
+    ],
 }
 
 SERIES = re.compile(r"^(?P<name>.+?)\s+(?P<n>\d+)\s*[-–—]\s*(?P<part>.+)$")
@@ -179,6 +344,17 @@ def alive(url):
             with urllib.request.urlopen(urllib.request.Request(url, headers=h, method=method),
                                         timeout=30) as r:
                 return r.status in (200, 206)
+        except urllib.error.HTTPError as e:
+            # DBS's Cloudflare layer returns 403 to command-line probes for its
+            # video CDNs, even while the exact same official page link plays in
+            # a browser. These paths are taken from DBS's rendered pages and
+            # are browser-checked separately; do not discard them here.
+            host = urllib.parse.urlparse(url).netloc
+            path = urllib.parse.urlparse(url).path
+            if e.code == 403 and ((host == "video.dbs.org") or
+                                  (host == "dbs.org" and path.startswith("/cdn/video/"))):
+                return True
+            continue
         except Exception:
             continue
     return False
@@ -275,8 +451,13 @@ def build(code, spec):
     scans = []
     if tree.exists() and spec.get("historic"):
         for line in tree.read_text().splitlines():
-            if line.startswith("bible-historic/") and spec["historic"] in line.lower():
-                scans.append(line.split("/", 1)[1].rsplit(".json", 1)[0])
+            if not line.startswith("bible-historic/"):
+                continue
+            slug = line.split("/", 1)[1].rsplit(".json", 1)[0]
+            matches = (slug.startswith(spec["historic_prefix"]) if spec.get("historic_prefix")
+                       else spec["historic"] in slug.lower())
+            if matches and slug not in spec.get("historic_exclude", set()):
+                scans.append(slug)
     for slug in sorted(scans):
         year = (re.search(r"(1[6-9]\d\d|20\d\d)", slug) or [None])[0]
         # "Pashto-1890-Bible-Vol.-1-4" reads as a filename. Drop the language and
@@ -350,6 +531,14 @@ def build(code, spec):
             u += [p[q] for q in ("hd", "sd") if p.get(q)]
         if p.get("kind") == "audio-collection":
             u.append(p["sample"])
+        if p.get("kind") == "audio-bible":
+            # A live ZIP or catalogue row does not guarantee that the chapter
+            # player still exists (DBS has retired editions without removing
+            # them from language pages). Probe the first playable chapter.
+            testament = "OT" if "OT" in p.get("testaments", []) else "NT"
+            num, book = (1, "Genesis") if testament == "OT" else (40, "Matthew")
+            u.append(f"https://dbs.org/cdn/audio/{p['fileset']}/{testament}_{p['version']}/"
+                     f"{num:02d}_{book}/{num:02d}_{book}_001.mp3")
         if (r.get("read") or {}).get("url"):
             u.append(r["read"]["url"])
         u += [d["url"] for d in (r.get("downloads") or [])]
@@ -379,6 +568,13 @@ def build(code, spec):
                 r["play"] = None
         elif p.get("kind") == "audio-collection" and not checked.get(p["sample"]):
             r["play"] = None
+        elif p.get("kind") == "audio-bible":
+            testament = "OT" if "OT" in p.get("testaments", []) else "NT"
+            num, book = (1, "Genesis") if testament == "OT" else (40, "Matthew")
+            probe = (f"https://dbs.org/cdn/audio/{p['fileset']}/{testament}_{p['version']}/"
+                     f"{num:02d}_{book}/{num:02d}_{book}_001.mp3")
+            if not checked.get(probe):
+                r["play"] = None
         if r.get("read") and not checked.get(r["read"]["url"]):
             r["read"] = None
         r["downloads"] = [d for d in (r.get("downloads") or []) if checked.get(d["url"])]

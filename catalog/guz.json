@@ -1,0 +1,697 @@
+{
+ "generated": "Digital Bible Society (dbs.org) — Gusii, built from the open dataset",
+ "languages": {
+  "guz": {
+   "name": "Gusii",
+   "native": "Ekegusii / Kisii",
+   "script": "latn",
+   "dir": "ltr",
+   "font": "latin",
+   "speakers": "~2.7 million",
+   "region": "Kenya",
+   "blurb": "The language of the Abagusii people in western Kenya, also known as Ekegusii or Kisii.",
+   "code": "guz"
+  }
+ },
+ "resources": [
+  {
+   "id": "guz-film-jesus",
+   "type": "film",
+   "title": "JESUS",
+   "org": "Jesus Film Project",
+   "duration": "2:01:44",
+   "year": "1979",
+   "scope": "Gusii",
+   "desc": "The life of Jesus from the Gospel of Luke, divided into 61 easy-to-play chapters.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "The Beginning",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_01_the_beginning_1_jf6101_0_0_low.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Birth of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_02_birth_of_jesus_1_jf6102_0_0_low.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Childhood of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_03_childhood_of_jesus_1_jf6103_0_0_low.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Baptism of Jesus by John",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_04_baptism_of_jesus_by_john_1_jf6104_0_0_low.mp4"
+     },
+     {
+      "n": 5,
+      "title": "The Devil Tempts Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_05_the_devil_tempts_jesus_1_jf6105_0_0_low.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Jesus Proclaims Fulfillment of the Scriptures",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_06_jesus_proclaims_fulfillment_of_the_scriptures_1_jf6106_0_0_low.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Parable of the Pharisee and Tax Collector",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_07_parable_of_the_pharisee_and_tax_collector_1_jf6107_0_0_low.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Miraculous Catch of Fish",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_08_miraculous_catch_of_fish_1_jf6108_0_0_low.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Jairuss Daughter Brought Back to Life",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_09_jairuss_daughter_brought_back_to_life_1_jf6109_0_0_low.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Disciples Chosen",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_10_disciples_chosen_1_jf6110_0_0_low.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Beatitudes",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_11_beatitudes_1_jf6111_0_0_low.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Sermon on the Mount",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_12_sermon_on_the_mount_1_jf6112_0_0_low.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Blessed are Those who Hear and Obey",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_13_blessed_are_those_who_hear_and_obey_1_jf6113_0_0_low.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Sinful Woman Forgiven",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_14_sinful_woman_forgiven_1_jf6114_0_0_low.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Women Disciples",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_15_women_disciples_1_jf6115_0_0_low.mp4"
+     },
+     {
+      "n": 16,
+      "title": "John the Baptist in Prison",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_16_john_the_baptist_in_prison_1_jf6116_0_0_low.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Parable of the Sower and the Seed",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_17_parable_of_the_sower_and_the_seed_1_jf6117_0_0_low.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Parable of the Lamp",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_18_parable_of_the_lamp_1_jf6118_0_0_low.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Jesus Calms the Storm",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_19_jesus_calms_the_storm_1_jf6119_0_0_low.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Healing of the Demoniac",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_20_healing_of_the_demoniac_1_jf6120_0_0_low.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Jesus Feeds 5000",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_21_jesus_feeds_5000_1_jf6121_0_0_low.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Peter Declares Jesus to be the Christ",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_22_peter_declares_jesus_to_be_the_christ_1_jf6122_0_0_low.mp4"
+     },
+     {
+      "n": 23,
+      "title": "The Transfiguration",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_23_the_transfiguration_1_jf6123_0_0_low.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Jesus Heals Boy From Evil Spirit",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_24_jesus_heals_boy_from_evil_spirit_1_jf6124_0_0_low.mp4"
+     },
+     {
+      "n": 25,
+      "title": "The Lords Prayer",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_25_the_lords_prayer_1_jf6125_0_0_low.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Teaching About Prayer and Faith",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_26_teaching_about_prayer_and_faith_1_jf6126_0_0_low.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Woe to Those who Cause Others to Sin",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_27_woe_to_those_who_cause_others_to_sin_1_jf6127_0_0_low.mp4"
+     },
+     {
+      "n": 28,
+      "title": "The Kingdom of God as a Mustard Seed",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_28_the_kingdom_of_god_as_a_mustard_seed_1_jf6128_0_0_low.mp4"
+     },
+     {
+      "n": 29,
+      "title": "Jesus Spends Time with Sinners",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_29_jesus_spends_time_with_sinners_1_jf6129_0_0_low.mp4"
+     },
+     {
+      "n": 30,
+      "title": "Healing on the Sabbath",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_30_healing_on_the_sabbath_1_jf6130_0_0_low.mp4"
+     },
+     {
+      "n": 31,
+      "title": "Parable of the Good Samaritan",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_31_parable_of_the_good_samaritan_1_jf6131_0_0_low.mp4"
+     },
+     {
+      "n": 32,
+      "title": "Healing of Bartimaeus",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_32_healing_of_bartimaeus_1_jf6132_0_0_low.mp4"
+     },
+     {
+      "n": 33,
+      "title": "Jesus and Zaccheus",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_33_jesus_and_zaccheus_1_jf6133_0_0_low.mp4"
+     },
+     {
+      "n": 34,
+      "title": "Jesus Predicts his Death and Resurrection",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_34_jesus_predicts_his_death_and_resurrection_1_jf6134_0_0_low.mp4"
+     },
+     {
+      "n": 35,
+      "title": "Jesuss Triumphal Entry",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_35_jesuss_triumphal_entry_1_jf6135_0_0_low.mp4"
+     },
+     {
+      "n": 36,
+      "title": "Jesus Weeps Over Jerusalem",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_36_jesus_weeps_over_jerusalem_1_jf6136_0_0_low.mp4"
+     },
+     {
+      "n": 37,
+      "title": "Jesus Drives Out Money Changers",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_37_jesus_drives_out_money_changers_1_jf6137_0_0_low.mp4"
+     },
+     {
+      "n": 38,
+      "title": "Widows Offering",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_38_widows_offering_1_jf6138_0_0_low.mp4"
+     },
+     {
+      "n": 39,
+      "title": "Annas Questions Jesuss Authority",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_39_annas_questions_jesuss_authority_1_jf6139_0_0_low.mp4"
+     },
+     {
+      "n": 40,
+      "title": "Parable of the Vineyard and Tenants",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_40_parable_of_the_vineyard_and_tenants_1_jf6140_0_0_low.mp4"
+     },
+     {
+      "n": 41,
+      "title": "Paying Taxes to Caesar",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_41_paying_taxes_to_caesar_1_jf6141_0_0_low.mp4"
+     },
+     {
+      "n": 42,
+      "title": "The Last Supper",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_42_the_last_supper_1_jf6142_0_0_low.mp4"
+     },
+     {
+      "n": 43,
+      "title": "Upper Room Teaching",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_43_upper_room_teaching_1_jf6143_0_0_low.mp4"
+     },
+     {
+      "n": 44,
+      "title": "Jesus is Betrayed and Arrested",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_44_jesus_is_betrayed_and_arrested_1_jf6144_0_0_low.mp4"
+     },
+     {
+      "n": 45,
+      "title": "Peter Disowns Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_45_peter_disowns_jesus_1_jf6145_0_0_low.mp4"
+     },
+     {
+      "n": 46,
+      "title": "Jesus is Mocked and Questioned",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_46_jesus_is_mocked_and_questioned_1_jf6146_0_0_low.mp4"
+     },
+     {
+      "n": 47,
+      "title": "Jesus is Brought to Pilate",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_47_jesus_is_brought_to_pilate_1_jf6147_0_0_low.mp4"
+     },
+     {
+      "n": 48,
+      "title": "Jesus is Brought to Herod",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_48_jesus_is_brought_to_herod_1_jf6148_0_0_low.mp4"
+     },
+     {
+      "n": 49,
+      "title": "Jesus is Sentenced",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_49_jesus_is_sentenced_1_jf6149_0_0_low.mp4"
+     },
+     {
+      "n": 50,
+      "title": "Jesus Carries his Cross",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_50_jesus_carries_his_cross_1_jf6150_0_0_low.mp4"
+     },
+     {
+      "n": 51,
+      "title": "Jesus is Crucified",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_51_jesus_is_crucified_1_jf6151_0_0_low.mp4"
+     },
+     {
+      "n": 52,
+      "title": "Soldiers Gamble for Jesuss Clothes",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_52_soldiers_gamble_for_jesuss_clothes_1_jf6152_0_0_low.mp4"
+     },
+     {
+      "n": 53,
+      "title": "Sign on the Cross",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_53_sign_on_the_cross_1_jf6153_0_0_low.mp4"
+     },
+     {
+      "n": 54,
+      "title": "Crucified Convicts",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_54_crucified_convicts_1_jf6154_0_0_low.mp4"
+     },
+     {
+      "n": 55,
+      "title": "Death of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_55_death_of_jesus_1_jf6155_0_0_low.mp4"
+     },
+     {
+      "n": 56,
+      "title": "Burial of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_56_burial_of_jesus_1_jf6156_0_0_low.mp4"
+     },
+     {
+      "n": 57,
+      "title": "Angels At the Tomb",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_57_angels_at_the_tomb_1_jf6157_0_0_low.mp4"
+     },
+     {
+      "n": 58,
+      "title": "The Tomb is Empty",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_58_the_tomb_is_empty_1_jf6158_0_0_low.mp4"
+     },
+     {
+      "n": 59,
+      "title": "Resurrected Jesus Appears",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_59_resurrected_jesus_appears_1_jf6159_0_0_low.mp4"
+     },
+     {
+      "n": 60,
+      "title": "Great Commission and Ascension",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_60_great_commission_and_ascension_1_jf6160_0_0_low.mp4"
+     },
+     {
+      "n": 61,
+      "title": "Invitation to Know Jesus Personally",
+      "file": "https://video.dbs.org/Jesus/chapters/guz_gusii/guz_jesus_chapter_61_invitation_to_know_jesus_personally_1_jf6161_0_0_low.mp4"
+     }
+    ]
+   },
+   "downloads": [],
+   "source": "https://dbs.org/video/jesus/guz_gusii_jesus",
+   "lang": "guz",
+   "read": null,
+   "native": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Gusii",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "guz-film-lumo-mark",
+   "type": "film",
+   "title": "LUMO: The Gospel of Mark",
+   "org": "LUMO Project",
+   "scope": "Ekegusii",
+   "desc": "Mark filmed word for word in 16 parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Mark 1",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/guz_Ekegusii_Mark_1990-Bible-Society-of-Kenya_low/guz_LUMO_Ekegusii_Mark_1990-Bible-Society-of-Kenya_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Mark 2",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/guz_Ekegusii_Mark_1990-Bible-Society-of-Kenya_low/guz_LUMO_Ekegusii_Mark_1990-Bible-Society-of-Kenya_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Mark 3",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/guz_Ekegusii_Mark_1990-Bible-Society-of-Kenya_low/guz_LUMO_Ekegusii_Mark_1990-Bible-Society-of-Kenya_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Mark 4",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/guz_Ekegusii_Mark_1990-Bible-Society-of-Kenya_low/guz_LUMO_Ekegusii_Mark_1990-Bible-Society-of-Kenya_04_360.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Mark 5",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/guz_Ekegusii_Mark_1990-Bible-Society-of-Kenya_low/guz_LUMO_Ekegusii_Mark_1990-Bible-Society-of-Kenya_05_360.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Mark 6",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/guz_Ekegusii_Mark_1990-Bible-Society-of-Kenya_low/guz_LUMO_Ekegusii_Mark_1990-Bible-Society-of-Kenya_06_360.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Mark 7",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/guz_Ekegusii_Mark_1990-Bible-Society-of-Kenya_low/guz_LUMO_Ekegusii_Mark_1990-Bible-Society-of-Kenya_07_360.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Mark 8",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/guz_Ekegusii_Mark_1990-Bible-Society-of-Kenya_low/guz_LUMO_Ekegusii_Mark_1990-Bible-Society-of-Kenya_08_360.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Mark 9",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/guz_Ekegusii_Mark_1990-Bible-Society-of-Kenya_low/guz_LUMO_Ekegusii_Mark_1990-Bible-Society-of-Kenya_09_360.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Mark 10",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/guz_Ekegusii_Mark_1990-Bible-Society-of-Kenya_low/guz_LUMO_Ekegusii_Mark_1990-Bible-Society-of-Kenya_10_360.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Mark 11",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/guz_Ekegusii_Mark_1990-Bible-Society-of-Kenya_low/guz_LUMO_Ekegusii_Mark_1990-Bible-Society-of-Kenya_11_360.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Mark 12",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/guz_Ekegusii_Mark_1990-Bible-Society-of-Kenya_low/guz_LUMO_Ekegusii_Mark_1990-Bible-Society-of-Kenya_12_360.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Mark 13",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/guz_Ekegusii_Mark_1990-Bible-Society-of-Kenya_low/guz_LUMO_Ekegusii_Mark_1990-Bible-Society-of-Kenya_13_360.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Mark 14",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/guz_Ekegusii_Mark_1990-Bible-Society-of-Kenya_low/guz_LUMO_Ekegusii_Mark_1990-Bible-Society-of-Kenya_14_360.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Mark 15",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/guz_Ekegusii_Mark_1990-Bible-Society-of-Kenya_low/guz_LUMO_Ekegusii_Mark_1990-Bible-Society-of-Kenya_15_360.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Mark 16",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/guz_Ekegusii_Mark_1990-Bible-Society-of-Kenya_low/guz_LUMO_Ekegusii_Mark_1990-Bible-Society-of-Kenya_16_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-mark/guz_ekegusii_mark",
+   "lang": "guz",
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Gusii",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "guz-ab-old",
+   "type": "audio-bible",
+   "title": "Old Ekegusii Bible",
+   "native": "Ebiblica Enchenu",
+   "org": "Davar Partners",
+   "year": "1988",
+   "scope": "Full Bible",
+   "stats": "1,189 chapters · 128h 31m",
+   "desc": "The complete Old Ekegusii Bible read aloud, chapter by chapter.",
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "GUZGUZ_DAVR_FB_N",
+    "version": "GUZGUZ",
+    "testaments": [
+     "OT",
+     "NT"
+    ]
+   },
+   "downloads": [],
+   "source": "https://dbs.org/bibles/audio/GUZGUZ_DAVR_FB_N",
+   "lang": "guz",
+   "read": null,
+   "duration": null,
+   "cover": null,
+   "license": null,
+   "links": null,
+   "langName": "Gusii",
+   "typeLabel": "Audio Bibles"
+  },
+  {
+   "id": "guz-ac-grn",
+   "type": "audio",
+   "title": "Gusii Scripture Recordings",
+   "org": "Global Recordings Network",
+   "stats": "60 recordings · 692.1 MB · 10h 3m",
+   "desc": "Good News, Words of Life and Look, Listen & Live programmes in Gusii.",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/guz_GlobalRecordings_gusii/Gusii/Gusii%20Good%20News%2021151/Gusii%20Good%20News%20001%20Picture%201%20In%20the%20Beginning%20_%20Picture%202%20The%20Word%20of%20God%20_%20Picture%203%20Cr%2021151.mp3"
+   },
+   "downloads": [],
+   "source": "https://dbs.org/audio/collections/grn/guz_GlobalRecordings_gusii",
+   "lang": "guz",
+   "read": null,
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Gusii",
+   "typeLabel": "Audio Collections"
+  },
+  {
+   "id": "guz-hist-ekegusii-1990-genesis-portion",
+   "lang": "guz",
+   "type": "historic",
+   "title": "Ekegusii Genesis Portion",
+   "org": "Digital Bible Society Archive",
+   "year": "1990",
+   "cover": "https://scripture.dbs.org/covers/small/Ekegusii-1990-Genesis-Portion.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Ekegusii-1990-Genesis-Portion.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Ekegusii-1990-Genesis-Portion.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Ekegusii-1990-Genesis-Portion",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Gusii",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "guz-hist-ekegusii-new-testament-book",
+   "lang": "guz",
+   "type": "historic",
+   "title": "Ekegusii New Testament book",
+   "org": "Digital Bible Society Archive",
+   "year": null,
+   "cover": "https://scripture.dbs.org/covers/small/Ekegusii-New-Testament-book.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Ekegusii-New-Testament-book.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Ekegusii-New-Testament-book.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Ekegusii-New-Testament-book",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Gusii",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "guz-text-online",
+   "lang": "guz",
+   "type": "scripture",
+   "title": "Gusii Bibles to read online",
+   "org": "Various publishers",
+   "desc": "2 Gusii translations that their publishers host themselves. They open in a browser and need a connection.",
+   "links": [
+    {
+     "label": "Ekegusii Revised Bible 2021 (2021)",
+     "url": "https://dbs.org/bibles/GUZGUZR"
+    },
+    {
+     "label": "Old Ekegusii Bible (1988)",
+     "url": "https://dbs.org/bibles/GUZGUZ"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/guz",
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Gusii",
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "guz-link-arc-gt",
+   "lang": "guz",
+   "type": "link",
+   "title": "Jesus Film Project",
+   "org": "Jesus Film Project",
+   "desc": "1 Gusii items. Full films on the publisher's own player.",
+   "links": [
+    {
+     "label": "JESUS",
+     "url": "https://arc.gt/vs3lm?apiSessionId=5f875621bff701.76193711"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Gusii",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "guz-link-globalrecordings-net",
+   "lang": "guz",
+   "type": "link",
+   "title": "Global Recordings Network",
+   "org": "Global Recordings Network",
+   "desc": "11 Gusii items. Scripture-based recordings, told simply. Each programme plays on the publisher's own site.",
+   "links": [
+    {
+     "label": "Good News",
+     "url": "https://globalrecordings.net/en/program/21151"
+    },
+    {
+     "label": "Look, Listen & Live",
+     "url": "https://globalrecordings.net/en/program/81701"
+    },
+    {
+     "label": "Look, Listen & Live 2 Mighty Men of GOD",
+     "url": "https://globalrecordings.net/en/program/81702"
+    },
+    {
+     "label": "Look, Listen & Live 3 Victory through GOD",
+     "url": "https://globalrecordings.net/en/program/81703"
+    },
+    {
+     "label": "Look, Listen & Live 4 Servants of GOD",
+     "url": "https://globalrecordings.net/en/program/81704"
+    },
+    {
+     "label": "Look, Listen & Live 5 On Trial for GOD",
+     "url": "https://globalrecordings.net/en/program/81705"
+    },
+    {
+     "label": "Look, Listen & Live 6 JESUS - Teacher & Healer",
+     "url": "https://globalrecordings.net/en/program/81706"
+    },
+    {
+     "label": "Look, Listen & Live 7 JESUS - Lord & Saviour",
+     "url": "https://globalrecordings.net/en/program/81707"
+    },
+    {
+     "label": "Look, Listen & Live 8 Acts of the HOLY SPIRIT",
+     "url": "https://globalrecordings.net/en/program/81708"
+    },
+    {
+     "label": "Words of Life 1",
+     "url": "https://globalrecordings.net/en/program/5931"
+    },
+    {
+     "label": "Words of Life 2",
+     "url": "https://globalrecordings.net/en/program/81731"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Gusii",
+   "typeLabel": "Partner Links"
+  }
+ ]
+}
