@@ -17,14 +17,14 @@
 
   var LANGS = [
     { code: 'en',  name: 'English', native: 'English', dir: 'ltr' },
-    { code: 'ur',  name: 'Urdu',    native: 'اردو',    dir: 'rtl' },
-    { code: 'snd', name: 'Sindhi',  native: 'سنڌي',    dir: 'rtl' },
-    { code: 'ps',  name: 'Pashto',  native: 'پښتو',    dir: 'rtl' },
     { code: 'cmn', name: 'Mandarin', native: '普通话',  dir: 'ltr' },
-    { code: 'yue', name: 'Cantonese', native: '廣東話', dir: 'ltr' },
-    { code: 'guz', name: 'Gusii', native: 'Ekegusii / Kisii', dir: 'ltr' },
+    { code: 'hi', name: 'Hindi', native: 'हिन्दी', dir: 'ltr' },
+    { code: 'ur',  name: 'Urdu',    native: 'اردو',    dir: 'rtl' },
     { code: 'swh', name: 'Swahili', native: 'Kiswahili', dir: 'ltr' },
-    { code: 'hi', name: 'Hindi', native: 'हिन्दी', dir: 'ltr' }
+    { code: 'yue', name: 'Cantonese', native: '廣東話', dir: 'ltr' },
+    { code: 'ps',  name: 'Pashto',  native: 'پښتو',    dir: 'rtl' },
+    { code: 'snd', name: 'Sindhi',  native: 'سنڌي',    dir: 'rtl' },
+    { code: 'guz', name: 'Gusii', native: 'Ekegusii / Kisii', dir: 'ltr' }
   ];
 
   var STRINGS = {

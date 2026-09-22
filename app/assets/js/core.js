@@ -346,9 +346,10 @@ window.ET = (function () {
      shows English films, اردو shows Urdu, سنڌي shows Sindhi. The library can
      still browse the others on purpose. */
   var CONTENT = { en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', hi: 'hin' };
+  function contentCode(ui) { return CONTENT[ui] || 'eng'; }
   function contentLang() {
     var ui = (ET.i18n && ET.i18n.current()) || 'en';
-    return CONTENT[ui] || 'eng';
+    return contentCode(ui);
   }
   function inMyLanguage(r) { return r.lang === contentLang(); }
 
@@ -512,7 +513,7 @@ window.ET = (function () {
     sheet: sheet, typeIcon: typeIcon, thumb: thumb, stepper: stepper,
     tabbar: tabbar, row: row, poster: poster, displayTitle: displayTitle,
     safeType: safeType, openable: openable, safeUrl: safeUrl,
-    contentLang: contentLang, inMyLanguage: inMyLanguage,
+    contentCode: contentCode, contentLang: contentLang, inMyLanguage: inMyLanguage,
     BOOKS: BOOKS, pad: pad, bookName: bookName, audioBibleUrl: audioBibleUrl
   };
 })();

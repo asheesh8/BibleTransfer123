@@ -77,7 +77,17 @@
             (state.type === ty) + '">' + ET.esc(t('type.' + ty)) + '</button>';
         })).join('');
 
-    var langs = Object.keys(lib.languages);
+    // Keep the catalogue filters in the same worldwide-speaker order as the
+    // interface language picker. Append future catalogue-only languages so a
+    // missing interface translation never hides their resources.
+    var langs = ET.i18n.langs.map(function (lang) {
+      return ET.contentCode(lang.code);
+    }).filter(function (code, at, all) {
+      return lib.languages[code] && all.indexOf(code) === at;
+    });
+    Object.keys(lib.languages).forEach(function (code) {
+      if (langs.indexOf(code) < 0) langs.push(code);
+    });
     ET.$('#lang-filters').innerHTML =
       ['<button class="fchip" data-lang="" aria-pressed="' + (!state.lang) + '">' +
         ET.esc(t('lib.all')) + '</button>'].concat(
@@ -88,7 +98,7 @@
           return '<button class="fchip" data-lang="' + code + '" aria-pressed="' +
             (state.lang === code) + '">' +
             (same ? '<span class="latin">' + ET.esc(L.name) + '</span>'
-                  : '<span dir="rtl">' + ET.esc(L.native) + '</span> <span class="latin">' +
+                  : '<span dir="auto">' + ET.esc(L.native) + '</span> <span class="latin">' +
                     ET.esc(L.name) + '</span>') + '</button>';
         })).join('');
 
