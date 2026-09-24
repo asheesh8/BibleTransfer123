@@ -11,7 +11,7 @@
     "verify:card": "python3 packer/easytransfer.py verify --out ./card",
     "plan": "python3 packer/easytransfer.py plan --profile standard",
     "catalog": "python3 packer/easytransfer.py preview",
-    "dbs:import": "python3 packer/import_dbs_rendered.py && python3 packer/easytransfer.py preview",
+    "dbs:import": "python3 packer/import_dbs_rendered.py && python3 packer/enrich_local_online.py && python3 packer/easytransfer.py preview",
     "list": "python3 packer/easytransfer.py list"
   }
 }

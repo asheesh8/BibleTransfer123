@@ -47,7 +47,21 @@
    "source": null,
    "year": null,
    "read": null,
-   "downloads": []
+   "downloads": [],
+   "online": {
+    "source": "https://dbs.org/video/ibible/cmn-chinese_mandarin_simplified-ibible_salvation",
+    "downloads": [
+     {
+      "label": "Complete video (ZIP)",
+      "url": "https://download.dbs.org/ibible/cmn-chinese_mandarin_simplified-ibible_salvation.zip"
+     }
+    ],
+    "play": {
+     "kind": "file",
+     "sd": "https://dbs.org/cdn/video/ibible/films_low/cmn-chinese_mandarin_simplified-ibible_salvation-sd.mp4",
+     "hd": "https://dbs.org/cdn/video/ibible/films/cmn-chinese_mandarin_simplified-ibible_salvation-hd.mp4"
+    }
+   }
   },
   {
    "id": "cmn-film-jesus-the-life-of-jesus",
@@ -381,7 +395,331 @@
    "source": null,
    "year": null,
    "read": null,
-   "downloads": []
+   "downloads": [],
+   "online": {
+    "source": "https://dbs.org/video/jesus/cmn_chinese-yunnan-kunming_jesus",
+    "downloads": [
+     {
+      "label": "Low data chapters (ZIP)",
+      "url": "https://download.dbs.org/Jesus/cmn_chinese-yunnan-kunming/cmn_jesus_chapters_low.zip"
+     },
+     {
+      "label": "High quality chapters (ZIP)",
+      "url": "https://download.dbs.org/Jesus/cmn_chinese-yunnan-kunming/cmn_jesus_chapters_high.zip"
+     }
+    ],
+    "play": {
+     "kind": "chapters",
+     "base": "",
+     "items": [
+      {
+       "n": 1,
+       "title": "1. The Beginning",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_01_the-beginning_1_jf6101-0-0_low.mp4"
+      },
+      {
+       "n": 2,
+       "title": "2. Birth of Jesus",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_02_birth-of-jesus_1_jf6102-0-0_low.mp4"
+      },
+      {
+       "n": 3,
+       "title": "3. Childhood of Jesus",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_03_childhood-of-jesus_1_jf6103-0-0_low.mp4"
+      },
+      {
+       "n": 4,
+       "title": "4. Baptism of Jesus by John",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_04_baptism-of-jesus-by-john_1_jf6104-0-0_low.mp4"
+      },
+      {
+       "n": 5,
+       "title": "5. The Devil Tempts Jesus",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_05_the-devil-tempts-jesus_1_jf6105-0-0_low.mp4"
+      },
+      {
+       "n": 6,
+       "title": "6. Jesus Proclaims Fulfillment of the Scriptures",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_06_jesus-proclaims-fulfillment-of-the-scriptures_1_jf6106-0-0_low.mp4"
+      },
+      {
+       "n": 7,
+       "title": "7. Parable of the Pharisee and Tax Collector",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_07_parable-of-the-pharisee-and-tax-collector_1_jf6107-0-0_low.mp4"
+      },
+      {
+       "n": 8,
+       "title": "8. Miraculous Catch of Fish",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_08_miraculous-catch-of-fish_1_jf6108-0-0_low.mp4"
+      },
+      {
+       "n": 9,
+       "title": "9. Jairuss Daughter Brought Back to Life",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_09_jairuss-daughter-brought-back-to-life_1_jf6109-0-0_low.mp4"
+      },
+      {
+       "n": 10,
+       "title": "10. Disciples Chosen",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_10_disciples-chosen_1_jf6110-0-0_low.mp4"
+      },
+      {
+       "n": 11,
+       "title": "11. Beatitudes",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_11_beatitudes_1_jf6111-0-0_low.mp4"
+      },
+      {
+       "n": 12,
+       "title": "12. Sermon on the Mount",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_12_sermon-on-the-mount_1_jf6112-0-0_low.mp4"
+      },
+      {
+       "n": 13,
+       "title": "13. Blessed Are Those Who Hear and Obey",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_13_blessed-are-those-who-hear-and-obey_1_jf6113-0-0_low.mp4"
+      },
+      {
+       "n": 14,
+       "title": "14. Sinful Woman Forgiven",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_14_sinful-woman-forgiven_1_jf6114-0-0_low.mp4"
+      },
+      {
+       "n": 15,
+       "title": "15. Women Disciples",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_15_women-disciples_1_jf6115-0-0_low.mp4"
+      },
+      {
+       "n": 16,
+       "title": "16. John the Baptist in Prison",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_16_john-the-baptist-in-prison_1_jf6116-0-0_low.mp4"
+      },
+      {
+       "n": 17,
+       "title": "17. Parable of the Sower and the Seed",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_17_parable-of-the-sower-and-the-seed_1_jf6117-0-0_low.mp4"
+      },
+      {
+       "n": 18,
+       "title": "18. Parable of the Lamp",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_18_parable-of-the-lamp_1_jf6118-0-0_low.mp4"
+      },
+      {
+       "n": 19,
+       "title": "19. Jesus Calms the Storm",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_19_jesus-calms-the-storm_1_jf6119-0-0_low.mp4"
+      },
+      {
+       "n": 20,
+       "title": "20. Healing of the Demoniac",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_20_healing-of-the-demoniac_1_jf6120-0-0_low.mp4"
+      },
+      {
+       "n": 21,
+       "title": "21. Jesus Feeds 5000",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_21_jesus-feeds-5000_1_jf6121-0-0_low.mp4"
+      },
+      {
+       "n": 22,
+       "title": "22. Peter Declares Jesus to Be the Christ",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_22_peter-declares-jesus-to-be-the-christ_1_jf6122-0-0_low.mp4"
+      },
+      {
+       "n": 23,
+       "title": "23. The Transfiguration",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_23_the-transfiguration_1_jf6123-0-0_low.mp4"
+      },
+      {
+       "n": 24,
+       "title": "24. Jesus Heals Boy from Evil Spirit",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_24_jesus-heals-boy-from-evil-spirit_1_jf6124-0-0_low.mp4"
+      },
+      {
+       "n": 25,
+       "title": "25. The Lords Prayer",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_25_the-lords-prayer_1_jf6125-0-0_low.mp4"
+      },
+      {
+       "n": 26,
+       "title": "26. Teaching About Prayer and Faith",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_26_teaching-about-prayer-and-faith_1_jf6126-0-0_low.mp4"
+      },
+      {
+       "n": 27,
+       "title": "27. Woe to Those Who Cause Others to Sin",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_27_woe-to-those-who-cause-others-to-sin_1_jf6127-0-0_low.mp4"
+      },
+      {
+       "n": 28,
+       "title": "28. The Kingdom of God As a Mustard Seed",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_28_the-kingdom-of-god-as-a-mustard-seed_1_jf6128-0-0_low.mp4"
+      },
+      {
+       "n": 29,
+       "title": "29. Jesus Spends Time with Sinners",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_29_jesus-spends-time-with-sinners_1_jf6129-0-0_low.mp4"
+      },
+      {
+       "n": 30,
+       "title": "30. Healing on the Sabbath",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_30_healing-on-the-sabbath_1_jf6130-0-0_low.mp4"
+      },
+      {
+       "n": 31,
+       "title": "31. Parable of the Good Samaritan",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_31_parable-of-the-good-samaritan_1_jf6131-0-0_low.mp4"
+      },
+      {
+       "n": 32,
+       "title": "32. Healing of Bartimaeus",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_32_healing-of-bartimaeus_1_jf6132-0-0_low.mp4"
+      },
+      {
+       "n": 33,
+       "title": "33. Jesus and Zaccheus",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_33_jesus-and-zaccheus_1_jf6133-0-0_low.mp4"
+      },
+      {
+       "n": 34,
+       "title": "34. Jesus Predicts his Death and Resurrection",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_34_jesus-predicts-his-death-and-resurrection_1_jf6134-0-0_low.mp4"
+      },
+      {
+       "n": 35,
+       "title": "35. Jesuss Triumphal Entry",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_35_jesuss-triumphal-entry_1_jf6135-0-0_low.mp4"
+      },
+      {
+       "n": 36,
+       "title": "36. Jesus Weeps Over Jerusalem",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_36_jesus-weeps-over-jerusalem_1_jf6136-0-0_low.mp4"
+      },
+      {
+       "n": 37,
+       "title": "37. Jesus Drives Out Money Changers",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_37_jesus-drives-out-money-changers_1_jf6137-0-0_low.mp4"
+      },
+      {
+       "n": 38,
+       "title": "38. Widows Offering",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_38_widows-offering_1_jf6138-0-0_low.mp4"
+      },
+      {
+       "n": 39,
+       "title": "39. Annas Questions Jesuss Authority",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_39_annas-questions-jesuss-authority_1_jf6139-0-0_low.mp4"
+      },
+      {
+       "n": 40,
+       "title": "40. Parable of the Vineyard and Tenants",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_40_parable-of-the-vineyard-and-tenants_1_jf6140-0-0_low.mp4"
+      },
+      {
+       "n": 41,
+       "title": "41. Paying Taxes to Caesar",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_41_paying-taxes-to-caesar_1_jf6141-0-0_low.mp4"
+      },
+      {
+       "n": 42,
+       "title": "42. The Last Supper",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_42_the-last-supper_1_jf6142-0-0_low.mp4"
+      },
+      {
+       "n": 43,
+       "title": "43. Upper Room Teaching",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_43_upper-room-teaching_1_jf6143-0-0_low.mp4"
+      },
+      {
+       "n": 44,
+       "title": "44. Jesus is Betrayed and Arrested",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_44_jesus-is-betrayed-and-arrested_1_jf6144-0-0_low.mp4"
+      },
+      {
+       "n": 45,
+       "title": "45. Peter Disowns Jesus",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_45_peter-disowns-jesus_1_jf6145-0-0_low.mp4"
+      },
+      {
+       "n": 46,
+       "title": "46. Jesus is Mocked and Questioned",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_46_jesus-is-mocked-and-questioned_1_jf6146-0-0_low.mp4"
+      },
+      {
+       "n": 47,
+       "title": "47. Jesus is Brought to Pilate",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_47_jesus-is-brought-to-pilate_1_jf6147-0-0_low.mp4"
+      },
+      {
+       "n": 48,
+       "title": "48. Jesus is Brought to Herod",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_48_jesus-is-brought-to-herod_1_jf6148-0-0_low.mp4"
+      },
+      {
+       "n": 49,
+       "title": "49. Jesus is Sentenced",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_49_jesus-is-sentenced_1_jf6149-0-0_low.mp4"
+      },
+      {
+       "n": 50,
+       "title": "50. Jesus Carries his Cross",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_50_jesus-carries-his-cross_1_jf6150-0-0_low.mp4"
+      },
+      {
+       "n": 51,
+       "title": "51. Jesus is Crucified",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_51_jesus-is-crucified_1_jf6151-0-0_low.mp4"
+      },
+      {
+       "n": 52,
+       "title": "52. Soldiers Gamble for Jesuss Clothes",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_52_soldiers-gamble-for-jesuss-clothes_1_jf6152-0-0_low.mp4"
+      },
+      {
+       "n": 53,
+       "title": "53. Sign on the Cross",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_53_sign-on-the-cross_1_jf6153-0-0_low.mp4"
+      },
+      {
+       "n": 54,
+       "title": "54. Crucified Convicts",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_54_crucified-convicts_1_jf6154-0-0_low.mp4"
+      },
+      {
+       "n": 55,
+       "title": "55. Death of Jesus",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_55_death-of-jesus_1_jf6155-0-0_low.mp4"
+      },
+      {
+       "n": 56,
+       "title": "56. Burial of Jesus",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_56_burial-of-jesus_1_jf6156-0-0_low.mp4"
+      },
+      {
+       "n": 57,
+       "title": "57. Angels at the Tomb",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_57_angels-at-the-tomb_1_jf6157-0-0_low.mp4"
+      },
+      {
+       "n": 58,
+       "title": "58. The Tomb is Empty",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_58_the-tomb-is-empty_1_jf6158-0-0_low.mp4"
+      },
+      {
+       "n": 59,
+       "title": "59. Resurrected Jesus Appears",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_59_resurrected-jesus-appears_1_jf6159-0-0_low.mp4"
+      },
+      {
+       "n": 60,
+       "title": "60. Great Commission and Ascension",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_60_great-commission-and-ascension_1_jf6160-0-0_low.mp4"
+      },
+      {
+       "n": 61,
+       "title": "61. Invitation to Know Jesus Personally",
+       "file": "https://video.dbs.org/Jesus/chapters/cmn_chinese-yunnan-kunming/cmn_jesus_chapter_61_invitation-to-know-jesus-personally_1_jf6161-0-0_low.mp4"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "cmn-film-lumo-mark-word-for-word",
@@ -490,7 +828,97 @@
    "source": null,
    "year": null,
    "read": null,
-   "downloads": []
+   "downloads": [],
+   "online": {
+    "source": "https://dbs.org/video/lumo-mark/cmn_chinese-mandarin_mark",
+    "downloads": [],
+    "play": {
+     "kind": "chapters",
+     "base": "",
+     "items": [
+      {
+       "n": 1,
+       "title": "Mark 1",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/cmn_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/cmn_LUMO_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_01_360.mp4"
+      },
+      {
+       "n": 2,
+       "title": "Mark 2",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/cmn_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/cmn_LUMO_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_02_360.mp4"
+      },
+      {
+       "n": 3,
+       "title": "Mark 3",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/cmn_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/cmn_LUMO_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_03_360.mp4"
+      },
+      {
+       "n": 4,
+       "title": "Mark 4",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/cmn_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/cmn_LUMO_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_04_360.mp4"
+      },
+      {
+       "n": 5,
+       "title": "Mark 5",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/cmn_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/cmn_LUMO_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_05_360.mp4"
+      },
+      {
+       "n": 6,
+       "title": "Mark 6",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/cmn_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/cmn_LUMO_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_06_360.mp4"
+      },
+      {
+       "n": 7,
+       "title": "Mark 7",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/cmn_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/cmn_LUMO_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_07_360.mp4"
+      },
+      {
+       "n": 8,
+       "title": "Mark 8",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/cmn_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/cmn_LUMO_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_08_360.mp4"
+      },
+      {
+       "n": 9,
+       "title": "Mark 9",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/cmn_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/cmn_LUMO_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_09_360.mp4"
+      },
+      {
+       "n": 10,
+       "title": "Mark 10",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/cmn_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/cmn_LUMO_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_10_360.mp4"
+      },
+      {
+       "n": 11,
+       "title": "Mark 11",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/cmn_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/cmn_LUMO_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_11_360.mp4"
+      },
+      {
+       "n": 12,
+       "title": "Mark 12",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/cmn_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/cmn_LUMO_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_12_360.mp4"
+      },
+      {
+       "n": 13,
+       "title": "Mark 13",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/cmn_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/cmn_LUMO_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_13_360.mp4"
+      },
+      {
+       "n": 14,
+       "title": "Mark 14",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/cmn_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/cmn_LUMO_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_14_360.mp4"
+      },
+      {
+       "n": 15,
+       "title": "Mark 15",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/cmn_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/cmn_LUMO_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_15_360.mp4"
+      },
+      {
+       "n": 16,
+       "title": "Mark 16",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/cmn_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/cmn_LUMO_Chinese-Mandarin_Mark_Revised-Chinese-Union-Version-Shen-Edition_16_360.mp4"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "cmn-film-lumo-the-covenant",
@@ -579,7 +1007,77 @@
    "source": null,
    "year": null,
    "read": null,
-   "downloads": []
+   "downloads": [],
+   "online": {
+    "source": "https://dbs.org/video/lumo-covenant/cmn_chinese-mandarin_covenant",
+    "downloads": [],
+    "play": {
+     "kind": "chapters",
+     "base": "",
+     "items": [
+      {
+       "n": 1,
+       "title": "Part 1",
+       "file": "https://video.dbs.org/Lumo-Covenant/films_low/cmn_Chinese-Mandarin_Covenant_Chinese-Contemporary-Bible-Simplified-Script/cmn_Covenant_Chinese-Mandarin_Chinese-Contemporary-Bible-Simplified-Script_01_360.mp4"
+      },
+      {
+       "n": 2,
+       "title": "Part 2",
+       "file": "https://video.dbs.org/Lumo-Covenant/films_low/cmn_Chinese-Mandarin_Covenant_Chinese-Contemporary-Bible-Simplified-Script/cmn_Covenant_Chinese-Mandarin_Chinese-Contemporary-Bible-Simplified-Script_02_360.mp4"
+      },
+      {
+       "n": 3,
+       "title": "Part 3",
+       "file": "https://video.dbs.org/Lumo-Covenant/films_low/cmn_Chinese-Mandarin_Covenant_Chinese-Contemporary-Bible-Simplified-Script/cmn_Covenant_Chinese-Mandarin_Chinese-Contemporary-Bible-Simplified-Script_03_360.mp4"
+      },
+      {
+       "n": 4,
+       "title": "Part 4",
+       "file": "https://video.dbs.org/Lumo-Covenant/films_low/cmn_Chinese-Mandarin_Covenant_Chinese-Contemporary-Bible-Simplified-Script/cmn_Covenant_Chinese-Mandarin_Chinese-Contemporary-Bible-Simplified-Script_04_360.mp4"
+      },
+      {
+       "n": 5,
+       "title": "Part 5",
+       "file": "https://video.dbs.org/Lumo-Covenant/films_low/cmn_Chinese-Mandarin_Covenant_Chinese-Contemporary-Bible-Simplified-Script/cmn_Covenant_Chinese-Mandarin_Chinese-Contemporary-Bible-Simplified-Script_05_360.mp4"
+      },
+      {
+       "n": 6,
+       "title": "Part 6",
+       "file": "https://video.dbs.org/Lumo-Covenant/films_low/cmn_Chinese-Mandarin_Covenant_Chinese-Contemporary-Bible-Simplified-Script/cmn_Covenant_Chinese-Mandarin_Chinese-Contemporary-Bible-Simplified-Script_06_360.mp4"
+      },
+      {
+       "n": 7,
+       "title": "Part 7",
+       "file": "https://video.dbs.org/Lumo-Covenant/films_low/cmn_Chinese-Mandarin_Covenant_Chinese-Contemporary-Bible-Simplified-Script/cmn_Covenant_Chinese-Mandarin_Chinese-Contemporary-Bible-Simplified-Script_07_360.mp4"
+      },
+      {
+       "n": 8,
+       "title": "Part 8",
+       "file": "https://video.dbs.org/Lumo-Covenant/films_low/cmn_Chinese-Mandarin_Covenant_Chinese-Contemporary-Bible-Simplified-Script/cmn_Covenant_Chinese-Mandarin_Chinese-Contemporary-Bible-Simplified-Script_08_360.mp4"
+      },
+      {
+       "n": 9,
+       "title": "Part 9",
+       "file": "https://video.dbs.org/Lumo-Covenant/films_low/cmn_Chinese-Mandarin_Covenant_Chinese-Contemporary-Bible-Simplified-Script/cmn_Covenant_Chinese-Mandarin_Chinese-Contemporary-Bible-Simplified-Script_09_360.mp4"
+      },
+      {
+       "n": 10,
+       "title": "Part 10",
+       "file": "https://video.dbs.org/Lumo-Covenant/films_low/cmn_Chinese-Mandarin_Covenant_Chinese-Contemporary-Bible-Simplified-Script/cmn_Covenant_Chinese-Mandarin_Chinese-Contemporary-Bible-Simplified-Script_10_360.mp4"
+      },
+      {
+       "n": 11,
+       "title": "Part 11",
+       "file": "https://video.dbs.org/Lumo-Covenant/films_low/cmn_Chinese-Mandarin_Covenant_Chinese-Contemporary-Bible-Simplified-Script/cmn_Covenant_Chinese-Mandarin_Chinese-Contemporary-Bible-Simplified-Script_11_360.mp4"
+      },
+      {
+       "n": 12,
+       "title": "Part 12",
+       "file": "https://video.dbs.org/Lumo-Covenant/films_low/cmn_Chinese-Mandarin_Covenant_Chinese-Contemporary-Bible-Simplified-Script/cmn_Covenant_Chinese-Mandarin_Chinese-Contemporary-Bible-Simplified-Script_12_360.mp4"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "cmn-film-the-book-of-acts",
@@ -973,7 +1471,391 @@
    "source": null,
    "year": null,
    "read": null,
-   "downloads": []
+   "downloads": [],
+   "online": {
+    "source": "https://dbs.org/video/acts_vb/cmn_mandarin-china_book_of_acts",
+    "downloads": [
+     {
+      "label": "Low data chapters (ZIP)",
+      "url": "https://download.dbs.org/Acts/cmn_mandarin-china/cmn_book-of-acts_chapters_low.zip"
+     },
+     {
+      "label": "High quality chapters (ZIP)",
+      "url": "https://download.dbs.org/Acts/cmn_mandarin-china/cmn_book-of-acts_chapters_high.zip"
+     }
+    ],
+    "play": {
+     "kind": "chapters",
+     "base": "",
+     "items": [
+      {
+       "n": 1,
+       "title": "1. Introduction of Luke",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_01_introduction-of-luke_2_Acts7301-0-0_low.mp4"
+      },
+      {
+       "n": 2,
+       "title": "2. Jesus Taken Up Into Heaven",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_02_jesus-taken-up-into-heaven_2_Acts7302-0-0_low.mp4"
+      },
+      {
+       "n": 3,
+       "title": "3. Matthias Chosen to Replace Judas",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_03_matthias-chosen-to-replace-judas_2_Acts7303-0-0_low.mp4"
+      },
+      {
+       "n": 4,
+       "title": "4. The Holy Spirit Comes at Pentecost",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_04_the-holy-spirit-comes-at-pentecost_2_Acts7304-0-0_low.mp4"
+      },
+      {
+       "n": 5,
+       "title": "5. Peter Addresses the Crowd",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_05_peter-addresses-the-crowd_2_Acts7305-0-0_low.mp4"
+      },
+      {
+       "n": 6,
+       "title": "6. The Fellowship of the Believers",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_06_the-fellowship-of-the-believers_2_Acts7306-0-0_low.mp4"
+      },
+      {
+       "n": 7,
+       "title": "7. Peter Heals a Lame Beggar",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_07_peter-heals-a-lame-beggar_2_Acts7307-0-0_low.mp4"
+      },
+      {
+       "n": 8,
+       "title": "8. Peter Speaks to the Onlookers",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_08_peter-speaks-to-the-onlookers_2_Acts7308-0-0_low.mp4"
+      },
+      {
+       "n": 9,
+       "title": "9. Peter and John Before the Sanhedrin",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_09_peter-and-john-before-the-sanhedrin_2_Acts7309-0-0_low.mp4"
+      },
+      {
+       "n": 10,
+       "title": "10. The Believers Pray",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_10_the-believers-pray_2_Acts7310-0-0_low.mp4"
+      },
+      {
+       "n": 11,
+       "title": "11. The Believers Share Their Possessions",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_11_the-believers-share-their-possessions_2_Acts7311-0-0_low.mp4"
+      },
+      {
+       "n": 12,
+       "title": "12. Ananias and Sapphira",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_12_ananias-and-sapphira_2_Acts7312-0-0_low.mp4"
+      },
+      {
+       "n": 13,
+       "title": "13. The Apostles Heal Many",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_13_the-apostles-heal-many_2_Acts7313-0-0_low.mp4"
+      },
+      {
+       "n": 14,
+       "title": "14. The Apostles Persecuted",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_14_the-apostles-persecuted_2_Acts7314-0-0_low.mp4"
+      },
+      {
+       "n": 15,
+       "title": "15. The Choosing of the Seven",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_15_the-choosing-of-the-seven_2_Acts7315-0-0_low.mp4"
+      },
+      {
+       "n": 16,
+       "title": "16. Stephen Seized",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_16_stephen-seized_2_Acts7316-0-0_low.mp4"
+      },
+      {
+       "n": 17,
+       "title": "17. Stephens Speech to the Sanhedrin",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_17_stephens-speech-to-the-sanhedrin_2_Acts7317-0-0_low.mp4"
+      },
+      {
+       "n": 18,
+       "title": "18. Stoning of Stephen",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_18_stoning-of-stephen_2_Acts7318-0-0_low.mp4"
+      },
+      {
+       "n": 19,
+       "title": "19. The Church Persecuted and Scattered",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_19_the-church-persecuted-and-scattered_2_Acts7319-0-0_low.mp4"
+      },
+      {
+       "n": 20,
+       "title": "20. Philip in Samaria",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_20_philip-in-samaria_2_Acts7320-0-0_low.mp4"
+      },
+      {
+       "n": 21,
+       "title": "21. Simon the Sorcerer",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_21_simon-the-sorcerer_2_Acts7321-0-0_low.mp4"
+      },
+      {
+       "n": 22,
+       "title": "22. Philip and the Ethiopian",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_22_philip-and-the-ethiopian_2_Acts7322-0-0_low.mp4"
+      },
+      {
+       "n": 23,
+       "title": "23. Sauls Conversion",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_23_sauls-conversion_2_Acts7323-0-0_low.mp4"
+      },
+      {
+       "n": 24,
+       "title": "24. Saul in Damascus and Jerusalem",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_24_saul-in-damascus-and-jerusalem_2_Acts7324-0-0_low.mp4"
+      },
+      {
+       "n": 25,
+       "title": "25. Aeneas and Dorcas",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_25_aeneas-and-dorcas_2_Acts7325-0-0_low.mp4"
+      },
+      {
+       "n": 26,
+       "title": "26. Cornelius Sees an Angel",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_26_cornelius-sees-an-angel_2_Acts7326-0-0_low.mp4"
+      },
+      {
+       "n": 27,
+       "title": "27. Peters Vision",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_27_peters-vision_2_Acts7327-0-0_low.mp4"
+      },
+      {
+       "n": 28,
+       "title": "28. Peter at Corneliuss House",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_28_peter-at-corneliuss-house_2_Acts7328-0-0_low.mp4"
+      },
+      {
+       "n": 29,
+       "title": "29. Peter Explains his Actions",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_29_peter-explains-his-actions_2_Acts7329-0-0_low.mp4"
+      },
+      {
+       "n": 30,
+       "title": "30. The Church in Antioch",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_30_the-church-in-antioch_2_Acts7330-0-0_low.mp4"
+      },
+      {
+       "n": 31,
+       "title": "31. Peters Miraculous Escape from Prison",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_31_peters-miraculous-escape-from-prison_2_Acts7331-0-0_low.mp4"
+      },
+      {
+       "n": 32,
+       "title": "32. Herods Death",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_32_herods-death_2_Acts7332-0-0_low.mp4"
+      },
+      {
+       "n": 33,
+       "title": "33. The Sending of Barnabas and Saul",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_33_the-sending-of-barnabas-and-saul_2_Acts7333-0-0_low.mp4"
+      },
+      {
+       "n": 34,
+       "title": "34. Ministry on Cyprus",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_34_ministry-on-cyprus_2_Acts7334-0-0_low.mp4"
+      },
+      {
+       "n": 35,
+       "title": "35. Pauls Ministry in Pisidian Antioch",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_35_pauls-ministry-in-pisidian-antioch_2_Acts7335-0-0_low.mp4"
+      },
+      {
+       "n": 36,
+       "title": "36. Paul Barnabas Preach in Iconium",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_36_paul-barnabas-preach-in-iconium_2_Acts7336-0-0_low.mp4"
+      },
+      {
+       "n": 37,
+       "title": "37. Mistaken Identity in Lystra",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_37_mistaken-identity-in-lystra_2_Acts7337-0-0_low.mp4"
+      },
+      {
+       "n": 38,
+       "title": "38. The Return to Antioch in Syria",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_38_the-return-to-antioch-in-syria_2_Acts7338-0-0_low.mp4"
+      },
+      {
+       "n": 39,
+       "title": "39. The Council at Jerusalem",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_39_the-council-at-jerusalem_2_Acts7339-0-0_low.mp4"
+      },
+      {
+       "n": 40,
+       "title": "40. The Councils Letter to Gentile Believers",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_40_the-councils-letter-to-gentile-believers_2_Acts7340-0-0_low.mp4"
+      },
+      {
+       "n": 41,
+       "title": "41. Disagreement Between Paul and Barnabas",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_41_disagreement-between-paul-and-barnabas_2_Acts7341-0-0_low.mp4"
+      },
+      {
+       "n": 42,
+       "title": "42. Timothy Joins Paul and Silas",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_42_timothy-joins-paul-and-silas_2_Acts7342-0-0_low.mp4"
+      },
+      {
+       "n": 43,
+       "title": "43. Pauls Vision of the Man of Macedonia",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_43_pauls-vision-of-the-man-of-macedonia_2_Acts7343-0-0_low.mp4"
+      },
+      {
+       "n": 44,
+       "title": "44. Lydias Conversion in Philippi",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_44_lydias-conversion-in-philippi_2_Acts7344-0-0_low.mp4"
+      },
+      {
+       "n": 45,
+       "title": "45. Paul and Silas in Prison",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_45_paul-and-silas-in-prison_2_Acts7345-0-0_low.mp4"
+      },
+      {
+       "n": 46,
+       "title": "46. Riots in Thessalonica",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_46_riots-in-thessalonica_2_Acts7346-0-0_low.mp4"
+      },
+      {
+       "n": 47,
+       "title": "47. The Noble Bereans",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_47_the-noble-bereans_2_Acts7347-0-0_low.mp4"
+      },
+      {
+       "n": 48,
+       "title": "48. Idols in Athens",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_48_idols-in-athens_2_Acts7348-0-0_low.mp4"
+      },
+      {
+       "n": 49,
+       "title": "49. Division in Corinth",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_49_division-in-corinth_2_Acts7349-0-0_low.mp4"
+      },
+      {
+       "n": 50,
+       "title": "50. Priscilla Aquila and Apollos",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_50_priscilla-aquila-and-apollos_2_Acts7350-0-0_low.mp4"
+      },
+      {
+       "n": 51,
+       "title": "51. Paul in Ephesus",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_51_paul-in-ephesus_2_Acts7351-0-0_low.mp4"
+      },
+      {
+       "n": 52,
+       "title": "52. The Riot in Ephesus",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_52_the-riot-in-ephesus_2_Acts7352-0-0_low.mp4"
+      },
+      {
+       "n": 53,
+       "title": "53. Through Macedonia and Greece",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_53_through-macedonia-and-greece_2_Acts7353-0-0_low.mp4"
+      },
+      {
+       "n": 54,
+       "title": "54. Eutychus Raised from the Dead at Troas",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_54_eutychus-raised-from-the-dead-at-troas_2_Acts7354-0-0_low.mp4"
+      },
+      {
+       "n": 55,
+       "title": "55. Pauls Farewell to the Ephesian Elders",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_55_pauls-farewell-to-the-ephesian-elders_2_Acts7355-0-0_low.mp4"
+      },
+      {
+       "n": 56,
+       "title": "56. On to Jerusalem",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_56_on-to-jerusalem_2_Acts7356-0-0_low.mp4"
+      },
+      {
+       "n": 57,
+       "title": "57. Pauls Arrival at Jerusalem",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_57_pauls-arrival-at-jerusalem_2_Acts7357-0-0_low.mp4"
+      },
+      {
+       "n": 58,
+       "title": "58. Paul Arrested",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_58_paul-arrested_2_Acts7358-0-0_low.mp4"
+      },
+      {
+       "n": 59,
+       "title": "59. Paul Speaks to the Crowd",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_59_paul-speaks-to-the-crowd_2_Acts7359-0-0_low.mp4"
+      },
+      {
+       "n": 60,
+       "title": "60. Paul the Roman Citizen",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_60_paul-the-roman-citizen_2_Acts7360-0-0_low.mp4"
+      },
+      {
+       "n": 61,
+       "title": "61. Paul Before the Sanhedrin",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_61_paul-before-the-sanhedrin_2_Acts7361-0-0_low.mp4"
+      },
+      {
+       "n": 62,
+       "title": "62. The Plot to Kill Paul",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_62_the-plot-to-kill-paul_2_Acts7362-0-0_low.mp4"
+      },
+      {
+       "n": 63,
+       "title": "63. Paul Transferred to Caesarea",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_63_paul-transferred-to-caesarea_2_Acts7363-0-0_low.mp4"
+      },
+      {
+       "n": 64,
+       "title": "64. Pauls Trial Before Felix",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_64_pauls-trial-before-felix_2_Acts7364-0-0_low.mp4"
+      },
+      {
+       "n": 65,
+       "title": "65. Pauls Trial Before Festus",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_65_pauls-trial-before-festus_2_Acts7365-0-0_low.mp4"
+      },
+      {
+       "n": 66,
+       "title": "66. Festus Consults King Agrippa",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_66_festus-consults-king-agrippa_2_Acts7366-0-0_low.mp4"
+      },
+      {
+       "n": 67,
+       "title": "67. Paul Before Agrippa",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_67_paul-before-agrippa_2_Acts7367-0-0_low.mp4"
+      },
+      {
+       "n": 68,
+       "title": "68. Paul Sails for Rome",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_68_paul-sails-for-rome_2_Acts7368-0-0_low.mp4"
+      },
+      {
+       "n": 69,
+       "title": "69. The Storm",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_69_the-storm_2_Acts7369-0-0_low.mp4"
+      },
+      {
+       "n": 70,
+       "title": "70. The Shipwreck",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_70_the-shipwreck_2_Acts7370-0-0_low.mp4"
+      },
+      {
+       "n": 71,
+       "title": "71. Paul Ashore on Malta",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_71_paul-ashore-on-malta_2_Acts7371-0-0_low.mp4"
+      },
+      {
+       "n": 72,
+       "title": "72. Paul Finally Reaches Rome",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_72_paul-finally-reaches-rome_2_Acts7372-0-0_low.mp4"
+      },
+      {
+       "n": 73,
+       "title": "73. Paul Preaches in Rome Under Guard",
+       "file": "https://video.dbs.org/Acts/chapters/cmn_mandarin-china/cmn_book-of-acts_chapter_73_paul-preaches-in-rome-under-guard_2_Acts7373-0-0_low.mp4"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "cmn-film-the-gospel-of-john",
@@ -1247,7 +2129,271 @@
    "source": null,
    "year": null,
    "read": null,
-   "downloads": []
+   "downloads": [],
+   "online": {
+    "source": "https://dbs.org/video/john/cmn_mandarin-china_gospel_of_john",
+    "downloads": [
+     {
+      "label": "Low data chapters (ZIP)",
+      "url": "https://download.dbs.org/John/cmn_mandarin-china/cmn_Gospel_of_John_chapters_low.zip"
+     },
+     {
+      "label": "High quality chapters (ZIP)",
+      "url": "https://download.dbs.org/John/cmn_mandarin-china/cmn_Gospel_of_John_chapters_high.zip"
+     }
+    ],
+    "play": {
+     "kind": "chapters",
+     "base": "",
+     "items": [
+      {
+       "n": 1,
+       "title": "1. Gods Word Becomes Flesh",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_01_gods-word-becomes-flesh_2_GOJ4901-0-0_low.mp4"
+      },
+      {
+       "n": 2,
+       "title": "2. Testimony of John the Baptist",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_02_testimony-of-john-the-baptist_2_GOJ4902-0-0_low.mp4"
+      },
+      {
+       "n": 3,
+       "title": "3. Jesus Gathers Disciples",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_03_jesus-gathers-disciples_2_GOJ4903-0-0_low.mp4"
+      },
+      {
+       "n": 4,
+       "title": "4. Wedding in Cana",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_04_wedding-in-cana_2_GOJ4904-0-0_low.mp4"
+      },
+      {
+       "n": 5,
+       "title": "5. Cleaning the Temple",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_05_cleaning-the-temple_2_GOJ4905-0-0_low.mp4"
+      },
+      {
+       "n": 6,
+       "title": "6. Talk with Nicodemus",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_06_talk-with-nicodemus_2_GOJ4906-0-0_low.mp4"
+      },
+      {
+       "n": 7,
+       "title": "7. The Baptists Confirmation",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_07_the-baptists-confirmation_2_GOJ4907-0-0_low.mp4"
+      },
+      {
+       "n": 8,
+       "title": "8. Samaritan Woman",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_08_samaritan-woman_2_GOJ4908-0-0_low.mp4"
+      },
+      {
+       "n": 9,
+       "title": "9. Samaritan Village",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_09_samaritan-village_2_GOJ4909-0-0_low.mp4"
+      },
+      {
+       "n": 10,
+       "title": "10. Officials Son Healed",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_10_officials-son-healed_2_GOJ4910-0-0_low.mp4"
+      },
+      {
+       "n": 11,
+       "title": "11. A Paralytic Healed",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_11_a-paralytic-healed_2_GOJ4911-0-0_low.mp4"
+      },
+      {
+       "n": 12,
+       "title": "12. Claim to Be the Son",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_12_claim-to-be-the-son_2_GOJ4912-0-0_low.mp4"
+      },
+      {
+       "n": 13,
+       "title": "13. Witness to the Son",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_13_witness-to-the-son_2_GOJ4913-0-0_low.mp4"
+      },
+      {
+       "n": 14,
+       "title": "14. Feeding 5000",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_14_feeding-5000_2_GOJ4914-0-0_low.mp4"
+      },
+      {
+       "n": 15,
+       "title": "15. Sea Walking",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_15_sea-walking_2_GOJ4915-0-0_low.mp4"
+      },
+      {
+       "n": 16,
+       "title": "16. Bread of Life",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_16_bread-of-life_2_GOJ4916-0-0_low.mp4"
+      },
+      {
+       "n": 17,
+       "title": "17. Falling Away",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_17_falling-away_2_GOJ4917-0-0_low.mp4"
+      },
+      {
+       "n": 18,
+       "title": "18. Confronting Hypocritical Leaders",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_18_confronting-hypocritical-leaders_2_GOJ4918-0-0_low.mp4"
+      },
+      {
+       "n": 19,
+       "title": "19. Disagreement Who is Jesus",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_19_disagreement-who-is-jesus_2_GOJ4919-0-0_low.mp4"
+      },
+      {
+       "n": 20,
+       "title": "20. Adulterous Woman",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_20_adulterous-woman_2_GOJ4920-0-0_low.mp4"
+      },
+      {
+       "n": 21,
+       "title": "21. Who Are You",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_21_who-are-you_2_GOJ4921-0-0_low.mp4"
+      },
+      {
+       "n": 22,
+       "title": "22. Great Confrontation",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_22_great-confrontation_2_GOJ4922-0-0_low.mp4"
+      },
+      {
+       "n": 23,
+       "title": "23. Blind Man Healed",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_23_blind-man-healed_2_GOJ4923-0-0_low.mp4"
+      },
+      {
+       "n": 24,
+       "title": "24. Pharisees Interrogate the Blind Man",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_24_pharisees-interrogate-the-blind-man_2_GOJ4924-0-0_low.mp4"
+      },
+      {
+       "n": 25,
+       "title": "25. The Good Shepherd",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_25_the-good-shepherd_2_GOJ4925-0-0_low.mp4"
+      },
+      {
+       "n": 26,
+       "title": "26. Are You Messiah",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_26_are-you-messiah_2_GOJ4926-0-0_low.mp4"
+      },
+      {
+       "n": 27,
+       "title": "27. Lazarus Dies",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_27_lazarus-dies_2_GOJ4927-0-0_low.mp4"
+      },
+      {
+       "n": 28,
+       "title": "28. Mary and Martha Mourn",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_28_mary-and-martha-mourn_2_GOJ4928-0-0_low.mp4"
+      },
+      {
+       "n": 29,
+       "title": "29. Lazarus Rises",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_29_lazarus-rises_2_GOJ4929-0-0_low.mp4"
+      },
+      {
+       "n": 30,
+       "title": "30. Triumphal Entry and Results",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_30_triumphal-entry-and-results_2_GOJ4930-0-0_low.mp4"
+      },
+      {
+       "n": 31,
+       "title": "31. Divided Opinions",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_31_divided-opinions_2_GOJ4931-0-0_low.mp4"
+      },
+      {
+       "n": 32,
+       "title": "32. Last Supper",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_32_last-supper_2_GOJ4932-0-0_low.mp4"
+      },
+      {
+       "n": 33,
+       "title": "33. Betrayal and Denial Foretold",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_33_betrayal-and-denial-foretold_2_GOJ4933-0-0_low.mp4"
+      },
+      {
+       "n": 34,
+       "title": "34. Jesus Comforts his Disciples",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_34_jesus-comforts-his-disciples_2_GOJ4934-0-0_low.mp4"
+      },
+      {
+       "n": 35,
+       "title": "35. Jesus Promises the Holy Spirit",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_35_jesus-promises-the-holy-spirit_2_GOJ4935-0-0_low.mp4"
+      },
+      {
+       "n": 36,
+       "title": "36. The Vine and the Branches",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_36_the-vine-and-the-branches_2_GOJ4936-0-0_low.mp4"
+      },
+      {
+       "n": 37,
+       "title": "37. The Worlds Hatred",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_37_the-worlds-hatred_2_GOJ4937-0-0_low.mp4"
+      },
+      {
+       "n": 38,
+       "title": "38. The Work of the Holy Spirit",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_38_the-work-of-the-holy-spirit_2_GOJ4938-0-0_low.mp4"
+      },
+      {
+       "n": 39,
+       "title": "39. Grief Will Turn to Joy",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_39_grief-will-turn-to-joy_2_GOJ4939-0-0_low.mp4"
+      },
+      {
+       "n": 40,
+       "title": "40. Jesus Prays to Be Glorified",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_40_jesus-prays-to-be-glorified_2_GOJ4940-0-0_low.mp4"
+      },
+      {
+       "n": 41,
+       "title": "41. The Arrest of Jesus and Peters Denial",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_41_the-arrest-of-jesus-and-peters-denial_2_GOJ4941-0-0_low.mp4"
+      },
+      {
+       "n": 42,
+       "title": "42. My Kingdom is Not of This World",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_42_my-kingdom-is-not-of-this-world_2_GOJ4942-0-0_low.mp4"
+      },
+      {
+       "n": 43,
+       "title": "43. Jesus Sentenced to Be Crucified",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_43_jesus-sentenced-to-be-crucified_2_GOJ4943-0-0_low.mp4"
+      },
+      {
+       "n": 44,
+       "title": "44. The Crucifixion of Jesus",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_44_the-crucifixion-of-jesus_2_GOJ4944-0-0_low.mp4"
+      },
+      {
+       "n": 45,
+       "title": "45. Jesus is Alive",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_45_jesus-is-alive_2_GOJ4945-0-0_low.mp4"
+      },
+      {
+       "n": 46,
+       "title": "46. Doubting Thomas",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_46_doubting-thomas_2_GOJ4946-0-0_low.mp4"
+      },
+      {
+       "n": 47,
+       "title": "47. Miraculous Catch",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_47_miraculous-catch_2_GOJ4947-0-0_low.mp4"
+      },
+      {
+       "n": 48,
+       "title": "48. Do You Love Me",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_48_do-you-love-me_2_GOJ4948-0-0_low.mp4"
+      },
+      {
+       "n": 49,
+       "title": "49. How to Know Jesus Personally",
+       "file": "https://video.dbs.org/John/chapters/cmn_mandarin-china/cmn_Gospel_of_John_chapter_49_how-to-know-jesus-personally_2_GOJ4949-0-0_low.mp4"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "cmn-film-the-gospel-of-matthew",
@@ -1416,7 +2562,162 @@
    "source": null,
    "year": null,
    "read": null,
-   "downloads": []
+   "downloads": [],
+   "online": {
+    "source": "https://dbs.org/video/matthew/cmn-matthew-vb-mandarin-chinese",
+    "downloads": [
+     {
+      "label": "Complete video (ZIP)",
+      "url": "https://download.dbs.org/Matthew/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapters.zip"
+     }
+    ],
+    "play": {
+     "kind": "chapters",
+     "base": "",
+     "items": [
+      {
+       "n": 1,
+       "title": "Part 1",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-01.mp4"
+      },
+      {
+       "n": 2,
+       "title": "Part 2",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-02.mp4"
+      },
+      {
+       "n": 3,
+       "title": "Part 3",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-03.mp4"
+      },
+      {
+       "n": 4,
+       "title": "Part 4",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-04.mp4"
+      },
+      {
+       "n": 5,
+       "title": "Part 5",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-05.mp4"
+      },
+      {
+       "n": 6,
+       "title": "Part 6",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-06.mp4"
+      },
+      {
+       "n": 7,
+       "title": "Part 7",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-07.mp4"
+      },
+      {
+       "n": 8,
+       "title": "Part 8",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-08.mp4"
+      },
+      {
+       "n": 9,
+       "title": "Part 9",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-09.mp4"
+      },
+      {
+       "n": 10,
+       "title": "Part 10",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-10.mp4"
+      },
+      {
+       "n": 11,
+       "title": "Part 11",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-11.mp4"
+      },
+      {
+       "n": 12,
+       "title": "Part 12",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-12.mp4"
+      },
+      {
+       "n": 13,
+       "title": "Part 13",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-13.mp4"
+      },
+      {
+       "n": 14,
+       "title": "Part 14",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-14.mp4"
+      },
+      {
+       "n": 15,
+       "title": "Part 15",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-15.mp4"
+      },
+      {
+       "n": 16,
+       "title": "Part 16",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-16.mp4"
+      },
+      {
+       "n": 17,
+       "title": "Part 17",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-17.mp4"
+      },
+      {
+       "n": 18,
+       "title": "Part 18",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-18.mp4"
+      },
+      {
+       "n": 19,
+       "title": "Part 19",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-19.mp4"
+      },
+      {
+       "n": 20,
+       "title": "Part 20",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-20.mp4"
+      },
+      {
+       "n": 21,
+       "title": "Part 21",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-21.mp4"
+      },
+      {
+       "n": 22,
+       "title": "Part 22",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-22.mp4"
+      },
+      {
+       "n": 23,
+       "title": "Part 23",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-23.mp4"
+      },
+      {
+       "n": 24,
+       "title": "Part 24",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-24.mp4"
+      },
+      {
+       "n": 25,
+       "title": "Part 25",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-25.mp4"
+      },
+      {
+       "n": 26,
+       "title": "Part 26",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-26.mp4"
+      },
+      {
+       "n": 27,
+       "title": "Part 27",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-27.mp4"
+      },
+      {
+       "n": 28,
+       "title": "Part 28",
+       "file": "https://video.dbs.org/Matthew/chapters/cmn-matthew-vb-mandarin-chinese/cmn-matthew-vb-mandarin-chinese-01-chapter-28.mp4"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "cmn-film-the-hope-the-whole-bible-story",
@@ -1625,7 +2926,202 @@
    "source": null,
    "year": null,
    "read": null,
-   "downloads": []
+   "downloads": [],
+   "online": {
+    "source": "https://dbs.org/video/hope/cmn_mandarin_the_hope",
+    "downloads": [
+     {
+      "label": "Complete video (ZIP)",
+      "url": "https://download.dbs.org/HOPE/cmn_mandarin_the_hope_events.zip"
+     }
+    ],
+    "play": {
+     "kind": "chapters",
+     "base": "",
+     "items": [
+      {
+       "n": 1,
+       "title": "Part 1",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_01_low.mp4"
+      },
+      {
+       "n": 2,
+       "title": "Part 2",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_02_low.mp4"
+      },
+      {
+       "n": 3,
+       "title": "Part 3",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_03_low.mp4"
+      },
+      {
+       "n": 4,
+       "title": "Part 4",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_04_low.mp4"
+      },
+      {
+       "n": 5,
+       "title": "Part 5",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_05_low.mp4"
+      },
+      {
+       "n": 6,
+       "title": "Part 6",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_06_low.mp4"
+      },
+      {
+       "n": 7,
+       "title": "Part 7",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_07_low.mp4"
+      },
+      {
+       "n": 8,
+       "title": "Part 8",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_08_low.mp4"
+      },
+      {
+       "n": 9,
+       "title": "Part 9",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_09_low.mp4"
+      },
+      {
+       "n": 10,
+       "title": "Part 10",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_10_low.mp4"
+      },
+      {
+       "n": 11,
+       "title": "Part 11",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_11_low.mp4"
+      },
+      {
+       "n": 12,
+       "title": "Part 12",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_12_low.mp4"
+      },
+      {
+       "n": 13,
+       "title": "Part 13",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_13_low.mp4"
+      },
+      {
+       "n": 14,
+       "title": "Part 14",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_14_low.mp4"
+      },
+      {
+       "n": 15,
+       "title": "Part 15",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_15_low.mp4"
+      },
+      {
+       "n": 16,
+       "title": "Part 16",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_16_low.mp4"
+      },
+      {
+       "n": 17,
+       "title": "Part 17",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_17_low.mp4"
+      },
+      {
+       "n": 18,
+       "title": "Part 18",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_18_low.mp4"
+      },
+      {
+       "n": 19,
+       "title": "Part 19",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_19_low.mp4"
+      },
+      {
+       "n": 20,
+       "title": "Part 20",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_20_low.mp4"
+      },
+      {
+       "n": 21,
+       "title": "Part 21",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_21_low.mp4"
+      },
+      {
+       "n": 22,
+       "title": "Part 22",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_22_low.mp4"
+      },
+      {
+       "n": 23,
+       "title": "Part 23",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_23_low.mp4"
+      },
+      {
+       "n": 24,
+       "title": "Part 24",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_24_low.mp4"
+      },
+      {
+       "n": 25,
+       "title": "Part 25",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_25_low.mp4"
+      },
+      {
+       "n": 26,
+       "title": "Part 26",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_26_low.mp4"
+      },
+      {
+       "n": 27,
+       "title": "Part 27",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_27_low.mp4"
+      },
+      {
+       "n": 28,
+       "title": "Part 28",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_28_low.mp4"
+      },
+      {
+       "n": 29,
+       "title": "Part 29",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_29_low.mp4"
+      },
+      {
+       "n": 30,
+       "title": "Part 30",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_30_low.mp4"
+      },
+      {
+       "n": 31,
+       "title": "Part 31",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_31_low.mp4"
+      },
+      {
+       "n": 32,
+       "title": "Part 32",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_32_low.mp4"
+      },
+      {
+       "n": 33,
+       "title": "Part 33",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_33_low.mp4"
+      },
+      {
+       "n": 34,
+       "title": "Part 34",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_34_low.mp4"
+      },
+      {
+       "n": 35,
+       "title": "Part 35",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_35_low.mp4"
+      },
+      {
+       "n": 36,
+       "title": "Part 36",
+       "file": "https://video.dbs.org/HOPE/chapters_low/cmn_mandarin/cmn_mandarin_the_hope_event_36_low.mp4"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "cmn-audio-the-story-of-jesus",
@@ -1689,7 +3185,15 @@
    "links": null,
    "source": null,
    "year": null,
-   "read": null
+   "read": null,
+   "online": {
+    "source": "https://dbs.org/audio/collections/cmn_StoryJesus_chinese_mandarin",
+    "downloads": [],
+    "play": {
+     "kind": "audio-collection",
+     "sample": "https://media.dbs.org/audio/soj/cmn_StoryJesus_chinese_mandarin_full.mp3"
+    }
+   }
   },
   {
    "id": "cmn-text-chinese-king-james-version-simplified-1992",
@@ -1727,7 +3231,20 @@
    "links": null,
    "source": null,
    "stats": null,
-   "play": null
+   "play": null,
+   "online": {
+    "source": "https://dbs.org/bibles/CMNKJVS",
+    "read": {
+     "kind": "pdf",
+     "url": "https://bibles.dbs.org/CMNKJVS/pdf/CMNKJVS.pdf"
+    },
+    "downloads": [
+     {
+      "label": "PDF",
+      "url": "https://bibles.dbs.org/CMNKJVS/pdf/CMNKJVS.pdf"
+     }
+    ]
+   }
   },
   {
    "id": "cmn-text-chinese-king-james-version-traditional-1992",
@@ -1765,7 +3282,20 @@
    "links": null,
    "source": null,
    "stats": null,
-   "play": null
+   "play": null,
+   "online": {
+    "source": "https://dbs.org/bibles/CMNKJVT",
+    "read": {
+     "kind": "pdf",
+     "url": "https://bibles.dbs.org/CMNKJVT/pdf/CMNKJVT.pdf"
+    },
+    "downloads": [
+     {
+      "label": "PDF",
+      "url": "https://bibles.dbs.org/CMNKJVT/pdf/CMNKJVT.pdf"
+     }
+    ]
+   }
   },
   {
    "id": "cmn-text-chinese-union-version-simplified-1919",
@@ -1803,7 +3333,20 @@
    "links": null,
    "source": null,
    "stats": null,
-   "play": null
+   "play": null,
+   "online": {
+    "source": "https://dbs.org/bibles/CMNUNVS",
+    "read": {
+     "kind": "pdf",
+     "url": "https://bibles.dbs.org/CMNUNVS/pdf/CMNUNVS.pdf"
+    },
+    "downloads": [
+     {
+      "label": "PDF",
+      "url": "https://bibles.dbs.org/CMNUNVS/pdf/CMNUNVS.pdf"
+     }
+    ]
+   }
   },
   {
    "id": "cmn-text-chinese-union-version-traditional-1919",
@@ -1841,7 +3384,20 @@
    "links": null,
    "source": null,
    "stats": null,
-   "play": null
+   "play": null,
+   "online": {
+    "source": "https://dbs.org/bibles/CMNUNVT",
+    "read": {
+     "kind": "pdf",
+     "url": "https://bibles.dbs.org/CMNUNVT/pdf/CMNUNVT.pdf"
+    },
+    "downloads": [
+     {
+      "label": "PDF",
+      "url": "https://bibles.dbs.org/CMNUNVT/pdf/CMNUNVT.pdf"
+     }
+    ]
+   }
   },
   {
    "id": "cmn-text-griffith-john-new-testament-1887",
@@ -1879,7 +3435,20 @@
    "links": null,
    "source": null,
    "stats": null,
-   "play": null
+   "play": null,
+   "online": {
+    "source": "https://dbs.org/bibles/CMNGJN",
+    "read": {
+     "kind": "pdf",
+     "url": "https://bibles.dbs.org/CMNGJN/pdf/CMNGJN.pdf"
+    },
+    "downloads": [
+     {
+      "label": "PDF",
+      "url": "https://bibles.dbs.org/CMNGJN/pdf/CMNGJN.pdf"
+     }
+    ]
+   }
   },
   {
    "id": "cmn-text-griffith-john-new-testament-simplified-1887",
@@ -1917,7 +3486,20 @@
    "links": null,
    "source": null,
    "stats": null,
-   "play": null
+   "play": null,
+   "online": {
+    "source": "https://dbs.org/bibles/CMNGJNS",
+    "read": {
+     "kind": "pdf",
+     "url": "https://bibles.dbs.org/CMNGJNS/pdf/CMNGJNS.pdf"
+    },
+    "downloads": [
+     {
+      "label": "PDF",
+      "url": "https://bibles.dbs.org/CMNGJNS/pdf/CMNGJNS.pdf"
+     }
+    ]
+   }
   },
   {
    "id": "cmn-text-gury-orthodox-new-testament-1879",
@@ -1955,7 +3537,20 @@
    "links": null,
    "source": null,
    "stats": null,
-   "play": null
+   "play": null,
+   "online": {
+    "source": "https://dbs.org/bibles/CMNARC",
+    "read": {
+     "kind": "pdf",
+     "url": "https://bibles.dbs.org/CMNARC/pdf/CMNARC.pdf"
+    },
+    "downloads": [
+     {
+      "label": "PDF",
+      "url": "https://bibles.dbs.org/CMNARC/pdf/CMNARC.pdf"
+     }
+    ]
+   }
   },
   {
    "id": "cmn-text-morrison-milne-version-1824",
@@ -1993,7 +3588,20 @@
    "links": null,
    "source": null,
    "stats": null,
-   "play": null
+   "play": null,
+   "online": {
+    "source": "https://dbs.org/bibles/CMNMMV",
+    "read": {
+     "kind": "pdf",
+     "url": "https://bibles.dbs.org/CMNMMV/pdf/CMNMMV.pdf"
+    },
+    "downloads": [
+     {
+      "label": "PDF",
+      "url": "https://bibles.dbs.org/CMNMMV/pdf/CMNMMV.pdf"
+     }
+    ]
+   }
   },
   {
    "id": "cmn-text-new-chinese-version-simplified-1992",
@@ -2031,7 +3639,20 @@
    "links": null,
    "source": null,
    "stats": null,
-   "play": null
+   "play": null,
+   "online": {
+    "source": "https://dbs.org/bibles/CMNNCVS",
+    "read": {
+     "kind": "pdf",
+     "url": "https://bibles.dbs.org/CMNNCVS/pdf/CMNNCVS.pdf"
+    },
+    "downloads": [
+     {
+      "label": "PDF",
+      "url": "https://bibles.dbs.org/CMNNCVS/pdf/CMNNCVS.pdf"
+     }
+    ]
+   }
   },
   {
    "id": "cmn-text-new-chinese-version-traditional-1992",
@@ -2069,7 +3690,20 @@
    "links": null,
    "source": null,
    "stats": null,
-   "play": null
+   "play": null,
+   "online": {
+    "source": "https://dbs.org/bibles/CMNNCVT",
+    "read": {
+     "kind": "pdf",
+     "url": "https://bibles.dbs.org/CMNNCVT/pdf/CMNNCVT.pdf"
+    },
+    "downloads": [
+     {
+      "label": "PDF",
+      "url": "https://bibles.dbs.org/CMNNCVT/pdf/CMNNCVT.pdf"
+     }
+    ]
+   }
   },
   {
    "id": "cmn-hist-1822-pentateuch",
@@ -2102,7 +3736,20 @@
    "links": null,
    "source": null,
    "stats": null,
-   "play": null
+   "play": null,
+   "online": {
+    "source": "https://dbs.org/bibles/historic/Chinese-1822-Pentateuch",
+    "read": {
+     "kind": "pdf",
+     "url": "https://scripture.dbs.org/pdfs/Chinese-1822-Pentateuch.pdf"
+    },
+    "downloads": [
+     {
+      "label": "PDF",
+      "url": "https://scripture.dbs.org/pdfs/Chinese-1822-Pentateuch.pdf"
+     }
+    ]
+   }
   },
   {
    "id": "cmn-hist-1823-morrison-new-testament",
@@ -2135,7 +3782,20 @@
    "links": null,
    "source": null,
    "stats": null,
-   "play": null
+   "play": null,
+   "online": {
+    "source": "https://dbs.org/bibles/historic/Chinese-1823-Morrison-New-Testmant",
+    "read": {
+     "kind": "pdf",
+     "url": "https://scripture.dbs.org/pdfs/Chinese-1823-Morrison-New-Testmant.pdf"
+    },
+    "downloads": [
+     {
+      "label": "PDF",
+      "url": "https://scripture.dbs.org/pdfs/Chinese-1823-Morrison-New-Testmant.pdf"
+     }
+    ]
+   }
   },
   {
    "id": "cmn-hist-1840-new-testament-vol.-1-4",
@@ -2168,7 +3828,20 @@
    "links": null,
    "source": null,
    "stats": null,
-   "play": null
+   "play": null,
+   "online": {
+    "source": "https://dbs.org/bibles/historic/Chinese-1840-New-Testament-Vol.1-4-WDL-19487",
+    "read": {
+     "kind": "pdf",
+     "url": "https://scripture.dbs.org/pdfs/Chinese-1840-New-Testament-Vol.1-4-WDL-19487.pdf"
+    },
+    "downloads": [
+     {
+      "label": "PDF",
+      "url": "https://scripture.dbs.org/pdfs/Chinese-1840-New-Testament-Vol.1-4-WDL-19487.pdf"
+     }
+    ]
+   }
   },
   {
    "id": "cmn-hist-1850-new-testament",
@@ -2201,7 +3874,20 @@
    "links": null,
    "source": null,
    "stats": null,
-   "play": null
+   "play": null,
+   "online": {
+    "source": "https://dbs.org/bibles/historic/Chinese-1850-New-Testament",
+    "read": {
+     "kind": "pdf",
+     "url": "https://scripture.dbs.org/pdfs/Chinese-1850-New-Testament.pdf"
+    },
+    "downloads": [
+     {
+      "label": "PDF",
+      "url": "https://scripture.dbs.org/pdfs/Chinese-1850-New-Testament.pdf"
+     }
+    ]
+   }
   },
   {
    "id": "cmn-hist-1862-bible-portion",
@@ -2234,7 +3920,20 @@
    "links": null,
    "source": null,
    "stats": null,
-   "play": null
+   "play": null,
+   "online": {
+    "source": "https://dbs.org/bibles/historic/Chinese-1862-Bible-Portion",
+    "read": {
+     "kind": "pdf",
+     "url": "https://scripture.dbs.org/pdfs/Chinese-1862-Bible-Portion.pdf"
+    },
+    "downloads": [
+     {
+      "label": "PDF",
+      "url": "https://scripture.dbs.org/pdfs/Chinese-1862-Bible-Portion.pdf"
+     }
+    ]
+   }
   },
   {
    "id": "cmn-hist-1875-new-testament",
@@ -2267,7 +3966,20 @@
    "links": null,
    "source": null,
    "stats": null,
-   "play": null
+   "play": null,
+   "online": {
+    "source": "https://dbs.org/bibles/historic/Chinese-1875-New-Testament",
+    "read": {
+     "kind": "pdf",
+     "url": "https://scripture.dbs.org/pdfs/Chinese-1875-New-Testament.pdf"
+    },
+    "downloads": [
+     {
+      "label": "PDF",
+      "url": "https://scripture.dbs.org/pdfs/Chinese-1875-New-Testament.pdf"
+     }
+    ]
+   }
   },
   {
    "id": "cmn-hist-1885-mandarin-kjv-new-testament-chinese-english",
@@ -2300,7 +4012,20 @@
    "links": null,
    "source": null,
    "stats": null,
-   "play": null
+   "play": null,
+   "online": {
+    "source": "https://dbs.org/bibles/historic/Chinese-English-1885-Mandarin-KJV-Diglot-New-Testament-Shanghai-print",
+    "read": {
+     "kind": "pdf",
+     "url": "https://scripture.dbs.org/pdfs/Chinese-English-1885-Mandarin-KJV-Diglot-New-Testament-Shanghai-print.pdf"
+    },
+    "downloads": [
+     {
+      "label": "PDF",
+      "url": "https://scripture.dbs.org/pdfs/Chinese-English-1885-Mandarin-KJV-Diglot-New-Testament-Shanghai-print.pdf"
+     }
+    ]
+   }
   },
   {
    "id": "cmn-hist-1902-new-testament-chinese-english",
@@ -2333,7 +4058,20 @@
    "links": null,
    "source": null,
    "stats": null,
-   "play": null
+   "play": null,
+   "online": {
+    "source": "https://dbs.org/bibles/historic/Chinese-English-1902-New-Testament-Xin-yue-quan-shu-Zhong-xi-zi",
+    "read": {
+     "kind": "pdf",
+     "url": "https://scripture.dbs.org/pdfs/Chinese-English-1902-New-Testament-Xin-yue-quan-shu-Zhong-xi-zi.pdf"
+    },
+    "downloads": [
+     {
+      "label": "PDF",
+      "url": "https://scripture.dbs.org/pdfs/Chinese-English-1902-New-Testament-Xin-yue-quan-shu-Zhong-xi-zi.pdf"
+     }
+    ]
+   }
   },
   {
    "id": "cmn-hist-1902-wenli-holy-scriptures-of-the-old-and-new-testaments",
@@ -2366,7 +4104,20 @@
    "links": null,
    "source": null,
    "stats": null,
-   "play": null
+   "play": null,
+   "online": {
+    "source": "https://dbs.org/bibles/historic/Chinese-1902-Wenli-Holy-Scriptures-of-the-Old-and-New-Testaments",
+    "read": {
+     "kind": "pdf",
+     "url": "https://scripture.dbs.org/pdfs/Chinese-1902-Wenli-Holy-Scriptures-of-the-Old-and-New-Testaments.pdf"
+    },
+    "downloads": [
+     {
+      "label": "PDF",
+      "url": "https://scripture.dbs.org/pdfs/Chinese-1902-Wenli-Holy-Scriptures-of-the-Old-and-New-Testaments.pdf"
+     }
+    ]
+   }
   }
  ]
 }

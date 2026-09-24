@@ -68,13 +68,15 @@ def canonical(url: str) -> str:
     return url
 
 
-def urls_in(value):
+def urls_in(value, skip_online=False):
     if isinstance(value, dict):
-        for child in value.values():
-            yield from urls_in(child)
+        for key, child in value.items():
+            if skip_online and key == "online":
+                continue
+            yield from urls_in(child, skip_online=skip_online)
     elif isinstance(value, list):
         for child in value:
-            yield from urls_in(child)
+            yield from urls_in(child, skip_online=skip_online)
     elif isinstance(value, str) and value.startswith(("http://", "https://")):
         yield value
 
@@ -276,7 +278,10 @@ def main():
     alive_files = set(verified["alive_files"])
     playable_audio = set(verified["playable_audio_filesets"])
     existing, languages = existing_catalog()
-    represented = {canonical(url) for r in existing for url in urls_in(r)}
+    # `online` is a fallback for a richer local-folder record. Keep the normal
+    # DBS entry too: it has the searchable DBS title and keeps regeneration
+    # independent of whether a local folder was imported first.
+    represented = {canonical(url) for r in existing for url in urls_in(r, skip_online=True)}
     added = []
     rendered = []
 

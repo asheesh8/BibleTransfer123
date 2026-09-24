@@ -47,7 +47,21 @@
    "source": null,
    "year": null,
    "read": null,
-   "downloads": []
+   "downloads": [],
+   "online": {
+    "source": "https://dbs.org/video/ibible/yue-cantonese-ibible_salvation",
+    "downloads": [
+     {
+      "label": "Complete video (ZIP)",
+      "url": "https://download.dbs.org/ibible/yue-cantonese-ibible_salvation.zip"
+     }
+    ],
+    "play": {
+     "kind": "file",
+     "sd": "https://dbs.org/cdn/video/ibible/films_low/yue-cantonese-ibible_salvation-sd.mp4",
+     "hd": "https://dbs.org/cdn/video/ibible/films/yue-cantonese-ibible_salvation-hd.mp4"
+    }
+   }
   },
   {
    "id": "yue-film-jesus-the-life-of-jesus",
@@ -381,7 +395,331 @@
    "source": null,
    "year": null,
    "read": null,
-   "downloads": []
+   "downloads": [],
+   "online": {
+    "source": "https://dbs.org/video/jesus/yue_cantonese_jesus",
+    "downloads": [
+     {
+      "label": "Low data chapters (ZIP)",
+      "url": "https://download.dbs.org/Jesus/yue_cantonese/yue_jesus_chapters_low.zip"
+     },
+     {
+      "label": "High quality chapters (ZIP)",
+      "url": "https://download.dbs.org/Jesus/yue_cantonese/yue_jesus_chapters_high.zip"
+     }
+    ],
+    "play": {
+     "kind": "chapters",
+     "base": "",
+     "items": [
+      {
+       "n": 1,
+       "title": "1. The Beginning",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_01_the_beginning_1_jf6101_0_0_low.mp4"
+      },
+      {
+       "n": 2,
+       "title": "2. Birth of Jesus",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_02_birth_of_jesus_1_jf6102_0_0_low.mp4"
+      },
+      {
+       "n": 3,
+       "title": "3. Childhood of Jesus",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_03_childhood_of_jesus_1_jf6103_0_0_low.mp4"
+      },
+      {
+       "n": 4,
+       "title": "4. Baptism of Jesus by John",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_04_baptism_of_jesus_by_john_1_jf6104_0_0_low.mp4"
+      },
+      {
+       "n": 5,
+       "title": "5. The Devil Tempts Jesus",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_05_the_devil_tempts_jesus_1_jf6105_0_0_low.mp4"
+      },
+      {
+       "n": 6,
+       "title": "6. Jesus Proclaims Fulfillment of the Scriptures",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_06_jesus_proclaims_fulfillment_of_the_scriptures_1_jf6106_0_0_low.mp4"
+      },
+      {
+       "n": 7,
+       "title": "7. Parable of the Pharisee and Tax Collector",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_07_parable_of_the_pharisee_and_tax_collector_1_jf6107_0_0_low.mp4"
+      },
+      {
+       "n": 8,
+       "title": "8. Miraculous Catch of Fish",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_08_miraculous_catch_of_fish_1_jf6108_0_0_low.mp4"
+      },
+      {
+       "n": 9,
+       "title": "9. Jairuss Daughter Brought Back to Life",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_09_jairuss_daughter_brought_back_to_life_1_jf6109_0_0_low.mp4"
+      },
+      {
+       "n": 10,
+       "title": "10. Disciples Chosen",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_10_disciples_chosen_1_jf6110_0_0_low.mp4"
+      },
+      {
+       "n": 11,
+       "title": "11. Beatitudes",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_11_beatitudes_1_jf6111_0_0_low.mp4"
+      },
+      {
+       "n": 12,
+       "title": "12. Sermon on the Mount",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_12_sermon_on_the_mount_1_jf6112_0_0_low.mp4"
+      },
+      {
+       "n": 13,
+       "title": "13. Blessed Are Those Who Hear and Obey",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_13_blessed_are_those_who_hear_and_obey_1_jf6113_0_0_low.mp4"
+      },
+      {
+       "n": 14,
+       "title": "14. Sinful Woman Forgiven",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_14_sinful_woman_forgiven_1_jf6114_0_0_low.mp4"
+      },
+      {
+       "n": 15,
+       "title": "15. Women Disciples",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_15_women_disciples_1_jf6115_0_0_low.mp4"
+      },
+      {
+       "n": 16,
+       "title": "16. John the Baptist in Prison",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_16_john_the_baptist_in_prison_1_jf6116_0_0_low.mp4"
+      },
+      {
+       "n": 17,
+       "title": "17. Parable of the Sower and the Seed",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_17_parable_of_the_sower_and_the_seed_1_jf6117_0_0_low.mp4"
+      },
+      {
+       "n": 18,
+       "title": "18. Parable of the Lamp",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_18_parable_of_the_lamp_1_jf6118_0_0_low.mp4"
+      },
+      {
+       "n": 19,
+       "title": "19. Jesus Calms the Storm",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_19_jesus_calms_the_storm_1_jf6119_0_0_low.mp4"
+      },
+      {
+       "n": 20,
+       "title": "20. Healing of the Demoniac",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_20_healing_of_the_demoniac_1_jf6120_0_0_low.mp4"
+      },
+      {
+       "n": 21,
+       "title": "21. Jesus Feeds 5000",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_21_jesus_feeds_5000_1_jf6121_0_0_low.mp4"
+      },
+      {
+       "n": 22,
+       "title": "22. Peter Declares Jesus to Be the Christ",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_22_peter_declares_jesus_to_be_the_christ_1_jf6122_0_0_low.mp4"
+      },
+      {
+       "n": 23,
+       "title": "23. The Transfiguration",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_23_the_transfiguration_1_jf6123_0_0_low.mp4"
+      },
+      {
+       "n": 24,
+       "title": "24. Jesus Heals Boy from Evil Spirit",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_24_jesus_heals_boy_from_evil_spirit_1_jf6124_0_0_low.mp4"
+      },
+      {
+       "n": 25,
+       "title": "25. The Lords Prayer",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_25_the_lords_prayer_1_jf6125_0_0_low.mp4"
+      },
+      {
+       "n": 26,
+       "title": "26. Teaching About Prayer and Faith",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_26_teaching_about_prayer_and_faith_1_jf6126_0_0_low.mp4"
+      },
+      {
+       "n": 27,
+       "title": "27. Woe to Those Who Cause Others to Sin",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_27_woe_to_those_who_cause_others_to_sin_1_jf6127_0_0_low.mp4"
+      },
+      {
+       "n": 28,
+       "title": "28. The Kingdom of God As a Mustard Seed",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_28_the_kingdom_of_god_as_a_mustard_seed_1_jf6128_0_0_low.mp4"
+      },
+      {
+       "n": 29,
+       "title": "29. Jesus Spends Time with Sinners",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_29_jesus_spends_time_with_sinners_1_jf6129_0_0_low.mp4"
+      },
+      {
+       "n": 30,
+       "title": "30. Healing on the Sabbath",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_30_healing_on_the_sabbath_1_jf6130_0_0_low.mp4"
+      },
+      {
+       "n": 31,
+       "title": "31. Parable of the Good Samaritan",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_31_parable_of_the_good_samaritan_1_jf6131_0_0_low.mp4"
+      },
+      {
+       "n": 32,
+       "title": "32. Healing of Bartimaeus",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_32_healing_of_bartimaeus_1_jf6132_0_0_low.mp4"
+      },
+      {
+       "n": 33,
+       "title": "33. Jesus and Zaccheus",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_33_jesus_and_zaccheus_1_jf6133_0_0_low.mp4"
+      },
+      {
+       "n": 34,
+       "title": "34. Jesus Predicts his Death and Resurrection",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_34_jesus_predicts_his_death_and_resurrection_1_jf6134_0_0_low.mp4"
+      },
+      {
+       "n": 35,
+       "title": "35. Jesuss Triumphal Entry",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_35_jesuss_triumphal_entry_1_jf6135_0_0_low.mp4"
+      },
+      {
+       "n": 36,
+       "title": "36. Jesus Weeps Over Jerusalem",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_36_jesus_weeps_over_jerusalem_1_jf6136_0_0_low.mp4"
+      },
+      {
+       "n": 37,
+       "title": "37. Jesus Drives Out Money Changers",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_37_jesus_drives_out_money_changers_1_jf6137_0_0_low.mp4"
+      },
+      {
+       "n": 38,
+       "title": "38. Widows Offering",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_38_widows_offering_1_jf6138_0_0_low.mp4"
+      },
+      {
+       "n": 39,
+       "title": "39. Annas Questions Jesuss Authority",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_39_annas_questions_jesuss_authority_1_jf6139_0_0_low.mp4"
+      },
+      {
+       "n": 40,
+       "title": "40. Parable of the Vineyard and Tenants",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_40_parable_of_the_vineyard_and_tenants_1_jf6140_0_0_low.mp4"
+      },
+      {
+       "n": 41,
+       "title": "41. Paying Taxes to Caesar",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_41_paying_taxes_to_caesar_1_jf6141_0_0_low.mp4"
+      },
+      {
+       "n": 42,
+       "title": "42. The Last Supper",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_42_the_last_supper_1_jf6142_0_0_low.mp4"
+      },
+      {
+       "n": 43,
+       "title": "43. Upper Room Teaching",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_43_upper_room_teaching_1_jf6143_0_0_low.mp4"
+      },
+      {
+       "n": 44,
+       "title": "44. Jesus is Betrayed and Arrested",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_44_jesus_is_betrayed_and_arrested_1_jf6144_0_0_low.mp4"
+      },
+      {
+       "n": 45,
+       "title": "45. Peter Disowns Jesus",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_45_peter_disowns_jesus_1_jf6145_0_0_low.mp4"
+      },
+      {
+       "n": 46,
+       "title": "46. Jesus is Mocked and Questioned",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_46_jesus_is_mocked_and_questioned_1_jf6146_0_0_low.mp4"
+      },
+      {
+       "n": 47,
+       "title": "47. Jesus is Brought to Pilate",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_47_jesus_is_brought_to_pilate_1_jf6147_0_0_low.mp4"
+      },
+      {
+       "n": 48,
+       "title": "48. Jesus is Brought to Herod",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_48_jesus_is_brought_to_herod_1_jf6148_0_0_low.mp4"
+      },
+      {
+       "n": 49,
+       "title": "49. Jesus is Sentenced",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_49_jesus_is_sentenced_1_jf6149_0_0_low.mp4"
+      },
+      {
+       "n": 50,
+       "title": "50. Jesus Carries his Cross",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_50_jesus_carries_his_cross_1_jf6150_0_0_low.mp4"
+      },
+      {
+       "n": 51,
+       "title": "51. Jesus is Crucified",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_51_jesus_is_crucified_1_jf6151_0_0_low.mp4"
+      },
+      {
+       "n": 52,
+       "title": "52. Soldiers Gamble for Jesuss Clothes",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_52_soldiers_gamble_for_jesuss_clothes_1_jf6152_0_0_low.mp4"
+      },
+      {
+       "n": 53,
+       "title": "53. Sign on the Cross",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_53_sign_on_the_cross_1_jf6153_0_0_low.mp4"
+      },
+      {
+       "n": 54,
+       "title": "54. Crucified Convicts",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_54_crucified_convicts_1_jf6154_0_0_low.mp4"
+      },
+      {
+       "n": 55,
+       "title": "55. Death of Jesus",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_55_death_of_jesus_1_jf6155_0_0_low.mp4"
+      },
+      {
+       "n": 56,
+       "title": "56. Burial of Jesus",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_56_burial_of_jesus_1_jf6156_0_0_low.mp4"
+      },
+      {
+       "n": 57,
+       "title": "57. Angels at the Tomb",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_57_angels_at_the_tomb_1_jf6157_0_0_low.mp4"
+      },
+      {
+       "n": 58,
+       "title": "58. The Tomb is Empty",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_58_the_tomb_is_empty_1_jf6158_0_0_low.mp4"
+      },
+      {
+       "n": 59,
+       "title": "59. Resurrected Jesus Appears",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_59_resurrected_jesus_appears_1_jf6159_0_0_low.mp4"
+      },
+      {
+       "n": 60,
+       "title": "60. Great Commission and Ascension",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_60_great_commission_and_ascension_1_jf6160_0_0_low.mp4"
+      },
+      {
+       "n": 61,
+       "title": "61. Invitation to Know Jesus Personally",
+       "file": "https://video.dbs.org/Jesus/chapters/yue_cantonese/yue_jesus_chapter_61_invitation_to_know_jesus_personally_1_jf6161_0_0_low.mp4"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "yue-film-lumo-john-word-for-word",
@@ -515,7 +853,122 @@
    "source": null,
    "year": null,
    "read": null,
-   "downloads": []
+   "downloads": [],
+   "online": {
+    "source": "https://dbs.org/video/lumo-john/yue_cantonese_john",
+    "downloads": [],
+    "play": {
+     "kind": "chapters",
+     "base": "",
+     "items": [
+      {
+       "n": 1,
+       "title": "John 1",
+       "file": "https://video.dbs.org/Lumo-John/films_low/yue_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_low/yue_LUMO_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_01_360.mp4"
+      },
+      {
+       "n": 2,
+       "title": "John 2",
+       "file": "https://video.dbs.org/Lumo-John/films_low/yue_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_low/yue_LUMO_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_02_360.mp4"
+      },
+      {
+       "n": 3,
+       "title": "John 3",
+       "file": "https://video.dbs.org/Lumo-John/films_low/yue_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_low/yue_LUMO_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_03_360.mp4"
+      },
+      {
+       "n": 4,
+       "title": "John 4",
+       "file": "https://video.dbs.org/Lumo-John/films_low/yue_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_low/yue_LUMO_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_04_360.mp4"
+      },
+      {
+       "n": 5,
+       "title": "John 5",
+       "file": "https://video.dbs.org/Lumo-John/films_low/yue_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_low/yue_LUMO_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_05_360.mp4"
+      },
+      {
+       "n": 6,
+       "title": "John 6",
+       "file": "https://video.dbs.org/Lumo-John/films_low/yue_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_low/yue_LUMO_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_06_360.mp4"
+      },
+      {
+       "n": 7,
+       "title": "John 7",
+       "file": "https://video.dbs.org/Lumo-John/films_low/yue_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_low/yue_LUMO_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_07_360.mp4"
+      },
+      {
+       "n": 8,
+       "title": "John 8",
+       "file": "https://video.dbs.org/Lumo-John/films_low/yue_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_low/yue_LUMO_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_08_360.mp4"
+      },
+      {
+       "n": 9,
+       "title": "John 9",
+       "file": "https://video.dbs.org/Lumo-John/films_low/yue_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_low/yue_LUMO_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_09_360.mp4"
+      },
+      {
+       "n": 10,
+       "title": "John 10",
+       "file": "https://video.dbs.org/Lumo-John/films_low/yue_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_low/yue_LUMO_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_10_360.mp4"
+      },
+      {
+       "n": 11,
+       "title": "John 11",
+       "file": "https://video.dbs.org/Lumo-John/films_low/yue_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_low/yue_LUMO_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_11_360.mp4"
+      },
+      {
+       "n": 12,
+       "title": "John 12",
+       "file": "https://video.dbs.org/Lumo-John/films_low/yue_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_low/yue_LUMO_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_12_360.mp4"
+      },
+      {
+       "n": 13,
+       "title": "John 13",
+       "file": "https://video.dbs.org/Lumo-John/films_low/yue_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_low/yue_LUMO_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_13_360.mp4"
+      },
+      {
+       "n": 14,
+       "title": "John 14",
+       "file": "https://video.dbs.org/Lumo-John/films_low/yue_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_low/yue_LUMO_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_14_360.mp4"
+      },
+      {
+       "n": 15,
+       "title": "John 15",
+       "file": "https://video.dbs.org/Lumo-John/films_low/yue_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_low/yue_LUMO_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_15_360.mp4"
+      },
+      {
+       "n": 16,
+       "title": "John 16",
+       "file": "https://video.dbs.org/Lumo-John/films_low/yue_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_low/yue_LUMO_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_16_360.mp4"
+      },
+      {
+       "n": 17,
+       "title": "John 17",
+       "file": "https://video.dbs.org/Lumo-John/films_low/yue_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_low/yue_LUMO_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_17_360.mp4"
+      },
+      {
+       "n": 18,
+       "title": "John 18",
+       "file": "https://video.dbs.org/Lumo-John/films_low/yue_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_low/yue_LUMO_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_18_360.mp4"
+      },
+      {
+       "n": 19,
+       "title": "John 19",
+       "file": "https://video.dbs.org/Lumo-John/films_low/yue_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_low/yue_LUMO_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_19_360.mp4"
+      },
+      {
+       "n": 20,
+       "title": "John 20",
+       "file": "https://video.dbs.org/Lumo-John/films_low/yue_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_low/yue_LUMO_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_20_360.mp4"
+      },
+      {
+       "n": 21,
+       "title": "John 21",
+       "file": "https://video.dbs.org/Lumo-John/films_low/yue_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_low/yue_LUMO_Cantonese_John_Traditional-Chinese-Union-Version-Shen-Edition-2010_21_360.mp4"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "yue-film-lumo-luke-word-for-word",
@@ -664,7 +1117,137 @@
    "source": null,
    "year": null,
    "read": null,
-   "downloads": []
+   "downloads": [],
+   "online": {
+    "source": "https://dbs.org/video/lumo-luke/yue_cantonese_luke",
+    "downloads": [],
+    "play": {
+     "kind": "chapters",
+     "base": "",
+     "items": [
+      {
+       "n": 1,
+       "title": "Luke 1",
+       "file": "https://video.dbs.org/Lumo-Luke/films_low/yue_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_01_360.mp4"
+      },
+      {
+       "n": 2,
+       "title": "Luke 2",
+       "file": "https://video.dbs.org/Lumo-Luke/films_low/yue_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_02_360.mp4"
+      },
+      {
+       "n": 3,
+       "title": "Luke 3",
+       "file": "https://video.dbs.org/Lumo-Luke/films_low/yue_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_03_360.mp4"
+      },
+      {
+       "n": 4,
+       "title": "Luke 4",
+       "file": "https://video.dbs.org/Lumo-Luke/films_low/yue_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_04_360.mp4"
+      },
+      {
+       "n": 5,
+       "title": "Luke 5",
+       "file": "https://video.dbs.org/Lumo-Luke/films_low/yue_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_05_360.mp4"
+      },
+      {
+       "n": 6,
+       "title": "Luke 6",
+       "file": "https://video.dbs.org/Lumo-Luke/films_low/yue_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_06_360.mp4"
+      },
+      {
+       "n": 7,
+       "title": "Luke 7",
+       "file": "https://video.dbs.org/Lumo-Luke/films_low/yue_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_07_360.mp4"
+      },
+      {
+       "n": 8,
+       "title": "Luke 8",
+       "file": "https://video.dbs.org/Lumo-Luke/films_low/yue_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_08_360.mp4"
+      },
+      {
+       "n": 9,
+       "title": "Luke 9",
+       "file": "https://video.dbs.org/Lumo-Luke/films_low/yue_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_09_360.mp4"
+      },
+      {
+       "n": 10,
+       "title": "Luke 10",
+       "file": "https://video.dbs.org/Lumo-Luke/films_low/yue_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_10_360.mp4"
+      },
+      {
+       "n": 11,
+       "title": "Luke 11",
+       "file": "https://video.dbs.org/Lumo-Luke/films_low/yue_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_11_360.mp4"
+      },
+      {
+       "n": 12,
+       "title": "Luke 12",
+       "file": "https://video.dbs.org/Lumo-Luke/films_low/yue_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_12_360.mp4"
+      },
+      {
+       "n": 13,
+       "title": "Luke 13",
+       "file": "https://video.dbs.org/Lumo-Luke/films_low/yue_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_13_360.mp4"
+      },
+      {
+       "n": 14,
+       "title": "Luke 14",
+       "file": "https://video.dbs.org/Lumo-Luke/films_low/yue_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_14_360.mp4"
+      },
+      {
+       "n": 15,
+       "title": "Luke 15",
+       "file": "https://video.dbs.org/Lumo-Luke/films_low/yue_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_15_360.mp4"
+      },
+      {
+       "n": 16,
+       "title": "Luke 16",
+       "file": "https://video.dbs.org/Lumo-Luke/films_low/yue_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_16_360.mp4"
+      },
+      {
+       "n": 17,
+       "title": "Luke 17",
+       "file": "https://video.dbs.org/Lumo-Luke/films_low/yue_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_17_360.mp4"
+      },
+      {
+       "n": 18,
+       "title": "Luke 18",
+       "file": "https://video.dbs.org/Lumo-Luke/films_low/yue_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_18_360.mp4"
+      },
+      {
+       "n": 19,
+       "title": "Luke 19",
+       "file": "https://video.dbs.org/Lumo-Luke/films_low/yue_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_19_360.mp4"
+      },
+      {
+       "n": 20,
+       "title": "Luke 20",
+       "file": "https://video.dbs.org/Lumo-Luke/films_low/yue_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_20_360.mp4"
+      },
+      {
+       "n": 21,
+       "title": "Luke 21",
+       "file": "https://video.dbs.org/Lumo-Luke/films_low/yue_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_21_360.mp4"
+      },
+      {
+       "n": 22,
+       "title": "Luke 22",
+       "file": "https://video.dbs.org/Lumo-Luke/films_low/yue_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_22_360.mp4"
+      },
+      {
+       "n": 23,
+       "title": "Luke 23",
+       "file": "https://video.dbs.org/Lumo-Luke/films_low/yue_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_23_360.mp4"
+      },
+      {
+       "n": 24,
+       "title": "Luke 24",
+       "file": "https://video.dbs.org/Lumo-Luke/films_low/yue_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Luke_Revised-Chinese-Union-Version-Shen-Edition_24_360.mp4"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "yue-film-lumo-mark-word-for-word",
@@ -773,7 +1356,97 @@
    "source": null,
    "year": null,
    "read": null,
-   "downloads": []
+   "downloads": [],
+   "online": {
+    "source": "https://dbs.org/video/lumo-mark/yue_cantonese_mark",
+    "downloads": [],
+    "play": {
+     "kind": "chapters",
+     "base": "",
+     "items": [
+      {
+       "n": 1,
+       "title": "Mark 1",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/yue_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_01_360.mp4"
+      },
+      {
+       "n": 2,
+       "title": "Mark 2",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/yue_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_02_360.mp4"
+      },
+      {
+       "n": 3,
+       "title": "Mark 3",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/yue_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_03_360.mp4"
+      },
+      {
+       "n": 4,
+       "title": "Mark 4",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/yue_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_04_360.mp4"
+      },
+      {
+       "n": 5,
+       "title": "Mark 5",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/yue_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_05_360.mp4"
+      },
+      {
+       "n": 6,
+       "title": "Mark 6",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/yue_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_06_360.mp4"
+      },
+      {
+       "n": 7,
+       "title": "Mark 7",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/yue_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_07_360.mp4"
+      },
+      {
+       "n": 8,
+       "title": "Mark 8",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/yue_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_08_360.mp4"
+      },
+      {
+       "n": 9,
+       "title": "Mark 9",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/yue_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_09_360.mp4"
+      },
+      {
+       "n": 10,
+       "title": "Mark 10",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/yue_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_10_360.mp4"
+      },
+      {
+       "n": 11,
+       "title": "Mark 11",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/yue_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_11_360.mp4"
+      },
+      {
+       "n": 12,
+       "title": "Mark 12",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/yue_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_12_360.mp4"
+      },
+      {
+       "n": 13,
+       "title": "Mark 13",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/yue_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_13_360.mp4"
+      },
+      {
+       "n": 14,
+       "title": "Mark 14",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/yue_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_14_360.mp4"
+      },
+      {
+       "n": 15,
+       "title": "Mark 15",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/yue_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_15_360.mp4"
+      },
+      {
+       "n": 16,
+       "title": "Mark 16",
+       "file": "https://video.dbs.org/Lumo-Mark/films_low/yue_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Mark_Revised-Chinese-Union-Version-Shen-Edition_16_360.mp4"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "yue-film-lumo-matthew-word-for-word",
@@ -942,7 +1615,157 @@
    "source": null,
    "year": null,
    "read": null,
-   "downloads": []
+   "downloads": [],
+   "online": {
+    "source": "https://dbs.org/video/lumo-matthew/yue_cantonese_matthew",
+    "downloads": [],
+    "play": {
+     "kind": "chapters",
+     "base": "",
+     "items": [
+      {
+       "n": 1,
+       "title": "Matthew 1",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_01_360.mp4"
+      },
+      {
+       "n": 2,
+       "title": "Matthew 2",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_02_360.mp4"
+      },
+      {
+       "n": 3,
+       "title": "Matthew 3",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_03_360.mp4"
+      },
+      {
+       "n": 4,
+       "title": "Matthew 4",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_04_360.mp4"
+      },
+      {
+       "n": 5,
+       "title": "Matthew 5",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_05_360.mp4"
+      },
+      {
+       "n": 6,
+       "title": "Matthew 6",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_06_360.mp4"
+      },
+      {
+       "n": 7,
+       "title": "Matthew 7",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_07_360.mp4"
+      },
+      {
+       "n": 8,
+       "title": "Matthew 8",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_08_360.mp4"
+      },
+      {
+       "n": 9,
+       "title": "Matthew 9",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_09_360.mp4"
+      },
+      {
+       "n": 10,
+       "title": "Matthew 10",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_10_360.mp4"
+      },
+      {
+       "n": 11,
+       "title": "Matthew 11",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_11_360.mp4"
+      },
+      {
+       "n": 12,
+       "title": "Matthew 12",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_12_360.mp4"
+      },
+      {
+       "n": 13,
+       "title": "Matthew 13",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_13_360.mp4"
+      },
+      {
+       "n": 14,
+       "title": "Matthew 14",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_14_360.mp4"
+      },
+      {
+       "n": 15,
+       "title": "Matthew 15",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_15_360.mp4"
+      },
+      {
+       "n": 16,
+       "title": "Matthew 16",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_16_360.mp4"
+      },
+      {
+       "n": 17,
+       "title": "Matthew 17",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_17_360.mp4"
+      },
+      {
+       "n": 18,
+       "title": "Matthew 18",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_18_360.mp4"
+      },
+      {
+       "n": 19,
+       "title": "Matthew 19",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_19_360.mp4"
+      },
+      {
+       "n": 20,
+       "title": "Matthew 20",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_20_360.mp4"
+      },
+      {
+       "n": 21,
+       "title": "Matthew 21",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_21_360.mp4"
+      },
+      {
+       "n": 22,
+       "title": "Matthew 22",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_22_360.mp4"
+      },
+      {
+       "n": 23,
+       "title": "Matthew 23",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_23_360.mp4"
+      },
+      {
+       "n": 24,
+       "title": "Matthew 24",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_24_360.mp4"
+      },
+      {
+       "n": 25,
+       "title": "Matthew 25",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_25_360.mp4"
+      },
+      {
+       "n": 26,
+       "title": "Matthew 26",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_26_360.mp4"
+      },
+      {
+       "n": 27,
+       "title": "Matthew 27",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_27_360.mp4"
+      },
+      {
+       "n": 28,
+       "title": "Matthew 28",
+       "file": "https://video.dbs.org/Lumo-Matthew/films_low/yue_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_low/yue_LUMO_Cantonese_Matthew_Revised-Chinese-Union-Version-Shen-Edition_28_360.mp4"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "yue-film-lumo-the-covenant",
@@ -1031,7 +1854,77 @@
    "source": null,
    "year": null,
    "read": null,
-   "downloads": []
+   "downloads": [],
+   "online": {
+    "source": "https://dbs.org/video/lumo-covenant/yue_cantonese_covenant",
+    "downloads": [],
+    "play": {
+     "kind": "chapters",
+     "base": "",
+     "items": [
+      {
+       "n": 1,
+       "title": "Part 1",
+       "file": "https://video.dbs.org/Lumo-Covenant/films_low/yue_Cantonese_Covenant_Traditional-Chinese-Union-Version-Shen-Edition-2010/yue_Covenant_Cantonese_Traditional-Chinese-Union-Version-Shen-Edition-2010_01_360.mp4"
+      },
+      {
+       "n": 2,
+       "title": "Part 2",
+       "file": "https://video.dbs.org/Lumo-Covenant/films_low/yue_Cantonese_Covenant_Traditional-Chinese-Union-Version-Shen-Edition-2010/yue_Covenant_Cantonese_Traditional-Chinese-Union-Version-Shen-Edition-2010_02_360.mp4"
+      },
+      {
+       "n": 3,
+       "title": "Part 3",
+       "file": "https://video.dbs.org/Lumo-Covenant/films_low/yue_Cantonese_Covenant_Traditional-Chinese-Union-Version-Shen-Edition-2010/yue_Covenant_Cantonese_Traditional-Chinese-Union-Version-Shen-Edition-2010_03_360.mp4"
+      },
+      {
+       "n": 4,
+       "title": "Part 4",
+       "file": "https://video.dbs.org/Lumo-Covenant/films_low/yue_Cantonese_Covenant_Traditional-Chinese-Union-Version-Shen-Edition-2010/yue_Covenant_Cantonese_Traditional-Chinese-Union-Version-Shen-Edition-2010_04_360.mp4"
+      },
+      {
+       "n": 5,
+       "title": "Part 5",
+       "file": "https://video.dbs.org/Lumo-Covenant/films_low/yue_Cantonese_Covenant_Traditional-Chinese-Union-Version-Shen-Edition-2010/yue_Covenant_Cantonese_Traditional-Chinese-Union-Version-Shen-Edition-2010_05_360.mp4"
+      },
+      {
+       "n": 6,
+       "title": "Part 6",
+       "file": "https://video.dbs.org/Lumo-Covenant/films_low/yue_Cantonese_Covenant_Traditional-Chinese-Union-Version-Shen-Edition-2010/yue_Covenant_Cantonese_Traditional-Chinese-Union-Version-Shen-Edition-2010_06_360.mp4"
+      },
+      {
+       "n": 7,
+       "title": "Part 7",
+       "file": "https://video.dbs.org/Lumo-Covenant/films_low/yue_Cantonese_Covenant_Traditional-Chinese-Union-Version-Shen-Edition-2010/yue_Covenant_Cantonese_Traditional-Chinese-Union-Version-Shen-Edition-2010_07_360.mp4"
+      },
+      {
+       "n": 8,
+       "title": "Part 8",
+       "file": "https://video.dbs.org/Lumo-Covenant/films_low/yue_Cantonese_Covenant_Traditional-Chinese-Union-Version-Shen-Edition-2010/yue_Covenant_Cantonese_Traditional-Chinese-Union-Version-Shen-Edition-2010_08_360.mp4"
+      },
+      {
+       "n": 9,
+       "title": "Part 9",
+       "file": "https://video.dbs.org/Lumo-Covenant/films_low/yue_Cantonese_Covenant_Traditional-Chinese-Union-Version-Shen-Edition-2010/yue_Covenant_Cantonese_Traditional-Chinese-Union-Version-Shen-Edition-2010_09_360.mp4"
+      },
+      {
+       "n": 10,
+       "title": "Part 10",
+       "file": "https://video.dbs.org/Lumo-Covenant/films_low/yue_Cantonese_Covenant_Traditional-Chinese-Union-Version-Shen-Edition-2010/yue_Covenant_Cantonese_Traditional-Chinese-Union-Version-Shen-Edition-2010_10_360.mp4"
+      },
+      {
+       "n": 11,
+       "title": "Part 11",
+       "file": "https://video.dbs.org/Lumo-Covenant/films_low/yue_Cantonese_Covenant_Traditional-Chinese-Union-Version-Shen-Edition-2010/yue_Covenant_Cantonese_Traditional-Chinese-Union-Version-Shen-Edition-2010_11_360.mp4"
+      },
+      {
+       "n": 12,
+       "title": "Part 12",
+       "file": "https://video.dbs.org/Lumo-Covenant/films_low/yue_Cantonese_Covenant_Traditional-Chinese-Union-Version-Shen-Edition-2010/yue_Covenant_Cantonese_Traditional-Chinese-Union-Version-Shen-Edition-2010_12_360.mp4"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "yue-film-the-book-of-acts",
@@ -1200,7 +2093,162 @@
    "source": null,
    "year": null,
    "read": null,
-   "downloads": []
+   "downloads": [],
+   "online": {
+    "source": "https://dbs.org/video/acts_vb/yue-acts-vb-yue-chinese",
+    "downloads": [
+     {
+      "label": "Complete video (ZIP)",
+      "url": "https://download.dbs.org/Acts_VB/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapters.zip"
+     }
+    ],
+    "play": {
+     "kind": "chapters",
+     "base": "",
+     "items": [
+      {
+       "n": 1,
+       "title": "Part 1",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-01.mp4"
+      },
+      {
+       "n": 2,
+       "title": "Part 2",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-02.mp4"
+      },
+      {
+       "n": 3,
+       "title": "Part 3",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-03.mp4"
+      },
+      {
+       "n": 4,
+       "title": "Part 4",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-04.mp4"
+      },
+      {
+       "n": 5,
+       "title": "Part 5",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-05.mp4"
+      },
+      {
+       "n": 6,
+       "title": "Part 6",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-06.mp4"
+      },
+      {
+       "n": 7,
+       "title": "Part 7",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-07.mp4"
+      },
+      {
+       "n": 8,
+       "title": "Part 8",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-08.mp4"
+      },
+      {
+       "n": 9,
+       "title": "Part 9",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-09.mp4"
+      },
+      {
+       "n": 10,
+       "title": "Part 10",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-10.mp4"
+      },
+      {
+       "n": 11,
+       "title": "Part 11",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-11.mp4"
+      },
+      {
+       "n": 12,
+       "title": "Part 12",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-12.mp4"
+      },
+      {
+       "n": 13,
+       "title": "Part 13",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-13.mp4"
+      },
+      {
+       "n": 14,
+       "title": "Part 14",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-14.mp4"
+      },
+      {
+       "n": 15,
+       "title": "Part 15",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-15.mp4"
+      },
+      {
+       "n": 16,
+       "title": "Part 16",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-16.mp4"
+      },
+      {
+       "n": 17,
+       "title": "Part 17",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-17.mp4"
+      },
+      {
+       "n": 18,
+       "title": "Part 18",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-18.mp4"
+      },
+      {
+       "n": 19,
+       "title": "Part 19",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-19.mp4"
+      },
+      {
+       "n": 20,
+       "title": "Part 20",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-20.mp4"
+      },
+      {
+       "n": 21,
+       "title": "Part 21",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-21.mp4"
+      },
+      {
+       "n": 22,
+       "title": "Part 22",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-22.mp4"
+      },
+      {
+       "n": 23,
+       "title": "Part 23",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-23.mp4"
+      },
+      {
+       "n": 24,
+       "title": "Part 24",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-24.mp4"
+      },
+      {
+       "n": 25,
+       "title": "Part 25",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-25.mp4"
+      },
+      {
+       "n": 26,
+       "title": "Part 26",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-26.mp4"
+      },
+      {
+       "n": 27,
+       "title": "Part 27",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-27.mp4"
+      },
+      {
+       "n": 28,
+       "title": "Part 28",
+       "file": "https://video.dbs.org/Acts_VB/chapters/yue-acts-vb-yue-chinese/yue-acts-vb-yue-chinese-chapter-28.mp4"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "yue-film-the-gospel-of-matthew",
@@ -1369,7 +2417,162 @@
    "source": null,
    "year": null,
    "read": null,
-   "downloads": []
+   "downloads": [],
+   "online": {
+    "source": "https://dbs.org/video/matthew/yue-matthew-vb-yue-chinese",
+    "downloads": [
+     {
+      "label": "Complete video (ZIP)",
+      "url": "https://download.dbs.org/Matthew/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapters.zip"
+     }
+    ],
+    "play": {
+     "kind": "chapters",
+     "base": "",
+     "items": [
+      {
+       "n": 1,
+       "title": "Part 1",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-01.mp4"
+      },
+      {
+       "n": 2,
+       "title": "Part 2",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-02.mp4"
+      },
+      {
+       "n": 3,
+       "title": "Part 3",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-03.mp4"
+      },
+      {
+       "n": 4,
+       "title": "Part 4",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-04.mp4"
+      },
+      {
+       "n": 5,
+       "title": "Part 5",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-05.mp4"
+      },
+      {
+       "n": 6,
+       "title": "Part 6",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-06.mp4"
+      },
+      {
+       "n": 7,
+       "title": "Part 7",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-07.mp4"
+      },
+      {
+       "n": 8,
+       "title": "Part 8",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-08.mp4"
+      },
+      {
+       "n": 9,
+       "title": "Part 9",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-09.mp4"
+      },
+      {
+       "n": 10,
+       "title": "Part 10",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-10.mp4"
+      },
+      {
+       "n": 11,
+       "title": "Part 11",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-11.mp4"
+      },
+      {
+       "n": 12,
+       "title": "Part 12",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-12.mp4"
+      },
+      {
+       "n": 13,
+       "title": "Part 13",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-13.mp4"
+      },
+      {
+       "n": 14,
+       "title": "Part 14",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-14.mp4"
+      },
+      {
+       "n": 15,
+       "title": "Part 15",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-15.mp4"
+      },
+      {
+       "n": 16,
+       "title": "Part 16",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-16.mp4"
+      },
+      {
+       "n": 17,
+       "title": "Part 17",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-17.mp4"
+      },
+      {
+       "n": 18,
+       "title": "Part 18",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-18.mp4"
+      },
+      {
+       "n": 19,
+       "title": "Part 19",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-19.mp4"
+      },
+      {
+       "n": 20,
+       "title": "Part 20",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-20.mp4"
+      },
+      {
+       "n": 21,
+       "title": "Part 21",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-21.mp4"
+      },
+      {
+       "n": 22,
+       "title": "Part 22",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-22.mp4"
+      },
+      {
+       "n": 23,
+       "title": "Part 23",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-23.mp4"
+      },
+      {
+       "n": 24,
+       "title": "Part 24",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-24.mp4"
+      },
+      {
+       "n": 25,
+       "title": "Part 25",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-25.mp4"
+      },
+      {
+       "n": 26,
+       "title": "Part 26",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-26.mp4"
+      },
+      {
+       "n": 27,
+       "title": "Part 27",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-27.mp4"
+      },
+      {
+       "n": 28,
+       "title": "Part 28",
+       "file": "https://video.dbs.org/Matthew/chapters/yue-matthew-vb-yue-chinese/yue-matthew-vb-yue-chinese-chapter-28.mp4"
+      }
+     ]
+    }
+   }
   },
   {
    "id": "yue-film-the-prophets-story",
@@ -1403,7 +2606,16 @@
    "source": null,
    "year": null,
    "read": null,
-   "downloads": []
+   "downloads": [],
+   "online": {
+    "source": "https://dbs.org/video/ps/yue_ps_cantonese",
+    "downloads": [],
+    "play": {
+     "kind": "file",
+     "sd": "https://dbs.org/cdn/video/PS/films/yue_Prophets_Story_%E8%A1%80%E7%8D%BB_Cantonese_%E5%9B%BD%E8%AF%AD%E7%94%B5%E5%BD%B1.mp4",
+     "hd": "https://dbs.org/cdn/video/PS/films/yue_Prophets_Story_%E8%A1%80%E7%8D%BB_Cantonese_%E5%9B%BD%E8%AF%AD%E7%94%B5%E5%BD%B1.mp4"
+    }
+   }
   },
   {
    "id": "yue-audio-the-story-of-jesus",
@@ -1467,7 +2679,15 @@
    "links": null,
    "source": null,
    "year": null,
-   "read": null
+   "read": null,
+   "online": {
+    "source": "https://dbs.org/audio/collections/yue_StoryJesus_yue_chinese",
+    "downloads": [],
+    "play": {
+     "kind": "audio-collection",
+     "sample": "https://media.dbs.org/audio/soj/yue_StoryJesus_yue_chinese_full.mp3"
+    }
+   }
   },
   {
    "id": "yue-text-studium-biblicum-version-1999",
@@ -1505,7 +2725,20 @@
    "links": null,
    "source": null,
    "stats": null,
-   "play": null
+   "play": null,
+   "online": {
+    "source": "https://dbs.org/bibles/YUHSBV",
+    "read": {
+     "kind": "pdf",
+     "url": "https://bibles.dbs.org/YUHSBV/pdf/YUHSBV.pdf"
+    },
+    "downloads": [
+     {
+      "label": "PDF",
+      "url": "https://bibles.dbs.org/YUHSBV/pdf/YUHSBV.pdf"
+     }
+    ]
+   }
   },
   {
    "id": "yue-hist-1997-genesis-portion-new-cantonese-bible",
@@ -1538,7 +2771,20 @@
    "links": null,
    "source": null,
    "stats": null,
-   "play": null
+   "play": null,
+   "online": {
+    "source": "https://dbs.org/bibles/historic/Yue-1997-Genesis-Portion-New-Cantonese-Bible",
+    "read": {
+     "kind": "pdf",
+     "url": "https://scripture.dbs.org/pdfs/Yue-1997-Genesis-Portion-New-Cantonese-Bible.pdf"
+    },
+    "downloads": [
+     {
+      "label": "PDF",
+      "url": "https://scripture.dbs.org/pdfs/Yue-1997-Genesis-Portion-New-Cantonese-Bible.pdf"
+     }
+    ]
+   }
   }
  ]
 }

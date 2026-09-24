@@ -194,6 +194,13 @@ DBS file and audio patterns are in
 download buttons are added only for URLs that passed the probe. Every other
 entry still opens its DBS or publisher page.
 
+Mandarin and Cantonese resources imported from Larry's local folders also have
+verified DBS web fallbacks. Their original files are used on a packed card;
+the same rows stream or open from DBS when the visitor has Wi-Fi. Run
+`packer/enrich_local_online.py` to refresh those pairings, or use
+`npm run dbs:import`, which runs it automatically. The rendered media capture
+and its 539-file probe are stored beside the main audit in `catalog/source/`.
+
 ### Share one language with someone
 
 Larry's sharing screen is `/share-libraries`. It lists every collection with

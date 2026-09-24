@@ -78,15 +78,18 @@ def card_catalog(catalog, chosen, profile, all_index, sizes=None):
                 return "local:" + entry["local"]
             return entry.get(key) if isinstance(entry, dict) else entry
 
-        # Imported languages have no public URL to fall back on: if the files
-        # were not packed, there is nothing the web edition can play.
-        card_only = bool(r.get("source_root"))
+        # Folder imports can carry a verified `online` twin from DBS. Use the
+        # local files when they were packed and the twin when this is the web
+        # preview or a connected card that did not have room for the resource.
+        online = r.get("online") or {}
+        use_online = bool(online) and not local_view
+        card_only = bool(r.get("source_root")) and not online
 
         cover = next((f"{MEDIA_HREF}/{a.rel}" for a in mine.values()
                       if a.role == "cover"), None)
 
         # ---- play: from the card if it was packed, otherwise stream it.
-        src, play = (r.get("play") or {}), None
+        src, play = ((online.get("play") if use_online else r.get("play")) or {}), None
         kind = src.get("kind")
         if kind == "chapters":
             if local_view:
@@ -123,7 +126,7 @@ def card_catalog(catalog, chosen, profile, all_index, sizes=None):
                     "version": src["version"], "testaments": src["testaments"]}
 
         read = None
-        rd = r.get("read") or {}
+        rd = ((online.get("read") if use_online else r.get("read")) or {})
         if rd.get("url") or rd.get("local"):
             f = local(ref(rd)) or (None if card_only else secure(rd.get("url")))
             if f:
@@ -146,7 +149,7 @@ def card_catalog(catalog, chosen, profile, all_index, sizes=None):
             if kind == "audio-collection" and src.get("sample"):
                 files.append({"label": "Audio (MP3)", "file": secure(src["sample"]),
                               "bytes": sizes.get(src["sample"], 0), "remote": True})
-            for d in (r.get("downloads") or []):
+            for d in ((online.get("downloads") if use_online else r.get("downloads")) or []):
                 if is_file_url(d["url"]):
                     files.append({"label": d["label"], "file": secure(d["url"]),
                                   "bytes": sizes.get(d["url"], 0), "remote": True})
@@ -167,8 +170,9 @@ def card_catalog(catalog, chosen, profile, all_index, sizes=None):
         files = uniq
 
         # Only entries that name a URL can be a link; a file on disk cannot.
+        active_downloads = ((online.get("downloads") if use_online else r.get("downloads")) or [])
         links = [{"label": d["label"], "url": secure(d["url"])}
-                 for d in (r.get("downloads") or [])
+                 for d in active_downloads
                  if d.get("url") and not is_file_url(d["url"])]
 
         out.append({
@@ -189,7 +193,7 @@ def card_catalog(catalog, chosen, profile, all_index, sizes=None):
             # rather than implying a connection would help.
             "cardOnly": card_only and not offline,
             "play": play, "read": read, "files": files, "links": links,
-            "source": r.get("source"),
+            "source": r.get("source") or online.get("source"),
         })
 
     return {
