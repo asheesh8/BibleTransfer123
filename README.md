@@ -179,6 +179,21 @@ Wycliffe manuscripts — then **probes every URL** and keeps only what the serve
 actually serves. `catalog.load()` merges any sibling catalogue into
 GawahiiTV's, so that copy stays untouched and refreshable.
 
+### Complete DBS catalogue audit
+
+The DBS language pages were audited from their rendered browser output on
+2026-09-24. The audit covers 12 DBS language records mapped into the nine
+libraries above: **1,415 clickable Bible, film, audio, historic scan, and
+publisher entries**, all represented in the app. It adds 891 searchable records
+after the richer curated entries are deduplicated.
+
+Run `npm run dbs:import` to rebuild the supplement and the web catalogue. The
+captured inventory is in `catalog/source/dbs-rendered-2026-09-24.json`; verified
+DBS file and audio patterns are in
+`catalog/source/dbs-direct-files-2026-09-24.json`. Direct reading, playback, and
+download buttons are added only for URLs that passed the probe. Every other
+entry still opens its DBS or publisher page.
+
 ### Share one language with someone
 
 Larry's sharing screen is `/share-libraries`. It lists every collection with
