@@ -259,7 +259,7 @@
         (S.target.kind === 'downloads' ? '<p class="center muted" style="font-size:.9rem">' +
           h('save.android') + '<br>' + h('save.ios') + '</p>' : '') +
         '<div class="stack" style="margin-top:1rem">' + openBtn +
-        '<a class="btn sky block" href="nearby.html?id=' + encodeURIComponent(r.id) + '">' +
+        '<a class="btn sky block" href="' + ET.esc(ET.scopedUrl('nearby.html', { id: r.id })) + '">' +
         ET.icon('wifi') + h('save.next') + '</a>' +
         '<button class="btn ghost block" id="sv-more">' + h('save.another') + '</button></div>');
 

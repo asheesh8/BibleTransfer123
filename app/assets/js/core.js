@@ -100,6 +100,48 @@ window.ET = (function () {
     return m ? decodeURIComponent(m[1].replace(/\+/g, ' ')) : '';
   }
 
+  /* A shared language library is a deliberately closed view of one language.
+     Its landing page supplies ET_SHARED_LIBRARY; item/help/nearby pages carry
+     the same scope in their query string so their navigation cannot drift back
+     into the complete catalogue. This is a presentation boundary for a clean
+     recipient experience, not an authentication system. */
+  function libraryScope() {
+    var direct = window.ET_SHARED_LIBRARY;
+    if (direct && direct.lang) return direct;
+    var lang = qs('only');
+    if (!/^[a-z]{3}$/.test(lang)) return null;
+    return {
+      lang: lang,
+      ui: qs('ui') || 'en',
+      slug: qs('share') || '',
+      name: qs('name') || ((window.LIBRARY && window.LIBRARY.languages[lang] || {}).name || lang)
+    };
+  }
+
+  function scopedUrl(path, params) {
+    var p = [], scope = libraryScope(), k;
+    params = params || {};
+    for (k in params) if (Object.prototype.hasOwnProperty.call(params, k) && params[k] != null) {
+      p.push(encodeURIComponent(k) + '=' + encodeURIComponent(params[k]));
+    }
+    if (scope) {
+      p.push('only=' + encodeURIComponent(scope.lang));
+      p.push('ui=' + encodeURIComponent(scope.ui || 'en'));
+      if (scope.slug) p.push('share=' + encodeURIComponent(scope.slug));
+      if (scope.name) p.push('name=' + encodeURIComponent(scope.name));
+    }
+    return path + (p.length ? '?' + p.join('&') : '');
+  }
+
+  function scopeEntryUrl() {
+    var scope = libraryScope();
+    if (!scope) return 'library.html';
+    if (scope.slug) {
+      return location.protocol === 'file:' ? scope.slug + '/index.html' : '/' + scope.slug;
+    }
+    return scopedUrl('library.html');
+  }
+
   function human(n) {
     if (!n) return '';
     var u = ['B', 'KB', 'MB', 'GB', 'TB'], i = 0;
@@ -148,14 +190,15 @@ window.ET = (function () {
   // -------------------------------------------------------------- header
   function header(active) {
     var t = theme();
+    var scope = libraryScope();
     var el = document.createElement('header');
     el.className = 'top';
     el.innerHTML =
       '<div class="wrap">' +
         '<span class="brand">' + lantern(30) +
           '<span data-i18n="app.name">The Library</span></span>' +
-        '<button class="fchip" id="et-lang" aria-label="Language">' +
-          icon('globe') + '<span id="et-lang-label"></span></button>' +
+        (scope ? '' : '<button class="fchip" id="et-lang" aria-label="Language">' +
+          icon('globe') + '<span id="et-lang-label"></span></button>') +
         '<button class="fchip" id="et-theme" aria-label="Light or dark">' +
           icon(t === 'dark' ? 'sun' : 'moon') + '</button>' +
       '</div>';
@@ -167,13 +210,15 @@ window.ET = (function () {
       theme(now);
       this.innerHTML = icon(now === 'dark' ? 'sun' : 'moon');
     });
-    $('#et-lang').addEventListener('click', function () {
-      store.set('et.langknown', '1');            // they found it; stop pointing
-      var hint = $('#et-hint');
-      if (hint) hint.remove();
-      ET.i18n.picker();
-    });
-    langHint();
+    if (!scope) {
+      $('#et-lang').addEventListener('click', function () {
+        store.set('et.langknown', '1');            // they found it; stop pointing
+        var hint = $('#et-hint');
+        if (hint) hint.remove();
+        ET.i18n.picker();
+      });
+      langHint();
+    }
     if (active) { /* reserved for nav highlighting */ }
   }
 
@@ -187,11 +232,16 @@ window.ET = (function () {
   ];
 
   function tabbar(here) {
+    var scope = libraryScope();
+    var tabs = scope
+      ? [[scopeEntryUrl(), 'search', 'tab.library'], [scopedUrl('help.html'), 'book', 'tab.guide']]
+      : TABS;
     var el = document.createElement('nav');
     el.className = 'tabbar';
     el.setAttribute('aria-label', 'Main');
-    el.innerHTML = TABS.map(function (tb) {
-      var on = tb[0] === here;
+    el.innerHTML = tabs.map(function (tb) {
+      var on = scope ? (here === 'library.html' ? tb[2] === 'tab.library' : tb[0].split('?')[0] === here)
+                     : tb[0] === here;
       return '<a href="' + tb[0] + '"' + (on ? ' aria-current="page"' : '') + '>' +
         '<span class="pipe">' + icon(tb[1]) + '</span>' +
         '<span data-i18n="' + tb[2] + '"></span></a>';
@@ -208,7 +258,7 @@ window.ET = (function () {
 
   function row(r, action) {
     var art = r.cover || r.coverOnline;
-    return '<a class="rowi" href="item.html?id=' + encodeURIComponent(r.id) + '">' +
+    return '<a class="rowi" href="' + esc(scopedUrl('item.html', { id: r.id })) + '">' +
       '<span class="art">' + icon(typeIcon(r.type)) +
         (art ? '<img src="' + esc(art) + '" alt="" loading="lazy" decoding="async" onerror="this.remove()">' : '') +
       '</span>' +
@@ -222,7 +272,7 @@ window.ET = (function () {
 
   function poster(r, sub) {
     var art = r.cover || r.coverOnline;
-    return '<a class="poster" href="item.html?id=' + encodeURIComponent(r.id) + '">' +
+    return '<a class="poster" href="' + esc(scopedUrl('item.html', { id: r.id })) + '">' +
       '<span class="art">' + icon(typeIcon(r.type)) +
         (art ? '<img src="' + esc(art) + '" alt="" loading="lazy" decoding="async" onerror="this.remove()">' : '') +
       '</span>' +
@@ -348,6 +398,8 @@ window.ET = (function () {
   var CONTENT = { en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', hi: 'hin' };
   function contentCode(ui) { return CONTENT[ui] || 'eng'; }
   function contentLang() {
+    var scope = libraryScope();
+    if (scope) return scope.lang;
     var ui = (ET.i18n && ET.i18n.current()) || 'en';
     return contentCode(ui);
   }
@@ -513,6 +565,7 @@ window.ET = (function () {
     sheet: sheet, typeIcon: typeIcon, thumb: thumb, stepper: stepper,
     tabbar: tabbar, row: row, poster: poster, displayTitle: displayTitle,
     safeType: safeType, openable: openable, safeUrl: safeUrl,
+    libraryScope: libraryScope, scopedUrl: scopedUrl, scopeEntryUrl: scopeEntryUrl,
     contentCode: contentCode, contentLang: contentLang, inMyLanguage: inMyLanguage,
     BOOKS: BOOKS, pad: pad, bookName: bookName, audioBibleUrl: audioBibleUrl
   };

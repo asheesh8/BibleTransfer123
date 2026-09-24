@@ -292,6 +292,35 @@ button.bulk-row[aria-checked="true"] {
 }
 body.bulk-mode { padding-bottom: calc(var(--tabbar) + 92px + env(safe-area-inset-bottom)); }
 
+/* ------------------------------------------------ shared language pages */
+
+.shared-hero {
+  margin: 1rem 0; padding: 1.25rem;
+  border: 2px solid var(--purple); border-radius: var(--r-lg);
+  background: linear-gradient(145deg, var(--purple-wash), var(--surface));
+}
+.shared-hero .eyebrow {
+  display: inline-flex; padding: .25rem .65rem; margin: 0 0 .65rem;
+  border-radius: var(--r-pill); background: var(--purple); color: #fff;
+  font-size: .8rem; font-weight: 800;
+}
+.shared-hero h1 { margin: 0; }
+.shared-hero p { margin: .45rem 0 0; }
+.shared-actions { margin-top: 1rem; }
+.shared-actions .btn { flex-basis: 13rem; }
+
+.share-language-grid { display: grid; gap: .8rem; margin-top: 1.2rem; }
+.share-language-card {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center; gap: 1rem;
+}
+.share-language-card h2, .share-language-card p { margin: 0; }
+.share-language-card .btn { min-width: 10rem; }
+@media (max-width: 680px) {
+  .share-language-card { grid-template-columns: 1fr; }
+  .share-language-card .btn-row { width: 100%; }
+}
+
 /* ---------------------------------------------------------------- shelves */
 .shelf { display: grid; gap: .6rem; margin-top: 1.7rem; }
 .shelf-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }

@@ -179,6 +179,31 @@ Wycliffe manuscripts — then **probes every URL** and keeps only what the serve
 actually serves. `catalog.load()` merges any sibling catalogue into
 GawahiiTV's, so that copy stays untouched and refreshable.
 
+### Share one language with someone
+
+Larry's sharing screen is `/share-libraries`. It lists every collection with
+its resource count and gives him two large choices: **Open library** or **Email
+link**. The email is prefilled with the public address and a short explanation.
+
+The public language addresses are:
+
+- `/english`
+- `/mandarin`
+- `/hindi`
+- `/urdu`
+- `/swahili`
+- `/cantonese`
+- `/pashto` (also `/northern-pashto`)
+- `/sindhi`
+- `/gusii` (also `/ekegusii` and `/kisii`)
+
+Each address opens directly in that language, removes the language picker, and
+shows only that language's resources and resource types. Resource, help, and
+nearby-transfer links carry the same language lock. If someone edits an item
+link to name a resource from another language, the app rejects it and returns
+them to the shared collection. The full catalogue remains available separately
+at `/library.html` for administrators and direct visitors.
+
 ## The web edition streams
 
 A resource that is not packed on a card carries its publisher's URLs instead,

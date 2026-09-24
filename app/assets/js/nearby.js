@@ -23,7 +23,9 @@
   'use strict';
   var t = ET.i18n.t, h = ET.i18n.h;
 
+  var scope = ET.libraryScope();
   var item = ET.qs('id') ? ET.byId(ET.qs('id')) : null;
+  if (scope && item && item.lang !== scope.lang) item = null;
   var BROKER = 'wss://0.peerjs.com/peerjs';
   var PREFIX = 'easytransfer-bt123-';
   var STUN = [{ urls: 'stun:stun.l.google.com:19302' }, { urls: 'stun:stun1.l.google.com:19302' }];
@@ -680,7 +682,7 @@
     paint(0,
       '<div class="note"><strong>' + h('nearby.offline') + '</strong></div>' +
       '<div class="stack" style="margin-top:1rem">' +
-      '<a class="btn block" href="share.html' + (item ? '?id=' + encodeURIComponent(item.id) : '') + '">' +
+      '<a class="btn block" href="' + ET.esc(ET.scopedUrl('share.html', item ? { id: item.id } : {})) + '">' +
       ET.icon('phone') + h('share.howto') + '</a></div>');
   }
 

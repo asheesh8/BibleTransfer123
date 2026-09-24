@@ -7,6 +7,8 @@
   'use strict';
   var t = ET.i18n.t;
   var lib = ET.library();
+  var scope = ET.libraryScope();
+  var lockedLang = scope && scope.lang;
 
   // A link that names a language (or asks for all with lang=all) wins;
   // otherwise the shelf opens on the language this person chose.
@@ -14,7 +16,7 @@
   var state = {
     q: ET.qs('q') || '',
     type: ET.qs('type') || '',
-    lang: urlLang === 'all' ? '' : (urlLang || ET.contentLang()),
+    lang: lockedLang || (urlLang === 'all' ? '' : (urlLang || ET.contentLang())),
     bulk: false
   };
   var selected = {};
@@ -28,6 +30,7 @@
   }
 
   function matches(r) {
+    if (lockedLang && r.lang !== lockedLang) return false;
     if (state.type && r.type !== state.type) return false;
     if (state.lang && r.lang !== state.lang) return false;
     if (state.q) {
@@ -81,7 +84,7 @@
     var p = [];
     if (state.q) p.push('q=' + encodeURIComponent(state.q));
     if (state.type) p.push('type=' + state.type);
-    p.push('lang=' + (state.lang || 'all'));
+    if (!lockedLang) p.push('lang=' + (state.lang || 'all'));
     var url = location.pathname + (p.length ? '?' + p.join('&') : '');
     // Some browsers refuse replaceState on a file:// origin. Keeping the URL in
     // step with the filters is a convenience; it is not worth a broken page.
@@ -89,7 +92,9 @@
   }
 
   function chips() {
-    var avail = present(lib.resources);
+    var inScope = lockedLang ? lib.resources.filter(function (r) { return r.lang === lockedLang; })
+                             : lib.resources;
+    var avail = present(inScope);
     ET.$('#type-filters').innerHTML =
       ['<button class="fchip" data-type="" aria-pressed="' + (!state.type) + '">' +
         ET.esc(t('lib.all')) + '</button>'].concat(
@@ -97,6 +102,14 @@
           return '<button class="fchip" data-type="' + ty + '" aria-pressed="' +
             (state.type === ty) + '">' + ET.esc(t('type.' + ty)) + '</button>';
         })).join('');
+    ET.$$('#type-filters [data-type]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        state.type = b.getAttribute('data-type'); render();
+      });
+    });
+
+    var langFilters = ET.$('#lang-filters');
+    if (!langFilters || lockedLang) return;
 
     // Keep the catalogue filters in the same worldwide-speaker order as the
     // interface language picker. Append future catalogue-only languages so a
@@ -109,7 +122,7 @@
     Object.keys(lib.languages).forEach(function (code) {
       if (langs.indexOf(code) < 0) langs.push(code);
     });
-    ET.$('#lang-filters').innerHTML =
+    langFilters.innerHTML =
       ['<button class="fchip" data-lang="" aria-pressed="' + (!state.lang) + '">' +
         ET.esc(t('lib.all')) + '</button>'].concat(
         langs.map(function (code) {
@@ -123,11 +136,6 @@
                     ET.esc(L.name) + '</span>') + '</button>';
         })).join('');
 
-    ET.$$('#type-filters [data-type]').forEach(function (b) {
-      b.addEventListener('click', function () {
-        state.type = b.getAttribute('data-type'); render();
-      });
-    });
     ET.$$('#lang-filters [data-lang]').forEach(function (b) {
       b.addEventListener('click', function () {
         state.lang = b.getAttribute('data-lang');
@@ -197,7 +205,9 @@
       });
     }
     bulkControls(visible);
-    ET.$('#count').textContent = t('lib.count', { n: hits.length, total: lib.resources.length });
+    var total = lockedLang ? lib.resources.filter(function (r) { return r.lang === lockedLang; }).length
+                           : lib.resources.length;
+    ET.$('#count').textContent = t('lib.count', { n: hits.length, total: total });
     ET.$('#empty').hidden = hits.length > 0;
     ET.$('#results').hidden = hits.length === 0;
     syncUrl();
@@ -206,6 +216,8 @@
   ET.header('library');
   ET.tabbar('library.html');
   ET.$('#search-ico').innerHTML = ET.icon('search');
+  var shareIcon = ET.$('#share-language-ico');
+  if (shareIcon) shareIcon.innerHTML = ET.icon('share');
   ET.$('#empty-art').innerHTML = ET.art.empty();
 
   var q = ET.$('#q');
@@ -216,7 +228,7 @@
     timer = setTimeout(function () { state.q = q.value.trim(); render(); }, 140);
   });
   ET.$('#reset').addEventListener('click', function () {
-    state.q = ''; state.type = ''; state.lang = ''; q.value = ''; render();
+    state.q = ''; state.type = ''; state.lang = lockedLang || ''; q.value = ''; render();
   });
 
   render();
@@ -225,7 +237,7 @@
   // render() only rewrites the dynamic regions; apply() handles [data-i18n].
   // Switching the interface language switches the shelf with it.
   ET.i18n.onChange(function () {
-    state.lang = ET.contentLang();
+    state.lang = lockedLang || ET.contentLang();
     state.bulk = false;
     selected = {};
     render();

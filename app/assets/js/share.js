@@ -129,8 +129,10 @@
   };
 
   var state = { from: '', to: '' };
+  var scope = ET.libraryScope();
   var itemId = ET.qs('id');
   var item = itemId ? ET.byId(itemId) : null;
+  if (scope && item && item.lang !== scope.lang) item = null;
 
   function route() {
     var k = state.from + '>' + state.to;
@@ -209,7 +211,8 @@
   ET.header('share');
   ET.tabbar();
   ET.$('#back-ico').innerHTML = ET.icon('back', 'flip');
-  if (item) ET.$('#back').href = 'item.html?id=' + encodeURIComponent(item.id);
+  if (item) ET.$('#back').href = ET.scopedUrl('item.html', { id: item.id });
+  else if (ET.libraryScope()) ET.$('#back').href = ET.scopeEntryUrl();
   render();
   ET.i18n.apply();
   ET.i18n.onChange(render);

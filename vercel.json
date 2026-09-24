@@ -5,6 +5,21 @@
   "buildCommand": null,
   "installCommand": null,
   "trailingSlash": false,
+  "rewrites": [
+    { "source": "/english", "destination": "/english/index.html" },
+    { "source": "/mandarin", "destination": "/mandarin/index.html" },
+    { "source": "/hindi", "destination": "/hindi/index.html" },
+    { "source": "/urdu", "destination": "/urdu/index.html" },
+    { "source": "/swahili", "destination": "/swahili/index.html" },
+    { "source": "/cantonese", "destination": "/cantonese/index.html" },
+    { "source": "/pashto", "destination": "/pashto/index.html" },
+    { "source": "/sindhi", "destination": "/sindhi/index.html" },
+    { "source": "/gusii", "destination": "/gusii/index.html" },
+    { "source": "/ekegusii", "destination": "/gusii/index.html" },
+    { "source": "/kisii", "destination": "/gusii/index.html" },
+    { "source": "/northern-pashto", "destination": "/pashto/index.html" },
+    { "source": "/share-libraries", "destination": "/share-libraries/index.html" }
+  ],
   "headers": [
     {
       "source": "/sw.js",

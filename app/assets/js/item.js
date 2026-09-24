@@ -7,7 +7,14 @@
 (function (ET) {
   'use strict';
   var t = ET.i18n.t, h = ET.i18n.h;
+  var scope = ET.libraryScope();
   var r = ET.byId(ET.qs('id'));
+  if (scope && r && r.lang !== scope.lang) r = null;
+
+  // Set the exit before handling missing or out-of-scope IDs so even a
+  // manually edited shared URL cannot lead someone into the full catalog.
+  ET.$('#back-ico').innerHTML = ET.icon('back', 'flip');
+  ET.$('#back').href = scope ? ET.scopeEntryUrl() : 'library.html';
 
   if (!r) {
     ET.header();
@@ -15,7 +22,7 @@
     ET.$('#item').innerHTML =
       '<div class="card center"><h2>Not in this library</h2>' +
       '<p class="muted">That item is not here.</p>' +
-      '<a class="btn" href="library.html">' + h('home.browse') + '</a></div>';
+      '<a class="btn" href="' + ET.esc(ET.scopeEntryUrl()) + '">' + h('home.browse') + '</a></div>';
     ET.i18n.apply();
     return;
   }
@@ -266,7 +273,7 @@
         } else if (k === 'copy') {
           copy(url, b);
         } else if (k === 'nearby') {
-          location.href = 'nearby.html?id=' + encodeURIComponent(r.id);
+          location.href = ET.scopedUrl('nearby.html', { id: r.id });
         }
       });
     });
@@ -292,8 +299,8 @@
 
   ET.header();
   ET.tabbar();
-  ET.$('#back-ico').innerHTML = ET.icon('back', 'flip');
-  ET.$('#back').href = 'library.html?type=' + r.type + '&lang=' + r.lang;
+  ET.$('#back').href = scope ? ET.scopeEntryUrl()
+                            : 'library.html?type=' + r.type + '&lang=' + r.lang;
   render();
   ET.i18n.apply();
   ET.i18n.onChange(render);

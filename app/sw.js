@@ -8,7 +8,7 @@
 
    VERSION must change whenever the shell changes, or an installed copy keeps
    serving the old one. `easytransfer build` rewrites it. */
-var VERSION = 'shell-v12';
+var VERSION = 'shell-v13';
 
 var SHELL = [
   'index.html', 'library.html', 'item.html', 'share.html', 'help.html', 'nearby.html',
@@ -16,7 +16,12 @@ var SHELL = [
   'assets/css/app.css',
   'assets/js/core.js', 'assets/js/i18n.js', 'assets/js/art.js',
   'assets/js/home.js', 'assets/js/library.js', 'assets/js/item.js',
-  'assets/js/share.js', 'assets/js/help.js', 'assets/js/save.js', 'assets/js/nearby.js', 'assets/vendor/peerjs.min.js',
+  'assets/js/share.js', 'assets/js/help.js', 'assets/js/save.js', 'assets/js/nearby.js',
+  'assets/js/shared-library.js', 'assets/js/share-libraries.js', 'assets/vendor/peerjs.min.js',
+  'english/index.html', 'mandarin/index.html', 'hindi/index.html', 'urdu/index.html',
+  'swahili/index.html', 'cantonese/index.html', 'pashto/index.html', 'sindhi/index.html',
+  'gusii/index.html', 'ekegusii/index.html', 'kisii/index.html', 'northern-pashto/index.html',
+  'share-libraries/index.html',
   'assets/icon/icon-192.png', 'assets/icon/icon-512.png',
   'data/catalog.js'
 ];

@@ -95,7 +95,7 @@
         'of people waiting.') + '</p></div>';
 
     // The only route into the device-by-device guides from here.
-    out += '<a class="tile" href="share.html" style="margin-top:1rem">' +
+    out += '<a class="tile" href="' + ET.esc(ET.scopedUrl('share.html')) + '" style="margin-top:1rem">' +
       '<span class="ico">' + ET.icon('phone') + '</span>' +
       '<span><span class="t">' + h('share.howto') + '</span>' +
       '<span class="s">' + h('share.howto.sub') + '</span></span>' +
@@ -106,6 +106,7 @@
 
   ET.header('help');
   ET.tabbar('help.html');
+  ET.$('#back').href = ET.scopeEntryUrl();
   render();
   ET.i18n.apply();
   ET.i18n.onChange(render);
