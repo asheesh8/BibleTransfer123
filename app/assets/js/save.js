@@ -285,6 +285,190 @@
     return sheet;
   }
 
+  // ------------------------------------------------------- several resources
+  /* A resource can offer a preview file, dozens of chapters, and one complete
+     ZIP. Batch saving chooses the complete package with the fewest taps. Text
+     keeps its PDF; films and audio prefer a compact ZIP, then a complete video,
+     then all chapters. The regular one-item flow still lets a person choose any
+     alternate format or quality. */
+  function preferredFile(r) {
+    var files = (r.files || []).filter(function (f) { return f.file || f.chapters; });
+    if (!files.length) return null;
+    if (r.type === 'scripture' || r.type === 'historic') {
+      return files.filter(function (f) { return f.file && /\.pdf(?:$|[?#])/i.test(f.file); })[0] || files[0];
+    }
+    var zips = files.filter(function (f) { return f.file && /\.zip(?:$|[?#])/i.test(f.file); });
+    if (zips.length) {
+      return zips.filter(function (f) {
+        return /(?:low|small|sd|bandwidth|کم|कम डेटा|data kidogo)/i.test(f.label || '');
+      })[0] || zips[0];
+    }
+    if (r.type === 'film') {
+      var whole = files.filter(function (f) {
+        return f.file && !/^\s*(?:\d+|ep\s*\d+)/i.test(f.label || '') &&
+          /(?:video|mp4|movie|film)/i.test(f.label || '');
+      });
+      if (whole.length) {
+        return whole.filter(function (f) { return /(?:sd|low|small)/i.test(f.label || ''); })[0] || whole[0];
+      }
+    }
+    return files.filter(function (f) { return f.chapters; })[0] || files[0];
+  }
+
+  function batchJobs(resources) {
+    var jobs = [], seen = {};
+    resources.forEach(function (r) {
+      var f = preferredFile(r);
+      if (!f) return;
+      jobsFor(r, f).forEach(function (job) {
+        // Chapter filenames such as "01 - Introduction.mp4" repeat between
+        // films. Prefixing the resource keeps every selected movie intact.
+        if (f.chapters) job.name = clean(r.title) + ' - ' + job.name;
+        var key = job.name.toLowerCase(), n = (seen[key] || 0) + 1;
+        seen[key] = n;
+        if (n > 1) {
+          var ext = extOf(job.name), base = ext ? job.name.slice(0, -ext.length) : job.name;
+          job.name = base + ' (' + n + ')' + ext;
+        }
+        jobs.push(job);
+      });
+    });
+    return jobs;
+  }
+
+  function openMany(resources) {
+    resources = (resources || []).filter(function (r) { return !!preferredFile(r); });
+    var jobs = batchJobs(resources);
+    if (!jobs.length) return null;
+
+    var S = { target: null, ctrl: null, done: [] };
+    var sheet = ET.sheet('<div id="save-many-flow"></div>');
+    var root = ET.$('#save-many-flow', sheet.el);
+    var close = sheet.close;
+    sheet.close = function () {
+      if (S.ctrl) S.ctrl.abort();
+      close();
+    };
+
+    function paint(html) { root.innerHTML = html; }
+    function batchHeader(step) {
+      var titles = ['save.step.where', 'save.step.go', 'save.step.done'];
+      return ET.stepper(3, step) + '<h2>' + h(titles[step]) + '</h2>';
+    }
+    function summary() {
+      return h('bulk.summary', { items: resources.length, files: jobs.length });
+    }
+
+    function where() {
+      recall(function (saved) {
+        var opts = [];
+        if (saved) opts.push(['again', 'folder', t('save.folder.again', { name: saved.name }), '']);
+        if (CAN_DIR) opts.push(['dir', 'folder', t('save.folder'), t('save.folder.sub')]);
+        opts.push(['downloads', 'save', t('save.default'), t('save.default.sub')]);
+        paint(batchHeader(0) +
+          '<div class="note info" style="margin-bottom:1rem"><strong>' +
+          h('bulk.title', { n: resources.length }) + '</strong><p class="muted" style="margin:.2rem 0 0">' +
+          summary() + '</p></div><div class="stack">' + opts.map(function (o) {
+            return '<button class="tile" data-bw="' + o[0] + '" style="width:100%;text-align:start">' +
+              '<span class="ico">' + ET.icon(o[1]) + '</span><span><span class="t">' + ET.esc(o[2]) +
+              '</span>' + (o[3] ? '<span class="s">' + ET.esc(o[3]) + '</span>' : '') + '</span>' +
+              '<span class="chev flip">' + ET.icon('chev') + '</span></button>';
+          }).join('') + '</div><p class="muted" style="font-size:.9rem;margin:1rem 0 0">' +
+          h('bulk.multiple') + '</p><button class="btn ghost block" id="bsv-x" style="margin-top:1rem">' +
+          h('ui.cancel') + '</button>');
+        ET.$$('[data-bw]', root).forEach(function (b) {
+          b.addEventListener('click', function () { choose(b.getAttribute('data-bw'), saved); });
+        });
+        ET.$('#bsv-x', root).addEventListener('click', sheet.close);
+      });
+    }
+
+    function choose(kind, saved) {
+      if (kind === 'again' && saved) {
+        var ask = saved.requestPermission ? saved.requestPermission({ mode: 'readwrite' })
+                                          : Promise.resolve('granted');
+        ask.then(function (p) {
+          if (p !== 'granted') return where();
+          S.target = { kind: 'dir', handle: saved, name: saved.name };
+          go();
+        }, where);
+      } else if (kind === 'dir') {
+        window.showDirectoryPicker({ mode: 'readwrite', startIn: 'downloads' }).then(function (d) {
+          remember(d);
+          S.target = { kind: 'dir', handle: d, name: d.name };
+          go();
+        }, function () {});
+      } else {
+        S.target = { kind: 'downloads', name: t('save.done.downloads') };
+        go();
+      }
+    }
+
+    function go() {
+      S.ctrl = new AbortController();
+      S.done = [];
+      paint(batchHeader(1) + '<p class="muted" style="margin:-.2rem 0 .8rem">' + summary() + '</p>' +
+        '<p class="latin" id="bsv-name" style="font-weight:700;margin:0 0 .6rem"></p>' +
+        '<div class="meter"><span id="bsv-bar"></span></div>' +
+        '<p class="muted" id="bsv-count" style="margin:.6rem 0 0"></p>' +
+        '<p class="muted" id="bsv-files" style="margin:.2rem 0 0"></p>' +
+        '<button class="btn ghost block" id="bsv-stop" style="margin-top:1.2rem">' +
+        h('save.stop') + '</button>');
+      ET.$('#bsv-stop', root).addEventListener('click', function () { S.ctrl.abort(); where(); });
+      var i = 0;
+      (function next() {
+        if (i >= jobs.length) return finished();
+        var job = jobs[i], nm = ET.$('#bsv-name', root);
+        if (!nm) return;
+        nm.textContent = job.name;
+        ET.$('#bsv-files', root).innerHTML = h('save.files', { n: i + 1, total: jobs.length });
+        saveOne(job, S.target, S.ctrl.signal, progress).then(function (res) {
+          S.done.push(res); i += 1; next();
+        }, function (err) {
+          if (err && err.name === 'AbortError') return;
+          failed(err);
+        });
+      })();
+    }
+
+    function progress(got, total) {
+      var bar = ET.$('#bsv-bar', root), count = ET.$('#bsv-count', root);
+      if (!bar) return;
+      if (total) {
+        bar.classList.remove('busy');
+        bar.style.width = Math.min(100, 100 * got / total).toFixed(1) + '%';
+        count.innerHTML = '<span class="num">' + ET.human(got) + ' / ' + ET.human(total) + '</span>';
+      } else {
+        bar.classList.add('busy');
+        count.innerHTML = '<span class="num">' + ET.human(got) + '</span>';
+      }
+    }
+
+    function finished() {
+      S.ctrl = null;
+      var place = S.target.kind === 'downloads' ? t('save.done.downloads') : S.target.name;
+      paint(batchHeader(2) + '<div class="done-mark">' + ET.icon('check') + '</div>' +
+        '<h3 class="center" style="margin:.2rem 0">' + h('bulk.done.title', { n: resources.length }) + '</h3>' +
+        '<p class="center muted">' + ET.esc(t('save.done.where', { place: place })) + '</p>' +
+        '<button class="btn green block" id="bsv-done" style="margin-top:1rem">' +
+        h('bulk.close') + '</button>');
+      ET.$('#bsv-done', root).addEventListener('click', sheet.close);
+    }
+
+    function failed(err) {
+      paint(batchHeader(1) + '<div class="note"><strong>' + h('save.fail') + '</strong>' +
+        '<p class="latin" style="margin:.3rem 0 0">' + ET.esc((err && err.message) || '') + '</p></div>' +
+        '<div class="stack" style="margin-top:1rem"><button class="btn block" id="bsv-retry">' +
+        h('save.retry') + '</button><button class="btn ghost block" id="bsv-back">' +
+        ET.icon('back', 'flip') + h('save.back') + '</button></div>');
+      ET.$('#bsv-retry', root).addEventListener('click', go);
+      ET.$('#bsv-back', root).addEventListener('click', where);
+    }
+
+    where();
+    return sheet;
+  }
+
   // ------------------------------------------------------------ one file
   /* Resolves to { handle } when written into a picked location, { blob } when
      it was collected in memory and handed to Downloads, or { url } when it was
@@ -368,5 +552,5 @@
     document.body.appendChild(a); a.click(); a.remove();
   }
 
-  ET.save = { open: open, canPickFolder: CAN_DIR, clean: clean, extOf: extOf };
+  ET.save = { open: open, openMany: openMany, canPickFolder: CAN_DIR, clean: clean, extOf: extOf };
 })(window.ET);

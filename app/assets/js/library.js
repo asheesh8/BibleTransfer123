@@ -14,8 +14,10 @@
   var state = {
     q: ET.qs('q') || '',
     type: ET.qs('type') || '',
-    lang: urlLang === 'all' ? '' : (urlLang || ET.contentLang())
+    lang: urlLang === 'all' ? '' : (urlLang || ET.contentLang()),
+    bulk: false
   };
+  var selected = {};
 
   var TYPES = ['film', 'scripture', 'audio-bible', 'audio', 'historic', 'link'];
 
@@ -43,17 +45,36 @@
 
   /* Every resource is the same row everywhere in the app: artwork, what kind
      of thing it is, its name, and one pill saying what a tap does. */
-  function card(r) {
+  function details(r) {
     var kicker = t('type.' + r.type);
     var verb = r.play ? t('act.watch') : r.read ? t('act.read') : t('act.open');
     if (r.type === 'audio' || r.type === 'audio-bible') verb = t('act.listen');
     if (!r.play && !r.read && !(r.files || []).length) verb = r.cardOnly ? t('act.oncard') : t('act.visit');
     var bits = [r.langName, r.duration || r.stats, r.org].filter(Boolean);
-    return ET.row(r, {
+    return {
       kicker: kicker + (r.offline ? ' · ' + t('item.offline') : ''),
       sub: bits.join(' · '),
       verb: verb
-    });
+    };
+  }
+
+  function card(r) { return ET.row(r, details(r)); }
+
+  function canSave(r) {
+    return (r.files || []).some(function (f) { return f.file || f.chapters; });
+  }
+
+  function selectCard(r) {
+    var d = details(r), art = r.cover || r.coverOnline, on = !!selected[r.id];
+    return '<button type="button" class="rowi bulk-row" role="checkbox" aria-checked="' + on +
+      '" data-bulk-id="' + ET.esc(r.id) + '">' +
+      '<span class="art">' + ET.icon(ET.typeIcon(r.type)) +
+        (art ? '<img src="' + ET.esc(art) + '" alt="" loading="lazy" decoding="async" onerror="this.remove()">' : '') +
+      '</span><span class="meta">' +
+        '<span class="kicker">' + ET.esc(d.kicker) + '</span>' +
+        '<span class="name" dir="auto">' + ET.esc(ET.displayTitle(r)) + '</span>' +
+        '<span class="sub latin">' + ET.esc(d.sub) + '</span>' +
+      '</span><span class="bulk-check">' + ET.icon('check') + '</span></button>';
   }
 
   function syncUrl() {
@@ -109,15 +130,73 @@
     });
     ET.$$('#lang-filters [data-lang]').forEach(function (b) {
       b.addEventListener('click', function () {
-        state.lang = b.getAttribute('data-lang'); render();
+        state.lang = b.getAttribute('data-lang');
+        state.bulk = false; selected = {};
+        render();
       });
+    });
+  }
+
+  function selectedResources() {
+    return lib.resources.filter(function (r) { return selected[r.id] && canSave(r); });
+  }
+
+  function bulkControls(visible) {
+    var controls = ET.$('#bulk-controls'), dock = ET.$('#bulk-dock');
+    var downloadable = visible.filter(canSave);
+    if (!state.bulk) {
+      document.body.classList.remove('bulk-mode');
+      dock.hidden = true;
+      controls.innerHTML = state.lang && downloadable.length
+        ? '<button class="btn green block bulk-start" id="bulk-start">' + ET.icon('save') +
+          ET.i18n.h('lib.bulk.start') + '</button>' : '';
+      var start = ET.$('#bulk-start');
+      if (start) start.addEventListener('click', function () {
+        state.bulk = true; selected = {}; render();
+      });
+      return;
+    }
+
+    var n = selectedResources().length;
+    controls.innerHTML = '<div class="bulk-tools"><strong>' +
+      ET.i18n.h('lib.bulk.selected', { n: n }) + '</strong><div class="btn-row">' +
+      '<button class="btn ghost" id="bulk-all">' + ET.i18n.h('lib.bulk.selectall') + '</button>' +
+      '<button class="btn ghost" id="bulk-cancel">' + ET.i18n.h('lib.bulk.cancel') +
+      '</button></div></div>';
+    dock.hidden = false;
+    dock.innerHTML = '<button class="btn green big block" id="bulk-download"' +
+      (n ? '' : ' disabled') + '>' + ET.icon('save') +
+      ET.i18n.h('lib.bulk.download', { n: n }) + '</button>';
+    document.body.classList.add('bulk-mode');
+
+    ET.$('#bulk-all').addEventListener('click', function () {
+      downloadable.forEach(function (r) { selected[r.id] = true; });
+      render();
+    });
+    ET.$('#bulk-cancel').addEventListener('click', function () {
+      state.bulk = false; selected = {}; render();
+    });
+    ET.$('#bulk-download').addEventListener('click', function () {
+      var picked = selectedResources();
+      if (picked.length) ET.save.openMany(picked);
     });
   }
 
   function render() {
     chips();
-    var hits = lib.resources.filter(matches);
-    ET.$('#results').innerHTML = hits.map(card).join('');
+    var visible = lib.resources.filter(matches);
+    var hits = state.bulk ? visible.filter(canSave) : visible;
+    ET.$('#results').innerHTML = hits.map(state.bulk ? selectCard : card).join('');
+    if (state.bulk) {
+      ET.$$('#results [data-bulk-id]').forEach(function (b) {
+        b.addEventListener('click', function () {
+          var id = b.getAttribute('data-bulk-id');
+          if (selected[id]) delete selected[id]; else selected[id] = true;
+          render();
+        });
+      });
+    }
+    bulkControls(visible);
     ET.$('#count').textContent = t('lib.count', { n: hits.length, total: lib.resources.length });
     ET.$('#empty').hidden = hits.length > 0;
     ET.$('#results').hidden = hits.length === 0;
@@ -145,5 +224,10 @@
   // apply() invokes every listener, so a listener must never call apply() back.
   // render() only rewrites the dynamic regions; apply() handles [data-i18n].
   // Switching the interface language switches the shelf with it.
-  ET.i18n.onChange(function () { state.lang = ET.contentLang(); render(); });
+  ET.i18n.onChange(function () {
+    state.lang = ET.contentLang();
+    state.bulk = false;
+    selected = {};
+    render();
+  });
 })(window.ET);

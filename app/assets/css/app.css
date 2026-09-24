@@ -255,6 +255,43 @@ html[dir="rtl"] .rowi .kicker { text-transform: none; letter-spacing: 0; font-si
 .rowi .go svg { width: 16px; height: 16px; }
 .rowi:hover .go { background: var(--purple); border-color: var(--purple); color: #fff; }
 
+/* ------------------------------------------------------ batch downloads */
+
+.bulk-start { margin-top: 1rem; }
+.bulk-tools {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: .7rem; flex-wrap: wrap; margin-top: 1rem;
+  padding: .8rem; border: 2px solid var(--green); border-radius: var(--r);
+  background: var(--green-wash);
+}
+.bulk-tools strong { font-size: 1.05rem; }
+.bulk-tools .btn { min-height: 48px; padding: .65rem 1rem; }
+button.bulk-row {
+  width: 100%; border: 2px solid transparent; background: transparent;
+  color: inherit; font: inherit; text-align: start; cursor: pointer;
+}
+button.bulk-row:hover { border-color: var(--line-strong); }
+button.bulk-row[aria-checked="true"] {
+  border-color: var(--green); background: var(--green-wash);
+}
+.bulk-check {
+  width: 42px; height: 42px; display: grid; place-items: center;
+  border: 3px solid var(--line-strong); border-radius: 50%;
+  color: transparent; background: var(--surface);
+}
+.bulk-check svg { width: 25px; height: 25px; stroke-width: 3; }
+.bulk-row[aria-checked="true"] .bulk-check {
+  border-color: var(--green); background: var(--green); color: #fff;
+}
+.bulk-dock {
+  position: fixed; z-index: 46; left: 0; right: 0;
+  bottom: calc(var(--tabbar) + env(safe-area-inset-bottom));
+  padding: .8rem max(1.1rem, calc((100% - var(--wrap)) / 2 + 1.1rem));
+  background: color-mix(in srgb, var(--ground) 96%, transparent);
+  border-top: 2px solid var(--line); backdrop-filter: blur(12px);
+}
+body.bulk-mode { padding-bottom: calc(var(--tabbar) + 92px + env(safe-area-inset-bottom)); }
+
 /* ---------------------------------------------------------------- shelves */
 .shelf { display: grid; gap: .6rem; margin-top: 1.7rem; }
 .shelf-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }

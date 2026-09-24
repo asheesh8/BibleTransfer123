@@ -197,6 +197,13 @@ virtual-host certificate, so `build.secure()` rewrites them to path-style HTTPS.
 
 **Save to my phone** opens a four-step sheet: what → where → saving → done.
 
+The Library also has **Download several things**. It turns every downloadable
+row into a large checkbox, lets the reader select several whole films, audio
+collections, or books, and saves them as one guided batch. The batch chooser
+prefers a complete compact ZIP when the catalogue has one; otherwise it saves
+the complete video, PDF, or every chapter. Chapter filenames include the
+resource title so two selected films cannot overwrite one another.
+
 - **Where** offers *Choose a folder* and *Choose the name and place* on browsers
   with the File System Access API (Chrome and Edge on computers), writing
   straight to disk and remembering the folder for next time; everywhere else it
