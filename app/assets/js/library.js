@@ -205,9 +205,14 @@
       });
     }
     bulkControls(visible);
-    var total = lockedLang ? lib.resources.filter(function (r) { return r.lang === lockedLang; }).length
-                           : lib.resources.length;
-    ET.$('#count').textContent = t('lib.count', { n: hits.length, total: total });
+    // Count against the language being browsed, not the whole library: with
+    // English chosen, "268 of 676" read as if 408 English items were hidden.
+    var scopeLang = lockedLang || state.lang;
+    var total = scopeLang ? lib.resources.filter(function (r) { return r.lang === scopeLang; }).length
+                          : lib.resources.length;
+    ET.$('#count').textContent = hits.length === total
+      ? t('lib.countall', { n: total })
+      : t('lib.count', { n: hits.length, total: total });
     ET.$('#empty').hidden = hits.length > 0;
     ET.$('#results').hidden = hits.length === 0;
     syncUrl();

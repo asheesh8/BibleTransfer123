@@ -177,6 +177,14 @@ def card_catalog(catalog, chosen, profile, all_index, sizes=None):
         links = [{"label": d["label"], "url": secure(d["url"])}
                  for d in active_downloads
                  if d.get("url") and not is_file_url(d["url"])]
+        # The resource's own links (after curation, only DBS pages) — "Open on
+        # DBS" for films the app has no direct file for.
+        seen_links = {l["url"] for l in links}
+        for l in (r.get("links") or []):
+            u = secure(l.get("url"))
+            if u and u not in seen_links:
+                links.append({"label": l.get("label") or u, "url": u})
+                seen_links.add(u)
 
         out.append({
             "id": rid, "lang": r["lang"], "type": r["type"],

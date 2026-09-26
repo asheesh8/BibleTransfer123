@@ -8,7 +8,7 @@
 
    VERSION must change whenever the shell changes, or an installed copy keeps
    serving the old one. `easytransfer build` rewrites it. */
-var VERSION = 'shell-v16';
+var VERSION = 'shell-v17';
 
 var SHELL = [
   'index.html', 'library.html', 'item.html', 'share.html', 'help.html', 'nearby.html',

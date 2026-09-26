@@ -20,9 +20,9 @@
    "type": "film",
    "title": "The Savior",
    "native": null,
-   "org": "Create International",
+   "org": null,
    "scope": "Northern Pashto",
-   "desc": "The life of Christ told in 9 short parts, made for Northern Pashto audiences.",
+   "desc": "",
    "play": {
     "kind": "chapters",
     "base": "",
@@ -129,9 +129,9 @@
    "type": "film",
    "title": "The Prophets' Story (Northern)",
    "native": "دَ پيغمبرانو قيصه",
-   "org": "Create International",
+   "org": null,
    "scope": "Northern Pashto",
-   "desc": "A short film in Northern Pashto.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/PS/The-Prophets-Story_Pashto-Northern_sm.mp4"
@@ -159,9 +159,9 @@
    "type": "film",
    "title": "The Prophets' Story (Southern)",
    "native": "دَ پيغمبرانو قيصه",
-   "org": "Create International",
+   "org": null,
    "scope": "Southern Pashto",
-   "desc": "A short film in Southern Pashto.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/PS/The-Prophets-Story_Pashto-Southern_sm.mp4"

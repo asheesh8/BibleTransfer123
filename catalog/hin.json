@@ -22,7 +22,7 @@
    "native": "मोक्ष की कहानियाँ",
    "org": "Create International",
    "scope": "",
-   "desc": "The life of Christ told in 6 short parts, made for Hindi audiences.",
+   "desc": "",
    "play": {
     "kind": "chapters",
     "base": "",
@@ -104,7 +104,7 @@
    "native": "ek sundar aasha hai (एक सुंदर आशा है)",
    "org": "Create International",
    "scope": "",
-   "desc": "A short film in Hindi.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/h/Hindi_3020A/Raj-HindiEV.mp4"
@@ -134,7 +134,7 @@
    "native": "ek sundar aasha hai (एक सुंदर आशा है) (EngSub)",
    "org": "Create International",
    "scope": "",
-   "desc": "A short film in Hindi.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/h/Hindi_3020A/Raj-HindiEV_EngSub_sm.mp4"
@@ -164,7 +164,7 @@
    "native": "teerth (तीर्थ)",
    "org": "Create International",
    "scope": "",
-   "desc": "A short film in Hindi.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/h/Hindi_0042A/HindiEV_sm.mp4"
@@ -194,7 +194,7 @@
    "native": "teerth (तीर्थ) (EngSub)",
    "org": "Create International",
    "scope": "",
-   "desc": "A short film in Hindi.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/h/Hindi_0042A/HindiEV_EngSub_sm.mp4"
@@ -224,7 +224,7 @@
    "native": "ek sundar aasha hai (एक सुंदर आशा है) (EngSub)",
    "org": "Create International",
    "scope": "",
-   "desc": "A short film in Hindi.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/h/Hindi_2010A/Hindi_Aasha-Hope_EngSub.mp4"
@@ -254,7 +254,7 @@
    "native": "naariyal (नारियल)",
    "org": "Create International",
    "scope": "",
-   "desc": "A short film in Hindi.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Coconuts_Hindi_sm.mp4"
@@ -284,7 +284,7 @@
    "native": "naariyal (नारियल) (EngSub)",
    "org": "Create International",
    "scope": "",
-   "desc": "A short film in Hindi.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Coconuts_Hindi_EngSub_sm.mp4"
@@ -312,9 +312,9 @@
    "type": "film",
    "title": "Creation to Christ",
    "native": "सृजन से मसीह को",
-   "org": "Create International",
+   "org": null,
    "scope": "",
-   "desc": "A short film in Hindi.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/C2C-Hindi_sm.mp4"
@@ -344,7 +344,7 @@
    "native": "मोक्ष: कहानी ३ - सिद्ध समाधान",
    "org": "Create International",
    "scope": "",
-   "desc": "A short film in Hindi.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Moksh/Moksh-Story3_Hindi.mp4"
@@ -374,7 +374,7 @@
    "native": "मोक्ष: कहानी ३ - सिद्ध समाधान",
    "org": "Create International",
    "scope": "Henna version",
-   "desc": "A short film in Hindi.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Moksh/Moksh-Story3_Hindi-Henna.mp4"
@@ -404,7 +404,7 @@
    "native": "मोक्ष: कहानी ४ - उत्तम शक्ति १",
    "org": "Create International",
    "scope": "",
-   "desc": "A short film in Hindi.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Moksh/Moksh-Story4_Hindi.mp4"
@@ -434,7 +434,7 @@
    "native": "मोक्ष: कहानी ४ - उत्तम शक्ति १",
    "org": "Create International",
    "scope": "Henna version",
-   "desc": "A short film in Hindi.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000L/h/Hindi/Moksh/Moksh-Story4_Hindi-Henna.mp4"
@@ -464,7 +464,7 @@
    "native": "das kunvaaree (दस कुंवारी) (EngSub)",
    "org": "Create International",
    "scope": "",
-   "desc": "A short film in Hindi.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/h/Hindi_7001A/Hindi_Ten-Virgins_EngSub.mp4"
@@ -494,7 +494,7 @@
    "native": "antim ubaoo (अंतिम उबाऊ) (EngSub)",
    "org": "Create International",
    "scope": "",
-   "desc": "A short film in Hindi.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/h/Hindi_2010A/Hindi_The_Final_Prodigal_EngSub.mp4"
@@ -524,7 +524,7 @@
    "native": "jeevan kee keemat (जीवन की कीमत)",
    "org": "Create International",
    "scope": "",
-   "desc": "A short film in Hindi.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/h/Hindi_2018A/Hindi_The-Price-of-Life_Zindagi-Ke-Keemat.mp4"
@@ -554,7 +554,7 @@
    "native": "यीशु सत्संग",
    "org": "Create International",
    "scope": "",
-   "desc": "A short film in Hindi.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000C/h/Hindi_0042C/HindiCG_sm.mp4"
@@ -584,7 +584,7 @@
    "native": "यीशु सत्संग (EngSub)",
    "org": "Create International",
    "scope": "",
-   "desc": "A short film in Hindi.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000C/h/Hindi_0042C/HindiCG_EngSub_sm.mp4"

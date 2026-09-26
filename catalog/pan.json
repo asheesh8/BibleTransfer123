@@ -22,7 +22,7 @@
    "native": "ਅੱਖਾਂ ਦਿਲ ਦੀਆਂ",
    "org": "Create International",
    "scope": "",
-   "desc": "A short film in Eastern Punjabi.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/s/Sikh_5001A/SikhEV_sm.mp4"
@@ -52,7 +52,7 @@
    "native": "ਸਤਿਗੁਰੂ ਯਿਸੂ ਦਾ ਸਤਿਸੰਗ",
    "org": "Create International",
    "scope": "",
-   "desc": "A short film in Eastern Punjabi.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000C/s/Sikh_5001C/SikhCG_sm.mp4"
@@ -82,7 +82,7 @@
    "native": "ਸਤਿਗੁਰੂ ਯਿਸੂ ਦਾ ਸਤਿਸੰਗ (EngSub)",
    "org": "Create International",
    "scope": "",
-   "desc": "A short film in Eastern Punjabi.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000C/s/Sikh_5001C/SikhCG_EngSub_sm.mp4"
@@ -110,9 +110,9 @@
    "type": "film",
    "title": "The Story",
    "native": "ਇੱਕ ਕਹਾਣੀ",
-   "org": "Create International",
+   "org": null,
    "scope": "",
-   "desc": "A short film in Eastern Punjabi.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/non-create_videos/The-Story_Punjabi_sm.mp4"
@@ -142,7 +142,7 @@
    "native": "ਹੇ ਬੰਦੇ, ਕੌਣ ਤੁਹਾਡੀ ਮਦਦ ਕਰ ਸਕਦਾ ਹੈ?",
    "org": "Create International",
    "scope": "",
-   "desc": "A short film in Eastern Punjabi.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000D/s/Sikh_5001D/SikhMV_sm.mp4"
@@ -172,7 +172,7 @@
    "native": "ਹੇ ਬੰਦੇ, ਕੌਣ ਤੁਹਾਡੀ ਮਦਦ ਕਰ ਸਕਦਾ ਹੈ? (EngSub)",
    "org": "Create International",
    "scope": "",
-   "desc": "A short film in Eastern Punjabi.",
+   "desc": "",
    "play": {
     "kind": "file",
     "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000D/s/Sikh_5001D/SikhMV_EngSub.mp4"

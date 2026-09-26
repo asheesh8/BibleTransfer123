@@ -229,8 +229,8 @@ def make_resource(source_code: str, section: str, item: dict) -> dict:
         "org": org,
         "year": years[-1] if years else None,
         "duration": (item.get("cells") or [None, None, None])[2] if len(item.get("cells") or []) > 2 else None,
-        "desc": (f"Listed by Digital Bible Society for {lang_name}"
-                 + (f" ({base_scope})" if base_scope else "") + "."),
+        # DBS lists a title and a link; no description is invented for it.
+        "desc": "",
         "license": None,
         "scope": scope,
         "stats": None,

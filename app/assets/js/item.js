@@ -147,7 +147,10 @@
       (canSave ? '<button class="btn green" id="save">' + ET.icon('save') + h('item.save') + '</button>' : '') +
       '<button class="btn sky" id="share">' + ET.icon('share') + h('item.share') + '</button></div>';
 
-    var links = (r.links || []).concat(r.source ? [{ label: 'dbs.org', url: r.source }] : []);
+    var links = (r.links || []).slice();
+    if (r.source && !links.some(function (l) { return l.url === r.source; })) {
+      links.push({ label: 'dbs.org', url: r.source });
+    }
     if (links.length) {
       html += '<p class="flabel" style="margin-top:1.6rem">' + h('item.more') + '</p>' +
         '<div class="stack">' + links.map(function (l) {

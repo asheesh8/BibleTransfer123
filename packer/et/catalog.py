@@ -6,6 +6,7 @@ resources in Sindhi and Urdu). Nothing here is specific to that file beyond
 """
 import dataclasses, json, pathlib
 from .util import safe_name, safe_local, safe_id, is_file_url, fetchable
+from .curation import curate
 
 # Roles, in the order a resource is worth packing. `cover` is tiny and always
 # worth it; `view` is what the app plays or reads; `download` is the bundle a
@@ -54,6 +55,8 @@ def load(path):
             if r["id"] not in seen:
                 base["resources"].append(r)
                 seen.add(r["id"])
+    # Christian resources only; see curation.py for what is left out and why.
+    base["resources"], base["excluded"] = curate(base["resources"])
     return base
 
 

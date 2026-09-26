@@ -710,6 +710,15 @@ EXTRA["npi"] += [
          source="https://dbs.org/audio/collections/srun/npi_storyset_nepali"),
 ]
 
+def _producer(url):
+    """Create International hosts other studios' films too, in a folder it
+    names for exactly that. Credit Create only for its own."""
+    u = (url or "").lower()
+    if "createinternational" in u and "/non-create_videos/" not in u:
+        return "Create International"
+    return None
+
+
 SERIES = re.compile(r"^(?P<name>.+?)\s+(?P<n>\d+)\s*[-–—]\s*(?P<part>.+)$")
 
 
@@ -820,8 +829,11 @@ def build(code, spec):
         out.append(dict(
             id=f"{code}-film-{slug}-{iso}", lang=code, type="film", title=name,
             native=spec.get("group_native", {}).get(name),
-            org="Create International", scope=variant(iso),
-            desc=f"The life of Christ told in {len(parts)} short parts, made for {variant(iso) or spec['name']} audiences.",
+            org=_producer(parts[0][2]), scope=variant(iso), stats=f"{len(parts)} parts",
+            # DBS gives these a title and a file, nothing more. No description
+            # is written in for it: an invented one is how "the life of Christ"
+            # ended up on a series that is not.
+            desc="",
             play={"kind": "chapters", "base": "",
                   "items": [{"n": n, "title": f"{n}. {p}", "file": u} for n, p, u in parts]},
             downloads=[{"label": f"{n}. {p}", "url": u} for n, p, u in parts],
@@ -841,8 +853,8 @@ def build(code, spec):
             native = f"{native} (EngSub)" if native else native
         out.append(dict(
             id=f"{code}-{kind}-{slug}-{iso}", lang=code, type=kind, title=title, native=native or None,
-            org="Create International", scope=scope,
-            desc=f"A short film in {variant(iso) or spec['name']}." if kind == "film" else "",
+            org=_producer(url), scope=scope,
+            desc="",
             play=play, downloads=[{"label": "Video" if kind == "film" else "Audio", "url": url}],
         ))
 
