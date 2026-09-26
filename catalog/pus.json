@@ -19,6 +19,7 @@
    "lang": "pus",
    "type": "film",
    "title": "The Savior",
+   "native": null,
    "org": "Create International",
    "scope": "Northern Pashto",
    "desc": "The life of Christ told in 9 short parts, made for Northern Pashto audiences.",
@@ -112,7 +113,6 @@
     }
    ],
    "read": null,
-   "native": null,
    "duration": null,
    "year": null,
    "cover": null,
@@ -128,6 +128,7 @@
    "lang": "pus",
    "type": "film",
    "title": "The Prophets' Story (Northern)",
+   "native": "دَ پيغمبرانو قيصه",
    "org": "Create International",
    "scope": "Northern Pashto",
    "desc": "A short film in Northern Pashto.",
@@ -142,7 +143,6 @@
     }
    ],
    "read": null,
-   "native": null,
    "duration": null,
    "year": null,
    "cover": null,
@@ -158,6 +158,7 @@
    "lang": "pus",
    "type": "film",
    "title": "The Prophets' Story (Southern)",
+   "native": "دَ پيغمبرانو قيصه",
    "org": "Create International",
    "scope": "Southern Pashto",
    "desc": "A short film in Southern Pashto.",
@@ -172,7 +173,6 @@
     }
    ],
    "read": null,
-   "native": null,
    "duration": null,
    "year": null,
    "cover": null,
@@ -1355,6 +1355,7 @@
    "lang": "pus",
    "type": "scripture",
    "title": "Pashto Bibles to read online",
+   "native": null,
    "org": "Various publishers",
    "desc": "6 Pashto translations that their publishers host themselves. They open in a browser and need a connection.",
    "links": [
@@ -1387,7 +1388,6 @@
    "play": null,
    "read": null,
    "downloads": [],
-   "native": null,
    "duration": null,
    "year": null,
    "cover": null,

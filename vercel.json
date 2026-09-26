@@ -18,6 +18,11 @@
     { "source": "/ekegusii", "destination": "/gusii/index.html" },
     { "source": "/kisii", "destination": "/gusii/index.html" },
     { "source": "/northern-pashto", "destination": "/pashto/index.html" },
+    { "source": "/eastern-punjabi", "destination": "/eastern-punjabi/index.html" },
+    { "source": "/punjabi", "destination": "/eastern-punjabi/index.html" },
+    { "source": "/western-punjabi", "destination": "/western-punjabi/index.html" },
+    { "source": "/shahmukhi", "destination": "/western-punjabi/index.html" },
+    { "source": "/nepali", "destination": "/nepali/index.html" },
     { "source": "/share-libraries", "destination": "/share-libraries/index.html" }
   ],
   "headers": [

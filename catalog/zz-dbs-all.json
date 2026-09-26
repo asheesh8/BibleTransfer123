@@ -1,5 +1,5 @@
 {
- "generated": "Rendered Digital Bible Society language pages — verified 2026-09-24",
+ "generated": "Rendered Digital Bible Society language pages — verified 2026-09-24, 2026-09-25",
  "languages": {},
  "resources": [
   {
@@ -24350,6 +24350,2149 @@
     }
    ],
    "source": "https://dbs.org/discover/languages/yue"
+  },
+  {
+   "id": "pan-audio-bible-dbs-punjabi-indian-revised-version-6b00da61c",
+   "lang": "pan",
+   "type": "audio-bible",
+   "title": "Punjabi Indian Revised Version",
+   "native": null,
+   "org": "Digital Bible Society",
+   "year": "2019",
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Audio Bibles",
+   "cover": null,
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "PANIRV_DAVR_FB_N",
+    "version": "PANIRV",
+    "testaments": [
+     "OT",
+     "NT"
+    ]
+   },
+   "read": null,
+   "downloads": [
+    {
+     "label": "Complete audio (ZIP)",
+     "url": "https://scripture.dbs.org/audio_zip/PANIRV_DAVR_FB_N.zip"
+    }
+   ],
+   "links": [],
+   "source": "https://dbs.org/bibles/audio/PANIRV_DAVR_FB_N"
+  },
+  {
+   "id": "pan-audio-bible-dbs-punjabi-indian-revised-version-irv-10f08c5ad",
+   "lang": "pan",
+   "type": "audio-bible",
+   "title": "Punjabi Indian Revised Version (IRV)",
+   "native": null,
+   "org": "Digital Bible Society",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Audio Bibles",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [],
+   "source": "https://dbs.org/bibles/audio/PANUW_DAVR_FB_N"
+  },
+  {
+   "id": "pan-scripture-dbs-punjabi-genesis-exodus-09ffbee05",
+   "lang": "pan",
+   "type": "scripture",
+   "title": "Punjabi Genesis - Exodus",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=PANPOR"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-scripture-dbs-punjabi-new-testament-683fee38b",
+   "lang": "pan",
+   "type": "scripture",
+   "title": "Punjabi New Testament",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=PANOLD"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-scripture-dbs-contemporary-punjabi-new-testament-0b7ab1183",
+   "lang": "pan",
+   "type": "scripture",
+   "title": "Contemporary Punjabi New Testament",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=PANZZZP"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-scripture-dbs-panjabi-easy-to-read-bible-e3bb01544",
+   "lang": "pan",
+   "type": "scripture",
+   "title": "Panjabi Easy to Read Bible",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=PANWTC"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-scripture-dbs-new-testament-in-punjabi-53b39148a",
+   "lang": "pan",
+   "type": "scripture",
+   "title": "New Testament in Punjabi",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=PANTBN"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-scripture-dbs-punjabi-common-language-ae69ec4b1",
+   "lang": "pan",
+   "type": "scripture",
+   "title": "Punjabi Common Language",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=PANCLV"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-link-dbs-punjabi-easy-to-read-bible-800c93943",
+   "lang": "pan",
+   "type": "link",
+   "title": "Punjabi: Easy to Read Bible",
+   "native": null,
+   "org": null,
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Partner Links",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//PAN/Bible/StudyBible/content/texts/pan_wbtc/index.html"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-link-dbs-new-american-standard-bible-5cff30029",
+   "lang": "pan",
+   "type": "link",
+   "title": "New American Standard Bible",
+   "native": null,
+   "org": null,
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Partner Links",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//PAN/Bible/StudyBible/content/texts/ENGNAS/index.html"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-link-dbs-westminister-linegradex-codex-4ab3b915f",
+   "lang": "pan",
+   "type": "link",
+   "title": "Westminister Linegradex Codex",
+   "native": null,
+   "org": null,
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Partner Links",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//PAN/Bible/StudyBible/content/texts/HBOWLC/index.html"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-link-dbs-greek-tischendorf-578eb206f",
+   "lang": "pan",
+   "type": "link",
+   "title": "Greek Tischendorf",
+   "native": null,
+   "org": null,
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Partner Links",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//PAN/Bible/StudyBible/content/texts/GRCTIS/index.html"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-link-dbs-images-from-the-bible-1f6600a83",
+   "lang": "pan",
+   "type": "link",
+   "title": "Images from the Bible",
+   "native": null,
+   "org": null,
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Partner Links",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//PAN/Bible/Images/"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-link-dbs-audio-bible-new-testament-9c796977e",
+   "lang": "pan",
+   "type": "link",
+   "title": "Audio Bible (New Testament)",
+   "native": null,
+   "org": null,
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Partner Links",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//PAN/Audio/Bible/pan_wbtc/"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-film-dbs-the-jesus-film-9150e0ca3",
+   "lang": "pan",
+   "type": "film",
+   "title": "The Jesus Film",
+   "native": null,
+   "org": "Bible media publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Films",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//PAN/Video/000_Movies/001_PAN_JesusFilm.mp4"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-film-dbs-magdealena-547302df1",
+   "lang": "pan",
+   "type": "film",
+   "title": "Magdealena",
+   "native": null,
+   "org": "Bible media publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Films",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//PAN/Video/000_Movies/003_PAN_Magdalena.mp4"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-film-dbs-story-of-jesus-for-children-7551df636",
+   "lang": "pan",
+   "type": "film",
+   "title": "Story of Jesus for Children",
+   "native": null,
+   "org": "Bible media publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Films",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//PAN/Video/000_Movies/004_PAN_JesusStory.mp4"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-film-dbs-who-is-god-f6944066b",
+   "lang": "pan",
+   "type": "film",
+   "title": "Who is God",
+   "native": null,
+   "org": "Bible media publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Films",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//PAN/Video/010_Teachings/011_JFP_Who_Is_God.mp4"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-film-dbs-who-is-jesus-dc7f2f10d",
+   "lang": "pan",
+   "type": "film",
+   "title": "Who is Jesus",
+   "native": null,
+   "org": "Bible media publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Films",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//PAN/Video/010_Teachings/012_JFP_Who_Is_Jesus.mp4"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-film-dbs-prayer-talking-to-god-5066457c4",
+   "lang": "pan",
+   "type": "film",
+   "title": "Prayer: Talking to God",
+   "native": null,
+   "org": "Bible media publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Films",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//PAN/Video/010_Teachings/013_JFP_Prayer_Talking_to_God.mp4"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-film-dbs-living-as-a-disciple-of-jesus-eb151c012",
+   "lang": "pan",
+   "type": "film",
+   "title": "Living as a Disciple of Jesus",
+   "native": null,
+   "org": "Bible media publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Films",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//PAN/Video/010_Teachings/014_JFP_Living_as_a_Disciple_of_Jesus.mp4"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-film-dbs-sharing-your-faith-with-others-fcb4477e8",
+   "lang": "pan",
+   "type": "film",
+   "title": "Sharing Your Faith With Others",
+   "native": null,
+   "org": "Bible media publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Films",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//PAN/Video/010_Teachings/015_JFP_Sharing_Your_Faith_With_Others.mp4"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-link-dbs-the-gospel-gurmukhi-0062f60aa",
+   "lang": "pan",
+   "type": "link",
+   "title": "The Gospel (Gurmukhi)",
+   "native": null,
+   "org": null,
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Partner Links",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//PAN/Books/010_GotQuestions/Gurmukhi/index.html"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-link-dbs-the-gospel-shahmukhi-5212fbe93",
+   "lang": "pan",
+   "type": "link",
+   "title": "The Gospel (Shahmukhi)",
+   "native": null,
+   "org": null,
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Partner Links",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//PAN/Books/010_GotQuestions/Shahmukhi/01_GoodNews/index.html"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-audio-dbs-beginning-with-god-8043ba549",
+   "lang": "pan",
+   "type": "audio",
+   "title": "Beginning With God",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//PAN/Audio/GRN/100_Stories/100_BeginningWithGod_01.mp3"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-audio-dbs-mighty-men-of-god-68036514d",
+   "lang": "pan",
+   "type": "audio",
+   "title": "Mighty Men of God",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//PAN/Audio/GRN/100_Stories/101_MightyMenOfGod_02.mp3"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-audio-dbs-victory-through-god-a400dbd27",
+   "lang": "pan",
+   "type": "audio",
+   "title": "Victory Through God",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//PAN/Audio/GRN/100_Stories/102_VictoryThroughGod_03.mp3"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-audio-dbs-portrait-of-jesus-d486701d0",
+   "lang": "pan",
+   "type": "audio",
+   "title": "Portrait of Jesus",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//PAN/Audio/GRN/100_Stories/103_PortraitOfJesus.mp3"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-audio-dbs-words-of-life-f75451cb1",
+   "lang": "pan",
+   "type": "audio",
+   "title": "Words Of Life",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//PAN/Audio/GRN/100_Stories/104_WordsOfLife.mp3"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-scripture-dbs-resource-d7c6feac8",
+   "lang": "pan",
+   "type": "scripture",
+   "title": "ਪਰਮੇਸ਼ੁਰ ਦਾ ਤਸਕਰ",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://s3.ap-south-1.amazonaws.com/odi-anusaran/resources/pa-gods-smuggler.pdf"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-scripture-dbs-1-c7e76d926",
+   "lang": "pan",
+   "type": "scripture",
+   "title": "ਤੂਫਾਲ ਵਿੱਚ ਦ੍ਰਿੜ੍ਹ ਖੜ੍ਹੇ ਰਹਿਣਾ ਵਿਦਿਆਰਥੀ ਅਗਵਾਈ ਮੌਤਿਊਨ-1",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://s3.ap-south-1.amazonaws.com/odi-anusaran/resources/pa-teacher-module-1.pdf"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-scripture-dbs-2-c8f02983b",
+   "lang": "pan",
+   "type": "scripture",
+   "title": "ਤੂਫਾਲ ਵਿੱਚ ਦ੍ਰਿੜ੍ਹ ਖੜ੍ਹੇ ਰਹਿਣਾ ਵਿਦਿਆਰਥੀ ਅਗਵਾਈ ਮੌਤਿਊਨ-2",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://s3.ap-south-1.amazonaws.com/odi-anusaran/resources/pa-teacher-module-2.pdf"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-scripture-dbs-1-50a698f22",
+   "lang": "pan",
+   "type": "scripture",
+   "title": "ਤੂਫਾਲ ਵਿੱਚ ਦ੍ਰਿੜ੍ਹ ਖੜ੍ਹੇ ਰਹਿਣਾ ਅਧਿਆਪਕ ਅਗਵਾਈ ਮੌਤਿਊਨ-1",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://s3.ap-south-1.amazonaws.com/odi-anusaran/resources/pa-students-module-1.pdf"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pan-scripture-dbs-2-4ff9006d3",
+   "lang": "pan",
+   "type": "scripture",
+   "title": "ਤੂਫਾਲ ਵਿੱਚ ਦ੍ਰਿੜ੍ਹ ਖੜ੍ਹੇ ਰਹਿਣਾ ਅਧਿਆਪਕ ਅਗਵਾਈ ਮੌਤਿਊਨ-2",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Eastern Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Eastern Punjabi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://s3.ap-south-1.amazonaws.com/odi-anusaran/resources/pa-students-module-2.pdf"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pan"
+  },
+  {
+   "id": "pnb-audio-bible-dbs-punjabi-new-testament-revised-2020-a675f80ff",
+   "lang": "pnb",
+   "type": "audio-bible",
+   "title": "Punjabi New Testament, Revised 2020",
+   "native": null,
+   "org": "Digital Bible Society",
+   "year": "2020",
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Western Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Western Punjabi",
+   "typeLabel": "Audio Bibles",
+   "cover": null,
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "PNBPBS_DAVR_NT_N",
+    "version": "PNBPBS",
+    "testaments": [
+     "NT"
+    ]
+   },
+   "read": null,
+   "downloads": [
+    {
+     "label": "Complete audio (ZIP)",
+     "url": "https://scripture.dbs.org/audio_zip/PNBPBS_DAVR_NT_N.zip"
+    }
+   ],
+   "links": [],
+   "source": "https://dbs.org/bibles/audio/PNBPBS_DAVR_NT_N"
+  },
+  {
+   "id": "pnb-scripture-dbs-persian-punjabi-new-testament-9333a1543",
+   "lang": "pnb",
+   "type": "scripture",
+   "title": "Persian Punjabi New Testament",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Western Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Western Punjabi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=PNBPNT"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pnb"
+  },
+  {
+   "id": "pnb-scripture-dbs-punjabi-common-language-version-49d61d2e8",
+   "lang": "pnb",
+   "type": "scripture",
+   "title": "Punjabi Common Language Version",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Western Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Western Punjabi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=PNBCLV"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pnb"
+  },
+  {
+   "id": "pnb-scripture-dbs-persian-gospels-and-acts-b30807f5d",
+   "lang": "pnb",
+   "type": "scripture",
+   "title": "Persian Gospels and Acts",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Western Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Western Punjabi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=PNBBFBS"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pnb"
+  },
+  {
+   "id": "pnb-scripture-dbs-punjabi-new-testament-revised-2020-397d502e3",
+   "lang": "pnb",
+   "type": "scripture",
+   "title": "Punjabi New Testament, Revised 2020",
+   "native": null,
+   "org": "Bible publisher",
+   "year": "2020",
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Western Punjabi.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Western Punjabi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=PNBPBS"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pnb"
+  },
+  {
+   "id": "npi-audio-bible-dbs-nepali-unlocked-literal-version-f99cfcb06",
+   "lang": "npi",
+   "type": "audio-bible",
+   "title": "Nepali Unlocked Literal Version",
+   "native": null,
+   "org": "Digital Bible Society",
+   "year": "2019",
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Bibles",
+   "cover": null,
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "NPIULV_FCBH_NT_N",
+    "version": "NPIULV",
+    "testaments": [
+     "NT"
+    ]
+   },
+   "read": null,
+   "downloads": [
+    {
+     "label": "Complete audio (ZIP)",
+     "url": "https://scripture.dbs.org/audio_zip/NPIULV_FCBH_NT_N.zip"
+    }
+   ],
+   "links": [],
+   "source": "https://dbs.org/bibles/audio/NPIULV_FCBH_NT_N"
+  },
+  {
+   "id": "npi-audio-bible-dbs-nepali-common-language-bible-0ae0ff16b",
+   "lang": "npi",
+   "type": "audio-bible",
+   "title": "Nepali Common Language Bible",
+   "native": null,
+   "org": "Digital Bible Society",
+   "year": "2008",
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Bibles",
+   "cover": null,
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "NPIB08_DAVR_FB_N",
+    "version": "NPIB08",
+    "testaments": [
+     "OT",
+     "NT"
+    ],
+    "dirs": {
+     "OT": "01 OT_NPIB08",
+     "NT": "02 NT_NPIB08"
+    }
+   },
+   "read": null,
+   "downloads": [
+    {
+     "label": "Complete audio (ZIP)",
+     "url": "https://scripture.dbs.org/audio_zip/NPIB08_DAVR_FB_N.zip"
+    }
+   ],
+   "links": [],
+   "source": "https://dbs.org/bibles/audio/NPIB08_DAVR_FB_N"
+  },
+  {
+   "id": "npi-audio-bible-dbs-nepali-new-revised-version-audio-37cef760f",
+   "lang": "npi",
+   "type": "audio-bible",
+   "title": "Nepali New Revised Version, Audio",
+   "native": null,
+   "org": "Digital Bible Society",
+   "year": "1997",
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Bibles",
+   "cover": null,
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "NPINBS_FCBH_NT_D",
+    "version": "NPINBS",
+    "testaments": [
+     "NT"
+    ]
+   },
+   "read": null,
+   "downloads": [
+    {
+     "label": "Complete audio (ZIP)",
+     "url": "https://scripture.dbs.org/audio_zip/NPINBS_FCBH_NT_D.zip"
+    }
+   ],
+   "links": [],
+   "source": "https://dbs.org/bibles/audio/NPINBS_FCBH_NT_D"
+  },
+  {
+   "id": "npi-audio-bible-dbs-nepali-unlocked-literal-bible-ulb-22c829645",
+   "lang": "npi",
+   "type": "audio-bible",
+   "title": "Nepali Unlocked Literal Bible (ULB)",
+   "native": null,
+   "org": "Digital Bible Society",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Bibles",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [],
+   "source": "https://dbs.org/bibles/audio/NPIDWMC_DAVR_NT_N"
+  },
+  {
+   "id": "npi-scripture-dbs-the-new-testament-in-nepali-562f8f57f",
+   "lang": "npi",
+   "type": "scripture",
+   "title": "The New Testament in Nepali",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=NPITBI"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/npi"
+  },
+  {
+   "id": "npi-scripture-dbs-nepali-unlocked-literal-version-faa897090",
+   "lang": "npi",
+   "type": "scripture",
+   "title": "Nepali Unlocked Literal Version",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=NPIULV"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/npi"
+  },
+  {
+   "id": "npi-scripture-dbs-nepali-common-language-bible-08fa59d1e",
+   "lang": "npi",
+   "type": "scripture",
+   "title": "Nepali Common Language Bible",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=NPIB08"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/npi"
+  },
+  {
+   "id": "npi-scripture-dbs-nepali-new-revised-version-4aa8e9d82",
+   "lang": "npi",
+   "type": "scripture",
+   "title": "Nepali New Revised Version",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=NPINRV"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/npi"
+  },
+  {
+   "id": "npi-scripture-dbs-contemporary-nepali-new-testament-d5809efee",
+   "lang": "npi",
+   "type": "scripture",
+   "title": "Contemporary Nepali New Testament",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=NPINCV"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/npi"
+  },
+  {
+   "id": "npi-film-dbs-until-we-met-e832c3218",
+   "lang": "npi",
+   "type": "film",
+   "title": "Until We Met",
+   "native": null,
+   "org": "Bible media publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Films",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "http://cdn.createinternational.com.s3.amazonaws.com/indigitech/0000A/l/Limbu/Limbu_EV_sm.mp4"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/npi"
+  },
+  {
+   "id": "npi-scripture-dbs-nepali-unlocked-literal-bible-0b16c9eca",
+   "lang": "npi",
+   "type": "scripture",
+   "title": "Nepali Unlocked Literal Bible",
+   "native": null,
+   "org": "Digital Bible Society",
+   "year": "2019",
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": {
+    "kind": "pdf",
+    "url": "https://bibles.dbs.org/NEPULB/pdf/NEPULB.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://bibles.dbs.org/NEPULB/pdf/NEPULB.pdf"
+    }
+   ],
+   "links": [],
+   "source": "https://dbs.org/bibles/NEPULB"
+  },
+  {
+   "id": "npi-scripture-dbs-nepali-bible-e1ad858a3",
+   "lang": "npi",
+   "type": "scripture",
+   "title": "Nepali Bible",
+   "native": null,
+   "org": "Digital Bible Society",
+   "year": "2012",
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": {
+    "kind": "pdf",
+    "url": "https://bibles.dbs.org/NEPERV/pdf/NEPERV.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://bibles.dbs.org/NEPERV/pdf/NEPERV.pdf"
+    }
+   ],
+   "links": [],
+   "source": "https://dbs.org/bibles/NEPERV"
+  },
+  {
+   "id": "npi-film-dbs-lumo-mark-dc5175be0",
+   "lang": "npi",
+   "type": "film",
+   "title": "Lumo: Mark",
+   "native": null,
+   "org": "Bible media publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Films",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://odi-anusaran.s3.ap-south-1.amazonaws.com/downloads/video/lumo/lumo-nep-2-mark.mp4"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-film-dbs-lumo-luke-7bbc43bd5",
+   "lang": "npi",
+   "type": "film",
+   "title": "Lumo: Luke",
+   "native": null,
+   "org": "Bible media publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Films",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://odi-anusaran.s3.ap-south-1.amazonaws.com/downloads/video/lumo/lumo-nep-4-luke.mp4"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-film-dbs-lumo-matthew-f9d5acc03",
+   "lang": "npi",
+   "type": "film",
+   "title": "Lumo: Matthew",
+   "native": null,
+   "org": "Bible media publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Films",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://odi-anusaran.s3.ap-south-1.amazonaws.com/downloads/video/lumo/lumo-nep-1-matthew.mp4"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-film-dbs-lumo-john-eec22dcd6",
+   "lang": "npi",
+   "type": "film",
+   "title": "Lumo: John",
+   "native": null,
+   "org": "Bible media publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Films",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://odi-anusaran.s3.ap-south-1.amazonaws.com/downloads/video/lumo/lumo-nep-3-john.mp4"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-audio-dbs-make-me-yours-7-7f2fa8376",
+   "lang": "npi",
+   "type": "audio",
+   "title": "Make Me Yours - 7",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_MakeMeYours07.mp3"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-audio-dbs-make-me-yours-8-63031f2d2",
+   "lang": "npi",
+   "type": "audio",
+   "title": "Make Me Yours - 8",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_MakeMeYours08.mp3"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-audio-dbs-hope-returns-1-d1bf7ad91",
+   "lang": "npi",
+   "type": "audio",
+   "title": "Hope Returns - 1",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_TheHopeReturns01.mp3"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-audio-dbs-hope-returns-2-339009de0",
+   "lang": "npi",
+   "type": "audio",
+   "title": "Hope Returns - 2",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_TheHopeReturns02.mp3"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-audio-dbs-hope-returns-3-0188ec5a9",
+   "lang": "npi",
+   "type": "audio",
+   "title": "Hope Returns - 3",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_TheHopeReturns03.mp3"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-audio-dbs-hope-returns-4-253ef1f82",
+   "lang": "npi",
+   "type": "audio",
+   "title": "Hope Returns - 4",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_TheHopeReturns04.mp3"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-audio-dbs-hope-returns-5-75574f754",
+   "lang": "npi",
+   "type": "audio",
+   "title": "Hope Returns - 5",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_TheHopeReturns05.mp3"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-audio-dbs-hope-returns-6-57bb3fb1b",
+   "lang": "npi",
+   "type": "audio",
+   "title": "Hope Returns - 6",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_TheHopeReturns06.mp3"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-audio-dbs-hope-returns-7-c3b884088",
+   "lang": "npi",
+   "type": "audio",
+   "title": "Hope Returns - 7",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_TheHopeReturns07.mp3"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-audio-dbs-hope-returns-8-ff595830e",
+   "lang": "npi",
+   "type": "audio",
+   "title": "Hope Returns - 8",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_TheHopeReturns08.mp3"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-audio-dbs-beginning-with-god-e921480da",
+   "lang": "npi",
+   "type": "audio",
+   "title": "Beginning with God",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_1BeginningWithGod.mp3"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-audio-dbs-beginning-with-god-for-children-06b8bc4e3",
+   "lang": "npi",
+   "type": "audio",
+   "title": "Beginning with God for Children",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_1BeginningWithGodForChildren.mp3"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-audio-dbs-mighty-men-of-god-443a87eaf",
+   "lang": "npi",
+   "type": "audio",
+   "title": "Mighty Men of God",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_2MightyMenOfGod.mp3"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-audio-dbs-victory-through-god-abef42d8c",
+   "lang": "npi",
+   "type": "audio",
+   "title": "Victory through God",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_3VictorythroughGOD.mp3"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-audio-dbs-servants-of-god-d5ba412fd",
+   "lang": "npi",
+   "type": "audio",
+   "title": "Servants of God",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_4ServantsofGOD.mp3"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-audio-dbs-on-trial-for-god-023882a85",
+   "lang": "npi",
+   "type": "audio",
+   "title": "On Trial for God",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_5OnTrialforGOD.mp3"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-audio-dbs-jesus-teacher-and-healer-c36064a1b",
+   "lang": "npi",
+   "type": "audio",
+   "title": "Jesus: Teacher and Healer",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_6JESUSTeacherHealer.mp3"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-audio-dbs-lord-and-saviour-9a815e294",
+   "lang": "npi",
+   "type": "audio",
+   "title": "Lord and Saviour",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_7LordSaviour.mp3"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-audio-dbs-acts-1a837ee54",
+   "lang": "npi",
+   "type": "audio",
+   "title": "Acts",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_8Acts.mp3"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-scripture-dbs-standing-strong-through-the-storm-teacher-s-modu-85d37caa2",
+   "lang": "npi",
+   "type": "scripture",
+   "title": "Standing Strong Through The Storm - Teacher's Module 1",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://s3.ap-south-1.amazonaws.com/odi-anusaran/resources/ne-teacher-module-1.pdf"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-scripture-dbs-standing-strong-through-the-storm-teacher-s-modu-c6e2b1cc6",
+   "lang": "npi",
+   "type": "scripture",
+   "title": "Standing Strong Through The Storm - Teacher's Module 2",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://s3.ap-south-1.amazonaws.com/odi-anusaran/resources/ne-teacher-module-2.pdf"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-scripture-dbs-standing-strong-through-the-storm-student-s-modu-3f4eca008",
+   "lang": "npi",
+   "type": "scripture",
+   "title": "Standing Strong Through The Storm - Student's Module 1",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://s3.ap-south-1.amazonaws.com/odi-anusaran/resources/ne-students-module-1.pdf"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
+  },
+  {
+   "id": "npi-scripture-dbs-standing-strong-through-the-storm-student-s-modu-55516d876",
+   "lang": "npi",
+   "type": "scripture",
+   "title": "Standing Strong Through The Storm - Student's Module 2",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "Listed by Digital Bible Society for Nepali.",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Nepali",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://s3.ap-south-1.amazonaws.com/odi-anusaran/resources/ne-students-module-2.pdf"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/nep"
   }
  ]
 }

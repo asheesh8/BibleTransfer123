@@ -9,6 +9,15 @@
         "8120"
       ],
       "port": 8120
+    },
+    {
+      "name": "library-dev",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "packer/serve.py",
+        "8131"
+      ],
+      "port": 8131
     }
   ]
 }

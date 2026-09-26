@@ -334,7 +334,16 @@
      }
     ]
    },
-   "downloads": [],
+   "downloads": [
+    {
+     "label": "All chapters — SD",
+     "url": "https://download.dbs.org/Jesus/swh_swahili-kenya/swh_jesus_chapters_low.zip"
+    },
+    {
+     "label": "All chapters — HD",
+     "url": "https://download.dbs.org/Jesus/swh_swahili-kenya/swh_jesus_chapters_high.zip"
+    }
+   ],
    "links": [
     {
      "label": "Kenya edition on DBS",
@@ -1032,7 +1041,12 @@
     "hd": "https://dbs.org/cdn/video/ibible/films/swh-swahili-ibible_salvation-hd.mp4",
     "sd": "https://dbs.org/cdn/video/ibible/films_low/swh-swahili-ibible_salvation-sd.mp4"
    },
-   "downloads": [],
+   "downloads": [
+    {
+     "label": "Download film (ZIP)",
+     "url": "https://download.dbs.org/ibible/swh-swahili-ibible_salvation.zip"
+    }
+   ],
    "source": "https://dbs.org/video/ibible/swh-swahili-ibible_salvation",
    "lang": "swh",
    "read": null,
@@ -1199,7 +1213,12 @@
      }
     ]
    },
-   "downloads": [],
+   "downloads": [
+    {
+     "label": "All chapters (ZIP)",
+     "url": "https://download.dbs.org/Matthew/swh-matthew-vb-swahili-coastal/swh-matthew-vb-swahili-coastal-chapters.zip"
+    }
+   ],
    "source": "https://dbs.org/video/matthew/swh-matthew-vb-swahili-coastal",
    "lang": "swh",
    "read": null,
@@ -1366,7 +1385,12 @@
      }
     ]
    },
-   "downloads": [],
+   "downloads": [
+    {
+     "label": "All chapters (ZIP)",
+     "url": "https://download.dbs.org/Acts_VB/swh-acts-vb-swahili-coastal/swh-acts-vb-swahili-coastal-01-chapters.zip"
+    }
+   ],
    "source": "https://dbs.org/video/acts_vb/swh-acts-vb-swahili-coastal",
    "lang": "swh",
    "read": null,
@@ -1478,7 +1502,12 @@
      "NT"
     ]
    },
-   "downloads": [],
+   "downloads": [
+    {
+     "label": "Complete audio (ZIP)",
+     "url": "https://scripture.dbs.org/audio_zip/SWHSUV_ISA_FB_N.zip"
+    }
+   ],
    "source": "https://dbs.org/bibles/audio/SWHSUV_ISA_FB_N",
    "lang": "swh",
    "read": null,
@@ -1509,7 +1538,12 @@
      "NT"
     ]
    },
-   "downloads": [],
+   "downloads": [
+    {
+     "label": "Complete audio (ZIP)",
+     "url": "https://scripture.dbs.org/audio_zip/SWH1909_DAVR_FB_N.zip"
+    }
+   ],
    "source": "https://dbs.org/bibles/audio/SWH1909_DAVR_FB_N",
    "lang": "swh",
    "read": null,
@@ -1533,7 +1567,16 @@
     "kind": "audio-collection",
     "sample": "https://media.dbs.org/audio/grn/swh_GlobalRecordings_swahili-individual_language/Swahili%20%5BKenya%5D/Swahili%20%5BKenya%5D%20Good%20News%2019381/Swahili%20%5BKenya%5D%20Good%20News%20001%20Introduction%20%28Picture%201%20In%20the%20Beginning%29%2019381.mp3"
    },
-   "downloads": [],
+   "downloads": [
+    {
+     "label": "Complete collection — high quality",
+     "url": "https://media.dbs.org/audio/grn/swh_GlobalRecordings_swahili-individual_language_high.zip"
+    },
+    {
+     "label": "Complete collection — low bandwidth",
+     "url": "https://media.dbs.org/audio/grn/swh_GlobalRecordings_swahili-individual_language_low.zip"
+    }
+   ],
    "source": "https://dbs.org/audio/collections/grn/swh_GlobalRecordings_swahili-individual_language",
    "lang": "swh",
    "read": null,
@@ -1558,7 +1601,12 @@
     "kind": "audio-collection",
     "sample": "https://media.dbs.org/audio/wbt/swh_Maisha_ya_Yakobo_na_Maisha_ya_Yusufu/swh_19_Maisha_ya_Isaka_na_Yakobo_%28wimbo%29.mp3"
    },
-   "downloads": [],
+   "downloads": [
+    {
+     "label": "Complete collection (ZIP)",
+     "url": "https://media.dbs.org/audio/wbt/swh_Maisha_ya_Yakobo_na_Maisha_ya_Yusufu.zip"
+    }
+   ],
    "source": "https://dbs.org/audio/collections/wbt/swh_Maisha_ya_Yakobo_na_Maisha_ya_Yusufu",
    "lang": "swh",
    "read": null,
@@ -1583,7 +1631,12 @@
     "kind": "audio-collection",
     "sample": "https://media.dbs.org/audio/wbt/swh_Mungu_aliumba_dunia_na_Maisha_ya_Abrahamu/swh_01_Mungu_aliumba_dunia_%28wimbo%29.mp3"
    },
-   "downloads": [],
+   "downloads": [
+    {
+     "label": "Complete collection (ZIP)",
+     "url": "https://media.dbs.org/audio/wbt/swh_Mungu_aliumba_dunia_na_Maisha_ya_Abrahamu.zip"
+    }
+   ],
    "source": "https://dbs.org/audio/collections/wbt/swh_Mungu_aliumba_dunia_na_Maisha_ya_Abrahamu",
    "lang": "swh",
    "read": null,
@@ -2052,6 +2105,7 @@
    "lang": "swh",
    "type": "scripture",
    "title": "The Door Swahili Bible",
+   "native": "Kiswahili Biblia Takatifu",
    "year": 2019,
    "org": "Digital Bible Society",
    "scope": "Coastal",
@@ -2064,11 +2118,14 @@
     {
      "label": "PDF",
      "url": "https://bibles.dbs.org/SWHULB/pdf/SWHULB.pdf"
+    },
+    {
+     "label": "EPUB",
+     "url": "https://bibles.dbs.org/SWHULB/epub/SWHULB.epub"
     }
    ],
    "source": "https://dbs.org/bibles/SWHULB",
    "play": null,
-   "native": null,
    "duration": null,
    "cover": null,
    "stats": null,
@@ -2082,6 +2139,7 @@
    "lang": "swh",
    "type": "scripture",
    "title": "Kiswahili New Contemporary (New Testament) Biblica",
+   "native": "Neno: Maandiko Matakatifu",
    "year": 2018,
    "org": "Digital Bible Society",
    "scope": "Coastal",
@@ -2094,11 +2152,14 @@
     {
      "label": "PDF",
      "url": "https://bibles.dbs.org/SWHBIB/pdf/SWHBIB.pdf"
+    },
+    {
+     "label": "EPUB",
+     "url": "https://bibles.dbs.org/SWHBIB/epub/SWHBIB.epub"
     }
    ],
    "source": "https://dbs.org/bibles/SWHBIB",
    "play": null,
-   "native": null,
    "duration": null,
    "cover": null,
    "stats": null,
@@ -2112,6 +2173,7 @@
    "lang": "swh",
    "type": "scripture",
    "title": "Swahili Old Bible (NT and OT Portions)",
+   "native": "Biblia Takatifu - Kitabu cha Agano Jipya",
    "year": 1850,
    "org": "Digital Bible Society",
    "scope": "Coastal",
@@ -2124,11 +2186,14 @@
     {
      "label": "PDF",
      "url": "https://bibles.dbs.org/SWHPOR/pdf/SWHPOR.pdf"
+    },
+    {
+     "label": "EPUB",
+     "url": "https://bibles.dbs.org/SWHPOR/epub/SWHPOR.epub"
     }
    ],
    "source": "https://dbs.org/bibles/SWHPOR",
    "play": null,
-   "native": null,
    "duration": null,
    "cover": null,
    "stats": null,
@@ -2142,6 +2207,7 @@
    "lang": "swh",
    "type": "scripture",
    "title": "Swahili Bibles to read online",
+   "native": null,
    "org": "Various publishers",
    "desc": "10 Swahili translations that their publishers host themselves. They open in a browser and need a connection.",
    "links": [
@@ -2190,7 +2256,6 @@
    "play": null,
    "read": null,
    "downloads": [],
-   "native": null,
    "duration": null,
    "year": null,
    "cover": null,
@@ -2231,9 +2296,9 @@
    "id": "swh-link-bibleproject-com",
    "lang": "swh",
    "type": "link",
-   "title": "bibleproject.com",
-   "org": "bibleproject.com",
-   "desc": "1 Swahili items. Hosted by the publisher.",
+   "title": "BibleProject",
+   "org": "BibleProject",
+   "desc": "1 Swahili items. Animated videos on the books and themes of the Bible.",
    "links": [
     {
      "label": "Swahili Bible Project Videos",
@@ -2441,9 +2506,9 @@
    "id": "swh-link-my-pcloud-com",
    "lang": "swh",
    "type": "link",
-   "title": "my.pcloud.com",
-   "org": "my.pcloud.com",
-   "desc": "1 Swahili items. Hosted by the publisher.",
+   "title": "Shared downloads",
+   "org": "Shared downloads",
+   "desc": "1 Swahili items. Files shared through pCloud.",
    "links": [
     {
      "label": "Swahili StoryRunners Stories",
@@ -2507,9 +2572,9 @@
    "id": "swh-link-www-mars-hill-org",
    "lang": "swh",
    "type": "link",
-   "title": "www.mars-hill.org",
-   "org": "www.mars-hill.org",
-   "desc": "1 Swahili items. Hosted by the publisher.",
+   "title": "Mars Hill Productions",
+   "org": "Mars Hill Productions",
+   "desc": "1 Swahili items. The HOPE and related films from the producer.",
    "links": [
     {
      "label": "The Swahili HOPE",
@@ -2534,9 +2599,9 @@
    "id": "swh-link-youtu-be",
    "lang": "swh",
    "type": "link",
-   "title": "youtu.be",
-   "org": "youtu.be",
-   "desc": "4 Swahili items. Hosted by the publisher.",
+   "title": "YouTube",
+   "org": "YouTube",
+   "desc": "4 Swahili items. Videos hosted on YouTube.",
    "links": [
     {
      "label": "Lumo: John",

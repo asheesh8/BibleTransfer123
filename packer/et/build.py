@@ -2,6 +2,7 @@
 import datetime, hashlib, json, pathlib, re, shutil
 
 from .util import is_file_url
+from .covers import series_cover
 
 APP_DIRNAME = "app"
 MEDIA_DIRNAME = "media"
@@ -124,6 +125,8 @@ def card_catalog(catalog, chosen, profile, all_index, sizes=None):
             # them for a full Bible is not something to list in a catalogue.
             play = {"kind": "audio-bible", "fileset": src["fileset"],
                     "version": src["version"], "testaments": src["testaments"]}
+            if src.get("dirs"):
+                play["dirs"] = src["dirs"]
 
         read = None
         rd = ((online.get("read") if use_online else r.get("read")) or {})
@@ -187,7 +190,7 @@ def card_catalog(catalog, chosen, profile, all_index, sizes=None):
             # The publisher's own cover URL, kept even when the file is not on
             # the card: a device with a connection then shows real artwork,
             # and one with none falls back to the type icon.
-            "coverOnline": secure(r.get("cover")) or None,
+            "coverOnline": secure(r.get("cover") or series_cover(r)) or None,
             "offline": offline,
             # True when the only copies are on a card, so the app can say that
             # rather than implying a connection would help.

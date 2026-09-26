@@ -66,6 +66,14 @@
         return (b.offline ? 2 : 0) + (b.play || b.read ? 1 : 0) -
                ((a.offline ? 2 : 0) + (a.play || a.read ? 1 : 0));
       });
+      // Dialect dubs share one cover. Six identical JESUS posters in a row
+      // hide everything after them, so repeats of a picture go to the end.
+      var seenArt = {}, first = [], again = [];
+      list.forEach(function (r) {
+        var art = r.cover || r.coverOnline;
+        if (art && seenArt[art]) again.push(r); else { if (art) seenArt[art] = 1; first.push(r); }
+      });
+      list = first.concat(again);
       out += '<section class="shelf"><div class="shelf-head">' +
         '<h2>' + h('type.' + ty) + '</h2>' +
         (list.length > 4 ? '<a href="library.html?type=' + ty + '&lang=' + mine + '">' +
@@ -85,7 +93,4 @@
   ET.i18n.apply();
   // apply() runs every listener, so a listener must never call it back.
   ET.i18n.onChange(render);
-
-  // First run: nobody has chosen a language yet, so ask before anything else.
-  if (!ET.i18n.chosen()) { ET.i18n.picker(true); }
 })(window.ET);

@@ -1,0 +1,1407 @@
+{
+ "generated": "Digital Bible Society (dbs.org) — Western Punjabi, built from the open dataset",
+ "languages": {
+  "pnb": {
+   "name": "Western Punjabi",
+   "native": "پنجابی",
+   "script": "arab",
+   "dir": "rtl",
+   "font": "naskh",
+   "speakers": "~90 million",
+   "region": "Punjab, Pakistan",
+   "blurb": "Punjabi as spoken in Pakistan, written in Shahmukhi, an Arabic script.",
+   "code": "pnb"
+  }
+ },
+ "resources": [
+  {
+   "id": "pnb-film-the-return-pnb",
+   "lang": "pnb",
+   "type": "film",
+   "title": "The Return (EngSub)",
+   "native": "واپسی (EngSub)",
+   "org": "Create International",
+   "scope": "",
+   "desc": "A short film in Western Punjabi.",
+   "play": {
+    "kind": "file",
+    "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/p/Punjabi_Muslim_3029A/PunjabiMuslimEV_EngSub_sm.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Video",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/p/Punjabi_Muslim_3029A/PunjabiMuslimEV_EngSub_sm.mp4"
+    }
+   ],
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "source": null,
+   "langName": "Western Punjabi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "pnb-film-the-return-pnb-2",
+   "lang": "pnb",
+   "type": "film",
+   "title": "The Return",
+   "native": "واپسی",
+   "org": "Create International",
+   "scope": "",
+   "desc": "A short film in Western Punjabi.",
+   "play": {
+    "kind": "file",
+    "hd": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/p/Punjabi_Muslim_3029A/PunjabiMuslimEV_sm.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Video",
+     "url": "https://s3.amazonaws.com/cdn.createinternational.com/indigitech/0000A/p/Punjabi_Muslim_3029A/PunjabiMuslimEV_sm.mp4"
+    }
+   ],
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "source": null,
+   "langName": "Western Punjabi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "pnb-film-jesus",
+   "type": "film",
+   "title": "JESUS",
+   "native": "یسوع",
+   "org": "Jesus Film Project",
+   "year": "1979",
+   "scope": null,
+   "desc": "The life of Jesus from the Gospel of Luke, divided into 61 chapters.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "The Beginning",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_01_the-beginning_1_jf6101-0-0_low.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Birth of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_02_birth-of-jesus_1_jf6102-0-0_low.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Childhood of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_03_childhood-of-jesus_1_jf6103-0-0_low.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Baptism of Jesus by John",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_04_baptism-of-jesus-by-john_1_jf6104-0-0_low.mp4"
+     },
+     {
+      "n": 5,
+      "title": "The Devil Tempts Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_05_the-devil-tempts-jesus_1_jf6105-0-0_low.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Jesus Proclaims Fulfillment of the Scriptures",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_06_jesus-proclaims-fulfillment-of-the-scriptures_1_jf6106-0-0_low.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Parable of the Pharisee and Tax Collector",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_07_parable-of-the-pharisee-and-tax-collector_1_jf6107-0-0_low.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Miraculous Catch of Fish",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_08_miraculous-catch-of-fish_1_jf6108-0-0_low.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Jairuss Daughter Brought Back to Life",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_09_jairuss-daughter-brought-back-to-life_1_jf6109-0-0_low.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Disciples Chosen",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_10_disciples-chosen_1_jf6110-0-0_low.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Beatitudes",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_11_beatitudes_1_jf6111-0-0_low.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Sermon on the Mount",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_12_sermon-on-the-mount_1_jf6112-0-0_low.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Blessed are Those who Hear and Obey",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_13_blessed-are-those-who-hear-and-obey_1_jf6113-0-0_low.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Sinful Woman Forgiven",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_14_sinful-woman-forgiven_1_jf6114-0-0_low.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Women Disciples",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_15_women-disciples_1_jf6115-0-0_low.mp4"
+     },
+     {
+      "n": 16,
+      "title": "John the Baptist in Prison",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_16_john-the-baptist-in-prison_1_jf6116-0-0_low.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Parable of the Sower and the Seed",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_17_parable-of-the-sower-and-the-seed_1_jf6117-0-0_low.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Parable of the Lamp",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_18_parable-of-the-lamp_1_jf6118-0-0_low.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Jesus Calms the Storm",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_19_jesus-calms-the-storm_1_jf6119-0-0_low.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Healing of the Demoniac",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_20_healing-of-the-demoniac_1_jf6120-0-0_low.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Jesus Feeds 5000",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_21_jesus-feeds-5000_1_jf6121-0-0_low.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Peter Declares Jesus to be the Christ",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_22_peter-declares-jesus-to-be-the-christ_1_jf6122-0-0_low.mp4"
+     },
+     {
+      "n": 23,
+      "title": "The Transfiguration",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_23_the-transfiguration_1_jf6123-0-0_low.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Jesus Heals Boy From Evil Spirit",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_24_jesus-heals-boy-from-evil-spirit_1_jf6124-0-0_low.mp4"
+     },
+     {
+      "n": 25,
+      "title": "The Lords Prayer",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_25_the-lords-prayer_1_jf6125-0-0_low.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Teaching About Prayer and Faith",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_26_teaching-about-prayer-and-faith_1_jf6126-0-0_low.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Woe to Those who Cause Others to Sin",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_27_woe-to-those-who-cause-others-to-sin_1_jf6127-0-0_low.mp4"
+     },
+     {
+      "n": 28,
+      "title": "The Kingdom of God as a Mustard Seed",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_28_the-kingdom-of-god-as-a-mustard-seed_1_jf6128-0-0_low.mp4"
+     },
+     {
+      "n": 29,
+      "title": "Jesus Spends Time with Sinners",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_29_jesus-spends-time-with-sinners_1_jf6129-0-0_low.mp4"
+     },
+     {
+      "n": 30,
+      "title": "Healing on the Sabbath",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_30_healing-on-the-sabbath_1_jf6130-0-0_low.mp4"
+     },
+     {
+      "n": 31,
+      "title": "Parable of the Good Samaritan",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_31_parable-of-the-good-samaritan_1_jf6131-0-0_low.mp4"
+     },
+     {
+      "n": 32,
+      "title": "Healing of Bartimaeus",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_32_healing-of-bartimaeus_1_jf6132-0-0_low.mp4"
+     },
+     {
+      "n": 33,
+      "title": "Jesus and Zaccheus",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_33_jesus-and-zaccheus_1_jf6133-0-0_low.mp4"
+     },
+     {
+      "n": 34,
+      "title": "Jesus Predicts his Death and Resurrection",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_34_jesus-predicts-his-death-and-resurrection_1_jf6134-0-0_low.mp4"
+     },
+     {
+      "n": 35,
+      "title": "Jesuss Triumphal Entry",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_35_jesuss-triumphal-entry_1_jf6135-0-0_low.mp4"
+     },
+     {
+      "n": 36,
+      "title": "Jesus Weeps Over Jerusalem",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_36_jesus-weeps-over-jerusalem_1_jf6136-0-0_low.mp4"
+     },
+     {
+      "n": 37,
+      "title": "Jesus Drives Out Money Changers",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_37_jesus-drives-out-money-changers_1_jf6137-0-0_low.mp4"
+     },
+     {
+      "n": 38,
+      "title": "Widows Offering",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_38_widows-offering_1_jf6138-0-0_low.mp4"
+     },
+     {
+      "n": 39,
+      "title": "Annas Questions Jesuss Authority",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_39_annas-questions-jesuss-authority_1_jf6139-0-0_low.mp4"
+     },
+     {
+      "n": 40,
+      "title": "Parable of the Vineyard and Tenants",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_40_parable-of-the-vineyard-and-tenants_1_jf6140-0-0_low.mp4"
+     },
+     {
+      "n": 41,
+      "title": "Paying Taxes to Caesar",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_41_paying-taxes-to-caesar_1_jf6141-0-0_low.mp4"
+     },
+     {
+      "n": 42,
+      "title": "The Last Supper",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_42_the-last-supper_1_jf6142-0-0_low.mp4"
+     },
+     {
+      "n": 43,
+      "title": "Upper Room Teaching",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_43_upper-room-teaching_1_jf6143-0-0_low.mp4"
+     },
+     {
+      "n": 44,
+      "title": "Jesus is Betrayed and Arrested",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_44_jesus-is-betrayed-and-arrested_1_jf6144-0-0_low.mp4"
+     },
+     {
+      "n": 45,
+      "title": "Peter Disowns Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_45_peter-disowns-jesus_1_jf6145-0-0_low.mp4"
+     },
+     {
+      "n": 46,
+      "title": "Jesus is Mocked and Questioned",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_46_jesus-is-mocked-and-questioned_1_jf6146-0-0_low.mp4"
+     },
+     {
+      "n": 47,
+      "title": "Jesus is Brought to Pilate",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_47_jesus-is-brought-to-pilate_1_jf6147-0-0_low.mp4"
+     },
+     {
+      "n": 48,
+      "title": "Jesus is Brought to Herod",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_48_jesus-is-brought-to-herod_1_jf6148-0-0_low.mp4"
+     },
+     {
+      "n": 49,
+      "title": "Jesus is Sentenced",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_49_jesus-is-sentenced_1_jf6149-0-0_low.mp4"
+     },
+     {
+      "n": 50,
+      "title": "Jesus Carries his Cross",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_50_jesus-carries-his-cross_1_jf6150-0-0_low.mp4"
+     },
+     {
+      "n": 51,
+      "title": "Jesus is Crucified",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_51_jesus-is-crucified_1_jf6151-0-0_low.mp4"
+     },
+     {
+      "n": 52,
+      "title": "Soldiers Gamble for Jesuss Clothes",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_52_soldiers-gamble-for-jesuss-clothes_1_jf6152-0-0_low.mp4"
+     },
+     {
+      "n": 53,
+      "title": "Sign on the Cross",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_53_sign-on-the-cross_1_jf6153-0-0_low.mp4"
+     },
+     {
+      "n": 54,
+      "title": "Crucified Convicts",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_54_crucified-convicts_1_jf6154-0-0_low.mp4"
+     },
+     {
+      "n": 55,
+      "title": "Death of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_55_death-of-jesus_1_jf6155-0-0_low.mp4"
+     },
+     {
+      "n": 56,
+      "title": "Burial of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_56_burial-of-jesus_1_jf6156-0-0_low.mp4"
+     },
+     {
+      "n": 57,
+      "title": "Angels At the Tomb",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_57_angels-at-the-tomb_1_jf6157-0-0_low.mp4"
+     },
+     {
+      "n": 58,
+      "title": "The Tomb is Empty",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_58_the-tomb-is-empty_1_jf6158-0-0_low.mp4"
+     },
+     {
+      "n": 59,
+      "title": "Resurrected Jesus Appears",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_59_resurrected-jesus-appears_1_jf6159-0-0_low.mp4"
+     },
+     {
+      "n": 60,
+      "title": "Great Commission and Ascension",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_60_great-commission-and-ascension_1_jf6160-0-0_low.mp4"
+     },
+     {
+      "n": 61,
+      "title": "Invitation to Know Jesus Personally",
+      "file": "https://video.dbs.org/Jesus/chapters/pnb_panjabi-western/pnb_jesus_chapter_61_invitation-to-know-jesus-personally_1_jf6161-0-0_low.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "All chapters — low data",
+     "url": "https://download.dbs.org/Jesus/pnb_panjabi-western/pnb_jesus_chapters_low.zip"
+    },
+    {
+     "label": "All chapters — HD",
+     "url": "https://download.dbs.org/Jesus/pnb_panjabi-western/pnb_jesus_chapters_high.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/jesus/pnb_panjabi-western_jesus",
+   "lang": "pnb",
+   "read": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Western Punjabi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "pnb-film-vb-pnb-john-western-panjabi",
+   "type": "film",
+   "title": "The Visual Bible: John",
+   "native": "انجیل یوحنا",
+   "org": "Visual Bible International",
+   "desc": "The Gospel of John presented word for word in 21 chapters.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "John 1",
+      "file": "https://video.dbs.org/John/chapters/pnb-john-western-panjabi/pnb-john-western-panjabi-chapter-01.mp4"
+     },
+     {
+      "n": 2,
+      "title": "John 2",
+      "file": "https://video.dbs.org/John/chapters/pnb-john-western-panjabi/pnb-john-western-panjabi-chapter-02.mp4"
+     },
+     {
+      "n": 3,
+      "title": "John 3",
+      "file": "https://video.dbs.org/John/chapters/pnb-john-western-panjabi/pnb-john-western-panjabi-chapter-03.mp4"
+     },
+     {
+      "n": 4,
+      "title": "John 4",
+      "file": "https://video.dbs.org/John/chapters/pnb-john-western-panjabi/pnb-john-western-panjabi-chapter-04.mp4"
+     },
+     {
+      "n": 5,
+      "title": "John 5",
+      "file": "https://video.dbs.org/John/chapters/pnb-john-western-panjabi/pnb-john-western-panjabi-chapter-05.mp4"
+     },
+     {
+      "n": 6,
+      "title": "John 6",
+      "file": "https://video.dbs.org/John/chapters/pnb-john-western-panjabi/pnb-john-western-panjabi-chapter-06.mp4"
+     },
+     {
+      "n": 7,
+      "title": "John 7",
+      "file": "https://video.dbs.org/John/chapters/pnb-john-western-panjabi/pnb-john-western-panjabi-chapter-07.mp4"
+     },
+     {
+      "n": 8,
+      "title": "John 8",
+      "file": "https://video.dbs.org/John/chapters/pnb-john-western-panjabi/pnb-john-western-panjabi-chapter-08.mp4"
+     },
+     {
+      "n": 9,
+      "title": "John 9",
+      "file": "https://video.dbs.org/John/chapters/pnb-john-western-panjabi/pnb-john-western-panjabi-chapter-09.mp4"
+     },
+     {
+      "n": 10,
+      "title": "John 10",
+      "file": "https://video.dbs.org/John/chapters/pnb-john-western-panjabi/pnb-john-western-panjabi-chapter-10.mp4"
+     },
+     {
+      "n": 11,
+      "title": "John 11",
+      "file": "https://video.dbs.org/John/chapters/pnb-john-western-panjabi/pnb-john-western-panjabi-chapter-11.mp4"
+     },
+     {
+      "n": 12,
+      "title": "John 12",
+      "file": "https://video.dbs.org/John/chapters/pnb-john-western-panjabi/pnb-john-western-panjabi-chapter-12.mp4"
+     },
+     {
+      "n": 13,
+      "title": "John 13",
+      "file": "https://video.dbs.org/John/chapters/pnb-john-western-panjabi/pnb-john-western-panjabi-chapter-13.mp4"
+     },
+     {
+      "n": 14,
+      "title": "John 14",
+      "file": "https://video.dbs.org/John/chapters/pnb-john-western-panjabi/pnb-john-western-panjabi-chapter-14.mp4"
+     },
+     {
+      "n": 15,
+      "title": "John 15",
+      "file": "https://video.dbs.org/John/chapters/pnb-john-western-panjabi/pnb-john-western-panjabi-chapter-15.mp4"
+     },
+     {
+      "n": 16,
+      "title": "John 16",
+      "file": "https://video.dbs.org/John/chapters/pnb-john-western-panjabi/pnb-john-western-panjabi-chapter-16.mp4"
+     },
+     {
+      "n": 17,
+      "title": "John 17",
+      "file": "https://video.dbs.org/John/chapters/pnb-john-western-panjabi/pnb-john-western-panjabi-chapter-17.mp4"
+     },
+     {
+      "n": 18,
+      "title": "John 18",
+      "file": "https://video.dbs.org/John/chapters/pnb-john-western-panjabi/pnb-john-western-panjabi-chapter-18.mp4"
+     },
+     {
+      "n": 19,
+      "title": "John 19",
+      "file": "https://video.dbs.org/John/chapters/pnb-john-western-panjabi/pnb-john-western-panjabi-chapter-19.mp4"
+     },
+     {
+      "n": 20,
+      "title": "John 20",
+      "file": "https://video.dbs.org/John/chapters/pnb-john-western-panjabi/pnb-john-western-panjabi-chapter-20.mp4"
+     },
+     {
+      "n": 21,
+      "title": "John 21",
+      "file": "https://video.dbs.org/John/chapters/pnb-john-western-panjabi/pnb-john-western-panjabi-chapter-21.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "All chapters (ZIP)",
+     "url": "https://download.dbs.org/John/pnb-john-western-panjabi/pnb-john-western-panjabi-chapters.zip"
+    },
+    {
+     "label": "Whole film",
+     "url": "https://dbs.org/cdn/video/John/films/pnb-john-western-panjabi/pnb-john-western-panjabi.mp4"
+    }
+   ],
+   "source": "https://dbs.org/video/john/pnb-john-western-panjabi",
+   "lang": "pnb",
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Western Punjabi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "pnb-film-lumo-matthew",
+   "type": "film",
+   "title": "LUMO: The Gospel of Matthew",
+   "native": "لومو: متی دی انجیل",
+   "org": "LUMO Project",
+   "desc": "Matthew filmed word for word in 28 parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Matthew 1",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Matthew 2",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Matthew 3",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Matthew 4",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_04_360.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Matthew 5",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_05_360.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Matthew 6",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_06_360.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Matthew 7",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_07_360.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Matthew 8",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_08_360.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Matthew 9",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_09_360.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Matthew 10",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_10_360.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Matthew 11",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_11_360.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Matthew 12",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_12_360.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Matthew 13",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_13_360.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Matthew 14",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_14_360.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Matthew 15",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_15_360.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Matthew 16",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_16_360.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Matthew 17",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_17_360.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Matthew 18",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_18_360.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Matthew 19",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_19_360.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Matthew 20",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_20_360.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Matthew 21",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_21_360.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Matthew 22",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_22_360.mp4"
+     },
+     {
+      "n": 23,
+      "title": "Matthew 23",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_23_360.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Matthew 24",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_24_360.mp4"
+     },
+     {
+      "n": 25,
+      "title": "Matthew 25",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_25_360.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Matthew 26",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_26_360.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Matthew 27",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_27_360.mp4"
+     },
+     {
+      "n": 28,
+      "title": "Matthew 28",
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pnb_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Matthew_Punjabi-New-Testament-Revised-2020_28_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-matthew/pnb_punjabi-western_matthew",
+   "lang": "pnb",
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Western Punjabi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "pnb-film-lumo-mark",
+   "type": "film",
+   "title": "LUMO: The Gospel of Mark",
+   "native": "لومو: مرقس دی انجیل",
+   "org": "LUMO Project",
+   "desc": "Mark filmed word for word in 16 parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Mark 1",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pnb_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Mark 2",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pnb_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Mark 3",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pnb_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Mark 4",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pnb_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_04_360.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Mark 5",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pnb_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_05_360.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Mark 6",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pnb_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_06_360.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Mark 7",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pnb_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_07_360.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Mark 8",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pnb_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_08_360.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Mark 9",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pnb_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_09_360.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Mark 10",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pnb_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_10_360.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Mark 11",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pnb_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_11_360.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Mark 12",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pnb_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_12_360.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Mark 13",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pnb_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_13_360.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Mark 14",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pnb_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_14_360.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Mark 15",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pnb_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_15_360.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Mark 16",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pnb_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Mark_Punjabi-New-Testament-Revised-2020_16_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-mark/pnb_punjabi-western_mark",
+   "lang": "pnb",
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Western Punjabi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "pnb-film-lumo-luke",
+   "type": "film",
+   "title": "LUMO: The Gospel of Luke",
+   "native": "لومو: لوقا دی انجیل",
+   "org": "LUMO Project",
+   "desc": "Luke filmed word for word in 24 parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Luke 1",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pnb_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Luke 2",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pnb_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Luke 3",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pnb_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Luke 4",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pnb_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_04_360.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Luke 5",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pnb_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_05_360.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Luke 6",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pnb_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_06_360.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Luke 7",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pnb_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_07_360.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Luke 8",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pnb_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_08_360.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Luke 9",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pnb_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_09_360.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Luke 10",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pnb_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_10_360.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Luke 11",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pnb_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_11_360.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Luke 12",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pnb_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_12_360.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Luke 13",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pnb_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_13_360.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Luke 14",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pnb_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_14_360.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Luke 15",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pnb_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_15_360.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Luke 16",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pnb_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_16_360.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Luke 17",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pnb_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_17_360.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Luke 18",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pnb_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_18_360.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Luke 19",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pnb_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_19_360.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Luke 20",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pnb_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_20_360.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Luke 21",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pnb_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_21_360.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Luke 22",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pnb_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_22_360.mp4"
+     },
+     {
+      "n": 23,
+      "title": "Luke 23",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pnb_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_23_360.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Luke 24",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pnb_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_Luke_Punjabi-New-Testament-Revised-2020_24_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-luke/pnb_punjabi-western_luke",
+   "lang": "pnb",
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Western Punjabi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "pnb-film-lumo-john",
+   "type": "film",
+   "title": "LUMO: The Gospel of John",
+   "native": "لومو: یوحنا دی انجیل",
+   "org": "LUMO Project",
+   "desc": "John filmed word for word in 21 parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "John 1",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pnb_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "John 2",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pnb_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "John 3",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pnb_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "John 4",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pnb_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_04_360.mp4"
+     },
+     {
+      "n": 5,
+      "title": "John 5",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pnb_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_05_360.mp4"
+     },
+     {
+      "n": 6,
+      "title": "John 6",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pnb_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_06_360.mp4"
+     },
+     {
+      "n": 7,
+      "title": "John 7",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pnb_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_07_360.mp4"
+     },
+     {
+      "n": 8,
+      "title": "John 8",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pnb_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_08_360.mp4"
+     },
+     {
+      "n": 9,
+      "title": "John 9",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pnb_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_09_360.mp4"
+     },
+     {
+      "n": 10,
+      "title": "John 10",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pnb_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_10_360.mp4"
+     },
+     {
+      "n": 11,
+      "title": "John 11",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pnb_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_11_360.mp4"
+     },
+     {
+      "n": 12,
+      "title": "John 12",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pnb_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_12_360.mp4"
+     },
+     {
+      "n": 13,
+      "title": "John 13",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pnb_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_13_360.mp4"
+     },
+     {
+      "n": 14,
+      "title": "John 14",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pnb_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_14_360.mp4"
+     },
+     {
+      "n": 15,
+      "title": "John 15",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pnb_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_15_360.mp4"
+     },
+     {
+      "n": 16,
+      "title": "John 16",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pnb_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_16_360.mp4"
+     },
+     {
+      "n": 17,
+      "title": "John 17",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pnb_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_17_360.mp4"
+     },
+     {
+      "n": 18,
+      "title": "John 18",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pnb_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_18_360.mp4"
+     },
+     {
+      "n": 19,
+      "title": "John 19",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pnb_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_19_360.mp4"
+     },
+     {
+      "n": 20,
+      "title": "John 20",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pnb_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_20_360.mp4"
+     },
+     {
+      "n": 21,
+      "title": "John 21",
+      "file": "https://video.dbs.org/Lumo-John/films_low/pnb_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_low/pnb_LUMO_Punjabi-Western_John_Punjabi-New-Testament-Revised-2020_21_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-john/pnb_punjabi-western_john",
+   "lang": "pnb",
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Western Punjabi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "pnb-film-ibible",
+   "type": "film",
+   "title": "iBible: Salvation Story",
+   "native": "نجات دی کہانی",
+   "org": "RevelationMedia",
+   "duration": "9 min",
+   "desc": "An animated presentation of the Bible's message of salvation.",
+   "play": {
+    "kind": "file",
+    "hd": "https://dbs.org/cdn/video/ibible/films/pnb-punjabi_western-ibible_salvation-hd.mp4",
+    "sd": "https://dbs.org/cdn/video/ibible/films_low/pnb-punjabi_western-ibible_salvation-sd.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Film (ZIP)",
+     "url": "https://download.dbs.org/ibible/pnb-punjabi_western-ibible_salvation.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/ibible/pnb-punjabi_western-ibible_salvation",
+   "lang": "pnb",
+   "read": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Western Punjabi",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "pnb-ac-grn",
+   "type": "audio",
+   "title": "Western Punjabi Scripture Recordings",
+   "native": "پنجابی ریکارڈنگاں",
+   "org": "Global Recordings Network",
+   "stats": "110 recordings · 234.8 MB",
+   "desc": "Good News and Words of Life in Western Punjabi varieties.",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/pnb_GlobalRecordings_punjabi_western/Punjabi%20Western%20Taxila/Punjabi%20Western%20Taxila%20Words%20of%20Life%2006321/Punjabi%20Western%20Taxila%20Words%20of%20Life%20001%20Creation%20and%20Redemption%20of%20Man%20_%20What%20is%20it%20Abou%2006321.mp3"
+   },
+   "downloads": [
+    {
+     "label": "Whole collection — good quality",
+     "url": "https://media.dbs.org/audio/grn/pnb_GlobalRecordings_punjabi_western_high.zip"
+    },
+    {
+     "label": "Whole collection — low data",
+     "url": "https://media.dbs.org/audio/grn/pnb_GlobalRecordings_punjabi_western_low.zip"
+    }
+   ],
+   "source": "https://dbs.org/audio/collections/grn/pnb_GlobalRecordings_punjabi_western",
+   "lang": "pnb",
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Western Punjabi",
+   "typeLabel": "Audio Collections"
+  },
+  {
+   "id": "pnb-ac-soj",
+   "type": "audio",
+   "title": "Story of Jesus",
+   "native": "یسوع دی کہانی",
+   "org": "Story of Jesus",
+   "stats": "7 recordings · 124.0 MB",
+   "desc": "The life of Jesus as an audio drama in 6 parts, and as one recording.",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/soj/pnb_StoryJesus_panjabi_western_full.mp3"
+   },
+   "downloads": [
+    {
+     "label": "All 6 parts (ZIP)",
+     "url": "https://media.dbs.org/audio/soj/pnb_StoryJesus_panjabi_western.zip"
+    },
+    {
+     "label": "Whole recording (ZIP)",
+     "url": "https://media.dbs.org/audio/soj/pnb_StoryJesus_panjabi_western_full.zip"
+    }
+   ],
+   "source": "https://dbs.org/audio/collections/soj/pnb_StoryJesus_panjabi_western",
+   "lang": "pnb",
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Western Punjabi",
+   "typeLabel": "Audio Collections"
+  },
+  {
+   "id": "pnb-hist-punjabi-persian-new-testament-print",
+   "lang": "pnb",
+   "type": "historic",
+   "title": "Punjabi Persian New Testament",
+   "org": "Digital Bible Society Archive",
+   "year": null,
+   "cover": "https://scripture.dbs.org/covers/small/Punjabi-Persian-New-Testament-print.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Punjabi-Persian-New-Testament-print.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Punjabi-Persian-New-Testament-print.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Punjabi-Persian-New-Testament-print",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Western Punjabi",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "pnb-text-pnbpov",
+   "lang": "pnb",
+   "type": "scripture",
+   "title": "Punjabi Pavitra Bible 1945 Edition",
+   "native": "ਪੰਜਾਬੀ ਬਾਈਬਲ 1945",
+   "year": 1945,
+   "org": "Digital Bible Society",
+   "scope": "",
+   "desc": "The full text, to read in the app or save.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://bibles.dbs.org/PNBPOV/pdf/PNBPOV.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://bibles.dbs.org/PNBPOV/pdf/PNBPOV.pdf"
+    },
+    {
+     "label": "EPUB",
+     "url": "https://bibles.dbs.org/PNBPOV/epub/PNBPOV.epub"
+    }
+   ],
+   "source": "https://dbs.org/bibles/PNBPOV",
+   "play": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Western Punjabi",
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "pnb-text-pnboub",
+   "lang": "pnb",
+   "type": "scripture",
+   "title": "The Open Eastern Punjabi Bible",
+   "native": "ਪੰਜਾਬੀ ਬਾਈਬਲ",
+   "year": 2017,
+   "org": "Digital Bible Society",
+   "scope": "",
+   "desc": "The full text, to read in the app or save.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://bibles.dbs.org/PNBOUB/pdf/PNBOUB.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://bibles.dbs.org/PNBOUB/pdf/PNBOUB.pdf"
+    },
+    {
+     "label": "EPUB",
+     "url": "https://bibles.dbs.org/PNBOUB/epub/PNBOUB.epub"
+    }
+   ],
+   "source": "https://dbs.org/bibles/PNBOUB",
+   "play": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Western Punjabi",
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "pnb-text-online",
+   "lang": "pnb",
+   "type": "scripture",
+   "title": "Western Punjabi Bibles to read online",
+   "native": null,
+   "org": "Various publishers",
+   "desc": "4 Western Punjabi translations that their publishers host themselves. They open in a browser and need a connection.",
+   "links": [
+    {
+     "label": "Persian Punjabi New Testament (1931)",
+     "url": "https://dbs.org/bibles/PNBPNT"
+    },
+    {
+     "label": "Punjabi Common Language Version (2008)",
+     "url": "https://dbs.org/bibles/PNBCLV"
+    },
+    {
+     "label": "Persian Gospels and Acts (1927)",
+     "url": "https://dbs.org/bibles/PNBBFBS"
+    },
+    {
+     "label": "Punjabi New Testament, Revised 2020 (2020)",
+     "url": "https://dbs.org/bibles/PNBPBS"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/pnb",
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Western Punjabi",
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "pnb-link-arc-gt",
+   "lang": "pnb",
+   "type": "link",
+   "title": "Jesus Film Project",
+   "org": "Jesus Film Project",
+   "desc": "1 Western Punjabi items. Full films on the publisher's own player.",
+   "links": [
+    {
+     "label": "JESUS",
+     "url": "https://arc.gt/ex0nc?apiSessionId=5f8762856e0be8.16720039"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Western Punjabi",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "pnb-link-globalrecordings-net",
+   "lang": "pnb",
+   "type": "link",
+   "title": "Global Recordings Network",
+   "org": "Global Recordings Network",
+   "desc": "2 Western Punjabi items. Scripture-based recordings, told simply. Each programme plays on the publisher's own site.",
+   "links": [
+    {
+     "label": "Words of Life",
+     "url": "https://globalrecordings.net/en/program/6321"
+    },
+    {
+     "label": "Words of Life w/ PUNJABI: Majhi",
+     "url": "https://globalrecordings.net/en/program/25770"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Western Punjabi",
+   "typeLabel": "Partner Links"
+  }
+ ]
+}

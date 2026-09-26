@@ -75,6 +75,35 @@ LANGUAGES = {
         "online_native": "ऑनलाइन पढ़ने के लिए हिन्दी बाइबलें",
         "group_native": {"Moksh: Story": "मोक्ष की कहानियाँ"},
     },
+    # Punjabi is two shelves, not one: the same spoken language, but India
+    # writes it in Gurmukhi and Pakistan in Shahmukhi (Arabic script), and a
+    # reader of one generally cannot read the other.
+    "pan": {
+        "name": "Eastern Punjabi", "native": "ਪੰਜਾਬੀ", "script": "guru", "dir": "ltr", "font": "gurmukhi",
+        "speakers": "~36 million", "region": "Punjab, India",
+        "blurb": "Punjabi as spoken and written in India, in the Gurmukhi script.",
+        "isos": ["pan"],
+        "historic": "punjabi",
+        "historic_prefix": "Punjabi-",
+        "historic_exclude": {"Punjabi-Persian-New-Testament-print"},
+    },
+    "pnb": {
+        "name": "Western Punjabi", "native": "پنجابی", "script": "arab", "dir": "rtl", "font": "naskh",
+        "speakers": "~90 million", "region": "Punjab, Pakistan",
+        "blurb": "Punjabi as spoken in Pakistan, written in Shahmukhi, an Arabic script.",
+        "isos": ["pnb"],
+        "historic": "punjabi-persian",
+        "historic_prefix": "Punjabi-Persian-",
+    },
+    "npi": {
+        "name": "Nepali", "native": "नेपाली", "script": "deva", "dir": "ltr", "font": "devanagari",
+        "speakers": "~32 million", "region": "Nepal, India & Bhutan",
+        "blurb": "The national language of Nepal, written in the Devanagari script.",
+        "isos": ["npi", "nep"],
+        "variants": {"npi": "", "nep": ""},
+        "historic": "nepali",
+        "historic_prefix": "Nepali-",
+    },
 }
 
 # Publishers whose pages are worth listing but cannot be downloaded.
@@ -87,6 +116,13 @@ PUBLISHER = {
                      "Teaching and Scripture resources from the publisher."),
     "www.bible.com": ("YouVersion", "Read online at bible.com."),
     "bible.com": ("YouVersion", "Read online at bible.com."),
+    "bibleproject.com": ("BibleProject", "Animated videos on the books and themes of the Bible."),
+    "www.mars-hill.org": ("Mars Hill Productions", "The HOPE and related films from the producer."),
+    "www.youtube.com": ("YouTube", "Videos hosted on YouTube."),
+    "youtu.be": ("YouTube", "Videos hosted on YouTube."),
+    "my.pcloud.com": ("Shared downloads", "Files shared through pCloud."),
+    "content.dbs.org": ("Digital Bible Society", "More from the Digital Bible Society."),
+    "resources.lifewords.global": ("LifeWords", "Scripture booklets from LifeWords."),
 }
 
 
@@ -456,6 +492,224 @@ EXTRA = {
     ],
 }
 
+
+# ------------------------------------------------ Punjabi (both scripts), Nepali
+# Read off each film's page on dbs.org (2026-09-25) and written as the patterns
+# the files follow. Every chapter URL is probed when the catalogue is built.
+
+def _jf_chapters(iso, folder, hyphen=False):
+    """JESUS in 61 chapters. Some dubs hyphenate the slug and the tail."""
+    from et.slugs import JESUS_SLUGS, titlecase
+    tail = "-0-0" if hyphen else "_0_0"
+    return {"kind": "chapters", "base": "", "items": [
+        {"n": i + 1, "title": titlecase(sl),
+         "file": f"{V}/Jesus/chapters/{folder}/{iso}_jesus_chapter_{i+1:02d}_"
+                 f"{sl.replace('_', '-') if hyphen else sl}_1_jf61{i+1:02d}{tail}_low.mp4"}
+        for i, sl in enumerate(JESUS_SLUGS)]}
+
+def _john49(iso, folder):
+    from et.slugs import JOHN_SLUGS, titlecase
+    return {"kind": "chapters", "base": "", "items": [
+        {"n": i + 1, "title": titlecase(sl),
+         "file": f"{V}/John/chapters/{folder}/{iso}_Gospel_of_John_chapter_{i+1:02d}_{sl}_2_GOJ49{i+1:02d}_0_0_low.mp4"}
+        for i, sl in enumerate(JOHN_SLUGS)]}
+
+def _jesus_film(code, iso, folder, native, page, scope=None, hyphen=False, label_all="All chapters"):
+    return dict(id=f"{code}-film-jesus" + (f"-{slug_of(scope)}" if scope else ""), type="film",
+                title="JESUS" + (f" ({scope})" if scope else ""), native=native, org="Jesus Film Project",
+                year="1979", scope=scope,
+                desc="The life of Jesus from the Gospel of Luke, divided into 61 chapters.",
+                play=_jf_chapters(iso, folder, hyphen),
+                downloads=[{"label": f"{label_all} — low data", "url": f"{DL}/Jesus/{folder}/{iso}_jesus_chapters_low.zip"},
+                           {"label": f"{label_all} — HD", "url": f"{DL}/Jesus/{folder}/{iso}_jesus_chapters_high.zip"}],
+                source=f"https://dbs.org/video/jesus/{page}")
+
+def _visual_bible(code, book, dirname, name, n, native, page_kind):
+    """The Visual Bible: word-for-word Matthew, Acts or John, one file a chapter."""
+    label = {"Matthew": "Matthew", "Acts_VB": "Acts", "John": "John"}[dirname]
+    return dict(id=f"{code}-film-vb-{slug_of(name)}", type="film", title=f"The Visual Bible: {book}",
+                native=native, org="Visual Bible International",
+                desc=f"The book of {book} presented word for word in {n} chapters.",
+                play=_chapters(f"{V}/{dirname}/chapters/{name}/{name}-chapter-{{i:02d}}.mp4", n, label),
+                downloads=[{"label": "All chapters (ZIP)", "url": f"{DL}/{dirname}/{name}/{name}-chapters.zip"},
+                           {"label": "Whole film", "url": f"https://dbs.org/cdn/video/{dirname}/films/{name}/{name}.mp4"}],
+                source=f"https://dbs.org/video/{page_kind}/{name}")
+
+def _lumo_film(code, gospel, folder, stem, n, native, page, label=None, parts=False):
+    return dict(id=f"{code}-film-lumo-{gospel.lower()}", type="film",
+                title=f"LUMO: {'The Gospel of ' if gospel in ('Matthew', 'Mark', 'Luke', 'John') else ''}"
+                      f"{'Acts of the Apostles' if gospel == 'Acts' else 'The Covenant' if gospel == 'Covenant' else gospel}",
+                native=native, org="LUMO Project",
+                desc=(f"{gospel} filmed word for word in {n} parts." if not parts
+                      else f"In {n} parts."),
+                play=_chapters(f"{V}/Lumo-{gospel}/films_low/{folder}/{stem}_{{i:02d}}_360.mp4", n, label or gospel),
+                source=f"https://dbs.org/video/lumo-{gospel.lower()}/{page}")
+
+def _ibible(code, name, native):
+    return dict(id=f"{code}-film-ibible", type="film", title="iBible: Salvation Story", native=native,
+                org="RevelationMedia", duration="9 min",
+                desc="An animated presentation of the Bible's message of salvation.",
+                play={"kind": "file", "hd": f"https://dbs.org/cdn/video/ibible/films/{name}-hd.mp4",
+                      "sd": f"https://dbs.org/cdn/video/ibible/films_low/{name}-sd.mp4"},
+                downloads=[{"label": "Film (ZIP)", "url": f"{DL}/ibible/{name}.zip"}],
+                source=f"https://dbs.org/video/ibible/{name}")
+
+def _bible_project(code, folder, iso, kind, native):
+    if kind == "overview":
+        dl = [{"label": f"{t} overviews{q}", "url": f"{DL}/BP/{folder}/{iso}_BibleProject_Book_Overview_{t}{s}.zip"}
+              for t in ("OT", "NT") for q, s in ((" — low data", "_low"), (" — HD", ""))]
+        title, desc = "BibleProject: Overviews", "Animated overviews of the books of the Bible."
+    else:
+        dl = [{"label": f"Theme videos{q}", "url": f"{DL}/BP/{folder}/{iso}_BibleProject_Theme_Video{s}.zip"}
+              for q, s in ((" — low data", "_low"), (" — HD", ""))]
+        if iso == "pan":
+            dl += [{"label": f"Word studies{q}", "url": f"{DL}/BP/{folder}/{iso}_BibleProject_Word_Study{s}.zip"}
+                   for q, s in ((" — low data", "_low"), (" — HD", ""))]
+        title, desc = "BibleProject: Themes", "Short animated videos on the big themes of Scripture."
+    return dict(id=f"{code}-film-bp-{kind}", type="film", title=title, native=native, org="BibleProject",
+                desc=desc + " Saved as ZIP collections.", downloads=dl,
+                source=f"https://dbs.org/video/bp/{folder}-{'overview' if kind == 'overview' else 'themes'}")
+
+def _publisher_only(code, rows):
+    """Films DBS lists but plays only in the publisher's own player."""
+    return [dict(id=f"{code}-film-{slug}", type="film", title=title, native=native, org=org,
+                 desc=desc, links=[{"label": "Watch on DBS", "url": url}], source=url)
+            for slug, title, native, org, desc, url in rows]
+
+def slug_of(s):
+    return re.sub(r"[^a-z0-9]+", "-", (s or "").lower()).strip("-")
+
+
+EXTRA["pan"] = [
+    dict(id="pan-film-john", type="film", title="Gospel of John", native="ਯੂਹੰਨਾ ਦੀ ਇੰਜੀਲ",
+         org="Jesus Film Project", desc="The Gospel of John in 49 short chapters.",
+         play=_john49("pan", "pan_punjabi"),
+         downloads=[{"label": "All chapters — low data", "url": f"{DL}/John/pan_punjabi/pan_Gospel_of_John_chapters_low.zip"},
+                    {"label": "All chapters — HD", "url": f"{DL}/John/pan_punjabi/pan_Gospel_of_John_chapters_high.zip"}],
+         source="https://dbs.org/video/john/pan_punjabi_gospel_of_john"),
+    _jesus_film("pan", "pan", "pan_punjabi", "ਯਿਸੂ", "pan_punjabi_jesus"),
+    _lumo_film("pan", "Mark", "pan_Punjabi-Eastern_Mark_Biblica_low", "pan_LUMO_Punjabi-Eastern_Mark_Biblica",
+               16, "ਲੂਮੋ: ਮਰਕੁਸ ਦੀ ਇੰਜੀਲ", "pan_punjabi-eastern_mark"),
+    _visual_bible("pan", "Matthew", "Matthew", "pan-matthew-vb-panjabi", 28, "ਦ੍ਰਿਸ਼ ਬਾਈਬਲ: ਮੱਤੀ", "matthew"),
+    _visual_bible("pan", "Matthew", "Matthew", "pan-matthew-vb-punjabi", 28, "ਦ੍ਰਿਸ਼ ਬਾਈਬਲ: ਮੱਤੀ", "matthew"),
+    _visual_bible("pan", "Acts", "Acts_VB", "pan-acts-vb-panjabi", 28, "ਦ੍ਰਿਸ਼ ਬਾਈਬਲ: ਰਸੂਲਾਂ ਦੇ ਕਰਤੱਬ", "acts_vb"),
+    _ibible("pan", "pan-punjabi_eastern-ibible_salvation", "ਮੁਕਤੀ ਦੀ ਕਹਾਣੀ"),
+    _bible_project("pan", "pan-punjabi", "pan", "overview", "ਬਾਈਬਲ ਦੀ ਰੂਪ-ਰੇਖਾ"),
+    _bible_project("pan", "pan-punjabi", "pan", "themes", "ਬਾਈਬਲ ਦੇ ਵਿਸ਼ੇ"),
+    *_publisher_only("pan", [
+        ("magdalena", "Magdalena", "ਮਗਦਲੀਨੀ", "Jesus Film Project", "The story of Jesus through the eyes of Mary Magdalene.", "https://dbs.org/video/magdalena/pan_punjabi_magdalena"),
+        ("story-jesus", "Story of Jesus for Children", "ਬੱਚਿਆਂ ਲਈ ਯਿਸੂ ਦੀ ਕਹਾਣੀ", "Jesus Film Project", "The story of Jesus told for children.", "https://dbs.org/video/storyjesus/pan_punjabi_story_of_jesus_for_children"),
+        ("savior", "The Savior", "ਮੁਕਤੀਦਾਤਾ", "Jesus Film Project", "The life of Jesus.", "https://dbs.org/video/savior/pan_punjabi_the_savior"),
+    ]),
+]
+# The Visual Bible's two Punjabi Matthews are different recordings; say which.
+EXTRA["pan"][3]["title"] += " (Panjabi)"
+EXTRA["pan"][4]["title"] += " (Punjabi)"
+
+EXTRA["pnb"] = [
+    _jesus_film("pnb", "pnb", "pnb_panjabi-western", "یسوع", "pnb_panjabi-western_jesus", hyphen=True),
+    _visual_bible("pnb", "John", "John", "pnb-john-western-panjabi", 21, "انجیل یوحنا", "john"),
+    *[_lumo_film("pnb", g, f"pnb_Punjabi-Western_{g}_Punjabi-New-Testament-Revised-2020_low",
+                 f"pnb_LUMO_Punjabi-Western_{g}_Punjabi-New-Testament-Revised-2020", n, native,
+                 f"pnb_punjabi-western_{g.lower()}")
+      for g, n, native in (("Matthew", 28, "لومو: متی دی انجیل"), ("Mark", 16, "لومو: مرقس دی انجیل"),
+                           ("Luke", 24, "لومو: لوقا دی انجیل"), ("John", 21, "لومو: یوحنا دی انجیل"))],
+    _ibible("pnb", "pnb-punjabi_western-ibible_salvation", "نجات دی کہانی"),
+]
+EXTRA["pnb"][1]["desc"] = "The Gospel of John presented word for word in 21 chapters."
+
+EXTRA["npi"] = [
+    _jesus_film("npi", "npi", "npi_nepali", "येशू", "npi_nepali_jesus"),
+    # Five western-Nepal dialect dubs. Named in the title, or the shelf shows
+    # six identical "येशू" posters in a row.
+    *[_jesus_film("npi", "npi", f"npi_{d.lower()}", f"येशू ({dn})", f"npi_{d.lower()}_jesus", scope=d)
+      for d, dn in (("Acchami", "अछामी"), ("Baitadeli", "बैतडेली"), ("Bajhangi", "बझाङी"),
+                    ("Bajureli", "बाजुरेली"), ("Darchuleli", "दार्चुलेली"))],
+    dict(id="npi-film-hope", type="film", title="The HOPE", native="आशा", org="Mars Hill Productions",
+         desc="God's redemptive story from creation to Christ in 36 events.",
+         play=_chapters(f"{V}/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_{{i:02d}}_low.mp4", 36, "Event"),
+         downloads=[{"label": "All events (ZIP)", "url": f"{DL}/HOPE/npi_nepali_the_hope_events.zip"},
+                    {"label": "Whole film", "url": "https://dbs.org/cdn/video/HOPE/films/npi_nepali_the_hope.mp4"}],
+         source="https://dbs.org/video/hope/npi_nepali_the_hope"),
+    dict(id="npi-film-creation-christ", type="film", title="Creation to Christ", native="सृष्टिदेखि ख्रीष्टसम्म",
+         org="Create International", duration="20 min",
+         desc="The Bible story from creation to Christ, in seven parts.",
+         play=_chapters(f"{V}/C2C/films/npi-creation-nepali/npi_Creation_To_Christ_Nepali_PART_{{i}}.mp4", 7, "Part"),
+         downloads=[{"label": "Whole film", "url": "https://dbs.org/cdn/video/C2C/films/npi-creation-nepali/npi_Creation_To_Christ_Nepali_FULL.mp4"},
+                    {"label": "Whole film — low data", "url": "https://dbs.org/cdn/video/C2C/films/npi-creation-nepali/npi_Creation_To_Christ_Nepali_FULL_low.mp4"}],
+         source="https://dbs.org/video/c2c/npi-creation-nepali"),
+    _ibible("npi", "npi-nepali-ibible_salvation", "मुक्तिको कथा"),
+    # DBS catalogues these under the macrolanguage code (nep); to a reader
+    # they are the same Nepali, so they sit on the same shelf.
+    *[_lumo_film("npi", g, f"nep_Nepali_{g}_Nepali-New-Revised-Version-2012_low",
+                 f"nep_LUMO_Nepali_{g}_Nepali-New-Revised-Version-2012", n, native, f"nep_nepali_{g.lower()}")
+      for g, n, native in (("Mark", 16, "लुमो: मर्कूसको सुसमाचार"), ("Luke", 24, "लुमो: लूकाको सुसमाचार"),
+                           ("John", 21, "लुमो: यूहन्नाको सुसमाचार"))],
+    _lumo_film("npi", "Acts", "nep_Nepali_Acts_Nepali-Contemporary-Version-2024-Holy-Bible",
+               "nep_Acts_Nepali_Nepali-Contemporary-Version-2024-Holy-Bible", 4, "लुमो: प्रेरितहरूका काम",
+               "nep_nepali_acts", label="Part", parts=True),
+    _lumo_film("npi", "Covenant", "nep_Nepali_Covenant_Nepali-New-Revised-Version-2012",
+               "nep_Covenant_Nepali_Nepali-New-Revised-Version-2012", 12, "लुमो: करार",
+               "nep_nepali_covenant", label="Part", parts=True),
+    _visual_bible("npi", "Matthew", "Matthew", "nep-matthew-vb-nepali", 28, "दृश्य बाइबल: मत्ती", "matthew"),
+    _visual_bible("npi", "Acts", "Acts_VB", "nep-acts-vb-nepali", 28, "दृश्य बाइबल: प्रेरितहरूका काम", "acts_vb"),
+    _bible_project("npi", "nep-nepali", "nep", "overview", "बाइबलको रूपरेखा"),
+    _bible_project("npi", "nep-nepali", "nep", "themes", "बाइबलका विषयहरू"),
+    *_publisher_only("npi", [
+        ("magdalena", "Magdalena", "मग्दलीनी", "Jesus Film Project", "The story of Jesus through the eyes of Mary Magdalene.", "https://dbs.org/video/magdalena/npi_nepali_magdalena"),
+        ("story-jesus", "Story of Jesus for Children", "बालबालिकाका लागि येशूको कथा", "Jesus Film Project", "The story of Jesus told for children.", "https://dbs.org/video/storyjesus/npi_nepali_story_of_jesus_for_children"),
+        ("savior", "The Savior", "मुक्तिदाता", "Jesus Film Project", "The life of Jesus.", "https://dbs.org/video/savior/npi_nepali_the_savior"),
+        ("deaf-gospel", "Rescue Project Deaf Gospel", "बहिराहरूका लागि सुसमाचार", "Jesus Film Project", "A visual Gospel presentation for Deaf audiences.", "https://dbs.org/video/deafproject/npi_nepali_rescue_project_deaf_gospel"),
+    ]),
+]
+
+
+def _grn(code, slug, title, native, stats, desc, sample):
+    return dict(id=f"{code}-ac-grn" + ("-macro" if "macrolanguage" in slug else ""), type="audio", title=title,
+                native=native, org="Global Recordings Network", stats=stats, desc=desc,
+                play={"kind": "audio-collection", "sample": f"{MD}/audio/grn/{slug}/{sample}"},
+                downloads=[{"label": "Whole collection — good quality", "url": f"{MD}/audio/grn/{slug}_high.zip"},
+                           {"label": "Whole collection — low data", "url": f"{MD}/audio/grn/{slug}_low.zip"}],
+                source=f"https://dbs.org/audio/collections/grn/{slug}")
+
+def _soj(code, slug, native, stats, parts):
+    return dict(id=f"{code}-ac-soj", type="audio", title="Story of Jesus", native=native,
+                org="Story of Jesus", stats=stats,
+                desc=f"The life of Jesus as an audio drama in {parts} parts, and as one recording.",
+                play={"kind": "audio-collection", "sample": f"{MD}/audio/soj/{slug}_full.mp3"},
+                downloads=[{"label": f"All {parts} parts (ZIP)", "url": f"{MD}/audio/soj/{slug}.zip"},
+                           {"label": "Whole recording (ZIP)", "url": f"{MD}/audio/soj/{slug}_full.zip"}],
+                source=f"https://dbs.org/audio/collections/soj/{slug}")
+
+EXTRA["pan"] += [
+    _grn("pan", "pan_GlobalRecordings_punjabi_eastern", "Punjabi Scripture Recordings", "ਪੰਜਾਬੀ ਰਿਕਾਰਡਿੰਗਾਂ",
+         "523 recordings · 1.0 GB", "Good News, Words of Life, Look Listen & Live and Bible teaching across Punjabi varieties.",
+         "Panjabi%20Bhatyiana/Panjabi%20Bhatyiana%20Good%20News%2064883/Panjabi%20Bhatyiana%20Good%20News%20001%20Introduction%2064883.mp3"),
+    _soj("pan", "pan_StoryJesus_punjabi", "ਯਿਸੂ ਦੀ ਕਹਾਣੀ", "8 recordings · 46.6 MB", 7),
+]
+EXTRA["pnb"] += [
+    _grn("pnb", "pnb_GlobalRecordings_punjabi_western", "Western Punjabi Scripture Recordings", "پنجابی ریکارڈنگاں",
+         "110 recordings · 234.8 MB", "Good News and Words of Life in Western Punjabi varieties.",
+         "Punjabi%20Western%20Taxila/Punjabi%20Western%20Taxila%20Words%20of%20Life%2006321/"
+         "Punjabi%20Western%20Taxila%20Words%20of%20Life%20001%20Creation%20and%20Redemption%20of%20Man%20_%20What%20is%20it%20Abou%2006321.mp3"),
+    _soj("pnb", "pnb_StoryJesus_panjabi_western", "یسوع دی کہانی", "7 recordings · 124.0 MB", 6),
+]
+EXTRA["npi"] += [
+    _grn("npi", "npi_GlobalRecordings_nepali", "Nepali Scripture Recordings", "नेपाली रेकर्डिङहरू",
+         "931 recordings · 2.8 GB", "Good News, Words of Life, songs and Bible teaching across Nepali varieties.",
+         "Achhami/Achhami%20Raamro%20Khabar%2065784/Achhami%20Raamro%20Khabar%20001%20Introduction%20_%20Picture%201%20In%20the%20Beginning%2065784.mp3"),
+    _grn("npi", "nep_GlobalRecordings_nepali-macrolanguage", "Nepali Scripture Recordings (all varieties)", "नेपाली रेकर्डिङहरू — सबै भाषिका",
+         "996 recordings · 2.9 GB", "The wider Global Recordings set, including neighbouring languages that use Nepali.",
+         "Achhami/Achhami%20Raamro%20Khabar%2065784/Achhami%20Raamro%20Khabar%20001%20Introduction%20_%20Picture%201%20In%20the%20Beginning%2065784.mp3"),
+    _soj("npi", "nep_StoryJesus_nepali", "येशूको कथा", "9 recordings · 204.2 MB", 8),
+    dict(id="npi-ac-srun", type="audio", title="Bible Story Set", native="बाइबल कथाहरू", org="StoryRunners",
+         stats="48 recordings · 144.0 MB", desc="The Bible told as a set of short stories, from Creation onward.",
+         play={"kind": "audio-collection", "sample": f"{MD}/audio/srun/npi_storyset_nepali/"
+               "Nepali-01-%E0%A4%B8%E0%A4%82%E0%A4%B8%E0%A4%BE%E0%A4%B0%E0%A4%95%E0%A5%8B%20%E0%A4%B8%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%9F%E0%A4%BF-Creation.mp3"},
+         downloads=[{"label": "Whole set (ZIP)", "url": "https://storysets.s3.amazonaws.com/npi/Nepali_Nepal_Storyset.zip"}],
+         source="https://dbs.org/audio/collections/srun/npi_storyset_nepali"),
+]
+
 SERIES = re.compile(r"^(?P<name>.+?)\s+(?P<n>\d+)\s*[-–—]\s*(?P<part>.+)$")
 
 
@@ -579,6 +833,12 @@ def build(code, spec):
         play = ({"kind": "audio-collection", "sample": url} if kind == "audio"
                 else {"kind": "file", "hd": url})
         scope = "Henna version" if "-Henna." in url else variant(iso)
+        # A subtitled copy has the same vernacular title as the plain one; say
+        # which is which, or the shelf shows two identical posters.
+        if "engsub" in url.lower():
+            if "engsub" not in title.lower():
+                title += " (EngSub)"
+            native = f"{native} (EngSub)" if native else native
         out.append(dict(
             id=f"{code}-{kind}-{slug}-{iso}", lang=code, type=kind, title=title, native=native or None,
             org="Create International", scope=scope,

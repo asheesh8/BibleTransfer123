@@ -214,12 +214,17 @@ The public language addresses are:
 - `/hindi`
 - `/urdu`
 - `/swahili`
+- `/western-punjabi` (also `/shahmukhi`)
 - `/cantonese`
 - `/pashto` (also `/northern-pashto`)
+- `/eastern-punjabi` (also `/punjabi`)
+- `/nepali`
 - `/sindhi`
 - `/gusii` (also `/ekegusii` and `/kisii`)
 
-Each address opens directly in that language, removes the language picker, and
+Anyone arriving anywhere else sees a full-screen language chooser first, with
+their phone's own language suggested at the top and each library's size shown.
+Each address above skips that: it opens directly in that language, removes the language picker, and
 shows only that language's resources and resource types. Resource, help, and
 nearby-transfer links carry the same language lock. If someone edits an item
 link to name a resource from another language, the app rejects it and returns

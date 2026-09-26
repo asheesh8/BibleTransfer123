@@ -1,0 +1,1880 @@
+{
+ "pan": {
+  "Bibles": {
+   "heading": "Bibles 3",
+   "links": [
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/PANOVV",
+     "row": "Panjabi Open Version PANOVV ਪਵਿੱਤਰ ਬਾਈਬਲ Read Study Download Audio · Full Bible (FCBH) Print on Demand Bridge Connectivity Solutions · 2019 · India",
+     "title": "Panjabi Open Version PANOVV ਪਵਿੱਤਰ ਬਾਈਬਲ Read Study Download Audio · Full Bible (FCBH) Print on Demand Bridge Connectivity Solutions · 2019 · India"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/PANIRV_DAVR_FB_N",
+     "row": "Punjabi Indian Revised Version PANIRV ਇੰਡਿਅਨ ਰਿਵਾਇਜ਼ਡ ਵਰਜ਼ਨ (IRV) Audio · Full Bible (Davar Partners) 2019 · India",
+     "title": "Punjabi Indian Revised Version PANIRV ਇੰਡਿਅਨ ਰਿਵਾਇਜ਼ਡ ਵਰਜ਼ਨ (IRV) Audio · Full Bible (Davar Partners) 2019 · India"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/PANUW_DAVR_FB_N",
+     "row": "Punjabi Indian Revised Version (IRV) PANUW ਇੰਡਿਅਨ ਰਿਵਾਇਜ਼ਡ ਵਰਜ਼ਨ (IRV) Audio · Full Bible (Davar Partners) India",
+     "title": "Punjabi Indian Revised Version (IRV) PANUW ਇੰਡਿਅਨ ਰਿਵਾਇਜ਼ਡ ਵਰਜ਼ਨ (IRV) Audio · Full Bible (Davar Partners) India"
+    }
+   ]
+  },
+  "Films": {
+   "heading": "Films 12",
+   "links": [
+    {
+     "cells": [
+      "Gospel of John पंजाबी",
+      "Gospel of John",
+      "3:03:13"
+     ],
+     "href": "https://dbs.org/video/john/pan_punjabi_gospel_of_john",
+     "row": "Gospel of John पंजाबीGospel of John3:03:13",
+     "title": "Gospel of John"
+    },
+    {
+     "cells": [
+      "JESUS पंजाबी",
+      "Jesus Film Project",
+      "2:01:44"
+     ],
+     "href": "https://dbs.org/video/jesus/pan_punjabi_jesus",
+     "row": "JESUS पंजाबीJesus Film Project2:01:44",
+     "title": "JESUS"
+    },
+    {
+     "cells": [
+      "Magdalena पंजाबी",
+      "Jesus Film Project",
+      "58:24"
+     ],
+     "href": "https://dbs.org/video/magdalena/pan_punjabi_magdalena",
+     "row": "Magdalena पंजाबीJesus Film Project58:24",
+     "title": "Magdalena"
+    },
+    {
+     "cells": [
+      "Story of Jesus for Children पंजाबी",
+      "Jesus Film Project",
+      "1:01:19"
+     ],
+     "href": "https://dbs.org/video/storyjesus/pan_punjabi_story_of_jesus_for_children",
+     "row": "Story of Jesus for Children पंजाबीJesus Film Project1:01:19",
+     "title": "Story of Jesus for Children"
+    },
+    {
+     "cells": [
+      "The Savior पंजाबी",
+      "Jesus Film Project",
+      "2:11:53"
+     ],
+     "href": "https://dbs.org/video/savior/pan_punjabi_the_savior",
+     "row": "The Savior पंजाबीJesus Film Project2:11:53",
+     "title": "The Savior"
+    },
+    {
+     "cells": [
+      "BibleProject: Overviews ਪੰਜਾਬੀ",
+      "BibleProject",
+      "11:19:30"
+     ],
+     "href": "https://dbs.org/video/bp/pan-punjabi-overview",
+     "row": "BibleProject: Overviews ਪੰਜਾਬੀBibleProject11:19:30",
+     "title": "BibleProject: Overviews"
+    },
+    {
+     "cells": [
+      "BibleProject: Themes ਪੰਜਾਬੀ",
+      "BibleProject",
+      "2:13:39"
+     ],
+     "href": "https://dbs.org/video/bp/pan-punjabi-themes",
+     "row": "BibleProject: Themes ਪੰਜਾਬੀBibleProject2:13:39",
+     "title": "BibleProject: Themes"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Mark ਪੰਜਾਬੀ",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-mark/pan_punjabi-eastern_mark",
+     "row": "LUMO: The Gospel of Mark ਪੰਜਾਬੀLUMO Project",
+     "title": "LUMO: The Gospel of Mark"
+    },
+    {
+     "cells": [
+      "iBible: Salvation Story ਪੰਜਾਬੀ",
+      "iBible: Salvation Story",
+      "9:17"
+     ],
+     "href": "https://dbs.org/video/ibible/pan-punjabi_eastern-ibible_salvation",
+     "row": "iBible: Salvation Story ਪੰਜਾਬੀiBible: Salvation Story9:17",
+     "title": "iBible: Salvation Story"
+    },
+    {
+     "cells": [
+      "The Visual Bible: Matthew ਪੰਜਾਬੀ",
+      "Visual Bible Int.",
+      "4:13:11"
+     ],
+     "href": "https://dbs.org/video/matthew/pan-matthew-vb-panjabi",
+     "row": "The Visual Bible: Matthew ਪੰਜਾਬੀVisual Bible Int.4:13:11",
+     "title": "The Visual Bible: Matthew"
+    },
+    {
+     "cells": [
+      "The Visual Bible: Matthew ਪੰਜਾਬੀ",
+      "Visual Bible Int.",
+      "4:12:04"
+     ],
+     "href": "https://dbs.org/video/matthew/pan-matthew-vb-punjabi",
+     "row": "The Visual Bible: Matthew ਪੰਜਾਬੀVisual Bible Int.4:12:04",
+     "title": "The Visual Bible: Matthew"
+    },
+    {
+     "cells": [
+      "The Visual Bible: Acts ਪੰਜਾਬੀ",
+      "Visual Bible Int.",
+      "3:08:30"
+     ],
+     "href": "https://dbs.org/video/acts_vb/pan-acts-vb-panjabi",
+     "row": "The Visual Bible: Acts ਪੰਜਾਬੀVisual Bible Int.3:08:30",
+     "title": "The Visual Bible: Acts"
+    }
+   ]
+  },
+  "Audio Collections": {
+   "heading": "Audio Collections 2",
+   "links": [
+    {
+     "cells": [
+      "Panjabi",
+      "Global Recordings Network",
+      "523 files · 1005.5 MB"
+     ],
+     "href": "https://dbs.org/audio/collections/grn/pan_GlobalRecordings_punjabi_eastern",
+     "row": "PanjabiGlobal Recordings Network523 files · 1005.5 MB",
+     "title": "Panjabi"
+    },
+    {
+     "cells": [
+      "Panjabi",
+      "Story of Jesus",
+      "8 files · 46.6 MB"
+     ],
+     "href": "https://dbs.org/audio/collections/soj/pan_StoryJesus_punjabi",
+     "row": "PanjabiStory of Jesus8 files · 46.6 MB",
+     "title": "Panjabi"
+    }
+   ]
+  },
+  "Historic Bible (Scans)": {
+   "heading": "Historic Bible (Scans) 6",
+   "links": [
+    {
+     "cells": [
+      "Punjabi (1849) Genesis - Exodus Punjabi (1849) پیدائش - خروج",
+      "1849"
+     ],
+     "href": "https://dbs.org/bibles/historic/Punjabi-1849-Genesis-Exodus",
+     "row": "Punjabi (1849) Genesis - Exodus Punjabi (1849) پیدائش - خروج1849",
+     "title": "Punjabi (1849) Genesis - Exodus"
+    },
+    {
+     "cells": [
+      "Punjabi (1913) New Testament Punjabi (1913) نیا عہد نامہ",
+      "1913"
+     ],
+     "href": "https://dbs.org/bibles/historic/Punjabi-1913-New-Testament",
+     "row": "Punjabi (1913) New Testament Punjabi (1913) نیا عہد نامہ1913",
+     "title": "Punjabi (1913) New Testament"
+    },
+    {
+     "cells": [
+      "Punjabi (2006) WBTC Bible Punjabi (2006) WBTC بائبل",
+      "2006"
+     ],
+     "href": "https://dbs.org/bibles/historic/Punjabi-2006-WBTC-Bible",
+     "row": "Punjabi (2006) WBTC Bible Punjabi (2006) WBTC بائبل2006",
+     "title": "Punjabi (2006) WBTC Bible"
+    },
+    {
+     "cells": [
+      "Punjabi - John (Print) Punjabi - یوحنا",
+      "1992"
+     ],
+     "href": "https://dbs.org/bibles/historic/Punjabi-John-print",
+     "row": "Punjabi - John (Print) Punjabi - یوحنا1992",
+     "title": "Punjabi - John (Print)"
+    },
+    {
+     "cells": [
+      "Punjabi - New Testament (Print) Punjabi - نیا عہد نامہ",
+      "1982"
+     ],
+     "href": "https://dbs.org/bibles/historic/Punjabi-New-Testament-print",
+     "row": "Punjabi - New Testament (Print) Punjabi - نیا عہد نامہ1982",
+     "title": "Punjabi - New Testament (Print)"
+    },
+    {
+     "cells": [
+      "Punjabi Persian - New Testament (Print) Punjabi Persian - نیا عہد نامہ",
+      "1913"
+     ],
+     "href": "https://dbs.org/bibles/historic/Punjabi-Persian-New-Testament-print",
+     "row": "Punjabi Persian - New Testament (Print) Punjabi Persian - نیا عہد نامہ1913",
+     "title": "Punjabi Persian - New Testament (Print)"
+    }
+   ]
+  },
+  "Links to Other Sites": {
+   "heading": "Links to Other Sites 94",
+   "links": [
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PANPOR",
+     "row": "Punjabi Genesis - Exodus",
+     "title": "Punjabi Genesis - Exodus"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PANOLD",
+     "row": "Punjabi New Testament",
+     "title": "Punjabi New Testament"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PANZZZP",
+     "row": "Contemporary Punjabi New Testament",
+     "title": "Contemporary Punjabi New Testament"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PANWTC",
+     "row": "Panjabi Easy to Read Bible",
+     "title": "Panjabi Easy to Read Bible"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PANTBN",
+     "row": "New Testament in Punjabi",
+     "title": "New Testament in Punjabi"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PANCLV",
+     "row": "Punjabi Common Language",
+     "title": "Punjabi Common Language"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/indigitech/0000D/s/Sikh_5001D/SikhMV_sm.mp4",
+     "row": "Who Can Help You?",
+     "title": "Who Can Help You?"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/indigitech/0000D/s/Sikh_5001D/SikhMV_EngSub.mp4",
+     "row": "Who Can Help You? (EngSub)",
+     "title": "Who Can Help You? (EngSub)"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/The-Story_Punjabi_sm.mp4",
+     "row": "The Story",
+     "title": "The Story"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/indigitech/0000C/s/Sikh_5001C/SikhCG_EngSub_sm.mp4",
+     "row": "Satsung of the Sadguru Jesus (EngSub)",
+     "title": "Satsung of the Sadguru Jesus (EngSub)"
+    },
+    {
+     "cells": [],
+     "href": "https://arc.gt/a4hl4?apiSessionId=5f8761d41a8f33.25213172",
+     "row": "Magdalena - Director's Cut",
+     "title": "Magdalena - Director's Cut"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/indigitech/0000A/s/Sikh_5001A/SikhEV_sm.mp4",
+     "row": "Eyes of the Heart",
+     "title": "Eyes of the Heart"
+    },
+    {
+     "cells": [],
+     "href": "https://bibleproject.com/Punjabi",
+     "row": "Punjabi Bible Project Videos",
+     "title": "Punjabi Bible Project Videos"
+    },
+    {
+     "cells": [],
+     "href": "https://arc.gt/q6lzh?apiSessionId=5f8761d516c760.76311381",
+     "row": "Life of Jesus (Gospel of John)",
+     "title": "Life of Jesus (Gospel of John)"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/indigitech/0000C/s/Sikh_5001C/SikhCG_sm.mp4",
+     "row": "Satsung of the Sadguru Jesus",
+     "title": "Satsung of the Sadguru Jesus"
+    },
+    {
+     "cells": [],
+     "href": "https://arc.gt/08nz5?apiSessionId=5f8761d1b0afe1.74285548",
+     "row": "The Story of Jesus for Children",
+     "title": "The Story of Jesus for Children"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//PAN/Bible/StudyBible/content/texts/pan_wbtc/index.html",
+     "row": "Punjabi: Easy to Read Bible",
+     "title": "Punjabi: Easy to Read Bible"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//PAN/Bible/StudyBible/content/texts/ENGNAS/index.html",
+     "row": "New American Standard Bible",
+     "title": "New American Standard Bible"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//PAN/Bible/StudyBible/content/texts/HBOWLC/index.html",
+     "row": "Westminister Linegradex Codex",
+     "title": "Westminister Linegradex Codex"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//PAN/Bible/StudyBible/content/texts/GRCTIS/index.html",
+     "row": "Greek Tischendorf",
+     "title": "Greek Tischendorf"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//PAN/Bible/Images/",
+     "row": "Images from the Bible",
+     "title": "Images from the Bible"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//PAN/Audio/Bible/pan_wbtc/",
+     "row": "Audio Bible (New Testament)",
+     "title": "Audio Bible (New Testament)"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//PAN/Video/000_Movies/001_PAN_JesusFilm.mp4",
+     "row": "The Jesus Film",
+     "title": "The Jesus Film"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//PAN/Video/000_Movies/003_PAN_Magdalena.mp4",
+     "row": "Magdealena",
+     "title": "Magdealena"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//PAN/Video/000_Movies/004_PAN_JesusStory.mp4",
+     "row": "Story of Jesus for Children",
+     "title": "Story of Jesus for Children"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//PAN/Video/010_Teachings/011_JFP_Who_Is_God.mp4",
+     "row": "Who is God",
+     "title": "Who is God"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//PAN/Video/010_Teachings/012_JFP_Who_Is_Jesus.mp4",
+     "row": "Who is Jesus",
+     "title": "Who is Jesus"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//PAN/Video/010_Teachings/013_JFP_Prayer_Talking_to_God.mp4",
+     "row": "Prayer: Talking to God",
+     "title": "Prayer: Talking to God"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//PAN/Video/010_Teachings/014_JFP_Living_as_a_Disciple_of_Jesus.mp4",
+     "row": "Living as a Disciple of Jesus",
+     "title": "Living as a Disciple of Jesus"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//PAN/Video/010_Teachings/015_JFP_Sharing_Your_Faith_With_Others.mp4",
+     "row": "Sharing Your Faith With Others",
+     "title": "Sharing Your Faith With Others"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//PAN/Books/010_GotQuestions/Gurmukhi/index.html",
+     "row": "The Gospel (Gurmukhi)",
+     "title": "The Gospel (Gurmukhi)"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//PAN/Books/010_GotQuestions/Shahmukhi/01_GoodNews/index.html",
+     "row": "The Gospel (Shahmukhi)",
+     "title": "The Gospel (Shahmukhi)"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//PAN/Audio/GRN/100_Stories/100_BeginningWithGod_01.mp3",
+     "row": "Beginning With God",
+     "title": "Beginning With God"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//PAN/Audio/GRN/100_Stories/101_MightyMenOfGod_02.mp3",
+     "row": "Mighty Men of God",
+     "title": "Mighty Men of God"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//PAN/Audio/GRN/100_Stories/102_VictoryThroughGod_03.mp3",
+     "row": "Victory Through God",
+     "title": "Victory Through God"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//PAN/Audio/GRN/100_Stories/103_PortraitOfJesus.mp3",
+     "row": "Portrait of Jesus",
+     "title": "Portrait of Jesus"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//PAN/Audio/GRN/100_Stories/104_WordsOfLife.mp3",
+     "row": "Words Of Life",
+     "title": "Words Of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/64883",
+     "row": "Good News",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/64884",
+     "row": "Meeting the Creator God",
+     "title": "Meeting the Creator God"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/62948",
+     "row": "Good News",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/62949",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/64557",
+     "row": "Good News",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/64558",
+     "row": "Meeting the Creator God",
+     "title": "Meeting the Creator God"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/64289",
+     "row": "Changi Khabar [Good News]",
+     "title": "Changi Khabar [Good News]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/64288",
+     "row": "Parmeshowr ke Shabd [Words of God]",
+     "title": "Parmeshowr ke Shabd [Words of God]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/64814",
+     "row": "Good News",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/64286",
+     "row": "Jindagi da Sach [The Truth of Life]",
+     "title": "Jindagi da Sach [The Truth of Life]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/64287",
+     "row": "Khush Khabari [Good News]",
+     "title": "Khush Khabari [Good News]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/64815",
+     "row": "Meeting The Creator God",
+     "title": "Meeting The Creator God"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/74628",
+     "row": "Good News (M)",
+     "title": "Good News (M)"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/27910",
+     "row": "High Greatness of the Messiah w/ URDU",
+     "title": "High Greatness of the Messiah w/ URDU"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/80773",
+     "row": "Look, Listen & Live",
+     "title": "Look, Listen & Live"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82785",
+     "row": "Look, Listen & Live 1 Beginning with GOD (H)",
+     "title": "Look, Listen & Live 1 Beginning with GOD (H)"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/80774",
+     "row": "Look, Listen & Live 2 Mighty Men of GOD",
+     "title": "Look, Listen & Live 2 Mighty Men of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82786",
+     "row": "Look, Listen & Live 2 Mighty Men of GOD (H)",
+     "title": "Look, Listen & Live 2 Mighty Men of GOD (H)"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/80775",
+     "row": "Look, Listen & Live 3 Victory through GOD",
+     "title": "Look, Listen & Live 3 Victory through GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82787",
+     "row": "Look, Listen & Live 3 Victory through GOD (H)",
+     "title": "Look, Listen & Live 3 Victory through GOD (H)"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/80959",
+     "row": "Look, Listen & Live 4 Servants of GOD",
+     "title": "Look, Listen & Live 4 Servants of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/80777",
+     "row": "Look, Listen & Live 5 On Trial for GOD",
+     "title": "Look, Listen & Live 5 On Trial for GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/80778",
+     "row": "Look, Listen & Live 6 JESUS - Teacher & Healer",
+     "title": "Look, Listen & Live 6 JESUS - Teacher & Healer"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/80779",
+     "row": "Look, Listen & Live 7 JESUS - Lord & Saviour",
+     "title": "Look, Listen & Live 7 JESUS - Lord & Saviour"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/80780",
+     "row": "Look, Listen & Live 8 Acts of the HOLY SPIRIT",
+     "title": "Look, Listen & Live 8 Acts of the HOLY SPIRIT"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/35410",
+     "row": "Portrait of Jesus",
+     "title": "Portrait of Jesus"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/63937",
+     "row": "Radio Program - Cross of Christ",
+     "title": "Radio Program - Cross of Christ"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/16691",
+     "row": "Special (M)",
+     "title": "Special (M)"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/29140",
+     "row": "Waiting for Jesus w/ URDU",
+     "title": "Waiting for Jesus w/ URDU"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/62037",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/2960",
+     "row": "Words of Life 1 (H)",
+     "title": "Words of Life 1 (H)"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/2971",
+     "row": "Words of Life 1 (M)",
+     "title": "Words of Life 1 (M)"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/2961",
+     "row": "Words of Life 2 (H)",
+     "title": "Words of Life 2 (H)"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/11331",
+     "row": "Words of Life 2 (M)",
+     "title": "Words of Life 2 (M)"
+    },
+    {
+     "cells": [],
+     "href": "https://s3.ap-south-1.amazonaws.com/odi-anusaran/resources/pa-gods-smuggler.pdf",
+     "row": "ਪਰਮੇਸ਼ੁਰ ਦਾ ਤਸਕਰ",
+     "title": "ਪਰਮੇਸ਼ੁਰ ਦਾ ਤਸਕਰ"
+    },
+    {
+     "cells": [],
+     "href": "https://s3.ap-south-1.amazonaws.com/odi-anusaran/resources/pa-teacher-module-1.pdf",
+     "row": "ਤੂਫਾਲ ਵਿੱਚ ਦ੍ਰਿੜ੍ਹ ਖੜ੍ਹੇ ਰਹਿਣਾ ਵਿਦਿਆਰਥੀ ਅਗਵਾਈ ਮੌਤਿਊਨ-1",
+     "title": "ਤੂਫਾਲ ਵਿੱਚ ਦ੍ਰਿੜ੍ਹ ਖੜ੍ਹੇ ਰਹਿਣਾ ਵਿਦਿਆਰਥੀ ਅਗਵਾਈ ਮੌਤਿਊਨ-1"
+    },
+    {
+     "cells": [],
+     "href": "https://s3.ap-south-1.amazonaws.com/odi-anusaran/resources/pa-teacher-module-2.pdf",
+     "row": "ਤੂਫਾਲ ਵਿੱਚ ਦ੍ਰਿੜ੍ਹ ਖੜ੍ਹੇ ਰਹਿਣਾ ਵਿਦਿਆਰਥੀ ਅਗਵਾਈ ਮੌਤਿਊਨ-2",
+     "title": "ਤੂਫਾਲ ਵਿੱਚ ਦ੍ਰਿੜ੍ਹ ਖੜ੍ਹੇ ਰਹਿਣਾ ਵਿਦਿਆਰਥੀ ਅਗਵਾਈ ਮੌਤਿਊਨ-2"
+    },
+    {
+     "cells": [],
+     "href": "https://s3.ap-south-1.amazonaws.com/odi-anusaran/resources/pa-students-module-1.pdf",
+     "row": "ਤੂਫਾਲ ਵਿੱਚ ਦ੍ਰਿੜ੍ਹ ਖੜ੍ਹੇ ਰਹਿਣਾ ਅਧਿਆਪਕ ਅਗਵਾਈ ਮੌਤਿਊਨ-1",
+     "title": "ਤੂਫਾਲ ਵਿੱਚ ਦ੍ਰਿੜ੍ਹ ਖੜ੍ਹੇ ਰਹਿਣਾ ਅਧਿਆਪਕ ਅਗਵਾਈ ਮੌਤਿਊਨ-1"
+    },
+    {
+     "cells": [],
+     "href": "https://s3.ap-south-1.amazonaws.com/odi-anusaran/resources/pa-students-module-2.pdf",
+     "row": "ਤੂਫਾਲ ਵਿੱਚ ਦ੍ਰਿੜ੍ਹ ਖੜ੍ਹੇ ਰਹਿਣਾ ਅਧਿਆਪਕ ਅਗਵਾਈ ਮੌਤਿਊਨ-2",
+     "title": "ਤੂਫਾਲ ਵਿੱਚ ਦ੍ਰਿੜ੍ਹ ਖੜ੍ਹੇ ਰਹਿਣਾ ਅਧਿਆਪਕ ਅਗਵਾਈ ਮੌਤਿਊਨ-2"
+    }
+   ]
+  }
+ },
+ "pnb": {
+  "Bibles": {
+   "heading": "Bibles 3",
+   "links": [
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/PNBPBS_DAVR_NT_N",
+     "row": "Punjabi New Testament, Revised 2020 PNBPBS پنجابی نواں عہد نامہ نظرثانی شدہ چھپائی Audio · New Testament (Davar Partners) 2020 · Pakistan",
+     "title": "Punjabi New Testament, Revised 2020 PNBPBS پنجابی نواں عہد نامہ نظرثانی شدہ چھپائی Audio · New Testament (Davar Partners) 2020 · Pakistan"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/PNBOUB",
+     "row": "The Open Eastern Punjabi Bible PNBOUB ਪੰਜਾਬੀ ਬਾਈਬਲ Read Study Download Print on Demand Bridge Connectivity Solutions · 2017 · India",
+     "title": "The Open Eastern Punjabi Bible PNBOUB ਪੰਜਾਬੀ ਬਾਈਬਲ Read Study Download Print on Demand Bridge Connectivity Solutions · 2017 · India"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/PNBPOV",
+     "row": "Punjabi Pavitra Bible 1945 Edition PNBPOV ਪੰਜਾਬੀ ਬਾਈਬਲ 1945 Read Study Download Print on Demand Public Domain · 1945 · India",
+     "title": "Punjabi Pavitra Bible 1945 Edition PNBPOV ਪੰਜਾਬੀ ਬਾਈਬਲ 1945 Read Study Download Print on Demand Public Domain · 1945 · India"
+    }
+   ]
+  },
+  "Films": {
+   "heading": "Films 7",
+   "links": [
+    {
+     "cells": [
+      "JESUS پنجابی",
+      "Jesus Film Project",
+      "2:07:53"
+     ],
+     "href": "https://dbs.org/video/jesus/pnb_panjabi-western_jesus",
+     "row": "JESUS پنجابیJesus Film Project2:07:53",
+     "title": "JESUS"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of John ਪੰਜਾਬੀ",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-john/pnb_punjabi-western_john",
+     "row": "LUMO: The Gospel of John ਪੰਜਾਬੀLUMO Project",
+     "title": "LUMO: The Gospel of John"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Luke ਪੰਜਾਬੀ",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-luke/pnb_punjabi-western_luke",
+     "row": "LUMO: The Gospel of Luke ਪੰਜਾਬੀLUMO Project",
+     "title": "LUMO: The Gospel of Luke"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Mark ਪੰਜਾਬੀ",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-mark/pnb_punjabi-western_mark",
+     "row": "LUMO: The Gospel of Mark ਪੰਜਾਬੀLUMO Project",
+     "title": "LUMO: The Gospel of Mark"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Matthew ਪੰਜਾਬੀ",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-matthew/pnb_punjabi-western_matthew",
+     "row": "LUMO: The Gospel of Matthew ਪੰਜਾਬੀLUMO Project",
+     "title": "LUMO: The Gospel of Matthew"
+    },
+    {
+     "cells": [
+      "iBible: Salvation Story ਪੰਜਾਬੀ",
+      "iBible: Salvation Story",
+      "9:17"
+     ],
+     "href": "https://dbs.org/video/ibible/pnb-punjabi_western-ibible_salvation",
+     "row": "iBible: Salvation Story ਪੰਜਾਬੀiBible: Salvation Story9:17",
+     "title": "iBible: Salvation Story"
+    },
+    {
+     "cells": [
+      "Gospel of John ਪੰਜਾਬੀ",
+      "Gospel of John",
+      "2:54:13"
+     ],
+     "href": "https://dbs.org/video/john/pnb-john-western-panjabi",
+     "row": "Gospel of John ਪੰਜਾਬੀGospel of John2:54:13",
+     "title": "Gospel of John"
+    }
+   ]
+  },
+  "Audio Collections": {
+   "heading": "Audio Collections 2",
+   "links": [
+    {
+     "cells": [
+      "Western Panjabi",
+      "Global Recordings Network",
+      "110 files · 234.8 MB"
+     ],
+     "href": "https://dbs.org/audio/collections/grn/pnb_GlobalRecordings_punjabi_western",
+     "row": "Western PanjabiGlobal Recordings Network110 files · 234.8 MB",
+     "title": "Western Panjabi"
+    },
+    {
+     "cells": [
+      "Western Panjabi",
+      "Story of Jesus",
+      "7 files · 124.0 MB"
+     ],
+     "href": "https://dbs.org/audio/collections/soj/pnb_StoryJesus_panjabi_western",
+     "row": "Western PanjabiStory of Jesus7 files · 124.0 MB",
+     "title": "Western Panjabi"
+    }
+   ]
+  },
+  "Links to Other Sites": {
+   "heading": "Links to Other Sites 10",
+   "links": [
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PNBPNT",
+     "row": "Persian Punjabi New Testament",
+     "title": "Persian Punjabi New Testament"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PNBCLV",
+     "row": "Punjabi Common Language Version",
+     "title": "Punjabi Common Language Version"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PNBBFBS",
+     "row": "Persian Gospels and Acts",
+     "title": "Persian Gospels and Acts"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PNBPBS",
+     "row": "Punjabi New Testament, Revised 2020",
+     "title": "Punjabi New Testament, Revised 2020"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/indigitech/0000A/p/Punjabi_Muslim_3029A/PunjabiMuslimEV_EngSub_sm.mp4",
+     "row": "The Return",
+     "title": "The Return"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/indigitech/0000A/p/Punjabi_Muslim_3029A/PunjabiMuslimEV_sm.mp4",
+     "row": "The Return",
+     "title": "The Return"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/25770",
+     "row": "Words of Life w/ PUNJABI: Majhi",
+     "title": "Words of Life w/ PUNJABI: Majhi"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/6321",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    }
+   ]
+  }
+ },
+ "npi": {
+  "Bibles": {
+   "heading": "Bibles 5",
+   "links": [
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/NPIULV_FCBH_NT_N",
+     "row": "Nepali Unlocked Literal Version NPIULV नेपाली अनलक शाब्दिक संस्करण Audio · New Testament (FCBH) 2019 · Nepal",
+     "title": "Nepali Unlocked Literal Version NPIULV नेपाली अनलक शाब्दिक संस्करण Audio · New Testament (FCBH) 2019 · Nepal"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/NPIB08_DAVR_FB_N",
+     "row": "Nepali Common Language Bible NPIB08 सरल नेपाली पवित्र बाइबल Audio · Full Bible (Davar Partners) 2008 · Nepal",
+     "title": "Nepali Common Language Bible NPIB08 सरल नेपाली पवित्र बाइबल Audio · Full Bible (Davar Partners) 2008 · Nepal"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/NPIERV",
+     "row": "Easy-to-Read Nepali Version NPIERV नेपाली बाइबल पढ्न सजिलो Read Study Download Print on Demand Bible League International · 2004 · Nepal",
+     "title": "Easy-to-Read Nepali Version NPIERV नेपाली बाइबल पढ्न सजिलो Read Study Download Print on Demand Bible League International · 2004 · Nepal"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/NPINBS_FCBH_NT_D",
+     "row": "Nepali New Revised Version, Audio NPINBS नेपाली नयाँ संशोधित संस्करण Audio · New Testament (FCBH) Audio · New Testament (FCBH) 1997 · Nepal",
+     "title": "Nepali New Revised Version, Audio NPINBS नेपाली नयाँ संशोधित संस्करण Audio · New Testament (FCBH) Audio · New Testament (FCBH) 1997 · Nepal"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/NPIDWMC_DAVR_NT_N",
+     "row": "Nepali Unlocked Literal Bible (ULB) NPIDWMC Audio · New Testament (Davar Partners) Nepal",
+     "title": "Nepali Unlocked Literal Bible (ULB) NPIDWMC Audio · New Testament (Davar Partners) Nepal"
+    }
+   ]
+  },
+  "Films": {
+   "heading": "Films 13",
+   "links": [
+    {
+     "cells": [
+      "JESUS Acchami",
+      "Jesus Film Project",
+      "2:07:53"
+     ],
+     "href": "https://dbs.org/video/jesus/npi_acchami_jesus",
+     "row": "JESUS AcchamiJesus Film Project2:07:53",
+     "title": "JESUS"
+    },
+    {
+     "cells": [
+      "JESUS Baitadeli",
+      "Jesus Film Project",
+      "2:07:53"
+     ],
+     "href": "https://dbs.org/video/jesus/npi_baitadeli_jesus",
+     "row": "JESUS BaitadeliJesus Film Project2:07:53",
+     "title": "JESUS"
+    },
+    {
+     "cells": [
+      "JESUS Bajhangi",
+      "Jesus Film Project",
+      "2:07:53"
+     ],
+     "href": "https://dbs.org/video/jesus/npi_bajhangi_jesus",
+     "row": "JESUS BajhangiJesus Film Project2:07:53",
+     "title": "JESUS"
+    },
+    {
+     "cells": [
+      "JESUS Bajureli",
+      "Jesus Film Project",
+      "2:07:53"
+     ],
+     "href": "https://dbs.org/video/jesus/npi_bajureli_jesus",
+     "row": "JESUS BajureliJesus Film Project2:07:53",
+     "title": "JESUS"
+    },
+    {
+     "cells": [
+      "JESUS Darchuleli",
+      "Jesus Film Project",
+      "2:07:46"
+     ],
+     "href": "https://dbs.org/video/jesus/npi_darchuleli_jesus",
+     "row": "JESUS DarchuleliJesus Film Project2:07:46",
+     "title": "JESUS"
+    },
+    {
+     "cells": [
+      "JESUS नेपाली",
+      "Jesus Film Project",
+      "2:07:53"
+     ],
+     "href": "https://dbs.org/video/jesus/npi_nepali_jesus",
+     "row": "JESUS नेपालीJesus Film Project2:07:53",
+     "title": "JESUS"
+    },
+    {
+     "cells": [
+      "Magdalena नेपाली",
+      "Jesus Film Project",
+      "58:24"
+     ],
+     "href": "https://dbs.org/video/magdalena/npi_nepali_magdalena",
+     "row": "Magdalena नेपालीJesus Film Project58:24",
+     "title": "Magdalena"
+    },
+    {
+     "cells": [
+      "Story of Jesus for Children नेपाली",
+      "Jesus Film Project",
+      "1:01:19"
+     ],
+     "href": "https://dbs.org/video/storyjesus/npi_nepali_story_of_jesus_for_children",
+     "row": "Story of Jesus for Children नेपालीJesus Film Project1:01:19",
+     "title": "Story of Jesus for Children"
+    },
+    {
+     "cells": [
+      "The Savior नेपाली",
+      "Jesus Film Project",
+      "2:11:54"
+     ],
+     "href": "https://dbs.org/video/savior/npi_nepali_the_savior",
+     "row": "The Savior नेपालीJesus Film Project2:11:54",
+     "title": "The Savior"
+    },
+    {
+     "cells": [
+      "Creation to Christ नेपाली",
+      "Creation to Christ",
+      "20:00"
+     ],
+     "href": "https://dbs.org/video/c2c/npi-creation-nepali",
+     "row": "Creation to Christ नेपालीCreation to Christ20:00",
+     "title": "Creation to Christ"
+    },
+    {
+     "cells": [
+      "The HOPE  Nepalese",
+      "The HOPE",
+      "1:19:12"
+     ],
+     "href": "https://dbs.org/video/hope/npi_nepali_the_hope",
+     "row": "The HOPE  NepaleseThe HOPE1:19:12",
+     "title": "The HOPE"
+    },
+    {
+     "cells": [
+      "iBible: Salvation Story  Nepalese",
+      "iBible: Salvation Story",
+      "9:19"
+     ],
+     "href": "https://dbs.org/video/ibible/npi-nepali-ibible_salvation",
+     "row": "iBible: Salvation Story  NepaleseiBible: Salvation Story9:19",
+     "title": "iBible: Salvation Story"
+    },
+    {
+     "cells": [
+      "Rescue Project Deaf Gospel नेपाली",
+      "Jesus Film Project",
+      "28:17"
+     ],
+     "href": "https://dbs.org/video/deafproject/npi_nepali_rescue_project_deaf_gospel",
+     "row": "Rescue Project Deaf Gospel नेपालीJesus Film Project28:17",
+     "title": "Rescue Project Deaf Gospel"
+    }
+   ]
+  },
+  "Audio Collections": {
+   "heading": "Audio Collections 2",
+   "links": [
+    {
+     "cells": [
+      "Nepali",
+      "Global Recordings Network",
+      "931 files · 2.8 GB"
+     ],
+     "href": "https://dbs.org/audio/collections/grn/npi_GlobalRecordings_nepali",
+     "row": "NepaliGlobal Recordings Network931 files · 2.8 GB",
+     "title": "Nepali"
+    },
+    {
+     "cells": [
+      "Nepali",
+      "Story Runners",
+      "48 files · 144.0 MB"
+     ],
+     "href": "https://dbs.org/audio/collections/srun/npi_storyset_nepali",
+     "row": "NepaliStory Runners48 files · 144.0 MB",
+     "title": "Nepali"
+    }
+   ]
+  },
+  "Historic Bible (Scans)": {
+   "heading": "Historic Bible (Scans) 2",
+   "links": [
+    {
+     "cells": [
+      "Nepali (2006) WBTC New Testament Nepali (2006) डब्ल्यूबीटीसी नयाँ करार",
+      "2006"
+     ],
+     "href": "https://dbs.org/bibles/historic/Nepali-2006-WBTC-New-Testament",
+     "row": "Nepali (2006) WBTC New Testament Nepali (2006) डब्ल्यूबीटीसी नयाँ करार2006",
+     "title": "Nepali (2006) WBTC New Testament"
+    },
+    {
+     "cells": [
+      "Nepali - John (Print) Nepali युहन्ना",
+      "2008"
+     ],
+     "href": "https://dbs.org/bibles/historic/Nepali-John-print",
+     "row": "Nepali - John (Print) Nepali युहन्ना2008",
+     "title": "Nepali - John (Print)"
+    }
+   ]
+  },
+  "Links to Other Sites": {
+   "heading": "Links to Other Sites 117",
+   "links": [
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=NPITBI",
+     "row": "The New Testament in Nepali",
+     "title": "The New Testament in Nepali"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=NPIULV",
+     "row": "Nepali Unlocked Literal Version",
+     "title": "Nepali Unlocked Literal Version"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=NPIB08",
+     "row": "Nepali Common Language Bible",
+     "title": "Nepali Common Language Bible"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=NPINRV",
+     "row": "Nepali New Revised Version",
+     "title": "Nepali New Revised Version"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=NPINCV",
+     "row": "Contemporary Nepali New Testament",
+     "title": "Contemporary Nepali New Testament"
+    },
+    {
+     "cells": [],
+     "href": "http://www.youtube.com/watch?v=qcZV3CgPq40",
+     "row": "New Way (Naya Goreto)",
+     "title": "New Way (Naya Goreto)"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/indigitech/0000A/l/Limbu/Limbu_EV_sm.mp4",
+     "row": "Until We Met",
+     "title": "Until We Met"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/62313",
+     "row": "Alolon Ge Pemili Ana Minamina [Good News]",
+     "title": "Alolon Ge Pemili Ana Minamina [Good News]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/63332",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/62312",
+     "row": "Good News",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/27110",
+     "row": "Are You Happy?",
+     "title": "Are You Happy?"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/37696",
+     "row": "Christmas & Easter",
+     "title": "Christmas & Easter"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/37694",
+     "row": "Follow Up",
+     "title": "Follow Up"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/75099",
+     "row": "Follow Up Messages",
+     "title": "Follow Up Messages"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/32951",
+     "row": "Good News",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/37693",
+     "row": "Gospel",
+     "title": "Gospel"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/79174",
+     "row": "Look, Listen & Live",
+     "title": "Look, Listen & Live"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/79180",
+     "row": "Look, Listen & Live 7 JESUS - Lord & Saviour",
+     "title": "Look, Listen & Live 7 JESUS - Lord & Saviour"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/31200",
+     "row": "Songs",
+     "title": "Songs"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/37695",
+     "row": "Student",
+     "title": "Student"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/37697",
+     "row": "Teaching",
+     "title": "Teaching"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/3090",
+     "row": "Words of Life 1",
+     "title": "Words of Life 1"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/20731",
+     "row": "Words of Life 2",
+     "title": "Words of Life 2"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/20700",
+     "row": "Words of Life 3",
+     "title": "Words of Life 3"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/20781",
+     "row": "Words of Life 4",
+     "title": "Words of Life 4"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/3151",
+     "row": "Words of Life (M)",
+     "title": "Words of Life (M)"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/65455",
+     "row": "भुकम्प पछि [After the Earthquake]",
+     "title": "भुकम्प पछि [After the Earthquake]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/25030",
+     "row": "Words of Life w/ NEPALI: Kathmandu",
+     "title": "Words of Life w/ NEPALI: Kathmandu"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/3080",
+     "row": "Words of Life w/ NEPALI: Kathmandu",
+     "title": "Words of Life w/ NEPALI: Kathmandu"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/3461",
+     "row": "Words of Life w/ NEPALI: Kathmandu",
+     "title": "Words of Life w/ NEPALI: Kathmandu"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/3351",
+     "row": "Words of Life w/ NEPALI: Kathmandu",
+     "title": "Words of Life w/ NEPALI: Kathmandu"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/75100",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/63958",
+     "row": "Classic Nepali Hymns",
+     "title": "Classic Nepali Hymns"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/3150",
+     "row": "Words of Life 1",
+     "title": "Words of Life 1"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/20431",
+     "row": "Words of Life 2",
+     "title": "Words of Life 2"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/65784",
+     "row": "Raamro Khabar [Good News]",
+     "title": "Raamro Khabar [Good News]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/65785",
+     "row": "Saacho Kudaa Lukna Sakdaina [Truth Cannot Be Hidden]",
+     "title": "Saacho Kudaa Lukna Sakdaina [Truth Cannot Be Hidden]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/20070",
+     "row": "Words of Life w/ DOTELI",
+     "title": "Words of Life w/ DOTELI"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/63333",
+     "row": "Good News",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/63334",
+     "row": "Jeevanko Baato [The Way of Life]",
+     "title": "Jeevanko Baato [The Way of Life]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/20450",
+     "row": "Words of Life w/ NEPALI",
+     "title": "Words of Life w/ NEPALI"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/80350",
+     "row": "Good News",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/65620",
+     "row": "Asal Khabar [Good News]",
+     "title": "Asal Khabar [Good News]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/65621",
+     "row": "Thaa Aa Paaunai Padney Kudaa [Everyone Should Know The Truth]",
+     "title": "Thaa Aa Paaunai Padney Kudaa [Everyone Should Know The Truth]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/62651",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/64238",
+     "row": "Asal Khabar Shrabya Drishya [Good News]",
+     "title": "Asal Khabar Shrabya Drishya [Good News]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/63576",
+     "row": "Look, Listen & Live",
+     "title": "Look, Listen & Live"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/75105",
+     "row": "Look, Listen & Live 1 Beginning with GOD for Children^",
+     "title": "Look, Listen & Live 1 Beginning with GOD for Children^"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/63577",
+     "row": "Look, Listen & Live 2 Mighty Men of GOD",
+     "title": "Look, Listen & Live 2 Mighty Men of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/63578",
+     "row": "Look, Listen & Live 3 Victory through GOD",
+     "title": "Look, Listen & Live 3 Victory through GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/63579",
+     "row": "Look, Listen & Live 4 Servants of GOD",
+     "title": "Look, Listen & Live 4 Servants of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/63580",
+     "row": "Look, Listen & Live 5 On Trial for GOD",
+     "title": "Look, Listen & Live 5 On Trial for GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/63581",
+     "row": "Look, Listen & Live 6 JESUS - Teacher & Healer",
+     "title": "Look, Listen & Live 6 JESUS - Teacher & Healer"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/63582",
+     "row": "Look, Listen & Live 7 JESUS - Lord & Saviour",
+     "title": "Look, Listen & Live 7 JESUS - Lord & Saviour"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/63583",
+     "row": "Look, Listen & Live 8 Acts of the HOLY SPIRIT",
+     "title": "Look, Listen & Live 8 Acts of the HOLY SPIRIT"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/63819",
+     "row": "Malai Timro Banau [Make Me Yours]",
+     "title": "Malai Timro Banau [Make Me Yours]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/63816",
+     "row": "Pheri Aune Ashama [The Hope Of Return]",
+     "title": "Pheri Aune Ashama [The Hope Of Return]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/64085",
+     "row": "Promises of God",
+     "title": "Promises of God"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/33491",
+     "row": "Songs",
+     "title": "Songs"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/62307",
+     "row": "Testimony",
+     "title": "Testimony"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/63815",
+     "row": "Uhako Mahima [In His Glory]",
+     "title": "Uhako Mahima [In His Glory]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/63820",
+     "row": "Uhan Ko Karar [His Covenant]",
+     "title": "Uhan Ko Karar [His Covenant]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/20060",
+     "row": "Words of Life w/ LHASAS",
+     "title": "Words of Life w/ LHASAS"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/26381",
+     "row": "Becoming a Friend of God",
+     "title": "Becoming a Friend of God"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/20050",
+     "row": "Words of Life 1",
+     "title": "Words of Life 1"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/3480",
+     "row": "Words of Life w/ NEPALI songs",
+     "title": "Words of Life w/ NEPALI songs"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/21390",
+     "row": "Words of Life w/ NEPALI",
+     "title": "Words of Life w/ NEPALI"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/33101",
+     "row": "Words of Life 2 w/ some NEPALI songs",
+     "title": "Words of Life 2 w/ some NEPALI songs"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/3081",
+     "row": "Words of Life w/ NEPALI",
+     "title": "Words of Life w/ NEPALI"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/3490",
+     "row": "Words of Life w/ NEPALI songs",
+     "title": "Words of Life w/ NEPALI songs"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/22911",
+     "row": "Becoming a Friend of God",
+     "title": "Becoming a Friend of God"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/20150",
+     "row": "Words of Life w/ NEPALI",
+     "title": "Words of Life w/ NEPALI"
+    }
+   ]
+  }
+ },
+ "nep": {
+  "Bibles": {
+   "heading": "Bibles 2",
+   "links": [
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/NEPULB",
+     "row": "Nepali Unlocked Literal Bible NEPULB Read Study Download 2019 · Nepal",
+     "title": "Nepali Unlocked Literal Bible NEPULB Read Study Download 2019 · Nepal"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/NEPERV",
+     "row": "Nepali Bible, NEPERV NEPERV नेपाली नयाँ संशोधित संस्करण Read Study Download 2012 · Nepal",
+     "title": "Nepali Bible, NEPERV NEPERV नेपाली नयाँ संशोधित संस्करण Read Study Download 2012 · Nepal"
+    }
+   ]
+  },
+  "Films": {
+   "heading": "Films 9",
+   "links": [
+    {
+     "cells": [
+      "BibleProject: Overviews नेपाली",
+      "BibleProject",
+      "11:04:52"
+     ],
+     "href": "https://dbs.org/video/bp/nep-nepali-overview",
+     "row": "BibleProject: Overviews नेपालीBibleProject11:04:52",
+     "title": "BibleProject: Overviews"
+    },
+    {
+     "cells": [
+      "BibleProject: Themes नेपाली",
+      "BibleProject",
+      "4:12"
+     ],
+     "href": "https://dbs.org/video/bp/nep-nepali-themes",
+     "row": "BibleProject: Themes नेपालीBibleProject4:12",
+     "title": "BibleProject: Themes"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of John नेपाली",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-john/nep_nepali_john",
+     "row": "LUMO: The Gospel of John नेपालीLUMO Project",
+     "title": "LUMO: The Gospel of John"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Luke नेपाली",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-luke/nep_nepali_luke",
+     "row": "LUMO: The Gospel of Luke नेपालीLUMO Project",
+     "title": "LUMO: The Gospel of Luke"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Mark नेपाली",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-mark/nep_nepali_mark",
+     "row": "LUMO: The Gospel of Mark नेपालीLUMO Project",
+     "title": "LUMO: The Gospel of Mark"
+    },
+    {
+     "cells": [
+      "LUMO: Acts of the Apostles नेपाली",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-acts/nep_nepali_acts",
+     "row": "LUMO: Acts of the Apostles नेपालीLUMO Project",
+     "title": "LUMO: Acts of the Apostles"
+    },
+    {
+     "cells": [
+      "LUMO: The Covenant नेपाली",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-covenant/nep_nepali_covenant",
+     "row": "LUMO: The Covenant नेपालीLUMO Project",
+     "title": "LUMO: The Covenant"
+    },
+    {
+     "cells": [
+      "The Visual Bible: Matthew नेपाली",
+      "Visual Bible Int.",
+      "4:12:40"
+     ],
+     "href": "https://dbs.org/video/matthew/nep-matthew-vb-nepali",
+     "row": "The Visual Bible: Matthew नेपालीVisual Bible Int.4:12:40",
+     "title": "The Visual Bible: Matthew"
+    },
+    {
+     "cells": [
+      "The Visual Bible: Acts नेपाली",
+      "Visual Bible Int.",
+      "3:10:06"
+     ],
+     "href": "https://dbs.org/video/acts_vb/nep-acts-vb-nepali",
+     "row": "The Visual Bible: Acts नेपालीVisual Bible Int.3:10:06",
+     "title": "The Visual Bible: Acts"
+    }
+   ]
+  },
+  "Audio Collections": {
+   "heading": "Audio Collections 2",
+   "links": [
+    {
+     "cells": [
+      "Nepali",
+      "Global Recordings Network",
+      "996 files · 2.9 GB"
+     ],
+     "href": "https://dbs.org/audio/collections/grn/nep_GlobalRecordings_nepali-macrolanguage",
+     "row": "NepaliGlobal Recordings Network996 files · 2.9 GB",
+     "title": "Nepali"
+    },
+    {
+     "cells": [
+      "Nepali",
+      "Story of Jesus",
+      "9 files · 204.2 MB"
+     ],
+     "href": "https://dbs.org/audio/collections/soj/nep_StoryJesus_nepali",
+     "row": "NepaliStory of Jesus9 files · 204.2 MB",
+     "title": "Nepali"
+    }
+   ]
+  },
+  "Links to Other Sites": {
+   "heading": "Links to Other Sites 83",
+   "links": [
+    {
+     "cells": [],
+     "href": "https://odi-anusaran.s3.ap-south-1.amazonaws.com/downloads/video/lumo/lumo-nep-2-mark.mp4",
+     "row": "Lumo: Mark",
+     "title": "Lumo: Mark"
+    },
+    {
+     "cells": [],
+     "href": "https://odi-anusaran.s3.ap-south-1.amazonaws.com/downloads/video/lumo/lumo-nep-4-luke.mp4",
+     "row": "Lumo: Luke",
+     "title": "Lumo: Luke"
+    },
+    {
+     "cells": [],
+     "href": "https://odi-anusaran.s3.ap-south-1.amazonaws.com/downloads/video/lumo/lumo-nep-1-matthew.mp4",
+     "row": "Lumo: Matthew",
+     "title": "Lumo: Matthew"
+    },
+    {
+     "cells": [],
+     "href": "https://odi-anusaran.s3.ap-south-1.amazonaws.com/downloads/video/lumo/lumo-nep-3-john.mp4",
+     "row": "Lumo: John",
+     "title": "Lumo: John"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mars-hill.org/the-hope/store/the-nepali-hope-%E0%A4%86%E0%A4%B6%E0%A4%BE-voice-only-version",
+     "row": "The Nepali HOPE",
+     "title": "The Nepali HOPE"
+    },
+    {
+     "cells": [],
+     "href": "https://bibleproject.com/Nepali",
+     "row": "Nepali Bible Project Videos",
+     "title": "Nepali Bible Project Videos"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_MakeMeYours07.mp3",
+     "row": "Make Me Yours - 7",
+     "title": "Make Me Yours - 7"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_MakeMeYours08.mp3",
+     "row": "Make Me Yours - 8",
+     "title": "Make Me Yours - 8"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_TheHopeReturns01.mp3",
+     "row": "Hope Returns - 1",
+     "title": "Hope Returns - 1"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_TheHopeReturns02.mp3",
+     "row": "Hope Returns - 2",
+     "title": "Hope Returns - 2"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_TheHopeReturns03.mp3",
+     "row": "Hope Returns - 3",
+     "title": "Hope Returns - 3"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_TheHopeReturns04.mp3",
+     "row": "Hope Returns - 4",
+     "title": "Hope Returns - 4"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_TheHopeReturns05.mp3",
+     "row": "Hope Returns - 5",
+     "title": "Hope Returns - 5"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_TheHopeReturns06.mp3",
+     "row": "Hope Returns - 6",
+     "title": "Hope Returns - 6"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_TheHopeReturns07.mp3",
+     "row": "Hope Returns - 7",
+     "title": "Hope Returns - 7"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_TheHopeReturns08.mp3",
+     "row": "Hope Returns - 8",
+     "title": "Hope Returns - 8"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_1BeginningWithGod.mp3",
+     "row": "Beginning with God",
+     "title": "Beginning with God"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_1BeginningWithGodForChildren.mp3",
+     "row": "Beginning with God for Children",
+     "title": "Beginning with God for Children"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_2MightyMenOfGod.mp3",
+     "row": "Mighty Men of God",
+     "title": "Mighty Men of God"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_3VictorythroughGOD.mp3",
+     "row": "Victory through God",
+     "title": "Victory through God"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_4ServantsofGOD.mp3",
+     "row": "Servants of God",
+     "title": "Servants of God"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_5OnTrialforGOD.mp3",
+     "row": "On Trial for God",
+     "title": "On Trial for God"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_6JESUSTeacherHealer.mp3",
+     "row": "Jesus: Teacher and Healer",
+     "title": "Jesus: Teacher and Healer"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_7LordSaviour.mp3",
+     "row": "Lord and Saviour",
+     "title": "Lord and Saviour"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//NEP/Audio/GRN/100_Stories/NAP_GRN_8Acts.mp3",
+     "row": "Acts",
+     "title": "Acts"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/62323",
+     "row": "Good News",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/30620",
+     "row": "Testimony",
+     "title": "Testimony"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/11250",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/62313",
+     "row": "Alolon Ge Pemili Ana Minamina [Good News]",
+     "title": "Alolon Ge Pemili Ana Minamina [Good News]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/63958",
+     "row": "Classic Nepali Hymns",
+     "title": "Classic Nepali Hymns"
+    },
+    {
+     "cells": [],
+     "href": "https://s3.ap-south-1.amazonaws.com/odi-anusaran/resources/ne-teacher-module-1.pdf",
+     "row": "Standing Strong Through The Storm - Teacher's Module 1",
+     "title": "Standing Strong Through The Storm - Teacher's Module 1"
+    },
+    {
+     "cells": [],
+     "href": "https://s3.ap-south-1.amazonaws.com/odi-anusaran/resources/ne-teacher-module-2.pdf",
+     "row": "Standing Strong Through The Storm - Teacher's Module 2",
+     "title": "Standing Strong Through The Storm - Teacher's Module 2"
+    },
+    {
+     "cells": [],
+     "href": "https://s3.ap-south-1.amazonaws.com/odi-anusaran/resources/ne-students-module-1.pdf",
+     "row": "Standing Strong Through The Storm - Student's Module 1",
+     "title": "Standing Strong Through The Storm - Student's Module 1"
+    },
+    {
+     "cells": [],
+     "href": "https://s3.ap-south-1.amazonaws.com/odi-anusaran/resources/ne-students-module-2.pdf",
+     "row": "Standing Strong Through The Storm - Student's Module 2",
+     "title": "Standing Strong Through The Storm - Student's Module 2"
+    }
+   ]
+  }
+ }
+}

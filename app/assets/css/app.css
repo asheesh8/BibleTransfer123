@@ -797,8 +797,14 @@ html[lang="yue"] body { font-family: "PingFang HK", "PingFang TC", "Microsoft Jh
                "Noto Sans CJK TC", "Source Han Sans TC", system-ui, sans-serif; }
 
 /* Devanagari needs a face with the full headline and conjunct repertoire. */
-html[lang="hi"] body {
+html[lang="hi"] body,
+html[lang="ne"] body {
   font-family: "Noto Sans Devanagari", "Kohinoor Devanagari", Mangal,
+               "Nirmala UI", system-ui, sans-serif;
+  line-height: 1.75;
+}
+html[lang="pa"] body {
+  font-family: "Noto Sans Gurmukhi", "Gurmukhi MN", "Mukta Mahee", Raavi,
                "Nirmala UI", system-ui, sans-serif;
   line-height: 1.75;
 }
@@ -809,7 +815,9 @@ html[lang="cmn"] .flabel, html[lang="yue"] .flabel,
 html[lang="cmn"] .eyebrow, html[lang="yue"] .eyebrow {
   text-transform: none; letter-spacing: 0; font-size: .82rem;
 }
-html[lang="hi"] .kicker, html[lang="hi"] .flabel, html[lang="hi"] .eyebrow {
+html[lang="hi"] .kicker, html[lang="hi"] .flabel, html[lang="hi"] .eyebrow,
+html[lang="ne"] .kicker, html[lang="ne"] .flabel, html[lang="ne"] .eyebrow,
+html[lang="pa"] .kicker, html[lang="pa"] .flabel, html[lang="pa"] .eyebrow {
   text-transform: none; letter-spacing: 0; font-size: .86rem;
 }
 
@@ -863,3 +871,67 @@ html[dir="rtl"] .fchip { padding-top: 1.05rem; padding-bottom: 1.05rem; }
 
 /* Chevrons and arrows point the other way in an RTL page. */
 html[dir="rtl"] .flip { transform: scaleX(-1); }
+
+/* ============================================================ first run
+
+   A whole screen rather than a sheet: nothing behind it matters until a
+   language is chosen, and it must not be dismissable by a stray tap. */
+html.welcoming, html.welcoming body { overflow: hidden; }
+html.welcoming #et-hint { display: none; }
+.welcome {
+  position: fixed; inset: 0; z-index: 200;
+  background: var(--ground);
+  overflow-y: auto; -webkit-overflow-scrolling: touch;
+  padding: max(1.25rem, env(safe-area-inset-top)) 16px max(1.5rem, env(safe-area-inset-bottom));
+}
+.welcome-in { max-width: 34rem; margin: 0 auto; }
+.welcome-mark { display: flex; justify-content: center; margin: .75rem 0 .5rem; }
+.welcome h1 { text-align: center; font-size: clamp(1.6rem, 6vw, 2.1rem); margin: 0 0 .35rem; }
+.welcome-also {
+  text-align: center; color: var(--ink-soft); font-size: .92rem; line-height: 1.8;
+  margin: 0 0 .6rem;
+}
+.welcome > .welcome-in > .muted { text-align: center; margin: 0 auto 1.1rem; max-width: 28rem; }
+.welcome-search { margin-bottom: .8rem; }
+.welcome-list { display: grid; gap: .5rem; }
+.welcome-lang {
+  display: flex; align-items: center; gap: .75rem; width: 100%;
+  min-height: 4.1rem; padding: .7rem .9rem;
+  text-align: start; color: inherit; font: inherit;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+  cursor: pointer; transition: border-color .15s, transform .1s, background .15s;
+}
+.welcome-lang:hover { border-color: var(--purple); }
+.welcome-lang:active { transform: scale(.985); }
+.welcome-lang:focus-visible { outline: 3px solid var(--purple); outline-offset: 2px; }
+.welcome-lang.guess { border-color: var(--purple); background: var(--purple-wash); }
+.welcome-lang[hidden] { display: none; }
+.wl-text { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.wl-native { font-size: 1.22rem; font-weight: 700; line-height: 1.5; }
+.wl-name { font-size: .84rem; color: var(--ink-soft); }
+.wl-count { font-size: .8rem; color: var(--purple); line-height: 1.45; margin-top: .1rem; }
+.wl-go { display: flex; color: var(--ink-soft); flex: none; }
+.wl-go svg { width: 18px; height: 18px; }
+html[dir="rtl"] .wl-go svg { transform: scaleX(-1); }
+
+/* ------------------------------------------------------------ generated covers
+   Every item has one; a real cover image, when it loads, sits on top. */
+.gen {
+  position: absolute; inset: 0; display: flex; align-items: flex-end;
+  color: rgba(255, 255, 255, .95); overflow: hidden;
+}
+.gen svg { position: absolute; inset: 0; width: 100% !important; height: 100% !important; opacity: 1 !important; }
+.gen-title {
+  position: relative; z-index: 1; width: 100%;
+  padding: .7rem .75rem .8rem;
+  font-weight: 800; font-size: 1.02rem; line-height: 1.3; color: #fff;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, .35);
+  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;
+  background: linear-gradient(to top, rgba(0, 0, 0, .38), transparent);
+}
+.gen-year {
+  position: absolute; top: .6rem; inset-inline-end: .65rem; z-index: 1;
+  font-weight: 800; font-size: .8rem; letter-spacing: .04em; color: #fff;
+  background: rgba(0, 0, 0, .25); padding: .15rem .45rem; border-radius: 999px;
+}
+.poster .art img, .rowi .art img, .thumb > img { z-index: 2; }

@@ -1,0 +1,4162 @@
+{
+ "generated": "Digital Bible Society (dbs.org) — Nepali, built from the open dataset",
+ "languages": {
+  "npi": {
+   "name": "Nepali",
+   "native": "नेपाली",
+   "script": "deva",
+   "dir": "ltr",
+   "font": "devanagari",
+   "speakers": "~32 million",
+   "region": "Nepal, India & Bhutan",
+   "blurb": "The national language of Nepal, written in the Devanagari script.",
+   "code": "npi"
+  }
+ },
+ "resources": [
+  {
+   "id": "npi-film-jesus",
+   "type": "film",
+   "title": "JESUS",
+   "native": "येशू",
+   "org": "Jesus Film Project",
+   "year": "1979",
+   "scope": null,
+   "desc": "The life of Jesus from the Gospel of Luke, divided into 61 chapters.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "The Beginning",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_01_the_beginning_1_jf6101_0_0_low.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Birth of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_02_birth_of_jesus_1_jf6102_0_0_low.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Childhood of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_03_childhood_of_jesus_1_jf6103_0_0_low.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Baptism of Jesus by John",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_04_baptism_of_jesus_by_john_1_jf6104_0_0_low.mp4"
+     },
+     {
+      "n": 5,
+      "title": "The Devil Tempts Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_05_the_devil_tempts_jesus_1_jf6105_0_0_low.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Jesus Proclaims Fulfillment of the Scriptures",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_06_jesus_proclaims_fulfillment_of_the_scriptures_1_jf6106_0_0_low.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Parable of the Pharisee and Tax Collector",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_07_parable_of_the_pharisee_and_tax_collector_1_jf6107_0_0_low.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Miraculous Catch of Fish",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_08_miraculous_catch_of_fish_1_jf6108_0_0_low.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Jairuss Daughter Brought Back to Life",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_09_jairuss_daughter_brought_back_to_life_1_jf6109_0_0_low.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Disciples Chosen",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_10_disciples_chosen_1_jf6110_0_0_low.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Beatitudes",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_11_beatitudes_1_jf6111_0_0_low.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Sermon on the Mount",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_12_sermon_on_the_mount_1_jf6112_0_0_low.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Blessed are Those who Hear and Obey",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_13_blessed_are_those_who_hear_and_obey_1_jf6113_0_0_low.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Sinful Woman Forgiven",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_14_sinful_woman_forgiven_1_jf6114_0_0_low.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Women Disciples",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_15_women_disciples_1_jf6115_0_0_low.mp4"
+     },
+     {
+      "n": 16,
+      "title": "John the Baptist in Prison",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_16_john_the_baptist_in_prison_1_jf6116_0_0_low.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Parable of the Sower and the Seed",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_17_parable_of_the_sower_and_the_seed_1_jf6117_0_0_low.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Parable of the Lamp",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_18_parable_of_the_lamp_1_jf6118_0_0_low.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Jesus Calms the Storm",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_19_jesus_calms_the_storm_1_jf6119_0_0_low.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Healing of the Demoniac",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_20_healing_of_the_demoniac_1_jf6120_0_0_low.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Jesus Feeds 5000",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_21_jesus_feeds_5000_1_jf6121_0_0_low.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Peter Declares Jesus to be the Christ",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_22_peter_declares_jesus_to_be_the_christ_1_jf6122_0_0_low.mp4"
+     },
+     {
+      "n": 23,
+      "title": "The Transfiguration",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_23_the_transfiguration_1_jf6123_0_0_low.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Jesus Heals Boy From Evil Spirit",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_24_jesus_heals_boy_from_evil_spirit_1_jf6124_0_0_low.mp4"
+     },
+     {
+      "n": 25,
+      "title": "The Lords Prayer",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_25_the_lords_prayer_1_jf6125_0_0_low.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Teaching About Prayer and Faith",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_26_teaching_about_prayer_and_faith_1_jf6126_0_0_low.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Woe to Those who Cause Others to Sin",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_27_woe_to_those_who_cause_others_to_sin_1_jf6127_0_0_low.mp4"
+     },
+     {
+      "n": 28,
+      "title": "The Kingdom of God as a Mustard Seed",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_28_the_kingdom_of_god_as_a_mustard_seed_1_jf6128_0_0_low.mp4"
+     },
+     {
+      "n": 29,
+      "title": "Jesus Spends Time with Sinners",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_29_jesus_spends_time_with_sinners_1_jf6129_0_0_low.mp4"
+     },
+     {
+      "n": 30,
+      "title": "Healing on the Sabbath",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_30_healing_on_the_sabbath_1_jf6130_0_0_low.mp4"
+     },
+     {
+      "n": 31,
+      "title": "Parable of the Good Samaritan",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_31_parable_of_the_good_samaritan_1_jf6131_0_0_low.mp4"
+     },
+     {
+      "n": 32,
+      "title": "Healing of Bartimaeus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_32_healing_of_bartimaeus_1_jf6132_0_0_low.mp4"
+     },
+     {
+      "n": 33,
+      "title": "Jesus and Zaccheus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_33_jesus_and_zaccheus_1_jf6133_0_0_low.mp4"
+     },
+     {
+      "n": 34,
+      "title": "Jesus Predicts his Death and Resurrection",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_34_jesus_predicts_his_death_and_resurrection_1_jf6134_0_0_low.mp4"
+     },
+     {
+      "n": 35,
+      "title": "Jesuss Triumphal Entry",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_35_jesuss_triumphal_entry_1_jf6135_0_0_low.mp4"
+     },
+     {
+      "n": 36,
+      "title": "Jesus Weeps Over Jerusalem",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_36_jesus_weeps_over_jerusalem_1_jf6136_0_0_low.mp4"
+     },
+     {
+      "n": 37,
+      "title": "Jesus Drives Out Money Changers",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_37_jesus_drives_out_money_changers_1_jf6137_0_0_low.mp4"
+     },
+     {
+      "n": 38,
+      "title": "Widows Offering",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_38_widows_offering_1_jf6138_0_0_low.mp4"
+     },
+     {
+      "n": 39,
+      "title": "Annas Questions Jesuss Authority",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_39_annas_questions_jesuss_authority_1_jf6139_0_0_low.mp4"
+     },
+     {
+      "n": 40,
+      "title": "Parable of the Vineyard and Tenants",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_40_parable_of_the_vineyard_and_tenants_1_jf6140_0_0_low.mp4"
+     },
+     {
+      "n": 41,
+      "title": "Paying Taxes to Caesar",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_41_paying_taxes_to_caesar_1_jf6141_0_0_low.mp4"
+     },
+     {
+      "n": 42,
+      "title": "The Last Supper",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_42_the_last_supper_1_jf6142_0_0_low.mp4"
+     },
+     {
+      "n": 43,
+      "title": "Upper Room Teaching",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_43_upper_room_teaching_1_jf6143_0_0_low.mp4"
+     },
+     {
+      "n": 44,
+      "title": "Jesus is Betrayed and Arrested",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_44_jesus_is_betrayed_and_arrested_1_jf6144_0_0_low.mp4"
+     },
+     {
+      "n": 45,
+      "title": "Peter Disowns Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_45_peter_disowns_jesus_1_jf6145_0_0_low.mp4"
+     },
+     {
+      "n": 46,
+      "title": "Jesus is Mocked and Questioned",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_46_jesus_is_mocked_and_questioned_1_jf6146_0_0_low.mp4"
+     },
+     {
+      "n": 47,
+      "title": "Jesus is Brought to Pilate",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_47_jesus_is_brought_to_pilate_1_jf6147_0_0_low.mp4"
+     },
+     {
+      "n": 48,
+      "title": "Jesus is Brought to Herod",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_48_jesus_is_brought_to_herod_1_jf6148_0_0_low.mp4"
+     },
+     {
+      "n": 49,
+      "title": "Jesus is Sentenced",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_49_jesus_is_sentenced_1_jf6149_0_0_low.mp4"
+     },
+     {
+      "n": 50,
+      "title": "Jesus Carries his Cross",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_50_jesus_carries_his_cross_1_jf6150_0_0_low.mp4"
+     },
+     {
+      "n": 51,
+      "title": "Jesus is Crucified",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_51_jesus_is_crucified_1_jf6151_0_0_low.mp4"
+     },
+     {
+      "n": 52,
+      "title": "Soldiers Gamble for Jesuss Clothes",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_52_soldiers_gamble_for_jesuss_clothes_1_jf6152_0_0_low.mp4"
+     },
+     {
+      "n": 53,
+      "title": "Sign on the Cross",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_53_sign_on_the_cross_1_jf6153_0_0_low.mp4"
+     },
+     {
+      "n": 54,
+      "title": "Crucified Convicts",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_54_crucified_convicts_1_jf6154_0_0_low.mp4"
+     },
+     {
+      "n": 55,
+      "title": "Death of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_55_death_of_jesus_1_jf6155_0_0_low.mp4"
+     },
+     {
+      "n": 56,
+      "title": "Burial of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_56_burial_of_jesus_1_jf6156_0_0_low.mp4"
+     },
+     {
+      "n": 57,
+      "title": "Angels At the Tomb",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_57_angels_at_the_tomb_1_jf6157_0_0_low.mp4"
+     },
+     {
+      "n": 58,
+      "title": "The Tomb is Empty",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_58_the_tomb_is_empty_1_jf6158_0_0_low.mp4"
+     },
+     {
+      "n": 59,
+      "title": "Resurrected Jesus Appears",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_59_resurrected_jesus_appears_1_jf6159_0_0_low.mp4"
+     },
+     {
+      "n": 60,
+      "title": "Great Commission and Ascension",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_60_great_commission_and_ascension_1_jf6160_0_0_low.mp4"
+     },
+     {
+      "n": 61,
+      "title": "Invitation to Know Jesus Personally",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_nepali/npi_jesus_chapter_61_invitation_to_know_jesus_personally_1_jf6161_0_0_low.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "All chapters — low data",
+     "url": "https://download.dbs.org/Jesus/npi_nepali/npi_jesus_chapters_low.zip"
+    },
+    {
+     "label": "All chapters — HD",
+     "url": "https://download.dbs.org/Jesus/npi_nepali/npi_jesus_chapters_high.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/jesus/npi_nepali_jesus",
+   "lang": "npi",
+   "read": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "npi-film-jesus-acchami",
+   "type": "film",
+   "title": "JESUS (Acchami)",
+   "native": "येशू (अछामी)",
+   "org": "Jesus Film Project",
+   "year": "1979",
+   "scope": "Acchami",
+   "desc": "The life of Jesus from the Gospel of Luke, divided into 61 chapters.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "The Beginning",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_01_the_beginning_1_jf6101_0_0_low.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Birth of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_02_birth_of_jesus_1_jf6102_0_0_low.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Childhood of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_03_childhood_of_jesus_1_jf6103_0_0_low.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Baptism of Jesus by John",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_04_baptism_of_jesus_by_john_1_jf6104_0_0_low.mp4"
+     },
+     {
+      "n": 5,
+      "title": "The Devil Tempts Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_05_the_devil_tempts_jesus_1_jf6105_0_0_low.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Jesus Proclaims Fulfillment of the Scriptures",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_06_jesus_proclaims_fulfillment_of_the_scriptures_1_jf6106_0_0_low.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Parable of the Pharisee and Tax Collector",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_07_parable_of_the_pharisee_and_tax_collector_1_jf6107_0_0_low.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Miraculous Catch of Fish",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_08_miraculous_catch_of_fish_1_jf6108_0_0_low.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Jairuss Daughter Brought Back to Life",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_09_jairuss_daughter_brought_back_to_life_1_jf6109_0_0_low.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Disciples Chosen",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_10_disciples_chosen_1_jf6110_0_0_low.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Beatitudes",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_11_beatitudes_1_jf6111_0_0_low.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Sermon on the Mount",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_12_sermon_on_the_mount_1_jf6112_0_0_low.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Blessed are Those who Hear and Obey",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_13_blessed_are_those_who_hear_and_obey_1_jf6113_0_0_low.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Sinful Woman Forgiven",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_14_sinful_woman_forgiven_1_jf6114_0_0_low.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Women Disciples",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_15_women_disciples_1_jf6115_0_0_low.mp4"
+     },
+     {
+      "n": 16,
+      "title": "John the Baptist in Prison",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_16_john_the_baptist_in_prison_1_jf6116_0_0_low.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Parable of the Sower and the Seed",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_17_parable_of_the_sower_and_the_seed_1_jf6117_0_0_low.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Parable of the Lamp",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_18_parable_of_the_lamp_1_jf6118_0_0_low.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Jesus Calms the Storm",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_19_jesus_calms_the_storm_1_jf6119_0_0_low.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Healing of the Demoniac",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_20_healing_of_the_demoniac_1_jf6120_0_0_low.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Jesus Feeds 5000",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_21_jesus_feeds_5000_1_jf6121_0_0_low.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Peter Declares Jesus to be the Christ",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_22_peter_declares_jesus_to_be_the_christ_1_jf6122_0_0_low.mp4"
+     },
+     {
+      "n": 23,
+      "title": "The Transfiguration",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_23_the_transfiguration_1_jf6123_0_0_low.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Jesus Heals Boy From Evil Spirit",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_24_jesus_heals_boy_from_evil_spirit_1_jf6124_0_0_low.mp4"
+     },
+     {
+      "n": 25,
+      "title": "The Lords Prayer",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_25_the_lords_prayer_1_jf6125_0_0_low.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Teaching About Prayer and Faith",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_26_teaching_about_prayer_and_faith_1_jf6126_0_0_low.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Woe to Those who Cause Others to Sin",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_27_woe_to_those_who_cause_others_to_sin_1_jf6127_0_0_low.mp4"
+     },
+     {
+      "n": 28,
+      "title": "The Kingdom of God as a Mustard Seed",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_28_the_kingdom_of_god_as_a_mustard_seed_1_jf6128_0_0_low.mp4"
+     },
+     {
+      "n": 29,
+      "title": "Jesus Spends Time with Sinners",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_29_jesus_spends_time_with_sinners_1_jf6129_0_0_low.mp4"
+     },
+     {
+      "n": 30,
+      "title": "Healing on the Sabbath",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_30_healing_on_the_sabbath_1_jf6130_0_0_low.mp4"
+     },
+     {
+      "n": 31,
+      "title": "Parable of the Good Samaritan",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_31_parable_of_the_good_samaritan_1_jf6131_0_0_low.mp4"
+     },
+     {
+      "n": 32,
+      "title": "Healing of Bartimaeus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_32_healing_of_bartimaeus_1_jf6132_0_0_low.mp4"
+     },
+     {
+      "n": 33,
+      "title": "Jesus and Zaccheus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_33_jesus_and_zaccheus_1_jf6133_0_0_low.mp4"
+     },
+     {
+      "n": 34,
+      "title": "Jesus Predicts his Death and Resurrection",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_34_jesus_predicts_his_death_and_resurrection_1_jf6134_0_0_low.mp4"
+     },
+     {
+      "n": 35,
+      "title": "Jesuss Triumphal Entry",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_35_jesuss_triumphal_entry_1_jf6135_0_0_low.mp4"
+     },
+     {
+      "n": 36,
+      "title": "Jesus Weeps Over Jerusalem",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_36_jesus_weeps_over_jerusalem_1_jf6136_0_0_low.mp4"
+     },
+     {
+      "n": 37,
+      "title": "Jesus Drives Out Money Changers",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_37_jesus_drives_out_money_changers_1_jf6137_0_0_low.mp4"
+     },
+     {
+      "n": 38,
+      "title": "Widows Offering",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_38_widows_offering_1_jf6138_0_0_low.mp4"
+     },
+     {
+      "n": 39,
+      "title": "Annas Questions Jesuss Authority",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_39_annas_questions_jesuss_authority_1_jf6139_0_0_low.mp4"
+     },
+     {
+      "n": 40,
+      "title": "Parable of the Vineyard and Tenants",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_40_parable_of_the_vineyard_and_tenants_1_jf6140_0_0_low.mp4"
+     },
+     {
+      "n": 41,
+      "title": "Paying Taxes to Caesar",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_41_paying_taxes_to_caesar_1_jf6141_0_0_low.mp4"
+     },
+     {
+      "n": 42,
+      "title": "The Last Supper",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_42_the_last_supper_1_jf6142_0_0_low.mp4"
+     },
+     {
+      "n": 43,
+      "title": "Upper Room Teaching",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_43_upper_room_teaching_1_jf6143_0_0_low.mp4"
+     },
+     {
+      "n": 44,
+      "title": "Jesus is Betrayed and Arrested",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_44_jesus_is_betrayed_and_arrested_1_jf6144_0_0_low.mp4"
+     },
+     {
+      "n": 45,
+      "title": "Peter Disowns Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_45_peter_disowns_jesus_1_jf6145_0_0_low.mp4"
+     },
+     {
+      "n": 46,
+      "title": "Jesus is Mocked and Questioned",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_46_jesus_is_mocked_and_questioned_1_jf6146_0_0_low.mp4"
+     },
+     {
+      "n": 47,
+      "title": "Jesus is Brought to Pilate",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_47_jesus_is_brought_to_pilate_1_jf6147_0_0_low.mp4"
+     },
+     {
+      "n": 48,
+      "title": "Jesus is Brought to Herod",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_48_jesus_is_brought_to_herod_1_jf6148_0_0_low.mp4"
+     },
+     {
+      "n": 49,
+      "title": "Jesus is Sentenced",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_49_jesus_is_sentenced_1_jf6149_0_0_low.mp4"
+     },
+     {
+      "n": 50,
+      "title": "Jesus Carries his Cross",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_50_jesus_carries_his_cross_1_jf6150_0_0_low.mp4"
+     },
+     {
+      "n": 51,
+      "title": "Jesus is Crucified",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_51_jesus_is_crucified_1_jf6151_0_0_low.mp4"
+     },
+     {
+      "n": 52,
+      "title": "Soldiers Gamble for Jesuss Clothes",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_52_soldiers_gamble_for_jesuss_clothes_1_jf6152_0_0_low.mp4"
+     },
+     {
+      "n": 53,
+      "title": "Sign on the Cross",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_53_sign_on_the_cross_1_jf6153_0_0_low.mp4"
+     },
+     {
+      "n": 54,
+      "title": "Crucified Convicts",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_54_crucified_convicts_1_jf6154_0_0_low.mp4"
+     },
+     {
+      "n": 55,
+      "title": "Death of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_55_death_of_jesus_1_jf6155_0_0_low.mp4"
+     },
+     {
+      "n": 56,
+      "title": "Burial of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_56_burial_of_jesus_1_jf6156_0_0_low.mp4"
+     },
+     {
+      "n": 57,
+      "title": "Angels At the Tomb",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_57_angels_at_the_tomb_1_jf6157_0_0_low.mp4"
+     },
+     {
+      "n": 58,
+      "title": "The Tomb is Empty",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_58_the_tomb_is_empty_1_jf6158_0_0_low.mp4"
+     },
+     {
+      "n": 59,
+      "title": "Resurrected Jesus Appears",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_59_resurrected_jesus_appears_1_jf6159_0_0_low.mp4"
+     },
+     {
+      "n": 60,
+      "title": "Great Commission and Ascension",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_60_great_commission_and_ascension_1_jf6160_0_0_low.mp4"
+     },
+     {
+      "n": 61,
+      "title": "Invitation to Know Jesus Personally",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_acchami/npi_jesus_chapter_61_invitation_to_know_jesus_personally_1_jf6161_0_0_low.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "All chapters — low data",
+     "url": "https://download.dbs.org/Jesus/npi_acchami/npi_jesus_chapters_low.zip"
+    },
+    {
+     "label": "All chapters — HD",
+     "url": "https://download.dbs.org/Jesus/npi_acchami/npi_jesus_chapters_high.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/jesus/npi_acchami_jesus",
+   "lang": "npi",
+   "read": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "npi-film-jesus-baitadeli",
+   "type": "film",
+   "title": "JESUS (Baitadeli)",
+   "native": "येशू (बैतडेली)",
+   "org": "Jesus Film Project",
+   "year": "1979",
+   "scope": "Baitadeli",
+   "desc": "The life of Jesus from the Gospel of Luke, divided into 61 chapters.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "The Beginning",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_01_the_beginning_1_jf6101_0_0_low.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Birth of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_02_birth_of_jesus_1_jf6102_0_0_low.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Childhood of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_03_childhood_of_jesus_1_jf6103_0_0_low.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Baptism of Jesus by John",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_04_baptism_of_jesus_by_john_1_jf6104_0_0_low.mp4"
+     },
+     {
+      "n": 5,
+      "title": "The Devil Tempts Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_05_the_devil_tempts_jesus_1_jf6105_0_0_low.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Jesus Proclaims Fulfillment of the Scriptures",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_06_jesus_proclaims_fulfillment_of_the_scriptures_1_jf6106_0_0_low.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Parable of the Pharisee and Tax Collector",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_07_parable_of_the_pharisee_and_tax_collector_1_jf6107_0_0_low.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Miraculous Catch of Fish",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_08_miraculous_catch_of_fish_1_jf6108_0_0_low.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Jairuss Daughter Brought Back to Life",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_09_jairuss_daughter_brought_back_to_life_1_jf6109_0_0_low.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Disciples Chosen",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_10_disciples_chosen_1_jf6110_0_0_low.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Beatitudes",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_11_beatitudes_1_jf6111_0_0_low.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Sermon on the Mount",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_12_sermon_on_the_mount_1_jf6112_0_0_low.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Blessed are Those who Hear and Obey",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_13_blessed_are_those_who_hear_and_obey_1_jf6113_0_0_low.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Sinful Woman Forgiven",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_14_sinful_woman_forgiven_1_jf6114_0_0_low.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Women Disciples",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_15_women_disciples_1_jf6115_0_0_low.mp4"
+     },
+     {
+      "n": 16,
+      "title": "John the Baptist in Prison",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_16_john_the_baptist_in_prison_1_jf6116_0_0_low.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Parable of the Sower and the Seed",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_17_parable_of_the_sower_and_the_seed_1_jf6117_0_0_low.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Parable of the Lamp",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_18_parable_of_the_lamp_1_jf6118_0_0_low.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Jesus Calms the Storm",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_19_jesus_calms_the_storm_1_jf6119_0_0_low.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Healing of the Demoniac",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_20_healing_of_the_demoniac_1_jf6120_0_0_low.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Jesus Feeds 5000",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_21_jesus_feeds_5000_1_jf6121_0_0_low.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Peter Declares Jesus to be the Christ",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_22_peter_declares_jesus_to_be_the_christ_1_jf6122_0_0_low.mp4"
+     },
+     {
+      "n": 23,
+      "title": "The Transfiguration",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_23_the_transfiguration_1_jf6123_0_0_low.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Jesus Heals Boy From Evil Spirit",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_24_jesus_heals_boy_from_evil_spirit_1_jf6124_0_0_low.mp4"
+     },
+     {
+      "n": 25,
+      "title": "The Lords Prayer",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_25_the_lords_prayer_1_jf6125_0_0_low.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Teaching About Prayer and Faith",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_26_teaching_about_prayer_and_faith_1_jf6126_0_0_low.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Woe to Those who Cause Others to Sin",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_27_woe_to_those_who_cause_others_to_sin_1_jf6127_0_0_low.mp4"
+     },
+     {
+      "n": 28,
+      "title": "The Kingdom of God as a Mustard Seed",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_28_the_kingdom_of_god_as_a_mustard_seed_1_jf6128_0_0_low.mp4"
+     },
+     {
+      "n": 29,
+      "title": "Jesus Spends Time with Sinners",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_29_jesus_spends_time_with_sinners_1_jf6129_0_0_low.mp4"
+     },
+     {
+      "n": 30,
+      "title": "Healing on the Sabbath",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_30_healing_on_the_sabbath_1_jf6130_0_0_low.mp4"
+     },
+     {
+      "n": 31,
+      "title": "Parable of the Good Samaritan",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_31_parable_of_the_good_samaritan_1_jf6131_0_0_low.mp4"
+     },
+     {
+      "n": 32,
+      "title": "Healing of Bartimaeus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_32_healing_of_bartimaeus_1_jf6132_0_0_low.mp4"
+     },
+     {
+      "n": 33,
+      "title": "Jesus and Zaccheus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_33_jesus_and_zaccheus_1_jf6133_0_0_low.mp4"
+     },
+     {
+      "n": 34,
+      "title": "Jesus Predicts his Death and Resurrection",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_34_jesus_predicts_his_death_and_resurrection_1_jf6134_0_0_low.mp4"
+     },
+     {
+      "n": 35,
+      "title": "Jesuss Triumphal Entry",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_35_jesuss_triumphal_entry_1_jf6135_0_0_low.mp4"
+     },
+     {
+      "n": 36,
+      "title": "Jesus Weeps Over Jerusalem",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_36_jesus_weeps_over_jerusalem_1_jf6136_0_0_low.mp4"
+     },
+     {
+      "n": 37,
+      "title": "Jesus Drives Out Money Changers",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_37_jesus_drives_out_money_changers_1_jf6137_0_0_low.mp4"
+     },
+     {
+      "n": 38,
+      "title": "Widows Offering",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_38_widows_offering_1_jf6138_0_0_low.mp4"
+     },
+     {
+      "n": 39,
+      "title": "Annas Questions Jesuss Authority",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_39_annas_questions_jesuss_authority_1_jf6139_0_0_low.mp4"
+     },
+     {
+      "n": 40,
+      "title": "Parable of the Vineyard and Tenants",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_40_parable_of_the_vineyard_and_tenants_1_jf6140_0_0_low.mp4"
+     },
+     {
+      "n": 41,
+      "title": "Paying Taxes to Caesar",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_41_paying_taxes_to_caesar_1_jf6141_0_0_low.mp4"
+     },
+     {
+      "n": 42,
+      "title": "The Last Supper",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_42_the_last_supper_1_jf6142_0_0_low.mp4"
+     },
+     {
+      "n": 43,
+      "title": "Upper Room Teaching",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_43_upper_room_teaching_1_jf6143_0_0_low.mp4"
+     },
+     {
+      "n": 44,
+      "title": "Jesus is Betrayed and Arrested",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_44_jesus_is_betrayed_and_arrested_1_jf6144_0_0_low.mp4"
+     },
+     {
+      "n": 45,
+      "title": "Peter Disowns Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_45_peter_disowns_jesus_1_jf6145_0_0_low.mp4"
+     },
+     {
+      "n": 46,
+      "title": "Jesus is Mocked and Questioned",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_46_jesus_is_mocked_and_questioned_1_jf6146_0_0_low.mp4"
+     },
+     {
+      "n": 47,
+      "title": "Jesus is Brought to Pilate",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_47_jesus_is_brought_to_pilate_1_jf6147_0_0_low.mp4"
+     },
+     {
+      "n": 48,
+      "title": "Jesus is Brought to Herod",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_48_jesus_is_brought_to_herod_1_jf6148_0_0_low.mp4"
+     },
+     {
+      "n": 49,
+      "title": "Jesus is Sentenced",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_49_jesus_is_sentenced_1_jf6149_0_0_low.mp4"
+     },
+     {
+      "n": 50,
+      "title": "Jesus Carries his Cross",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_50_jesus_carries_his_cross_1_jf6150_0_0_low.mp4"
+     },
+     {
+      "n": 51,
+      "title": "Jesus is Crucified",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_51_jesus_is_crucified_1_jf6151_0_0_low.mp4"
+     },
+     {
+      "n": 52,
+      "title": "Soldiers Gamble for Jesuss Clothes",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_52_soldiers_gamble_for_jesuss_clothes_1_jf6152_0_0_low.mp4"
+     },
+     {
+      "n": 53,
+      "title": "Sign on the Cross",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_53_sign_on_the_cross_1_jf6153_0_0_low.mp4"
+     },
+     {
+      "n": 54,
+      "title": "Crucified Convicts",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_54_crucified_convicts_1_jf6154_0_0_low.mp4"
+     },
+     {
+      "n": 55,
+      "title": "Death of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_55_death_of_jesus_1_jf6155_0_0_low.mp4"
+     },
+     {
+      "n": 56,
+      "title": "Burial of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_56_burial_of_jesus_1_jf6156_0_0_low.mp4"
+     },
+     {
+      "n": 57,
+      "title": "Angels At the Tomb",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_57_angels_at_the_tomb_1_jf6157_0_0_low.mp4"
+     },
+     {
+      "n": 58,
+      "title": "The Tomb is Empty",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_58_the_tomb_is_empty_1_jf6158_0_0_low.mp4"
+     },
+     {
+      "n": 59,
+      "title": "Resurrected Jesus Appears",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_59_resurrected_jesus_appears_1_jf6159_0_0_low.mp4"
+     },
+     {
+      "n": 60,
+      "title": "Great Commission and Ascension",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_60_great_commission_and_ascension_1_jf6160_0_0_low.mp4"
+     },
+     {
+      "n": 61,
+      "title": "Invitation to Know Jesus Personally",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_baitadeli/npi_jesus_chapter_61_invitation_to_know_jesus_personally_1_jf6161_0_0_low.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "All chapters — low data",
+     "url": "https://download.dbs.org/Jesus/npi_baitadeli/npi_jesus_chapters_low.zip"
+    },
+    {
+     "label": "All chapters — HD",
+     "url": "https://download.dbs.org/Jesus/npi_baitadeli/npi_jesus_chapters_high.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/jesus/npi_baitadeli_jesus",
+   "lang": "npi",
+   "read": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "npi-film-jesus-bajhangi",
+   "type": "film",
+   "title": "JESUS (Bajhangi)",
+   "native": "येशू (बझाङी)",
+   "org": "Jesus Film Project",
+   "year": "1979",
+   "scope": "Bajhangi",
+   "desc": "The life of Jesus from the Gospel of Luke, divided into 61 chapters.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "The Beginning",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_01_the_beginning_1_jf6101_0_0_low.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Birth of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_02_birth_of_jesus_1_jf6102_0_0_low.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Childhood of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_03_childhood_of_jesus_1_jf6103_0_0_low.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Baptism of Jesus by John",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_04_baptism_of_jesus_by_john_1_jf6104_0_0_low.mp4"
+     },
+     {
+      "n": 5,
+      "title": "The Devil Tempts Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_05_the_devil_tempts_jesus_1_jf6105_0_0_low.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Jesus Proclaims Fulfillment of the Scriptures",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_06_jesus_proclaims_fulfillment_of_the_scriptures_1_jf6106_0_0_low.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Parable of the Pharisee and Tax Collector",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_07_parable_of_the_pharisee_and_tax_collector_1_jf6107_0_0_low.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Miraculous Catch of Fish",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_08_miraculous_catch_of_fish_1_jf6108_0_0_low.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Jairuss Daughter Brought Back to Life",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_09_jairuss_daughter_brought_back_to_life_1_jf6109_0_0_low.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Disciples Chosen",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_10_disciples_chosen_1_jf6110_0_0_low.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Beatitudes",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_11_beatitudes_1_jf6111_0_0_low.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Sermon on the Mount",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_12_sermon_on_the_mount_1_jf6112_0_0_low.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Blessed are Those who Hear and Obey",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_13_blessed_are_those_who_hear_and_obey_1_jf6113_0_0_low.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Sinful Woman Forgiven",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_14_sinful_woman_forgiven_1_jf6114_0_0_low.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Women Disciples",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_15_women_disciples_1_jf6115_0_0_low.mp4"
+     },
+     {
+      "n": 16,
+      "title": "John the Baptist in Prison",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_16_john_the_baptist_in_prison_1_jf6116_0_0_low.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Parable of the Sower and the Seed",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_17_parable_of_the_sower_and_the_seed_1_jf6117_0_0_low.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Parable of the Lamp",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_18_parable_of_the_lamp_1_jf6118_0_0_low.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Jesus Calms the Storm",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_19_jesus_calms_the_storm_1_jf6119_0_0_low.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Healing of the Demoniac",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_20_healing_of_the_demoniac_1_jf6120_0_0_low.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Jesus Feeds 5000",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_21_jesus_feeds_5000_1_jf6121_0_0_low.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Peter Declares Jesus to be the Christ",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_22_peter_declares_jesus_to_be_the_christ_1_jf6122_0_0_low.mp4"
+     },
+     {
+      "n": 23,
+      "title": "The Transfiguration",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_23_the_transfiguration_1_jf6123_0_0_low.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Jesus Heals Boy From Evil Spirit",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_24_jesus_heals_boy_from_evil_spirit_1_jf6124_0_0_low.mp4"
+     },
+     {
+      "n": 25,
+      "title": "The Lords Prayer",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_25_the_lords_prayer_1_jf6125_0_0_low.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Teaching About Prayer and Faith",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_26_teaching_about_prayer_and_faith_1_jf6126_0_0_low.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Woe to Those who Cause Others to Sin",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_27_woe_to_those_who_cause_others_to_sin_1_jf6127_0_0_low.mp4"
+     },
+     {
+      "n": 28,
+      "title": "The Kingdom of God as a Mustard Seed",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_28_the_kingdom_of_god_as_a_mustard_seed_1_jf6128_0_0_low.mp4"
+     },
+     {
+      "n": 29,
+      "title": "Jesus Spends Time with Sinners",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_29_jesus_spends_time_with_sinners_1_jf6129_0_0_low.mp4"
+     },
+     {
+      "n": 30,
+      "title": "Healing on the Sabbath",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_30_healing_on_the_sabbath_1_jf6130_0_0_low.mp4"
+     },
+     {
+      "n": 31,
+      "title": "Parable of the Good Samaritan",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_31_parable_of_the_good_samaritan_1_jf6131_0_0_low.mp4"
+     },
+     {
+      "n": 32,
+      "title": "Healing of Bartimaeus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_32_healing_of_bartimaeus_1_jf6132_0_0_low.mp4"
+     },
+     {
+      "n": 33,
+      "title": "Jesus and Zaccheus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_33_jesus_and_zaccheus_1_jf6133_0_0_low.mp4"
+     },
+     {
+      "n": 34,
+      "title": "Jesus Predicts his Death and Resurrection",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_34_jesus_predicts_his_death_and_resurrection_1_jf6134_0_0_low.mp4"
+     },
+     {
+      "n": 35,
+      "title": "Jesuss Triumphal Entry",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_35_jesuss_triumphal_entry_1_jf6135_0_0_low.mp4"
+     },
+     {
+      "n": 36,
+      "title": "Jesus Weeps Over Jerusalem",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_36_jesus_weeps_over_jerusalem_1_jf6136_0_0_low.mp4"
+     },
+     {
+      "n": 37,
+      "title": "Jesus Drives Out Money Changers",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_37_jesus_drives_out_money_changers_1_jf6137_0_0_low.mp4"
+     },
+     {
+      "n": 38,
+      "title": "Widows Offering",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_38_widows_offering_1_jf6138_0_0_low.mp4"
+     },
+     {
+      "n": 39,
+      "title": "Annas Questions Jesuss Authority",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_39_annas_questions_jesuss_authority_1_jf6139_0_0_low.mp4"
+     },
+     {
+      "n": 40,
+      "title": "Parable of the Vineyard and Tenants",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_40_parable_of_the_vineyard_and_tenants_1_jf6140_0_0_low.mp4"
+     },
+     {
+      "n": 41,
+      "title": "Paying Taxes to Caesar",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_41_paying_taxes_to_caesar_1_jf6141_0_0_low.mp4"
+     },
+     {
+      "n": 42,
+      "title": "The Last Supper",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_42_the_last_supper_1_jf6142_0_0_low.mp4"
+     },
+     {
+      "n": 43,
+      "title": "Upper Room Teaching",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_43_upper_room_teaching_1_jf6143_0_0_low.mp4"
+     },
+     {
+      "n": 44,
+      "title": "Jesus is Betrayed and Arrested",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_44_jesus_is_betrayed_and_arrested_1_jf6144_0_0_low.mp4"
+     },
+     {
+      "n": 45,
+      "title": "Peter Disowns Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_45_peter_disowns_jesus_1_jf6145_0_0_low.mp4"
+     },
+     {
+      "n": 46,
+      "title": "Jesus is Mocked and Questioned",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_46_jesus_is_mocked_and_questioned_1_jf6146_0_0_low.mp4"
+     },
+     {
+      "n": 47,
+      "title": "Jesus is Brought to Pilate",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_47_jesus_is_brought_to_pilate_1_jf6147_0_0_low.mp4"
+     },
+     {
+      "n": 48,
+      "title": "Jesus is Brought to Herod",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_48_jesus_is_brought_to_herod_1_jf6148_0_0_low.mp4"
+     },
+     {
+      "n": 49,
+      "title": "Jesus is Sentenced",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_49_jesus_is_sentenced_1_jf6149_0_0_low.mp4"
+     },
+     {
+      "n": 50,
+      "title": "Jesus Carries his Cross",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_50_jesus_carries_his_cross_1_jf6150_0_0_low.mp4"
+     },
+     {
+      "n": 51,
+      "title": "Jesus is Crucified",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_51_jesus_is_crucified_1_jf6151_0_0_low.mp4"
+     },
+     {
+      "n": 52,
+      "title": "Soldiers Gamble for Jesuss Clothes",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_52_soldiers_gamble_for_jesuss_clothes_1_jf6152_0_0_low.mp4"
+     },
+     {
+      "n": 53,
+      "title": "Sign on the Cross",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_53_sign_on_the_cross_1_jf6153_0_0_low.mp4"
+     },
+     {
+      "n": 54,
+      "title": "Crucified Convicts",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_54_crucified_convicts_1_jf6154_0_0_low.mp4"
+     },
+     {
+      "n": 55,
+      "title": "Death of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_55_death_of_jesus_1_jf6155_0_0_low.mp4"
+     },
+     {
+      "n": 56,
+      "title": "Burial of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_56_burial_of_jesus_1_jf6156_0_0_low.mp4"
+     },
+     {
+      "n": 57,
+      "title": "Angels At the Tomb",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_57_angels_at_the_tomb_1_jf6157_0_0_low.mp4"
+     },
+     {
+      "n": 58,
+      "title": "The Tomb is Empty",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_58_the_tomb_is_empty_1_jf6158_0_0_low.mp4"
+     },
+     {
+      "n": 59,
+      "title": "Resurrected Jesus Appears",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_59_resurrected_jesus_appears_1_jf6159_0_0_low.mp4"
+     },
+     {
+      "n": 60,
+      "title": "Great Commission and Ascension",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_60_great_commission_and_ascension_1_jf6160_0_0_low.mp4"
+     },
+     {
+      "n": 61,
+      "title": "Invitation to Know Jesus Personally",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajhangi/npi_jesus_chapter_61_invitation_to_know_jesus_personally_1_jf6161_0_0_low.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "All chapters — low data",
+     "url": "https://download.dbs.org/Jesus/npi_bajhangi/npi_jesus_chapters_low.zip"
+    },
+    {
+     "label": "All chapters — HD",
+     "url": "https://download.dbs.org/Jesus/npi_bajhangi/npi_jesus_chapters_high.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/jesus/npi_bajhangi_jesus",
+   "lang": "npi",
+   "read": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "npi-film-jesus-bajureli",
+   "type": "film",
+   "title": "JESUS (Bajureli)",
+   "native": "येशू (बाजुरेली)",
+   "org": "Jesus Film Project",
+   "year": "1979",
+   "scope": "Bajureli",
+   "desc": "The life of Jesus from the Gospel of Luke, divided into 61 chapters.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "The Beginning",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_01_the_beginning_1_jf6101_0_0_low.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Birth of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_02_birth_of_jesus_1_jf6102_0_0_low.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Childhood of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_03_childhood_of_jesus_1_jf6103_0_0_low.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Baptism of Jesus by John",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_04_baptism_of_jesus_by_john_1_jf6104_0_0_low.mp4"
+     },
+     {
+      "n": 5,
+      "title": "The Devil Tempts Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_05_the_devil_tempts_jesus_1_jf6105_0_0_low.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Jesus Proclaims Fulfillment of the Scriptures",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_06_jesus_proclaims_fulfillment_of_the_scriptures_1_jf6106_0_0_low.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Parable of the Pharisee and Tax Collector",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_07_parable_of_the_pharisee_and_tax_collector_1_jf6107_0_0_low.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Miraculous Catch of Fish",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_08_miraculous_catch_of_fish_1_jf6108_0_0_low.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Jairuss Daughter Brought Back to Life",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_09_jairuss_daughter_brought_back_to_life_1_jf6109_0_0_low.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Disciples Chosen",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_10_disciples_chosen_1_jf6110_0_0_low.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Beatitudes",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_11_beatitudes_1_jf6111_0_0_low.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Sermon on the Mount",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_12_sermon_on_the_mount_1_jf6112_0_0_low.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Blessed are Those who Hear and Obey",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_13_blessed_are_those_who_hear_and_obey_1_jf6113_0_0_low.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Sinful Woman Forgiven",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_14_sinful_woman_forgiven_1_jf6114_0_0_low.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Women Disciples",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_15_women_disciples_1_jf6115_0_0_low.mp4"
+     },
+     {
+      "n": 16,
+      "title": "John the Baptist in Prison",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_16_john_the_baptist_in_prison_1_jf6116_0_0_low.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Parable of the Sower and the Seed",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_17_parable_of_the_sower_and_the_seed_1_jf6117_0_0_low.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Parable of the Lamp",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_18_parable_of_the_lamp_1_jf6118_0_0_low.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Jesus Calms the Storm",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_19_jesus_calms_the_storm_1_jf6119_0_0_low.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Healing of the Demoniac",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_20_healing_of_the_demoniac_1_jf6120_0_0_low.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Jesus Feeds 5000",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_21_jesus_feeds_5000_1_jf6121_0_0_low.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Peter Declares Jesus to be the Christ",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_22_peter_declares_jesus_to_be_the_christ_1_jf6122_0_0_low.mp4"
+     },
+     {
+      "n": 23,
+      "title": "The Transfiguration",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_23_the_transfiguration_1_jf6123_0_0_low.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Jesus Heals Boy From Evil Spirit",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_24_jesus_heals_boy_from_evil_spirit_1_jf6124_0_0_low.mp4"
+     },
+     {
+      "n": 25,
+      "title": "The Lords Prayer",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_25_the_lords_prayer_1_jf6125_0_0_low.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Teaching About Prayer and Faith",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_26_teaching_about_prayer_and_faith_1_jf6126_0_0_low.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Woe to Those who Cause Others to Sin",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_27_woe_to_those_who_cause_others_to_sin_1_jf6127_0_0_low.mp4"
+     },
+     {
+      "n": 28,
+      "title": "The Kingdom of God as a Mustard Seed",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_28_the_kingdom_of_god_as_a_mustard_seed_1_jf6128_0_0_low.mp4"
+     },
+     {
+      "n": 29,
+      "title": "Jesus Spends Time with Sinners",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_29_jesus_spends_time_with_sinners_1_jf6129_0_0_low.mp4"
+     },
+     {
+      "n": 30,
+      "title": "Healing on the Sabbath",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_30_healing_on_the_sabbath_1_jf6130_0_0_low.mp4"
+     },
+     {
+      "n": 31,
+      "title": "Parable of the Good Samaritan",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_31_parable_of_the_good_samaritan_1_jf6131_0_0_low.mp4"
+     },
+     {
+      "n": 32,
+      "title": "Healing of Bartimaeus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_32_healing_of_bartimaeus_1_jf6132_0_0_low.mp4"
+     },
+     {
+      "n": 33,
+      "title": "Jesus and Zaccheus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_33_jesus_and_zaccheus_1_jf6133_0_0_low.mp4"
+     },
+     {
+      "n": 34,
+      "title": "Jesus Predicts his Death and Resurrection",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_34_jesus_predicts_his_death_and_resurrection_1_jf6134_0_0_low.mp4"
+     },
+     {
+      "n": 35,
+      "title": "Jesuss Triumphal Entry",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_35_jesuss_triumphal_entry_1_jf6135_0_0_low.mp4"
+     },
+     {
+      "n": 36,
+      "title": "Jesus Weeps Over Jerusalem",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_36_jesus_weeps_over_jerusalem_1_jf6136_0_0_low.mp4"
+     },
+     {
+      "n": 37,
+      "title": "Jesus Drives Out Money Changers",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_37_jesus_drives_out_money_changers_1_jf6137_0_0_low.mp4"
+     },
+     {
+      "n": 38,
+      "title": "Widows Offering",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_38_widows_offering_1_jf6138_0_0_low.mp4"
+     },
+     {
+      "n": 39,
+      "title": "Annas Questions Jesuss Authority",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_39_annas_questions_jesuss_authority_1_jf6139_0_0_low.mp4"
+     },
+     {
+      "n": 40,
+      "title": "Parable of the Vineyard and Tenants",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_40_parable_of_the_vineyard_and_tenants_1_jf6140_0_0_low.mp4"
+     },
+     {
+      "n": 41,
+      "title": "Paying Taxes to Caesar",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_41_paying_taxes_to_caesar_1_jf6141_0_0_low.mp4"
+     },
+     {
+      "n": 42,
+      "title": "The Last Supper",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_42_the_last_supper_1_jf6142_0_0_low.mp4"
+     },
+     {
+      "n": 43,
+      "title": "Upper Room Teaching",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_43_upper_room_teaching_1_jf6143_0_0_low.mp4"
+     },
+     {
+      "n": 44,
+      "title": "Jesus is Betrayed and Arrested",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_44_jesus_is_betrayed_and_arrested_1_jf6144_0_0_low.mp4"
+     },
+     {
+      "n": 45,
+      "title": "Peter Disowns Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_45_peter_disowns_jesus_1_jf6145_0_0_low.mp4"
+     },
+     {
+      "n": 46,
+      "title": "Jesus is Mocked and Questioned",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_46_jesus_is_mocked_and_questioned_1_jf6146_0_0_low.mp4"
+     },
+     {
+      "n": 47,
+      "title": "Jesus is Brought to Pilate",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_47_jesus_is_brought_to_pilate_1_jf6147_0_0_low.mp4"
+     },
+     {
+      "n": 48,
+      "title": "Jesus is Brought to Herod",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_48_jesus_is_brought_to_herod_1_jf6148_0_0_low.mp4"
+     },
+     {
+      "n": 49,
+      "title": "Jesus is Sentenced",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_49_jesus_is_sentenced_1_jf6149_0_0_low.mp4"
+     },
+     {
+      "n": 50,
+      "title": "Jesus Carries his Cross",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_50_jesus_carries_his_cross_1_jf6150_0_0_low.mp4"
+     },
+     {
+      "n": 51,
+      "title": "Jesus is Crucified",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_51_jesus_is_crucified_1_jf6151_0_0_low.mp4"
+     },
+     {
+      "n": 52,
+      "title": "Soldiers Gamble for Jesuss Clothes",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_52_soldiers_gamble_for_jesuss_clothes_1_jf6152_0_0_low.mp4"
+     },
+     {
+      "n": 53,
+      "title": "Sign on the Cross",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_53_sign_on_the_cross_1_jf6153_0_0_low.mp4"
+     },
+     {
+      "n": 54,
+      "title": "Crucified Convicts",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_54_crucified_convicts_1_jf6154_0_0_low.mp4"
+     },
+     {
+      "n": 55,
+      "title": "Death of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_55_death_of_jesus_1_jf6155_0_0_low.mp4"
+     },
+     {
+      "n": 56,
+      "title": "Burial of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_56_burial_of_jesus_1_jf6156_0_0_low.mp4"
+     },
+     {
+      "n": 57,
+      "title": "Angels At the Tomb",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_57_angels_at_the_tomb_1_jf6157_0_0_low.mp4"
+     },
+     {
+      "n": 58,
+      "title": "The Tomb is Empty",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_58_the_tomb_is_empty_1_jf6158_0_0_low.mp4"
+     },
+     {
+      "n": 59,
+      "title": "Resurrected Jesus Appears",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_59_resurrected_jesus_appears_1_jf6159_0_0_low.mp4"
+     },
+     {
+      "n": 60,
+      "title": "Great Commission and Ascension",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_60_great_commission_and_ascension_1_jf6160_0_0_low.mp4"
+     },
+     {
+      "n": 61,
+      "title": "Invitation to Know Jesus Personally",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_bajureli/npi_jesus_chapter_61_invitation_to_know_jesus_personally_1_jf6161_0_0_low.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "All chapters — low data",
+     "url": "https://download.dbs.org/Jesus/npi_bajureli/npi_jesus_chapters_low.zip"
+    },
+    {
+     "label": "All chapters — HD",
+     "url": "https://download.dbs.org/Jesus/npi_bajureli/npi_jesus_chapters_high.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/jesus/npi_bajureli_jesus",
+   "lang": "npi",
+   "read": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "npi-film-jesus-darchuleli",
+   "type": "film",
+   "title": "JESUS (Darchuleli)",
+   "native": "येशू (दार्चुलेली)",
+   "org": "Jesus Film Project",
+   "year": "1979",
+   "scope": "Darchuleli",
+   "desc": "The life of Jesus from the Gospel of Luke, divided into 61 chapters.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "The Beginning",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_01_the_beginning_1_jf6101_0_0_low.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Birth of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_02_birth_of_jesus_1_jf6102_0_0_low.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Childhood of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_03_childhood_of_jesus_1_jf6103_0_0_low.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Baptism of Jesus by John",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_04_baptism_of_jesus_by_john_1_jf6104_0_0_low.mp4"
+     },
+     {
+      "n": 5,
+      "title": "The Devil Tempts Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_05_the_devil_tempts_jesus_1_jf6105_0_0_low.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Jesus Proclaims Fulfillment of the Scriptures",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_06_jesus_proclaims_fulfillment_of_the_scriptures_1_jf6106_0_0_low.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Parable of the Pharisee and Tax Collector",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_07_parable_of_the_pharisee_and_tax_collector_1_jf6107_0_0_low.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Miraculous Catch of Fish",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_08_miraculous_catch_of_fish_1_jf6108_0_0_low.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Jairuss Daughter Brought Back to Life",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_09_jairuss_daughter_brought_back_to_life_1_jf6109_0_0_low.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Disciples Chosen",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_10_disciples_chosen_1_jf6110_0_0_low.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Beatitudes",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_11_beatitudes_1_jf6111_0_0_low.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Sermon on the Mount",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_12_sermon_on_the_mount_1_jf6112_0_0_low.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Blessed are Those who Hear and Obey",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_13_blessed_are_those_who_hear_and_obey_1_jf6113_0_0_low.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Sinful Woman Forgiven",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_14_sinful_woman_forgiven_1_jf6114_0_0_low.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Women Disciples",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_15_women_disciples_1_jf6115_0_0_low.mp4"
+     },
+     {
+      "n": 16,
+      "title": "John the Baptist in Prison",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_16_john_the_baptist_in_prison_1_jf6116_0_0_low.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Parable of the Sower and the Seed",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_17_parable_of_the_sower_and_the_seed_1_jf6117_0_0_low.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Parable of the Lamp",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_18_parable_of_the_lamp_1_jf6118_0_0_low.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Jesus Calms the Storm",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_19_jesus_calms_the_storm_1_jf6119_0_0_low.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Healing of the Demoniac",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_20_healing_of_the_demoniac_1_jf6120_0_0_low.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Jesus Feeds 5000",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_21_jesus_feeds_5000_1_jf6121_0_0_low.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Peter Declares Jesus to be the Christ",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_22_peter_declares_jesus_to_be_the_christ_1_jf6122_0_0_low.mp4"
+     },
+     {
+      "n": 23,
+      "title": "The Transfiguration",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_23_the_transfiguration_1_jf6123_0_0_low.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Jesus Heals Boy From Evil Spirit",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_24_jesus_heals_boy_from_evil_spirit_1_jf6124_0_0_low.mp4"
+     },
+     {
+      "n": 25,
+      "title": "The Lords Prayer",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_25_the_lords_prayer_1_jf6125_0_0_low.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Teaching About Prayer and Faith",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_26_teaching_about_prayer_and_faith_1_jf6126_0_0_low.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Woe to Those who Cause Others to Sin",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_27_woe_to_those_who_cause_others_to_sin_1_jf6127_0_0_low.mp4"
+     },
+     {
+      "n": 28,
+      "title": "The Kingdom of God as a Mustard Seed",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_28_the_kingdom_of_god_as_a_mustard_seed_1_jf6128_0_0_low.mp4"
+     },
+     {
+      "n": 29,
+      "title": "Jesus Spends Time with Sinners",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_29_jesus_spends_time_with_sinners_1_jf6129_0_0_low.mp4"
+     },
+     {
+      "n": 30,
+      "title": "Healing on the Sabbath",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_30_healing_on_the_sabbath_1_jf6130_0_0_low.mp4"
+     },
+     {
+      "n": 31,
+      "title": "Parable of the Good Samaritan",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_31_parable_of_the_good_samaritan_1_jf6131_0_0_low.mp4"
+     },
+     {
+      "n": 32,
+      "title": "Healing of Bartimaeus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_32_healing_of_bartimaeus_1_jf6132_0_0_low.mp4"
+     },
+     {
+      "n": 33,
+      "title": "Jesus and Zaccheus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_33_jesus_and_zaccheus_1_jf6133_0_0_low.mp4"
+     },
+     {
+      "n": 34,
+      "title": "Jesus Predicts his Death and Resurrection",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_34_jesus_predicts_his_death_and_resurrection_1_jf6134_0_0_low.mp4"
+     },
+     {
+      "n": 35,
+      "title": "Jesuss Triumphal Entry",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_35_jesuss_triumphal_entry_1_jf6135_0_0_low.mp4"
+     },
+     {
+      "n": 36,
+      "title": "Jesus Weeps Over Jerusalem",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_36_jesus_weeps_over_jerusalem_1_jf6136_0_0_low.mp4"
+     },
+     {
+      "n": 37,
+      "title": "Jesus Drives Out Money Changers",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_37_jesus_drives_out_money_changers_1_jf6137_0_0_low.mp4"
+     },
+     {
+      "n": 38,
+      "title": "Widows Offering",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_38_widows_offering_1_jf6138_0_0_low.mp4"
+     },
+     {
+      "n": 39,
+      "title": "Annas Questions Jesuss Authority",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_39_annas_questions_jesuss_authority_1_jf6139_0_0_low.mp4"
+     },
+     {
+      "n": 40,
+      "title": "Parable of the Vineyard and Tenants",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_40_parable_of_the_vineyard_and_tenants_1_jf6140_0_0_low.mp4"
+     },
+     {
+      "n": 41,
+      "title": "Paying Taxes to Caesar",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_41_paying_taxes_to_caesar_1_jf6141_0_0_low.mp4"
+     },
+     {
+      "n": 42,
+      "title": "The Last Supper",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_42_the_last_supper_1_jf6142_0_0_low.mp4"
+     },
+     {
+      "n": 43,
+      "title": "Upper Room Teaching",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_43_upper_room_teaching_1_jf6143_0_0_low.mp4"
+     },
+     {
+      "n": 44,
+      "title": "Jesus is Betrayed and Arrested",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_44_jesus_is_betrayed_and_arrested_1_jf6144_0_0_low.mp4"
+     },
+     {
+      "n": 45,
+      "title": "Peter Disowns Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_45_peter_disowns_jesus_1_jf6145_0_0_low.mp4"
+     },
+     {
+      "n": 46,
+      "title": "Jesus is Mocked and Questioned",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_46_jesus_is_mocked_and_questioned_1_jf6146_0_0_low.mp4"
+     },
+     {
+      "n": 47,
+      "title": "Jesus is Brought to Pilate",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_47_jesus_is_brought_to_pilate_1_jf6147_0_0_low.mp4"
+     },
+     {
+      "n": 48,
+      "title": "Jesus is Brought to Herod",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_48_jesus_is_brought_to_herod_1_jf6148_0_0_low.mp4"
+     },
+     {
+      "n": 49,
+      "title": "Jesus is Sentenced",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_49_jesus_is_sentenced_1_jf6149_0_0_low.mp4"
+     },
+     {
+      "n": 50,
+      "title": "Jesus Carries his Cross",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_50_jesus_carries_his_cross_1_jf6150_0_0_low.mp4"
+     },
+     {
+      "n": 51,
+      "title": "Jesus is Crucified",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_51_jesus_is_crucified_1_jf6151_0_0_low.mp4"
+     },
+     {
+      "n": 52,
+      "title": "Soldiers Gamble for Jesuss Clothes",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_52_soldiers_gamble_for_jesuss_clothes_1_jf6152_0_0_low.mp4"
+     },
+     {
+      "n": 53,
+      "title": "Sign on the Cross",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_53_sign_on_the_cross_1_jf6153_0_0_low.mp4"
+     },
+     {
+      "n": 54,
+      "title": "Crucified Convicts",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_54_crucified_convicts_1_jf6154_0_0_low.mp4"
+     },
+     {
+      "n": 55,
+      "title": "Death of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_55_death_of_jesus_1_jf6155_0_0_low.mp4"
+     },
+     {
+      "n": 56,
+      "title": "Burial of Jesus",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_56_burial_of_jesus_1_jf6156_0_0_low.mp4"
+     },
+     {
+      "n": 57,
+      "title": "Angels At the Tomb",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_57_angels_at_the_tomb_1_jf6157_0_0_low.mp4"
+     },
+     {
+      "n": 58,
+      "title": "The Tomb is Empty",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_58_the_tomb_is_empty_1_jf6158_0_0_low.mp4"
+     },
+     {
+      "n": 59,
+      "title": "Resurrected Jesus Appears",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_59_resurrected_jesus_appears_1_jf6159_0_0_low.mp4"
+     },
+     {
+      "n": 60,
+      "title": "Great Commission and Ascension",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_60_great_commission_and_ascension_1_jf6160_0_0_low.mp4"
+     },
+     {
+      "n": 61,
+      "title": "Invitation to Know Jesus Personally",
+      "file": "https://video.dbs.org/Jesus/chapters/npi_darchuleli/npi_jesus_chapter_61_invitation_to_know_jesus_personally_1_jf6161_0_0_low.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "All chapters — low data",
+     "url": "https://download.dbs.org/Jesus/npi_darchuleli/npi_jesus_chapters_low.zip"
+    },
+    {
+     "label": "All chapters — HD",
+     "url": "https://download.dbs.org/Jesus/npi_darchuleli/npi_jesus_chapters_high.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/jesus/npi_darchuleli_jesus",
+   "lang": "npi",
+   "read": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "npi-film-hope",
+   "type": "film",
+   "title": "The HOPE",
+   "native": "आशा",
+   "org": "Mars Hill Productions",
+   "desc": "God's redemptive story from creation to Christ in 36 events.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Event 1",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_01_low.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Event 2",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_02_low.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Event 3",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_03_low.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Event 4",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_04_low.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Event 5",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_05_low.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Event 6",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_06_low.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Event 7",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_07_low.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Event 8",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_08_low.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Event 9",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_09_low.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Event 10",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_10_low.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Event 11",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_11_low.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Event 12",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_12_low.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Event 13",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_13_low.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Event 14",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_14_low.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Event 15",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_15_low.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Event 16",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_16_low.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Event 17",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_17_low.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Event 18",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_18_low.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Event 19",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_19_low.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Event 20",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_20_low.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Event 21",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_21_low.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Event 22",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_22_low.mp4"
+     },
+     {
+      "n": 23,
+      "title": "Event 23",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_23_low.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Event 24",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_24_low.mp4"
+     },
+     {
+      "n": 25,
+      "title": "Event 25",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_25_low.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Event 26",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_26_low.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Event 27",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_27_low.mp4"
+     },
+     {
+      "n": 28,
+      "title": "Event 28",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_28_low.mp4"
+     },
+     {
+      "n": 29,
+      "title": "Event 29",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_29_low.mp4"
+     },
+     {
+      "n": 30,
+      "title": "Event 30",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_30_low.mp4"
+     },
+     {
+      "n": 31,
+      "title": "Event 31",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_31_low.mp4"
+     },
+     {
+      "n": 32,
+      "title": "Event 32",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_32_low.mp4"
+     },
+     {
+      "n": 33,
+      "title": "Event 33",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_33_low.mp4"
+     },
+     {
+      "n": 34,
+      "title": "Event 34",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_34_low.mp4"
+     },
+     {
+      "n": 35,
+      "title": "Event 35",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_35_low.mp4"
+     },
+     {
+      "n": 36,
+      "title": "Event 36",
+      "file": "https://video.dbs.org/HOPE/chapters_low/npi_nepali/npi_nepali_the_hope_event_36_low.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "All events (ZIP)",
+     "url": "https://download.dbs.org/HOPE/npi_nepali_the_hope_events.zip"
+    },
+    {
+     "label": "Whole film",
+     "url": "https://dbs.org/cdn/video/HOPE/films/npi_nepali_the_hope.mp4"
+    }
+   ],
+   "source": "https://dbs.org/video/hope/npi_nepali_the_hope",
+   "lang": "npi",
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "npi-film-creation-christ",
+   "type": "film",
+   "title": "Creation to Christ",
+   "native": "सृष्टिदेखि ख्रीष्टसम्म",
+   "org": "Create International",
+   "duration": "20 min",
+   "desc": "The Bible story from creation to Christ, in seven parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Part 1",
+      "file": "https://video.dbs.org/C2C/films/npi-creation-nepali/npi_Creation_To_Christ_Nepali_PART_1.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Part 2",
+      "file": "https://video.dbs.org/C2C/films/npi-creation-nepali/npi_Creation_To_Christ_Nepali_PART_2.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Part 3",
+      "file": "https://video.dbs.org/C2C/films/npi-creation-nepali/npi_Creation_To_Christ_Nepali_PART_3.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Part 4",
+      "file": "https://video.dbs.org/C2C/films/npi-creation-nepali/npi_Creation_To_Christ_Nepali_PART_4.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Part 5",
+      "file": "https://video.dbs.org/C2C/films/npi-creation-nepali/npi_Creation_To_Christ_Nepali_PART_5.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Part 6",
+      "file": "https://video.dbs.org/C2C/films/npi-creation-nepali/npi_Creation_To_Christ_Nepali_PART_6.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Part 7",
+      "file": "https://video.dbs.org/C2C/films/npi-creation-nepali/npi_Creation_To_Christ_Nepali_PART_7.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "Whole film",
+     "url": "https://dbs.org/cdn/video/C2C/films/npi-creation-nepali/npi_Creation_To_Christ_Nepali_FULL.mp4"
+    },
+    {
+     "label": "Whole film — low data",
+     "url": "https://dbs.org/cdn/video/C2C/films/npi-creation-nepali/npi_Creation_To_Christ_Nepali_FULL_low.mp4"
+    }
+   ],
+   "source": "https://dbs.org/video/c2c/npi-creation-nepali",
+   "lang": "npi",
+   "read": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "npi-film-ibible",
+   "type": "film",
+   "title": "iBible: Salvation Story",
+   "native": "मुक्तिको कथा",
+   "org": "RevelationMedia",
+   "duration": "9 min",
+   "desc": "An animated presentation of the Bible's message of salvation.",
+   "play": {
+    "kind": "file",
+    "hd": "https://dbs.org/cdn/video/ibible/films/npi-nepali-ibible_salvation-hd.mp4",
+    "sd": "https://dbs.org/cdn/video/ibible/films_low/npi-nepali-ibible_salvation-sd.mp4"
+   },
+   "downloads": [
+    {
+     "label": "Film (ZIP)",
+     "url": "https://download.dbs.org/ibible/npi-nepali-ibible_salvation.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/ibible/npi-nepali-ibible_salvation",
+   "lang": "npi",
+   "read": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "npi-film-lumo-mark",
+   "type": "film",
+   "title": "LUMO: The Gospel of Mark",
+   "native": "लुमो: मर्कूसको सुसमाचार",
+   "org": "LUMO Project",
+   "desc": "Mark filmed word for word in 16 parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Mark 1",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/nep_Nepali_Mark_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Mark_Nepali-New-Revised-Version-2012_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Mark 2",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/nep_Nepali_Mark_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Mark_Nepali-New-Revised-Version-2012_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Mark 3",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/nep_Nepali_Mark_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Mark_Nepali-New-Revised-Version-2012_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Mark 4",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/nep_Nepali_Mark_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Mark_Nepali-New-Revised-Version-2012_04_360.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Mark 5",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/nep_Nepali_Mark_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Mark_Nepali-New-Revised-Version-2012_05_360.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Mark 6",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/nep_Nepali_Mark_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Mark_Nepali-New-Revised-Version-2012_06_360.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Mark 7",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/nep_Nepali_Mark_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Mark_Nepali-New-Revised-Version-2012_07_360.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Mark 8",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/nep_Nepali_Mark_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Mark_Nepali-New-Revised-Version-2012_08_360.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Mark 9",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/nep_Nepali_Mark_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Mark_Nepali-New-Revised-Version-2012_09_360.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Mark 10",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/nep_Nepali_Mark_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Mark_Nepali-New-Revised-Version-2012_10_360.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Mark 11",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/nep_Nepali_Mark_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Mark_Nepali-New-Revised-Version-2012_11_360.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Mark 12",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/nep_Nepali_Mark_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Mark_Nepali-New-Revised-Version-2012_12_360.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Mark 13",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/nep_Nepali_Mark_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Mark_Nepali-New-Revised-Version-2012_13_360.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Mark 14",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/nep_Nepali_Mark_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Mark_Nepali-New-Revised-Version-2012_14_360.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Mark 15",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/nep_Nepali_Mark_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Mark_Nepali-New-Revised-Version-2012_15_360.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Mark 16",
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/nep_Nepali_Mark_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Mark_Nepali-New-Revised-Version-2012_16_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-mark/nep_nepali_mark",
+   "lang": "npi",
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "npi-film-lumo-luke",
+   "type": "film",
+   "title": "LUMO: The Gospel of Luke",
+   "native": "लुमो: लूकाको सुसमाचार",
+   "org": "LUMO Project",
+   "desc": "Luke filmed word for word in 24 parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Luke 1",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/nep_Nepali_Luke_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Luke_Nepali-New-Revised-Version-2012_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Luke 2",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/nep_Nepali_Luke_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Luke_Nepali-New-Revised-Version-2012_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Luke 3",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/nep_Nepali_Luke_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Luke_Nepali-New-Revised-Version-2012_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Luke 4",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/nep_Nepali_Luke_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Luke_Nepali-New-Revised-Version-2012_04_360.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Luke 5",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/nep_Nepali_Luke_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Luke_Nepali-New-Revised-Version-2012_05_360.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Luke 6",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/nep_Nepali_Luke_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Luke_Nepali-New-Revised-Version-2012_06_360.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Luke 7",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/nep_Nepali_Luke_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Luke_Nepali-New-Revised-Version-2012_07_360.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Luke 8",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/nep_Nepali_Luke_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Luke_Nepali-New-Revised-Version-2012_08_360.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Luke 9",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/nep_Nepali_Luke_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Luke_Nepali-New-Revised-Version-2012_09_360.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Luke 10",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/nep_Nepali_Luke_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Luke_Nepali-New-Revised-Version-2012_10_360.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Luke 11",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/nep_Nepali_Luke_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Luke_Nepali-New-Revised-Version-2012_11_360.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Luke 12",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/nep_Nepali_Luke_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Luke_Nepali-New-Revised-Version-2012_12_360.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Luke 13",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/nep_Nepali_Luke_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Luke_Nepali-New-Revised-Version-2012_13_360.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Luke 14",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/nep_Nepali_Luke_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Luke_Nepali-New-Revised-Version-2012_14_360.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Luke 15",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/nep_Nepali_Luke_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Luke_Nepali-New-Revised-Version-2012_15_360.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Luke 16",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/nep_Nepali_Luke_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Luke_Nepali-New-Revised-Version-2012_16_360.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Luke 17",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/nep_Nepali_Luke_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Luke_Nepali-New-Revised-Version-2012_17_360.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Luke 18",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/nep_Nepali_Luke_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Luke_Nepali-New-Revised-Version-2012_18_360.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Luke 19",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/nep_Nepali_Luke_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Luke_Nepali-New-Revised-Version-2012_19_360.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Luke 20",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/nep_Nepali_Luke_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Luke_Nepali-New-Revised-Version-2012_20_360.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Luke 21",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/nep_Nepali_Luke_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Luke_Nepali-New-Revised-Version-2012_21_360.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Luke 22",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/nep_Nepali_Luke_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Luke_Nepali-New-Revised-Version-2012_22_360.mp4"
+     },
+     {
+      "n": 23,
+      "title": "Luke 23",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/nep_Nepali_Luke_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Luke_Nepali-New-Revised-Version-2012_23_360.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Luke 24",
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/nep_Nepali_Luke_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_Luke_Nepali-New-Revised-Version-2012_24_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-luke/nep_nepali_luke",
+   "lang": "npi",
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "npi-film-lumo-john",
+   "type": "film",
+   "title": "LUMO: The Gospel of John",
+   "native": "लुमो: यूहन्नाको सुसमाचार",
+   "org": "LUMO Project",
+   "desc": "John filmed word for word in 21 parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "John 1",
+      "file": "https://video.dbs.org/Lumo-John/films_low/nep_Nepali_John_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_John_Nepali-New-Revised-Version-2012_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "John 2",
+      "file": "https://video.dbs.org/Lumo-John/films_low/nep_Nepali_John_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_John_Nepali-New-Revised-Version-2012_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "John 3",
+      "file": "https://video.dbs.org/Lumo-John/films_low/nep_Nepali_John_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_John_Nepali-New-Revised-Version-2012_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "John 4",
+      "file": "https://video.dbs.org/Lumo-John/films_low/nep_Nepali_John_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_John_Nepali-New-Revised-Version-2012_04_360.mp4"
+     },
+     {
+      "n": 5,
+      "title": "John 5",
+      "file": "https://video.dbs.org/Lumo-John/films_low/nep_Nepali_John_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_John_Nepali-New-Revised-Version-2012_05_360.mp4"
+     },
+     {
+      "n": 6,
+      "title": "John 6",
+      "file": "https://video.dbs.org/Lumo-John/films_low/nep_Nepali_John_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_John_Nepali-New-Revised-Version-2012_06_360.mp4"
+     },
+     {
+      "n": 7,
+      "title": "John 7",
+      "file": "https://video.dbs.org/Lumo-John/films_low/nep_Nepali_John_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_John_Nepali-New-Revised-Version-2012_07_360.mp4"
+     },
+     {
+      "n": 8,
+      "title": "John 8",
+      "file": "https://video.dbs.org/Lumo-John/films_low/nep_Nepali_John_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_John_Nepali-New-Revised-Version-2012_08_360.mp4"
+     },
+     {
+      "n": 9,
+      "title": "John 9",
+      "file": "https://video.dbs.org/Lumo-John/films_low/nep_Nepali_John_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_John_Nepali-New-Revised-Version-2012_09_360.mp4"
+     },
+     {
+      "n": 10,
+      "title": "John 10",
+      "file": "https://video.dbs.org/Lumo-John/films_low/nep_Nepali_John_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_John_Nepali-New-Revised-Version-2012_10_360.mp4"
+     },
+     {
+      "n": 11,
+      "title": "John 11",
+      "file": "https://video.dbs.org/Lumo-John/films_low/nep_Nepali_John_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_John_Nepali-New-Revised-Version-2012_11_360.mp4"
+     },
+     {
+      "n": 12,
+      "title": "John 12",
+      "file": "https://video.dbs.org/Lumo-John/films_low/nep_Nepali_John_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_John_Nepali-New-Revised-Version-2012_12_360.mp4"
+     },
+     {
+      "n": 13,
+      "title": "John 13",
+      "file": "https://video.dbs.org/Lumo-John/films_low/nep_Nepali_John_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_John_Nepali-New-Revised-Version-2012_13_360.mp4"
+     },
+     {
+      "n": 14,
+      "title": "John 14",
+      "file": "https://video.dbs.org/Lumo-John/films_low/nep_Nepali_John_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_John_Nepali-New-Revised-Version-2012_14_360.mp4"
+     },
+     {
+      "n": 15,
+      "title": "John 15",
+      "file": "https://video.dbs.org/Lumo-John/films_low/nep_Nepali_John_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_John_Nepali-New-Revised-Version-2012_15_360.mp4"
+     },
+     {
+      "n": 16,
+      "title": "John 16",
+      "file": "https://video.dbs.org/Lumo-John/films_low/nep_Nepali_John_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_John_Nepali-New-Revised-Version-2012_16_360.mp4"
+     },
+     {
+      "n": 17,
+      "title": "John 17",
+      "file": "https://video.dbs.org/Lumo-John/films_low/nep_Nepali_John_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_John_Nepali-New-Revised-Version-2012_17_360.mp4"
+     },
+     {
+      "n": 18,
+      "title": "John 18",
+      "file": "https://video.dbs.org/Lumo-John/films_low/nep_Nepali_John_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_John_Nepali-New-Revised-Version-2012_18_360.mp4"
+     },
+     {
+      "n": 19,
+      "title": "John 19",
+      "file": "https://video.dbs.org/Lumo-John/films_low/nep_Nepali_John_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_John_Nepali-New-Revised-Version-2012_19_360.mp4"
+     },
+     {
+      "n": 20,
+      "title": "John 20",
+      "file": "https://video.dbs.org/Lumo-John/films_low/nep_Nepali_John_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_John_Nepali-New-Revised-Version-2012_20_360.mp4"
+     },
+     {
+      "n": 21,
+      "title": "John 21",
+      "file": "https://video.dbs.org/Lumo-John/films_low/nep_Nepali_John_Nepali-New-Revised-Version-2012_low/nep_LUMO_Nepali_John_Nepali-New-Revised-Version-2012_21_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-john/nep_nepali_john",
+   "lang": "npi",
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "npi-film-lumo-acts",
+   "type": "film",
+   "title": "LUMO: Acts of the Apostles",
+   "native": "लुमो: प्रेरितहरूका काम",
+   "org": "LUMO Project",
+   "desc": "In 4 parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Part 1",
+      "file": "https://video.dbs.org/Lumo-Acts/films_low/nep_Nepali_Acts_Nepali-Contemporary-Version-2024-Holy-Bible/nep_Acts_Nepali_Nepali-Contemporary-Version-2024-Holy-Bible_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Part 2",
+      "file": "https://video.dbs.org/Lumo-Acts/films_low/nep_Nepali_Acts_Nepali-Contemporary-Version-2024-Holy-Bible/nep_Acts_Nepali_Nepali-Contemporary-Version-2024-Holy-Bible_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Part 3",
+      "file": "https://video.dbs.org/Lumo-Acts/films_low/nep_Nepali_Acts_Nepali-Contemporary-Version-2024-Holy-Bible/nep_Acts_Nepali_Nepali-Contemporary-Version-2024-Holy-Bible_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Part 4",
+      "file": "https://video.dbs.org/Lumo-Acts/films_low/nep_Nepali_Acts_Nepali-Contemporary-Version-2024-Holy-Bible/nep_Acts_Nepali_Nepali-Contemporary-Version-2024-Holy-Bible_04_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-acts/nep_nepali_acts",
+   "lang": "npi",
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "npi-film-lumo-covenant",
+   "type": "film",
+   "title": "LUMO: The Covenant",
+   "native": "लुमो: करार",
+   "org": "LUMO Project",
+   "desc": "In 12 parts.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Part 1",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/nep_Nepali_Covenant_Nepali-New-Revised-Version-2012/nep_Covenant_Nepali_Nepali-New-Revised-Version-2012_01_360.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Part 2",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/nep_Nepali_Covenant_Nepali-New-Revised-Version-2012/nep_Covenant_Nepali_Nepali-New-Revised-Version-2012_02_360.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Part 3",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/nep_Nepali_Covenant_Nepali-New-Revised-Version-2012/nep_Covenant_Nepali_Nepali-New-Revised-Version-2012_03_360.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Part 4",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/nep_Nepali_Covenant_Nepali-New-Revised-Version-2012/nep_Covenant_Nepali_Nepali-New-Revised-Version-2012_04_360.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Part 5",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/nep_Nepali_Covenant_Nepali-New-Revised-Version-2012/nep_Covenant_Nepali_Nepali-New-Revised-Version-2012_05_360.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Part 6",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/nep_Nepali_Covenant_Nepali-New-Revised-Version-2012/nep_Covenant_Nepali_Nepali-New-Revised-Version-2012_06_360.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Part 7",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/nep_Nepali_Covenant_Nepali-New-Revised-Version-2012/nep_Covenant_Nepali_Nepali-New-Revised-Version-2012_07_360.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Part 8",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/nep_Nepali_Covenant_Nepali-New-Revised-Version-2012/nep_Covenant_Nepali_Nepali-New-Revised-Version-2012_08_360.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Part 9",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/nep_Nepali_Covenant_Nepali-New-Revised-Version-2012/nep_Covenant_Nepali_Nepali-New-Revised-Version-2012_09_360.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Part 10",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/nep_Nepali_Covenant_Nepali-New-Revised-Version-2012/nep_Covenant_Nepali_Nepali-New-Revised-Version-2012_10_360.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Part 11",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/nep_Nepali_Covenant_Nepali-New-Revised-Version-2012/nep_Covenant_Nepali_Nepali-New-Revised-Version-2012_11_360.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Part 12",
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/nep_Nepali_Covenant_Nepali-New-Revised-Version-2012/nep_Covenant_Nepali_Nepali-New-Revised-Version-2012_12_360.mp4"
+     }
+    ]
+   },
+   "source": "https://dbs.org/video/lumo-covenant/nep_nepali_covenant",
+   "lang": "npi",
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "npi-film-vb-nep-matthew-vb-nepali",
+   "type": "film",
+   "title": "The Visual Bible: Matthew",
+   "native": "दृश्य बाइबल: मत्ती",
+   "org": "Visual Bible International",
+   "desc": "The book of Matthew presented word for word in 28 chapters.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Matthew 1",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-01.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Matthew 2",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-02.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Matthew 3",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-03.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Matthew 4",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-04.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Matthew 5",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-05.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Matthew 6",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-06.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Matthew 7",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-07.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Matthew 8",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-08.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Matthew 9",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-09.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Matthew 10",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-10.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Matthew 11",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-11.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Matthew 12",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-12.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Matthew 13",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-13.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Matthew 14",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-14.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Matthew 15",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-15.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Matthew 16",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-16.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Matthew 17",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-17.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Matthew 18",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-18.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Matthew 19",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-19.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Matthew 20",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-20.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Matthew 21",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-21.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Matthew 22",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-22.mp4"
+     },
+     {
+      "n": 23,
+      "title": "Matthew 23",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-23.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Matthew 24",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-24.mp4"
+     },
+     {
+      "n": 25,
+      "title": "Matthew 25",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-25.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Matthew 26",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-26.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Matthew 27",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-27.mp4"
+     },
+     {
+      "n": 28,
+      "title": "Matthew 28",
+      "file": "https://video.dbs.org/Matthew/chapters/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapter-28.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "All chapters (ZIP)",
+     "url": "https://download.dbs.org/Matthew/nep-matthew-vb-nepali/nep-matthew-vb-nepali-chapters.zip"
+    },
+    {
+     "label": "Whole film",
+     "url": "https://dbs.org/cdn/video/Matthew/films/nep-matthew-vb-nepali/nep-matthew-vb-nepali.mp4"
+    }
+   ],
+   "source": "https://dbs.org/video/matthew/nep-matthew-vb-nepali",
+   "lang": "npi",
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "npi-film-vb-nep-acts-vb-nepali",
+   "type": "film",
+   "title": "The Visual Bible: Acts",
+   "native": "दृश्य बाइबल: प्रेरितहरूका काम",
+   "org": "Visual Bible International",
+   "desc": "The book of Acts presented word for word in 28 chapters.",
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "title": "Acts 1",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-01.mp4"
+     },
+     {
+      "n": 2,
+      "title": "Acts 2",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-02.mp4"
+     },
+     {
+      "n": 3,
+      "title": "Acts 3",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-03.mp4"
+     },
+     {
+      "n": 4,
+      "title": "Acts 4",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-04.mp4"
+     },
+     {
+      "n": 5,
+      "title": "Acts 5",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-05.mp4"
+     },
+     {
+      "n": 6,
+      "title": "Acts 6",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-06.mp4"
+     },
+     {
+      "n": 7,
+      "title": "Acts 7",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-07.mp4"
+     },
+     {
+      "n": 8,
+      "title": "Acts 8",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-08.mp4"
+     },
+     {
+      "n": 9,
+      "title": "Acts 9",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-09.mp4"
+     },
+     {
+      "n": 10,
+      "title": "Acts 10",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-10.mp4"
+     },
+     {
+      "n": 11,
+      "title": "Acts 11",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-11.mp4"
+     },
+     {
+      "n": 12,
+      "title": "Acts 12",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-12.mp4"
+     },
+     {
+      "n": 13,
+      "title": "Acts 13",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-13.mp4"
+     },
+     {
+      "n": 14,
+      "title": "Acts 14",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-14.mp4"
+     },
+     {
+      "n": 15,
+      "title": "Acts 15",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-15.mp4"
+     },
+     {
+      "n": 16,
+      "title": "Acts 16",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-16.mp4"
+     },
+     {
+      "n": 17,
+      "title": "Acts 17",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-17.mp4"
+     },
+     {
+      "n": 18,
+      "title": "Acts 18",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-18.mp4"
+     },
+     {
+      "n": 19,
+      "title": "Acts 19",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-19.mp4"
+     },
+     {
+      "n": 20,
+      "title": "Acts 20",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-20.mp4"
+     },
+     {
+      "n": 21,
+      "title": "Acts 21",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-21.mp4"
+     },
+     {
+      "n": 22,
+      "title": "Acts 22",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-22.mp4"
+     },
+     {
+      "n": 23,
+      "title": "Acts 23",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-23.mp4"
+     },
+     {
+      "n": 24,
+      "title": "Acts 24",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-24.mp4"
+     },
+     {
+      "n": 25,
+      "title": "Acts 25",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-25.mp4"
+     },
+     {
+      "n": 26,
+      "title": "Acts 26",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-26.mp4"
+     },
+     {
+      "n": 27,
+      "title": "Acts 27",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-27.mp4"
+     },
+     {
+      "n": 28,
+      "title": "Acts 28",
+      "file": "https://video.dbs.org/Acts_VB/chapters/nep-acts-vb-nepali/nep-acts-vb-nepali-chapter-28.mp4"
+     }
+    ]
+   },
+   "downloads": [
+    {
+     "label": "All chapters (ZIP)",
+     "url": "https://download.dbs.org/Acts_VB/nep-acts-vb-nepali/nep-acts-vb-nepali-chapters.zip"
+    },
+    {
+     "label": "Whole film",
+     "url": "https://dbs.org/cdn/video/Acts_VB/films/nep-acts-vb-nepali/nep-acts-vb-nepali.mp4"
+    }
+   ],
+   "source": "https://dbs.org/video/acts_vb/nep-acts-vb-nepali",
+   "lang": "npi",
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "npi-film-bp-overview",
+   "type": "film",
+   "title": "BibleProject: Overviews",
+   "native": "बाइबलको रूपरेखा",
+   "org": "BibleProject",
+   "desc": "Animated overviews of the books of the Bible. Saved as ZIP collections.",
+   "downloads": [
+    {
+     "label": "OT overviews — low data",
+     "url": "https://download.dbs.org/BP/nep-nepali/nep_BibleProject_Book_Overview_OT_low.zip"
+    },
+    {
+     "label": "OT overviews — HD",
+     "url": "https://download.dbs.org/BP/nep-nepali/nep_BibleProject_Book_Overview_OT.zip"
+    },
+    {
+     "label": "NT overviews — low data",
+     "url": "https://download.dbs.org/BP/nep-nepali/nep_BibleProject_Book_Overview_NT_low.zip"
+    },
+    {
+     "label": "NT overviews — HD",
+     "url": "https://download.dbs.org/BP/nep-nepali/nep_BibleProject_Book_Overview_NT.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/bp/nep-nepali-overview",
+   "lang": "npi",
+   "play": null,
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "npi-film-bp-themes",
+   "type": "film",
+   "title": "BibleProject: Themes",
+   "native": "बाइबलका विषयहरू",
+   "org": "BibleProject",
+   "desc": "Short animated videos on the big themes of Scripture. Saved as ZIP collections.",
+   "downloads": [
+    {
+     "label": "Theme videos — low data",
+     "url": "https://download.dbs.org/BP/nep-nepali/nep_BibleProject_Theme_Video_low.zip"
+    },
+    {
+     "label": "Theme videos — HD",
+     "url": "https://download.dbs.org/BP/nep-nepali/nep_BibleProject_Theme_Video.zip"
+    }
+   ],
+   "source": "https://dbs.org/video/bp/nep-nepali-themes",
+   "lang": "npi",
+   "play": null,
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "npi-film-magdalena",
+   "type": "film",
+   "title": "Magdalena",
+   "native": "मग्दलीनी",
+   "org": "Jesus Film Project",
+   "desc": "The story of Jesus through the eyes of Mary Magdalene.",
+   "links": [
+    {
+     "label": "Watch on DBS",
+     "url": "https://dbs.org/video/magdalena/npi_nepali_magdalena"
+    }
+   ],
+   "source": "https://dbs.org/video/magdalena/npi_nepali_magdalena",
+   "lang": "npi",
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Nepali",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "npi-film-story-jesus",
+   "type": "film",
+   "title": "Story of Jesus for Children",
+   "native": "बालबालिकाका लागि येशूको कथा",
+   "org": "Jesus Film Project",
+   "desc": "The story of Jesus told for children.",
+   "links": [
+    {
+     "label": "Watch on DBS",
+     "url": "https://dbs.org/video/storyjesus/npi_nepali_story_of_jesus_for_children"
+    }
+   ],
+   "source": "https://dbs.org/video/storyjesus/npi_nepali_story_of_jesus_for_children",
+   "lang": "npi",
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Nepali",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "npi-film-savior",
+   "type": "film",
+   "title": "The Savior",
+   "native": "मुक्तिदाता",
+   "org": "Jesus Film Project",
+   "desc": "The life of Jesus.",
+   "links": [
+    {
+     "label": "Watch on DBS",
+     "url": "https://dbs.org/video/savior/npi_nepali_the_savior"
+    }
+   ],
+   "source": "https://dbs.org/video/savior/npi_nepali_the_savior",
+   "lang": "npi",
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Nepali",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "npi-film-deaf-gospel",
+   "type": "film",
+   "title": "Rescue Project Deaf Gospel",
+   "native": "बहिराहरूका लागि सुसमाचार",
+   "org": "Jesus Film Project",
+   "desc": "A visual Gospel presentation for Deaf audiences.",
+   "links": [
+    {
+     "label": "Watch on DBS",
+     "url": "https://dbs.org/video/deafproject/npi_nepali_rescue_project_deaf_gospel"
+    }
+   ],
+   "source": "https://dbs.org/video/deafproject/npi_nepali_rescue_project_deaf_gospel",
+   "lang": "npi",
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Nepali",
+   "typeLabel": "Films"
+  },
+  {
+   "id": "npi-ac-grn",
+   "type": "audio",
+   "title": "Nepali Scripture Recordings",
+   "native": "नेपाली रेकर्डिङहरू",
+   "org": "Global Recordings Network",
+   "stats": "931 recordings · 2.8 GB",
+   "desc": "Good News, Words of Life, songs and Bible teaching across Nepali varieties.",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/npi_GlobalRecordings_nepali/Achhami/Achhami%20Raamro%20Khabar%2065784/Achhami%20Raamro%20Khabar%20001%20Introduction%20_%20Picture%201%20In%20the%20Beginning%2065784.mp3"
+   },
+   "downloads": [
+    {
+     "label": "Whole collection — good quality",
+     "url": "https://media.dbs.org/audio/grn/npi_GlobalRecordings_nepali_high.zip"
+    },
+    {
+     "label": "Whole collection — low data",
+     "url": "https://media.dbs.org/audio/grn/npi_GlobalRecordings_nepali_low.zip"
+    }
+   ],
+   "source": "https://dbs.org/audio/collections/grn/npi_GlobalRecordings_nepali",
+   "lang": "npi",
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Collections"
+  },
+  {
+   "id": "npi-ac-grn-macro",
+   "type": "audio",
+   "title": "Nepali Scripture Recordings (all varieties)",
+   "native": "नेपाली रेकर्डिङहरू — सबै भाषिका",
+   "org": "Global Recordings Network",
+   "stats": "996 recordings · 2.9 GB",
+   "desc": "The wider Global Recordings set, including neighbouring languages that use Nepali.",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/nep_GlobalRecordings_nepali-macrolanguage/Achhami/Achhami%20Raamro%20Khabar%2065784/Achhami%20Raamro%20Khabar%20001%20Introduction%20_%20Picture%201%20In%20the%20Beginning%2065784.mp3"
+   },
+   "downloads": [
+    {
+     "label": "Whole collection — good quality",
+     "url": "https://media.dbs.org/audio/grn/nep_GlobalRecordings_nepali-macrolanguage_high.zip"
+    },
+    {
+     "label": "Whole collection — low data",
+     "url": "https://media.dbs.org/audio/grn/nep_GlobalRecordings_nepali-macrolanguage_low.zip"
+    }
+   ],
+   "source": "https://dbs.org/audio/collections/grn/nep_GlobalRecordings_nepali-macrolanguage",
+   "lang": "npi",
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Collections"
+  },
+  {
+   "id": "npi-ac-soj",
+   "type": "audio",
+   "title": "Story of Jesus",
+   "native": "येशूको कथा",
+   "org": "Story of Jesus",
+   "stats": "9 recordings · 204.2 MB",
+   "desc": "The life of Jesus as an audio drama in 8 parts, and as one recording.",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/soj/nep_StoryJesus_nepali_full.mp3"
+   },
+   "downloads": [
+    {
+     "label": "All 8 parts (ZIP)",
+     "url": "https://media.dbs.org/audio/soj/nep_StoryJesus_nepali.zip"
+    },
+    {
+     "label": "Whole recording (ZIP)",
+     "url": "https://media.dbs.org/audio/soj/nep_StoryJesus_nepali_full.zip"
+    }
+   ],
+   "source": "https://dbs.org/audio/collections/soj/nep_StoryJesus_nepali",
+   "lang": "npi",
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Collections"
+  },
+  {
+   "id": "npi-ac-srun",
+   "type": "audio",
+   "title": "Bible Story Set",
+   "native": "बाइबल कथाहरू",
+   "org": "StoryRunners",
+   "stats": "48 recordings · 144.0 MB",
+   "desc": "The Bible told as a set of short stories, from Creation onward.",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/srun/npi_storyset_nepali/Nepali-01-%E0%A4%B8%E0%A4%82%E0%A4%B8%E0%A4%BE%E0%A4%B0%E0%A4%95%E0%A5%8B%20%E0%A4%B8%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%9F%E0%A4%BF-Creation.mp3"
+   },
+   "downloads": [
+    {
+     "label": "Whole set (ZIP)",
+     "url": "https://storysets.s3.amazonaws.com/npi/Nepali_Nepal_Storyset.zip"
+    }
+   ],
+   "source": "https://dbs.org/audio/collections/srun/npi_storyset_nepali",
+   "lang": "npi",
+   "read": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Audio Collections"
+  },
+  {
+   "id": "npi-hist-nepali-2006-wbtc-new-testament",
+   "lang": "npi",
+   "type": "historic",
+   "title": "WBTC New Testament",
+   "org": "Digital Bible Society Archive",
+   "year": "2006",
+   "cover": "https://scripture.dbs.org/covers/small/Nepali-2006-WBTC-New-Testament.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Nepali-2006-WBTC-New-Testament.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Nepali-2006-WBTC-New-Testament.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Nepali-2006-WBTC-New-Testament",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "npi-hist-nepali-john-print",
+   "lang": "npi",
+   "type": "historic",
+   "title": "John",
+   "org": "Digital Bible Society Archive",
+   "year": null,
+   "cover": "https://scripture.dbs.org/covers/small/Nepali-John-print.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Nepali-John-print.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Nepali-John-print.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Nepali-John-print",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "npi-text-npiulv",
+   "lang": "npi",
+   "type": "scripture",
+   "title": "Nepali Unlocked Literal Version",
+   "native": "नेपाली अनलक शाब्दिक संस्करण",
+   "year": 2019,
+   "org": "Digital Bible Society",
+   "scope": "",
+   "desc": "The full text, to read in the app or save.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://bibles.dbs.org/NPIULV/pdf/NPIULV.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://bibles.dbs.org/NPIULV/pdf/NPIULV.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/NPIULV",
+   "play": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "npi-text-npierv",
+   "lang": "npi",
+   "type": "scripture",
+   "title": "Easy-to-Read Nepali Version",
+   "native": "नेपाली बाइबल पढ्न सजिलो",
+   "year": 2004,
+   "org": "Digital Bible Society",
+   "scope": "",
+   "desc": "The full text, to read in the app or save.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://bibles.dbs.org/NPIERV/pdf/NPIERV.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://bibles.dbs.org/NPIERV/pdf/NPIERV.pdf"
+    },
+    {
+     "label": "EPUB",
+     "url": "https://bibles.dbs.org/NPIERV/epub/NPIERV.epub"
+    }
+   ],
+   "source": "https://dbs.org/bibles/NPIERV",
+   "play": null,
+   "duration": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "links": null,
+   "langName": "Nepali",
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "npi-text-online",
+   "lang": "npi",
+   "type": "scripture",
+   "title": "Nepali Bibles to read online",
+   "native": null,
+   "org": "Various publishers",
+   "desc": "4 Nepali translations that their publishers host themselves. They open in a browser and need a connection.",
+   "links": [
+    {
+     "label": "The New Testament in Nepali (1821)",
+     "url": "https://dbs.org/bibles/NPITBI"
+    },
+    {
+     "label": "Nepali Common Language Bible (2008)",
+     "url": "https://dbs.org/bibles/NPIB08"
+    },
+    {
+     "label": "Nepali New Revised Version (1997)",
+     "url": "https://dbs.org/bibles/NPINRV"
+    },
+    {
+     "label": "Contemporary Nepali New Testament",
+     "url": "https://dbs.org/bibles/NPINCV"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/npi",
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Nepali",
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "npi-link-arc-gt",
+   "lang": "npi",
+   "type": "link",
+   "title": "Jesus Film Project",
+   "org": "Jesus Film Project",
+   "desc": "1 Nepali items. Full films on the publisher's own player.",
+   "links": [
+    {
+     "label": "JESUS",
+     "url": "https://arc.gt/3mvsl?apiSessionId=5f8760deef4f69.95542879"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Nepali",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "npi-link-bibleproject-com",
+   "lang": "npi",
+   "type": "link",
+   "title": "BibleProject",
+   "org": "BibleProject",
+   "desc": "1 Nepali items. Animated videos on the books and themes of the Bible.",
+   "links": [
+    {
+     "label": "Nepali Bible Project Videos",
+     "url": "https://bibleproject.com/Nepali"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Nepali",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "npi-link-globalrecordings-net",
+   "lang": "npi",
+   "type": "link",
+   "title": "Global Recordings Network",
+   "org": "Global Recordings Network",
+   "desc": "76 Nepali items. Scripture-based recordings, told simply. Each programme plays on the publisher's own site.",
+   "links": [
+    {
+     "label": "Alolon Ge Pemili Ana Minamina [Good News]",
+     "url": "https://globalrecordings.net/en/program/62313"
+    },
+    {
+     "label": "Are You Happy?",
+     "url": "https://globalrecordings.net/en/program/27110"
+    },
+    {
+     "label": "Asal Khabar Shrabya Drishya [Good News]",
+     "url": "https://globalrecordings.net/en/program/64238"
+    },
+    {
+     "label": "Asal Khabar [Good News]",
+     "url": "https://globalrecordings.net/en/program/65620"
+    },
+    {
+     "label": "Becoming a Friend of God",
+     "url": "https://globalrecordings.net/en/program/22911"
+    },
+    {
+     "label": "Becoming a Friend of God",
+     "url": "https://globalrecordings.net/en/program/23810"
+    },
+    {
+     "label": "Becoming a Friend of God",
+     "url": "https://globalrecordings.net/en/program/26381"
+    },
+    {
+     "label": "Christmas & Easter",
+     "url": "https://globalrecordings.net/en/program/37696"
+    },
+    {
+     "label": "Classic Nepali Hymns",
+     "url": "https://globalrecordings.net/en/program/63958"
+    },
+    {
+     "label": "Follow Up",
+     "url": "https://globalrecordings.net/en/program/37694"
+    },
+    {
+     "label": "Follow Up Messages",
+     "url": "https://globalrecordings.net/en/program/75099"
+    },
+    {
+     "label": "Good News",
+     "url": "https://globalrecordings.net/en/program/32951"
+    },
+    {
+     "label": "Good News",
+     "url": "https://globalrecordings.net/en/program/62312"
+    },
+    {
+     "label": "Good News",
+     "url": "https://globalrecordings.net/en/program/62323"
+    },
+    {
+     "label": "Good News",
+     "url": "https://globalrecordings.net/en/program/63333"
+    },
+    {
+     "label": "Good News",
+     "url": "https://globalrecordings.net/en/program/80350"
+    },
+    {
+     "label": "Gospel",
+     "url": "https://globalrecordings.net/en/program/37693"
+    },
+    {
+     "label": "Jeevanko Baato [The Way of Life]",
+     "url": "https://globalrecordings.net/en/program/63334"
+    },
+    {
+     "label": "Look, Listen & Live",
+     "url": "https://globalrecordings.net/en/program/63576"
+    },
+    {
+     "label": "Look, Listen & Live",
+     "url": "https://globalrecordings.net/en/program/79174"
+    },
+    {
+     "label": "Look, Listen & Live 1 Beginning with GOD for Children^",
+     "url": "https://globalrecordings.net/en/program/75105"
+    },
+    {
+     "label": "Look, Listen & Live 2 Mighty Men of GOD",
+     "url": "https://globalrecordings.net/en/program/63577"
+    },
+    {
+     "label": "Look, Listen & Live 3 Victory through GOD",
+     "url": "https://globalrecordings.net/en/program/63578"
+    },
+    {
+     "label": "Look, Listen & Live 4 Servants of GOD",
+     "url": "https://globalrecordings.net/en/program/63579"
+    },
+    {
+     "label": "Look, Listen & Live 5 On Trial for GOD",
+     "url": "https://globalrecordings.net/en/program/63580"
+    },
+    {
+     "label": "Look, Listen & Live 6 JESUS - Teacher & Healer",
+     "url": "https://globalrecordings.net/en/program/63581"
+    },
+    {
+     "label": "Look, Listen & Live 7 JESUS - Lord & Saviour",
+     "url": "https://globalrecordings.net/en/program/63582"
+    },
+    {
+     "label": "Look, Listen & Live 7 JESUS - Lord & Saviour",
+     "url": "https://globalrecordings.net/en/program/79180"
+    },
+    {
+     "label": "Look, Listen & Live 8 Acts of the HOLY SPIRIT",
+     "url": "https://globalrecordings.net/en/program/63583"
+    },
+    {
+     "label": "Malai Timro Banau [Make Me Yours]",
+     "url": "https://globalrecordings.net/en/program/63819"
+    },
+    {
+     "label": "Pheri Aune Ashama [The Hope Of Return]",
+     "url": "https://globalrecordings.net/en/program/63816"
+    },
+    {
+     "label": "Promises of God",
+     "url": "https://globalrecordings.net/en/program/64085"
+    },
+    {
+     "label": "Raamro Khabar [Good News]",
+     "url": "https://globalrecordings.net/en/program/65784"
+    },
+    {
+     "label": "Saacho Kudaa Lukna Sakdaina [Truth Cannot Be Hidden]",
+     "url": "https://globalrecordings.net/en/program/65785"
+    },
+    {
+     "label": "Songs",
+     "url": "https://globalrecordings.net/en/program/31200"
+    },
+    {
+     "label": "Songs",
+     "url": "https://globalrecordings.net/en/program/33491"
+    },
+    {
+     "label": "Student",
+     "url": "https://globalrecordings.net/en/program/37695"
+    },
+    {
+     "label": "Teaching",
+     "url": "https://globalrecordings.net/en/program/37697"
+    },
+    {
+     "label": "Testimony",
+     "url": "https://globalrecordings.net/en/program/30620"
+    },
+    {
+     "label": "Testimony",
+     "url": "https://globalrecordings.net/en/program/62307"
+    },
+    {
+     "label": "Thaa Aa Paaunai Padney Kudaa [Everyone Should Know The Truth]",
+     "url": "https://globalrecordings.net/en/program/65621"
+    },
+    {
+     "label": "Uhako Mahima [In His Glory]",
+     "url": "https://globalrecordings.net/en/program/63815"
+    },
+    {
+     "label": "Uhan Ko Karar [His Covenant]",
+     "url": "https://globalrecordings.net/en/program/63820"
+    },
+    {
+     "label": "Words of Life",
+     "url": "https://globalrecordings.net/en/program/11250"
+    },
+    {
+     "label": "Words of Life",
+     "url": "https://globalrecordings.net/en/program/20131"
+    },
+    {
+     "label": "Words of Life",
+     "url": "https://globalrecordings.net/en/program/62651"
+    },
+    {
+     "label": "Words of Life",
+     "url": "https://globalrecordings.net/en/program/63332"
+    },
+    {
+     "label": "Words of Life",
+     "url": "https://globalrecordings.net/en/program/75100"
+    },
+    {
+     "label": "Words of Life (M)",
+     "url": "https://globalrecordings.net/en/program/3151"
+    },
+    {
+     "label": "Words of Life 1",
+     "url": "https://globalrecordings.net/en/program/20050"
+    },
+    {
+     "label": "Words of Life 1",
+     "url": "https://globalrecordings.net/en/program/3090"
+    },
+    {
+     "label": "Words of Life 1",
+     "url": "https://globalrecordings.net/en/program/3150"
+    },
+    {
+     "label": "Words of Life 1 w/ NEPALI songs",
+     "url": "https://globalrecordings.net/en/program/20540"
+    },
+    {
+     "label": "Words of Life 2",
+     "url": "https://globalrecordings.net/en/program/20431"
+    },
+    {
+     "label": "Words of Life 2",
+     "url": "https://globalrecordings.net/en/program/20731"
+    },
+    {
+     "label": "Words of Life 2 w/ NEPALI songs",
+     "url": "https://globalrecordings.net/en/program/33100"
+    },
+    {
+     "label": "Words of Life 2 w/ some NEPALI songs",
+     "url": "https://globalrecordings.net/en/program/33101"
+    },
+    {
+     "label": "Words of Life 3",
+     "url": "https://globalrecordings.net/en/program/20700"
+    },
+    {
+     "label": "Words of Life 4",
+     "url": "https://globalrecordings.net/en/program/20781"
+    },
+    {
+     "label": "Words of Life w/ DOTELI",
+     "url": "https://globalrecordings.net/en/program/20070"
+    },
+    {
+     "label": "Words of Life w/ LHASAS",
+     "url": "https://globalrecordings.net/en/program/20060"
+    },
+    {
+     "label": "Words of Life w/ NEPALI",
+     "url": "https://globalrecordings.net/en/program/20150"
+    },
+    {
+     "label": "Words of Life w/ NEPALI",
+     "url": "https://globalrecordings.net/en/program/20450"
+    },
+    {
+     "label": "Words of Life w/ NEPALI",
+     "url": "https://globalrecordings.net/en/program/20481"
+    },
+    {
+     "label": "Words of Life w/ NEPALI",
+     "url": "https://globalrecordings.net/en/program/21390"
+    },
+    {
+     "label": "Words of Life w/ NEPALI",
+     "url": "https://globalrecordings.net/en/program/3081"
+    },
+    {
+     "label": "Words of Life w/ NEPALI songs",
+     "url": "https://globalrecordings.net/en/program/20051"
+    },
+    {
+     "label": "Words of Life w/ NEPALI songs",
+     "url": "https://globalrecordings.net/en/program/3480"
+    },
+    {
+     "label": "Words of Life w/ NEPALI songs",
+     "url": "https://globalrecordings.net/en/program/3490"
+    },
+    {
+     "label": "Words of Life w/ NEPALI, RAI: Lohorong",
+     "url": "https://globalrecordings.net/en/program/20080"
+    },
+    {
+     "label": "Words of Life w/ NEPALI: Kathmandu",
+     "url": "https://globalrecordings.net/en/program/25030"
+    },
+    {
+     "label": "Words of Life w/ NEPALI: Kathmandu",
+     "url": "https://globalrecordings.net/en/program/3080"
+    },
+    {
+     "label": "Words of Life w/ NEPALI: Kathmandu",
+     "url": "https://globalrecordings.net/en/program/3351"
+    },
+    {
+     "label": "Words of Life w/ NEPALI: Kathmandu",
+     "url": "https://globalrecordings.net/en/program/3461"
+    },
+    {
+     "label": "Words of Life w/ TAMANG: Eastern",
+     "url": "https://globalrecordings.net/en/program/17400"
+    },
+    {
+     "label": "भुकम्प पछि [After the Earthquake]",
+     "url": "https://globalrecordings.net/en/program/65455"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Nepali",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "npi-link-www-mars-hill-org",
+   "lang": "npi",
+   "type": "link",
+   "title": "Mars Hill Productions",
+   "org": "Mars Hill Productions",
+   "desc": "1 Nepali items. The HOPE and related films from the producer.",
+   "links": [
+    {
+     "label": "The Nepali HOPE",
+     "url": "https://www.mars-hill.org/the-hope/store/the-nepali-hope-%E0%A4%86%E0%A4%B6%E0%A4%BE-voice-only-version"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Nepali",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "npi-link-www-youtube-com",
+   "lang": "npi",
+   "type": "link",
+   "title": "YouTube",
+   "org": "YouTube",
+   "desc": "1 Nepali items. Videos hosted on YouTube.",
+   "links": [
+    {
+     "label": "New Way (Naya Goreto)",
+     "url": "http://www.youtube.com/watch?v=qcZV3CgPq40"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Nepali",
+   "typeLabel": "Partner Links"
+  }
+ ]
+}

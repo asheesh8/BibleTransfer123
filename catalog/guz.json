@@ -334,7 +334,16 @@
      }
     ]
    },
-   "downloads": [],
+   "downloads": [
+    {
+     "label": "All chapters — SD",
+     "url": "https://download.dbs.org/Jesus/guz_gusii/guz_jesus_chapters_low.zip"
+    },
+    {
+     "label": "All chapters — HD",
+     "url": "https://download.dbs.org/Jesus/guz_gusii/guz_jesus_chapters_high.zip"
+    }
+   ],
    "source": "https://dbs.org/video/jesus/guz_gusii_jesus",
    "lang": "guz",
    "read": null,
@@ -472,7 +481,12 @@
      "NT"
     ]
    },
-   "downloads": [],
+   "downloads": [
+    {
+     "label": "Complete audio (ZIP)",
+     "url": "https://scripture.dbs.org/audio_zip/GUZGUZ_DAVR_FB_N.zip"
+    }
+   ],
    "source": "https://dbs.org/bibles/audio/GUZGUZ_DAVR_FB_N",
    "lang": "guz",
    "read": null,
@@ -494,7 +508,16 @@
     "kind": "audio-collection",
     "sample": "https://media.dbs.org/audio/grn/guz_GlobalRecordings_gusii/Gusii/Gusii%20Good%20News%2021151/Gusii%20Good%20News%20001%20Picture%201%20In%20the%20Beginning%20_%20Picture%202%20The%20Word%20of%20God%20_%20Picture%203%20Cr%2021151.mp3"
    },
-   "downloads": [],
+   "downloads": [
+    {
+     "label": "Complete collection — high quality",
+     "url": "https://media.dbs.org/audio/grn/guz_GlobalRecordings_gusii_high.zip"
+    },
+    {
+     "label": "Complete collection — low bandwidth",
+     "url": "https://media.dbs.org/audio/grn/guz_GlobalRecordings_gusii_low.zip"
+    }
+   ],
    "source": "https://dbs.org/audio/collections/grn/guz_GlobalRecordings_gusii",
    "lang": "guz",
    "read": null,
@@ -573,6 +596,7 @@
    "lang": "guz",
    "type": "scripture",
    "title": "Gusii Bibles to read online",
+   "native": null,
    "org": "Various publishers",
    "desc": "2 Gusii translations that their publishers host themselves. They open in a browser and need a connection.",
    "links": [
@@ -589,7 +613,6 @@
    "play": null,
    "read": null,
    "downloads": [],
-   "native": null,
    "duration": null,
    "year": null,
    "cover": null,

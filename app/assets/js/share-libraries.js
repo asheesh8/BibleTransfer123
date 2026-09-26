@@ -7,8 +7,11 @@
     ['hindi', 'hin', 'Hindi', 'हिन्दी'],
     ['urdu', 'urd', 'Urdu', 'اردو'],
     ['swahili', 'swh', 'Swahili', 'Kiswahili'],
+    ['western-punjabi', 'pnb', 'Western Punjabi', 'پنجابی'],
     ['cantonese', 'yue', 'Cantonese', '廣東話'],
     ['pashto', 'pus', 'Pashto', 'پښتو'],
+    ['eastern-punjabi', 'pan', 'Eastern Punjabi', 'ਪੰਜਾਬੀ'],
+    ['nepali', 'npi', 'Nepali', 'नेपाली'],
     ['sindhi', 'snd', 'Sindhi', 'سنڌي'],
     ['gusii', 'guz', 'Gusii / Ekegusii / Kisii', 'Ekegusii / Kisii']
   ];

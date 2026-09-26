@@ -19,8 +19,9 @@ import urllib.parse
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 CATALOG = ROOT / "catalog"
-SOURCE = CATALOG / "source" / "dbs-rendered-2026-09-24.json"
-FILES = CATALOG / "source" / "dbs-direct-files-2026-09-24.json"
+# One audit per browsing session; each has a matching dbs-direct-files-*.json
+# written by verify_dbs_files.py.
+SOURCES = sorted((CATALOG / "source").glob("dbs-rendered-*.json"))
 # Sort after the curated catalogues so the simplest playable choices stay at
 # the top of each language page and the exhaustive archive follows them.
 OUT = CATALOG / "zz-dbs-all.json"
@@ -38,6 +39,16 @@ LANGUAGES = {
     "pbu": ("pus", "Pashto", "Northern"),
     "pbt": ("pus", "Pashto", "Southern"),
     "pst": ("pus", "Pashto", "Central"),
+    "pan": ("pan", "Eastern Punjabi", ""),
+    "pnb": ("pnb", "Western Punjabi", ""),
+    "npi": ("npi", "Nepali", ""),
+    "nep": ("npi", "Nepali", ""),
+}
+
+# Filesets whose testaments sit in numbered folders rather than "NT_<version>",
+# read off DBS's own audio metadata (meta.dbs.org/data/data-scripture-audio).
+AUDIO_DIRS = {
+    "NPIB08_DAVR_FB_N": {"OT": "01 OT_NPIB08", "NT": "02 NT_NPIB08"},
 }
 
 TYPE_LABEL = {
@@ -256,6 +267,8 @@ def make_resource(source_code: str, section: str, item: dict) -> dict:
             "kind": "audio-bible", "fileset": fileset,
             "version": version, "testaments": testaments,
         }
+        if fileset in AUDIO_DIRS:
+            resource["play"]["dirs"] = AUDIO_DIRS[fileset]
         resource["downloads"] = [{
             "label": "Complete audio (ZIP)",
             "url": f"https://scripture.dbs.org/audio_zip/{urllib.parse.quote(fileset)}.zip",
@@ -273,10 +286,13 @@ def make_resource(source_code: str, section: str, item: dict) -> dict:
 
 
 def main():
-    audit = json.loads(SOURCE.read_text(encoding="utf-8"))
-    verified = json.loads(FILES.read_text(encoding="utf-8"))
-    alive_files = set(verified["alive_files"])
-    playable_audio = set(verified["playable_audio_filesets"])
+    audit, alive_files, playable_audio = {}, set(), set()
+    for source in SOURCES:
+        audit.update(json.loads(source.read_text(encoding="utf-8")))
+        verified = json.loads(source.with_name(
+            source.name.replace("dbs-rendered-", "dbs-direct-files-")).read_text(encoding="utf-8"))
+        alive_files.update(verified["alive_files"])
+        playable_audio.update(verified["playable_audio_filesets"])
     existing, languages = existing_catalog()
     # `online` is a fallback for a richer local-folder record. Keep the normal
     # DBS entry too: it has the searchable DBS title and keeps regeneration
@@ -331,7 +347,7 @@ def main():
                 r["title"] += f" — {variant}"
 
     OUT.write_text(json.dumps({
-        "generated": "Rendered Digital Bible Society language pages — verified 2026-09-24",
+        "generated": "Rendered Digital Bible Society language pages — verified " + ", ".join(s.stem[-10:] for s in SOURCES),
         "languages": {},
         "resources": added,
     }, ensure_ascii=False, indent=1), encoding="utf-8")

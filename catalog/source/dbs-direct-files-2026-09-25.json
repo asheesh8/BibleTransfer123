@@ -1,0 +1,35 @@
+{
+ "verified": "2026-09-25",
+ "alive_files": [
+  "https://bibles.dbs.org/NEPERV/pdf/NEPERV.pdf",
+  "https://bibles.dbs.org/NEPULB/pdf/NEPULB.pdf",
+  "https://bibles.dbs.org/NPIERV/epub/NPIERV.epub",
+  "https://bibles.dbs.org/NPIERV/pdf/NPIERV.pdf",
+  "https://bibles.dbs.org/PANOVV/epub/PANOVV.epub",
+  "https://bibles.dbs.org/PANOVV/pdf/PANOVV.pdf",
+  "https://bibles.dbs.org/PNBOUB/epub/PNBOUB.epub",
+  "https://bibles.dbs.org/PNBOUB/pdf/PNBOUB.pdf",
+  "https://bibles.dbs.org/PNBPOV/epub/PNBPOV.epub",
+  "https://bibles.dbs.org/PNBPOV/pdf/PNBPOV.pdf",
+  "https://scripture.dbs.org/audio_zip/NPIB08_DAVR_FB_N.zip",
+  "https://scripture.dbs.org/audio_zip/NPINBS_FCBH_NT_D.zip",
+  "https://scripture.dbs.org/audio_zip/NPIULV_FCBH_NT_N.zip",
+  "https://scripture.dbs.org/audio_zip/PANIRV_DAVR_FB_N.zip",
+  "https://scripture.dbs.org/audio_zip/PNBPBS_DAVR_NT_N.zip",
+  "https://scripture.dbs.org/pdfs/Nepali-2006-WBTC-New-Testament.pdf",
+  "https://scripture.dbs.org/pdfs/Nepali-John-print.pdf",
+  "https://scripture.dbs.org/pdfs/Punjabi-1849-Genesis-Exodus.pdf",
+  "https://scripture.dbs.org/pdfs/Punjabi-1913-New-Testament.pdf",
+  "https://scripture.dbs.org/pdfs/Punjabi-2006-WBTC-Bible.pdf",
+  "https://scripture.dbs.org/pdfs/Punjabi-John-print.pdf",
+  "https://scripture.dbs.org/pdfs/Punjabi-New-Testament-print.pdf",
+  "https://scripture.dbs.org/pdfs/Punjabi-Persian-New-Testament-print.pdf"
+ ],
+ "playable_audio_filesets": [
+  "NPIB08_DAVR_FB_N",
+  "NPINBS_FCBH_NT_D",
+  "NPIULV_FCBH_NT_N",
+  "PANIRV_DAVR_FB_N",
+  "PNBPBS_DAVR_NT_N"
+ ]
+}
