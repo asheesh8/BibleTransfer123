@@ -181,16 +181,15 @@ GawahiiTV's, so that copy stays untouched and refreshable.
 
 ### Complete DBS catalogue audit
 
-The DBS language pages were audited from their rendered browser output on
-2026-09-24. The audit covers 12 DBS language records mapped into the nine
-libraries above: **1,415 clickable Bible, film, audio, historic scan, and
-publisher entries**, all represented in the app. It adds 891 searchable records
-after the richer curated entries are deduplicated.
+The DBS language pages were audited from their rendered browser output through
+2026-09-26. The audit covers 17 DBS language records mapped into 13 libraries:
+**1,720 clickable Bible, film, audio, historic scan, and publisher entries**.
+After richer records are deduplicated and the project's DBS-hosted Christian
+content rules are applied, the preview catalogue contains 656 resources.
 
 Run `npm run dbs:import` to rebuild the supplement and the web catalogue. The
-captured inventory is in `catalog/source/dbs-rendered-2026-09-24.json`; verified
-DBS file and audio patterns are in
-`catalog/source/dbs-direct-files-2026-09-24.json`. Direct reading, playback, and
+captured inventories are in `catalog/source/dbs-rendered-*.json`; verified DBS
+file and audio patterns are in `catalog/source/dbs-direct-files-*.json`. Direct reading, playback, and
 download buttons are added only for URLs that passed the probe. Every other
 entry still opens its DBS or publisher page.
 
@@ -214,6 +213,7 @@ The public language addresses are:
 - `/hindi`
 - `/urdu`
 - `/swahili`
+- `/zulu`
 - `/western-punjabi` (also `/shahmukhi`)
 - `/cantonese`
 - `/pashto` (also `/northern-pashto`)

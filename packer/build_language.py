@@ -104,6 +104,14 @@ LANGUAGES = {
         "historic": "nepali",
         "historic_prefix": "Nepali-",
     },
+    "zul": {
+        "name": "Zulu", "native": "isiZulu", "script": "latn", "dir": "ltr", "font": "latin",
+        "speakers": "~12.1 million", "region": "South Africa",
+        "blurb": "A major Southern African language and one of South Africa's official languages.",
+        "isos": ["zul"],
+        "historic": "zulu",
+        "historic_prefix": "Zulu-",
+    },
 }
 
 # Publishers whose pages are worth listing but cannot be downloaded.

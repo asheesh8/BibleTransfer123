@@ -1,0 +1,59 @@
+{
+ "zul": {
+  "Bibles": {"heading": "Bibles 1", "links": [
+   {"cells": [], "href": "https://dbs.org/bibles/audio/ZULB59_ISA_FB_N", "row": "Zulu 1959 Bible ZULB59 Ibhayibheli Elingcwele Audio · Full Bible (ISA) 1959 · South Africa", "title": "Zulu 1959 Bible ZULB59 Ibhayibheli Elingcwele Audio · Full Bible (ISA) 1959 · South Africa"}
+  ]},
+  "Films": {"heading": "Films 12", "links": [
+   {"cells": ["JESUS isiZulu", "Jesus Film Project", "2:07:53"], "href": "https://dbs.org/video/jesus/zul_zulu_jesus", "row": "JESUS isiZuluJesus Film Project2:07:53", "title": "JESUS"},
+   {"cells": ["Magdalena isiZulu", "Jesus Film Project", "58:24"], "href": "https://dbs.org/video/magdalena/zul_zulu_magdalena", "row": "Magdalena isiZuluJesus Film Project58:24", "title": "Magdalena"},
+   {"cells": ["Story of Jesus for Children isiZulu", "Jesus Film Project", "1:08:08"], "href": "https://dbs.org/video/storyjesus/zul_zulu_story_of_jesus_for_children", "row": "Story of Jesus for Children isiZuluJesus Film Project1:08:08", "title": "Story of Jesus for Children"},
+   {"cells": ["LUMO: The Gospel of John isiZulu", "LUMO Project", ""], "href": "https://dbs.org/video/lumo-john/zul_zulu_john", "row": "LUMO: The Gospel of John isiZuluLUMO Project", "title": "LUMO: The Gospel of John"},
+   {"cells": ["LUMO: The Gospel of Luke isiZulu", "LUMO Project", ""], "href": "https://dbs.org/video/lumo-luke/zul_zulu_luke", "row": "LUMO: The Gospel of Luke isiZuluLUMO Project", "title": "LUMO: The Gospel of Luke"},
+   {"cells": ["LUMO: The Gospel of Mark isiZulu", "LUMO Project", ""], "href": "https://dbs.org/video/lumo-mark/zul_zulu_mark", "row": "LUMO: The Gospel of Mark isiZuluLUMO Project", "title": "LUMO: The Gospel of Mark"},
+   {"cells": ["LUMO: The Gospel of Matthew isiZulu", "LUMO Project", ""], "href": "https://dbs.org/video/lumo-matthew/zul_zulu_matthew", "row": "LUMO: The Gospel of Matthew isiZuluLUMO Project", "title": "LUMO: The Gospel of Matthew"},
+   {"cells": ["LUMO: The Covenant isiZulu", "LUMO Project", ""], "href": "https://dbs.org/video/lumo-covenant/zul_zulu_covenant", "row": "LUMO: The Covenant isiZuluLUMO Project", "title": "LUMO: The Covenant"},
+   {"cells": ["iBible: Salvation Story isiZulu", "iBible: Salvation Story", "9:17"], "href": "https://dbs.org/video/ibible/zul-zulu-ibible_salvation", "row": "iBible: Salvation Story isiZuluiBible: Salvation Story9:17", "title": "iBible: Salvation Story"},
+   {"cells": ["The Visual Bible: Matthew isiZulu", "Visual Bible Int.", "4:13:11"], "href": "https://dbs.org/video/matthew/zul-matthew-vb-zulu", "row": "The Visual Bible: Matthew isiZuluVisual Bible Int.4:13:11", "title": "The Visual Bible: Matthew"},
+   {"cells": ["The Visual Bible: Acts isiZulu", "Visual Bible Int.", "3:06:40"], "href": "https://dbs.org/video/acts_vb/zul-acts-vb-zulu", "row": "The Visual Bible: Acts isiZuluVisual Bible Int.3:06:40", "title": "The Visual Bible: Acts"},
+   {"cells": ["Rescue Project Deaf Gospel isiZulu", "Jesus Film Project", "28:17"], "href": "https://dbs.org/video/deafproject/zul_zulu_rescue_project_deaf_gospel", "row": "Rescue Project Deaf Gospel isiZuluJesus Film Project28:17", "title": "Rescue Project Deaf Gospel"}
+  ]},
+  "Audio Collections": {"heading": "Audio Collections 1", "links": [
+   {"cells": ["Zulu", "Global Recordings Network", "244 files · 482.2 MB"], "href": "https://dbs.org/audio/collections/grn/zul_GlobalRecordings_zulu", "row": "ZuluGlobal Recordings Network244 files · 482.2 MB", "title": "Zulu"}
+  ]},
+  "Historic Bible (Scans)": {"heading": "Historic Bible (Scans) 5", "links": [
+   {"cells": ["Zulu (1883) Bible Zulu (1883) IBhayibheli EliNgcwele", "1883"], "href": "https://dbs.org/bibles/historic/Zulu-1883-Bible", "row": "Zulu (1883) Bible Zulu (1883) IBhayibheli EliNgcwele1883", "title": "Zulu (1883) Bible"},
+   {"cells": ["Zulu (1883) New Testament Zulu (1883) iTestamente Elisha", "1883"], "href": "https://dbs.org/bibles/historic/Zulu-1883-New-Testament", "row": "Zulu (1883) New Testament Zulu (1883) iTestamente Elisha1883", "title": "Zulu (1883) New Testament"},
+   {"cells": ["Zulu (1903) Bible Zulu (1903) IBhayibheli EliNgcwele", "1903"], "href": "https://dbs.org/bibles/historic/Zulu-1903-Bible-Ibaible-eli-Ingowele", "row": "Zulu (1903) Bible Zulu (1903) IBhayibheli EliNgcwele1903", "title": "Zulu (1903) Bible"},
+   {"cells": ["Zulu (1903) John Zulu (1903) Johane", "1903"], "href": "https://dbs.org/bibles/historic/Zulu-1903-John", "row": "Zulu (1903) John Zulu (1903) Johane1903", "title": "Zulu (1903) John"},
+   {"cells": ["Zulu (1997) Genesis Portion Zulu (1997) Isiqalo SikaGenesise", "1997"], "href": "https://dbs.org/bibles/historic/Zulu-1997-Genesis-Portion", "row": "Zulu (1997) Genesis Portion Zulu (1997) Isiqalo SikaGenesise1997", "title": "Zulu (1997) Genesis Portion"}
+  ]},
+  "Links to Other Sites": {"heading": "Links to Other Sites 26", "links": [
+   {"cells": [], "href": "https://find.bible/?abbr=ZULSAF", "row": "SAF Version 2018", "title": "SAF Version"},
+   {"cells": [], "href": "https://find.bible/?abbr=ZULB93", "row": "The Zulu Old Version 1883", "title": "The Zulu Old Version"},
+   {"cells": [], "href": "https://find.bible/?abbr=ZULBSSA", "row": "The Bible in isiZulu", "title": "The Bible in isiZulu"},
+   {"cells": [], "href": "https://find.bible/?abbr=ZULB59", "row": "Zulu 1959 Bible 1959", "title": "Zulu 1959 Bible"},
+   {"cells": [], "href": "https://find.bible/?abbr=ZULB86", "row": "Zulu 1986 New Testament with Psalms 1986", "title": "Zulu 1986 New Testament with Psalms"},
+   {"cells": [], "href": "https://find.bible/?abbr=ZULZZZP", "row": "IsiZulu Bible", "title": "IsiZulu Bible"},
+   {"cells": [], "href": "https://youtu.be/0dKyGBeaiP4", "row": "Lumo: Matthew LUMO Project", "title": "Lumo: Matthew"},
+   {"cells": [], "href": "https://arc.gt/2fnf5?apiSessionId=5f876ad32b9337.18747050", "row": "The Story of Jesus for Children The JESUS Film Project", "title": "The Story of Jesus for Children"},
+   {"cells": [], "href": "https://arc.gt/rfnay?apiSessionId=5f876ad5761fe8.69045957", "row": "Magdalena - Director's Cut The JESUS Film Project", "title": "Magdalena - Director's Cut"},
+   {"cells": [], "href": "https://youtu.be/hqWNwDbUDWg", "row": "Lumo: Luke LUMO Project", "title": "Lumo: Luke"},
+   {"cells": [], "href": "https://youtu.be/VVFHBMCVXGA", "row": "Lumo: Mark LUMO Project", "title": "Lumo: Mark"},
+   {"cells": [], "href": "https://youtu.be/f1Yfthu0MR0", "row": "Lumo: John LUMO Project", "title": "Lumo: John"},
+   {"cells": [], "href": "https://globalrecordings.net/en/program/74732", "row": "Good News globalrecordings.net", "title": "Good News"},
+   {"cells": [], "href": "https://globalrecordings.net/en/program/82293", "row": "Jesus & I (Short sermons) globalrecordings.net", "title": "Jesus & I (Short sermons)"},
+   {"cells": [], "href": "https://globalrecordings.net/en/program/80149", "row": "Look, Listen & Live globalrecordings.net", "title": "Look, Listen & Live"},
+   {"cells": [], "href": "https://globalrecordings.net/en/program/82231", "row": "Look, Listen & Live 2 Mighty Men of GOD globalrecordings.net", "title": "Look, Listen & Live 2 Mighty Men of GOD"},
+   {"cells": [], "href": "https://globalrecordings.net/en/program/82232", "row": "Look, Listen & Live 3 Victory through GOD globalrecordings.net", "title": "Look, Listen & Live 3 Victory through GOD"},
+   {"cells": [], "href": "https://globalrecordings.net/en/program/82233", "row": "Look, Listen & Live 4 Servants of GOD globalrecordings.net", "title": "Look, Listen & Live 4 Servants of GOD"},
+   {"cells": [], "href": "https://globalrecordings.net/en/program/82269", "row": "Look, Listen & Live 5 On Trial for GOD globalrecordings.net", "title": "Look, Listen & Live 5 On Trial for GOD"},
+   {"cells": [], "href": "https://globalrecordings.net/en/program/82234", "row": "Look, Listen & Live 6 JESUS - Teacher & Healer globalrecordings.net", "title": "Look, Listen & Live 6 JESUS - Teacher & Healer"},
+   {"cells": [], "href": "https://globalrecordings.net/en/program/82235", "row": "Look, Listen & Live 7 JESUS - Lord & Saviour globalrecordings.net", "title": "Look, Listen & Live 7 JESUS - Lord & Saviour"},
+   {"cells": [], "href": "https://globalrecordings.net/en/program/82236", "row": "Look, Listen & Live 8 Acts of the HOLY SPIRIT globalrecordings.net", "title": "Look, Listen & Live 8 Acts of the HOLY SPIRIT"},
+   {"cells": [], "href": "https://globalrecordings.net/en/program/66238", "row": "Thembi globalrecordings.net", "title": "Thembi"},
+   {"cells": [], "href": "https://globalrecordings.net/en/program/66277", "row": "Ukusindiswa [Salvation] globalrecordings.net", "title": "Ukusindiswa [Salvation]"},
+   {"cells": [], "href": "https://globalrecordings.net/en/program/1691", "row": "Words of Life globalrecordings.net", "title": "Words of Life"},
+   {"cells": [], "href": "https://globalrecordings.net/en/program/4431", "row": "Words of Life for Children globalrecordings.net", "title": "Words of Life for Children"}
+  ]}
+ }
+}

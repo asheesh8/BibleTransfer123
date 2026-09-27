@@ -21,6 +21,7 @@
     { code: 'hi', name: 'Hindi', native: 'हिन्दी', dir: 'ltr' },
     { code: 'ur',  name: 'Urdu',    native: 'اردو',    dir: 'rtl' },
     { code: 'swh', name: 'Swahili', native: 'Kiswahili', dir: 'ltr' },
+    { code: 'zul', name: 'Zulu', native: 'isiZulu', dir: 'ltr' },
     { code: 'pnb', name: 'Western Punjabi', native: 'پنجابی', dir: 'rtl' },
     { code: 'yue', name: 'Cantonese', native: '廣東話', dir: 'ltr' },
     { code: 'ps',  name: 'Pashto',  native: 'پښتو',    dir: 'rtl' },
@@ -2289,7 +2290,7 @@
     [/^pa[-_](arab|pk)/i, 'pnb'], [/^pnb/i, 'pnb'], [/^pa/i, 'pa'],
     [/^zh[-_](hk|mo|tw|hant)|^yue/i, 'yue'], [/^zh/i, 'cmn'],
     [/^sw/i, 'swh'], [/^hi/i, 'hi'], [/^ur/i, 'ur'], [/^ps/i, 'ps'], [/^sd/i, 'snd'],
-    [/^ne/i, 'ne'], [/^guz/i, 'guz'], [/^en/i, 'en']
+    [/^ne/i, 'ne'], [/^guz/i, 'guz'], [/^zu/i, 'zul'], [/^en/i, 'en']
   ];
   function suggested() {
     var list = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || ''];

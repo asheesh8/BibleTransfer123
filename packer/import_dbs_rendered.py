@@ -43,6 +43,7 @@ LANGUAGES = {
     "pnb": ("pnb", "Western Punjabi", ""),
     "npi": ("npi", "Nepali", ""),
     "nep": ("npi", "Nepali", ""),
+    "zul": ("zul", "Zulu", ""),
 }
 
 # Filesets whose testaments sit in numbered folders rather than "NT_<version>",

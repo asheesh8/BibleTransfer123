@@ -7,6 +7,7 @@
     ['hindi', 'hin', 'Hindi', 'हिन्दी'],
     ['urdu', 'urd', 'Urdu', 'اردو'],
     ['swahili', 'swh', 'Swahili', 'Kiswahili'],
+    ['zulu', 'zul', 'Zulu', 'isiZulu'],
     ['western-punjabi', 'pnb', 'Western Punjabi', 'پنجابی'],
     ['cantonese', 'yue', 'Cantonese', '廣東話'],
     ['pashto', 'pus', 'Pashto', 'پښتو'],

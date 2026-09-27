@@ -1,0 +1,368 @@
+{
+ "generated": "Digital Bible Society (dbs.org) — Zulu, built from the open dataset",
+ "languages": {
+  "zul": {
+   "name": "Zulu",
+   "native": "isiZulu",
+   "script": "latn",
+   "dir": "ltr",
+   "font": "latin",
+   "speakers": "~12.1 million",
+   "region": "South Africa",
+   "blurb": "A major Southern African language and one of South Africa's official languages.",
+   "code": "zul"
+  }
+ },
+ "resources": [
+  {
+   "id": "zul-hist-zulu-1883-bible",
+   "lang": "zul",
+   "type": "historic",
+   "title": "Bible",
+   "org": "Digital Bible Society Archive",
+   "year": "1883",
+   "cover": "https://scripture.dbs.org/covers/small/Zulu-1883-Bible.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Zulu-1883-Bible.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Zulu-1883-Bible.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Zulu-1883-Bible",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Zulu",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "zul-hist-zulu-1883-new-testament",
+   "lang": "zul",
+   "type": "historic",
+   "title": "New Testament",
+   "org": "Digital Bible Society Archive",
+   "year": "1883",
+   "cover": "https://scripture.dbs.org/covers/small/Zulu-1883-New-Testament.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Zulu-1883-New-Testament.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Zulu-1883-New-Testament.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Zulu-1883-New-Testament",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Zulu",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "zul-hist-zulu-1903-bible-ibaible-eli-ingowele",
+   "lang": "zul",
+   "type": "historic",
+   "title": "Bible Ibaible eli Ingowele",
+   "org": "Digital Bible Society Archive",
+   "year": "1903",
+   "cover": "https://scripture.dbs.org/covers/small/Zulu-1903-Bible-Ibaible-eli-Ingowele.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Zulu-1903-Bible-Ibaible-eli-Ingowele.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Zulu-1903-Bible-Ibaible-eli-Ingowele.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Zulu-1903-Bible-Ibaible-eli-Ingowele",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Zulu",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "zul-hist-zulu-1903-john",
+   "lang": "zul",
+   "type": "historic",
+   "title": "John",
+   "org": "Digital Bible Society Archive",
+   "year": "1903",
+   "cover": null,
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Zulu-1903-John.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Zulu-1903-John.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Zulu-1903-John",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Zulu",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "zul-hist-zulu-1997-genesis-portion",
+   "lang": "zul",
+   "type": "historic",
+   "title": "Genesis Portion",
+   "org": "Digital Bible Society Archive",
+   "year": "1997",
+   "cover": "https://scripture.dbs.org/covers/small/Zulu-1997-Genesis-Portion.webp",
+   "desc": "Scanned pages of a printed edition. Read in the app or save the PDF.",
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Zulu-1997-Genesis-Portion.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Zulu-1997-Genesis-Portion.pdf"
+    }
+   ],
+   "source": "https://dbs.org/bibles/historic/Zulu-1997-Genesis-Portion",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "links": null,
+   "langName": "Zulu",
+   "typeLabel": "Historic Scans"
+  },
+  {
+   "id": "zul-text-online",
+   "lang": "zul",
+   "type": "scripture",
+   "title": "Zulu Bibles to read online",
+   "native": null,
+   "org": "Various publishers",
+   "desc": "6 Zulu translations that their publishers host themselves. They open in a browser and need a connection.",
+   "links": [
+    {
+     "label": "SAF Version (2018)",
+     "url": "https://dbs.org/bibles/ZULSAF"
+    },
+    {
+     "label": "The Zulu Old Version (1883)",
+     "url": "https://dbs.org/bibles/ZULB93"
+    },
+    {
+     "label": "The Bible in isiZulu",
+     "url": "https://dbs.org/bibles/ZULBSSA"
+    },
+    {
+     "label": "Zulu 1959 Bible (1959)",
+     "url": "https://dbs.org/bibles/ZULB59"
+    },
+    {
+     "label": "Zulu 1986 New Testament with Psalms (1986)",
+     "url": "https://dbs.org/bibles/ZULB86"
+    },
+    {
+     "label": "IsiZulu Bible  ",
+     "url": "https://dbs.org/bibles/ZULZZZP"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/zul",
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "langName": "Zulu",
+   "typeLabel": "Scripture Text"
+  },
+  {
+   "id": "zul-link-arc-gt",
+   "lang": "zul",
+   "type": "link",
+   "title": "Jesus Film Project",
+   "org": "Jesus Film Project",
+   "desc": "3 Zulu items. Full films on the publisher's own player.",
+   "links": [
+    {
+     "label": "JESUS",
+     "url": "https://arc.gt/2rtta?apiSessionId=5f876ad4164af6.30504862"
+    },
+    {
+     "label": "Magdalena - Director's Cut",
+     "url": "https://arc.gt/rfnay?apiSessionId=5f876ad5761fe8.69045957"
+    },
+    {
+     "label": "The Story of Jesus for Children",
+     "url": "https://arc.gt/2fnf5?apiSessionId=5f876ad32b9337.18747050"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Zulu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "zul-link-globalrecordings-net",
+   "lang": "zul",
+   "type": "link",
+   "title": "Global Recordings Network",
+   "org": "Global Recordings Network",
+   "desc": "14 Zulu items. Scripture-based recordings, told simply. Each programme plays on the publisher's own site.",
+   "links": [
+    {
+     "label": "Good News",
+     "url": "https://globalrecordings.net/en/program/74732"
+    },
+    {
+     "label": "Jesus & I (Short sermons)",
+     "url": "https://globalrecordings.net/en/program/82293"
+    },
+    {
+     "label": "Look, Listen & Live",
+     "url": "https://globalrecordings.net/en/program/80149"
+    },
+    {
+     "label": "Look, Listen & Live 2 Mighty Men of GOD",
+     "url": "https://globalrecordings.net/en/program/82231"
+    },
+    {
+     "label": "Look, Listen & Live 3 Victory through GOD",
+     "url": "https://globalrecordings.net/en/program/82232"
+    },
+    {
+     "label": "Look, Listen & Live 4 Servants of GOD",
+     "url": "https://globalrecordings.net/en/program/82233"
+    },
+    {
+     "label": "Look, Listen & Live 5 On Trial for GOD",
+     "url": "https://globalrecordings.net/en/program/82269"
+    },
+    {
+     "label": "Look, Listen & Live 6 JESUS - Teacher & Healer",
+     "url": "https://globalrecordings.net/en/program/82234"
+    },
+    {
+     "label": "Look, Listen & Live 7 JESUS - Lord & Saviour",
+     "url": "https://globalrecordings.net/en/program/82235"
+    },
+    {
+     "label": "Look, Listen & Live 8 Acts of the HOLY SPIRIT",
+     "url": "https://globalrecordings.net/en/program/82236"
+    },
+    {
+     "label": "Thembi",
+     "url": "https://globalrecordings.net/en/program/66238"
+    },
+    {
+     "label": "Ukusindiswa [Salvation]",
+     "url": "https://globalrecordings.net/en/program/66277"
+    },
+    {
+     "label": "Words of Life",
+     "url": "https://globalrecordings.net/en/program/1691"
+    },
+    {
+     "label": "Words of Life for Children",
+     "url": "https://globalrecordings.net/en/program/4431"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Zulu",
+   "typeLabel": "Partner Links"
+  },
+  {
+   "id": "zul-link-youtu-be",
+   "lang": "zul",
+   "type": "link",
+   "title": "YouTube",
+   "org": "YouTube",
+   "desc": "4 Zulu items. Videos hosted on YouTube.",
+   "links": [
+    {
+     "label": "Lumo: John",
+     "url": "https://youtu.be/f1Yfthu0MR0"
+    },
+    {
+     "label": "Lumo: Luke",
+     "url": "https://youtu.be/hqWNwDbUDWg"
+    },
+    {
+     "label": "Lumo: Mark",
+     "url": "https://youtu.be/VVFHBMCVXGA"
+    },
+    {
+     "label": "Lumo: Matthew",
+     "url": "https://youtu.be/0dKyGBeaiP4"
+    }
+   ],
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "native": null,
+   "duration": null,
+   "year": null,
+   "cover": null,
+   "stats": null,
+   "license": null,
+   "scope": null,
+   "source": null,
+   "langName": "Zulu",
+   "typeLabel": "Partner Links"
+  }
+ ]
+}
