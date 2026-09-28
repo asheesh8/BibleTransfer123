@@ -112,6 +112,14 @@ LANGUAGES = {
         "historic": "zulu",
         "historic_prefix": "Zulu-",
     },
+    "mas": {
+        "name": "Maasai", "native": "ɔl Maa", "script": "latn", "dir": "ltr", "font": "latin",
+        "speakers": "~1.9 million", "region": "Kenya & Tanzania",
+        "blurb": "The language of the Maasai people of southern Kenya and northern Tanzania.",
+        "isos": ["mas"],
+        "historic": "maasai",
+        "historic_prefix": "Maasai-",
+    },
 }
 
 # Publishers whose pages are worth listing but cannot be downloaded.
@@ -726,6 +734,31 @@ def _producer(url):
         return "Create International"
     return None
 
+
+# Maasai — read off dbs.org/discover/languages/mas and each film and
+# collection page, 2026-09-27.
+EXTRA["mas"] = [
+    _jesus_film("mas", "mas", "mas_maasai", None, "mas_maasai_jesus"),
+    _lumo_film("mas", "Luke", "mas_Maasai_Luke_Biblia-Sinyati-Version_low",
+               "mas_LUMO_Maasai_Luke_Biblia-Sinyati-Version", 24, None, "mas_maasai_luke"),
+    _visual_bible("mas", "Matthew", "Matthew", "mas-matthew-vb-masai", 28, None, "matthew"),
+    _visual_bible("mas", "Acts", "Acts_VB", "mas-acts-vb-masai", 28, None, "acts_vb"),
+    _ibible("mas", "mas-maasai-ibible_salvation", None),
+    _grn("mas", "mas_GlobalRecordings_maasai", "Maasai Scripture Recordings", None,
+         "353 recordings · 1.9 GB", "Words of Life, Look Listen & Live, songs and Bible teaching in Maasai.",
+         "Maasai%20Lulagu/Maasai%20Lulagu%20Words%20of%20Life%2007420/"
+         "Maasai%20Lulagu%20Words%20of%20Life%20001%20The%20Prodigal%20Son%20_%20The%20Lost%20Sheep%2007420.mp3"),
+    dict(id="mas-ac-srun", type="audio", title="Bible Story Set", native=None, org="StoryRunners",
+         stats="44 recordings · 92.3 MB", desc="The Bible told as a set of short stories, from Creation to a new heaven and a new earth.",
+         play={"kind": "audio-collection", "sample": f"{MD}/audio/srun/mas_storyset_maasai/"
+               "Maasai-01-Enkiterunoto_enkitobirunoto_enkop-Creation_of_the_World.mp3"},
+         downloads=[{"label": "Whole set (ZIP)", "url": "https://storysets.s3.amazonaws.com/mas/Maasai_Storyset.zip"}],
+         source="https://dbs.org/audio/collections/srun/mas_storyset_maasai"),
+    *_publisher_only("mas", [
+        ("magdalena", "Magdalena", None, "Jesus Film Project",
+         "The story of Jesus through the eyes of Mary Magdalene.", "https://dbs.org/video/magdalena/mas_maasai_magdalena"),
+    ]),
+]
 
 SERIES = re.compile(r"^(?P<name>.+?)\s+(?P<n>\d+)\s*[-–—]\s*(?P<part>.+)$")
 

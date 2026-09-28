@@ -44,6 +44,7 @@ LANGUAGES = {
     "npi": ("npi", "Nepali", ""),
     "nep": ("npi", "Nepali", ""),
     "zul": ("zul", "Zulu", ""),
+    "mas": ("mas", "Maasai", ""),
 }
 
 # Filesets whose testaments sit in numbered folders rather than "NT_<version>",
@@ -255,6 +256,18 @@ def make_resource(source_code: str, section: str, item: dict) -> dict:
         resource["read"] = {"kind": "pdf", "url": pdf}
         resource["downloads"] = [{"label": "PDF", "url": pdf}]
         resource["cover"] = f"https://scripture.dbs.org/covers/small/{ident}.webp"
+        if ident == "English-1400-Wycliffe-Purvey-Illuminated-Bible-NT":
+            # The original is a large medieval manuscript scan. Offer DBS's
+            # separate, typeset Wycliffe text for readers on a small screen.
+            resource["desc"] = (
+                "Original illuminated manuscript scan from about 1400. "
+                "For easier reading on a phone, open the companion "
+                "Wycliffe Bible in modern spelling below."
+            )
+            resource["links"].append({
+                "label": "Read Wycliffe in modern spelling (PDF)",
+                "url": "https://bibles.dbs.org/ENGWYCMS/pdf/ENGWYCMS.pdf",
+            })
     elif internal and "/bibles/audio/" in path:
         fileset = urllib.parse.unquote(ident)
         version = fileset.split("_", 1)[0]

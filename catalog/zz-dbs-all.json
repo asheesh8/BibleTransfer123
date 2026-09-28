@@ -1,5 +1,5 @@
 {
- "generated": "Rendered Digital Bible Society language pages — verified 2026-09-24, 2026-09-25, 2026-09-26",
+ "generated": "Rendered Digital Bible Society language pages — verified 2026-09-24, 2026-09-25, 2026-09-26, 2026-09-27",
  "languages": {},
  "resources": [
   {
@@ -6142,7 +6142,7 @@
    "org": "Digital Bible Society Archive",
    "year": "1400",
    "duration": null,
-   "desc": "",
+   "desc": "Original illuminated manuscript scan from about 1400. For easier reading on a phone, open the companion Wycliffe Bible in modern spelling below.",
    "license": null,
    "scope": null,
    "stats": null,
@@ -6160,7 +6160,12 @@
      "url": "https://scripture.dbs.org/pdfs/English-1400-Wycliffe-Purvey-Illuminated-Bible-NT.pdf"
     }
    ],
-   "links": [],
+   "links": [
+    {
+     "label": "Read Wycliffe in modern spelling (PDF)",
+     "url": "https://bibles.dbs.org/ENGWYCMS/pdf/ENGWYCMS.pdf"
+    }
+   ],
    "source": "https://dbs.org/bibles/historic/English-1400-Wycliffe-Purvey-Illuminated-Bible-NT"
   },
   {
@@ -26971,6 +26976,144 @@
     }
    ],
    "source": "https://dbs.org/discover/languages/zul"
+  },
+  {
+   "id": "mas-audio-bible-dbs-new-testament-in-maasai-arusha-8aea61a4b",
+   "lang": "mas",
+   "type": "audio-bible",
+   "title": "New Testament in Maasai / Arusha",
+   "native": null,
+   "org": "Digital Bible Society",
+   "year": "1970",
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Maasai",
+   "typeLabel": "Audio Bibles",
+   "cover": null,
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "MASBST_DAVR_FB_N",
+    "version": "MASBST",
+    "testaments": [
+     "OT",
+     "NT"
+    ]
+   },
+   "read": null,
+   "downloads": [
+    {
+     "label": "Complete audio (ZIP)",
+     "url": "https://scripture.dbs.org/audio_zip/MASBST_DAVR_FB_N.zip"
+    }
+   ],
+   "links": [],
+   "source": "https://dbs.org/bibles/audio/MASBST_DAVR_FB_N"
+  },
+  {
+   "id": "mas-audio-bible-dbs-revised-maasai-bible-0f0b560a2",
+   "lang": "mas",
+   "type": "audio-bible",
+   "title": "Revised Maasai Bible",
+   "native": null,
+   "org": "Digital Bible Society",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Maasai",
+   "typeLabel": "Audio Bibles",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [],
+   "source": "https://dbs.org/bibles/audio/MASBSK_DAVR_FB_N"
+  },
+  {
+   "id": "mas-scripture-dbs-new-testament-in-maasai-e81749b1e",
+   "lang": "mas",
+   "type": "scripture",
+   "title": "New Testament in Maasai",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Maasai",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=MASTBN"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/mas"
+  },
+  {
+   "id": "mas-scripture-dbs-new-testament-in-maasai-arusha-5cbcdd65c",
+   "lang": "mas",
+   "type": "scripture",
+   "title": "New Testament in Maasai / Arusha",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Maasai",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=MASBST"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/mas"
+  },
+  {
+   "id": "mas-scripture-dbs-biblia-sinyati-version-49738889f",
+   "lang": "mas",
+   "type": "scripture",
+   "title": "Biblia Sinyati Version",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Maasai",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=MASMAS"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/mas"
   }
  ]
 }

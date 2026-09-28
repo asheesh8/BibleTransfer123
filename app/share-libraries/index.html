@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <base href="../">
-<title>Share a language library</title>
+<title data-i18n="sharelib.launch.title">Share a language library</title>
 <meta name="description" content="Open or email a BibleTransfer123 language library.">
 <link rel="icon" href="assets/icon/favicon-32.png" sizes="32x32">
 <meta name="theme-color" content="#4E1F64">
@@ -13,14 +13,14 @@
 <body>
 <main class="wrap" style="padding-top:1rem">
   <a class="btn ghost" href="library.html" style="min-height:46px;padding:.5rem 1rem">
-    <span id="share-back-ico"></span>Back to the full library
+    <span id="share-back-ico"></span><span data-i18n="sharelib.launch.back">Back to the full library</span>
   </a>
   <section class="shared-hero" style="margin-top:1rem">
-    <p class="eyebrow">FOR LARRY</p>
-    <h1>Share a language library</h1>
-    <p class="muted">Choose a language, then tap <strong>Email link</strong>. Your email app opens with the correct link already written.</p>
+    <p class="eyebrow" data-i18n="sharelib.launch.for">FOR LARRY</p>
+    <h1 data-i18n="sharelib.launch.title">Share a language library</h1>
+    <p class="muted" data-i18n="sharelib.launch.lead">Choose a language, then tap Email link. Your email app opens with the correct link already written.</p>
   </section>
-  <div class="note info" id="web-note" hidden>
+  <div class="note info" id="web-note" data-i18n="sharelib.launch.webnote" hidden>
     Open this page from the BibleTransfer123 website before emailing. A link from a local card only works on this computer.
   </div>
   <div class="share-language-grid" id="share-language-list"></div>
@@ -28,6 +28,7 @@
 </main>
 <script src="data/catalog.js"></script>
 <script src="assets/js/core.js"></script>
+<script src="assets/js/i18n.js"></script>
 <script src="assets/js/share-libraries.js"></script>
 </body>
 </html>

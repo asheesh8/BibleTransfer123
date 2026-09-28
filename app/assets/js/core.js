@@ -170,12 +170,9 @@ window.ET = (function () {
     if (!window.LIBRARY || !window.LIBRARY.resources) {
       document.body.innerHTML =
         '<div class="wrap" style="padding:3rem 1.1rem;max-width:34rem">' +
-        '<h1>This card is missing its catalogue</h1>' +
-        '<p>The file <code>app/data/catalog.js</code> is not there, so the app ' +
-        'has nothing to list.</p>' +
-        '<p class="muted">This usually means the folders were renamed or copied ' +
-        'incompletely. Copy the whole card again, keeping every folder name ' +
-        'exactly as it was.</p></div>';
+        '<h1>' + ET.i18n.h('ui.catalog.missing') + '</h1>' +
+        '<p>' + ET.i18n.h('ui.catalog.file') + '</p>' +
+        '<p class="muted">' + ET.i18n.h('ui.catalog.missing.sub') + '</p></div>';
       throw new Error('catalog.js missing');
     }
     return window.LIBRARY;
@@ -197,9 +194,9 @@ window.ET = (function () {
       '<div class="wrap">' +
         '<span class="brand">' + lantern(30) +
           '<span data-i18n="app.name">The Library</span></span>' +
-        (scope ? '' : '<button class="fchip" id="et-lang" aria-label="Language">' +
+        (scope ? '' : '<button class="fchip" id="et-lang" data-i18n-aria="ui.lang" aria-label="Language">' +
           icon('globe') + '<span id="et-lang-label"></span></button>') +
-        '<button class="fchip" id="et-theme" aria-label="Light or dark">' +
+        '<button class="fchip" id="et-theme" data-i18n-aria="ui.theme" aria-label="Light or dark">' +
           icon(t === 'dark' ? 'sun' : 'moon') + '</button>' +
       '</div>';
     document.body.insertBefore(el, document.body.firstChild);
@@ -241,7 +238,8 @@ window.ET = (function () {
       : TABS;
     var el = document.createElement('nav');
     el.className = 'tabbar';
-    el.setAttribute('aria-label', 'Main');
+    el.setAttribute('data-i18n-aria', 'ui.mainnav');
+    el.setAttribute('aria-label', ET.i18n.t('ui.mainnav'));
     el.innerHTML = tabs.map(function (tb) {
       var on = scope ? (here === 'library.html' ? tb[2] === 'tab.library' : tb[0].split('?')[0] === here)
                      : tb[0] === here;
@@ -458,7 +456,7 @@ window.ET = (function () {
      English title and heard Sindhi. Choosing a language picks both: English
      shows English films, اردو shows Urdu, سنڌي shows Sindhi. The library can
      still browse the others on purpose. */
-  var CONTENT = { en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', zul: 'zul', hi: 'hin', pa: 'pan', pnb: 'pnb', ne: 'npi' };
+  var CONTENT = { en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', zul: 'zul', mas: 'mas', hi: 'hin', pa: 'pan', pnb: 'pnb', ne: 'npi' };
   function contentCode(ui) { return CONTENT[ui] || 'eng'; }
   function contentLang() {
     var scope = libraryScope();

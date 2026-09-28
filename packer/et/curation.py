@@ -144,6 +144,10 @@ RETIRED = {
     "https://dbs.org/bibles/audio/SNDPBS00854_DAVR_NT_N",
     "https://dbs.org/bibles/audio/URDBCS_DAVR_FB_N",
     "https://bibles.dbs.org/URDGEO/pdf/URDGEO.pdf",
+    "https://dbs.org/bibles/audio/MASBSK_DAVR_FB_N",   # "no longer at this address", 2026-09-27
+    "https://dbs.org/bibles/MASTBN",                  # not in DBS site index, 2026-09-27
+    "https://dbs.org/bibles/MASBST",
+    "https://dbs.org/bibles/MASMAS",
 }
 # Directory pages on DBS's older library server, which no longer answer.
 _RETIRED_PREFIX = ("https://content.dbs.org/libraries/PAN/Audio/Bible/",

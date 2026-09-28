@@ -14,30 +14,38 @@
     ['eastern-punjabi', 'pan', 'Eastern Punjabi', 'ਪੰਜਾਬੀ'],
     ['nepali', 'npi', 'Nepali', 'नेपाली'],
     ['sindhi', 'snd', 'Sindhi', 'سنڌي'],
-    ['gusii', 'guz', 'Gusii / Ekegusii / Kisii', 'Ekegusii / Kisii']
+    ['gusii', 'guz', 'Gusii / Ekegusii / Kisii', 'Ekegusii / Kisii'],
+    ['maasai', 'mas', 'Maasai', 'ɔl Maa']
   ];
   var resources = ET.library().resources;
   var web = location.protocol === 'http:' || location.protocol === 'https:';
+  var t = ET.i18n.t, h = ET.i18n.h;
 
   function urlFor(slug) {
     return web ? location.origin + '/' + slug : slug + '/index.html';
   }
 
-  ET.$('#share-language-list').innerHTML = routes.map(function (x) {
-    var url = urlFor(x[0]);
-    var count = resources.filter(function (r) { return r.lang === x[1]; }).length;
-    var subject = x[2] + ' Bible Library';
-    var body = 'Here is the ' + x[2] + ' Bible library:\n\n' + url;
-    return '<article class="card share-language-card"><div>' +
-      '<h2 dir="auto">' + ET.esc(x[3]) + '</h2>' +
-      '<p class="latin muted">' + ET.esc(x[2]) + ' · <span class="num">' + count + '</span> resources</p>' +
-      '</div><div class="btn-row">' +
-      '<a class="btn sky" href="' + ET.esc(url) + '">' + ET.icon('book') + 'Open library</a>' +
-      '<a class="btn green" href="mailto:?subject=' + encodeURIComponent(subject) + '&body=' +
-        encodeURIComponent(body) + '">' + ET.icon('share') + 'Email link</a>' +
-      '</div></article>';
-  }).join('');
+  function render() {
+    ET.$('#share-language-list').innerHTML = routes.map(function (x) {
+      var url = urlFor(x[0]);
+      var count = resources.filter(function (r) { return r.lang === x[1]; }).length;
+      var subject = t('sharelib.subject', { lang: x[2] });
+      var body = t('sharelib.body', { lang: x[2], url: url });
+      return '<article class="card share-language-card"><div>' +
+        '<h2 dir="auto">' + ET.esc(x[3]) + '</h2>' +
+        '<p class="latin muted">' + ET.esc(x[2]) + ' · ' +
+          ET.esc(t('sharelib.launch.resources', { n: count })) + '</p>' +
+        '</div><div class="btn-row">' +
+        '<a class="btn sky" href="' + ET.esc(url) + '">' + ET.icon('book') + h('sharelib.launch.open') + '</a>' +
+        '<a class="btn green" href="mailto:?subject=' + encodeURIComponent(subject) + '&body=' +
+          encodeURIComponent(body) + '">' + ET.icon('share') + h('sharelib.email') + '</a>' +
+        '</div></article>';
+    }).join('');
+  }
 
   ET.$('#share-back-ico').innerHTML = ET.icon('back');
   if (!web) ET.$('#web-note').hidden = false;
+  render();
+  ET.i18n.apply();
+  ET.i18n.onChange(render);
 })(window.ET);

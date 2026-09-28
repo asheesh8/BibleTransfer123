@@ -23,6 +23,9 @@
     { "source": "/western-punjabi", "destination": "/western-punjabi/index.html" },
     { "source": "/shahmukhi", "destination": "/western-punjabi/index.html" },
     { "source": "/nepali", "destination": "/nepali/index.html" },
+    { "source": "/zulu", "destination": "/zulu/index.html" },
+    { "source": "/maasai", "destination": "/maasai/index.html" },
+    { "source": "/masai", "destination": "/maasai/index.html" },
     { "source": "/share-libraries", "destination": "/share-libraries/index.html" }
   ],
   "headers": [

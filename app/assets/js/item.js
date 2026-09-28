@@ -20,8 +20,8 @@
     ET.header();
     ET.tabbar();                 // a dead end still needs a way out
     ET.$('#item').innerHTML =
-      '<div class="card center"><h2>Not in this library</h2>' +
-      '<p class="muted">That item is not here.</p>' +
+      '<div class="card center"><h2>' + h('item.missing') + '</h2>' +
+      '<p class="muted">' + h('item.missing.sub') + '</p>' +
       '<a class="btn" href="' + ET.esc(ET.scopeEntryUrl()) + '">' + h('home.browse') + '</a></div>';
     ET.i18n.apply();
     return;
@@ -32,6 +32,11 @@
   var lib = ET.library();
   var L = lib.languages[r.lang] || {};
   var isText = r.type === 'scripture' || r.type === 'historic';
+
+  function phoneScreen() {
+    return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+      (window.matchMedia && window.matchMedia('(max-width: 680px)').matches);
+  }
 
   // Remembered per resource, so the chapter someone stopped at is where they
   // pick up — a two-hour film is rarely watched in one sitting.
@@ -86,22 +91,39 @@
     return '';
   }
 
-  // PDFs read inside the page wherever the browser can draw one, which covers
-  // computers and iPhones. Android Chrome cannot render a PDF in a frame, so it
-  // also gets a plain Open button that hands the file to the phone's reader.
+  // A framed PDF is hard to scroll or zoom on a phone, and some mobile browsers
+  // show only its first page. Give the whole screen to the phone's PDF reader.
+  // On wider screens the inline preview remains useful as well.
   function reader() {
     if (!r.read) return '';
-    var android = /Android/i.test(navigator.userAgent);
-    return (android ? '' :
+    var phone = phoneScreen();
+    var companion = (r.links || []).filter(function (link) {
+      return /^Read .+\(PDF\)$/i.test(link.label || '');
+    });
+    var original = '<a class="btn ' + (phone && companion.length ? 'ghost' : 'sky') +
+      ' block" style="margin-top:.7rem" href="' + ET.esc(r.read.file) +
+      '" target="_blank" rel="noopener">' + ET.icon('book') +
+      h(phone && companion.length ? 'item.read.original' : 'item.read.full') + '</a>';
+    var alternatives = companion.map(function (link) {
+      var label = link.label === 'Read Wycliffe in modern spelling (PDF)'
+        ? h('item.read.modern') : ET.esc(link.label);
+      return '<a class="btn ' + (phone ? 'sky' : 'ghost') +
+        ' block" style="margin-top:.7rem" href="' +
+        ET.esc(ET.safeUrl(link.url)) + '" target="_blank" rel="noopener">' +
+        ET.icon('book') + label + '</a>';
+    }).join('');
+    return (phone ? '' :
         '<iframe class="pdf" src="' + ET.esc(r.read.file) + '#view=FitH" title="' +
         ET.esc(r.title) + '" loading="lazy"></iframe>') +
-      '<a class="btn sky block" style="margin-top:.7rem" href="' + ET.esc(r.read.file) +
-      '" target="_blank" rel="noopener">' + ET.icon('book') + h('item.read') + '</a>';
+      (phone ? alternatives + original : original + alternatives) +
+      (phone ? '<p class="muted pdf-note">' + h('item.read.phone') + '</p>' : '');
   }
 
   function hero() {
     // A film's player replaces its poster; everything else keeps its artwork.
     if (r.play && (r.play.kind === 'chapters' || r.play.kind === 'video')) return '';
+    // On a phone the Read action matters more than a decorative scan cover.
+    if (isText && phoneScreen()) return '';
     return ET.thumb(r, 'aspect-ratio:16/9;border-radius:var(--r-lg);border:2px solid var(--line)');
   }
 
@@ -147,7 +169,9 @@
       (canSave ? '<button class="btn green" id="save">' + ET.icon('save') + h('item.save') + '</button>' : '') +
       '<button class="btn sky" id="share">' + ET.icon('share') + h('item.share') + '</button></div>';
 
-    var links = (r.links || []).slice();
+    var links = (r.links || []).filter(function (link) {
+      return !/^Read .+\(PDF\)$/i.test(link.label || '');
+    });
     if (r.source && !links.some(function (l) { return l.url === r.source; })) {
       links.push({ label: 'dbs.org', url: r.source });
     }

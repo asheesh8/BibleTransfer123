@@ -39,10 +39,10 @@
     var u = navigator.userAgent;
     if (/iPhone/.test(u)) return 'iPhone';
     if (/iPad/.test(u)) return 'iPad';
-    if (/Android/.test(u)) return 'Android phone';
+    if (/Android/.test(u)) return t('dev.android');
     if (/Macintosh/.test(u)) return 'Mac';
-    if (/Windows/.test(u)) return 'Windows computer';
-    return 'Computer';
+    if (/Windows/.test(u)) return t('dev.windows');
+    return t('dev.computer');
   }
   function code6() {
     var a = new Uint32Array(1);

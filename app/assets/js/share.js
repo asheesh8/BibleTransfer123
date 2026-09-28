@@ -134,9 +134,13 @@
   var item = itemId ? ET.byId(itemId) : null;
   if (scope && item && item.lang !== scope.lang) item = null;
 
-  function route() {
+  function routeId() {
     var k = state.from + '>' + state.to;
-    return ROUTES[k] || ROUTES[ALIAS[k]] || null;
+    return ROUTES[k] ? k : (ALIAS[k] || '');
+  }
+
+  function route() {
+    return ROUTES[routeId()] || null;
   }
 
   function pick(which, title) {
@@ -169,11 +173,12 @@
 
     var R = route();
     if (state.from && state.to && R) {
+      var routeKey = 'route.' + routeId().replace('>', '-');
       out += '<div class="card">' +
         '<span class="chip lang">' + ET.esc(t('share.result')) + '</span>' +
-        '<h2 style="margin:.6rem 0 1.2rem" class="latin">' + ET.esc(R.name) + '</h2>' +
+        '<h2 style="margin:.6rem 0 1.2rem">' + tOrHTML(routeKey + '.name', R.name) + '</h2>' +
         '<ol class="steps">' + R.steps.map(function (s, i) {
-          var key = 'route.' + (state.from + '-' + state.to) + '.' + (i + 1);
+          var key = routeKey + '.' + (i + 1);
           return '<li><h3>' + tOrHTML(key + '.h', s[0]) + '</h3>' +
                  '<p>' + tOrHTML(key + '.p', s[1]) + '</p></li>';
         }).join('') + '</ol></div>';

@@ -95,13 +95,21 @@
     var inScope = lockedLang ? lib.resources.filter(function (r) { return r.lang === lockedLang; })
                              : lib.resources;
     var avail = present(inScope);
-    ET.$('#type-filters').innerHTML =
+    var typeFilters = ET.$('#type-filters');
+    var typeScroll = typeFilters.scrollLeft;
+    typeFilters.innerHTML =
       ['<button class="fchip" data-type="" aria-pressed="' + (!state.type) + '">' +
         ET.esc(t('lib.all')) + '</button>'].concat(
         avail.map(function (ty) {
           return '<button class="fchip" data-type="' + ty + '" aria-pressed="' +
             (state.type === ty) + '">' + ET.esc(t('type.' + ty)) + '</button>';
         })).join('');
+    typeFilters.scrollLeft = typeScroll;
+    if (!typeFilters.dataset.ready && state.type) {
+      var activeType = typeFilters.querySelector('[aria-pressed="true"]');
+      if (activeType) typeFilters.scrollLeft = activeType.offsetLeft - typeFilters.offsetLeft - 8;
+    }
+    typeFilters.dataset.ready = '1';
     ET.$$('#type-filters [data-type]').forEach(function (b) {
       b.addEventListener('click', function () {
         state.type = b.getAttribute('data-type'); render();
@@ -110,6 +118,9 @@
 
     var langFilters = ET.$('#lang-filters');
     if (!langFilters || lockedLang) return;
+    var currentLang = ET.$('#lang-filter-current');
+    var currentLabel = state.lang && lib.languages[state.lang];
+    currentLang.textContent = currentLabel ? (currentLabel.native || currentLabel.name) : t('lib.all');
 
     // Keep the catalogue filters in the same worldwide-speaker order as the
     // interface language picker. Append future catalogue-only languages so a
@@ -140,6 +151,7 @@
       b.addEventListener('click', function () {
         state.lang = b.getAttribute('data-lang');
         state.bulk = false; selected = {};
+        ET.$('#lang-disclosure').open = false;
         render();
       });
     });
@@ -151,6 +163,7 @@
 
   function bulkControls(visible) {
     var controls = ET.$('#bulk-controls'), dock = ET.$('#bulk-dock');
+    var actions = ET.$('#library-actions');
     var downloadable = visible.filter(canSave);
     if (!state.bulk) {
       document.body.classList.remove('bulk-mode');
@@ -159,6 +172,7 @@
         ? '<button class="btn green block bulk-start" id="bulk-start">' + ET.icon('save') +
           ET.i18n.h('lib.bulk.start') + '</button>' : '';
       var start = ET.$('#bulk-start');
+      if (actions) actions.classList.toggle('has-bulk', !!start);
       if (start) start.addEventListener('click', function () {
         state.bulk = true; selected = {}; render();
       });
@@ -166,6 +180,7 @@
     }
 
     var n = selectedResources().length;
+    if (actions) actions.classList.remove('has-bulk');
     controls.innerHTML = '<div class="bulk-tools"><strong>' +
       ET.i18n.h('lib.bulk.selected', { n: n }) + '</strong><div class="btn-row">' +
       '<button class="btn ghost" id="bulk-all">' + ET.i18n.h('lib.bulk.selectall') + '</button>' +

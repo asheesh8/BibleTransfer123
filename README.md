@@ -214,6 +214,7 @@ The public language addresses are:
 - `/urdu`
 - `/swahili`
 - `/zulu`
+- `/maasai` (also `/masai`)
 - `/western-punjabi` (also `/shahmukhi`)
 - `/cantonese`
 - `/pashto` (also `/northern-pashto`)

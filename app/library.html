@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-<title>Browse the library</title>
+<title data-i18n="lib.title">Browse the library</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="assets/icon/apple-touch-icon.png">
 <link rel="icon" href="assets/icon/favicon-32.png" sizes="32x32">
@@ -19,7 +19,7 @@
     var l = localStorage.getItem("et.lang");
     if (l) {
       document.documentElement.setAttribute("lang", l);
-      document.documentElement.setAttribute("dir", l === "en" ? "ltr" : "rtl");
+      document.documentElement.setAttribute("dir", /^(ur|snd|ps|pnb)$/.test(l) ? "rtl" : "ltr");
     }
     var t = localStorage.getItem("et.theme");
     if (t) document.documentElement.setAttribute("data-theme", t);
@@ -29,25 +29,28 @@
 <body>
 <main class="wrap" id="main">
 
-  <div class="search" style="margin-bottom:.9rem">
+  <div class="search library-search">
     <span id="search-ico"></span>
     <input type="search" id="q" data-i18n-placeholder="lib.search"
            placeholder="Search by name" autocomplete="off" enterkeyhint="search">
   </div>
 
-  <p class="flabel" data-i18n="lib.kind">Kind</p>
-  <div class="filters" id="type-filters" role="group" aria-label="Kind"></div>
+  <p class="flabel library-kind" data-i18n="lib.kind">Kind</p>
+  <div class="filters" id="type-filters" role="group" data-i18n-aria="lib.kind" aria-label="Kind"></div>
 
-  <p class="flabel" data-i18n="lib.lang">Language</p>
-  <div class="filters" id="lang-filters" role="group" aria-label="Language"></div>
+  <details class="library-language" id="lang-disclosure">
+    <summary><span data-i18n="lib.lang">Language</span><strong id="lang-filter-current" dir="auto"></strong></summary>
+    <div class="filters" id="lang-filters" role="group" data-i18n-aria="lib.lang" aria-label="Language"></div>
+  </details>
 
-  <a class="btn sky block" href="share-libraries/" style="margin-top:1rem">
-    <span id="share-language-ico"></span><span data-i18n="sharelib.manage">Share a language library</span>
-  </a>
+  <div class="library-actions" id="library-actions">
+    <a class="btn sky block" href="share-libraries/">
+      <span id="share-language-ico"></span><span data-i18n="sharelib.manage">Share a language library</span>
+    </a>
+    <div id="bulk-controls"></div>
+  </div>
 
-  <div id="bulk-controls"></div>
-
-  <p class="muted" id="count" style="margin:1rem 0 .6rem"></p>
+  <p class="muted library-count" id="count"></p>
 
   <div class="row-list" id="results"></div>
   <div id="empty" hidden class="card center" style="padding:2rem 1.2rem">

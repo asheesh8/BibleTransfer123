@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-<title>The Library</title>
+<title data-i18n="app.name">The Library</title>
 <meta name="description" content="Films, Scripture and audio you can keep — no internet needed.">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="assets/icon/apple-touch-icon.png">
@@ -21,7 +21,7 @@
     var l = localStorage.getItem('et.lang');
     if (l) {
       document.documentElement.setAttribute('lang', l);
-      document.documentElement.setAttribute('dir', l === 'en' ? 'ltr' : 'rtl');
+      document.documentElement.setAttribute('dir', /^(ur|snd|ps|pnb)$/.test(l) ? 'rtl' : 'ltr');
     }
     var t = localStorage.getItem('et.theme');
     if (t) document.documentElement.setAttribute('data-theme', t);

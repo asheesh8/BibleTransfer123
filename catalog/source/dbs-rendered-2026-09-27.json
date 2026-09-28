@@ -1,0 +1,304 @@
+{
+ "mas": {
+  "Bibles": {
+   "heading": "Bibles 2",
+   "links": [
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/MASBST_DAVR_FB_N",
+     "row": "New Testament in Maasai / Arusha MASBST Osotua Ng'ejuk (Leipzig) Audio · Full Bible (Davar Partners) 1970 · Kenya",
+     "title": "New Testament in Maasai / Arusha MASBST Osotua Ng'ejuk (Leipzig) Audio · Full Bible (Davar Partners) 1970 · Kenya"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/MASBSK_DAVR_FB_N",
+     "row": "Revised Maasai Bible MASBSK MAASAI REVISED BIBLE Audio · Full Bible (Davar Partners) Kenya",
+     "title": "Revised Maasai Bible MASBSK MAASAI REVISED BIBLE Audio · Full Bible (Davar Partners) Kenya"
+    }
+   ]
+  },
+  "Films": {
+   "heading": "Films 6",
+   "links": [
+    {
+     "cells": [
+      "JESUS ɔl Maa",
+      "Jesus Film Project",
+      "2:07:53"
+     ],
+     "href": "https://dbs.org/video/jesus/mas_maasai_jesus",
+     "row": "JESUS ɔl MaaJesus Film Project2:07:53",
+     "title": "JESUS"
+    },
+    {
+     "cells": [
+      "Magdalena ɔl Maa",
+      "Jesus Film Project",
+      "58:24"
+     ],
+     "href": "https://dbs.org/video/magdalena/mas_maasai_magdalena",
+     "row": "Magdalena ɔl MaaJesus Film Project58:24",
+     "title": "Magdalena"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Luke ɔl Maa",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-luke/mas_maasai_luke",
+     "row": "LUMO: The Gospel of Luke ɔl MaaLUMO Project",
+     "title": "LUMO: The Gospel of Luke"
+    },
+    {
+     "cells": [
+      "iBible: Salvation Story ɔl Maa",
+      "iBible: Salvation Story",
+      "9:17"
+     ],
+     "href": "https://dbs.org/video/ibible/mas-maasai-ibible_salvation",
+     "row": "iBible: Salvation Story ɔl MaaiBible: Salvation Story9:17",
+     "title": "iBible: Salvation Story"
+    },
+    {
+     "cells": [
+      "The Visual Bible: Matthew ɔl Maa",
+      "Visual Bible Int.",
+      "4:12:04"
+     ],
+     "href": "https://dbs.org/video/matthew/mas-matthew-vb-masai",
+     "row": "The Visual Bible: Matthew ɔl MaaVisual Bible Int.4:12:04",
+     "title": "The Visual Bible: Matthew"
+    },
+    {
+     "cells": [
+      "The Visual Bible: Acts ɔl Maa",
+      "Visual Bible Int.",
+      "3:06:38"
+     ],
+     "href": "https://dbs.org/video/acts_vb/mas-acts-vb-masai",
+     "row": "The Visual Bible: Acts ɔl MaaVisual Bible Int.3:06:38",
+     "title": "The Visual Bible: Acts"
+    }
+   ]
+  },
+  "Audio Collections": {
+   "heading": "Audio Collections 2",
+   "links": [
+    {
+     "cells": [
+      "Masai",
+      "Global Recordings Network",
+      "353 files · 1.9 GB"
+     ],
+     "href": "https://dbs.org/audio/collections/grn/mas_GlobalRecordings_maasai",
+     "row": "MasaiGlobal Recordings Network353 files · 1.9 GB",
+     "title": "Masai"
+    },
+    {
+     "cells": [
+      "Masai",
+      "Story Runners",
+      "44 files · 92.3 MB"
+     ],
+     "href": "https://dbs.org/audio/collections/srun/mas_storyset_maasai",
+     "row": "MasaiStory Runners44 files · 92.3 MB",
+     "title": "Masai"
+    }
+   ]
+  },
+  "Historic Bible (Scans)": {
+   "heading": "Historic Bible (Scans) 1",
+   "links": [
+    {
+     "cells": [
+      "Maasai (1991) Genesis Portion Maasai (1991) Kitabu Genisisi",
+      "1991"
+     ],
+     "href": "https://dbs.org/bibles/historic/Maasai-1991-Genesis-Portion",
+     "row": "Maasai (1991) Genesis Portion Maasai (1991) Kitabu Genisisi1991",
+     "title": "Maasai (1991) Genesis Portion"
+    }
+   ]
+  },
+  "Links to Other Sites": {
+   "heading": "Links to Other Sites 31",
+   "links": [
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=MASTBN",
+     "row": "New Testament in Maasai",
+     "title": "New Testament in Maasai"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=MASBST",
+     "row": "New Testament in Maasai / Arusha",
+     "title": "New Testament in Maasai / Arusha"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=MASMAS",
+     "row": "Biblia Sinyati Version",
+     "title": "Biblia Sinyati Version"
+    },
+    {
+     "cells": [],
+     "href": "https://arc.gt/pajyx?apiSessionId=5f875d0e249129.83402252",
+     "row": "Magdalena - Director's Cut",
+     "title": "Magdalena - Director's Cut"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/5390",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/21171",
+     "row": "Good News",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82734",
+     "row": "Great Questions & Life",
+     "title": "Great Questions & Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82797",
+     "row": "Holy Spirit",
+     "title": "Holy Spirit"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/85254",
+     "row": "Life of Christ",
+     "title": "Life of Christ"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/74989",
+     "row": "Look, Listen & Live",
+     "title": "Look, Listen & Live"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/72000",
+     "row": "Look, Listen & Live 2 Mighty Men of GOD",
+     "title": "Look, Listen & Live 2 Mighty Men of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/72010",
+     "row": "Look, Listen & Live 3 Victory through GOD",
+     "title": "Look, Listen & Live 3 Victory through GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/72020",
+     "row": "Look, Listen & Live 4 Servants of GOD",
+     "title": "Look, Listen & Live 4 Servants of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/72030",
+     "row": "Look, Listen & Live 5 On Trial for GOD",
+     "title": "Look, Listen & Live 5 On Trial for GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/72040",
+     "row": "Look, Listen & Live 6 JESUS - Teacher & Healer",
+     "title": "Look, Listen & Live 6 JESUS - Teacher & Healer"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/72050",
+     "row": "Look, Listen & Live 7 JESUS - Lord & Saviour",
+     "title": "Look, Listen & Live 7 JESUS - Lord & Saviour"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/72060",
+     "row": "Look, Listen & Live 8 Acts of the HOLY SPIRIT",
+     "title": "Look, Listen & Live 8 Acts of the HOLY SPIRIT"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/81771",
+     "row": "New Life",
+     "title": "New Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82747",
+     "row": "Songs 1",
+     "title": "Songs 1"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82748",
+     "row": "Songs 2",
+     "title": "Songs 2"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/81770",
+     "row": "Songs 3",
+     "title": "Songs 3"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/13180",
+     "row": "Words of Life 1",
+     "title": "Words of Life 1"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/13181",
+     "row": "Words of Life 2",
+     "title": "Words of Life 2"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/13190",
+     "row": "Words of Life 3",
+     "title": "Words of Life 3"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/13191",
+     "row": "Words of Life 4",
+     "title": "Words of Life 4"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82744",
+     "row": "Words of Life 5",
+     "title": "Words of Life 5"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82745",
+     "row": "Words of Life 6",
+     "title": "Words of Life 6"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82746",
+     "row": "Words of Life 7",
+     "title": "Words of Life 7"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/7420",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    }
+   ]
+  }
+ }
+}
