@@ -37,10 +37,20 @@
           ET.esc(t('sharelib.launch.resources', { n: count })) + '</p>' +
         '</div><div class="btn-row">' +
         '<a class="btn sky" href="' + ET.esc(url) + '">' + ET.icon('book') + h('sharelib.launch.open') + '</a>' +
-        '<a class="btn green" href="mailto:?subject=' + encodeURIComponent(subject) + '&body=' +
+        '<a class="btn green" data-share-email="' + x[0] + '" href="mailto:?subject=' + encodeURIComponent(subject) + '&body=' +
           encodeURIComponent(body) + '">' + ET.icon('share') + h('sharelib.email') + '</a>' +
         '</div></article>';
     }).join('');
+    ET.$$('[data-share-email]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        var slug = a.getAttribute('data-share-email');
+        var language = routes.filter(function (x) { return x[0] === slug; })[0];
+        if (!language) return;
+        var intent = ET.analytics.shareIntent(urlFor(slug), 'email', { language: language[1] });
+        a.href = 'mailto:?subject=' + encodeURIComponent(t('sharelib.subject', { lang: language[2] })) +
+          '&body=' + encodeURIComponent(t('sharelib.body', { lang: language[2], url: intent.url }));
+      });
+    });
   }
 
   ET.$('#share-back-ico').innerHTML = ET.icon('back');

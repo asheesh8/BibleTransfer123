@@ -143,6 +143,19 @@
     return ROUTES[routeId()] || null;
   }
 
+  function trackGuide() {
+    var id = routeId();
+    if (!id) return;
+    // Mixed-method guides do not tell us which method the reader will use.
+    var channel = id.indexOf('card') !== -1 ? 'sd_card'
+      : id === 'computer>iphone' || id === 'computer>android' ? 'usb' : undefined;
+    ET.analytics.track('share_intent', {
+      channel: channel, status: 'guide_opened',
+      resource: item ? item.id : undefined,
+      language: item ? item.lang : scope ? scope.lang : undefined
+    });
+  }
+
   function pick(which, title) {
     return '<div class="card"><h2 style="margin-bottom:.8rem">' + ET.esc(title) + '</h2>' +
       '<div class="stack">' + DEVICES.map(function (d) {
@@ -200,6 +213,7 @@
         var which = b.getAttribute('data-pick');
         state[which] = b.getAttribute('data-id');
         if (which === 'from') state.to = '';
+        if (which === 'to') trackGuide();
         render();
         // Scroll the next question into view rather than leaving it below the fold.
         var next = ET.$('[data-pick="to"]') || ET.$('.steps');

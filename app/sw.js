@@ -8,13 +8,13 @@
 
    VERSION must change whenever the shell changes, or an installed copy keeps
    serving the old one. `easytransfer build` rewrites it. */
-var VERSION = 'shell-v20';
+var VERSION = 'shell-v21';
 
 var SHELL = [
   'index.html', 'library.html', 'item.html', 'share.html', 'help.html', 'nearby.html',
-  'manifest.webmanifest',
-  'assets/css/app.css',
-  'assets/js/core.js', 'assets/js/i18n.js', 'assets/js/art.js',
+  'manifest.webmanifest', 'privacy.html',
+  'assets/css/app.css', 'assets/css/consent.css',
+  'assets/js/core.js', 'assets/js/i18n.js', 'assets/js/art.js', 'assets/js/analytics.js',
   'assets/js/home.js', 'assets/js/library.js', 'assets/js/item.js',
   'assets/js/share.js', 'assets/js/help.js', 'assets/js/save.js', 'assets/js/nearby.js',
   'assets/js/shared-library.js', 'assets/js/share-libraries.js', 'assets/vendor/peerjs.min.js',

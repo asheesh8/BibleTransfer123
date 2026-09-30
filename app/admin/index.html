@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#4E1F64">
+  <title>Analytics · EasyTransfer Admin</title>
+  <link rel="icon" href="../assets/icon/favicon-32.png" sizes="32x32">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+  <script src="../data/catalog.js" defer></script>
+  <script src="../assets/js/admin.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="admin-header">
+    <div class="header-inner">
+      <a class="brand" href="../" aria-label="EasyTransfer library">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 5h6v14H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm8 0h6a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-6V5Z" stroke="currentColor" stroke-width="1.8"/><path d="M7 9h1m8 0h2M7 12h1m8 0h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <span>EasyTransfer <span class="brand-sub">Admin</span></span>
+      </a>
+      <div class="header-actions">
+        <a class="library-link" href="../">Open library <span aria-hidden="true">↗</span></a>
+        <button class="button button-quiet" id="logout" type="button" hidden>Sign out</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="admin-main">
+    <div class="notice notice-error" id="message" role="alert" hidden></div>
+
+    <section class="login-card" id="login-panel" aria-labelledby="login-title" hidden>
+      <div class="lock-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="10" width="14" height="11" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+      <p class="eyebrow">Private workspace</p>
+      <h1 id="login-title">Your library, in view.</h1>
+      <p class="login-intro">Sign in to see visits, sharing activity and the paths people take through your library.</p>
+      <form id="login-form">
+        <label for="admin-password">Admin password</label>
+        <input id="admin-password" name="password" type="password" autocomplete="current-password" required>
+        <button class="button button-primary" id="login-button" type="submit">Sign in <span aria-hidden="true">→</span></button>
+      </form>
+      <p class="login-footnote">Access is protected by a secure session cookie. Your password is never stored in this browser.</p>
+    </section>
+
+    <div class="initial-loading" id="initial-loading" role="status"><span class="spinner" aria-hidden="true"></span> Checking your session…</div>
+
+    <div id="dashboard" hidden>
+      <div class="page-heading">
+        <div>
+          <p class="eyebrow">Library analytics</p>
+          <h1>Library activity</h1>
+          <p class="page-intro">Visits, resources, and sharing in one place.</p>
+        </div>
+        <div class="toolbar">
+          <label class="sr-only" for="period">Reporting period</label>
+          <select id="period"><option value="7">Last 7 days</option><option value="30" selected>Last 30 days</option><option value="90">Last 90 days</option></select>
+          <button class="button button-quiet" id="refresh" type="button"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M20 7v5h-5M4 17v-5h5m10.2-4.9A8 8 0 0 0 5.1 6M4.8 16.9A8 8 0 0 0 18.9 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Refresh</button>
+        </div>
+      </div>
+
+      <div class="report-meta"><span class="consent-tag"><span aria-hidden="true"></span> Consented analytics</span><span id="report-updated" aria-live="polite"></span></div>
+      <div class="notice notice-warning" id="report-warning" role="status" hidden></div>
+
+      <section class="metrics" id="metrics" aria-label="Activity summary"></section>
+
+      <div class="empty-overview" id="empty-overview" hidden>
+        <div class="empty-symbol" aria-hidden="true">↗</div>
+        <div><h2>No recorded activity yet.</h2><p>No analytics have been recorded in this period. Activity will appear here after visitors accept analytics and use the online library.</p></div>
+      </div>
+
+      <div class="dashboard-grid">
+        <section class="panel activity-panel" aria-labelledby="activity-title">
+          <div class="panel-heading"><div><p class="eyebrow">Over time</p><h2 id="activity-title">Page views &amp; share attempts</h2></div><div class="chart-legend"><span><i class="legend-visits"></i> Page views</span><span><i class="legend-shares"></i> Share attempts</span></div></div>
+          <div id="daily-chart" class="daily-chart"></div>
+          <p class="panel-note">Daily totals use UTC calendar days. Share attempts include opening a share sheet or copying a link; they do not establish that a recipient received it.</p>
+        </section>
+        <section class="panel" aria-labelledby="channels-title">
+          <div class="panel-heading"><div><p class="eyebrow">How it travels</p><h2 id="channels-title">Sharing channels</h2></div><span class="panel-icon" aria-hidden="true">↗</span></div>
+          <div class="rank-list" id="channels"></div>
+          <p class="panel-note">The browser’s native share sheet does not reveal the chosen app, destination or recipient.</p>
+        </section>
+        <section class="panel" aria-labelledby="countries-title">
+          <div class="panel-heading"><div><p class="eyebrow">Broad location</p><h2 id="countries-title">Countries</h2></div><span class="panel-icon" aria-hidden="true">◎</span></div>
+          <div class="rank-list" id="countries"></div>
+          <p class="panel-note">Country is approximate and available only when the host provides it. No precise location is collected.</p>
+        </section>
+        <section class="panel" aria-labelledby="referrers-title">
+          <div class="panel-heading"><div><p class="eyebrow">Finding the library</p><h2 id="referrers-title">Referring sites</h2></div><span class="panel-icon" aria-hidden="true">↳</span></div>
+          <div class="rank-list" id="referrers"></div>
+          <p class="panel-note">From the displayed recent events. Direct visits and browsers that hide referrals appear as “Direct / unknown”.</p>
+        </section>
+        <section class="panel" aria-labelledby="languages-title">
+          <div class="panel-heading"><div><p class="eyebrow">Library preferences</p><h2 id="languages-title">Languages</h2></div><span class="panel-icon text-icon" aria-hidden="true">Aa</span></div>
+          <div class="rank-list" id="languages"></div>
+          <p class="panel-note">Page views by library language.</p>
+        </section>
+        <section class="panel" aria-labelledby="resources-title">
+          <div class="panel-heading"><div><p class="eyebrow">What gets explored</p><h2 id="resources-title">Resources</h2></div><span class="panel-icon" aria-hidden="true">▤</span></div>
+          <div class="rank-list" id="resources"></div>
+          <p class="panel-note">Recorded resource openings.</p>
+        </section>
+      </div>
+
+      <section class="panel events-panel" aria-labelledby="events-title">
+        <div class="panel-heading"><div><p class="eyebrow">The details</p><h2 id="events-title">Recent activity</h2><p class="events-subtitle" id="event-count"></p></div><button class="button button-quiet" id="export" type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M12 3v12m-4-4 4 4 4-4M4 16v4h16v-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Export CSV</button></div>
+        <div class="table-wrap" tabindex="0" role="region" aria-label="Recent analytics events; scroll horizontally on smaller screens">
+          <table><thead><tr><th scope="col">Activity</th><th scope="col">When</th><th scope="col">Page / resource</th><th scope="col">Channel / status</th><th scope="col">Language</th><th scope="col">Country</th><th scope="col">Referrer</th></tr></thead><tbody id="events"></tbody></table>
+        </div>
+        <p class="panel-note event-note" id="event-note"></p>
+      </section>
+
+      <aside class="coverage-note" aria-label="Analytics coverage">
+        <div class="coverage-mark" aria-hidden="true">i</div>
+        <div><h2>A clear view of what we can measure.</h2><p>These counts cover online activity from people who accepted analytics. Visitors who decline are not counted. Share attempts, confirmed copy actions and visits from shared links are different signals; none identifies a recipient. The native share sheet does not confirm external delivery. Offline card copies, file transfers outside the library and private app conversations cannot be centrally tracked.</p><p id="retention-note"></p></div>
+      </aside>
+    </div>
+  </main>
+  <footer class="admin-footer"><span>EasyTransfer · Library analytics</span><span>Privacy-aware by design</span></footer>
+  <noscript><p class="noscript-note">Enable JavaScript to sign in and view the admin dashboard.</p></noscript>
+</body>
+</html>

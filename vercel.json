@@ -5,7 +5,12 @@
   "buildCommand": null,
   "installCommand": null,
   "trailingSlash": false,
+  "functions": {
+    "api/*.py": { "includeFiles": "packer/analytics.py" }
+  },
   "rewrites": [
+    { "source": "/admin", "destination": "/admin/index.html" },
+    { "source": "/privacy", "destination": "/privacy.html" },
     { "source": "/english", "destination": "/english/index.html" },
     { "source": "/mandarin", "destination": "/mandarin/index.html" },
     { "source": "/hindi", "destination": "/hindi/index.html" },
@@ -29,6 +34,21 @@
     { "source": "/share-libraries", "destination": "/share-libraries/index.html" }
   ],
   "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
+      ]
+    },
+    {
+      "source": "/admin(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+      ]
+    },
     {
       "source": "/sw.js",
       "headers": [

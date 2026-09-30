@@ -293,9 +293,19 @@
   // ---------------------------------------------------------------------- UI
   var S = {
     step: 0, role: null, code: '', kind: null, link: null, dc: null, pc: null,
-    peer: '', carry: null, sending: null, incoming: null, got: [], bytes: 0, total: 0
+    peer: '', carry: null, sending: null, incoming: null, got: [], bytes: 0, total: 0,
+    analyticsResource: null, transferActive: false, offerPending: false, sentBytes: 0
   };
   var root;
+
+  function trackTransfer(type, status, bytes) {
+    var resource = S.analyticsResource;
+    ET.analytics.track(type, {
+      channel: 'nearby', status: status, bytes: bytes,
+      resource: resource ? resource.id : undefined,
+      language: resource ? resource.lang : scope ? scope.lang : undefined
+    });
+  }
 
   function paint(step, html) {
     S.step = step;
@@ -433,7 +443,7 @@
         Promise.all(c.many.map(function (m) {
           return m.size ? Promise.resolve(m.size) : headSize(m.url);
         })).then(function (sizes) {
-          offer(c.many.map(function (m, i) { return urlSource(m.url, m.name, sizes[i]); }));
+          offer(c.many.map(function (m, i) { return urlSource(m.url, m.name, sizes[i]); }), item);
         });
       });
     });
@@ -447,9 +457,12 @@
     on('x', role);
   }
 
-  function offer(sources) {
+  function offer(sources, resource) {
     S.sending = sources;
+    S.analyticsResource = resource || null;
+    S.offerPending = true;
     S.total = sources.reduce(function (a, s) { return a + (s.size || 0); }, 0);
+    trackTransfer('share_intent', 'offered', S.total);
     S.dc.send(JSON.stringify({ t: 'batch', files: sources.map(function (s) {
       return { name: s.name, size: s.size, type: s.type };
     }), total: S.total }));
@@ -459,6 +472,10 @@
 
   function sendAll() {
     var chunk = chunkSize(S.pc), i = 0, sent = 0;
+    S.offerPending = false;
+    S.transferActive = true;
+    S.sentBytes = 0;
+    trackTransfer('transfer_start', 'started', S.total);
     moving(h('nearby.sending'));
     (function nextFile() {
       if (i >= S.sending.length) { S.dc.send(JSON.stringify({ t: 'end' })); return; }
@@ -469,7 +486,10 @@
         (function pump() {
           reader.read().then(function (buf) {
             if (!buf) { S.dc.send(JSON.stringify({ t: 'eof', i: i })); i += 1; return nextFile(); }
-            push(S.dc, buf).then(function () { sent += buf.byteLength; meter(sent, S.total); pump(); });
+            push(S.dc, buf).then(function () {
+              sent += buf.byteLength; S.sentBytes = sent;
+              meter(sent, S.total); pump();
+            }, fail);
           }, fail);
         })();
       }, fail);
@@ -479,6 +499,7 @@
   // ---- 3b. receiver decides
   function incoming(batch) {
     S.incoming = batch;
+    S.analyticsResource = null;
     S.got = [];
     var canDir = typeof window.showDirectoryPicker === 'function';
     paint(2,
@@ -505,6 +526,8 @@
   function accept() {
     S.bytes = 0;
     S.total = S.incoming.total || 0;
+    S.transferActive = true;
+    trackTransfer('transfer_start', 'started', S.total);
     S.dc.send(JSON.stringify({ t: 'accept' }));
     moving(h('nearby.receiving'));
   }
@@ -545,6 +568,8 @@
     } else if (m.t === 'accept') {
       sendAll();
     } else if (m.t === 'decline') {
+      if (S.offerPending) trackTransfer('share_cancel', 'declined');
+      S.offerPending = false;
       paint(2, '<div class="note"><strong>' + ET.esc(t('nearby.declined', { device: S.peer })) + '</strong></div>' +
         btn('again', '', '', h('nearby.again')));
       on('again', pick);
@@ -606,6 +631,8 @@
 
   // ---- 5. done
   function sent() {
+    if (S.transferActive) trackTransfer('transfer_complete', 'sent', S.sentBytes);
+    S.transferActive = false;
     paint(4,
       '<div class="done-mark">' + ET.icon('check') + '</div>' +
       '<h3 class="center">' + h('nearby.sent') + ' → <span class="latin">' + ET.esc(S.peer) + '</span></h3>' +
@@ -617,6 +644,8 @@
   }
 
   function received() {
+    if (S.transferActive) trackTransfer('transfer_complete', 'received', S.bytes);
+    S.transferActive = false;
     var rows = S.got.map(function (g, i) {
       // Open in a tab only for things a browser shows rather than runs.
       // Everything else is save-only — a blob URL opened from here would carry
@@ -625,7 +654,7 @@
         ? (ET.openable(g.name)
             ? '<a class="btn green" target="_blank" rel="noopener" href="' + URL.createObjectURL(g.blob) + '">' + ET.icon('play') + h('save.open') + '</a>'
             : '') +
-          '<a class="btn ghost" download="' + ET.esc(g.name) + '" href="' + URL.createObjectURL(g.blob) + '">' + ET.icon('save') + h('nearby.save') + '</a>'
+          '<a class="btn ghost" data-download="' + i + '" download="' + ET.esc(g.name) + '" href="' + URL.createObjectURL(g.blob) + '">' + ET.icon('save') + h('nearby.save') + '</a>'
         : (ET.openable(g.name)
             ? '<button class="btn green" data-open="' + i + '">' + ET.icon('play') + h('save.open') + '</button>'
             : '');
@@ -640,6 +669,14 @@
       '<div class="stack" style="margin-top:1rem">' +
         btn('pass', 'sky', 'share', h('nearby.passon')) +
         btn('x', 'ghost', '', h('nearby.restart')) + '</div>');
+    ET.$$('[data-download]', root).forEach(function (a) {
+      a.addEventListener('click', function () {
+        var file = S.got[+a.getAttribute('data-download')];
+        if (!file || !file.blob) return;
+        trackTransfer('download_start', 'started', file.blob.size);
+        trackTransfer('download_complete', 'browser_handoff', file.blob.size);
+      });
+    });
     ET.$$('[data-open]', root).forEach(function (b) {
       b.addEventListener('click', function () {
         S.got[+b.getAttribute('data-open')].handle.getFile().then(function (f) {
@@ -659,6 +696,9 @@
 
   function fail(err) {
     var msg = (err && err.message) || '';
+    trackTransfer('transfer_error', 'failed');
+    S.transferActive = false;
+    S.offerPending = false;
     reset();
     paint(S.step || 1,
       '<div class="note"><strong>' + h('nearby.fail') + '</strong>' +
@@ -669,6 +709,10 @@
   }
 
   function reset() {
+    if (S.transferActive) trackTransfer('transfer_error', 'cancelled');
+    else if (S.offerPending) trackTransfer('share_cancel', 'cancelled');
+    S.transferActive = S.offerPending = false;
+    S.analyticsResource = null;
     clearTimeout(S.joinTimer);
     if (S.link) { try { S.link.close(); } catch (e) {} }
     else if (S.sig) { try { S.sig.close(); } catch (e) {} }

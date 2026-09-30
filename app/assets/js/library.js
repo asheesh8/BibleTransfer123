@@ -82,6 +82,14 @@
 
   function syncUrl() {
     var p = [];
+    // Keep the incoming link reference while updating filters. Consent may be
+    // chosen later; deleting it here would make a shared arrival look direct.
+    // Preserving a URL never enables analytics or stores a visitor identity.
+    var shareRef = ET.qs('et_share'), shareChannel = ET.qs('et_channel');
+    if (/^[A-Za-z0-9_-]{8,80}$/.test(shareRef)) {
+      p.push('et_share=' + encodeURIComponent(shareRef));
+      if (/^[a-z_]{1,32}$/.test(shareChannel)) p.push('et_channel=' + encodeURIComponent(shareChannel));
+    }
     if (state.q) p.push('q=' + encodeURIComponent(state.q));
     if (state.type) p.push('type=' + state.type);
     if (!lockedLang) p.push('lang=' + (state.lang || 'all'));

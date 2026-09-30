@@ -19,26 +19,58 @@
 
   var email = ET.$('#email-library');
   email.innerHTML = ET.icon('share') + h('sharelib.email');
-  email.href = 'mailto:?subject=' + encodeURIComponent(t('sharelib.subject', { lang: L.name || language })) +
-    '&body=' + encodeURIComponent(t('sharelib.body', { lang: L.name || language, url: publicUrl }));
+  function emailUrl(url) {
+    return 'mailto:?subject=' + encodeURIComponent(t('sharelib.subject', { lang: L.name || language })) +
+      '&body=' + encodeURIComponent(t('sharelib.body', { lang: L.name || language, url: url }));
+  }
+  email.href = emailUrl(publicUrl);
+  email.addEventListener('click', function () {
+    var intent = ET.analytics.shareIntent(publicUrl, 'email', { language: scope.lang });
+    email.href = emailUrl(intent.url);
+  });
+
+  function composerUrl(channel, url) {
+    return channel === 'whatsapp'
+      ? 'https://wa.me/?text=' + encodeURIComponent(document.title + '\n' + url)
+      : 'https://t.me/share/url?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(document.title);
+  }
+  var actions = ET.$('.shared-actions');
+  if (/^https?:$/.test(location.protocol) && actions) {
+    [['whatsapp', 'WhatsApp'], ['telegram', 'Telegram']].forEach(function (method) {
+      var a = document.createElement('a');
+      a.className = 'btn ghost'; a.textContent = method[1];
+      a.setAttribute('data-shared-channel', method[0]);
+      a.target = '_blank'; a.rel = 'noopener noreferrer';
+      a.href = composerUrl(method[0], publicUrl);
+      a.addEventListener('click', function () {
+        var intent = ET.analytics.shareIntent(publicUrl, method[0], { language: scope.lang, status: 'opened' });
+        a.href = composerUrl(method[0], intent.url);
+      });
+      actions.appendChild(a);
+    });
+  }
 
   var copy = ET.$('#copy-library');
   copy.innerHTML = ET.icon('link') + h('sharelib.copy');
   copy.addEventListener('click', function () {
+    var intent = ET.analytics.shareIntent(publicUrl, 'copy_link', { language: scope.lang });
     function done() {
+      ET.analytics.track('share_complete', {
+        language: scope.lang, channel: 'copy_link', shareId: intent.shareId, status: 'copied'
+      });
       copy.innerHTML = ET.icon('check') + h('sharelib.copied');
       ET.$('#copy-status').textContent = t('sharelib.copied');
     }
     function fallback() {
       var ta = document.createElement('textarea');
-      ta.value = publicUrl;
+      ta.value = intent.url;
       ta.style.position = 'fixed'; ta.style.opacity = '0';
       document.body.appendChild(ta); ta.select();
-      try { document.execCommand('copy'); done(); } catch (e) {}
+      try { if (document.execCommand('copy')) done(); } catch (e) {}
       ta.remove();
     }
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(publicUrl).then(done, fallback);
+      navigator.clipboard.writeText(intent.url).then(done, fallback);
     } else fallback();
   });
 })(window.ET);

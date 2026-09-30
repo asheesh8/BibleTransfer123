@@ -15,6 +15,11 @@ no internet, and anyone who joins can watch, read and save.
 """
 import email.utils, functools, http.server, json, mimetypes, os, pathlib, re, socketserver, sys, threading, time, urllib.parse
 
+try:
+    from .analytics import handle_http, purge_local
+except ImportError:                  # direct `python3 packer/serve.py`
+    from analytics import handle_http, purge_local
+
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parent / "app"
 CATALOG = ROOT / "data" / "catalog.js"
@@ -102,6 +107,10 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
     def do_GET(self):
         u, parts = self._route()
+        if u.path == "/privacy":
+            self.path = "/privacy.html" + ("?" + u.query if u.query else "")
+        if u.path in ("/api/analytics", "/api/admin"):
+            return handle_http(self, public_root=self.directory)
         if u.path.startswith("/signal/") and not _allowed(self.client_address[0]):
             return self._json(429, {"error": "slow down"})
         if u.path == "/signal/ping":
@@ -123,6 +132,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
     def do_POST(self):
         u, parts = self._route()
+        if u.path in ("/api/analytics", "/api/admin"):
+            return handle_http(self, public_root=self.directory)
         if u.path.startswith("/signal/") and not _allowed(self.client_address[0]):
             return self._json(429, {"error": "slow down"})
         if len(parts) == 4 and parts[1] == "signal":
@@ -256,7 +267,52 @@ def lan_address():
         s.close()
 
 
+def load_local_environment(root=HERE.parent):
+    """Read private local configuration, with process environment taking priority.
+
+    Only this local server loads files. Vercel functions continue to use their
+    configured server environment. Values are never executed or interpolated.
+    """
+    allowed = {
+        "EASYTRANSFER_ADMIN_PASSWORD", "EASYTRANSFER_ADMIN_SECRET",
+        "UPSTASH_REDIS_REST_URL", "UPSTASH_REDIS_REST_TOKEN",
+        "EASYTRANSFER_PUBLIC_ORIGIN", "EASYTRANSFER_ANALYTICS_DB",
+    }
+    staged = {}
+    for name in (".env", ".env.local"):
+        path = pathlib.Path(root) / name
+        if not path.exists():
+            continue
+        if path.stat().st_size > 64 * 1024:
+            raise ValueError(f"{name} is too large.")
+        for number, line in enumerate(path.read_text().splitlines(), 1):
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            if line.startswith("export "):
+                line = line[7:].lstrip()
+            key, separator, value = line.partition("=")
+            key, value = key.strip(), value.strip()
+            if not separator or key not in allowed:
+                continue
+            try:
+                if value.startswith('"'):
+                    value = json.loads(value)
+                elif value.startswith("'"):
+                    if len(value) < 2 or not value.endswith("'"):
+                        raise ValueError()
+                    value = value[1:-1]
+                if not isinstance(value, str) or "\0" in value:
+                    raise ValueError()
+            except ValueError:
+                raise ValueError(f"Invalid configuration in {name} on line {number}.") from None
+            staged[key] = value
+    for key, value in staged.items():
+        os.environ.setdefault(key, value)
+
+
 def main():
+    load_local_environment()
     args = [a for a in sys.argv[1:]]
     root = ROOT
     if "--root" in args:
@@ -272,6 +328,12 @@ def main():
 
     handler = functools.partial(Handler, directory=str(root))
     with Server(("", port), handler) as httpd:
+        purge_local(root)
+        cleanup_stop = threading.Event()
+        def cleanup():
+            while not cleanup_stop.wait(3600):
+                purge_local(root)
+        threading.Thread(target=cleanup, name="analytics-retention", daemon=True).start()
         print(f"  Serving {root}")
         print(f"    this computer   http://localhost:{port}")
         print(f"    other devices   http://{lan_address()}:{port}")
@@ -285,6 +347,8 @@ def main():
             httpd.serve_forever()
         except KeyboardInterrupt:
             print("\n  stopped")
+        finally:
+            cleanup_stop.set()
 
 
 if __name__ == "__main__":

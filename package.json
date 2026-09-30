@@ -4,6 +4,7 @@
   "private": true,
   "description": "Packs a media library onto a microSD card, with an offline app that opens itself.",
   "scripts": {
+    "test": "python3 -m unittest discover -s tests -p 'test_*.py' && node --test tests/test_analytics_client.js && node tests/test_instrumentation.js && node tests/test_admin.js",
     "dev": "python3 packer/serve.py 8095",
     "preview": "python3 packer/easytransfer.py preview && python3 packer/serve.py 8095",
     "card": "python3 packer/easytransfer.py build --profile standard --out ./card",

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy & cookies · EasyTransfer</title>
+<link rel="icon" href="assets/icon/favicon-32.png" sizes="32x32">
+<link rel="stylesheet" href="assets/css/app.css">
+<link rel="stylesheet" href="assets/css/consent.css">
+</head>
+<body>
+<main class="wrap privacy-page" lang="en" dir="ltr">
+  <a href="index.html">← Back to the library</a>
+  <p class="eyebrow" style="margin-top:2rem">YOUR CHOICE</p>
+  <h1>Privacy & cookies</h1>
+  <p>EasyTransfer helps you use and pass on a media library. Optional analytics help the people running this site understand how the library is used and shared. You can accept or reject analytics and keep using the library either way.</p>
+  <p><button class="btn ghost" id="privacy-settings" type="button">Change my cookie settings</button></p>
+  <section>
+    <h2>What we measure when you accept</h2>
+    <ul>
+      <li>Pages opened, the selected library language, and resource IDs for content you open, play, save or share. Playback events may include the number of seconds reached.</li>
+      <li>Sharing methods you choose in the site, such as email, WhatsApp, Telegram, copying a link or Nearby, and whether a supported action completes, fails or is cancelled.</li>
+      <li>Visits from shared links. With analytics accepted, a shared link can contain a random reference and the sharing method. A visitor arriving through that link is counted only if they also accept analytics.</li>
+      <li>The referring website’s domain, when the browser supplies it, and a broad country when the hosting platform supplies it. A country is an estimate, not your precise location.</li>
+      <li>A random browser identifier and a session identifier, event times, and transferred byte counts where the site knows them. These identifiers let us count browsers and sessions; they do not identify a person.</li>
+    </ul>
+    <p>Resource activity can reveal what religious material you use. Accept analytics only if you are comfortable including that activity in the site’s private reports.</p>
+  </section>
+  <section>
+    <h2>What sharing reports can tell us</h2>
+    <p>We can confirm copying a link, writing a file through the site, or receipt of a Nearby transfer. Opening an email app is a sharing attempt. Opening or handing data to your phone’s share sheet does not confirm delivery. A browser-managed download does not let us verify that you saved the file.</p>
+    <p>We cannot read your email, contacts, private messages or shared file contents. We cannot see who receives a link, where a copied link is pasted, which app you choose in the native share sheet, or later sharing outside this site. We do not record precise GPS locations, raw IP addresses, personal filenames, pairing codes, search text or complete referring URLs in analytics.</p>
+  </section>
+  <section>
+    <h2>Storage and retention</h2>
+    <p>We remember your accept/reject choice in browser storage for up to 180 days. After acceptance, a random browser identifier lasts up to 90 days, and a session ends after 30 minutes of inactivity. Activity records are retained for up to 90 days and are available to the site administrator through a password-protected dashboard.</p>
+    <p>The online edition sends accepted analytics to this site’s own endpoint. Its database can be provided by Upstash Redis. A library served from a local computer or Raspberry Pi stores accepted activity on that server; it is not uploaded to the online dashboard. Expired local records are cleared hourly while that server runs and when it next starts or accesses the database. A library opened directly from a card with <code>file://</code> collects no analytics. Temporary unsent activity is held in page memory for up to 10 minutes and may be lost when you close the page.</p>
+    <p>Necessary local preferences, such as language and theme, and the service worker’s offline app cache support the library independently of analytics. Administrators use a necessary, temporary sign-in cookie. External publishers and the Nearby connection broker may receive their own connection requests when you use their services; rejecting this site’s analytics does not block those requested services.</p>
+  </section>
+  <section>
+    <h2>Changing your choice</h2>
+    <p>Use <strong>Cookie settings</strong> on any library page to turn analytics on or off. Rejecting analytics stops future collection, clears this browser’s analytics identifiers and discards unsent activity. Previously received activity remains until its retention period ends. Clearing browser storage removes your preference and the site will ask again.</p>
+    <p>If your browser sends Global Privacy Control, analytics stays off. Browsers that block storage may ask again on another page. The library continues to work.</p>
+  </section>
+</main>
+<script src="data/catalog.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/analytics.js"></script>
+<script>document.getElementById('privacy-settings').addEventListener('click', function () { ET.analytics.showConsent(); });</script>
+</body>
+</html>

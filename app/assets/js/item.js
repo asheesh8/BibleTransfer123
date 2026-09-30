@@ -265,6 +265,12 @@
   }
 
   // ------------------------------------------------------------------ share
+  function composerUrl(channel, url) {
+    return channel === 'whatsapp'
+      ? 'https://wa.me/?text=' + encodeURIComponent(r.title + '\n' + url)
+      : 'https://t.me/share/url?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(r.title);
+  }
+
   function shareSheet() {
     var url = location.href.split('#')[0];
     var web = /^https?:$/.test(location.protocol);
@@ -273,6 +279,10 @@
     var rows = [];
     if (canNative) rows.push(['native', 'share', 'share.native', 'share.native.sub']);
     if (web) rows.push(['copy', 'link', 'share.copy', '']);
+    if (web) {
+      rows.push(['whatsapp', 'share', 'WhatsApp', '', true]);
+      rows.push(['telegram', 'share', 'Telegram', '', true]);
+    }
     // Sending a file lives in one place: Send. It falls back to the printed
     // routes itself when two phones cannot pair, so listing them here too was
     // the same door twice.
@@ -282,11 +292,13 @@
       '<h2>' + h('share.sheet') + '</h2>' +
       '<p class="latin muted" style="margin-top:-.3rem">' + ET.esc(r.title) + '</p>' +
       '<div class="stack">' + rows.map(function (x) {
-        return '<button class="tile" data-s="' + x[0] + '" style="width:100%;text-align:start">' +
+        var tag = x[4] ? 'a' : 'button';
+        var link = x[4] ? ' href="' + ET.esc(composerUrl(x[0], url)) + '" target="_blank" rel="noopener noreferrer"' : '';
+        return '<' + tag + ' class="tile" data-s="' + x[0] + '"' + link + ' style="width:100%;text-align:start">' +
           '<span class="ico">' + ET.icon(x[1]) + '</span>' +
-          '<span><span class="t">' + h(x[2]) + '</span>' +
+          '<span><span class="t">' + (x[4] ? ET.esc(x[2]) : h(x[2])) + '</span>' +
           (x[3] ? '<span class="s">' + h(x[3]) + '</span>' : '') + '</span>' +
-          '<span class="chev flip">' + ET.icon('chev') + '</span></button>';
+          '<span class="chev flip">' + ET.icon('chev') + '</span></' + tag + '>';
       }).join('') + '</div>' +
       '<button class="btn ghost block" id="sh-x" style="margin-top:1rem">' + h('ui.close') + '</button>');
 
@@ -295,19 +307,40 @@
       b.addEventListener('click', function () {
         var k = b.getAttribute('data-s');
         if (k === 'native') {
-          navigator.share({ title: r.title, text: r.title + ' — ' + (L.name || ''), url: url })
-            .catch(function () {});
+          var nativeIntent = ET.analytics.shareIntent(url, 'native_share', { resource: r.id, language: r.lang });
+          navigator.share({ title: r.title, text: r.title + ' — ' + (L.name || ''), url: nativeIntent.url })
+            .then(function () {
+              // The browser handed this to its share sheet; the recipient and
+              // delivery result are not available to the page.
+              ET.analytics.track('share_complete', {
+                resource: r.id, language: r.lang, channel: 'native_share',
+                shareId: nativeIntent.shareId, status: 'handed_off'
+              });
+            }, function (err) {
+              ET.analytics.track('share_cancel', {
+                resource: r.id, language: r.lang, channel: 'native_share',
+                shareId: nativeIntent.shareId, status: err && err.name === 'AbortError' ? 'cancelled' : 'failed'
+              });
+            });
         } else if (k === 'copy') {
-          copy(url, b);
+          var copyIntent = ET.analytics.shareIntent(url, 'copy_link', { resource: r.id, language: r.lang });
+          copy(copyIntent.url, b, copyIntent.shareId);
+        } else if (k === 'whatsapp' || k === 'telegram') {
+          var composerIntent = ET.analytics.shareIntent(url, k, { resource: r.id, language: r.lang, status: 'opened' });
+          b.href = composerUrl(k, composerIntent.url);
         } else if (k === 'nearby') {
+          ET.analytics.track('share_intent', { resource: r.id, language: r.lang, channel: 'nearby', status: 'started' });
           location.href = ET.scopedUrl('nearby.html', { id: r.id });
         }
       });
     });
   }
 
-  function copy(text, btn) {
+  function copy(text, btn, shareId) {
     var ok = function () {
+      ET.analytics.track('share_complete', {
+        resource: r.id, language: r.lang, channel: 'copy_link', shareId: shareId, status: 'copied'
+      });
       var tt = btn.querySelector('.t');
       if (tt) tt.innerHTML = h('share.copied');
       btn.querySelector('.ico').innerHTML = ET.icon('check');
@@ -319,7 +352,7 @@
       var ta = document.createElement('textarea');
       ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
       document.body.appendChild(ta); ta.select();
-      try { document.execCommand('copy'); ok(); } catch (e) {}
+      try { if (document.execCommand('copy')) ok(); } catch (e) {}
       ta.remove();
     }
   }

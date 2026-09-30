@@ -4,6 +4,8 @@
 __pycache__/
 *.pyc
 *.part
+.env*
+!.env.example
 
 # A built card. Tens of gigabytes of media that belongs on a microSD card,
 # never in git and never in a Vercel deploy.

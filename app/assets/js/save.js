@@ -78,11 +78,11 @@
   function jobsFor(r, f) {
     if (f.chapters && r.play && r.play.items) {
       return r.play.items.map(function (c) {
-        return { url: c.file, bytes: 0,
+        return { url: c.file, bytes: 0, resource: r.id, language: r.lang,
                  name: ET.pad(c.n) + ' - ' + clean(c.title) + (extOf(c.file) || '.mp4') };
       });
     }
-    return [{ url: f.file, bytes: f.bytes || 0, name: nameFor(r, f) }];
+    return [{ url: f.file, bytes: f.bytes || 0, name: nameFor(r, f), resource: r.id, language: r.lang }];
   }
 
   // ---------------------------------------------------------------- the sheet
@@ -474,6 +474,27 @@
      it was collected in memory and handed to Downloads, or { url } when it was
      too big for that and handed to the browser's own download manager. */
   function saveOne(job, target, signal, onProgress) {
+    ET.analytics.track('download_start', {
+      resource: job.resource, language: job.language, bytes: job.bytes || 0, status: 'started'
+    });
+    return saveFile(job, target, signal, onProgress).then(function (result) {
+      // A closed file-system writer confirms a save. An anchor only hands the
+      // file to the browser's download manager, whose outcome is unavailable.
+      ET.analytics.track('download_complete', {
+        resource: job.resource, language: job.language, bytes: result.bytes || 0,
+        status: result.handle ? 'saved' : 'browser_handoff'
+      });
+      return result;
+    }, function (err) {
+      var cancelled = err && err.name === 'AbortError';
+      ET.analytics.track(cancelled ? 'download_cancel' : 'download_error', {
+        resource: job.resource, language: job.language, status: cancelled ? 'cancelled' : 'failed'
+      });
+      throw err;
+    });
+  }
+
+  function saveFile(job, target, signal, onProgress) {
     var url = new URL(job.url, location.href).href;
 
     // Big file, no file-system access: don't try to hold it in memory.
@@ -507,7 +528,7 @@
           });
         }
         return pump().then(function () {
-          if (w) return w.stream.close().then(function () { return { handle: w.handle }; });
+          if (w) return w.stream.close().then(function () { return { handle: w.handle, bytes: got }; });
           // Decided from the filename, not from the server's header: a blob
           // URL we later open would run in this app's origin if it were HTML.
           var blob = new Blob(parts, { type: ET.safeType(job.name) });
@@ -516,7 +537,7 @@
           a.download = job.name;
           document.body.appendChild(a); a.click(); a.remove();
           setTimeout(function () { URL.revokeObjectURL(a.href); }, 60000);
-          return { blob: blob };
+          return { blob: blob, bytes: got };
         }, function (err) {
           if (w) { try { w.stream.abort(); } catch (e) {} }
           throw err;

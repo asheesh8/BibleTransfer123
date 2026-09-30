@@ -55,7 +55,7 @@ To look at the app without downloading anything:
 npm run preview     # build a catalogue with nothing packed, then serve it
 ```
 
-then open <http://localhost:8080>. `npm run dev` serves what is already there.
+then open <http://localhost:8095>. `npm run dev` serves what is already there.
 
 There are **no dependencies and no build step** — `package.json` is a handful of
 script aliases and nothing else, for hands that reach for `npm run dev` by
@@ -374,13 +374,17 @@ The share wizard and the help page are **English only** so far. Both call
 with no other change. Missing keys fall back to English, so a partly-reviewed
 file is safe to ship as it improves.
 
+The consent notice in `app/assets/js/analytics.js` currently has English, Urdu
+and Sindhi wording, with English fallback for the remaining interface languages.
+Its Urdu and Sindhi text also needs native-speaker review before distribution.
+
 ---
 
 ## Deploying the web version
 
-`vercel.json` serves `app/` as the site root. There is no build step and nothing
-to install — `app/data/catalog.js` is committed, so a deploy is just the static
-files.
+`vercel.json` serves `app/` as the site root. The library has no build step or
+runtime dependencies — `app/data/catalog.js` is committed. The two Python
+functions in `api/` handle consented analytics and private admin reports.
 
 The deployed version is the **preview** catalogue: nothing is packed, so every
 resource streams from `dbs.org` and the partner CDNs exactly as GawahiiTV does.
@@ -393,6 +397,107 @@ To refresh what the site lists after the catalogue changes:
 npm run catalog        # regenerate app/data/catalog.js
 git commit -am "refresh catalogue" && git push
 ```
+
+## Consent and the admin dashboard
+
+`/admin` opens a password-protected dashboard with 7, 30 and 90 day reports,
+daily page views and sharing attempts, language/resource openings, sharing
+channels, broad countries, recent referrals and events, and a CSV export.
+The dashboard contains real stored events; there is no sample activity.
+
+Every HTTP-served library asks visitors to **Accept analytics** or **Reject
+analytics**. The first-run language chooser finishes before the notice appears.
+The library works with either choice. **Cookie settings** is always available
+to change that choice, and `/privacy` explains collection and sharing limits.
+Analytics requests, random browser/session IDs and shared-link tagging begin
+only after acceptance. Turning analytics off deletes these IDs and discards
+pending events; another open tab also responds to the changed choice. Global
+Privacy Control keeps analytics off. Consent lasts 180 days, the browser ID
+lasts 90 days, and a session expires after 30 minutes of inactivity.
+
+Tracked activity includes page/resource openings, media play/pause/end,
+language changes, installation, outbound-link clicks, sharing choices,
+download outcomes and Nearby transfer outcomes. Search text, contact details,
+personal filenames, pairing codes, file contents, precise location and raw IP
+addresses are excluded from event records. Referrers contain only a hostname;
+country comes only from Vercel's coarse country header. Short-lived, salted
+network-address digests are used only for abuse limits.
+
+Sharing results have deliberately different meanings:
+
+| Signal | What it establishes |
+|---|---|
+| Email, WhatsApp, Telegram or share guide | A sharing attempt; sending is unknown |
+| Successful copy | A link reached the clipboard; its destination is unknown |
+| Native share handoff | The browser share promise resolved; app and delivery are unknown |
+| Visit with a share reference | A visitor opened a tagged link and accepted analytics |
+| Browser download handoff | The browser was asked to save; disk completion is unknown |
+| Saved download | The site successfully closed a file-system writer |
+| Received Nearby transfer | The receiver finished its queued writes or assembled the blobs and acknowledged receipt |
+
+Summary cards count confirmed copies, confirmed file-system saves, and received
+Nearby transfers. Native/browser handoffs remain visible as unverified events.
+Sender acknowledgements appear in activity without double-counting a transfer.
+Copied links and email links receive a fresh `et_share` reference per action,
+plus `et_channel`, only when their sender accepted analytics. A recipient who
+declines is not counted. Those references preserve the language scope.
+Dedicated WhatsApp and Telegram buttons open a composer and record the selected
+channel. Their links use the same consent-based references; sending remains
+unknown. They load no social widgets and make no third-party requests until
+the visitor clicks.
+
+There is no visibility into private app messages, recipient identities, where
+copied links are pasted, later offline sharing, or card copies opened with
+`file://`. A local HTTP/Pi server has its own private database; it does not sync
+to the online dashboard. Telemetry is browser-reported and is not an audit
+trail of verified people or deliveries.
+
+### Server setup
+
+Set the environment variables listed in `.env.example` on the server:
+
+- `EASYTRANSFER_ADMIN_PASSWORD`: a unique admin password, required to sign in.
+- `EASYTRANSFER_ADMIN_SECRET`: an optional separate session signing secret.
+- `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN`: required on Vercel
+  for durable storage. Keep both server-side.
+- `EASYTRANSFER_PUBLIC_ORIGIN`: optional canonical HTTPS origin. Without it,
+  same-origin POST validation uses the request Host, including preview domains.
+
+Set these in Vercel's environment settings and redeploy the repository.
+The functions use Python's standard library and Upstash's HTTPS REST API;
+no dependency installation or database schema migration is needed. If production
+storage or admin access is missing, the API returns a clear 503 error. It never
+reports a successful write to an ephemeral serverless filesystem.
+
+Locally, set `EASYTRANSFER_ADMIN_PASSWORD` in an ignored `.env.local` file or
+export it before `npm run dev`, then open `http://localhost:8095/admin`.
+The local server loads repository-root `.env` then `.env.local` automatically;
+process environment values take priority. Only the six analytics configuration
+keys in `.env.example` are loaded, without shell execution or variable expansion.
+SQLite defaults to
+`.cache/analytics/events.sqlite`, outside the public `app/` folder, and persists
+across server restarts. `EASYTRANSFER_ANALYTICS_DB` can override it; a path inside
+the served folder is rejected. Local HTTP admin access is for a trusted network;
+the deployed site uses HTTPS and Secure session cookies.
+
+Activity has a 90-day reporting window. Redis records expire automatically.
+Local expired records are purged on startup/access and hourly while the server
+runs; a stopped local server clears them when it next starts. Admin sessions
+expire after 12 hours and use HttpOnly, SameSite=Strict cookies. All admin
+responses bypass caches, and the service worker never caches admin/API data.
+Requests are size-limited, consent/version-validated, restricted to event and
+metadata allowlists, rate-limited, and deduplicated by event ID.
+
+For bounded server memory, reports analyze at most the newest 20,000 events in
+the chosen period. The dashboard visibly flags partial totals when that limit
+is exceeded. Recent activity and CSV contain the newest 500 events; the UI
+states that scope. Referring-site counts use that displayed recent activity.
+Daily charts use UTC; event times use the viewer's local timezone.
+
+Run `npm test` for consent, sharing, save/transfer outcomes, auth, database and
+HTTP regression checks. The integration check opens an isolated loopback server.
+The Redis HTTP contract is tested with a fixture; an actual production Redis
+database must still be configured and checked after deployment.
 
 ## Licensing
 
