@@ -389,9 +389,29 @@ def aggregate(events, days, now, truncated=False):
     today = dt.datetime.fromtimestamp(now, dt.timezone.utc).date()
     daily = {str(today - dt.timedelta(days=offset)): {"date": str(today - dt.timedelta(days=offset)), "visits": 0, "shares": 0} for offset in reversed(range(days))}
     summary = {"visitors": len({event["visitorId"] for event in events}), "sessions": len({event["sessionId"] for event in events}), "pageViews": 0, "shareIntents": 0, "shareCompletions": 0, "sharedVisits": 0, "downloads": 0, "transfers": 0}
-    channels, countries, languages, resources = (collections.Counter() for _ in range(4))
+    counts = {name: collections.Counter() for name in (
+        "channels", "countries", "languages", "resources", "referrers", "pages",
+        "eventTypes", "statuses", "shareOutcomes", "downloadOutcomes", "transferOutcomes",
+    )}
+    channels, countries, languages, resources = (counts[name] for name in ("channels", "countries", "languages", "resources"))
+    coverage = {"pageViewsWithCountry": 0, "pageViewsWithReferrer": 0, "sharedVisitsWithShareId": 0, "errorEvents": 0, "cancelledEvents": 0, "distinctResources": 0}
+    resource_ids = set()
     for event in events:
         kind, status = event["type"], event.get("status", "")
+        counts["eventTypes"][kind] += 1
+        counts["statuses"][status or "unspecified"] += 1
+        explicit_cancel = status in ("cancelled", "declined")
+        is_error = not explicit_cancel and (status in ("failed", "error") or kind.endswith("_error"))
+        coverage["errorEvents"] += int(is_error)
+        coverage["cancelledEvents"] += int(explicit_cancel or (not is_error and kind.endswith("_cancel")))
+        if event.get("resource"):
+            resource_ids.add(event["resource"])
+        if kind in ("share_complete", "share_cancel"):
+            counts["shareOutcomes"][status or "unspecified"] += 1
+        if kind in ("download_complete", "download_cancel", "download_error"):
+            counts["downloadOutcomes"][status or "unspecified"] += 1
+        if kind in ("transfer_complete", "transfer_error"):
+            counts["transferOutcomes"][status or "unspecified"] += 1
         day = daily.get(event["at"][:10])
         if kind == "page_view":
             summary["pageViews"] += 1
@@ -399,6 +419,10 @@ def aggregate(events, days, now, truncated=False):
                 day["visits"] += 1
             countries[event.get("country") or "Unknown"] += 1
             languages[event.get("language") or "Unspecified"] += 1
+            counts["referrers"][event.get("referrer") or "Direct / unknown"] += 1
+            counts["pages"][event["path"]] += 1
+            coverage["pageViewsWithCountry"] += int(bool(event.get("country")))
+            coverage["pageViewsWithReferrer"] += int(bool(event.get("referrer")))
         if kind == "share_intent":
             summary["shareIntents"] += 1
             channels[event.get("channel") or "unknown"] += 1
@@ -408,15 +432,22 @@ def aggregate(events, days, now, truncated=False):
             summary["shareCompletions"] += 1
         if kind == "shared_visit":
             summary["sharedVisits"] += 1
+            coverage["sharedVisitsWithShareId"] += int(bool(event.get("shareId")))
         if kind == "download_complete" and status == "saved":
             summary["downloads"] += 1
         if kind == "transfer_complete" and status == "received":
             summary["transfers"] += 1
         if kind == "resource_open" and event.get("resource"):
             resources[event["resource"]] += 1
-    def breakdown(counts):
-        return [{"name": name, "count": count} for name, count in sorted(counts.items(), key=lambda entry: (-entry[1], entry[0]))[:100]]
-    return {"summary": summary, "daily": list(daily.values()), "channels": breakdown(channels), "countries": breakdown(countries), "languages": breakdown(languages), "resources": breakdown(resources), "events": events[:MAX_RECENT_EVENTS], "retentionDays": RETENTION_DAYS, "truncated": truncated, "recentEventsTruncated": len(events) > MAX_RECENT_EVENTS, "analyzedEvents": len(events), "analysisLimit": MAX_ANALYSIS_EVENTS}
+    coverage["distinctResources"] = len(resource_ids)
+    result = {"summary": summary, "daily": list(daily.values()), "events": events[:MAX_RECENT_EVENTS], "retentionDays": RETENTION_DAYS, "truncated": truncated, "recentEventsTruncated": len(events) > MAX_RECENT_EVENTS, "analyzedEvents": len(events), "analysisLimit": MAX_ANALYSIS_EVENTS, "coverage": coverage, "generatedAt": iso_at(now), "periodDays": days, "reportingTimezone": "UTC"}
+    for collection, counter in counts.items():
+        result[collection] = [{"name": name, "count": count} for name, count in sorted(counter.items(), key=lambda entry: (-entry[1], entry[0]))[:100]]
+    # Denominators include rows omitted by the per-breakdown cap, within the
+    # analyzed window. A truncated report still covers only analyzed events.
+    result["breakdownTotals"] = {name: sum(counter.values()) for name, counter in counts.items()}
+    result["breakdownTruncated"] = {name: len(counter) > 100 for name, counter in counts.items()}
+    return result
 
 
 def dispatch(path, method, headers, raw=b"", client_ip="", production=False, public_root=None, now=None):

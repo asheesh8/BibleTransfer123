@@ -204,6 +204,110 @@ class AnalyticsTest(unittest.TestCase):
             self.assertEqual(result["analyzedEvents"], 100)
             self.assertEqual(result["summary"]["pageViews"], 100)
 
+    def test_expanded_breakdowns_preserve_denominators_and_terminal_statuses(self):
+        records = [
+            event(1, referrer="referral.example.test"),
+            event(2, path="/", language=""),
+            event(3, "resource_open", resource="eng-film-demo"),
+            event(4, "play", resource="eng-film-demo"),
+            event(5, "share_intent", channel="native_share", status="started"),
+            event(6, "share_complete", channel="native_share", status="handed_off"),
+            event(7, "share_complete", channel="copy_link", status="copied"),
+            event(8, "share_cancel", status="failed"),
+            event(9, "share_cancel", status="cancelled"),
+            event(10, "download_start", status="started"),
+            event(11, "download_complete", status="browser_handoff"),
+            event(12, "download_complete", status="saved"),
+            event(13, "download_cancel", status="cancelled"),
+            event(14, "download_error", status="error"),
+            event(15, "transfer_start", status="started"),
+            event(16, "transfer_complete", status="sent"),
+            event(17, "transfer_complete", status="received"),
+            event(18, "transfer_error"),
+            event(19, "shared_visit", shareId="share-00000001"),
+            event(20, "shared_visit"),
+            event(21, "session_start"),
+        ]
+        cleaned = api.validate_events({"consent": {"version": 1, "analytics": True}, "events": records}, NOW)
+        cleaned[0]["country"] = "US"
+        api.SQLiteStore(self.db).append(cleaned, NOW)
+        code, result, _ = self.admin()
+        self.assertEqual(code, 200)
+        rows = lambda name: {row["name"]: row["count"] for row in result[name]}
+        self.assertEqual(rows("referrers"), {"referral.example.test": 1, "Direct / unknown": 1})
+        self.assertEqual(rows("pages"), {"/english": 1, "/": 1})
+        self.assertEqual(rows("shareOutcomes"), {"handed_off": 1, "copied": 1, "failed": 1, "cancelled": 1})
+        self.assertEqual(rows("downloadOutcomes"), {"browser_handoff": 1, "saved": 1, "cancelled": 1, "error": 1})
+        self.assertEqual(rows("transferOutcomes"), {"sent": 1, "received": 1, "unspecified": 1})
+        self.assertEqual(result["breakdownTotals"], {"channels": 1, "countries": 2, "languages": 2, "resources": 1, "referrers": 2, "pages": 2, "eventTypes": 21, "statuses": 21, "shareOutcomes": 4, "downloadOutcomes": 4, "transferOutcomes": 3})
+        self.assertEqual(result["coverage"], {"pageViewsWithCountry": 1, "pageViewsWithReferrer": 1, "sharedVisitsWithShareId": 1, "errorEvents": 3, "cancelledEvents": 2, "distinctResources": 1})
+        self.assertEqual(rows("eventTypes")["share_intent"], 1)
+        self.assertEqual(rows("eventTypes")["transfer_complete"], 2)
+        self.assertEqual(rows("statuses")["started"], 3)
+        self.assertFalse(any(result["breakdownTruncated"].values()))
+        self.assertEqual((result["periodDays"], result["reportingTimezone"], result["generatedAt"]), (7, "UTC", api.iso_at(NOW)))
+        self.assertEqual((result["summary"]["shareCompletions"], result["summary"]["downloads"], result["summary"]["transfers"]), (1, 1, 1))
+
+    def test_referrer_and_type_breakdowns_include_events_beyond_recent_500(self):
+        records = [event(0, referrer="older.example.test", path="/")]
+        records.extend(event(index, referrer="recent.example.test") for index in range(1, 501))
+        api.SQLiteStore(self.db).append(records, NOW)
+        result = self.admin()[1]
+        self.assertEqual(len(result["events"]), 500)
+        self.assertTrue(all(row["referrer"] == "recent.example.test" for row in result["events"]))
+        self.assertEqual(result["referrers"], [{"name": "recent.example.test", "count": 500}, {"name": "older.example.test", "count": 1}])
+        self.assertEqual(result["eventTypes"], [{"name": "page_view", "count": 501}])
+        self.assertEqual(result["breakdownTotals"]["pages"], 501)
+        self.assertTrue(result["recentEventsTruncated"])
+        self.assertFalse(result["truncated"])
+
+    def test_breakdown_caps_expose_full_denominators_with_partial_report_metadata(self):
+        records = [event(index, path=f"/page-{index:03d}", referrer=f"referral-{index:03d}.example.test", country="US") for index in range(105)]
+        records.extend(event(105 + index, "resource_open", resource=f"resource-{index:03d}") for index in range(105))
+        result = api.aggregate(records, 7, NOW, truncated=True)
+        for collection in ("pages", "referrers", "resources"):
+            self.assertEqual(len(result[collection]), 100)
+            self.assertTrue(result["breakdownTruncated"][collection])
+            self.assertEqual(result["breakdownTotals"][collection], 105)
+            self.assertEqual(result["breakdownTotals"][collection] - sum(row["count"] for row in result[collection]), 5)
+        self.assertEqual(result["breakdownTotals"]["countries"], 105)
+        self.assertFalse(result["breakdownTruncated"]["countries"])
+        self.assertEqual(result["breakdownTotals"]["eventTypes"], 210)
+        self.assertEqual(result["analyzedEvents"], 210)
+        self.assertTrue(result["truncated"])
+
+    def test_empty_extended_breakdowns_have_zero_totals(self):
+        result = api.aggregate([], 30, NOW)
+        self.assertEqual(result["periodDays"], 30)
+        self.assertTrue(all(total == 0 for total in result["breakdownTotals"].values()))
+        self.assertTrue(all(not flag for flag in result["breakdownTruncated"].values()))
+        self.assertTrue(all(value == 0 for value in result["coverage"].values()))
+        for name in result["breakdownTotals"]:
+            self.assertEqual(result[name], [])
+
+    def test_explicit_cancellation_overrides_error_suffix_in_coverage(self):
+        cases = (
+            ("transfer_error", "cancelled", 0, 1),
+            ("transfer_error", "declined", 0, 1),
+            ("transfer_error", "failed", 1, 0),
+            ("transfer_error", "error", 1, 0),
+            ("transfer_error", "", 1, 0),
+            ("share_cancel", "failed", 1, 0),
+            ("download_cancel", "error", 1, 0),
+            ("share_cancel", "", 0, 1),
+            ("download_cancel", "cancelled", 0, 1),
+        )
+        records = []
+        for index, (kind, status, errors, cancellations) in enumerate(cases):
+            record = event(index, kind, status=status)
+            records.append(record)
+            with self.subTest(kind=kind, status=status):
+                coverage = api.aggregate([record], 7, NOW)["coverage"]
+                self.assertEqual((coverage["errorEvents"], coverage["cancelledEvents"]), (errors, cancellations))
+        result = api.aggregate(records, 7, NOW)
+        self.assertEqual((result["coverage"]["errorEvents"], result["coverage"]["cancelledEvents"]), (5, 4))
+        self.assertEqual({row["name"]: row["count"] for row in result["transferOutcomes"]}, {"cancelled": 1, "declined": 1, "failed": 1, "error": 1, "unspecified": 1})
+
     def test_refuses_a_public_database_path(self):
         with patch.dict(os.environ, {"EASYTRANSFER_ANALYTICS_DB": str(pathlib.Path(self.directory.name) / "public" / "events.sqlite")}):
             code, _, _ = api.dispatch("/api/analytics", "POST", self.headers, json.dumps({"consent": {"version": 1, "analytics": True}, "events": [event()]}).encode(), public_root=pathlib.Path(self.directory.name) / "public", now=NOW)

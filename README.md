@@ -405,6 +405,22 @@ daily page views and sharing attempts, language/resource openings, sharing
 channels, broad countries, recent referrals and events, and a CSV export.
 The dashboard contains real stored events; there is no sample activity.
 
+**Larry's overview** presents recorded reach, languages, countries, sharing
+activity and popular resources with donut charts, daily trends and plain-language
+insights. **Developer** exposes event and outcome breakdowns, reporting coverage,
+page/referrer rankings and an event explorer with filters, pagination, anonymous
+event details and CSV export. These are two presentations behind the same admin
+login, not separate permission levels. The visible dashboard polls every four
+seconds and pauses polling while the tab is hidden. Country groups include flags
+and expandable anonymous browser timelines, with actions ordered within sessions.
+Filters, pagination and expanded timelines are preserved during live updates.
+
+Chart labels state what is counted: country and language charts count page views,
+sharing charts count recorded actions, and outcome charts count outcome records.
+They do not infer recipients or delivery rates. Breakdowns use all analyzed
+events in the selected period; the event explorer is limited to the newest 500
+records. Any analysis or breakdown limits are disclosed in the report.
+
 Every HTTP-served library asks visitors to **Accept analytics** or **Reject
 analytics**. The first-run language chooser finishes before the notice appears.
 The library works with either choice. **Cookie settings** is always available

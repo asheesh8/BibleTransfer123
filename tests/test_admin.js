@@ -7,7 +7,11 @@ const base = path.resolve(__dirname, '..');
 const source = fs.readFileSync(base + '/app/assets/js/admin.js', 'utf8');
 const html = fs.readFileSync(base + '/app/admin/index.html', 'utf8');
 const ids = [...html.matchAll(/id="([^"]+)"/g)].map(match => match[1]);
-const dom = Object.fromEntries(ids.map(id => [id, { id, hidden: false, disabled: false, innerHTML: '', textContent: '', value: id === 'period' ? '30' : '', listeners: {}, addEventListener(name, callback) { this.listeners[name] = callback; }, setAttribute(name, value) { this[name] = value; }, focus() { this.focused = true; }, select() { this.selected = true; } }]));
+const dom = Object.fromEntries(ids.map(id => [id, { id, hidden: false, disabled: false, innerHTML: '', textContent: '', value: id === 'period' ? '30' : id === 'event-page-size' ? '25' : '', listeners: {}, addEventListener(name, callback) { this.listeners[name] = callback; }, setAttribute(name, value) { this[name] = value; }, focus() { this.focused = true; }, select() { this.selected = true; } }]));
+const timers = new Map();
+let timerId = 0;
+let pendingResponse;
+const documentListeners = {};
 let responses = [{ status: 401, data: { error: 'Sign in' } }];
 let requests = [];
 let savedBlob;
@@ -15,9 +19,9 @@ let savedAnchor;
 const fakeURL = class extends URL { static createObjectURL(blob) { savedBlob = blob; return 'blob:csv-test'; } static revokeObjectURL() {} };
 const sandbox = {
   LIBRARY: {resources: [{id: 'test-resource', title: '<img src=x onerror=alert(1)>'}, {id: 'plain-resource', title: 'A human resource title'}]},
-  document: { getElementById(id) { assert.ok(dom[id], id); return dom[id]; }, createElement() { savedAnchor = { click() { this.clicked = true; }, remove() { this.removed = true; } }; return savedAnchor; }, body: { appendChild() {} } },
-  fetch(url, options) { requests.push({ url, options }); const response = responses.shift(); assert.ok(response, 'Unexpected API request'); return Promise.resolve({ ok: response.status < 400, status: response.status, json() { return Promise.resolve(response.data); } }); },
-  Intl, Number, Object, Array, String, Promise, Date, Math, JSON, isNaN, encodeURIComponent, URL: fakeURL, Blob, setTimeout(callback) { callback(); }
+  document: { hidden: false, addEventListener(name, callback) { documentListeners[name] = callback; }, getElementById(id) { assert.ok(dom[id], id); return dom[id]; }, createElement() { savedAnchor = { click() { this.clicked = true; }, remove() { this.removed = true; } }; return savedAnchor; }, body: { appendChild() {} } },
+  fetch(url, options) { requests.push({ url, options }); const response = responses.shift(); assert.ok(response, 'Unexpected API request'); if (response.pending) return new Promise(resolve => { pendingResponse = resolve; }); return Promise.resolve({ ok: response.status < 400, status: response.status, json() { return Promise.resolve(response.data); } }); },
+  Intl, Number, Object, Array, String, Promise, Date, Math, JSON, isNaN, encodeURIComponent, URL: fakeURL, Blob, setInterval(callback, delay) { assert.equal(delay, 4000); timers.set(++timerId, callback); return timerId; }, clearInterval(id) { timers.delete(id); }, setTimeout(callback) { callback(); }
 };
 const tick = () => new Promise(resolve => setImmediate(resolve));
 const event = { id: 'a', type: 'share_complete', at: '2026-09-30T12:00:00Z', path: '/item.html', language: 'en', resource: 'test-resource', channel: 'copy_link', status: 'copied', country: 'US', referrer: 'https://example.com/path', shareId: ' =HYPERLINK("evil")', visitorId: 'v', sessionId: 's' };
@@ -41,7 +45,11 @@ const data = { summary: { visitors: 3, sessions: 4, pageViews: 6, shareIntents: 
   assert.deepEqual(JSON.parse(requests[1].options.body), {action: 'login', password: 'test-password'});
   assert.equal(dom['report-warning'].hidden, false);
   assert.match(dom['event-note'].textContent, /newest 3 of 501/);
-  assert.match(dom.metrics.innerHTML, /Confirmed share actions/);
+  assert.match(dom.metrics.innerHTML, /Visitor browsers/);
+  assert.match(dom['sharing-signals'].innerHTML, /Confirmed share actions/);
+  assert.match(dom.countries.innerHTML, /🇺🇸/);
+  assert.equal(timers.size, 1);
+  assert.match(dom['report-updated'].textContent, /every 4 seconds/);
   assert.match(dom.events.innerHTML, /&lt;img src=x onerror=alert\(1\)&gt;/);
   assert.doesNotMatch(dom.events.innerHTML, /<img src=x/);
   assert.match(dom.resources.innerHTML, /&lt;img src=x onerror=alert\(1\)&gt;/);
@@ -62,6 +70,46 @@ const data = { summary: { visitors: 3, sessions: 4, pageViews: 6, shareIntents: 
   assert.match(csv, /"'@HYPERLINK\(""evil""\)"/);
   assert.match(csv, /"test-resource"/);
   assert.doesNotMatch(csv, /A human resource title|<img src=x/);
+  dom['developer-tab'].listeners.click();
+  assert.equal(dom['developer-panel'].hidden, false);
+  assert.equal(dom['overview-panel'].hidden, true);
+  assert.equal(dom['developer-tab']['aria-selected'], 'true');
+  dom['overview-tab'].listeners.keydown({key: 'Home', preventDefault() {}});
+  assert.equal(dom['overview-panel'].hidden, false);
+  dom['event-filter-status'].value = 'copied';
+  dom['event-filter-status'].listeners.change();
+  assert.match(dom['event-count'].textContent, /of 1 matching/);
+  dom.export.listeners.click();
+  const filteredCSV = await savedBlob.text();
+  assert.match(filteredCSV, /copy_link/);
+  assert.doesNotMatch(filteredCSV, /browser_handoff|native_share/);
+  const beforePoll = dom.events.innerHTML;
+  responses.push({status: 200, data: {...data, generatedAt: '2026-09-30T12:01:00Z'}});
+  [...timers.values()][0]();
+  await tick();
+  assert.equal(dom['event-filter-status'].value, 'copied');
+  assert.equal(dom.events.innerHTML, beforePoll);
+  responses.push({pending: true});
+  [...timers.values()][0]();
+  dom.period.value = '90';
+  dom.period.listeners.change();
+  assert.equal(dom.export.disabled, true, 'period switch must not export an old report while waiting');
+  responses.push({status: 200, data: {...data, periodDays: 90}});
+  pendingResponse({ok: true, status: 200, json() { return Promise.resolve(data); }});
+  await tick();
+  assert.match(requests.at(-1).url, /days=90/);
+  dom.export.listeners.click();
+  assert.match(savedAnchor.download, /90days/);
+  const beforeHidden = requests.length;
+  sandbox.document.hidden = true;
+  [...timers.values()][0]();
+  assert.equal(requests.length, beforeHidden);
+  sandbox.document.hidden = false;
+  responses.push({status: 200, data});
+  documentListeners.visibilitychange();
+  await tick();
+  dom['event-clear'].listeners.click();
+  assert.match(dom['event-count'].textContent, /of 3 matching/);
   responses.push({status: 401, data: {error: 'Sign in'}});
   dom.refresh.listeners.click();
   await tick();
@@ -69,6 +117,7 @@ const data = { summary: { visitors: 3, sessions: 4, pageViews: 6, shareIntents: 
   assert.equal(dom.message.hidden, false);
   assert.match(dom.message.textContent, /session has ended/);
   assert.equal(dom.export.disabled, true);
+  assert.equal(timers.size, 0);
   dom['admin-password'].value = 'wrong';
   responses.push({status: 401, data: {error: 'Invalid admin credentials.'}});
   dom['login-form'].listeners.submit({preventDefault() {}});
@@ -88,6 +137,11 @@ const data = { summary: { visitors: 3, sessions: 4, pageViews: 6, shareIntents: 
   assert.equal(dom['report-warning'].hidden, true);
   assert.equal(dom.export.disabled, true);
   assert.match(dom.events.innerHTML, /No events in this period/);
+  responses.push({pending: true});
+  [...timers.values()][0]();
+  const inFlightCount = requests.length;
+  [...timers.values()][0]();
+  assert.equal(requests.length, inFlightCount, 'polling must not overlap');
   responses.push({status: 200, data: {ok: true}});
   dom.logout.listeners.click();
   await tick();
@@ -95,6 +149,10 @@ const data = { summary: { visitors: 3, sessions: 4, pageViews: 6, shareIntents: 
   assert.equal(dom.dashboard.hidden, true);
   assert.equal(dom['login-panel'].hidden, false);
   assert.equal(dom.logout.hidden, true);
+  assert.equal(timers.size, 0);
+  pendingResponse({ok: true, status: 200, json() { return Promise.resolve(data); }});
+  await tick();
+  assert.equal(dom.dashboard.hidden, true, 'late report must not restore logged-out dashboard');
   assert.equal(responses.length, 0);
   delete sandbox.LIBRARY;
   responses.push({status: 401, data: {error: 'Sign in'}});
@@ -108,5 +166,6 @@ const data = { summary: { visitors: 3, sessions: 4, pageViews: 6, shareIntents: 
   assert.match(dom.resources.innerHTML, />test-resource<\/span>/);
   assert.doesNotMatch(dom.resources.innerHTML, /A human resource title/);
   assert.equal(responses.length, 0);
-  console.log('Admin checks passed: auth/login/logout, expiry/errors, catalogue titles and fallback, escaped rendering, UTC chart, partial/empty reports, unverified handoffs and CSV safety.');
+  timers.clear();
+  console.log('Admin checks passed: tabs, filters and filtered export, four-second polling, hidden-tab pause, no overlapping polls, logout race protection, auth/login/logout, expiry/errors, catalogue titles and fallback, escaped rendering, UTC chart, partial/empty reports, unverified handoffs and CSV safety.');
 })().catch(error => { console.error(error); process.exitCode = 1; });
