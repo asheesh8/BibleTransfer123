@@ -276,6 +276,7 @@ def load_local_environment(root=HERE.parent):
     allowed = {
         "EASYTRANSFER_ADMIN_PASSWORD", "EASYTRANSFER_ADMIN_SECRET",
         "UPSTASH_REDIS_REST_URL", "UPSTASH_REDIS_REST_TOKEN",
+        "KV_REST_API_URL", "KV_REST_API_TOKEN",
         "EASYTRANSFER_PUBLIC_ORIGIN", "EASYTRANSFER_ANALYTICS_DB",
     }
     staged = {}

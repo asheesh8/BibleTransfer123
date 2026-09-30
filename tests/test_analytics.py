@@ -130,6 +130,41 @@ class AnalyticsTest(unittest.TestCase):
         self.assertIn("UPSTASH_REDIS", body["error"])
         self.assertFalse(self.db.exists())
 
+    def test_production_storage_resolves_only_complete_credential_pairs(self):
+        direct = {"UPSTASH_REDIS_REST_URL": "https://direct.example.test", "UPSTASH_REDIS_REST_TOKEN": "test-direct-write-token"}
+        native = {"KV_REST_API_URL": "https://native.example.test", "KV_REST_API_TOKEN": "test-native-write-token"}
+        cases = (
+            (direct, (direct["UPSTASH_REDIS_REST_URL"], direct["UPSTASH_REDIS_REST_TOKEN"])),
+            (native, (native["KV_REST_API_URL"], native["KV_REST_API_TOKEN"])),
+            ({**native, **direct}, (direct["UPSTASH_REDIS_REST_URL"], direct["UPSTASH_REDIS_REST_TOKEN"])),
+            ({**native, "UPSTASH_REDIS_REST_URL": direct["UPSTASH_REDIS_REST_URL"]}, (native["KV_REST_API_URL"], native["KV_REST_API_TOKEN"])),
+            ({**native, "KV_REST_API_READ_ONLY_TOKEN": "test-readonly-token"}, (native["KV_REST_API_URL"], native["KV_REST_API_TOKEN"])),
+        )
+        for environment, expected in cases:
+            with self.subTest(keys=sorted(environment)), patch.dict(os.environ, environment, clear=True), patch.object(api, "RedisStore") as constructor:
+                self.assertIs(api.get_store(True), constructor.return_value)
+                constructor.assert_called_once_with(*expected)
+        incomplete = (
+            {},
+            {"UPSTASH_REDIS_REST_URL": direct["UPSTASH_REDIS_REST_URL"], "KV_REST_API_TOKEN": native["KV_REST_API_TOKEN"]},
+            {"KV_REST_API_URL": native["KV_REST_API_URL"], "UPSTASH_REDIS_REST_TOKEN": direct["UPSTASH_REDIS_REST_TOKEN"]},
+            {"KV_REST_API_URL": native["KV_REST_API_URL"], "KV_REST_API_READ_ONLY_TOKEN": "test-readonly-token"},
+            {"KV_REST_API_URL": native["KV_REST_API_URL"], "KV_REST_API_TOKEN": ""},
+        )
+        for environment in incomplete:
+            with self.subTest(keys=sorted(environment)), patch.dict(os.environ, environment, clear=True), patch.object(api, "RedisStore") as constructor:
+                with self.assertRaises(api.APIError) as failure:
+                    api.get_store(True)
+                self.assertEqual(failure.exception.status, 503)
+                self.assertIn("KV_REST_API_URL", failure.exception.message)
+                constructor.assert_not_called()
+
+    def test_native_write_token_stabilizes_abuse_keys_without_admin_configuration(self):
+        with patch.dict(os.environ, {"KV_REST_API_TOKEN": "test-native-write-token"}, clear=True):
+            first = api.rate_key("events", "192.0.2.123", NOW)
+            with patch.object(api, "_EPHEMERAL_KEY", b"different-function-instance"):
+                self.assertEqual(api.rate_key("events", "192.0.2.123", NOW), first)
+
     def test_login_and_ingestion_limits_are_enforced_and_expire(self):
         for _ in range(10):
             self.assertEqual(self.request("/api/admin", payload={"action": "login", "password": "guess"})[0], 401)

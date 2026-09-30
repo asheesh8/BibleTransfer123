@@ -293,10 +293,14 @@ def local_db_path(public_root=None):
 
 def get_store(production, public_root=None):
     if production:
-        url, token = os.environ.get("UPSTASH_REDIS_REST_URL", ""), os.environ.get("UPSTASH_REDIS_REST_TOKEN", "")
-        if not url or not token:
-            raise APIError(503, "Analytics storage is not configured. Set UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN.")
-        return RedisStore(url, token)
+        for url_name, token_name in (
+            ("UPSTASH_REDIS_REST_URL", "UPSTASH_REDIS_REST_TOKEN"),
+            ("KV_REST_API_URL", "KV_REST_API_TOKEN"),
+        ):
+            url, token = os.environ.get(url_name, ""), os.environ.get(token_name, "")
+            if url and token:
+                return RedisStore(url, token)
+        raise APIError(503, "Analytics storage is not configured. Set UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN, or connect Upstash with KV_REST_API_URL and KV_REST_API_TOKEN.")
     return SQLiteStore(local_db_path(public_root))
 
 
@@ -312,7 +316,7 @@ def purge_local(public_root=None):
 
 
 def secret_key():
-    configured = os.environ.get("EASYTRANSFER_ADMIN_SECRET") or os.environ.get("EASYTRANSFER_ADMIN_PASSWORD") or os.environ.get("UPSTASH_REDIS_REST_TOKEN")
+    configured = os.environ.get("EASYTRANSFER_ADMIN_SECRET") or os.environ.get("EASYTRANSFER_ADMIN_PASSWORD") or os.environ.get("UPSTASH_REDIS_REST_TOKEN") or os.environ.get("KV_REST_API_TOKEN")
     return hashlib.sha256(("EasyTransfer authentication v1:" + configured).encode()).digest() if configured else _EPHEMERAL_KEY
 
 

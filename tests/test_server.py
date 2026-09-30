@@ -11,10 +11,21 @@ import unittest
 from unittest.mock import patch
 
 from packer import analytics
-from packer.serve import Handler, Server
+from packer.serve import Handler, Server, load_local_environment
 
 
 class ServerIntegrationTest(unittest.TestCase):
+    def test_local_environment_loads_marketplace_write_pair_with_normal_precedence(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = pathlib.Path(directory)
+            (root / ".env").write_text('KV_REST_API_URL="https://default.example.test"\nKV_REST_API_TOKEN="default-test-token"\n')
+            (root / ".env.local").write_text('KV_REST_API_URL="https://local.example.test"\nKV_REST_API_TOKEN="local-test-token"\nKV_REST_API_READ_ONLY_TOKEN="readonly-test-token"\n')
+            with patch.dict(os.environ, {"KV_REST_API_TOKEN": "process-test-token"}, clear=True):
+                load_local_environment(root)
+                self.assertEqual(os.environ["KV_REST_API_URL"], "https://local.example.test")
+                self.assertEqual(os.environ["KV_REST_API_TOKEN"], "process-test-token")
+                self.assertNotIn("KV_REST_API_READ_ONLY_TOKEN", os.environ)
+
     def test_http_auth_analytics_ranges_and_local_signalling(self):
         with tempfile.TemporaryDirectory() as directory:
             root = pathlib.Path(directory) / "public"

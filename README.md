@@ -458,8 +458,12 @@ Set the environment variables listed in `.env.example` on the server:
 
 - `EASYTRANSFER_ADMIN_PASSWORD`: a unique admin password, required to sign in.
 - `EASYTRANSFER_ADMIN_SECRET`: an optional separate session signing secret.
-- `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN`: required on Vercel
-  for durable storage. Keep both server-side.
+- `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN`, or the complete
+  `KV_REST_API_URL` and `KV_REST_API_TOKEN` pair supplied by Vercel's Upstash
+  Marketplace integration: required on Vercel for durable storage. The explicit
+  `UPSTASH_*` pair takes priority. Incomplete pairs are never combined, and a
+  readonly token cannot collect events or support admin login. Keep credentials
+  server-side.
 - `EASYTRANSFER_PUBLIC_ORIGIN`: optional canonical HTTPS origin. Without it,
   same-origin POST validation uses the request Host, including preview domains.
 
@@ -472,7 +476,7 @@ reports a successful write to an ephemeral serverless filesystem.
 Locally, set `EASYTRANSFER_ADMIN_PASSWORD` in an ignored `.env.local` file or
 export it before `npm run dev`, then open `http://localhost:8095/admin`.
 The local server loads repository-root `.env` then `.env.local` automatically;
-process environment values take priority. Only the six analytics configuration
+process environment values take priority. Only the analytics configuration
 keys in `.env.example` are loaded, without shell execution or variable expansion.
 SQLite defaults to
 `.cache/analytics/events.sqlite`, outside the public `app/` folder, and persists
