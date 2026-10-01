@@ -1,0 +1,45 @@
+/* Large, illustrated phone instructions. The rest of the help page keeps its
+   existing layout, colours, translated copy, and logical RTL spacing. */
+.help-device {
+  padding: clamp(1.2rem, 4vw, 2rem);
+  scroll-margin-top: 7rem;
+}
+.help-device:target { border-color: var(--purple); }
+.help-device-heading {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 4vw, 2rem);
+  margin-bottom: 2rem;
+}
+.help-device-phone { width: 8rem; flex: 0 0 8rem; }
+.help-device-phone svg { width: 100%; height: auto; }
+.help-device-heading h2 { font-size: clamp(1.65rem, 4vw, 2.4rem); }
+.help-device-caption { margin-bottom: .9rem; font-size: 1.05rem; }
+.help-app-example { display: flex; align-items: center; gap: .8rem; }
+.help-app-picture { flex: 0 0 3.7rem; width: 3.7rem; }
+.help-app-example strong { display: block; font-size: 1.2rem; }
+.help-app-example span span { display: block; font-size: .96rem; color: var(--ink-soft); }
+.help-device .steps > li { min-height: 6.7rem; padding-inline-start: 3.2rem; padding-bottom: 1.7rem; }
+.help-device .steps > li::before {
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.25rem;
+  background: var(--purple-deep);
+}
+.help-device .steps h3 { margin-top: 0; font-size: clamp(1.25rem, 3vw, 1.55rem); }
+.help-device .steps p { font-size: 1.05rem; color: var(--ink); line-height: 1.6; }
+.help-step-picture { width: 4.5rem; float: inline-end; margin-inline-start: 1rem; margin-bottom: .5rem; }
+.help-step-picture:empty { display: none; }
+.help-device .steps > li::after { content: ''; display: block; clear: both; }
+.help-device-support { margin: 1.4rem 0 0; padding-inline-start: 4.6rem; }
+.help-device-support a { display: inline-block; min-height: 44px; padding-block: .5rem; }
+@media (max-width: 36rem) {
+  .help-device-heading { gap: .85rem; align-items: flex-start; }
+  .help-device-phone { width: 5.5rem; flex-basis: 5.5rem; }
+  .help-device-heading h2 { font-size: 1.6rem; }
+  .help-device-caption { font-size: 1rem; }
+  .help-app-picture { width: 3rem; flex-basis: 3rem; }
+  .help-device .steps > li { padding-inline-start: 2.5rem; }
+  .help-step-picture { width: 3.4rem; margin-inline-start: .6rem; }
+  .help-device-support { padding-inline-start: 0; }
+}

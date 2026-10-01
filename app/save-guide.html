@@ -29,32 +29,101 @@
 <main class="guide-wrap" lang="en" dir="ltr">
   <a class="guide-back" href="library.html" id="guide-back">← Back to the library</a>
   <div class="guide-heading">
-    <p class="eyebrow">SCREENSHOT GUIDE · ENGLISH</p>
+    <p class="eyebrow">EASY, STEP-BY-STEP HELP</p>
     <h1 id="guide-heading">Save to your computer</h1>
-    <p class="muted" id="guide-intro">Choose your computer to see only the steps for macOS or Windows.</p>
+    <p class="muted" id="guide-intro">Pick your computer below. We’ll show you what to click, one step at a time.</p>
   </div>
 
   <section class="guide-choice" id="guide-choice" tabindex="-1" aria-labelledby="guide-choice-title">
-    <h2 id="guide-choice-title">Which computer are you using?</h2>
+    <h2 id="guide-choice-title">Which one looks like your computer?</h2>
     <div class="guide-platform-choices">
-      <button class="guide-platform-card" type="button" data-guide-platform="macos" aria-controls="guide-path">
-        <span class="guide-platform-symbol" aria-hidden="true">⌘</span>
-        <span><strong>macOS</strong><span>Save, find, and open files on your Mac</span></span>
-        <span aria-hidden="true">→</span>
+      <button class="guide-platform-card guide-platform-mac" type="button" data-guide-platform="macos" aria-controls="guide-path" aria-label="Start Mac guide">
+        <svg class="guide-computer-picture" viewBox="0 0 320 180" aria-hidden="true" focusable="false">
+          <defs><linearGradient id="guide-mac-screen" x2="1" y2="1"><stop stop-color="#332044"/><stop offset="1" stop-color="#8D609D"/></linearGradient></defs>
+          <rect x="47" y="12" width="226" height="142" rx="12" fill="#BFC4CB"/>
+          <rect x="53" y="18" width="214" height="129" rx="7" fill="url(#guide-mac-screen)"/>
+          <path d="M145 18h30v5a4 4 0 0 1-4 4h-22a4 4 0 0 1-4-4z" fill="#BFC4CB"/>
+          <g class="guide-apple-mark" transform="translate(126 49) scale(2.8)" fill="#FFFFFF"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></g>
+          <path d="M47 153h226l27 13a6 6 0 0 1-6 8H26a6 6 0 0 1-6-8z" fill="#D8DCE1"/>
+          <path d="M136 153h48l-3 7h-42z" fill="#ABB2BC"/>
+          <path d="M25 169h270" stroke="#9FA7B2" stroke-width="2"/>
+        </svg>
+        <strong class="guide-platform-name">Mac</strong>
+        <span class="guide-platform-description">Apple computers<br>MacBook or iMac</span>
+        <span class="guide-platform-cta">Start Mac guide <span aria-hidden="true">→</span></span>
       </button>
-      <button class="guide-platform-card" type="button" data-guide-platform="windows" aria-controls="guide-path">
-        <span class="guide-platform-symbol" aria-hidden="true">⊞</span>
-        <span><strong>Windows</strong><span>Save, find, and open files on your PC</span></span>
-        <span aria-hidden="true">→</span>
+      <button class="guide-platform-card guide-platform-windows" type="button" data-guide-platform="windows" aria-controls="guide-path" aria-label="Start Windows guide">
+        <svg class="guide-computer-picture" viewBox="0 0 320 180" aria-hidden="true" focusable="false">
+          <defs><linearGradient id="guide-windows-screen" x2="1" y2="1"><stop stop-color="#092E61"/><stop offset="1" stop-color="#1BADE6"/></linearGradient></defs>
+          <rect x="47" y="12" width="226" height="142" rx="9" fill="#525C6B"/>
+          <rect x="54" y="20" width="212" height="127" rx="3" fill="url(#guide-windows-screen)"/>
+          <circle cx="160" cy="16" r="1.8" fill="#C4D3E3"/>
+          <g fill="#FFFFFF"><rect x="127" y="51" width="29" height="29"/><rect x="162" y="51" width="29" height="29"/><rect x="127" y="86" width="29" height="29"/><rect x="162" y="86" width="29" height="29"/></g>
+          <path d="M47 153h226l27 13a6 6 0 0 1-6 8H26a6 6 0 0 1-6-8z" fill="#828C9B"/>
+          <path d="M136 153h48l-3 7h-42z" fill="#576575"/>
+          <path d="M25 169h270" stroke="#455164" stroke-width="2"/>
+        </svg>
+        <strong class="guide-platform-name">Windows</strong>
+        <span class="guide-platform-description">Windows computers<br>Dell, HP, Lenovo, Surface, and more</span>
+        <span class="guide-platform-cta">Start Windows guide <span aria-hidden="true">→</span></span>
       </button>
     </div>
-    <p class="muted">Each guide has 12 slides. Choose the next step when you are ready; the gold circles show where to click.</p>
+    <p class="guide-choice-reassurance"><span class="guide-example-circle" aria-hidden="true"></span>Pictures show each step. Gold circles show you where to click.</p>
+
+    <section class="guide-phone-choice" aria-labelledby="guide-phone-title">
+      <h2 id="guide-phone-title">Using a phone or tablet?</h2>
+      <p class="muted">Choose your phone for help finding files you have saved.</p>
+      <div class="guide-phone-choices">
+        <a class="guide-phone-card" href="help.html#phone-apple" id="guide-phone-apple">
+          <svg class="guide-phone-picture" viewBox="0 0 160 164" aria-hidden="true" focusable="false">
+            <rect x="70" y="27" width="71" height="108" rx="8" fill="#BFC4CB"/>
+            <rect x="75" y="32" width="61" height="98" rx="4" fill="#72528C"/>
+            <rect x="24" y="8" width="67" height="146" rx="15" fill="#D4D7DD"/>
+            <rect x="28" y="12" width="59" height="138" rx="12" fill="#332044"/>
+            <rect x="43" y="18" width="29" height="8" rx="4" fill="#D4D7DD"/>
+            <path transform="translate(37 62) scale(1.65)" fill="#FFFFFF" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/>
+          </svg>
+          <strong>iPhone or iPad</strong>
+          <span class="guide-phone-description">Apple</span>
+          <span class="guide-phone-cta">Find my saved files <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="guide-phone-card" href="help.html#phone-samsung" id="guide-phone-samsung">
+          <svg class="guide-phone-picture" viewBox="0 0 160 164" aria-hidden="true" focusable="false">
+            <rect x="39" y="8" width="82" height="146" rx="12" fill="#727D91"/>
+            <rect x="43" y="12" width="74" height="138" rx="9" fill="#153F7D"/>
+            <circle cx="80" cy="19" r="2.5" fill="#727D91"/>
+            <path d="M43 113l74-47v62l-29 22H43z" fill="#2678BA"/>
+            <text x="80" y="83" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="12" font-weight="800" letter-spacing=".5">SAMSUNG</text>
+          </svg>
+          <strong>Samsung</strong>
+          <span class="guide-phone-description">Galaxy phone or tablet</span>
+          <span class="guide-phone-cta">Find my saved files <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="guide-phone-card" href="help.html#phone-android" id="guide-phone-android">
+          <svg class="guide-phone-picture" viewBox="0 0 160 164" aria-hidden="true" focusable="false">
+            <rect x="39" y="8" width="82" height="146" rx="14" fill="#717D75"/>
+            <rect x="43" y="12" width="74" height="138" rx="11" fill="#14392E"/>
+            <circle cx="80" cy="19" r="2.5" fill="#717D75"/>
+            <g fill="#8AEAB8" stroke="#8AEAB8" stroke-width="3" stroke-linecap="round">
+              <path d="M58 77a22 22 0 0 1 44 0z" stroke="none"/>
+              <path d="M65 57l-6-9m36 9 6-9"/>
+              <rect x="59" y="82" width="42" height="29" rx="4" stroke="none"/>
+              <path d="M53 86v20m54-20v20m-38 7v10m22-10v10" stroke-width="7"/>
+              <circle cx="69" cy="67" r="2" fill="#14392E" stroke="none"/><circle cx="91" cy="67" r="2" fill="#14392E" stroke="none"/>
+            </g>
+          </svg>
+          <strong>Other Android</strong>
+          <span class="guide-phone-description">Pixel, Motorola, and more</span>
+          <span class="guide-phone-cta">Find my saved files <span aria-hidden="true">→</span></span>
+        </a>
+      </div>
+    </section>
   </section>
 
   <div id="guide-path" hidden>
   <div class="guide-platform-switch" role="group" aria-label="Choose a different computer">
     <span>Computer:</span>
-    <button class="fchip" type="button" data-guide-platform="macos" aria-pressed="false" aria-controls="guide-path">macOS</button>
+    <button class="fchip" type="button" data-guide-platform="macos" aria-pressed="false" aria-controls="guide-path">Mac</button>
     <button class="fchip" type="button" data-guide-platform="windows" aria-pressed="false" aria-controls="guide-path">Windows</button>
   </div>
   <nav class="guide-sections" aria-label="Jump to a guide section">
@@ -95,13 +164,16 @@
   </section>
   </div>
 
-  <aside class="guide-notes" aria-label="Download tips">
+  <details class="guide-notes">
+    <summary>Helpful tips <span class="guide-tip-summary">Before you save</span></summary>
+    <div class="guide-notes-content">
     <h2>Before you close the tab</h2>
     <p>Keep it open while the website is saving. With <strong>Save to Downloads</strong>, also check that the browser download has finished. A file saved directly to a chosen folder may bypass the browser’s download list.</p>
     <p>Several selected items may create several files. Allow multiple downloads if your browser asks, and leave enough space for ZIP files and their extracted contents. EPUB files need a compatible reader.</p>
     <p>This guide saves content files. To keep a complete offline library from a card, copy the whole card with its folder names intact.</p>
     <a href="help.html" id="guide-help">More help opening saved files</a>
-  </aside>
+    </div>
+  </details>
   <p class="guide-footer"><span id="guide-platform-disclosure"></span> <a href="privacy.html">Privacy and cookie choices</a></p>
   <noscript><p class="note">The slideshow needs JavaScript to move between slides. The download tips above are still available.</p></noscript>
 </main>

@@ -241,7 +241,7 @@
     document.getElementById('guide-choice').hidden = true;
     document.getElementById('guide-path').hidden = false;
     document.getElementById('guide-heading').textContent = config.heading;
-    document.getElementById('guide-intro').textContent = 'The 12-slide ' + config.label + ' guide. Follow the gold circles and choose the next step when you are ready.';
+    document.getElementById('guide-intro').textContent = 'Follow the pictures and gold circles. Press Next when you are ready.';
     document.getElementById('guide-skip').href = '#guide-viewer';
     document.getElementById('guide-platform-disclosure').textContent = platform === 'windows'
       ? 'Windows browser and File Explorer views are labeled recreated examples.'
@@ -327,6 +327,10 @@
   } else back.href = ET.scopeEntryUrl();
   document.getElementById('guide-home').href = scope ? ET.scopeEntryUrl() : 'index.html';
   document.getElementById('guide-help').href = ET.scopedUrl('help.html');
+  ['apple', 'samsung', 'android'].forEach(function (device) {
+    var link = document.getElementById('guide-phone-' + device);
+    if (link) link.href = ET.scopedUrl('help.html') + '#phone-' + device;
+  });
   document.getElementById('guide-theme').addEventListener('click', function () {
     var explicit = document.documentElement.getAttribute('data-theme');
     var light = explicit === 'light' || (!explicit && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches);

@@ -8,12 +8,13 @@
 
    VERSION must change whenever the shell changes, or an installed copy keeps
    serving the old one. `easytransfer build` rewrites it. */
-var VERSION = 'shell-v23';
+var VERSION = 'shell-v24';
 
 var SHELL = [
   'index.html', 'library.html', 'item.html', 'share.html', 'help.html', 'nearby.html',
   'manifest.webmanifest', 'privacy.html', 'save-guide.html',
   'assets/css/app.css', 'assets/css/consent.css', 'assets/css/save-guide.css',
+  'assets/css/help-device.css',
   'assets/js/core.js', 'assets/js/i18n.js', 'assets/js/art.js', 'assets/js/analytics.js',
   'assets/js/home.js', 'assets/js/library.js', 'assets/js/item.js',
   'assets/js/share.js', 'assets/js/help.js', 'assets/js/save.js', 'assets/js/nearby.js', 'assets/js/save-guide.js',
@@ -47,7 +48,8 @@ self.addEventListener('install', function (e) {
       // fixed and known, but a partial build should not brick installation,
       // so each file is added on its own and failures are tolerated.
       return Promise.all(SHELL.map(function (u) {
-        return c.add(u).catch(function () {});
+        // A new shell version must not inherit fresh-but-outdated HTTP assets.
+        return c.add(new Request(u, { cache: 'reload' })).catch(function () {});
       }));
     }).then(function () { return self.skipWaiting(); })
   );
@@ -91,16 +93,22 @@ self.addEventListener('fetch', function (e) {
   // off, but refresh in the background so a rebuild is picked up. Keyed by
   // path alone: item.html?id=a and item.html?id=b are the same page.
   var key = new Request(path);
+  var cached = caches.open(VERSION).then(function (c) { return c.match(key); });
+  // Revalidate against the server even within an asset's HTTP max-age.
+  var live = fetch(req, { cache: 'no-cache' }).then(function (res) {
+    if (res && res.ok) {
+      var copy = res.clone();
+      return caches.open(VERSION).then(function (c) {
+        return c.put(key, copy);
+      }).catch(function () {
+        // A full or unavailable cache must not discard a successful response.
+      }).then(function () { return res; });
+    }
+    return res;
+  }).catch(function () { return cached; });
+  // Keep the refresh and cache write alive after returning a cached response.
+  e.waitUntil(live.then(function () {}));
   e.respondWith(
-    caches.match(key).then(function (hit) {
-      var live = fetch(req).then(function (res) {
-        if (res && res.ok) {
-          var copy = res.clone();
-          caches.open(VERSION).then(function (c) { c.put(key, copy); });
-        }
-        return res;
-      }).catch(function () { return hit; });
-      return hit || live;
-    })
+    cached.then(function (hit) { return hit || live; })
   );
 });
