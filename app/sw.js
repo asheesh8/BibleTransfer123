@@ -8,7 +8,7 @@
 
    VERSION must change whenever the shell changes, or an installed copy keeps
    serving the old one. `easytransfer build` rewrites it. */
-var VERSION = 'shell-v22';
+var VERSION = 'shell-v23';
 
 var SHELL = [
   'index.html', 'library.html', 'item.html', 'share.html', 'help.html', 'nearby.html',
@@ -26,13 +26,18 @@ var SHELL = [
   'share-libraries/index.html',
   'assets/icon/icon-192.png', 'assets/icon/icon-512.png',
   'data/catalog.js',
-  'assets/save-guide/slide-01.webp', 'assets/save-guide/slide-02.webp',
-  'assets/save-guide/slide-03.webp', 'assets/save-guide/slide-04.webp',
-  'assets/save-guide/slide-05.webp', 'assets/save-guide/slide-06.webp',
-  'assets/save-guide/slide-07.webp', 'assets/save-guide/slide-08.webp',
-  'assets/save-guide/slide-09.webp', 'assets/save-guide/slide-10.webp',
-  'assets/save-guide/slide-11.webp', 'assets/save-guide/slide-12.webp',
-  'assets/save-guide/slide-13.webp', 'assets/save-guide/slide-14.webp'
+  'assets/save-guide/macos/slide-01.webp', 'assets/save-guide/macos/slide-02.webp',
+  'assets/save-guide/macos/slide-03.webp', 'assets/save-guide/macos/slide-04.webp',
+  'assets/save-guide/macos/slide-05.webp', 'assets/save-guide/macos/slide-06.webp',
+  'assets/save-guide/macos/slide-07.webp', 'assets/save-guide/macos/slide-08.webp',
+  'assets/save-guide/macos/slide-09.webp', 'assets/save-guide/macos/slide-10.webp',
+  'assets/save-guide/macos/slide-11.webp', 'assets/save-guide/macos/slide-12.webp',
+  'assets/save-guide/windows/slide-01.webp', 'assets/save-guide/windows/slide-02.webp',
+  'assets/save-guide/windows/slide-03.webp', 'assets/save-guide/windows/slide-04.webp',
+  'assets/save-guide/windows/slide-05.webp', 'assets/save-guide/windows/slide-06.webp',
+  'assets/save-guide/windows/slide-07.webp', 'assets/save-guide/windows/slide-08.webp',
+  'assets/save-guide/windows/slide-09.webp', 'assets/save-guide/windows/slide-10.webp',
+  'assets/save-guide/windows/slide-11.webp', 'assets/save-guide/windows/slide-12.webp'
 ];
 
 self.addEventListener('install', function (e) {

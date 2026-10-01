@@ -142,6 +142,20 @@
     "source": "ZIP instructions for Mac and Windows"
   }
 ];
+  var PLATFORM = {
+    macos: {
+      label: 'macOS', heading: 'Save to your Mac', osStart: 8, sources: [1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 13, 14],
+      cover: { title: 'Save to your Mac', label: 'MACOS GUIDE', body: 'Choose it. Save it. Open it.', hint: 'Follow the website steps, then find your file in Finder.', alt: 'macOS guide introduction: choose, save, and open a file on your Mac.', source: 'Screenshot guide for macOS', section: 1 },
+      zip: { title: 'macOS: open a ZIP file', label: 'IF YOUR DOWNLOAD IS A ZIP', body: 'Double-click the ZIP.\n\nOpen the new folder, then open the files inside.', hint: 'Leave enough space for both the ZIP and its extracted files.', alt: 'macOS ZIP instructions: double-click the ZIP, then open the new folder and its files.', source: 'ZIP instructions for macOS', section: 14 }
+    },
+    windows: {
+      label: 'Windows', heading: 'Save to your Windows computer', osStart: 10, sources: [1, 2, 3, 4, 5, 6, 7, 10, 11, 12, 13, 14],
+      cover: { title: 'Save to your Windows computer', label: 'WINDOWS GUIDE', body: 'Choose it. Save it. Open it.', hint: 'Follow the website steps, then find your file in File Explorer.', alt: 'Windows guide introduction: choose, save, and open a file on your PC.', source: 'Screenshot guide for Windows', section: 1 },
+      zip: { title: 'Windows: open a ZIP file', label: 'IF YOUR DOWNLOAD IS A ZIP', body: 'Right-click the ZIP.\nChoose “Extract All”, then “Extract”.\n\nOpen the extracted folder.', hint: 'Leave enough space for both the ZIP and its extracted files.', alt: 'Windows ZIP instructions: right-click the ZIP, choose Extract All, then Extract, and open the extracted folder.', source: 'ZIP instructions for Windows', section: 14 }
+    }
+  };
+  var platform = '';
+  var path = [];
   var index = 0;
   var viewer = document.getElementById('guide-viewer');
   var image = document.getElementById('guide-image');
@@ -152,60 +166,131 @@
   var status = document.getElementById('guide-status');
   var imageError = document.getElementById('guide-image-error');
   var sectionLinks = Array.prototype.slice.call(document.querySelectorAll('[data-guide-step]'));
+  var platformButtons = Array.prototype.slice.call(document.querySelectorAll('[data-guide-platform]'));
 
-  function slideUrl(i) {
-    return 'assets/save-guide/slide-' + ('0' + (i + 1)).slice(-2) + '.webp';
-  }
-  function fromHash() {
+  // Hash step numbers retain the original source slide number, so older
+  // library links (#step-12) still land on "several items" after a choice.
+  function sourceFromHash() {
     var match = /^#step-(\d{1,2})$/.exec(location.hash);
     var n = match ? Number(match[1]) : 1;
-    return n >= 1 && n <= SLIDES.length ? n - 1 : 0;
+    return n >= 1 && n <= SLIDES.length ? n : 1;
+  }
+  function platformFromUrl() {
+    var value;
+    try { value = new URLSearchParams(location.search).get('platform'); } catch (e) { return ''; }
+    return value === 'macos' || value === 'windows' ? value : '';
+  }
+  function platformForSource(n) {
+    return n === 8 || n === 9 ? 'macos' : n === 10 || n === 11 ? 'windows' : '';
+  }
+  function pathIndexForSource(n) {
+    var found = PLATFORM[platform].sources.indexOf(n);
+    if (found !== -1) return found;
+    // An explicit platform always wins over a conflicting legacy OS hash.
+    // Switching computers keeps the equivalent find/open step when possible.
+    return n === 9 || n === 11 ? 8 : n === 8 || n === 10 ? 7 : 0;
+  }
+  function slideUrl(i) {
+    return 'assets/save-guide/' + platform + '/slide-' + ('0' + (i + 1)).slice(-2) + '.webp';
+  }
+  function updateUrl() {
+    try {
+      var params = new URLSearchParams(location.search);
+      params.set('platform', platform);
+      history.replaceState(null, '', location.pathname + '?' + params.toString() + '#step-' + PLATFORM[platform].sources[index]);
+    } catch (e) { /* A card's file:// browser may refuse history updates. */ }
   }
   function show(i, updateHash) {
-    index = Math.max(0, Math.min(SLIDES.length - 1, i));
-    var slide = SLIDES[index];
+    if (!platform) return;
+    index = Math.max(0, Math.min(path.length - 1, isFinite(i) ? i : 0));
+    var slide = path[index];
     var src = slideUrl(index);
     imageError.hidden = true;
     image.alt = slide.alt;
     image.src = src;
     document.getElementById('guide-image-link').href = src;
     document.getElementById('guide-title').textContent = slide.title;
-    document.getElementById('guide-label').textContent = slide.label || 'MAC + WINDOWS';
+    document.getElementById('guide-label').textContent = slide.label || PLATFORM[platform].label.toUpperCase();
     document.getElementById('guide-body').textContent = slide.body;
     document.getElementById('guide-hint').textContent = slide.hint || '';
     document.getElementById('guide-source').textContent = slide.source;
-    document.getElementById('guide-counter').textContent = 'Slide ' + (index + 1) + ' of ' + SLIDES.length;
-    status.textContent = 'Slide ' + (index + 1) + ' of ' + SLIDES.length + '. ' + slide.title;
+    var counter = PLATFORM[platform].label + ' · Slide ' + (index + 1) + ' of ' + path.length;
+    document.getElementById('guide-counter').textContent = counter;
+    status.textContent = counter + '. ' + slide.title;
     prev.disabled = index === 0;
-    next.disabled = index === SLIDES.length - 1;
+    next.disabled = index === path.length - 1;
     picker.value = String(index + 1);
     sectionLinks.forEach(function (link) {
       if (Number(link.getAttribute('data-guide-step')) === slide.section) link.setAttribute('aria-current', 'true');
       else link.removeAttribute('aria-current');
     });
-    if (updateHash) {
-      try { history.replaceState(null, '', location.pathname + location.search + '#step-' + (index + 1)); }
-      catch (e) { /* A card's file:// browser may refuse history updates. */ }
-    }
+    if (updateHash) updateUrl();
+  }
+  function choosePlatform(value, source, focus) {
+    if (value !== 'macos' && value !== 'windows') return;
+    platform = value;
+    var config = PLATFORM[platform];
+    path = config.sources.map(function (n) {
+      if (n === 1) return config.cover;
+      if (n === 14) return config.zip;
+      var original = SLIDES[n - 1], copy = {}, key;
+      for (key in original) if (Object.prototype.hasOwnProperty.call(original, key)) copy[key] = original[key];
+      if (n >= 2 && n <= 7 || n === 12 || n === 13) copy.source = 'Actual website screenshot · ' + config.label + ' guide';
+      return copy;
+    });
+    document.getElementById('guide-choice').hidden = true;
+    document.getElementById('guide-path').hidden = false;
+    document.getElementById('guide-heading').textContent = config.heading;
+    document.getElementById('guide-intro').textContent = 'The 12-slide ' + config.label + ' guide. Follow the gold circles and choose the next step when you are ready.';
+    document.getElementById('guide-skip').href = '#guide-viewer';
+    document.getElementById('guide-platform-disclosure').textContent = platform === 'windows'
+      ? 'Windows browser and File Explorer views are labeled recreated examples.'
+      : 'Mac Finder and Preview views use actual screenshots.';
+    viewer.setAttribute('aria-label', config.label + ' save guide slideshow');
+    document.title = config.heading + ' — The Library';
+    var osLink = document.getElementById('guide-os-link');
+    osLink.setAttribute('data-guide-step', String(config.osStart));
+    osLink.href = '#step-' + config.osStart;
+    osLink.textContent = 'Find and open on ' + config.label;
+    platformButtons.forEach(function (button) {
+      button.setAttribute('aria-pressed', String(button.getAttribute('data-guide-platform') === platform));
+    });
+    picker.innerHTML = path.map(function (slide, i) {
+      return '<option value="' + (i + 1) + '">' + (i + 1) + '. ' + ET.esc(slide.title) + '</option>';
+    }).join('');
+    show(pathIndexForSource(source), true);
+    if (focus) viewer.focus();
   }
 
-  picker.innerHTML = SLIDES.map(function (slide, i) {
-    return '<option value="' + (i + 1) + '">' + (i + 1) + '. ' + ET.esc(slide.title) + '</option>';
-  }).join('');
+  platformButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      var source = platform ? PLATFORM[platform].sources[index] : sourceFromHash();
+      choosePlatform(button.getAttribute('data-guide-platform'), source, true);
+    });
+  });
   picker.addEventListener('change', function () { show(Number(picker.value) - 1, true); });
   prev.addEventListener('click', function () { show(index - 1, true); });
   next.addEventListener('click', function () { show(index + 1, true); });
   sectionLinks.forEach(function (link) {
     link.addEventListener('click', function (event) {
       event.preventDefault();
-      show(Number(link.getAttribute('data-guide-step')) - 1, true);
+      if (!platform) return;
+      show(pathIndexForSource(Number(link.getAttribute('data-guide-step'))), true);
       viewer.focus();
     });
   });
-  window.addEventListener('hashchange', function () { show(fromHash(), false); });
+  window.addEventListener('hashchange', function () {
+    if (!/^#step-\d{1,2}$/.test(location.hash)) return;
+    var source = sourceFromHash();
+    if (platform) show(pathIndexForSource(source), false);
+    else {
+      var legacyPlatform = platformForSource(source);
+      if (legacyPlatform) choosePlatform(legacyPlatform, source, false);
+    }
+  });
   document.addEventListener('keydown', function (event) {
     var target = event.target;
-    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||
+    if (!platform || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||
         (target && (/^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName) || target.isContentEditable)) ||
         document.querySelector('[role="dialog"]:not([hidden]), .welcome')) return;
     if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
@@ -248,5 +333,7 @@
     ET.theme(light ? 'dark' : 'light');
   });
   ET.theme();
-  show(fromHash(), false);
+  var initialSource = sourceFromHash();
+  var initialPlatform = platformFromUrl() || platformForSource(initialSource);
+  if (initialPlatform) choosePlatform(initialPlatform, initialSource, false);
 })(window.ET);
