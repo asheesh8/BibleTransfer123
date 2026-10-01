@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Save to your computer — The Library</title>
+<meta name="description" content="A screenshot guide to saving library books, films, and audio on Mac and Windows.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon/favicon-32.png" sizes="32x32">
+<meta name="theme-color" content="#4E1F64">
+<link rel="stylesheet" href="assets/css/app.css">
+<link rel="stylesheet" href="assets/css/consent.css">
+<link rel="stylesheet" href="assets/css/save-guide.css">
+<script>
+  try {
+    var t = localStorage.getItem('et.theme');
+    if (t) document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+</script>
+</head>
+<body class="save-guide-page">
+<a class="guide-skip" href="#guide-viewer">Skip to the slideshow</a>
+<header class="guide-top">
+  <div class="guide-wrap">
+    <a class="guide-brand" href="index.html" id="guide-home">The Library</a>
+    <button class="fchip" id="guide-theme" type="button" aria-label="Switch light or dark appearance">Light / dark</button>
+  </div>
+</header>
+<main class="guide-wrap" lang="en" dir="ltr">
+  <a class="guide-back" href="library.html" id="guide-back">← Back to the library</a>
+  <div class="guide-heading">
+    <p class="eyebrow">SCREENSHOT GUIDE · ENGLISH</p>
+    <h1>Save to your computer</h1>
+    <p class="muted">Follow the website steps, then choose Mac or Windows. The gold circles show where to click.</p>
+  </div>
+
+  <nav class="guide-sections" aria-label="Jump to a guide section">
+    <a href="#step-2" data-guide-step="2">Website steps</a>
+    <a href="#step-8" data-guide-step="8">On a Mac</a>
+    <a href="#step-10" data-guide-step="10">On Windows</a>
+    <a href="#step-12" data-guide-step="12">Several items</a>
+    <a href="#step-14" data-guide-step="14">ZIP files</a>
+  </nav>
+
+  <section class="guide-viewer" id="guide-viewer" tabindex="-1" aria-label="Save guide slideshow" aria-roledescription="carousel">
+    <div class="guide-toolbar">
+      <p id="guide-counter">Slide 1 of 14</p>
+      <button class="fchip" type="button" id="guide-fullscreen" hidden aria-pressed="false">Full screen</button>
+    </div>
+    <div class="guide-slide" role="group" aria-roledescription="slide" aria-labelledby="guide-title">
+      <figure class="guide-picture">
+        <img id="guide-image" src="assets/save-guide/slide-01.webp" width="1280" height="720" alt="Guide introduction: choose, save, and open a file on Mac or Windows.">
+        <figcaption id="guide-source">Screenshot guide for Mac and Windows</figcaption>
+      </figure>
+      <div class="guide-caption">
+        <p class="guide-label" id="guide-label">MAC + WINDOWS</p>
+        <h2 id="guide-title">Save to your computer</h2>
+        <p id="guide-body">Choose it. Save it. Open it.</p>
+        <p class="guide-hint" id="guide-hint">Start with the website steps, then follow your computer’s section.</p>
+        <a id="guide-image-link" href="assets/save-guide/slide-01.webp" target="_blank" rel="noopener">Open full-size slide <span class="guide-small">(new tab)</span></a>
+        <p class="guide-image-error" id="guide-image-error" hidden>The screenshot could not load. You can still follow the instructions here.</p>
+      </div>
+    </div>
+    <div class="guide-controls">
+      <button class="btn ghost" id="guide-prev" type="button" disabled aria-label="Previous slide">← Previous</button>
+      <label for="guide-step" class="guide-step-label">Go to slide
+        <select id="guide-step"><option value="1">1. Introduction</option></select>
+      </label>
+      <button class="btn" id="guide-next" type="button" aria-label="Next slide">Next →</button>
+    </div>
+    <p class="guide-keyboard">Use ← and → on your keyboard. Slides stay put until you choose the next one.</p>
+    <p class="guide-sr-only" id="guide-status" role="status" aria-live="polite" aria-atomic="true"></p>
+  </section>
+
+  <aside class="guide-notes" aria-label="Download tips">
+    <h2>Before you close the tab</h2>
+    <p>Keep it open while the website is saving. With <strong>Save to Downloads</strong>, also check that the browser download has finished. A file saved directly to a chosen folder may bypass the browser’s download list.</p>
+    <p>Several selected items may create several files. Allow multiple downloads if your browser asks, and leave enough space for ZIP files and their extracted contents. EPUB files need a compatible reader.</p>
+    <p>This guide saves content files. To keep a complete offline library from a card, copy the whole card with its folder names intact.</p>
+    <a href="help.html" id="guide-help">More help opening saved files</a>
+  </aside>
+  <p class="guide-footer">Windows browser and File Explorer views are labeled recreated examples. <a href="privacy.html">Privacy and cookie choices</a></p>
+  <noscript><p class="note">The slideshow needs JavaScript to move between slides. The download tips above are still available.</p></noscript>
+</main>
+<script src="data/catalog.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/analytics.js"></script>
+<script src="assets/js/save-guide.js"></script>
+</body>
+</html>

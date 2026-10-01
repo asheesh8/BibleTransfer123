@@ -42,6 +42,12 @@
       '<h1>' + ET.esc(L.native || L.name || '') + '</h1>' +
       '<p class="muted">' + line + '</p></header>';
 
+    out += '<a class="tile" href="' + ET.esc(ET.scopedUrl('save-guide.html')) + '" lang="en" dir="ltr">' +
+      '<span class="ico">' + ET.icon('laptop') + '</span>' +
+      '<span><span class="t">Save to your computer</span>' +
+      '<span class="s">Screenshot guide · English · Mac + Windows</span></span>' +
+      '<span class="chev">' + ET.icon('chev') + '</span></a>';
+
     // ---- carry on
     var last = lastOpened();
     if (last) {

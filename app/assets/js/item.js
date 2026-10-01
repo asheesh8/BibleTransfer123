@@ -169,6 +169,12 @@
       (canSave ? '<button class="btn green" id="save">' + ET.icon('save') + h('item.save') + '</button>' : '') +
       '<button class="btn sky" id="share">' + ET.icon('share') + h('item.share') + '</button></div>';
 
+    if (canSave) {
+      html += '<a class="save-guide-entry" href="' + ET.esc(ET.scopedUrl('save-guide.html', { id: r.id })) +
+        '" lang="en" dir="ltr">' + ET.icon('laptop') +
+        '<span>Save to your computer — screenshot guide <small>(English)</small></span></a>';
+    }
+
     var links = (r.links || []).filter(function (link) {
       return !/^Read .+\(PDF\)$/i.test(link.label || '');
     });

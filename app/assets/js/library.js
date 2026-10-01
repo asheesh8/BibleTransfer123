@@ -246,6 +246,17 @@
   ET.$('#search-ico').innerHTML = ET.icon('search');
   var shareIcon = ET.$('#share-language-ico');
   if (shareIcon) shareIcon.innerHTML = ET.icon('share');
+  var saveGuide = ET.$('#library-save-guide');
+  // Language landing pages use this script too, with a smaller HTML shell.
+  if (!saveGuide && ET.$('#bulk-controls')) {
+    ET.$('#bulk-controls').insertAdjacentHTML('afterend',
+      '<a class="save-guide-entry" id="library-save-guide" href="save-guide.html#step-12" lang="en" dir="ltr">' +
+      '<span id="save-guide-ico"></span><span>Saving on Mac or Windows? See the screenshot guide <small>(English)</small></span></a>');
+    saveGuide = ET.$('#library-save-guide');
+  }
+  if (saveGuide) saveGuide.href = ET.scopedUrl('save-guide.html') + '#step-12';
+  var saveGuideIcon = ET.$('#save-guide-ico');
+  if (saveGuideIcon) saveGuideIcon.innerHTML = ET.icon('laptop');
   ET.$('#empty-art').innerHTML = ET.art.empty();
 
   var q = ET.$('#q');

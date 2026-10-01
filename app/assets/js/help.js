@@ -65,7 +65,12 @@
   ];
 
   function render() {
-    var out = SECTIONS.map(function (s) {
+    var out = '<a class="tile" href="' + ET.esc(ET.scopedUrl('save-guide.html')) + '" lang="en" dir="ltr">' +
+      '<span class="ico">' + ET.icon('laptop') + '</span>' +
+      '<span><span class="t">Save to your computer</span>' +
+      '<span class="s">Screenshot guide · English · Mac + Windows</span></span>' +
+      '<span class="chev">' + ET.icon('chev') + '</span></a>';
+    out += SECTIONS.map(function (s) {
       return '<div class="card"><div style="display:flex;align-items:center;gap:.7rem;' +
         'margin-bottom:.8rem"><span class="ico" style="width:44px;height:44px;' +
         'display:grid;place-items:center;border-radius:var(--r);' +

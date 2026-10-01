@@ -8,15 +8,15 @@
 
    VERSION must change whenever the shell changes, or an installed copy keeps
    serving the old one. `easytransfer build` rewrites it. */
-var VERSION = 'shell-v21';
+var VERSION = 'shell-v22';
 
 var SHELL = [
   'index.html', 'library.html', 'item.html', 'share.html', 'help.html', 'nearby.html',
-  'manifest.webmanifest', 'privacy.html',
-  'assets/css/app.css', 'assets/css/consent.css',
+  'manifest.webmanifest', 'privacy.html', 'save-guide.html',
+  'assets/css/app.css', 'assets/css/consent.css', 'assets/css/save-guide.css',
   'assets/js/core.js', 'assets/js/i18n.js', 'assets/js/art.js', 'assets/js/analytics.js',
   'assets/js/home.js', 'assets/js/library.js', 'assets/js/item.js',
-  'assets/js/share.js', 'assets/js/help.js', 'assets/js/save.js', 'assets/js/nearby.js',
+  'assets/js/share.js', 'assets/js/help.js', 'assets/js/save.js', 'assets/js/nearby.js', 'assets/js/save-guide.js',
   'assets/js/shared-library.js', 'assets/js/share-libraries.js', 'assets/vendor/peerjs.min.js',
   'english/index.html', 'mandarin/index.html', 'hindi/index.html', 'urdu/index.html',
   'swahili/index.html', 'cantonese/index.html', 'pashto/index.html', 'sindhi/index.html',
@@ -25,7 +25,14 @@ var SHELL = [
   'eastern-punjabi/index.html', 'western-punjabi/index.html', 'nepali/index.html',
   'share-libraries/index.html',
   'assets/icon/icon-192.png', 'assets/icon/icon-512.png',
-  'data/catalog.js'
+  'data/catalog.js',
+  'assets/save-guide/slide-01.webp', 'assets/save-guide/slide-02.webp',
+  'assets/save-guide/slide-03.webp', 'assets/save-guide/slide-04.webp',
+  'assets/save-guide/slide-05.webp', 'assets/save-guide/slide-06.webp',
+  'assets/save-guide/slide-07.webp', 'assets/save-guide/slide-08.webp',
+  'assets/save-guide/slide-09.webp', 'assets/save-guide/slide-10.webp',
+  'assets/save-guide/slide-11.webp', 'assets/save-guide/slide-12.webp',
+  'assets/save-guide/slide-13.webp', 'assets/save-guide/slide-14.webp'
 ];
 
 self.addEventListener('install', function (e) {
