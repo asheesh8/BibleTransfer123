@@ -34,6 +34,8 @@ LANGUAGES = {
     "urd": ("urd", "Urdu", ""),
     "snd": ("snd", "Sindhi", ""),
     "guz": ("guz", "Gusii", ""),
+    "kik": ("kik", "Kikuyu", ""),
+    "mar": ("mar", "Marathi", ""),
     "swh": ("swh", "Swahili", "Coastal"),
     "swa": ("swh", "Swahili", "General"),
     "pbu": ("pus", "Pashto", "Northern"),

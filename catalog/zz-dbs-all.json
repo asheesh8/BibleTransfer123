@@ -1,5 +1,5 @@
 {
- "generated": "Rendered Digital Bible Society language pages — verified 2026-09-24, 2026-09-25, 2026-09-26, 2026-09-27",
+ "generated": "Rendered Digital Bible Society language pages — verified 2026-09-24, 2026-09-25, 2026-09-26, 2026-09-27, 2026-10-01",
  "languages": {},
  "resources": [
   {
@@ -27114,6 +27114,519 @@
     }
    ],
    "source": "https://dbs.org/discover/languages/mas"
+  },
+  {
+   "id": "kik-audio-bible-dbs-gikuyu-kikuyu-bible-e50fc1c94",
+   "lang": "kik",
+   "type": "audio-bible",
+   "title": "Gikuyu (Kikuyu) Bible",
+   "native": null,
+   "org": "Digital Bible Society",
+   "year": "1951",
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Kikuyu",
+   "typeLabel": "Audio Bibles",
+   "cover": null,
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "KIKKIK_DAVR_OT_N",
+    "version": "KIKKIK",
+    "testaments": [
+     "OT"
+    ]
+   },
+   "read": null,
+   "downloads": [],
+   "links": [],
+   "source": "https://dbs.org/bibles/audio/KIKKIK_DAVR_OT_N"
+  },
+  {
+   "id": "kik-audio-bible-dbs-gikuyu-old-testament-f4f3e396b",
+   "lang": "kik",
+   "type": "audio-bible",
+   "title": "Gikuyu Old Testament",
+   "native": null,
+   "org": "Digital Bible Society",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Kikuyu",
+   "typeLabel": "Audio Bibles",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [],
+   "source": "https://dbs.org/bibles/audio/KIKBSK_DAVR_OT_N"
+  },
+  {
+   "id": "kik-scripture-dbs-gikuyu-1965-edition-29c6e6c80",
+   "lang": "kik",
+   "type": "scripture",
+   "title": "Gikuyu 1965 Edition",
+   "native": null,
+   "org": "Bible publisher",
+   "year": "1965",
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Kikuyu",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=KIUBSK"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/kik"
+  },
+  {
+   "id": "kik-scripture-dbs-gikuyu-kikuyu-bible-d931f069f",
+   "lang": "kik",
+   "type": "scripture",
+   "title": "Gikuyu (Kikuyu) Bible",
+   "native": null,
+   "org": "Bible publisher",
+   "year": "1951",
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Kikuyu",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=KIKKIK"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/kik"
+  },
+  {
+   "id": "mar-audio-bible-dbs-easy-to-read-marathi-bible-69158b523",
+   "lang": "mar",
+   "type": "audio-bible",
+   "title": "Easy-to-Read Marathi Bible",
+   "native": null,
+   "org": "Digital Bible Society",
+   "year": "2006",
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Marathi",
+   "typeLabel": "Audio Bibles",
+   "cover": null,
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "MARWTC_FCBH_NT_N",
+    "version": "MARWTC",
+    "testaments": [
+     "NT"
+    ]
+   },
+   "read": null,
+   "downloads": [],
+   "links": [],
+   "source": "https://dbs.org/bibles/audio/MARWTC_FCBH_NT_N"
+  },
+  {
+   "id": "mar-scripture-dbs-marathi-scripture-edition-8d8d798da",
+   "lang": "mar",
+   "type": "scripture",
+   "title": "Marathi Scripture edition",
+   "native": null,
+   "org": "Digital Bible Society",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Marathi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": {
+    "kind": "pdf",
+    "url": "https://bibles.dbs.org/MARERV/pdf/MARERV.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://bibles.dbs.org/MARERV/pdf/MARERV.pdf"
+    }
+   ],
+   "links": [],
+   "source": "https://dbs.org/bibles/MARERV"
+  },
+  {
+   "id": "mar-audio-bible-dbs-marathi-indian-revised-version-irv-18f586ec0",
+   "lang": "mar",
+   "type": "audio-bible",
+   "title": "Marathi Indian Revised Version (IRV)",
+   "native": null,
+   "org": "Digital Bible Society",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Marathi",
+   "typeLabel": "Audio Bibles",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [],
+   "source": "https://dbs.org/bibles/audio/MARBCS_DAVR_FB_N"
+  },
+  {
+   "id": "mar-audio-bible-dbs-marathi-old-version-bible-05aa08443",
+   "lang": "mar",
+   "type": "audio-bible",
+   "title": "Marathi Old Version Bible",
+   "native": null,
+   "org": "Digital Bible Society",
+   "year": "1853",
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Marathi",
+   "typeLabel": "Audio Bibles",
+   "cover": null,
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "MAROLD_DAVR_FB_N",
+    "version": "MAROLD",
+    "testaments": [
+     "OT",
+     "NT"
+    ]
+   },
+   "read": null,
+   "downloads": [],
+   "links": [],
+   "source": "https://dbs.org/bibles/audio/MAROLD_DAVR_FB_N"
+  },
+  {
+   "id": "mar-scripture-dbs-marathi-revised-version-e6dcaf303",
+   "lang": "mar",
+   "type": "scripture",
+   "title": "Marathi Revised Version",
+   "native": null,
+   "org": "Bible publisher",
+   "year": "1924",
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Marathi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=MARMRV"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/mar"
+  },
+  {
+   "id": "mar-scripture-dbs-contemporary-marathi-bible-e3c07e461",
+   "lang": "mar",
+   "type": "scripture",
+   "title": "Contemporary Marathi Bible",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Marathi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=MARZZZP"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/mar"
+  },
+  {
+   "id": "mar-scripture-dbs-old-version-7fd11ce7d",
+   "lang": "mar",
+   "type": "scripture",
+   "title": "Old Version",
+   "native": null,
+   "org": "Bible publisher",
+   "year": "2015",
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Marathi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=MARRVV"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/mar"
+  },
+  {
+   "id": "mar-scripture-dbs-new-testament-in-marathi-0ed9dbc5d",
+   "lang": "mar",
+   "type": "scripture",
+   "title": "New Testament in Marathi",
+   "native": null,
+   "org": "Bible publisher",
+   "year": "1978",
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Marathi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=MARTBN"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/mar"
+  },
+  {
+   "id": "mar-scripture-dbs-marathi-old-version-bible-caea1b93e",
+   "lang": "mar",
+   "type": "scripture",
+   "title": "Marathi Old Version Bible",
+   "native": null,
+   "org": "Bible publisher",
+   "year": "1853",
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Marathi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=MAROLD"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/mar"
+  },
+  {
+   "id": "mar-scripture-dbs-easy-to-read-marathi-bible-258d700c6",
+   "lang": "mar",
+   "type": "scripture",
+   "title": "Easy-to-Read Marathi Bible",
+   "native": null,
+   "org": "Bible publisher",
+   "year": "2006",
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Marathi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=MARWTC"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/mar"
+  },
+  {
+   "id": "mar-scripture-dbs-resource-1f632c1c1",
+   "lang": "mar",
+   "type": "scripture",
+   "title": "देवाच्य तस्कारास",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Marathi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://s3.ap-south-1.amazonaws.com/odi-anusaran/resources/mr-gods-smuggler.pdf"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/mar"
+  },
+  {
+   "id": "mar-scripture-dbs-1-92fd395b5",
+   "lang": "mar",
+   "type": "scripture",
+   "title": "वादळत दृदपण उभे रहाणे शिक्षण मार्गदर्शिका मॉडेल 1",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Marathi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://s3.ap-south-1.amazonaws.com/odi-anusaran/resources/mr-teacher-module-1.pdf"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/mar"
+  },
+  {
+   "id": "mar-scripture-dbs-2-a1403f3fe",
+   "lang": "mar",
+   "type": "scripture",
+   "title": "वादळत दृदपण उभे रहाणे शिक्षण मार्गदर्शिका मॉडेल 2",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Marathi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://s3.ap-south-1.amazonaws.com/odi-anusaran/resources/mr-teacher-module-2.pdf"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/mar"
+  },
+  {
+   "id": "mar-scripture-dbs-1-c5df8d925",
+   "lang": "mar",
+   "type": "scripture",
+   "title": "वादळत दृदपण उभे रहाणे अभ्यासक्रम मार्गदर्शिका मॉडेल 1",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Marathi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://s3.ap-south-1.amazonaws.com/odi-anusaran/resources/mr-students-module-1.pdf"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/mar"
+  },
+  {
+   "id": "mar-scripture-dbs-2-31652e91a",
+   "lang": "mar",
+   "type": "scripture",
+   "title": "वादळत दृदपण उभे रहाणे अभ्यासक्रम मार्गदर्शिका मॉडेल 2",
+   "native": null,
+   "org": "Bible publisher",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Marathi",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://s3.ap-south-1.amazonaws.com/odi-anusaran/resources/mr-students-module-2.pdf"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/mar"
   }
  ]
 }

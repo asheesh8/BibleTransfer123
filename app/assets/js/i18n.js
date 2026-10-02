@@ -19,6 +19,7 @@
     { code: 'en',  name: 'English', native: 'English', dir: 'ltr' },
     { code: 'cmn', name: 'Mandarin', native: '普通话',  dir: 'ltr' },
     { code: 'hi', name: 'Hindi', native: 'हिन्दी', dir: 'ltr' },
+    { code: 'mr', name: 'Marathi', native: 'मराठी', dir: 'ltr' },
     { code: 'ur',  name: 'Urdu',    native: 'اردو',    dir: 'rtl' },
     { code: 'swh', name: 'Swahili', native: 'Kiswahili', dir: 'ltr' },
     { code: 'zul', name: 'Zulu', native: 'isiZulu', dir: 'ltr' },
@@ -28,6 +29,7 @@
     { code: 'pa', name: 'Eastern Punjabi', native: 'ਪੰਜਾਬੀ', dir: 'ltr' },
     { code: 'ne', name: 'Nepali', native: 'नेपाली', dir: 'ltr' },
     { code: 'snd', name: 'Sindhi',  native: 'سنڌي',    dir: 'rtl' },
+    { code: 'kik', name: 'Kikuyu', native: 'Gĩkũyũ', dir: 'ltr' },
     { code: 'guz', name: 'Gusii', native: 'Ekegusii / Kisii', dir: 'ltr' },
     { code: 'mas', name: 'Maasai', native: 'ɔl Maa', dir: 'ltr' }
   ];
@@ -4845,6 +4847,10 @@
   // readers in Kenya and Tanzania use in school and church. Replace with Maa
   // lines key by key once a native speaker has written them.
   STRINGS.mas = Object.assign({}, STRINGS.swh);
+  // Kikuyu and Marathi content use the English interface until reviewed
+  // translations are supplied. Empty blocks retain the usual English fallback.
+  STRINGS.kik = {};
+  STRINGS.mr = {};
 
   var shared = ET.libraryScope();
   var current = (shared && shared.ui) || ET.store.get('et.lang', '') || '';
@@ -5001,7 +5007,8 @@
   var BROWSER = [
     [/^pa[-_](arab|pk)/i, 'pnb'], [/^pnb/i, 'pnb'], [/^pa/i, 'pa'],
     [/^zh[-_](hk|mo|tw|hant)|^yue/i, 'yue'], [/^zh/i, 'cmn'],
-    [/^sw/i, 'swh'], [/^hi/i, 'hi'], [/^ur/i, 'ur'], [/^ps/i, 'ps'], [/^sd/i, 'snd'],
+    [/^sw/i, 'swh'], [/^hi/i, 'hi'], [/^mr/i, 'mr'], [/^ur/i, 'ur'], [/^ps/i, 'ps'], [/^sd/i, 'snd'],
+    [/^(ki|kik)(?:[-_]|$)/i, 'kik'],
     [/^ne/i, 'ne'], [/^guz/i, 'guz'], [/^zu/i, 'zul'], [/^mas/i, 'mas'], [/^en/i, 'en']
   ];
   function suggested() {

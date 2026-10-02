@@ -148,6 +148,19 @@ RETIRED = {
     "https://dbs.org/bibles/MASTBN",                  # not in DBS site index, 2026-09-27
     "https://dbs.org/bibles/MASBST",
     "https://dbs.org/bibles/MASMAS",
+    # DBS's moved-edition pages point readers to KIKKIK / MAROLD / MARWTC.
+    # Confirmed on the rendered audio pages, 2026-10-01.
+    "https://dbs.org/bibles/audio/KIKBSK_DAVR_OT_N",
+    "https://dbs.org/bibles/audio/MARBCS_DAVR_FB_N",
+    # Legacy dataset text records return DBS's 404 page (2026-10-01).
+    "https://dbs.org/bibles/KIUBSK",
+    "https://dbs.org/bibles/KIKKIK",
+    "https://dbs.org/bibles/MARMRV",
+    "https://dbs.org/bibles/MARZZZP",
+    "https://dbs.org/bibles/MARRVV",
+    "https://dbs.org/bibles/MARTBN",
+    "https://dbs.org/bibles/MAROLD",
+    "https://dbs.org/bibles/MARWTC",
 }
 # Directory pages on DBS's older library server, which no longer answer.
 _RETIRED_PREFIX = ("https://content.dbs.org/libraries/PAN/Audio/Bible/",

@@ -5,6 +5,7 @@
     ['english', 'eng', 'English', 'English'],
     ['mandarin', 'cmn', 'Mandarin', '普通话'],
     ['hindi', 'hin', 'Hindi', 'हिन्दी'],
+    ['marathi', 'mar', 'Marathi', 'मराठी'],
     ['urdu', 'urd', 'Urdu', 'اردو'],
     ['swahili', 'swh', 'Swahili', 'Kiswahili'],
     ['zulu', 'zul', 'Zulu', 'isiZulu'],
@@ -14,6 +15,7 @@
     ['eastern-punjabi', 'pan', 'Eastern Punjabi', 'ਪੰਜਾਬੀ'],
     ['nepali', 'npi', 'Nepali', 'नेपाली'],
     ['sindhi', 'snd', 'Sindhi', 'سنڌي'],
+    ['kikuyu', 'kik', 'Kikuyu', 'Gĩkũyũ'],
     ['gusii', 'guz', 'Gusii / Ekegusii / Kisii', 'Ekegusii / Kisii'],
     ['maasai', 'mas', 'Maasai', 'ɔl Maa']
   ];

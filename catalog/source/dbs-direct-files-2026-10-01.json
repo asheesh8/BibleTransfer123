@@ -1,0 +1,20 @@
+{
+ "verified": "2026-10-01",
+ "alive_files": [
+  "https://bibles.dbs.org/KIKOKHW/pdf/KIKOKHW.pdf",
+  "https://bibles.dbs.org/MARERV/pdf/MARERV.pdf",
+  "https://bibles.dbs.org/MAROMB/pdf/MAROMB.pdf",
+  "https://scripture.dbs.org/pdfs/Gikuyu-1965-Genesis-Portion.pdf",
+  "https://scripture.dbs.org/pdfs/Kikuyu-John-print.pdf",
+  "https://scripture.dbs.org/pdfs/Kikuyu-New-Testament-print.pdf",
+  "https://scripture.dbs.org/pdfs/Marathi-1853-Genesis.pdf",
+  "https://scripture.dbs.org/pdfs/Marathi-Bible-print.pdf",
+  "https://scripture.dbs.org/pdfs/Marathi-Genesis-Portion.pdf",
+  "https://scripture.dbs.org/pdfs/Marathi-New-Testament-book.pdf"
+ ],
+ "playable_audio_filesets": [
+  "KIKKIK_DAVR_OT_N",
+  "MAROLD_DAVR_FB_N",
+  "MARWTC_FCBH_NT_N"
+ ]
+}

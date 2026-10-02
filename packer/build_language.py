@@ -120,6 +120,23 @@ LANGUAGES = {
         "historic": "maasai",
         "historic_prefix": "Maasai-",
     },
+    "kik": {
+        "name": "Kikuyu", "native": "Gĩkũyũ", "script": "latn", "dir": "ltr", "font": "latin",
+        "speakers": "~8.15 million", "region": "Kenya",
+        "blurb": "The language of the Agĩkũyũ people of central Kenya, also known as Gikuyu.",
+        "isos": ["kik"],
+        "historic": "kikuyu",
+        "historic_prefix": "Kikuyu-",
+        "historic_extra": {"Gikuyu-1965-Genesis-Portion"},
+    },
+    "mar": {
+        "name": "Marathi", "native": "मराठी", "script": "deva", "dir": "ltr", "font": "devanagari",
+        "speakers": "~83.1 million", "region": "India",
+        "blurb": "The principal language of Maharashtra in western India, written in the Devanagari script.",
+        "isos": ["mar"],
+        "historic": "marathi",
+        "historic_prefix": "Marathi-",
+    },
 }
 
 # Publishers whose pages are worth listing but cannot be downloaded.
@@ -758,6 +775,103 @@ EXTRA["mas"] = [
         ("magdalena", "Magdalena", None, "Jesus Film Project",
          "The story of Jesus through the eyes of Mary Magdalene.", "https://dbs.org/video/magdalena/mas_maasai_magdalena"),
     ]),
+]
+
+# Kikuyu — read off dbs.org/discover/languages/kik and each film and
+# collection page, 2026-10-01.
+EXTRA["kik"] = [
+    _jesus_film("kik", "kik", "kik_kikuyu", None, "kik_kikuyu_jesus"),
+    _lumo_film("kik", "Luke", "kik_Kikuyu_Luke_1965-Bible-Society-of-Kenya_low",
+               "kik_LUMO_Kikuyu_Luke_1965-Bible-Society-of-Kenya", 24, None, "kik_kikuyu_luke"),
+    dict(id="kik-film-lumo-acts", type="film", title="LUMO: Acts of the Apostles",
+         native=None, org="LUMO Project", desc="Acts of the Apostles filmed word for word in four parts.",
+         play=_chapters(f"{V}/Lumo-Acts/films_low/"
+                        "kik_Kikuyu_Acts_Kiugo-Githeru-Kia-Ngai-The-Holy-Word-of-God/"
+                        "kik_Acts_Kikuyu_Kiugo-Githeru-Kia-Ngai-The-Holy-Word-of-God_{i:02d}_360.mp4", 4, "Part"),
+         downloads=[{"label": "Whole film — low data", "url": f"{V}/Lumo-Acts/films_low/"
+                     "kik_Kikuyu_Acts_Kiugo-Githeru-Kia-Ngai-The-Holy-Word-of-God/"
+                     "kik_Acts_Kikuyu_Kiugo-Githeru-Kia-Ngai-The-Holy-Word-of-God_full_360.mp4"}],
+         source="https://dbs.org/video/lumo-acts/kik_kikuyu_acts"),
+    _visual_bible("kik", "Matthew", "Matthew", "kik-matthew-vb-kikuyu", 28, None, "matthew"),
+    _visual_bible("kik", "Acts", "Acts_VB", "kik-acts-vb-kikuyu", 28, None, "acts_vb"),
+    _grn("kik", "kik_GlobalRecordings_kikuyu", "Kikuyu Scripture Recordings", None,
+         "73 recordings · 918.1 MB", "Scripture recordings in Kikuyu.",
+         "Gikuyu/Gikuyu%20LLL%201%20Beginning%20with%20GOD%2081787/"
+         "Gikuyu%20LLL%201%20Beginning%20with%20GOD%20001%2081787.mp3"),
+]
+
+# Marathi — read off dbs.org/discover/languages/mar and each film and
+# collection page, 2026-10-01.
+EXTRA["mar"] = [
+    dict(id="mar-film-john", type="film", title="Gospel of John", native=None,
+         org="Visual Bible International", desc="The Gospel of John in 49 short chapters.",
+         play=_john49("mar", "mar_marathi"),
+         downloads=[{"label": "All chapters — low data", "url": f"{DL}/John/mar_marathi/mar_Gospel_of_John_chapters_low.zip"},
+                    {"label": "All chapters — HD", "url": f"{DL}/John/mar_marathi/mar_Gospel_of_John_chapters_high.zip"}],
+         source="https://dbs.org/video/john/mar_marathi_gospel_of_john"),
+    _jesus_film("mar", "mar", "mar_marathi", None, "mar_marathi_jesus"),
+    dict(id="mar-film-king-glory", type="film", title="King of Glory", native="वैभवशाली राजा",
+         org="ROCK International", duration="3:42:13",
+         desc="The Bible's story from creation to Christ.",
+         play={"kind": "file", "hd": "https://dbs.org/cdn/video/ROCK/films/mar-marathi/"
+               "mar-marathi_%E0%A4%B5%E0%A5%88%E0%A4%AD%E0%A4%B5%E0%A4%B6%E0%A4%BE%E0%A4%B2%E0%A5%80_"
+               "%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%BE_king_of_glory_full.mp4",
+               "sd": "https://dbs.org/cdn/video/ROCK/films/mar-marathi/"
+               "mar-marathi_%E0%A4%B5%E0%A5%88%E0%A4%AD%E0%A4%B5%E0%A4%B6%E0%A4%BE%E0%A4%B2%E0%A5%80_"
+               "%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%BE_king_of_glory_full_low.mp4"},
+         downloads=[{"label": "Whole film — HD", "url": "https://dbs.org/cdn/video/ROCK/films/mar-marathi/"
+                      "mar-marathi_%E0%A4%B5%E0%A5%88%E0%A4%AD%E0%A4%B5%E0%A4%B6%E0%A4%BE%E0%A4%B2%E0%A5%80_"
+                      "%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%BE_king_of_glory_full.mp4"},
+                    {"label": "Whole film — low data", "url": "https://dbs.org/cdn/video/ROCK/films/mar-marathi/"
+                      "mar-marathi_%E0%A4%B5%E0%A5%88%E0%A4%AD%E0%A4%B5%E0%A4%B6%E0%A4%BE%E0%A4%B2%E0%A5%80_"
+                      "%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%BE_king_of_glory_full_low.mp4"}],
+         source="https://dbs.org/video/rock/mar-marathi"),
+    _bible_project("mar", "mar-marathi", "mar", "overview", None),
+    _bible_project("mar", "mar-marathi", "mar", "themes", None),
+    _lumo_film("mar", "Mark", "mar_Marathi_Mark_New-India-Bible-Version-Marathi_low",
+               "mar_LUMO_Marathi_Mark_New-India-Bible-Version-Marathi", 16, None, "mar_marathi_mark"),
+    dict(id="mar-film-lumo-acts", type="film", title="LUMO: Acts of the Apostles",
+         native=None, org="LUMO Project", desc="Acts of the Apostles filmed word for word in four parts.",
+         play=_chapters(f"{V}/Lumo-Acts/films_low/mar_Marathi_Acts_Marathi-Contemporary-Version-2022/"
+                        "mar_Acts_Marathi_Marathi-Contemporary-Version-2022_{i:02d}_360.mp4", 4, "Part"),
+         downloads=[{"label": "Whole film — low data", "url": f"{V}/Lumo-Acts/films_low/"
+                     "mar_Marathi_Acts_Marathi-Contemporary-Version-2022/"
+                     "mar_Acts_Marathi_Marathi-Contemporary-Version-2022_full_360.mp4"}],
+         source="https://dbs.org/video/lumo-acts/mar_marathi_acts"),
+    dict(id="mar-film-lumo-covenant", type="film", title="LUMO: The Covenant",
+         native=None, org="LUMO Project", desc="The Covenant in 12 parts.",
+         play=_chapters(f"{V}/Lumo-Covenant/films_low/mar_Marathi_Covenant_R.V.-Re-edited-Audio-Bible-BSI/"
+                        "mar_Covenant_Marathi_R.V.-Re-edited-Audio-Bible-BSI_{i:02d}_360.mp4", 12, "Part"),
+         source="https://dbs.org/video/lumo-covenant/mar_marathi_covenant"),
+    _ibible("mar", "mar-marathi-ibible_salvation", "येशूची खरी गोष्ट"),
+    _visual_bible("mar", "Matthew", "Matthew", "mar-matthew-vb-marathi", 28, None, "matthew"),
+    _visual_bible("mar", "Acts", "Acts_VB", "mar-acts-vb-marathi", 28, None, "acts_vb"),
+    _grn("mar", "mar_GlobalRecordings_marathi", "Marathi Scripture Recordings", None,
+         "79 recordings · 223.8 MB", "Scripture recordings in Marathi.",
+         "%E0%A4%AE%E0%A4%B0%E0%A4%BE%E0%A4%A0%E0%A5%80/"
+         "%E0%A4%AE%E0%A4%B0%E0%A4%BE%E0%A4%A0%E0%A5%80%20Good%20News%2022311/"
+         "%E0%A4%AE%E0%A4%B0%E0%A4%BE%E0%A4%A0%E0%A5%80%20Good%20News%20001%20Introduction%2022311.mp3"),
+    _soj("mar", "mar_StoryJesus_marathi", None, "8 recordings · 123.4 MB", 8),
+    dict(id="mar-film-magdalena", type="film", title="Magdalena", native="मग्दलेना",
+         org="Jesus Film Project", duration="58:24",
+         desc="The story of Jesus through the eyes of Mary Magdalene.",
+         play={"kind": "file", "hd": f"{V}/Magdalena/films/mar_marathi/mar_Magdalena.mp4",
+               "sd": f"{V}/Magdalena/films/mar_marathi/mar_Magdalena_low.mp4"},
+         downloads=[{"label": "Whole film — HD", "url": f"{V}/Magdalena/films/mar_marathi/mar_Magdalena.mp4"},
+                    {"label": "Whole film — low data", "url": f"{V}/Magdalena/films/mar_marathi/mar_Magdalena_low.mp4"}],
+         source="https://dbs.org/video/magdalena/mar_marathi_magdalena"),
+    dict(id="mar-film-story-jesus", type="film", title="Story of Jesus for Children", native=None,
+         org="Jesus Film Project", duration="1:01:19", desc="The story of Jesus told for children.",
+         play={"kind": "file", "hd": f"{V}/StoryJesus/films/mar_marathi/mar_Story_of_Jesus_for_Children.mp4",
+               "sd": f"{V}/StoryJesus/films/mar_marathi/mar_Story_of_Jesus_for_Children_low.mp4"},
+         downloads=[{"label": "Whole film — HD", "url": f"{V}/StoryJesus/films/mar_marathi/mar_Story_of_Jesus_for_Children.mp4"},
+                    {"label": "Whole film — low data", "url": f"{V}/StoryJesus/films/mar_marathi/mar_Story_of_Jesus_for_Children_low.mp4"}],
+         source="https://dbs.org/video/storyjesus/mar_marathi_story_of_jesus_for_children"),
+]
+# This language's Themes page also offers the How to Read the Bible series.
+EXTRA["mar"][4]["downloads"] += [
+    {"label": "How to Read the Bible — low data", "url": f"{DL}/BP/mar-marathi/mar_BibleProject_How_to_Read_low.zip"},
+    {"label": "How to Read the Bible — HD", "url": f"{DL}/BP/mar-marathi/mar_BibleProject_How_to_Read.zip"},
 ]
 
 SERIES = re.compile(r"^(?P<name>.+?)\s+(?P<n>\d+)\s*[-–—]\s*(?P<part>.+)$")

@@ -176,6 +176,49 @@ async function sharing() {
   assert.equal(count(launcher, 'share_intent')[0].language, 'urd', 'launcher tracks the shared library language');
 }
 
+async function languageLibraries() {
+  for (const [slug, content, ui, native, browserLanguage] of [
+    ['kikuyu', 'kik', 'kik', 'Gĩkũyũ', 'ki-KE'],
+    ['marathi', 'mar', 'mr', 'मराठी', 'mr-IN']
+  ]) {
+    const html = fs.readFileSync(path.join(__dirname, '../app', slug, 'index.html'), 'utf8');
+    const scope = JSON.parse(html.match(/window\.ET_SHARED_LIBRARY = (\{[^\n]+\});/)[1]);
+    const f = fixture({ navigator: { languages: [browserLanguage] }, window: {
+      ET_SHARED_LIBRARY: scope,
+      LIBRARY: { languages: { [content]: { name: scope.name, native } }, resources: [] }
+    } });
+    f.document.documentElement = new Element('html');
+    f.document.querySelector = selector => f.body.querySelector(selector);
+    f.document.querySelectorAll = selector => f.body.querySelectorAll(selector);
+    f.load('core');
+    f.context.ET = f.context.window.ET;
+    f.load('i18n');
+    const ET = f.context.ET;
+    assert.equal(ET.i18n.current(), ui, 'the public page opens in its own UI language');
+    assert.equal(ET.i18n.meta(ui).native, native);
+    assert.equal(ET.i18n.suggested(), ui, 'the phone locale suggests the matching library');
+    assert.equal(ET.contentCode(ui), content, 'the UI language selects its content code');
+    assert.equal(ET.contentLang(), content);
+    assert.equal(ET.inMyLanguage({ lang: content }), true);
+    assert.equal(ET.inMyLanguage({ lang: 'eng' }), false, 'shared libraries exclude other languages');
+    assert.equal(ET.scopeEntryUrl(), '/' + slug);
+    const itemLink = new URL(ET.scopedUrl('item.html', { id: 'resource' }), 'https://example.test/');
+    assert.equal(itemLink.searchParams.get('only'), content, 'item navigation retains the language lock');
+    assert.equal(itemLink.searchParams.get('ui'), ui);
+    assert.equal(itemLink.searchParams.get('share'), slug);
+    assert.equal(ET.i18n.t('lib.search'), 'Search by name', 'untranslated controls retain English fallback');
+
+    const launcher = fixture();
+    launcher.load('share-libraries');
+    const email = launcher.query('[data-share-email="' + slug + '"]');
+    assert.ok(email, 'the language appears in the sharing launcher');
+    email.click();
+    const sharedLink = new URL(email.href).searchParams.get('body');
+    assert.equal(new URL(sharedLink).pathname, '/' + slug);
+    assert.equal(count(launcher, 'share_intent')[0].language, content);
+  }
+}
+
 async function composers() {
   for (const component of ['shared-library', 'item']) {
     const f = fixture({ itemPage: component === 'item', allowed: false });
@@ -323,6 +366,6 @@ async function guides() {
 }
 
 (async () => {
-  await sharing(); await composers(); await saving(); await nearby(); await guides();
+  await sharing(); await languageLibraries(); await composers(); await saving(); await nearby(); await guides();
   console.log('Sharing, WhatsApp/Telegram composers, clipboard, native handoff, save, cancellation, Nearby receipts and guide instrumentation passed.');
 })().catch(err => { console.error(err); process.exitCode = 1; });

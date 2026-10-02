@@ -220,3 +220,14 @@ test('a library served beneath a subpath still normalizes its root and scoped as
   assert.equal((await h.dispatch('/app/')).response.body, 'card home');
   assert.equal((await h.dispatch('/assets/js/core.js')).intercepted, false);
 });
+
+test('Kikuyu and Marathi library pages remain available offline after installation', async () => {
+  const h = harness();
+  await h.lifecycle('install');
+  h.offline(true);
+  for (const slug of ['kikuyu', 'marathi']) {
+    const result = await h.dispatch('/' + slug + '/index.html');
+    assert.equal(result.intercepted, true);
+    assert.equal(result.response.body, 'server:/' + slug + '/index.html');
+  }
+});

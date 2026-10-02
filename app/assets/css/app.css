@@ -859,6 +859,7 @@ html[lang="yue"] body { font-family: "PingFang HK", "PingFang TC", "Microsoft Jh
 
 /* Devanagari needs a face with the full headline and conjunct repertoire. */
 html[lang="hi"] body,
+html[lang="mr"] body,
 html[lang="ne"] body {
   font-family: "Noto Sans Devanagari", "Kohinoor Devanagari", Mangal,
                "Nirmala UI", system-ui, sans-serif;
@@ -877,6 +878,7 @@ html[lang="cmn"] .eyebrow, html[lang="yue"] .eyebrow {
   text-transform: none; letter-spacing: 0; font-size: .82rem;
 }
 html[lang="hi"] .kicker, html[lang="hi"] .flabel, html[lang="hi"] .eyebrow,
+html[lang="mr"] .kicker, html[lang="mr"] .flabel, html[lang="mr"] .eyebrow,
 html[lang="ne"] .kicker, html[lang="ne"] .flabel, html[lang="ne"] .eyebrow,
 html[lang="pa"] .kicker, html[lang="pa"] .flabel, html[lang="pa"] .eyebrow {
   text-transform: none; letter-spacing: 0; font-size: .86rem;

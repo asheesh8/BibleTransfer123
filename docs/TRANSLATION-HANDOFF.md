@@ -13,6 +13,11 @@ All of it lives in one file: `app/assets/js/i18n.js`.
 | `STRINGS.en` | Authoritative. Change this only if the English is wrong. |
 | `STRINGS.ur` | Complete draft, **unreviewed**. |
 | `STRINGS.snd` | Complete draft, **unreviewed**. |
+| `STRINGS.kik` | Kikuyu library available; interface uses English fallback pending reviewed wording. |
+| `STRINGS.mr` | Marathi library available; interface uses English fallback pending reviewed wording. |
+
+Kikuyu uses content and interface code `kik`. Marathi uses content code `mar`
+and interface code `mr`; its interface already has Devanagari font support.
 
 Roughly 60 keys per language. English is the fallback for anything missing, so
 the file is safe to ship at any point while it improves.

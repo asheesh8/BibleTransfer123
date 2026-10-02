@@ -182,10 +182,18 @@ GawahiiTV's, so that copy stays untouched and refreshable.
 ### Complete DBS catalogue audit
 
 The DBS language pages were audited from their rendered browser output through
-2026-09-26. The audit covers 17 DBS language records mapped into 13 libraries:
-**1,720 clickable Bible, film, audio, historic scan, and publisher entries**.
+2026-10-01. The audit covers 20 DBS language records mapped into 16 libraries:
+**1,851 clickable Bible, film, audio, historic scan, and publisher entries**.
 After richer records are deduplicated and the project's DBS-hosted Christian
-content rules are applied, the preview catalogue contains 656 resources.
+content rules are applied, the preview catalogue contains 700 resources.
+
+The Kikuyu and Marathi audit adds 29 and 62 source entries respectively.
+After deduplication and the existing hosting rules, their libraries contain
+11 Kikuyu and 23 Marathi resources, including all five Kikuyu and thirteen
+Marathi film collections. Current audio Bibles, Scripture PDFs and historic
+scans are included; DBS editions that now redirect to replacements are left
+out. Rebuild their curated media with `python3 packer/build_language.py kik`
+and `python3 packer/build_language.py mar`, then run `npm run dbs:import`.
 
 Run `npm run dbs:import` to rebuild the supplement and the web catalogue. The
 captured inventories are in `catalog/source/dbs-rendered-*.json`; verified DBS
@@ -211,8 +219,10 @@ The public language addresses are:
 - `/english`
 - `/mandarin`
 - `/hindi`
+- `/marathi`
 - `/urdu`
 - `/swahili`
+- `/kikuyu`
 - `/zulu`
 - `/maasai` (also `/masai`)
 - `/western-punjabi` (also `/shahmukhi`)
