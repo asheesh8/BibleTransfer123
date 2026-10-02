@@ -1,5 +1,5 @@
 {
- "generated": "Rendered Digital Bible Society language pages — verified 2026-09-24, 2026-09-25, 2026-09-26, 2026-09-27, 2026-10-01",
+ "generated": "Rendered Digital Bible Society language pages — verified 2026-09-24, 2026-09-25, 2026-09-26, 2026-09-27, 2026-10-01, 2026-10-02",
  "languages": {},
  "resources": [
   {
@@ -27627,6 +27627,703 @@
     }
    ],
    "source": "https://dbs.org/discover/languages/mar"
+  },
+  {
+   "id": "lug-audio-bible-dbs-luganda-bible-5792d0a91",
+   "lang": "lug",
+   "type": "audio-bible",
+   "title": "Luganda Bible",
+   "native": null,
+   "org": "Digital Bible Society",
+   "year": "2003",
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Audio Bibles",
+   "cover": null,
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "LUGBSU_DAVR_FB_N",
+    "version": "LUGBSU",
+    "testaments": [
+     "OT",
+     "NT"
+    ]
+   },
+   "read": null,
+   "downloads": [],
+   "links": [],
+   "source": "https://dbs.org/bibles/audio/LUGBSU_DAVR_FB_N"
+  },
+  {
+   "id": "lug-scripture-dbs-open-luganda-contemporary-bible-4747d668e",
+   "lang": "lug",
+   "type": "scripture",
+   "title": "Open Luganda Contemporary Bible",
+   "native": null,
+   "org": "Digital Bible Society",
+   "year": "1984",
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": {
+    "kind": "pdf",
+    "url": "https://bibles.dbs.org/LUGBIB/pdf/LUGBIB.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://bibles.dbs.org/LUGBIB/pdf/LUGBIB.pdf"
+    }
+   ],
+   "links": [],
+   "source": "https://dbs.org/bibles/LUGBIB"
+  },
+  {
+   "id": "lug-audio-bible-dbs-luganda-revised-bible-fc421998a",
+   "lang": "lug",
+   "type": "audio-bible",
+   "title": "Luganda Revised Bible",
+   "native": null,
+   "org": "Digital Bible Society",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Audio Bibles",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [],
+   "source": "https://dbs.org/bibles/audio/LUGREVBSU_DAVR_FB_N"
+  },
+  {
+   "id": "lug-audio-bible-dbs-oluganda-ashe-bible-3c457800b",
+   "lang": "lug",
+   "type": "audio-bible",
+   "title": "Oluganda Ashe Bible",
+   "native": null,
+   "org": "Digital Bible Society",
+   "year": "1890",
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Audio Bibles",
+   "cover": null,
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "LUGRPA_DAVR_FB_N",
+    "version": "LUGRPA",
+    "testaments": [
+     "OT",
+     "NT"
+    ]
+   },
+   "read": null,
+   "downloads": [],
+   "links": [],
+   "source": "https://dbs.org/bibles/audio/LUGRPA_DAVR_FB_N"
+  },
+  {
+   "id": "lug-historic-dbs-ganda-1902-bible-bb9ba16aa",
+   "lang": "lug",
+   "type": "historic",
+   "title": "Ganda (1902) Bible",
+   "native": null,
+   "org": "Digital Bible Society Archive",
+   "year": "1902",
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Historic Scans",
+   "cover": "https://scripture.dbs.org/covers/small/Ganda-1902-Bible-Ekitabo-ikitukuvu-ekya-katonda.webp",
+   "play": null,
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Ganda-1902-Bible-Ekitabo-ikitukuvu-ekya-katonda.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Ganda-1902-Bible-Ekitabo-ikitukuvu-ekya-katonda.pdf"
+    }
+   ],
+   "links": [],
+   "source": "https://dbs.org/bibles/historic/Ganda-1902-Bible-Ekitabo-ikitukuvu-ekya-katonda"
+  },
+  {
+   "id": "lug-historic-dbs-ganda-1908-matthew-5a359e3ef",
+   "lang": "lug",
+   "type": "historic",
+   "title": "Ganda (1908) Matthew",
+   "native": null,
+   "org": "Digital Bible Society Archive",
+   "year": "1908",
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Historic Scans",
+   "cover": "https://scripture.dbs.org/covers/small/Ganda-1908-Matthew-Enjiri-nga-bweyawandikibwa-Mathayo-omut.webp",
+   "play": null,
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Ganda-1908-Matthew-Enjiri-nga-bweyawandikibwa-Mathayo-omut.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Ganda-1908-Matthew-Enjiri-nga-bweyawandikibwa-Mathayo-omut.pdf"
+    }
+   ],
+   "links": [],
+   "source": "https://dbs.org/bibles/historic/Ganda-1908-Matthew-Enjiri-nga-bweyawandikibwa-Mathayo-omut"
+  },
+  {
+   "id": "lug-historic-dbs-ganda-2009-genesis-portion-f45737ab0",
+   "lang": "lug",
+   "type": "historic",
+   "title": "Ganda (2009) Genesis Portion",
+   "native": null,
+   "org": "Digital Bible Society Archive",
+   "year": "2009",
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Historic Scans",
+   "cover": "https://scripture.dbs.org/covers/small/Ganda-2009-Genesis-Portion-Ekitabo-Ekitukuvu.webp",
+   "play": null,
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Ganda-2009-Genesis-Portion-Ekitabo-Ekitukuvu.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Ganda-2009-Genesis-Portion-Ekitabo-Ekitukuvu.pdf"
+    }
+   ],
+   "links": [],
+   "source": "https://dbs.org/bibles/historic/Ganda-2009-Genesis-Portion-Ekitabo-Ekitukuvu"
+  },
+  {
+   "id": "lug-historic-dbs-luganda-1890-biscuit-tin-bible-wdl-18411-0166c3963",
+   "lang": "lug",
+   "type": "historic",
+   "title": "Luganda (1890) Biscuit Tin Bible (WDL-18411)",
+   "native": null,
+   "org": "Digital Bible Society Archive",
+   "year": "1890",
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Historic Scans",
+   "cover": "https://scripture.dbs.org/covers/small/Luganda-1890-Biscuit-Tin-Bible-WDL-18411.webp",
+   "play": null,
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Luganda-1890-Biscuit-Tin-Bible-WDL-18411.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Luganda-1890-Biscuit-Tin-Bible-WDL-18411.pdf"
+    }
+   ],
+   "links": [],
+   "source": "https://dbs.org/bibles/historic/Luganda-1890-Biscuit-Tin-Bible-WDL-18411"
+  },
+  {
+   "id": "lug-historic-dbs-luganda-bible-book-0d19212c8",
+   "lang": "lug",
+   "type": "historic",
+   "title": "Luganda - Bible (Book)",
+   "native": null,
+   "org": "Digital Bible Society Archive",
+   "year": "2003",
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Historic Scans",
+   "cover": "https://scripture.dbs.org/covers/small/Luganda-Bible-book.webp",
+   "play": null,
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Luganda-Bible-book.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Luganda-Bible-book.pdf"
+    }
+   ],
+   "links": [],
+   "source": "https://dbs.org/bibles/historic/Luganda-Bible-book"
+  },
+  {
+   "id": "lug-historic-dbs-luganda-nt-book-9256475c0",
+   "lang": "lug",
+   "type": "historic",
+   "title": "Luganda - NT (Book)",
+   "native": null,
+   "org": "Digital Bible Society Archive",
+   "year": "2003",
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Historic Scans",
+   "cover": "https://scripture.dbs.org/covers/small/Luganda-NT-book.webp",
+   "play": null,
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/pdfs/Luganda-NT-book.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://scripture.dbs.org/pdfs/Luganda-NT-book.pdf"
+    }
+   ],
+   "links": [],
+   "source": "https://dbs.org/bibles/historic/Luganda-NT-book"
+  },
+  {
+   "id": "lug-scripture-dbs-luganda-bible-ac151ddcd",
+   "lang": "lug",
+   "type": "scripture",
+   "title": "Luganda Bible",
+   "native": null,
+   "org": "Bible publisher",
+   "year": "2003",
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=LUGBSU"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/lug"
+  },
+  {
+   "id": "lug-scripture-dbs-old-luganda-bible-a7d7c9f4d",
+   "lang": "lug",
+   "type": "scripture",
+   "title": "Old Luganda Bible",
+   "native": null,
+   "org": "Bible publisher",
+   "year": "1968",
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=LUGUBS"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/lug"
+  },
+  {
+   "id": "lug-scripture-dbs-oluganda-ashe-bible-c8cede8ac",
+   "lang": "lug",
+   "type": "scripture",
+   "title": "Oluganda Ashe Bible",
+   "native": null,
+   "org": "Bible publisher",
+   "year": "1890",
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Scripture Text",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://find.bible/?abbr=LUGRPA"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/lug"
+  },
+  {
+   "id": "lug-film-dbs-the-story-of-jesus-for-children-98120b35d",
+   "lang": "lug",
+   "type": "film",
+   "title": "The Story of Jesus for Children",
+   "native": null,
+   "org": "Bible media publisher",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Films",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://arc.gt/fkfh6?apiSessionId=5f875ca7c2d044.26150791"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/lug"
+  },
+  {
+   "id": "lug-film-dbs-magdalena-director-s-cut-81af51b4e",
+   "lang": "lug",
+   "type": "film",
+   "title": "Magdalena - Director's Cut",
+   "native": null,
+   "org": "Bible media publisher",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Films",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://arc.gt/1yqms?apiSessionId=5f875caa6eb2b5.10081539"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/lug"
+  },
+  {
+   "id": "lug-audio-dbs-look-listen-live-3335067e6",
+   "lang": "lug",
+   "type": "audio",
+   "title": "Look, Listen & Live",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://globalrecordings.net/en/program/73600"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/lug"
+  },
+  {
+   "id": "lug-audio-dbs-look-listen-live-2-mighty-men-of-god-d3ea32571",
+   "lang": "lug",
+   "type": "audio",
+   "title": "Look, Listen & Live 2 Mighty Men of GOD",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://globalrecordings.net/en/program/73610"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/lug"
+  },
+  {
+   "id": "lug-audio-dbs-look-listen-live-3-victory-through-god-e2a0c8ed7",
+   "lang": "lug",
+   "type": "audio",
+   "title": "Look, Listen & Live 3 Victory through GOD",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://globalrecordings.net/en/program/73620"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/lug"
+  },
+  {
+   "id": "lug-audio-dbs-look-listen-live-4-servants-of-god-e030074c4",
+   "lang": "lug",
+   "type": "audio",
+   "title": "Look, Listen & Live 4 Servants of GOD",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://globalrecordings.net/en/program/73630"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/lug"
+  },
+  {
+   "id": "lug-audio-dbs-look-listen-live-5-on-trial-for-god-848dfb87c",
+   "lang": "lug",
+   "type": "audio",
+   "title": "Look, Listen & Live 5 On Trial for GOD",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://globalrecordings.net/en/program/73640"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/lug"
+  },
+  {
+   "id": "lug-audio-dbs-look-listen-live-6-jesus-teacher-healer-9eb6b08b7",
+   "lang": "lug",
+   "type": "audio",
+   "title": "Look, Listen & Live 6 JESUS - Teacher & Healer",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://globalrecordings.net/en/program/73650"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/lug"
+  },
+  {
+   "id": "lug-audio-dbs-look-listen-live-7-jesus-lord-saviour-b2e632bbe",
+   "lang": "lug",
+   "type": "audio",
+   "title": "Look, Listen & Live 7 JESUS - Lord & Saviour",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://globalrecordings.net/en/program/73660"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/lug"
+  },
+  {
+   "id": "lug-audio-dbs-look-listen-live-8-acts-of-the-holy-spirit-8e8377319",
+   "lang": "lug",
+   "type": "audio",
+   "title": "Look, Listen & Live 8 Acts of the HOLY SPIRIT",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://globalrecordings.net/en/program/73670"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/lug"
+  },
+  {
+   "id": "lug-audio-dbs-words-of-life-1-e0da65b2e",
+   "lang": "lug",
+   "type": "audio",
+   "title": "Words of Life 1",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://globalrecordings.net/en/program/5950"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/lug"
+  },
+  {
+   "id": "lug-audio-dbs-words-of-life-2-8cb847dd4",
+   "lang": "lug",
+   "type": "audio",
+   "title": "Words of Life 2",
+   "native": null,
+   "org": "Scripture audio publisher",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Luganda",
+   "typeLabel": "Audio Collections",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [
+    {
+     "label": "Open at publisher",
+     "url": "https://globalrecordings.net/en/program/5951"
+    }
+   ],
+   "source": "https://dbs.org/discover/languages/lug"
   }
  ]
 }

@@ -147,3 +147,26 @@ language button. Check the home page, library filters, an item's save dialog,
 the sharing guide, and the help page. Confirm direction and fonts in Urdu,
 Sindhi, Pashto, and Western Punjabi. Automated checks validate formatting and
 coverage; fluent readers must judge language quality.
+
+## Luganda addition — 2026-10-02
+
+Luganda uses content code `lug` and interface code `lg` (including the `lg-UG`
+phone locale). Short controls were adapted from
+[published Luganda interface labels](https://www.jw.org/lg/): language selection,
+search, read, watch, download, copy-link and email actions. Longer help,
+installation and sharing instructions retain English with the existing explicit
+“Some menus in English” notice. These controls are a researched draft, not a
+fluent-speaker-approved translation. No Swahili text is inherited.
+
+All 66 book names come directly from the DBS Luganda Bible audio selector.
+The captured [Ganda inventory](https://dbs.org/discover/languages/lug), complete
+film chapter URLs and both LUMO Mark translations are recorded in
+`catalog/source/dbs-*-2026-10-02.json`. The moved LUGREVBSU audio page is retired;
+the Contemporary Bible's linked LUGBIB audio edition is included instead.
+The site's existing DBS-hosted curation continues to exclude outside publishers.
+The audio collection includes all 215 individual MP3 downloads and both ZIP
+archives. Its ZIPs reject automated requests, but complete browser downloads
+were inspected and each contains all 215 MP3s. All seven PDFs were also
+downloaded and their PDF headers verified. Bible ZIPs and EPUB are omitted
+when the file verifier and browser cannot confirm them. Three full audio
+Bible editions remain available for streaming.

@@ -8,7 +8,7 @@
 
    VERSION must change whenever the shell changes, or an installed copy keeps
    serving the old one. `easytransfer build` rewrites it. */
-var VERSION = 'shell-v29';
+var VERSION = 'shell-v30';
 
 var SHELL = [
   'index.html', 'library.html', 'item.html', 'share.html', 'help.html', 'nearby.html',
@@ -22,7 +22,7 @@ var SHELL = [
   'english/index.html', 'mandarin/index.html', 'hindi/index.html', 'urdu/index.html',
   'swahili/index.html', 'cantonese/index.html', 'pashto/index.html', 'sindhi/index.html',
   'zulu/index.html', 'maasai/index.html',
-  'kikuyu/index.html', 'marathi/index.html',
+  'luganda/index.html', 'kikuyu/index.html', 'marathi/index.html',
   'gusii/index.html', 'ekegusii/index.html', 'kisii/index.html', 'northern-pashto/index.html',
   'eastern-punjabi/index.html', 'western-punjabi/index.html', 'nepali/index.html',
   'share-libraries/index.html',

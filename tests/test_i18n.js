@@ -19,9 +19,9 @@ function harness(elements = {}) {
 }
 const placeholders = value => [...value.matchAll(/\{(\w+)\}/g)].map(match => match[1]).sort();
 
-test('all sixteen languages retain formatter variables and render escaped strings', () => {
+test('all seventeen languages retain formatter variables and render escaped strings', () => {
   const { ET, dictionaries, attributes } = harness();
-  assert.equal(ET.i18n.langs.length, 16);
+  assert.equal(ET.i18n.langs.length, 17);
   for (const language of ET.i18n.langs) {
     ET.i18n.set(language.code);
     assert.equal(attributes.dir, language.dir);
@@ -62,6 +62,9 @@ test('native draft controls render and untranslated guides use disclosed English
   for (const key of ['home.pick', 'lib.search', 'item.save', 'share.title', 'help.title']) {
     assert.match(ET.i18n.t(key), /[\u0900-\u097F]/, `Marathi ${key} is still English`);
   }
+  ET.i18n.set('lg');
+  assert.equal(ET.i18n.t('lib.search'), 'Noonya');
+  assert.equal(ET.i18n.t('item.save'), 'Wanula');
   ET.i18n.set('kik');
   assert.equal(ET.i18n.t('lib.search'), 'Etha na rĩĩtwa');
   ET.i18n.set('guz');
@@ -70,7 +73,7 @@ test('native draft controls render and untranslated guides use disclosed English
   assert.equal(ET.i18n.t('type.scripture'), 'Amariko', 'Scripture must not say laws');
   ET.i18n.set('mas');
   assert.equal(ET.i18n.t('item.read'), 'Aɨsʉ́m');
-  for (const language of ['kik', 'guz', 'mas']) {
+  for (const language of ['lg', 'kik', 'guz', 'mas']) {
     ET.i18n.set(language);
     assert.equal(ET.i18n.meta(language).interfaceNote, 'Some menus in English');
     assert.equal(dictionaries[language]['route.computer-iphone.4.p'], undefined, 'an unverified guide must not copy Swahili');

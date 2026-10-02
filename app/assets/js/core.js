@@ -456,7 +456,7 @@ window.ET = (function () {
      English title and heard Sindhi. Choosing a language picks both: English
      shows English films, اردو shows Urdu, سنڌي shows Sindhi. The library can
      still browse the others on purpose. */
-  var CONTENT = { en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', zul: 'zul', mas: 'mas', kik: 'kik', hi: 'hin', mr: 'mar', pa: 'pan', pnb: 'pnb', ne: 'npi' };
+  var CONTENT = { en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', zul: 'zul', mas: 'mas', kik: 'kik', hi: 'hin', mr: 'mar', lg: 'lug', pa: 'pan', pnb: 'pnb', ne: 'npi' };
   function contentCode(ui) { return CONTENT[ui] || 'eng'; }
   function contentLang() {
     var scope = libraryScope();
@@ -485,6 +485,75 @@ window.ET = (function () {
       [65,'Jude',1],[66,'Revelation',22]]
   };
   var LOCAL_BOOKS = {
+    // Names from DBS’s Luganda Bible audio book picker.
+    lg: {
+    "Genesis": "Olubereberye",
+    "Exodus": "Okuva",
+    "Leviticus": "Ebyabaleevi",
+    "Numbers": "Okubala",
+    "Deuteronomy": "Ekyamateeka Olwokubiri",
+    "Joshua": "Yoswa",
+    "Judges": "Ekyabalamuzi",
+    "Ruth": "Luusi",
+    "1Samuel": "1 Samwiri",
+    "2Samuel": "2 Samwiri",
+    "1Kings": "1 Bassekabaka",
+    "2Kings": "2 Bassekabaka",
+    "1Chronicles": "1 Ebyomumirembe",
+    "2Chronicles": "2 Ebyomumirembe",
+    "Ezra": "Ezera",
+    "Nehemiah": "Nekkemiya",
+    "Esther": "Eseza",
+    "Job": "Yobu",
+    "Psalms": "Zabbuli",
+    "Proverbs": "Engero",
+    "Ecclesiastes": "Omubuulizi",
+    "SongofSongs": "Oluyimba",
+    "Isaiah": "Isaaya",
+    "Jeremiah": "Yeremiya",
+    "Lamentations": "Okukungubaga",
+    "Ezekiel": "Ezeekyeri",
+    "Daniel": "Danyeri",
+    "Hosea": "Koseya",
+    "Joel": "Yoweeri",
+    "Amos": "Amosi",
+    "Obadiah": "Obadiya",
+    "Jonah": "Yona",
+    "Micah": "Mikka",
+    "Nahum": "Nakkumu",
+    "Habakkuk": "Kaabakuuku",
+    "Zephaniah": "Zeffaniya",
+    "Haggai": "Kaggayi",
+    "Zechariah": "Zekkaliya",
+    "Malachi": "Malaki",
+    "Matthew": "Matayo",
+    "Mark": "Makko",
+    "Luke": "Lukka",
+    "John": "Yokaana",
+    "Acts": "Ebikolwa by’Abatume",
+    "Romans": "Abaruumi",
+    "1Corinthians": "1 Abakkolinso",
+    "2Corinthians": "2 Abakkolinso",
+    "Galatians": "Abaggalatiya",
+    "Ephesians": "Abaefeso",
+    "Philippians": "Abafiripi",
+    "Colossians": "Abakkolosaayi",
+    "1Thessalonians": "1 Basessaloniika",
+    "2Thessalonians": "2 Basessaloniika",
+    "1Timothy": "1 Timoseewo",
+    "2Timothy": "2 Timoseewo",
+    "Titus": "Tito",
+    "Philemon": "Firemooni",
+    "Hebrews": "Abaebbulaniya",
+    "James": "Yakobo",
+    "1Peter": "1 Peetero",
+    "2Peter": "2 Peetero",
+    "1John": "1 Yokaana",
+    "2John": "2 Yokaana",
+    "3John": "3 Yokaana",
+    "Jude": "Yuda",
+    "Revelation": "Okubikkulirwa"
+},
     hi: {
       Genesis:'उत्पत्ति', Exodus:'निर्गमन', Leviticus:'लैव्यव्यवस्था', Numbers:'गिनती',
       Deuteronomy:'व्यवस्था विवरण', Joshua:'यहोशू', Judges:'न्यायियों', Ruth:'रूत',

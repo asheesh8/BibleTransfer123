@@ -17,6 +17,7 @@
     { "source": "/marathi", "destination": "/marathi/index.html" },
     { "source": "/urdu", "destination": "/urdu/index.html" },
     { "source": "/swahili", "destination": "/swahili/index.html" },
+    { "source": "/luganda", "destination": "/luganda/index.html" },
     { "source": "/kikuyu", "destination": "/kikuyu/index.html" },
     { "source": "/cantonese", "destination": "/cantonese/index.html" },
     { "source": "/pashto", "destination": "/pashto/index.html" },

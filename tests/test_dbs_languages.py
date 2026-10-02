@@ -1,4 +1,4 @@
-"""Keep the Kikuyu and Marathi shelves complete and usable after regeneration.
+"""Keep the Kikuyu, Marathi and Luganda shelves complete and usable after regeneration.
 
 These checks use the captured DBS inventory and saved file probes, so they run
 offline and exercise the same merged, curated catalogue that the app packs.
@@ -17,8 +17,12 @@ SOURCE = ROOT / "catalog" / "source"
 AUDIT = SOURCE / "dbs-rendered-2026-10-01.json"
 VERIFIED = SOURCE / "dbs-direct-files-2026-10-01.json"
 LANGUAGES = {"kik": ("Kikuyu", "Gĩkũyũ", "latn"),
-             "mar": ("Marathi", "मराठी", "deva")}
+             "mar": ("Marathi", "मराठी", "deva"),
+             "lug": ("Luganda", "Luganda", "latn")}
 CURRENT_AUDIO = {
+    "lug": {"LUGBSU_DAVR_FB_N": ["OT", "NT"],
+            "LUGRPA_DAVR_FB_N": ["OT", "NT"],
+            "LUGBIB_FCBH_FB_N": ["OT", "NT"]},
     "kik": {"KIKKIK_DAVR_OT_N": ["OT"]},
     "mar": {"MAROLD_DAVR_FB_N": ["OT", "NT"],
             "MARWTC_FCBH_NT_N": ["NT"]},
@@ -47,6 +51,11 @@ class DbsLanguagesTest(unittest.TestCase):
     def setUpClass(cls):
         cls.audit = json.loads(AUDIT.read_text(encoding="utf-8"))
         cls.verified = json.loads(VERIFIED.read_text(encoding="utf-8"))
+        cls.audit.update(json.loads((SOURCE / "dbs-rendered-2026-10-02.json").read_text()))
+        current = json.loads((SOURCE / "dbs-direct-files-2026-10-02.json").read_text())
+        for key in ("alive_files", "playable_audio_filesets"):
+            cls.verified[key].extend(current[key])
+        cls.media = json.loads((SOURCE / "dbs-media-2026-10-02.json").read_text())
         cls.library = catalog.load(ROOT / "catalog" / "resources.json")
         cls.resources = {
             lang: [r for r in cls.library["resources"] if r["lang"] == lang]
@@ -98,8 +107,10 @@ class DbsLanguagesTest(unittest.TestCase):
                 self.assertTrue(all(on_dbs(url) for url in represented))
 
     def test_all_captured_films_have_packable_media(self):
-        for lang, count in (("kik", 5), ("mar", 13)):
+        for lang, count in (("kik", 5), ("mar", 13), ("lug", 13)):
             expected = {item["href"] for item in self.audit[lang]["Films"]["links"]}
+            if lang == "lug":
+                expected.add("https://dbs.org/video/lumo-mark/lug_luganda_mark/Luganda-Contemporary-Bible")
             films = [r for r in self.resources[lang] if r["type"] == "film"]
             self.assertEqual(len(expected), count)
             self.assertEqual(len(films), count)
@@ -122,6 +133,11 @@ class DbsLanguagesTest(unittest.TestCase):
         # Counts shown on the captured DBS film pages. Contiguous numbering
         # alone would still pass if a rebuild accidentally lost the final parts.
         expected_counts = {
+            "lug-film-jesus": 61, "lug-film-lumo-john": 21,
+            "lug-film-lumo-luke": 24, "lug-film-lumo-mark-bsu": 16,
+            "lug-film-lumo-mark-contemporary": 16, "lug-film-lumo-matthew": 28,
+            "lug-film-lumo-acts": 4, "lug-film-lumo-covenant": 12,
+            "lug-film-acts-vb": 28,
             "kik-film-jesus": 61, "kik-film-lumo-luke": 24,
             "kik-film-lumo-acts": 4, "kik-film-vb-kik-matthew-vb-kikuyu": 28,
             "kik-film-vb-kik-acts-vb-kikuyu": 28,
@@ -185,6 +201,29 @@ class DbsLanguagesTest(unittest.TestCase):
         # Covers and online landing pages cannot satisfy this requirement.
         self.assertTrue(any(url.endswith(".pdf") for url in verified))
         self.assertTrue(verified.issubset(packed), "A verified Bible download was omitted")
+
+    def test_luganda_media_matches_every_captured_file_and_recording(self):
+        resources = {r["id"]: r for r in self.resources["lug"]}
+        for captured in self.media["resources"]:
+            resource = resources[captured["id"]]
+            play = resource.get("play") or {}
+            if play.get("kind") == "chapters":
+                self.assertEqual(play["items"], captured["play"]["items"],
+                                 "A captured film chapter was dropped or replaced")
+            if play.get("kind") == "file":
+                self.assertEqual(play, captured["play"])
+        collection = resources["lug-ac-grn"]
+        tracks = self.media["pages"][collection["source"]]["tracks"]
+        self.assertEqual(len(tracks), 215)
+        archives = {d["url"] for d in self.media["verified_downloads"]}
+        self.assertEqual(len(archives), 2)
+        self.assertTrue(all(d["mp3_files"] == 215 for d in self.media["verified_downloads"]))
+        self.assertEqual({d["url"] for d in collection["downloads"]}, set(tracks) | archives)
+        packed = {a.url for a in catalog.assets_for(collection)}
+        self.assertTrue(set(tracks).issubset(packed), "A recording cannot be packed")
+        self.assertEqual(len(self.media["book_names"]), 66)
+        self.assertEqual(self.media["book_names"][0], "Olubereberye")
+        self.assertEqual(self.media["book_names"][-1], "Okubikkulirwa")
 
 
 if __name__ == "__main__":

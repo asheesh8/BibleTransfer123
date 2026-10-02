@@ -91,6 +91,8 @@ _OFF_LANGUAGE = re.compile(r"/StudyBible/content/texts/(ENGNAS|HBOWLC|GRCTIS)/",
 # pages return "not found", and the audio Bibles say "no longer at this
 # address". The library only carries what DBS has up.
 RETIRED = {
+    # DBS's Luganda page offers three current editions instead, 2026-10-02.
+    "https://dbs.org/bibles/audio/LUGREVBSU_DAVR_FB_N",
     "https://dbs.org/bibles/GUZGUZ",
     "https://dbs.org/bibles/GUZGUZR",
     "https://dbs.org/bibles/HINBSI",

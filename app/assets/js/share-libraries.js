@@ -15,6 +15,7 @@
     ['eastern-punjabi', 'pan', 'Eastern Punjabi', 'ਪੰਜਾਬੀ'],
     ['nepali', 'npi', 'Nepali', 'नेपाली'],
     ['sindhi', 'snd', 'Sindhi', 'سنڌي'],
+    ['luganda', 'lug', 'Luganda', 'Luganda'],
     ['kikuyu', 'kik', 'Kikuyu', 'Gĩkũyũ'],
     ['gusii', 'guz', 'Gusii / Ekegusii / Kisii', 'Ekegusii / Kisii'],
     ['maasai', 'mas', 'Maasai', 'ɔl Maa']

@@ -179,7 +179,8 @@ async function sharing() {
 async function languageLibraries() {
   for (const [slug, content, ui, native, browserLanguage] of [
     ['kikuyu', 'kik', 'kik', 'Gĩkũyũ', 'ki-KE'],
-    ['marathi', 'mar', 'mr', 'मराठी', 'mr-IN']
+    ['marathi', 'mar', 'mr', 'मराठी', 'mr-IN'],
+    ['luganda', 'lug', 'lg', 'Luganda', 'lg-UG']
   ]) {
     const html = fs.readFileSync(path.join(__dirname, '../app', slug, 'index.html'), 'utf8');
     const scope = JSON.parse(html.match(/window\.ET_SHARED_LIBRARY = (\{[^\n]+\});/)[1]);
@@ -198,6 +199,10 @@ async function languageLibraries() {
     assert.equal(ET.i18n.meta(ui).native, native);
     assert.equal(ET.i18n.suggested(), ui, 'the phone locale suggests the matching library');
     assert.equal(ET.contentCode(ui), content, 'the UI language selects its content code');
+    if (ui === 'lg') {
+      assert.equal(ET.bookName('Genesis'), 'Olubereberye');
+      assert.equal(ET.bookName('Revelation'), 'Okubikkulirwa');
+    }
     assert.equal(ET.contentLang(), content);
     assert.equal(ET.inMyLanguage({ lang: content }), true);
     assert.equal(ET.inMyLanguage({ lang: 'eng' }), false, 'shared libraries exclude other languages');
@@ -211,8 +216,8 @@ async function languageLibraries() {
       assert.match(ET.i18n.t('lib.search'), /[\u0900-\u097F]/, 'Marathi controls are translated');
       assert.doesNotMatch(f.query('#shared-lead').innerHTML, /Some menus in English/);
     } else {
-      assert.equal(ET.i18n.t('lib.search'), 'Etha na rĩĩtwa', 'Kikuyu search is translated');
-      assert.match(f.query('#shared-lead').innerHTML, /Some menus in English/, 'direct Kikuyu links disclose the partial interface');
+      assert.equal(ET.i18n.t('lib.search'), ui === 'lg' ? 'Noonya' : 'Etha na rĩĩtwa', 'native search is translated');
+      assert.match(f.query('#shared-lead').innerHTML, /Some menus in English/, 'direct links disclose the partial interface');
     }
 
     const launcher = fixture();

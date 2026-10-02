@@ -38,6 +38,12 @@ TYPE_LABEL = {"film": "Films", "audio": "Audio Collections", "scripture": "Scrip
 # Northern, Southern and Central; to a reader they are one language, and three
 # near-identical shelves would be three ways to get lost.
 LANGUAGES = {
+    "lug": {
+        "name": "Luganda", "native": "Luganda", "script": "latn", "dir": "ltr", "font": "latin",
+        "speakers": "~5.6 million", "region": "Uganda",
+        "blurb": "The language of the Baganda people in Uganda, listed as Ganda by DBS.",
+        "isos": ["lug"], "rendered_only": True,
+    },
     "pus": {
         "name": "Pashto", "native": "پښتو", "script": "arab", "dir": "rtl", "font": "naskh",
         "speakers": "~40 million", "region": "Afghanistan & Pakistan",
@@ -931,8 +937,8 @@ def probe_all(urls, workers=12):
 
 # ------------------------------------------------------------------- build
 def build(code, spec):
-    records = {}
-    for iso in spec["isos"]:
+    records = {iso: {} for iso in spec["isos"]} if spec.get("rendered_only") else {}
+    for iso in ([] if spec.get("rendered_only") else spec["isos"]):
         try:
             records[iso] = fetch(f"{DATA}/languages/{iso}.json")
         except Exception as e:
@@ -1014,7 +1020,13 @@ def build(code, spec):
         ))
 
     # ---- resources read off dbs.org's own pages (see EXTRA)
-    for extra in EXTRA.get(code, []):
+    extras = EXTRA.get(code, [])
+    if code == "lug":
+        # Literal files and complete chapter lists captured from every current
+        # DBS page, including both Mark translations. Avoid the legacy dataset's
+        # moved Bible pages. The rendered inventory importer supplies the scans.
+        extras = json.loads((ROOT / "catalog/source/dbs-media-2026-10-02.json").read_text())["resources"]
+    for extra in extras:
         r = dict(extra)
         r["lang"] = code
         out.append(r)
@@ -1125,6 +1137,12 @@ def build(code, spec):
         return u
 
     checked = probe_all([u for r in out for u in urls_of(r)])
+    if code == "lug":
+        # Cloudflare rejects command-line probes for these collection ZIPs.
+        # Both completed real browser downloads and contain all 215 MP3s.
+        media_audit = json.loads((ROOT / "catalog/source/dbs-media-2026-10-02.json").read_text())
+        for download in media_audit["verified_downloads"]:
+            checked[download["url"]] = True
     print(f"  probed {len(checked)} URLs · {sum(1 for v in checked.values() if v)} alive")
 
     keep = []

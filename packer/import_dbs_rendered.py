@@ -36,6 +36,7 @@ LANGUAGES = {
     "guz": ("guz", "Gusii", ""),
     "kik": ("kik", "Kikuyu", ""),
     "mar": ("mar", "Marathi", ""),
+    "lug": ("lug", "Luganda", ""),
     "swh": ("swh", "Swahili", "Coastal"),
     "swa": ("swh", "Swahili", "General"),
     "pbu": ("pus", "Pashto", "Northern"),

@@ -4,7 +4,7 @@
    TRANSLATION STATUS
    English is the reference. Interface wording was reviewed for grammar and
    intended meaning in October 2026; this is not native-speaker verification.
-   Marathi has a full draft interface. Kikuyu, Ekegusii, and Maa have partial
+   Marathi has a full draft interface. Luganda, Kikuyu, Ekegusii, and Maa have partial
    researched controls; their remaining instructions use English, as disclosed
    in the language picker. No Swahili wording is copied into those languages.
    Missing strings fall back to English. See docs/TRANSLATION-HANDOFF.md for
@@ -31,6 +31,7 @@
     { code: 'pa', name: 'Eastern Punjabi', native: 'ਪੰਜਾਬੀ', dir: 'ltr' },
     { code: 'ne', name: 'Nepali', native: 'नेपाली', dir: 'ltr' },
     { code: 'snd', name: 'Sindhi',  native: 'سنڌي',    dir: 'rtl' },
+    { code: 'lg', name: 'Luganda', native: 'Luganda', dir: 'ltr', interfaceNote: 'Some menus in English' },
     { code: 'kik', name: 'Kikuyu', native: 'Gĩkũyũ', dir: 'ltr', interfaceNote: 'Some menus in English' },
     { code: 'guz', name: 'Gusii', native: 'Ekegusii / Kisii', dir: 'ltr', interfaceNote: 'Some menus in English' },
     { code: 'mas', name: 'Maasai', native: 'ɔl Maa', dir: 'ltr', interfaceNote: 'Some menus in English' }
@@ -5214,6 +5215,34 @@
 
   // Partial native wording is supplied only where supported. Missing controls
   // and guides use the English reference, never a different African language.
+  // Short controls adapted from published Luganda interface usage.
+  // Longer guides retain the disclosed English fallback pending fluent review.
+  STRINGS.lg = {
+    "app.name": "Layibulale",
+    "home.pick": "Londa olulimi lwo",
+    "lib.search": "Noonya",
+    "lib.all": "Byonna",
+    "lib.lang": "Olulimi",
+    "ui.lang": "Olulimi",
+    "welcome.search": "Noonya",
+    "item.read": "Soma",
+    "act.read": "Soma",
+    "act.watch": "Laba",
+    "act.listen": "Wuliriza",
+    "item.save": "Wanula",
+    "save.go": "Wanula",
+    "sharelib.copy": "Koppa linki",
+    "sharelib.copied": "Tukikoppye",
+    "sharelib.email": "Sindikira omulala ku email",
+    "type.film": "Vidiyo",
+    "type.scripture": "Bayibuli",
+    "type.audio": "Eby’okuwuliriza",
+    "tab.library": "Layibulale",
+    "tab.help": "Obuyambi",
+    "item.book": "Ekitabo",
+    "item.chapters": "Essuula",
+    "item.chapter.pick": "Essuula"
+};
   STRINGS.guz = {
     "home.browse": "Rora bionsi",
     "lib.all": "Bionsi",
@@ -6050,6 +6079,7 @@
     [/^pa[-_](arab|pk)/i, 'pnb'], [/^pnb/i, 'pnb'], [/^pa/i, 'pa'],
     [/^zh[-_](hk|mo|tw|hant)|^yue/i, 'yue'], [/^zh/i, 'cmn'],
     [/^sw/i, 'swh'], [/^hi/i, 'hi'], [/^mr/i, 'mr'], [/^ur/i, 'ur'], [/^ps/i, 'ps'], [/^sd/i, 'snd'],
+    [/^(lg|lug)(?:[-_]|$)/i, 'lg'],
     [/^(ki|kik)(?:[-_]|$)/i, 'kik'],
     [/^ne/i, 'ne'], [/^guz/i, 'guz'], [/^zu/i, 'zul'], [/^mas/i, 'mas'], [/^en/i, 'en']
   ];
