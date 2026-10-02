@@ -6,6 +6,31 @@ meaning where it could be assessed, added a Marathi draft, and researched
 partial Kikuyu, Ekegusii, and Maa controls. This was an
 AI-assisted review; no fluent local speakers have approved these translations.
 
+## Plain-language pass following reader feedback
+
+The October 2 follow-up reviewed the ten Asian-language interfaces: Nepali,
+Hindi, Marathi, Urdu, Sindhi, Pashto, Gurmukhi Punjabi, Shahmukhi Punjabi,
+Mandarin, and Cantonese. A Nepali reader found some of the earlier help text
+hard to understand. This pass names the file explicitly, separates opening
+a file from installing an app, and replaces long literal explanations with
+short actions.
+
+Nepali uses `सेभ गर्नुहोस्` for saving and `फाइल खुलेन भने` for a file that will
+not open. Its recovery heading now says `सेभ गरेको फाइल भेटिएन`. The reader
+is directed to Files, Downloads, or the folder they chose. The other nine
+interfaces received corresponding corrections to troubleshooting, file
+locations, and the choice between sending and receiving on a phone. Punjabi
+home-page counts now include the missing noun, with a singular form too.
+
+Hindi save terminology was compared with
+[Google's Hindi file instructions](https://support.google.com/chromebook/answer/1700055?hl=hi).
+Cantonese consistently uses `儲存` for file saving, matching the terminology in
+[Apple's Hong Kong file instructions](https://support.apple.com/zh-hk/102570).
+Operating-system app and menu names remain recognizable. Browser handoff
+messages still ask readers to confirm the download; they do not claim it is
+already complete. This remains an AI-assisted wording review. Feedback from
+fluent readers is still needed to confirm regional vocabulary and naturalness.
+
 ## Current coverage
 
 | Language | Interface state |
