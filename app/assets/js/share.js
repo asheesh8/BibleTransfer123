@@ -10,7 +10,7 @@
    to STRINGS in i18n.js and it is translated; until then the English shows. */
 (function (ET) {
   'use strict';
-  var t = ET.i18n.t, tOr = ET.i18n.tOr, tOrHTML = ET.i18n.tOrHTML;
+  var h = ET.i18n.h, tOrHTML = ET.i18n.tOrHTML;
 
   var DEVICES = [
     { id: 'iphone',   icon: 'phone',  key: 'dev.iphone' },
@@ -28,7 +28,7 @@
         ['Turn on both radios', 'On both iPhones open Control Centre and make sure Wi-Fi and Bluetooth are on. AirDrop uses both, even though neither needs a network.'],
         ['Set the receiver to accept', 'On the receiving iPhone: Settings, General, AirDrop, then Everyone for 10 Minutes. If it is set to Contacts Only and you are not in their contacts, nothing will appear and neither of you will know why.'],
         ['Share from the Files app', 'On the sending iPhone open Files, find the saved file, press and hold it, tap Share, then tap the other person in the AirDrop row.'],
-        ['Accept on the other phone', 'The receiver taps Accept. The file lands in the Files app, under Downloads.'],
+        ['Accept on the other phone', 'The receiver taps Accept and follows any prompt to open or save the file. Check the receiving app or search for the file in Files.'],
         ['Open it before you part', 'Have them open it once, now. A file nobody has opened is a file nobody knows is broken.']
       ]
     },
@@ -39,27 +39,27 @@
         ['If Quick Share is not there, use LocalSend', 'Some Android phones do not have it. LocalSend does the same job, works between any two phones on one Wi-Fi network, and needs no account. Install it on both phones while you still have a signal — it is on the card if the kit includes it.'],
         ['Put both phones on the same network', 'The VillageServer Wi-Fi is enough. It does not need internet — the two phones only need to see each other.'],
         ['Send, then accept', 'Pick the file on the sender, pick the other phone from the list, and accept on the receiver.'],
-        ['Check where it landed', 'Open Files, then Downloads, and open the file once.']
+        ['Check where it landed', 'Open the file on the receiving device. On Android, check Files, then Downloads (or the folder you chose).']
       ]
     },
     'iphone>android': {
       name: 'LocalSend, or a computer in between',
       steps: [
-        ['Understand why this one is harder', 'AirDrop only talks to Apple devices and Quick Share only to Android. Between the two you need something that speaks to both.'],
+        ['Understand why this one is harder', 'AirDrop and Quick Share compatibility depends on the devices. If direct sharing is unavailable, use LocalSend on both phones.'],
         ['Best: LocalSend on both', 'Install LocalSend on the iPhone and the Android phone, put both on the same Wi-Fi — the VillageServer network is fine — and send. No internet, no account.'],
-        ['If you cannot install anything', 'Plug the iPhone into a computer, copy the file off, then plug the Android in and copy it across. Slower, but it uses nothing you have to download.'],
+        ['If you cannot install anything', 'A computer can act as a bridge if it can access the file on both phones. iPhone file sharing requires a compatible app; follow the computer-to-phone guide for your devices.'],
         ['Or use the card itself', 'On a phone with a card slot or an adapter, put the file on a microSD card and move the card. This is the most reliable route with no network at all.'],
         ['Test with one small file', 'Whichever route you pick, send one PDF first and confirm it opens.']
       ]
     },
     'computer>iphone': {
-      name: 'Cable, through Finder or iTunes',
+      name: 'Cable, through Finder or Apple Devices',
       steps: [
         ['Plug the phone in', 'Use a cable that carries data. Many charging cables do not, and a charge-only cable looks identical — if the computer never shows the phone, try another cable before anything else.'],
         ['Trust the computer', 'The iPhone asks "Trust this computer?". Tap Trust and enter the passcode, or nothing will be visible.'],
-        ['Open it on the computer', 'On a Mac open Finder and pick the iPhone in the sidebar. On Windows open iTunes.'],
-        ['Drag the file across', 'Use the Files tab and drop the file onto an app that reads it, or drop it into the Files app area.'],
-        ['Find it on the phone', 'Open the Files app on the iPhone and confirm it is there and opens.']
+        ['Open it on the computer', 'On a Mac, open Finder and select the iPhone. On Windows, open Apple Devices (or iTunes on older setups) and select the phone.'],
+        ['Copy the file', 'Choose an app that supports File Sharing in Files (or File Sharing in iTunes). To send to the phone, add the file to that app. To send to the computer, save the file from that app.'],
+        ['Check the received file', 'Open the file in the app used for File Sharing on the iPhone, or in the destination folder on the computer. Confirm it opens.']
       ]
     },
     'computer>android': {
@@ -67,9 +67,9 @@
       steps: [
         ['Plug the phone in', 'Use a data cable, not a charge-only one.'],
         ['Switch the phone to file transfer', 'Android connects as charging-only by default. Pull down the notification that says "Charging this device via USB", tap it, and choose File Transfer. Without this the computer sees nothing and it looks like the cable is broken.'],
-        ['Open the phone on the computer', 'Windows: it appears in File Explorer as the phone name. Mac: install Android File Transfer first, then open it.'],
-        ['Copy into Download', 'Drop the file into the Download folder on the phone, so it lands where the person will look for it.'],
-        ['Confirm on the phone', 'Open Files, then Downloads, and open the file once.']
+        ['Open the phone on the computer', 'On Windows, open the phone in File Explorer. On a Mac, use a compatible Android file transfer app, or use LocalSend on both devices over the same Wi-Fi.'],
+        ['Copy the file', 'To send to the phone, copy into its Download folder. To send to the computer, copy the saved file from the phone into a folder on the computer.'],
+        ['Check the received file', 'Open the file on the receiving device. On Android, check Files, then Downloads or the folder you chose. On a computer, check the destination folder.']
       ]
     },
     'card>iphone': {
@@ -77,7 +77,7 @@
       steps: [
         ['You need a reader', 'An iPhone has no card slot. You need a microSD reader that plugs into the phone’s own port — Lightning on older iPhones, USB-C on newer ones. Check which one before you travel.'],
         ['Put the card in the reader, the reader in the phone', 'The Files app shows the card as a new location in the sidebar.'],
-        ['Copy, do not just open', 'Press and hold the file, tap Copy, then go to On My iPhone, Downloads, and paste. If you only open it from the card, it disappears the moment the card comes out.'],
+        ['Copy, do not just open', 'Press and hold the file, then tap Copy. In Files, open On My iPhone or On My iPad, choose or create a folder, and paste. Opening a file on the card alone does not save it to your phone.'],
         ['Pull the card and check', 'Remove the reader, then open the file again from On My iPhone. If it still opens, it is really on the phone.']
       ]
     },
@@ -111,7 +111,7 @@
       name: 'Write a new card',
       steps: [
         ['This is how a card is duplicated', 'Copying the library onto a fresh microSD card is how the library spreads without anyone posting anything.'],
-        ['Format the new card first', 'Use exFAT for cards over 32 GB, FAT32 below that. Formatting erases the card — check it is the right one.'],
+        ['Format the new card first', 'Use a file system supported by the devices that will read the card. exFAT supports large files; FAT32 limits each file to under 4 GB. Formatting erases the card, so check it is the correct one.'],
         ['Copy everything', 'Copy the whole contents: START-HERE.html, the app folder, the media folder, README.txt. All of it, with the names unchanged.'],
         ['Test the new card before you hand it over', 'Put it in a phone and open START-HERE.html. Play one film and open one PDF. A card nobody tested is a card that fails in front of the person you gave it to.']
       ]
@@ -156,15 +156,15 @@
     });
   }
 
-  function pick(which, title) {
-    return '<div class="card"><h2 style="margin-bottom:.8rem">' + ET.esc(title) + '</h2>' +
+  function pick(which, titleKey) {
+    return '<div class="card"><h2 style="margin-bottom:.8rem">' + h(titleKey) + '</h2>' +
       '<div class="stack">' + DEVICES.map(function (d) {
         var on = state[which] === d.id;
         return '<button class="tile" data-pick="' + which + '" data-id="' + d.id + '" ' +
           'style="width:100%;text-align:start' +
           (on ? ';border-color:var(--purple);background:var(--purple-wash)' : '') + '">' +
           '<span class="ico">' + ET.icon(d.icon) + '</span>' +
-          '<span><span class="t">' + ET.esc(t(d.key)) + '</span></span>' +
+          '<span><span class="t">' + h(d.key) + '</span></span>' +
           (on ? '<span class="chev">' + ET.icon('check') + '</span>' : '') +
           '</button>';
       }).join('') + '</div></div>';
@@ -181,14 +181,14 @@
         '</p></div>';
     }
 
-    out += pick('from', t('share.from'));
-    if (state.from) out += pick('to', t('share.to'));
+    out += pick('from', 'share.from');
+    if (state.from) out += pick('to', 'share.to');
 
     var R = route();
     if (state.from && state.to && R) {
       var routeKey = 'route.' + routeId().replace('>', '-');
       out += '<div class="card">' +
-        '<span class="chip lang">' + ET.esc(t('share.result')) + '</span>' +
+        '<span class="chip lang">' + h('share.result') + '</span>' +
         '<h2 style="margin:.6rem 0 1.2rem">' + tOrHTML(routeKey + '.name', R.name) + '</h2>' +
         '<ol class="steps">' + R.steps.map(function (s, i) {
           var key = routeKey + '.' + (i + 1);
@@ -196,14 +196,14 @@
                  '<p>' + tOrHTML(key + '.p', s[1]) + '</p></li>';
         }).join('') + '</ol></div>';
 
-      out += '<div class="note"><strong>' + ET.esc(t('share.golden')) + '</strong>' +
-        '<p style="margin:.2rem 0 0">' + ET.esc(t('share.golden.body')) + '</p></div>';
+      out += '<div class="note"><strong>' + h('share.golden') + '</strong>' +
+        '<p style="margin:.2rem 0 0">' + h('share.golden.body') + '</p></div>';
 
-      out += '<div class="note good"><strong>' + ET.esc(t('share.teach')) + '</strong>' +
-        '<p style="margin:.2rem 0 0">' + ET.esc(t('share.teach.body')) + '</p></div>';
+      out += '<div class="note good"><strong>' + h('share.teach') + '</strong>' +
+        '<p style="margin:.2rem 0 0">' + h('share.teach.body') + '</p></div>';
 
       out += '<button class="btn ghost block" id="again">' +
-        ET.esc(t('share.again')) + '</button>';
+        h('share.again') + '</button>';
     }
 
     ET.$('#wizard').innerHTML = out;

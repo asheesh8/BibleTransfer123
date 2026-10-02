@@ -425,7 +425,7 @@
         choices.map(function (c, i) {
           return '<button class="tile" data-c="' + i + '" style="width:100%;text-align:start">' +
             '<span class="ico">' + ET.icon(c.many.length > 1 ? 'folder' : 'share') + '</span>' +
-            '<span><span class="t">' + ET.esc(t('nearby.pick.item', { title: item.title })) + '</span>' +
+            '<span><span class="t">' + h('nearby.pick.item', { title: item.title }) + '</span>' +
             '<span class="s latin">' + ET.esc(c.label) + (c.bytes ? ' · ' + ET.human(c.bytes) : '') + '</span></span>' +
             '<span class="chev flip">' + ET.icon('chev') + '</span></button>';
         }).join('') +
@@ -467,7 +467,7 @@
       return { name: s.name, size: s.size, type: s.type };
     }), total: S.total }));
     paint(2, '<p class="muted"><span class="spin"></span>' +
-      ET.esc(t('nearby.wait.accept', { device: S.peer })) + '</p>');
+      h('nearby.wait.accept', { device: S.peer }) + '</p>');
   }
 
   function sendAll() {
@@ -503,7 +503,7 @@
     S.got = [];
     var canDir = typeof window.showDirectoryPicker === 'function';
     paint(2,
-      '<div class="note info"><strong>' + ET.esc(t('nearby.accept.title', { device: S.peer })) + '</strong>' +
+      '<div class="note info"><strong>' + h('nearby.accept.title', { device: S.peer }) + '</strong>' +
       '<p style="margin:.4rem 0 0" class="latin">' + batch.files.slice(0, 5).map(function (f) {
         return ET.esc(f.name) + (f.size ? ' · ' + ET.human(f.size) : '');
       }).join('<br>') + (batch.files.length > 5 ? '<br>… +' + (batch.files.length - 5) : '') + '</p>' +
@@ -537,7 +537,7 @@
       '<div class="note good"><strong>' + ET.icon('check') + ' ' + h('nearby.connected') +
       ' — <span class="latin">' + ET.esc(S.peer) + '</span></strong></div>' +
       '<p class="muted" style="margin-top:1rem"><span class="spin"></span>' +
-      ET.esc(t('nearby.wait.pick', { device: S.peer })) + '</p>' +
+      h('nearby.wait.pick', { device: S.peer }) + '</p>' +
       btn('x', 'ghost', '', h('nearby.restart')));
     on('x', role);
   }
@@ -570,7 +570,7 @@
     } else if (m.t === 'decline') {
       if (S.offerPending) trackTransfer('share_cancel', 'declined');
       S.offerPending = false;
-      paint(2, '<div class="note"><strong>' + ET.esc(t('nearby.declined', { device: S.peer })) + '</strong></div>' +
+      paint(2, '<div class="note"><strong>' + h('nearby.declined', { device: S.peer }) + '</strong></div>' +
         btn('again', '', '', h('nearby.again')));
       on('again', pick);
     } else if (m.t === 'file') {
@@ -664,7 +664,7 @@
     paint(4,
       '<div class="done-mark">' + ET.icon('check') + '</div>' +
       '<h3 class="center">' + h('nearby.got') + ' ← <span class="latin">' + ET.esc(S.peer) + '</span></h3>' +
-      (S.dir ? '<p class="center muted">' + ET.esc(t('save.done.where', { place: S.dir.name })) + '</p>' : '') +
+      (S.dir ? '<p class="center muted">' + h('save.done.where', { place: S.dir.name }) + '</p>' : '') +
       '<div class="stack" style="margin-top:1rem">' + rows + '</div>' +
       '<div class="stack" style="margin-top:1rem">' +
         btn('pass', 'sky', 'share', h('nearby.passon')) +

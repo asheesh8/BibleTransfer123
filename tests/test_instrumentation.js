@@ -206,7 +206,14 @@ async function languageLibraries() {
     assert.equal(itemLink.searchParams.get('only'), content, 'item navigation retains the language lock');
     assert.equal(itemLink.searchParams.get('ui'), ui);
     assert.equal(itemLink.searchParams.get('share'), slug);
-    assert.equal(ET.i18n.t('lib.search'), 'Search by name', 'untranslated controls retain English fallback');
+    f.load('shared-library');
+    if (ui === 'mr') {
+      assert.match(ET.i18n.t('lib.search'), /[\u0900-\u097F]/, 'Marathi controls are translated');
+      assert.doesNotMatch(f.query('#shared-lead').innerHTML, /Some menus in English/);
+    } else {
+      assert.equal(ET.i18n.t('lib.search'), 'Etha na rĩĩtwa', 'Kikuyu search is translated');
+      assert.match(f.query('#shared-lead').innerHTML, /Some menus in English/, 'direct Kikuyu links disclose the partial interface');
+    }
 
     const launcher = fixture();
     launcher.load('share-libraries');
@@ -266,10 +273,14 @@ async function saving() {
   close.resolve(); await settle();
   assert.equal(count(saved, 'download_complete')[0].status, 'saved');
   assert.equal(count(saved, 'download_complete')[0].bytes, 4);
+  assert.match(saved.query('#save-flow').innerHTML, /save.done.title/);
+  assert.doesNotMatch(saved.query('#save-flow').innerHTML, /save.done.browser.title/);
 
   const browser = fixture(); browser.load('save'); browser.context.ET.save.open(browser.item);
   browser.query('[data-w="downloads"]').click(); await settle();
   assert.equal(browser.downloads.length, 1);
+  assert.match(browser.query('#save-flow').innerHTML, /save.done.browser.title/);
+  assert.match(browser.query('#save-flow').innerHTML, /save.done.browser.where/);
   assert.equal(count(browser, 'download_complete')[0].status, 'browser_handoff', 'browser download does not claim a saved file');
 
   const stopped = fixture({ fetch: (url, opts) => new Promise((resolve, reject) => {

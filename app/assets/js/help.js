@@ -13,7 +13,7 @@
       steps: [
         ['Open the Files app', 'It may be called Files, My Files, or File Manager depending on the phone.'],
         ['Go to Downloads', 'Anything you saved from this library is there unless you chose somewhere else.'],
-        ['Tap the file', 'A PDF opens in a reader, an MP3 in a music player, an MP4 in a video player. If the phone asks which app to use, pick one and tap Always.'],
+        ['Tap the file', 'A PDF needs a reader, an MP3 an audio player, and an MP4 a video player. If the phone asks which app to use, choose a suitable app.'],
         ['If nothing opens it', 'The phone has no app for that kind of file. A PDF reader and a video player are the two worth installing while you still have a signal.']
       ]
     },
@@ -25,7 +25,7 @@
         ['Open the Files app', 'Blue folder icon. Not Photos — saved documents do not go to Photos.'],
         ['Tap Browse, then Downloads', 'If Downloads is not shown, tap iCloud Drive, then Downloads. If you saved to On My iPhone or On My iPad, look there instead.'],
         ['Tap the file', 'Tap the book, audio, or video you saved. If the file does not open, you may need an app that can read that kind of file.'],
-        ['Keep it on the phone', 'If it is in iCloud Drive rather than On My iPhone, it may need a connection to open later. Move it to On My iPhone to be sure.']
+        ['Keep it on the phone', 'A file stored only in iCloud Drive may need an internet connection. Copy it to On My iPhone or On My iPad, then check that it opens without internet.']
       ],
       stepKeys: { 2: 'help.ios.downloads', 3: 'help.ios.openfile' },
       support: 'https://support.apple.com/102440', supportLabel: 'More help from Apple'
@@ -45,17 +45,17 @@
       icon: 'laptop', key: 'help.computer', title: 'On a computer',
       steps: [
         ['Look in Downloads', 'Windows: This PC, then Downloads. Mac: Finder, then Downloads.'],
-        ['Open it', 'Every computer can already open a PDF, an MP3 and an MP4.'],
+        ['Open it', 'Open the file with a PDF reader, audio player, or video player. If it does not open, install an app that supports that type of file.'],
         ['To keep the whole library', 'Copy the entire card, not individual files. Keep every folder name exactly as it is.']
       ]
     },
     {
       icon: 'save', key: 'help.install', title: 'Put the library on your home screen',
       steps: [
-        ['Why bother', 'It gets its own icon, opens full screen with one tap, and stops being something you have to find a folder for. Nothing is downloaded twice — it is the same library.'],
+        ['Why bother', 'A home screen icon gives you quick access to the library. Save the files you want to use offline separately.'],
         ['On Android', 'Open the library in Chrome, tap the three dots, then Add to Home screen. If a button offered it on the first screen, that does the same thing.'],
-        ['On iPhone or iPad', 'Open the library in Safari — not Chrome, this only works in Safari. Tap the Share button at the bottom, scroll down, then Add to Home Screen.'],
-        ['If you do not see the option', 'You are probably opening the library straight from the card rather than over the VillageServer Wi-Fi. Both work; only the Wi-Fi one can be installed.']
+        ['On iPhone or iPad', 'Open the library in Safari. Tap Share (or open the Page Menu, then Share), choose Add to Home Screen, then tap Add.'],
+        ['If you do not see the option', 'The option depends on your device and browser. Open the library website or its page on the VillageServer Wi-Fi. A page opened directly from a card may not offer it.']
       ]
     },
     {
@@ -63,7 +63,7 @@
       steps: [
         ['Join the network', 'Connect to the VillageServer Wi-Fi. It has no internet — that is expected and does not mean it is broken.'],
         ['Open the address in a browser', 'Type the address printed on the kit into any browser. The library opens.'],
-        ['Save what you want to keep', 'Anything you open over the Wi-Fi is gone when you walk away. Tap Save on the things you want to keep, so they live on your own phone.']
+        ['Save what you want to keep', 'To use files after leaving this Wi-Fi network, save them to your own device first.']
       ]
     }
   ];
@@ -106,9 +106,9 @@
 
   var TROUBLE = [
     ['The library opens but everything is blank',
-     'The folders were renamed or the copy was incomplete. Copy the whole card again, keeping every folder name exactly as it was.'],
+     'The catalogue may not have loaded, or the copy may be incomplete. Reload the page. If you copied a card, copy the whole card again without changing folder names.'],
     ['A film will not play',
-     'Either the file did not finish copying, or the phone has no video player. Try a different item: if none play, it is the player; if only one fails, it is that file.'],
+     'The file may be incomplete, or the device may not support its format. Try another film and check whether this one needs internet. If only one fails, copy or download that file again.'],
     ['It says "needs internet"',
      'That item was never stored on this card — only its listing was. It will open when the device has a connection, and not before.'],
     ['I saved something and cannot find it',
@@ -154,9 +154,7 @@
     out += '<div class="note good"><strong>' +
       tOrHTML('help.golden', 'Open it once before you need it') + '</strong>' +
       '<p style="margin:.25rem 0 0">' +
-      tOrHTML('help.golden.p', 'The moment to find out a file is broken is now, ' +
-        'while the card is still in your hand — not next week in front of a room ' +
-        'of people waiting.') + '</p></div>';
+      tOrHTML('help.golden.p', 'Open the file now, while you can still copy or download it again if something is wrong.') + '</p></div>';
 
     // The only route into the device-by-device guides from here.
     out += '<a class="tile" href="' + ET.esc(ET.scopedUrl('share.html')) + '" style="margin-top:1rem">' +

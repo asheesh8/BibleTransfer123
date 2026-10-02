@@ -13,9 +13,11 @@
     : location.origin + '/' + scope.slug;
 
   document.title = t('sharelib.title', { lang: L.name || scope.name || language });
-  ET.$('#shared-badge').textContent = t('sharelib.only', { lang: language });
-  ET.$('#shared-title').textContent = t('sharelib.title', { lang: language });
-  ET.$('#shared-lead').textContent = t('sharelib.lead', { lang: language });
+  ET.$('#shared-badge').innerHTML = h('sharelib.only', { lang: language });
+  ET.$('#shared-title').innerHTML = h('sharelib.title', { lang: language });
+  var languageNote = ET.i18n.meta && ET.i18n.meta(scope.ui || 'en').interfaceNote;
+  ET.$('#shared-lead').innerHTML = h('sharelib.lead', { lang: language }) +
+    (languageNote ? '<br><span class="latin" lang="en" dir="ltr">' + ET.esc(languageNote) + '</span>' : '');
 
   var email = ET.$('#email-library');
   email.innerHTML = ET.icon('share') + h('sharelib.email');
@@ -59,7 +61,7 @@
         language: scope.lang, channel: 'copy_link', shareId: intent.shareId, status: 'copied'
       });
       copy.innerHTML = ET.icon('check') + h('sharelib.copied');
-      ET.$('#copy-status').textContent = t('sharelib.copied');
+      ET.$('#copy-status').innerHTML = h('sharelib.copied');
     }
     function fallback() {
       var ta = document.createElement('textarea');

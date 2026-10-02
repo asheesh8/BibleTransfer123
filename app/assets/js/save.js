@@ -116,10 +116,10 @@
       if (preselect != null && files[preselect]) { S.file = files[preselect]; return where(); }
       if (files.length === 1) { S.file = files[0]; return where(); }
       paint(header(0) + '<div class="stack">' + files.map(function (f, i) {
-        var label = f.chapters ? ET.i18n.t('save.allchapters', { n: r.play.items.length }) : f.label;
+        var label = f.chapters ? h('save.allchapters', { n: r.play.items.length }) : ET.esc(f.label);
         return '<button class="tile" data-i="' + i + '" style="width:100%;text-align:start">' +
           '<span class="ico">' + ET.icon(f.chapters ? 'folder' : 'save') + '</span>' +
-          '<span><span class="t" dir="auto">' + ET.esc(label) + '</span>' +
+          '<span><span class="t" dir="auto">' + label + '</span>' +
           '<span class="s">' + sizeOf(f) + '</span></span>' +
           '<span class="chev flip">' + ET.icon('chev') + '</span></button>';
       }).join('') + '</div>' +
@@ -136,10 +136,10 @@
       var many = S.jobs.length > 1;
       recall(function (saved) {
         var opts = [];
-        if (saved) opts.push(['again', 'folder', t('save.folder.again', { name: saved.name }), '']);
-        if (CAN_DIR) opts.push(['dir', 'folder', t('save.folder'), t('save.folder.sub')]);
-        if (CAN_FILE && !many) opts.push(['file', 'save', t('save.as'), t('save.as.sub')]);
-        opts.push(['downloads', 'save', t('save.default'), t('save.default.sub')]);
+        if (saved) opts.push(['again', 'folder', h('save.folder.again', { name: saved.name }), '']);
+        if (CAN_DIR) opts.push(['dir', 'folder', h('save.folder'), h('save.folder.sub')]);
+        if (CAN_FILE && !many) opts.push(['file', 'save', h('save.as'), h('save.as.sub')]);
+        opts.push(['downloads', 'save', h('save.default'), h('save.default.sub')]);
 
         var total = S.jobs.reduce(function (a, j) { return a + (j.bytes || 0); }, 0) || S.file.bytes;
         paint(header(1) +
@@ -149,8 +149,8 @@
           '<div class="stack">' + opts.map(function (o) {
             return '<button class="tile" data-w="' + o[0] + '" style="width:100%;text-align:start">' +
               '<span class="ico">' + ET.icon(o[1]) + '</span>' +
-              '<span><span class="t">' + ET.esc(o[2]) + '</span>' +
-              (o[3] ? '<span class="s">' + ET.esc(o[3]) + '</span>' : '') + '</span>' +
+              '<span><span class="t">' + o[2] + '</span>' +
+              (o[3] ? '<span class="s">' + o[3] + '</span>' : '') + '</span>' +
               '<span class="chev flip">' + ET.icon('chev') + '</span></button>';
           }).join('') + '</div>' +
           '<button class="btn ghost block" id="sv-back" style="margin-top:1rem">' +
@@ -252,10 +252,10 @@
           ET.icon('play') + h('save.open') + '</a>';
       }
       var place = S.target.kind === 'downloads' ? t('save.done.downloads') : S.target.name;
-      paint(header(3) +
+      paint((S.target.kind === 'downloads' ? ET.stepper(STEPS.length, 3) : header(3)) +
         '<div class="done-mark">' + ET.icon('check') + '</div>' +
-        '<h3 class="center" style="margin:.2rem 0">' + h('save.done.title') + '</h3>' +
-        '<p class="center muted">' + ET.esc(t('save.done.where', { place: place })) + '</p>' +
+        '<h3 class="center" style="margin:.2rem 0">' + h(S.target.kind === 'downloads' ? 'save.done.browser.title' : 'save.done.title') + '</h3>' +
+        '<p class="center muted">' + (S.target.kind === 'downloads' ? h('save.done.browser.where') : h('save.done.where', { place: place })) + '</p>' +
         (S.target.kind === 'downloads' ? '<p class="center muted" style="font-size:.9rem">' +
           h('save.android') + '<br>' + h('save.ios') + '</p>' : '') +
         '<div class="stack" style="margin-top:1rem">' + openBtn +
@@ -362,16 +362,16 @@
     function where() {
       recall(function (saved) {
         var opts = [];
-        if (saved) opts.push(['again', 'folder', t('save.folder.again', { name: saved.name }), '']);
-        if (CAN_DIR) opts.push(['dir', 'folder', t('save.folder'), t('save.folder.sub')]);
-        opts.push(['downloads', 'save', t('save.default'), t('save.default.sub')]);
+        if (saved) opts.push(['again', 'folder', h('save.folder.again', { name: saved.name }), '']);
+        if (CAN_DIR) opts.push(['dir', 'folder', h('save.folder'), h('save.folder.sub')]);
+        opts.push(['downloads', 'save', h('save.default'), h('save.default.sub')]);
         paint(batchHeader(0) +
           '<div class="note info" style="margin-bottom:1rem"><strong>' +
           h('bulk.title', { n: resources.length }) + '</strong><p class="muted" style="margin:.2rem 0 0">' +
           summary() + '</p></div><div class="stack">' + opts.map(function (o) {
             return '<button class="tile" data-bw="' + o[0] + '" style="width:100%;text-align:start">' +
-              '<span class="ico">' + ET.icon(o[1]) + '</span><span><span class="t">' + ET.esc(o[2]) +
-              '</span>' + (o[3] ? '<span class="s">' + ET.esc(o[3]) + '</span>' : '') + '</span>' +
+              '<span class="ico">' + ET.icon(o[1]) + '</span><span><span class="t">' + o[2] +
+              '</span>' + (o[3] ? '<span class="s">' + o[3] + '</span>' : '') + '</span>' +
               '<span class="chev flip">' + ET.icon('chev') + '</span></button>';
           }).join('') + '</div><p class="muted" style="font-size:.9rem;margin:1rem 0 0">' +
           h('bulk.multiple') + '</p><button class="btn ghost block" id="bsv-x" style="margin-top:1rem">' +
@@ -447,9 +447,9 @@
     function finished() {
       S.ctrl = null;
       var place = S.target.kind === 'downloads' ? t('save.done.downloads') : S.target.name;
-      paint(batchHeader(2) + '<div class="done-mark">' + ET.icon('check') + '</div>' +
-        '<h3 class="center" style="margin:.2rem 0">' + h('bulk.done.title', { n: resources.length }) + '</h3>' +
-        '<p class="center muted">' + ET.esc(t('save.done.where', { place: place })) + '</p>' +
+      paint((S.target.kind === 'downloads' ? ET.stepper(3, 2) : batchHeader(2)) + '<div class="done-mark">' + ET.icon('check') + '</div>' +
+        '<h3 class="center" style="margin:.2rem 0">' + h(S.target.kind === 'downloads' ? 'bulk.done.browser.title' : 'bulk.done.title', { n: resources.length }) + '</h3>' +
+        '<p class="center muted">' + (S.target.kind === 'downloads' ? h('save.done.browser.where') : h('save.done.where', { place: place })) + '</p>' +
         '<button class="btn green block" id="bsv-done" style="margin-top:1rem">' +
         h('bulk.close') + '</button>');
       ET.$('#bsv-done', root).addEventListener('click', sheet.close);

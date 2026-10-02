@@ -36,7 +36,7 @@
       return '<article class="card share-language-card"><div>' +
         '<h2 dir="auto">' + ET.esc(x[3]) + '</h2>' +
         '<p class="latin muted">' + ET.esc(x[2]) + ' · ' +
-          ET.esc(t('sharelib.launch.resources', { n: count })) + '</p>' +
+          h('sharelib.launch.resources', { n: count }) + '</p>' +
         '</div><div class="btn-row">' +
         '<a class="btn sky" href="' + ET.esc(url) + '">' + ET.icon('book') + h('sharelib.launch.open') + '</a>' +
         '<a class="btn green" data-share-email="' + x[0] + '" href="mailto:?subject=' + encodeURIComponent(subject) + '&body=' +

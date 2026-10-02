@@ -5,7 +5,7 @@
    on a phone is the button people actually use. */
 (function (ET) {
   'use strict';
-  var t = ET.i18n.t;
+  var t = ET.i18n.t, h = ET.i18n.h;
   var lib = ET.library();
   var scope = ET.libraryScope();
   var lockedLang = scope && scope.lang;
@@ -74,7 +74,8 @@
       '<span class="art">' + ET.icon(ET.typeIcon(r.type)) +
         (art ? '<img src="' + ET.esc(art) + '" alt="" loading="lazy" decoding="async" onerror="this.remove()">' : '') +
       '</span><span class="meta">' +
-        '<span class="kicker">' + ET.esc(d.kicker) + '</span>' +
+        '<span class="kicker">' + h('type.' + r.type) +
+          (r.offline ? ' · ' + h('item.offline') : '') + '</span>' +
         '<span class="name" dir="auto">' + ET.esc(ET.displayTitle(r)) + '</span>' +
         '<span class="sub latin">' + ET.esc(d.sub) + '</span>' +
       '</span><span class="bulk-check">' + ET.icon('check') + '</span></button>';
@@ -107,10 +108,10 @@
     var typeScroll = typeFilters.scrollLeft;
     typeFilters.innerHTML =
       ['<button class="fchip" data-type="" aria-pressed="' + (!state.type) + '">' +
-        ET.esc(t('lib.all')) + '</button>'].concat(
+        h('lib.all') + '</button>'].concat(
         avail.map(function (ty) {
           return '<button class="fchip" data-type="' + ty + '" aria-pressed="' +
-            (state.type === ty) + '">' + ET.esc(t('type.' + ty)) + '</button>';
+            (state.type === ty) + '">' + h('type.' + ty) + '</button>';
         })).join('');
     typeFilters.scrollLeft = typeScroll;
     if (!typeFilters.dataset.ready && state.type) {
@@ -128,7 +129,7 @@
     if (!langFilters || lockedLang) return;
     var currentLang = ET.$('#lang-filter-current');
     var currentLabel = state.lang && lib.languages[state.lang];
-    currentLang.textContent = currentLabel ? (currentLabel.native || currentLabel.name) : t('lib.all');
+    currentLang.innerHTML = currentLabel ? ET.esc(currentLabel.native || currentLabel.name) : h('lib.all');
 
     // Keep the catalogue filters in the same worldwide-speaker order as the
     // interface language picker. Append future catalogue-only languages so a
@@ -143,7 +144,7 @@
     });
     langFilters.innerHTML =
       ['<button class="fchip" data-lang="" aria-pressed="' + (!state.lang) + '">' +
-        ET.esc(t('lib.all')) + '</button>'].concat(
+        h('lib.all') + '</button>'].concat(
         langs.map(function (code) {
           var L = lib.languages[code];
           // English's "native" name is just English — printing both said it twice.
@@ -233,9 +234,9 @@
     var scopeLang = lockedLang || state.lang;
     var total = scopeLang ? lib.resources.filter(function (r) { return r.lang === scopeLang; }).length
                           : lib.resources.length;
-    ET.$('#count').textContent = hits.length === total
-      ? t('lib.countall', { n: total })
-      : t('lib.count', { n: hits.length, total: total });
+    ET.$('#count').innerHTML = hits.length === total
+      ? h('lib.countall', { n: total })
+      : h('lib.count', { n: hits.length, total: total });
     ET.$('#empty').hidden = hits.length > 0;
     ET.$('#results').hidden = hits.length === 0;
     syncUrl();
