@@ -456,7 +456,7 @@ window.ET = (function () {
      English title and heard Sindhi. Choosing a language picks both: English
      shows English films, اردو shows Urdu, سنڌي shows Sindhi. The library can
      still browse the others on purpose. */
-  var CONTENT = { en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', zul: 'zul', mas: 'mas', kik: 'kik', hi: 'hin', mr: 'mar', lg: 'lug', luo: 'luo', om: 'orm', ig: 'ibo', pa: 'pan', pnb: 'pnb', ne: 'npi' };
+  var CONTENT = { fr: 'fra', en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', zul: 'zul', mas: 'mas', kik: 'kik', hi: 'hin', mr: 'mar', lg: 'lug', luo: 'luo', om: 'orm', ig: 'ibo', pa: 'pan', pnb: 'pnb', ne: 'npi' };
   function contentCode(ui) { return CONTENT[ui] || 'eng'; }
   function contentLang() {
     var scope = libraryScope();
@@ -485,6 +485,74 @@ window.ET = (function () {
       [65,'Jude',1],[66,'Revelation',22]]
   };
   var LOCAL_BOOKS = {
+    fr: {
+  "Genesis": "Genèse",
+  "Exodus": "Exode",
+  "Leviticus": "Lévitique",
+  "Numbers": "Nombres",
+  "Deuteronomy": "Deutéronome",
+  "Joshua": "Josué",
+  "Judges": "Juges",
+  "Ruth": "Ruth",
+  "1Samuel": "1 Samuel",
+  "2Samuel": "2 Samuel",
+  "1Kings": "1 Rois",
+  "2Kings": "2 Rois",
+  "1Chronicles": "1 Chroniques",
+  "2Chronicles": "2 Chroniques",
+  "Ezra": "Esdras",
+  "Nehemiah": "Néhémie",
+  "Esther": "Esther",
+  "Job": "Job",
+  "Psalms": "Psaumes",
+  "Proverbs": "Proverbes",
+  "Ecclesiastes": "Ecclésiaste",
+  "SongofSongs": "Cantique des cantiques",
+  "Isaiah": "Ésaïe",
+  "Jeremiah": "Jérémie",
+  "Lamentations": "Lamentations",
+  "Ezekiel": "Ézéchiel",
+  "Daniel": "Daniel",
+  "Hosea": "Osée",
+  "Joel": "Joël",
+  "Amos": "Amos",
+  "Obadiah": "Abdias",
+  "Jonah": "Jonas",
+  "Micah": "Michée",
+  "Nahum": "Nahum",
+  "Habakkuk": "Habacuc",
+  "Zephaniah": "Sophonie",
+  "Haggai": "Aggée",
+  "Zechariah": "Zacharie",
+  "Malachi": "Malachie",
+  "Matthew": "Matthieu",
+  "Mark": "Marc",
+  "Luke": "Luc",
+  "John": "Jean",
+  "Acts": "Actes",
+  "Romans": "Romains",
+  "1Corinthians": "1 Corinthiens",
+  "2Corinthians": "2 Corinthiens",
+  "Galatians": "Galates",
+  "Ephesians": "Éphésiens",
+  "Philippians": "Philippiens",
+  "Colossians": "Colossiens",
+  "1Thessalonians": "1 Thessaloniciens",
+  "2Thessalonians": "2 Thessaloniciens",
+  "1Timothy": "1 Timothée",
+  "2Timothy": "2 Timothée",
+  "Titus": "Tite",
+  "Philemon": "Philémon",
+  "Hebrews": "Hébreux",
+  "James": "Jacques",
+  "1Peter": "1 Pierre",
+  "2Peter": "2 Pierre",
+  "1John": "1 Jean",
+  "2John": "2 Jean",
+  "3John": "3 Jean",
+  "Jude": "Jude",
+  "Revelation": "Apocalypse"
+},
     // Published names from DBS’s Igbo Union audio Bible selector.
     ig: {
       "Genesis": "Jenesis",

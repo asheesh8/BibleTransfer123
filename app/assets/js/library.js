@@ -21,7 +21,7 @@
   };
   var selected = {};
 
-  var TYPES = ['film', 'scripture', 'audio-bible', 'audio', 'historic', 'link'];
+  var TYPES = ['film', 'scripture', 'audio-bible', 'audio', 'historic', 'book', 'link'];
 
   function present(list) {
     var seen = {};

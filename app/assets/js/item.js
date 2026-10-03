@@ -31,7 +31,7 @@
   ET.store.set('et.last', r.id);   // Home offers this back as "Carry on"
   var lib = ET.library();
   var L = lib.languages[r.lang] || {};
-  var isText = r.type === 'scripture' || r.type === 'historic';
+  var isText = r.type === 'scripture' || r.type === 'historic' || r.type === 'book';
 
   function phoneScreen() {
     return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
@@ -143,7 +143,7 @@
 
     // What language this is actually in, before anyone presses play.
     var tongue = '<span class="chip lang">' + ET.icon('globe') +
-      h(isText ? 'item.written' : 'item.spoken', { lang: r.lang === 'ibo' && r.scope && r.scope !== 'Igbo'
+      h(isText ? 'item.written' : 'item.spoken', { lang: (r.lang === 'ibo' && r.scope && r.scope !== 'Igbo') || r.lang === 'fra'
         ? r.langName : L.native && L.native !== L.name
         ? L.native + ' · ' + L.name : (L.name || r.langName || '') }) + '</span>';
 
@@ -152,7 +152,7 @@
         '<div style="display:flex;gap:.4rem;flex-wrap:wrap">' + tongue + where +
           '<span class="chip">' + h('type.' + r.type) + '</span></div>' +
         '<h1 dir="auto" style="margin:.3rem 0 0">' + ET.esc(ET.displayTitle(r)) + '</h1>' +
-        (r.native ? '<p class="latin" style="font-size:1rem;margin:0">' +
+        (r.native && r.native !== r.title ? '<p class="latin" style="font-size:1rem;margin:0">' +
           ET.esc(ET.displayTitle(r) === r.native ? r.title : r.native) + '</p>' : '') +
         '<p class="muted latin" style="margin:0">' + ET.esc([r.org, r.year, r.duration, r.stats]
           .filter(Boolean).join(' · ')) + '</p>' +

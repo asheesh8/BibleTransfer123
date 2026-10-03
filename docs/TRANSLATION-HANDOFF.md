@@ -265,3 +265,73 @@ two varieties. Enuani retains its 61 chapters. The exact 14 publisher page and
 media URLs are allowed only for the Igbo shelf; other curation is unchanged.
 Unverified optional archives stay accessible from each original DBS page.
 The existing 834 raw and compiled resources were compared and remain unchanged.
+
+## French — 2026-10-03
+
+The French shelf uses content code `fra`, interface `fr`, and `/french`, with
+`/francais` and `/fra` aliases. It contains 172 resources from all 196 unique
+URLs on the expanded [DBS French listing](https://dbs.org/discover/languages/fra).
+Repeated publisher rows are deduplicated; every listed URL is represented by
+a resource, an edition/programme alias, or an explicit exclusion in the audit.
+Regional recordings are labeled for France, Canada, Africa, Central Africa,
+North Africa, West Africa and Gitan; the Guernesey edition is labeled separately.
+
+French copy covers library navigation, player/save controls, bulk downloads,
+nearby transfer, help and the device sharing guides. Book names and resource
+and recording titles are in French. The separate Mac/Windows screenshot guide
+remains in English and is disclosed. These translations have been reviewed
+for meaning and grammar by the implementation agent; they are not certified
+by a native-speaking reviewer. Publisher names and original edition titles
+may also appear as source metadata.
+
+There are four current audio Bibles, seven downloadable text editions,
+19 historic scans, 27 film resources, 39 audio resources, 42 teaching books
+and guides, 33 additional edition directory cards, and the French BibleProject
+website. Edition directory cards explicitly say that their files are available
+through the publisher's links. BibleProject's 73 overviews and 86 studies each
+have distinct captured MP4 links and corrected French titles. DBS's truncated
+or mismatched French headings are not repeated. Segond 21 is correctly named;
+the DBS directory's misleading “King James” title is not used. The Apostles’ Creed
+lesson numbers and subjects follow the actual PDF title pages, correcting
+DBS’s shifted numbering; Utley’s second volume is correctly identified as
+Mark and 1–2 Peter, and his Acts volume is labeled as a complete commentary. The legacy
+GotQuestions topic “fishing” is corrected to “le péché”.
+
+All 4,496 canonical audio Bible chapter URLs were checked with range requests.
+There are 4,494 available files: Chouraqui and Trésorsonore each lack a separate
+Malachi 4 file. The missing files are disabled and disclosed without altering
+the recordings or biblical text. The curated Global Recordings collection
+contains 987 recordings: ten public-service recordings without confirmed
+Christian content and one Arabic recording are excluded. Its unfiltered ZIP
+is not offered. Story of Jesus has nine recordings; StoryRunners has 42; ROCK's
+Way of Righteousness has 100 published recordings. The separate French West
+African StoryRunners folder is linked through its published pCloud download
+interface, with the Internet requirement disclosed; expiring file URLs are
+not guessed.
+
+All seven text Bible ZIPs and EPUBs were downloaded through the browser and
+passed complete archive integrity checks (14 archives). The four French ROCK
+PDFs were also downloaded and their PDF signatures checked. Direct file probes
+cover more than 6,200 source URLs. DBS and ROCK block some command-line requests
+with 403/406 responses; these are recorded as protected, not as successful byte
+checks. Browser media checks verify representative playback across the French
+players. Chapter files remain individually downloadable; large film collection
+ZIPs that have not been fully downloaded and checked stay on the original DBS
+pages. The Saurin scan's direct PDF is empty, so its card links to DBS's source
+page instead of offering that file.
+
+Curation continues to exclude known LGBTQ-affirming/gender-inclusive editions,
+sectarian translations and editions that cut Scripture. French exclusions are
+persisted so a fresh import cannot restore excluded rows. The removed source
+rows include the Jefferson edition, an OT-only Rabbinat edition, a placeholder,
+two editions whose Christian/full-Scripture scope is unconfirmed, a retired audio
+edition, foreign-language study texts, an unavailable image directory, two GRN
+programme links without eligible recordings, and retired Lifewords product URLs. Ordinary biblical references to
+sexuality are not grounds for removal. This is source/edition metadata curation,
+not a verse-by-verse theological certification of every publisher's edition.
+
+Publisher exceptions are exact URLs scoped to French. Existing 862 resources
+retain their previous records. The browser captures, file checks and exclusions
+are retained in `catalog/source/dbs-*-french-2026-10-03.json` and
+`catalog/source/dbs-french-external-2026-10-03.json`; `packer/build_french.py`
+reproduces the shelf from these captured sources.

@@ -19,9 +19,9 @@ function harness(elements = {}, scope = null) {
 }
 const placeholders = value => [...value.matchAll(/\{(\w+)\}/g)].map(match => match[1]).sort();
 
-test('all twenty languages retain formatter variables and render escaped strings', () => {
+test('all twenty-one languages retain formatter variables and render escaped strings', () => {
   const { ET, dictionaries, attributes } = harness();
-  assert.equal(ET.i18n.langs.length, 20);
+  assert.equal(ET.i18n.langs.length, 21);
   for (const language of ET.i18n.langs) {
     ET.i18n.set(language.code);
     assert.equal(attributes.dir, language.dir);
@@ -121,7 +121,7 @@ test('untranslated copy is marked as English and changes back when translated', 
 });
 
  test('new shared libraries initialize in their native interface without a stored preference', () => {
-  for (const scope of [{lang: 'orm', ui: 'om'}, {lang: 'luo', ui: 'luo'}, {lang: 'ibo', ui: 'ig'}]) {
+  for (const scope of [{lang: 'orm', ui: 'om'}, {lang: 'luo', ui: 'luo'}, {lang: 'ibo', ui: 'ig'}, {lang: 'fra', ui: 'fr'}]) {
     const {ET, dictionaries, attributes} = harness({}, scope);
     assert.equal(ET.i18n.current(), scope.ui);
     ET.i18n.apply();
@@ -132,4 +132,15 @@ test('untranslated copy is marked as English and changes back when translated', 
       assert.notEqual(ET.i18n.t(key), dictionaries.en[key], scope.ui + '.' + key);
     }
   }
+});
+
+test('French covers every existing interface key and uses singular resource counts', () => {
+  const { ET, dictionaries } = harness({}, {lang: 'fra', ui: 'fr'});
+  for (const key of Object.keys(dictionaries.en)) {
+    assert.ok(dictionaries.fr[key], 'French fallback: ' + key);
+  }
+  assert.equal(ET.i18n.t('lib.countall', {n: 1}), '1 ressource');
+  assert.equal(ET.i18n.t('lib.countall', {n: 2}), '2 ressources');
+  assert.equal(ET.i18n.t('help.android.4.h'), 'Si le fichier ne s’ouvre pas');
+  assert.equal(ET.i18n.t('type.book'), 'Livres et guides');
 });

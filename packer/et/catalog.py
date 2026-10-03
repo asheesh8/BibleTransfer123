@@ -51,6 +51,7 @@ def load(path):
         if not isinstance(more, dict) or "resources" not in more:
             continue
         base.setdefault("languages", {}).update(more.get("languages", {}))
+        base.setdefault("types", {}).update(more.get("types", {}))
         for r in more["resources"]:
             if r["id"] not in seen:
                 base["resources"].append(r)
