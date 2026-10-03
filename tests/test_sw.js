@@ -46,7 +46,7 @@ function harness(scopePath = '/') {
     // Simulate a still-fresh max-age=3600 HTTP entry. Ordinary requests get
     // stale deployment bytes; reload/no-cache must consult the current server.
     if (mode !== 'reload' && mode !== 'no-cache' && httpCache.has(request.url)) return httpCache.get(request.url).clone();
-    const response = new Response(serverBody(request.url));
+    const response = new Response(await serverBody(request.url));
     httpCache.set(request.url, response.clone());
     return response;
   };
@@ -230,4 +230,32 @@ test('Kikuyu, Marathi and Luganda library pages remain available offline after i
     assert.equal(result.intercepted, true);
     assert.equal(result.response.body, 'server:/' + slug + '/index.html');
   }
+});
+
+test('the smaller home and all language catalogues remain usable offline', async () => {
+  const h = harness();
+  await h.lifecycle('install');
+  h.offline(true);
+  const catalogues = h.context.SHELL.filter(filename => filename.startsWith('data/catalog'));
+  assert.equal(catalogues.length, 19);
+  for (const filename of catalogues) {
+    const result = await h.dispatch('/' + filename);
+    assert.equal(result.response.body, 'server:/' + filename);
+  }
+});
+
+test('background installation limits concurrent downloads and still caches the entire shell', async () => {
+  const h = harness();
+  let active = 0, peak = 0;
+  h.server(async url => {
+    peak = Math.max(peak, ++active);
+    await tick();
+    active--;
+    return 'server:' + new URL(url).pathname;
+  });
+  await h.lifecycle('install');
+  assert.equal(h.requests.length, h.context.SHELL.length);
+  assert.ok(peak <= 3, 'background installation competes with playback');
+  assert.equal(active, 0);
+  assert.equal(h.self.skipped, true);
 });

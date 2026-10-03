@@ -687,7 +687,20 @@ window.ET = (function () {
            navigator.standalone === true;
   }
 
-  registerSW();
+  // Installing the offline shell downloads every page and screenshot. Start
+  // only after the visible page has loaded, so it cannot delay its scripts.
+  function scheduleSW() {
+    if (window.requestIdleCallback) {
+      window.requestIdleCallback(registerSW, { timeout: 4000 });
+    } else {
+      window.setTimeout(registerSW, 1500);
+    }
+  }
+  if ('serviceWorker' in navigator &&
+      (location.protocol === 'http:' || location.protocol === 'https:')) {
+    if (document.readyState === 'complete') scheduleSW();
+    else window.addEventListener('load', scheduleSW, { once: true });
+  }
 
   return {
     store: store, icon: icon, lantern: lantern, esc: esc, qs: qs, human: human,

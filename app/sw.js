@@ -8,7 +8,7 @@
 
    VERSION must change whenever the shell changes, or an installed copy keeps
    serving the old one. `easytransfer build` rewrites it. */
-var VERSION = 'shell-v30';
+var VERSION = 'shell-v31';
 
 var SHELL = [
   'index.html', 'library.html', 'item.html', 'share.html', 'help.html', 'nearby.html',
@@ -27,7 +27,13 @@ var SHELL = [
   'eastern-punjabi/index.html', 'western-punjabi/index.html', 'nepali/index.html',
   'share-libraries/index.html',
   'assets/icon/icon-192.png', 'assets/icon/icon-512.png',
-  'data/catalog.js',
+  'data/catalog.js', 'data/catalog-home.js',
+  'data/catalog-eng.js', 'data/catalog-cmn.js', 'data/catalog-hin.js',
+  'data/catalog-mar.js', 'data/catalog-urd.js', 'data/catalog-swh.js',
+  'data/catalog-zul.js', 'data/catalog-pnb.js', 'data/catalog-yue.js',
+  'data/catalog-pus.js', 'data/catalog-pan.js', 'data/catalog-npi.js',
+  'data/catalog-snd.js', 'data/catalog-lug.js', 'data/catalog-kik.js',
+  'data/catalog-guz.js', 'data/catalog-mas.js',
   'assets/save-guide/macos/slide-01.webp', 'assets/save-guide/macos/slide-02.webp',
   'assets/save-guide/macos/slide-03.webp', 'assets/save-guide/macos/slide-04.webp',
   'assets/save-guide/macos/slide-05.webp', 'assets/save-guide/macos/slide-06.webp',
@@ -48,10 +54,17 @@ self.addEventListener('install', function (e) {
       // addAll fails the whole install if any one file 404s. The shell is
       // fixed and known, but a partial build should not brick installation,
       // so each file is added on its own and failures are tolerated.
-      return Promise.all(SHELL.map(function (u) {
+      // Bound background requests so installing offline support does not
+      // crowd out a film or a page the person opens next.
+      var next = 0;
+      function cacheNext() {
+        if (next >= SHELL.length) return Promise.resolve();
+        var u = SHELL[next++];
         // A new shell version must not inherit fresh-but-outdated HTTP assets.
-        return c.add(new Request(u, { cache: 'reload' })).catch(function () {});
-      }));
+        return c.add(new Request(u, { cache: 'reload' })).catch(function () {})
+          .then(cacheNext);
+      }
+      return Promise.all([cacheNext(), cacheNext(), cacheNext()]);
     }).then(function () { return self.skipWaiting(); })
   );
 });
