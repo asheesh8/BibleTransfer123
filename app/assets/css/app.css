@@ -998,3 +998,13 @@ html[dir="rtl"] .wl-go svg { transform: scaleX(-1); }
   background: rgba(0, 0, 0, .25); padding: .15rem .45rem; border-radius: 999px;
 }
 .poster .art img, .rowi .art img, .thumb > img { z-index: 2; }
+
+/* Ethiopic faces are supplied by the device so the offline app needs no font download. */
+html[lang="am"] body {
+  font-family: "Noto Sans Ethiopic", Nyala, Kefa, "Abyssinica SIL", system-ui, sans-serif;
+  line-height: 1.75;
+}
+html[lang="am"] .latin { font-family: inherit; }
+html[lang="am"] .kicker, html[lang="am"] .flabel, html[lang="am"] .eyebrow {
+  text-transform: none; letter-spacing: 0; font-size: .86rem;
+}

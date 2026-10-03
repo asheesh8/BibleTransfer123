@@ -20,6 +20,8 @@
     { "source": "/luganda", "destination": "/luganda/index.html" },
     { "source": "/luo", "destination": "/luo/index.html" },
     { "source": "/dholuo", "destination": "/luo/index.html" },
+    { "source": "/amharic", "destination": "/amharic/index.html" },
+    { "source": "/amh", "destination": "/amharic/index.html" },
     { "source": "/french", "destination": "/french/index.html" },
     { "source": "/francais", "destination": "/french/index.html" },
     { "source": "/fra", "destination": "/french/index.html" },

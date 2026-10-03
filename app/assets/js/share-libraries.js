@@ -17,6 +17,7 @@
     ['sindhi', 'snd', 'Sindhi', 'سنڌي'],
     ['luganda', 'lug', 'Luganda', 'Luganda'],
     ['luo', 'luo', 'Luo', 'Dholuo'],
+    ['amharic', 'amh', 'Amharic', 'አማርኛ'],
     ['french', 'fra', 'French', 'Français'],
     ['igbo', 'ibo', 'Igbo', 'Asụsụ Igbo'],
     ['oromo', 'orm', 'Oromo', 'Afaan Oromoo'],

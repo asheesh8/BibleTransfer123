@@ -15,6 +15,17 @@
   var CHANNELS = ['email', 'copy_link', 'native_share', 'nearby', 'bluetooth', 'wifi',
     'sd_card', 'usb', 'whatsapp', 'telegram', 'facebook', 'sms', 'unknown'];
   var COPY = {
+    am: {
+  "title": "ኩኪዎችና የግል መረጃዎ",
+  "body": "በእርስዎ ፈቃድ ጉብኝቶችን፣ የተጠቀሙባቸውን ይዘቶች፣ የማጋራት ዘዴዎችንና ከተጋሩ አገናኞች የመጡ ጉብኝቶችን ለመቁጠር የአሳሹን ማከማቻ እንጠቀማለን። ሪፖርቶች አገርዎንና የመጡበትን ድረ ገጽ ሊያካትቱ ይችላሉ። መረጃውን ለ90 ቀናት እናቆያለን። ተቀባዮችን፣ የግል መልዕክቶችን ወይም የተቀዱ አገናኞች የት እንደተለጠፉ ማየት አንችልም።",
+  "accept": "ስታቲስቲክስ ይፍቀዱ",
+  "reject": "ስታቲስቲክስ አልፈልግም",
+  "settings": "የኩኪ ቅንብሮች",
+  "details": "የግል መረጃ ማስታወቂያውን ያንብቡ",
+  "enabled": "ስታቲስቲክስ በአሁኑ ጊዜ በሥራ ላይ ነው።",
+  "disabled": "ስታቲስቲክስ በአሁኑ ጊዜ ጠፍቷል።",
+  "signal": "አሳሽዎ የግል መረጃ ጥበቃ ምርጫ ልኳል። ስታቲስቲክስ እንደጠፋ ይቆያል።"
+},
     fr: {
       title: 'Cookies et confidentialité',
       body: 'Avec votre accord, nous utilisons le stockage du navigateur pour mesurer les visites, les ressources consultées, les moyens de partage et les visites provenant de liens partagés. Les rapports peuvent inclure votre pays et le site depuis lequel vous êtes arrivé. Nous conservons ces données pendant 90 jours. Nous ne pouvons pas voir les destinataires, les messages privés ni les endroits où les liens copiés sont collés.',

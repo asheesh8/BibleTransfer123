@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="am" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<base href="../">
+<title>የአማርኛ መጽሐፍ ቅዱስ ቤተ መጻሕፍት</title>
+<meta name="description" content="መጽሐፍ ቅዱስ፣ ፊልሞችና የድምፅ ቅጂዎች በአማርኛ።">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="assets/icon/apple-touch-icon.png">
+<link rel="icon" href="assets/icon/favicon-32.png" sizes="32x32">
+<meta name="theme-color" content="#4E1F64">
+<link rel="stylesheet" href="assets/css/app.css">
+<link rel="stylesheet" href="assets/css/consent.css">
+<script>
+window.ET_SHARED_LIBRARY = {"lang":"amh","ui":"am","slug":"amharic","name":"Amharic","native":"አማርኛ"};
+// Older installed shells may not know this newly added interface. Refresh
+// only after the current worker has installed and can serve the new strings.
+if ('serviceWorker' in navigator) navigator.serviceWorker.addEventListener('controllerchange', function () {
+  if (document.documentElement.lang !== window.ET_SHARED_LIBRARY.ui) location.reload();
+});
+try {
+  var theme = localStorage.getItem("et.theme");
+  if (theme) document.documentElement.setAttribute("data-theme", theme);
+} catch (e) {}
+</script>
+</head>
+<body>
+<main class="wrap" id="main">
+  <section class="shared-hero">
+    <p class="eyebrow" id="shared-badge">አማርኛ ብቻ</p>
+    <h1 id="shared-title" dir="auto">የአማርኛ መጽሐፍ ቅዱስ ቤተ መጻሕፍት</h1>
+    <p class="muted" id="shared-lead">በዚህ ቤተ መጻሕፍት ያሉት ይዘቶች በአማርኛ ናቸው።</p>
+    <div class="btn-row shared-actions">
+      <a class="btn green" id="email-library" href="#">ቤተ መጻሕፍቱን በኢሜይል ያጋሩ</a>
+      <button class="btn ghost" id="copy-library" type="button">አገናኙን ይቅዱ</button>
+    </div>
+    <p class="sr" id="copy-status" aria-live="polite"></p>
+  </section>
+
+  <div class="search" style="margin-bottom:.9rem">
+    <span id="search-ico"></span>
+    <input type="search" id="q" data-i18n-placeholder="lib.search" placeholder="በስም ይፈልጉ" autocomplete="off" enterkeyhint="search">
+  </div>
+  <p class="flabel" data-i18n="lib.kind">የይዘት ዓይነት</p>
+  <div class="filters" id="type-filters" role="group" data-i18n-aria="lib.kind" aria-label="የይዘት ዓይነት"></div>
+  <div id="bulk-controls"></div>
+  <p class="muted" id="count" style="margin:1rem 0 .6rem"></p>
+  <div class="row-list" id="results"></div>
+  <div id="empty" hidden class="card center" style="padding:2rem 1.2rem">
+    <div id="empty-art"></div>
+    <h3 data-i18n="lib.none">ከፍለጋዎ ጋር የሚዛመድ አልተገኘም</h3>
+    <p class="muted" data-i18n="lib.none.sub">አጭር ቃል ይሞክሩ ወይም «ሁሉም» የሚለውን ይንኩ።</p>
+    <button class="btn ghost" id="reset" data-i18n="lib.clear">ማጣሪያዎችን ያጽዱ</button>
+  </div>
+  <div class="foot-nav"></div>
+</main>
+<div id="bulk-dock" class="bulk-dock" hidden></div>
+<script defer src="data/catalog-amh.js"></script>
+<script defer src="assets/js/core.js"></script>
+<script defer src="assets/js/art.js"></script>
+<script defer src="assets/js/i18n.js"></script>
+<script defer src="assets/js/analytics.js"></script>
+<script defer src="assets/js/save.js"></script>
+<script defer src="assets/js/shared-library.js"></script>
+<script defer src="assets/js/library.js"></script>
+</body>
+</html>

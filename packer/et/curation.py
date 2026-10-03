@@ -199,6 +199,10 @@ def _urls(r):
 def excluded(r):
     """The reason a resource is left out, or None if it stays."""
     title = (r.get("title") or "").strip()
+    if r.get("lang") == "amh":
+        for url in _urls(r):
+            if url in AMHARIC_EXCLUDED:
+                return AMHARIC_EXCLUDED[url]
     if r.get("lang") == "fra":
         for url in _urls(r):
             if url in FRENCH_EXCLUDED:
@@ -265,6 +269,12 @@ FRENCH_EXTERNAL = set(_FRENCH_POLICY["urls"])
 FRENCH_EXCLUDED = _FRENCH_POLICY["excluded"]
 
 
+# Exact Amharic publisher pages and files captured from its DBS inventory.
+_AMHARIC_POLICY = json.loads((pathlib.Path(__file__).resolve().parents[2] /
+    "catalog/source/dbs-amharic-external-2026-10-03.json").read_text())
+AMHARIC_EXTERNAL = set(_AMHARIC_POLICY["urls"])
+AMHARIC_EXCLUDED = _AMHARIC_POLICY["excluded"]
+
 def _dbs(url):
     """On DBS's servers, and still up there."""
     host = urllib.parse.urlparse(url or "").netloc.lower()
@@ -282,10 +292,12 @@ def _dbs_only(r):
     def allowed(url):
         return (_dbs(url) or (r.get("lang") == "luo" and url in LUO_PUBLISHERS)
                 or (r.get("lang") == "orm" and url in OROMO_EXTERNAL)
+                or (r.get("lang") == "amh" and url in AMHARIC_EXTERNAL)
                 or (r.get("lang") == "fra" and url in FRENCH_EXTERNAL)
                 or (r.get("lang") == "ibo" and url in IGBO_EXTERNAL))
     def allowed_file(url):
         return (_dbs(url) or (r.get("lang") == "orm" and url in OROMO_EXTERNAL)
+                or (r.get("lang") == "amh" and url in AMHARIC_EXTERNAL)
                 or (r.get("lang") == "fra" and url in FRENCH_EXTERNAL)
                 or (r.get("lang") == "ibo" and url in IGBO_EXTERNAL))
     for k in ("play", "read"):
@@ -318,7 +330,7 @@ def _dbs_only(r):
 def curate(resources):
     kept, dropped = [], []
     for r in resources:
-        if r.get("lang") == "fra" and excluded(r):
+        if r.get("lang") in ("fra", "amh") and excluded(r):
             dropped.append((r, excluded(r)))
             continue
         d = _dbs_only(r)

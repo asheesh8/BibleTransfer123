@@ -335,3 +335,78 @@ retain their previous records. The browser captures, file checks and exclusions
 are retained in `catalog/source/dbs-*-french-2026-10-03.json` and
 `catalog/source/dbs-french-external-2026-10-03.json`; `packer/build_french.py`
 reproduces the shelf from these captured sources.
+
+## Amharic — 2026-10-03
+
+The Amharic shelf uses content code `amh`, interface `am`, native name `አማርኛ`,
+and the `/amharic` route (`/amh` alias). All five sections of the expanded
+[DBS Amharic listing](https://dbs.org/discover/languages/amh) were captured:
+71 rows, representing 62 distinct source URLs. Duplicate Savior part links
+and duplicate film/publisher listings share their existing cards.
+
+The library has 46 entries: 19 film collections or full films, three audio
+Bibles, three main audio collections, 12 individual GRN programmes, one
+readable New Testament, six additional Bible edition directory cards, and
+two historic PDF scans. Publisher names retain their proper names.
+Native titles, 66 book names, menus, player/save/share controls, consent
+copy, device sharing routes and troubleshooting instructions use Amharic.
+The native interface has 411 strings. English phone menu names such as
+Files, Downloads and File Transfer are kept so readers can find those
+controls on their devices. The separate Mac/Windows screenshot guide is
+in English, and the page discloses this. The translation is a draft requiring
+review by a fluent Amharic speaker; automated checks cannot certify idiom.
+
+The three audio Bibles expose 1,859 published chapter MP3s, all checked by
+binary range requests. AMHSDV contains Psalms and the 27 New Testament books
+(410 files), rather than every Old Testament book. Its selector and saved
+chapter generation both honor that 28-book list. AMHNHS has the full 66-book
+Bible (1,189 files), and AMHBSE has the New Testament (260 files). The third
+letter of John is correctly labeled `3ኛ ዮሐንስ`; the DBS selector repeats the
+second letter's name. The broken language autonym and Arabic Bible headings
+on the DBS listing are not shown as native interface titles.
+
+The BibleProject collections contain 72 overviews and 23 themes. Each
+episode was opened separately, its dialog title checked against the
+selected card, and its actual SD player source and HD download link saved.
+The distinct episode links are tested to prevent many labels pointing to
+one video. Additional films include the director's cut of Magdalena and the
+published Savior trailer plus eight parts. Legacy arc.gt links were followed
+to their actual MP4 destinations; no film URL was inferred from a filename.
+
+The GRN collection contains 281 Christian recordings. The twelve individual
+programme cards reuse exactly those files, including zero-padded programme
+IDs 01420 and 01421. The public-service recording “Welcome to USA” is omitted,
+as is the unfiltered GRN ZIP containing it. The DBS-listed programme 2011
+is identified by GRN as Deme with an Amharic song, without identifying a
+separate Amharic track; it is explicitly excluded rather than represented
+as a wholly Amharic programme. Story of Jesus has nine recordings and
+StoryRunners has 58. Some StoryRunners filenames contain conflicting English
+and Amharic subjects, so the app retains their published order with neutral
+story/song numbers instead of guessing subjects from those filenames.
+
+The AMHUBS HTML ZIP and EPUB were downloaded through the browser and passed
+complete archive CRC checks; the EPUB also has the correct mimetype. The
+New Testament PDF and both historic scan PDFs passed signature checks.
+Large film ZIPs and the unverified historic flip-book archive remain
+available on their original DBS pages; the app offers the captured individual
+videos and checked text downloads. Edition directory cards point to current
+find.bible pages. The obsolete AMHZZZP Catholic placeholder was resolved
+through the current Amharic directory to the matching AMHBSE edition.
+
+The existing Bible curation policy remains in force. Amharic publisher
+exceptions and the excluded Deme programme use exact URLs scoped to `amh`.
+No identified LGBTQ-affirming edition or theology was added. This source
+and publisher check is not a verse-by-verse theological assessment.
+The existing 1,034 resources are unchanged. Captures, file probes, archive
+results and browser media checks are retained in
+`catalog/source/dbs-*-amharic-2026-10-03.json`; `packer/build_amharic.py`
+rebuilds the resource catalog and the exact publisher allowlist.
+
+Browser checks loaded representative media for all 19 film entries, all
+three audio Bibles and the three main audio collections, including final
+chapters/tracks. They check media readiness, source URLs and durations,
+not complete viewing of every recording. Native filtering, search, help,
+USB sharing instructions and chapter-saving labels were checked. The app's
+EPUB save flow produced an Amharic filename; that downloaded file passed
+CRC and EPUB mimetype checks. The scoped catalog is approximately 45 KB
+when gzipped and does not download the entire multilingual catalog on startup.

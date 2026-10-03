@@ -237,7 +237,7 @@ test('the smaller home and all language catalogues remain usable offline', async
   await h.lifecycle('install');
   h.offline(true);
   const catalogues = h.context.SHELL.filter(filename => filename.startsWith('data/catalog'));
-  assert.equal(catalogues.length, 23);
+  assert.equal(catalogues.length, 24);
   for (const filename of catalogues) {
     const result = await h.dispatch('/' + filename);
     assert.equal(result.response.body, 'server:/' + filename);

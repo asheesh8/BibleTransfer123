@@ -27,6 +27,7 @@ SOURCES = sorted((CATALOG / "source").glob("dbs-rendered-*.json"))
 OUT = CATALOG / "zz-dbs-all.json"
 
 LANGUAGES = {
+    "amh": ("amh", "Amharic", "አማርኛ"),
     "fra": ("fra", "French", ""),
     "eng": ("eng", "English", ""),
     "cmn": ("cmn", "Mandarin", ""),

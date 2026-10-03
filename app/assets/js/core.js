@@ -456,7 +456,7 @@ window.ET = (function () {
      English title and heard Sindhi. Choosing a language picks both: English
      shows English films, اردو shows Urdu, سنڌي shows Sindhi. The library can
      still browse the others on purpose. */
-  var CONTENT = { fr: 'fra', en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', zul: 'zul', mas: 'mas', kik: 'kik', hi: 'hin', mr: 'mar', lg: 'lug', luo: 'luo', om: 'orm', ig: 'ibo', pa: 'pan', pnb: 'pnb', ne: 'npi' };
+  var CONTENT = { am: 'amh', fr: 'fra', en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', zul: 'zul', mas: 'mas', kik: 'kik', hi: 'hin', mr: 'mar', lg: 'lug', luo: 'luo', om: 'orm', ig: 'ibo', pa: 'pan', pnb: 'pnb', ne: 'npi' };
   function contentCode(ui) { return CONTENT[ui] || 'eng'; }
   function contentLang() {
     var scope = libraryScope();
@@ -485,6 +485,74 @@ window.ET = (function () {
       [65,'Jude',1],[66,'Revelation',22]]
   };
   var LOCAL_BOOKS = {
+    am: {
+  "Genesis": "ዘፍጥረት",
+  "Exodus": "ዘጸአት",
+  "Leviticus": "ዘሌዋውያን",
+  "Numbers": "ዘኍልቍ",
+  "Deuteronomy": "ዘዳግም",
+  "Joshua": "ኢያሱ",
+  "Judges": "መሳፍንት",
+  "Ruth": "ሩት",
+  "1Samuel": "1ኛ ሳሙኤል",
+  "2Samuel": "2ኛ ሳሙኤል",
+  "1Kings": "1ኛ ነገሥት",
+  "2Kings": "2ኛ ነገሥት",
+  "1Chronicles": "1ኛ ዜና መዋዕል",
+  "2Chronicles": "2ኛ ዜና መዋዕል",
+  "Ezra": "ዕዝራ",
+  "Nehemiah": "ነህምያ",
+  "Esther": "አስቴር",
+  "Job": "ኢዮብ",
+  "Psalms": "መዝሙረ ዳዊት",
+  "Proverbs": "ምሳሌ",
+  "Ecclesiastes": "መክብብ",
+  "SongofSongs": "መኃልየ መኃልይ",
+  "Isaiah": "ኢሳይያስ",
+  "Jeremiah": "ኤርምያስ",
+  "Lamentations": "ሰቆቃወ ኤርምያስ",
+  "Ezekiel": "ሕዝቅኤል",
+  "Daniel": "ዳንኤል",
+  "Hosea": "ሆሴዕ",
+  "Joel": "ኢዩኤል",
+  "Amos": "አሞጽ",
+  "Obadiah": "አብድዩ",
+  "Jonah": "ዮናስ",
+  "Micah": "ሚክያስ",
+  "Nahum": "ናሆም",
+  "Habakkuk": "ዕንባቆም",
+  "Zephaniah": "ሶፎንያስ",
+  "Haggai": "ሐጌ",
+  "Zechariah": "ዘካርያስ",
+  "Malachi": "ሚልክያስ",
+  "Matthew": "ማቴዎስ",
+  "Mark": "ማርቆስ",
+  "Luke": "ሉቃስ",
+  "John": "ዮሐንስ",
+  "Acts": "የሐዋርያት ሥራ",
+  "Romans": "ሮሜ",
+  "1Corinthians": "1ኛ ቆሮንቶስ",
+  "2Corinthians": "2ኛ ቆሮንቶስ",
+  "Galatians": "ገላትያ",
+  "Ephesians": "ኤፌሶን",
+  "Philippians": "ፊልጵስዩስ",
+  "Colossians": "ቆላስይስ",
+  "1Thessalonians": "1ኛ ተሰሎንቄ",
+  "2Thessalonians": "2ኛ ተሰሎንቄ",
+  "1Timothy": "1ኛ ጢሞቴዎስ",
+  "2Timothy": "2ኛ ጢሞቴዎስ",
+  "Titus": "ቲቶ",
+  "Philemon": "ፊልሞና",
+  "Hebrews": "ዕብራውያን",
+  "James": "ያዕቆብ",
+  "1Peter": "1ኛ ጴጥሮስ",
+  "2Peter": "2ኛ ጴጥሮስ",
+  "1John": "1ኛ ዮሐንስ",
+  "2John": "2ኛ ዮሐንስ",
+  "3John": "3ኛ ዮሐንስ",
+  "Jude": "ይሁዳ",
+  "Revelation": "የዮሐንስ ራእይ"
+},
     fr: {
   "Genesis": "Genèse",
   "Exodus": "Exode",
