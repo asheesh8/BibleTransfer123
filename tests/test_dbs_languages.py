@@ -86,6 +86,8 @@ class DbsLanguagesTest(unittest.TestCase):
 
     def test_every_current_dbs_inventory_link_reaches_its_language_shelf(self):
         for lang, sections in self.audit.items():
+            if lang not in LANGUAGES:
+                continue
             with self.subTest(language=lang):
                 captured = {item["href"].rstrip("/")
                             for group in sections.values() for item in group["links"]}
@@ -97,6 +99,8 @@ class DbsLanguagesTest(unittest.TestCase):
 
     def test_publisher_links_stay_out_of_the_dbs_only_library(self):
         for lang, sections in self.audit.items():
+            if lang not in LANGUAGES:
+                continue
             with self.subTest(language=lang):
                 external = {item["href"].rstrip("/")
                             for group in sections.values() for item in group["links"]
@@ -185,7 +189,8 @@ class DbsLanguagesTest(unittest.TestCase):
     def test_bible_files_are_backed_by_saved_probes_and_packable(self):
         verified = set(self.verified["alive_files"])
         packed = set()
-        for resources in self.resources.values():
+        for resources in [*self.resources.values(),
+                          [r for r in self.library["resources"] if r["lang"] == "luo"]]:
             for resource in resources:
                 if resource["type"] not in ("scripture", "historic", "audio-bible"):
                     continue

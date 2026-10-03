@@ -19,10 +19,17 @@ says about it. The rule here is strict: an item stays only when its title,
 publisher or DBS record shows it is Christian. Anything uncertain is left out
 rather than guessed in.
 
+For the requested complete Luo and Oromo inventories, exact audited publisher
+pages and media URLs are also carried for their respective languages. Luo
+adds Dholuo programme and Bible directory pages; Oromo adds its programme,
+Bible directory, ROCK and film links. The explicit allowlists do not change
+any other language's curation or permit arbitrary files on those hosts.
+
 Applied in catalog.load(), so every build and every fresh DBS import passes
 through it, and a removed item cannot drift back in.
 """
 import json
+import pathlib
 import re
 
 # Jewish (not Messianic) translations of the Hebrew Bible. Respected texts, but
@@ -91,6 +98,13 @@ _OFF_LANGUAGE = re.compile(r"/StudyBible/content/texts/(ENGNAS|HBOWLC|GRCTIS)/",
 # pages return "not found", and the audio Bibles say "no longer at this
 # address". The library only carries what DBS has up.
 RETIRED = {
+    # Rendered Oromo pages explicitly point to their current editions.
+    "https://dbs.org/bibles/audio/GAZBSE_DAVR_OT_N",
+    "https://dbs.org/bibles/audio/GAXBSK01440_DAVR_OT_N",
+    "https://dbs.org/bibles/audio/GAXWFW01446_DAVR_FB_N",
+    # Both rendered Dholuo pages redirect readers to LUOGEN, 2026-10-02.
+    "https://dbs.org/bibles/audio/LUOBIB_DAVR_FB_N",
+    "https://dbs.org/bibles/audio/LUOBSK_DAVR_OT_N",
     # DBS's Luganda page offers three current editions instead, 2026-10-02.
     "https://dbs.org/bibles/audio/LUGREVBSU_DAVR_FB_N",
     "https://dbs.org/bibles/GUZGUZ",
@@ -213,6 +227,23 @@ def _prune_links(r):
 
 import urllib.parse
 
+# Explicitly requested complete Luo inventory. Publisher pages were checked
+# individually; 9460 and 82771 are Luhya Lunyore and intentionally absent.
+LUO_PUBLISHERS = {
+    "https://globalrecordings.net/en/program/" + str(n)
+    for n in (62736, 24360, 73551, 73520, 73530, 73540, 73560, 73570,
+              73580, 73590, 24351, 220, 221, 11241)
+} | {
+    "https://find.bible/bibles/LUOUBS/index.html",
+    "https://find.bible/bibles/LUOGEN/index.html",
+}
+
+# Exact files and programme pages captured from the four requested Oromo
+# inventories. This exception is scoped to the Oromo shelf; it cannot widen
+# the source policy of another language or allow arbitrary publisher URLs.
+OROMO_EXTERNAL = set(json.loads((pathlib.Path(__file__).resolve().parents[2] /
+    "catalog/source/dbs-oromo-external-2026-10-03.json").read_text())["urls"])
+
 
 def _dbs(url):
     """On DBS's servers, and still up there."""
@@ -228,13 +259,18 @@ def _dbs_only(r):
     """The resource with everything not on DBS's servers taken off it, or None
     if nothing DBS-hosted is left."""
     r = dict(r)
+    def allowed(url):
+        return (_dbs(url) or (r.get("lang") == "luo" and url in LUO_PUBLISHERS)
+                or (r.get("lang") == "orm" and url in OROMO_EXTERNAL))
+    def allowed_file(url):
+        return _dbs(url) or (r.get("lang") == "orm" and url in OROMO_EXTERNAL)
     for k in ("play", "read"):
         v = r.get(k)
-        if v and _has_url(v) and not all(_dbs(u) for u in re.findall(r"https?://[^\"\s]+", json.dumps(v))):
+        if v and _has_url(v) and not all(allowed_file(u) for u in re.findall(r"https?://[^\"\s]+", json.dumps(v))):
             r[k] = None
-    r["downloads"] = [d for d in (r.get("downloads") or []) if d.get("local") or _dbs(d.get("url"))]
-    r["links"] = [l for l in (r.get("links") or []) if _dbs(l.get("url"))]
-    if r.get("source") and not _dbs(r["source"]):
+    r["downloads"] = [d for d in (r.get("downloads") or []) if d.get("local") or allowed_file(d.get("url"))]
+    r["links"] = [l for l in (r.get("links") or []) if allowed(l.get("url"))]
+    if r.get("source") and not allowed(r["source"]):
         r["source"] = None
     for k in ("cover", "coverOnline"):
         if r.get(k) and r[k].startswith("http") and not _dbs(r[k]):
@@ -269,5 +305,10 @@ def curate(resources):
                 dropped.append((r, "no links left after curation"))
                 continue
         why = excluded(r)
+        # This exact programme is now confirmed as Christian songs on GRN.
+        if (why == "not confirmed as Christian" and r.get("lang") == "luo"
+                and any(l.get("url") == "https://globalrecordings.net/en/program/24351"
+                        for l in r.get("links", []))):
+            why = None
         (dropped if why else kept).append((r, why))
     return [r for r, _ in kept], [(r, w) for r, w in dropped]

@@ -1,327 +1,549 @@
 {
-  "lug": {
-    "Audio Collections": {
-      "heading": "Audio Collections 1",
-      "links": [
-        {
-          "cells": [
-            "Ganda",
-            "Global Recordings Network",
-            "215 files · 438.5 MB"
-          ],
-          "href": "https://dbs.org/audio/collections/grn/lug_GlobalRecordings_ganda",
-          "row": "Ganda Global Recordings Network215 files · 438.5 MB",
-          "title": "Ganda"
-        }
-      ]
-    },
-    "Bibles": {
-      "heading": "Bibles 4",
-      "links": [
-        {
-          "cells": [],
-          "href": "https://dbs.org/bibles/audio/LUGBSU_DAVR_FB_N",
-          "row": "Luganda Bible LUGBSU BIBULIYA ENTUKUVU  Audio · Full Bible (Davar Partners) 2003 · Uganda",
-          "title": "Luganda Bible LUGBSU BIBULIYA ENTUKUVU  Audio · Full Bible (Davar Partners) 2003 · Uganda"
-        },
-        {
-          "cells": [],
-          "href": "https://dbs.org/bibles/LUGBIB",
-          "row": "Open Luganda Contemporary Bible LUGBIB Endagaano Enkadde n’Endagaano Empya  Read  Study  Download Audio · Full Bible (FCBH) Print on Demand Biblica · 1984 · Uganda",
-          "title": "Open Luganda Contemporary Bible LUGBIB Endagaano Enkadde n’Endagaano Empya  Read  Study  Download Audio · Full Bible (FCBH) Print on Demand Biblica · 1984 · Uganda"
-        },
-        {
-          "cells": [],
-          "href": "https://dbs.org/bibles/audio/LUGREVBSU_DAVR_FB_N",
-          "row": "Luganda Revised Bible LUGREVBSU Ekitabo Ekitukuvu Ekiyitibwa Baibuli  Audio · Full Bible (Davar Partners) Uganda",
-          "title": "Luganda Revised Bible LUGREVBSU Ekitabo Ekitukuvu Ekiyitibwa Baibuli  Audio · Full Bible (Davar Partners) Uganda"
-        },
-        {
-          "cells": [],
-          "href": "https://dbs.org/bibles/audio/LUGRPA_DAVR_FB_N",
-          "row": "Oluganda Ashe Bible LUGRPA   Audio · Full Bible (Davar Partners) 1890 · Uganda",
-          "title": "Oluganda Ashe Bible LUGRPA   Audio · Full Bible (Davar Partners) 1890 · Uganda"
-        }
-      ]
-    },
-    "Films": {
-      "heading": "Films 12",
-      "links": [
-        {
-          "cells": [
-            "JESUS LùGáànda",
-            "Jesus Film Project",
-            "2:01:44"
-          ],
-          "href": "https://dbs.org/video/jesus/lug_luganda_jesus",
-          "row": "JESUS LùGáàndaJesus Film Project2:01:44",
-          "title": "JESUS"
-        },
-        {
-          "cells": [
-            "Magdalena LùGáànda",
-            "Jesus Film Project",
-            "58:24"
-          ],
-          "href": "https://dbs.org/video/magdalena/lug_luganda_magdalena",
-          "row": "Magdalena LùGáàndaJesus Film Project58:24",
-          "title": "Magdalena"
-        },
-        {
-          "cells": [
-            "Story of Jesus for Children LùGáànda",
-            "Jesus Film Project",
-            "1:08:08"
-          ],
-          "href": "https://dbs.org/video/storyjesus/lug_luganda_story_of_jesus_for_children",
-          "row": "Story of Jesus for Children LùGáàndaJesus Film Project1:08:08",
-          "title": "Story of Jesus for Children"
-        },
-        {
-          "cells": [
-            "LUMO: The Gospel of John Ganda",
-            "LUMO Project",
-            ""
-          ],
-          "href": "https://dbs.org/video/lumo-john/lug_luganda_john",
-          "row": "LUMO: The Gospel of John GandaLUMO Project",
-          "title": "LUMO: The Gospel of John"
-        },
-        {
-          "cells": [
-            "LUMO: The Gospel of Luke Ganda",
-            "LUMO Project",
-            ""
-          ],
-          "href": "https://dbs.org/video/lumo-luke/lug_luganda_luke",
-          "row": "LUMO: The Gospel of Luke GandaLUMO Project",
-          "title": "LUMO: The Gospel of Luke"
-        },
-        {
-          "cells": [
-            "LUMO: The Gospel of Mark Ganda",
-            "LUMO Project",
-            ""
-          ],
-          "href": "https://dbs.org/video/lumo-mark/lug_luganda_mark",
-          "row": "LUMO: The Gospel of Mark GandaLUMO Project",
-          "title": "LUMO: The Gospel of Mark"
-        },
-        {
-          "cells": [
-            "LUMO: The Gospel of Matthew Ganda",
-            "LUMO Project",
-            ""
-          ],
-          "href": "https://dbs.org/video/lumo-matthew/lug_luganda_matthew",
-          "row": "LUMO: The Gospel of Matthew GandaLUMO Project",
-          "title": "LUMO: The Gospel of Matthew"
-        },
-        {
-          "cells": [
-            "LUMO: Acts of the Apostles Ganda",
-            "LUMO Project",
-            ""
-          ],
-          "href": "https://dbs.org/video/lumo-acts/lug_luganda_acts",
-          "row": "LUMO: Acts of the Apostles GandaLUMO Project",
-          "title": "LUMO: Acts of the Apostles"
-        },
-        {
-          "cells": [
-            "LUMO: The Covenant Ganda",
-            "LUMO Project",
-            ""
-          ],
-          "href": "https://dbs.org/video/lumo-covenant/lug_luganda_covenant",
-          "row": "LUMO: The Covenant GandaLUMO Project",
-          "title": "LUMO: The Covenant"
-        },
-        {
-          "cells": [
-            "iBible: Salvation Story Ganda",
-            "iBible: Salvation Story",
-            "9:27"
-          ],
-          "href": "https://dbs.org/video/ibible/lug-luganda-ibible_salvation",
-          "row": "iBible: Salvation Story GandaiBible: Salvation Story9:27",
-          "title": "iBible: Salvation Story"
-        },
-        {
-          "cells": [
-            "The Visual Bible: Acts Ganda",
-            "Visual Bible Int.",
-            "3:06:31"
-          ],
-          "href": "https://dbs.org/video/acts_vb/lug-acts-vb-ganda",
-          "row": "The Visual Bible: Acts GandaVisual Bible Int.3:06:31",
-          "title": "The Visual Bible: Acts"
-        },
-        {
-          "cells": [
-            "Rescue Project Deaf Gospel LùGáànda",
-            "Jesus Film Project",
-            "28:17"
-          ],
-          "href": "https://dbs.org/video/deafproject/lug_luganda_rescue_project_deaf_gospel",
-          "row": "Rescue Project Deaf Gospel LùGáàndaJesus Film Project28:17",
-          "title": "Rescue Project Deaf Gospel"
-        }
-      ]
-    },
-    "Historic Bible (Scans)": {
-      "heading": "Historic Bible (Scans) 6",
-      "links": [
-        {
-          "cells": [
-            "Ganda (1902) Bible Luganda (1902) Bayibuli",
-            "1902"
-          ],
-          "href": "https://dbs.org/bibles/historic/Ganda-1902-Bible-Ekitabo-ikitukuvu-ekya-katonda",
-          "row": "Ganda (1902) Bible Luganda (1902) Bayibuli1902",
-          "title": "Ganda (1902) Bible"
-        },
-        {
-          "cells": [
-            "Ganda (1908) Matthew Luganda (1908) Matayo",
-            "1908"
-          ],
-          "href": "https://dbs.org/bibles/historic/Ganda-1908-Matthew-Enjiri-nga-bweyawandikibwa-Mathayo-omut",
-          "row": "Ganda (1908) Matthew Luganda (1908) Matayo1908",
-          "title": "Ganda (1908) Matthew"
-        },
-        {
-          "cells": [
-            "Ganda (2009) Genesis Portion Luganda (2009) Olubereberye Omugabo",
-            "2009"
-          ],
-          "href": "https://dbs.org/bibles/historic/Ganda-2009-Genesis-Portion-Ekitabo-Ekitukuvu",
-          "row": "Ganda (2009) Genesis Portion Luganda (2009) Olubereberye Omugabo2009",
-          "title": "Ganda (2009) Genesis Portion"
-        },
-        {
-          "cells": [
-            "Luganda (1890) Biscuit Tin Bible (WDL-18411) Luganda (1890) Ekitabo Kya Biscuit Tin (WDL-18411)",
-            "1890"
-          ],
-          "href": "https://dbs.org/bibles/historic/Luganda-1890-Biscuit-Tin-Bible-WDL-18411",
-          "row": "Luganda (1890) Biscuit Tin Bible (WDL-18411) Luganda (1890) Ekitabo Kya Biscuit Tin (WDL-18411)1890",
-          "title": "Luganda (1890) Biscuit Tin Bible (WDL-18411)"
-        },
-        {
-          "cells": [
-            "Luganda - Bible (Book) Luganda Baibuli (Nwoma)",
-            "2003"
-          ],
-          "href": "https://dbs.org/bibles/historic/Luganda-Bible-book",
-          "row": "Luganda - Bible (Book) Luganda Baibuli (Nwoma)2003",
-          "title": "Luganda - Bible (Book)"
-        },
-        {
-          "cells": [
-            "Luganda - NT (Book) Luganda Endagaano Empya (Nwoma)",
-            "2003"
-          ],
-          "href": "https://dbs.org/bibles/historic/Luganda-NT-book",
-          "row": "Luganda - NT (Book) Luganda Endagaano Empya (Nwoma)2003",
-          "title": "Luganda - NT (Book)"
-        }
-      ]
-    },
-    "Links to Other Sites": {
-      "heading": "Links to Other Sites 15",
-      "links": [
-        {
-          "cells": [],
-          "href": "https://find.bible/?abbr=LUGBSU",
-          "row": "Luganda Bible 2003",
-          "title": "Luganda Bible"
-        },
-        {
-          "cells": [],
-          "href": "https://find.bible/?abbr=LUGUBS",
-          "row": "Old Luganda Bible 1968",
-          "title": "Old Luganda Bible"
-        },
-        {
-          "cells": [],
-          "href": "https://find.bible/?abbr=LUGRPA",
-          "row": "Oluganda Ashe Bible 1890",
-          "title": "Oluganda Ashe Bible"
-        },
-        {
-          "cells": [],
-          "href": "https://arc.gt/fkfh6?apiSessionId=5f875ca7c2d044.26150791",
-          "row": "The Story of Jesus for Children The JESUS Film Project",
-          "title": "The Story of Jesus for Children"
-        },
-        {
-          "cells": [],
-          "href": "https://arc.gt/1yqms?apiSessionId=5f875caa6eb2b5.10081539",
-          "row": "Magdalena - Director's Cut The JESUS Film Project",
-          "title": "Magdalena - Director's Cut"
-        },
-        {
-          "cells": [],
-          "href": "https://globalrecordings.net/en/program/73600",
-          "row": "Look, Listen & Live globalrecordings.net",
-          "title": "Look, Listen & Live"
-        },
-        {
-          "cells": [],
-          "href": "https://globalrecordings.net/en/program/73610",
-          "row": "Look, Listen & Live 2 Mighty Men of GOD globalrecordings.net",
-          "title": "Look, Listen & Live 2 Mighty Men of GOD"
-        },
-        {
-          "cells": [],
-          "href": "https://globalrecordings.net/en/program/73620",
-          "row": "Look, Listen & Live 3 Victory through GOD globalrecordings.net",
-          "title": "Look, Listen & Live 3 Victory through GOD"
-        },
-        {
-          "cells": [],
-          "href": "https://globalrecordings.net/en/program/73630",
-          "row": "Look, Listen & Live 4 Servants of GOD globalrecordings.net",
-          "title": "Look, Listen & Live 4 Servants of GOD"
-        },
-        {
-          "cells": [],
-          "href": "https://globalrecordings.net/en/program/73640",
-          "row": "Look, Listen & Live 5 On Trial for GOD globalrecordings.net",
-          "title": "Look, Listen & Live 5 On Trial for GOD"
-        },
-        {
-          "cells": [],
-          "href": "https://globalrecordings.net/en/program/73650",
-          "row": "Look, Listen & Live 6 JESUS - Teacher & Healer globalrecordings.net",
-          "title": "Look, Listen & Live 6 JESUS - Teacher & Healer"
-        },
-        {
-          "cells": [],
-          "href": "https://globalrecordings.net/en/program/73660",
-          "row": "Look, Listen & Live 7 JESUS - Lord & Saviour globalrecordings.net",
-          "title": "Look, Listen & Live 7 JESUS - Lord & Saviour"
-        },
-        {
-          "cells": [],
-          "href": "https://globalrecordings.net/en/program/73670",
-          "row": "Look, Listen & Live 8 Acts of the HOLY SPIRIT globalrecordings.net",
-          "title": "Look, Listen & Live 8 Acts of the HOLY SPIRIT"
-        },
-        {
-          "cells": [],
-          "href": "https://globalrecordings.net/en/program/5950",
-          "row": "Words of Life 1 globalrecordings.net",
-          "title": "Words of Life 1"
-        },
-        {
-          "cells": [],
-          "href": "https://globalrecordings.net/en/program/5951",
-          "row": "Words of Life 2 globalrecordings.net",
-          "title": "Words of Life 2"
-        }
-      ]
+ "lug": {
+  "Audio Collections": {
+   "heading": "Audio Collections 1",
+   "links": [
+    {
+     "cells": [
+      "Ganda",
+      "Global Recordings Network",
+      "215 files · 438.5 MB"
+     ],
+     "href": "https://dbs.org/audio/collections/grn/lug_GlobalRecordings_ganda",
+     "row": "Ganda Global Recordings Network215 files · 438.5 MB",
+     "title": "Ganda"
     }
+   ]
+  },
+  "Bibles": {
+   "heading": "Bibles 4",
+   "links": [
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/LUGBSU_DAVR_FB_N",
+     "row": "Luganda Bible LUGBSU BIBULIYA ENTUKUVU  Audio · Full Bible (Davar Partners) 2003 · Uganda",
+     "title": "Luganda Bible LUGBSU BIBULIYA ENTUKUVU  Audio · Full Bible (Davar Partners) 2003 · Uganda"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/LUGBIB",
+     "row": "Open Luganda Contemporary Bible LUGBIB Endagaano Enkadde n’Endagaano Empya  Read  Study  Download Audio · Full Bible (FCBH) Print on Demand Biblica · 1984 · Uganda",
+     "title": "Open Luganda Contemporary Bible LUGBIB Endagaano Enkadde n’Endagaano Empya  Read  Study  Download Audio · Full Bible (FCBH) Print on Demand Biblica · 1984 · Uganda"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/LUGREVBSU_DAVR_FB_N",
+     "row": "Luganda Revised Bible LUGREVBSU Ekitabo Ekitukuvu Ekiyitibwa Baibuli  Audio · Full Bible (Davar Partners) Uganda",
+     "title": "Luganda Revised Bible LUGREVBSU Ekitabo Ekitukuvu Ekiyitibwa Baibuli  Audio · Full Bible (Davar Partners) Uganda"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/LUGRPA_DAVR_FB_N",
+     "row": "Oluganda Ashe Bible LUGRPA   Audio · Full Bible (Davar Partners) 1890 · Uganda",
+     "title": "Oluganda Ashe Bible LUGRPA   Audio · Full Bible (Davar Partners) 1890 · Uganda"
+    }
+   ]
+  },
+  "Films": {
+   "heading": "Films 12",
+   "links": [
+    {
+     "cells": [
+      "JESUS LùGáànda",
+      "Jesus Film Project",
+      "2:01:44"
+     ],
+     "href": "https://dbs.org/video/jesus/lug_luganda_jesus",
+     "row": "JESUS LùGáàndaJesus Film Project2:01:44",
+     "title": "JESUS"
+    },
+    {
+     "cells": [
+      "Magdalena LùGáànda",
+      "Jesus Film Project",
+      "58:24"
+     ],
+     "href": "https://dbs.org/video/magdalena/lug_luganda_magdalena",
+     "row": "Magdalena LùGáàndaJesus Film Project58:24",
+     "title": "Magdalena"
+    },
+    {
+     "cells": [
+      "Story of Jesus for Children LùGáànda",
+      "Jesus Film Project",
+      "1:08:08"
+     ],
+     "href": "https://dbs.org/video/storyjesus/lug_luganda_story_of_jesus_for_children",
+     "row": "Story of Jesus for Children LùGáàndaJesus Film Project1:08:08",
+     "title": "Story of Jesus for Children"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of John Ganda",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-john/lug_luganda_john",
+     "row": "LUMO: The Gospel of John GandaLUMO Project",
+     "title": "LUMO: The Gospel of John"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Luke Ganda",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-luke/lug_luganda_luke",
+     "row": "LUMO: The Gospel of Luke GandaLUMO Project",
+     "title": "LUMO: The Gospel of Luke"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Mark Ganda",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-mark/lug_luganda_mark",
+     "row": "LUMO: The Gospel of Mark GandaLUMO Project",
+     "title": "LUMO: The Gospel of Mark"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Matthew Ganda",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-matthew/lug_luganda_matthew",
+     "row": "LUMO: The Gospel of Matthew GandaLUMO Project",
+     "title": "LUMO: The Gospel of Matthew"
+    },
+    {
+     "cells": [
+      "LUMO: Acts of the Apostles Ganda",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-acts/lug_luganda_acts",
+     "row": "LUMO: Acts of the Apostles GandaLUMO Project",
+     "title": "LUMO: Acts of the Apostles"
+    },
+    {
+     "cells": [
+      "LUMO: The Covenant Ganda",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-covenant/lug_luganda_covenant",
+     "row": "LUMO: The Covenant GandaLUMO Project",
+     "title": "LUMO: The Covenant"
+    },
+    {
+     "cells": [
+      "iBible: Salvation Story Ganda",
+      "iBible: Salvation Story",
+      "9:27"
+     ],
+     "href": "https://dbs.org/video/ibible/lug-luganda-ibible_salvation",
+     "row": "iBible: Salvation Story GandaiBible: Salvation Story9:27",
+     "title": "iBible: Salvation Story"
+    },
+    {
+     "cells": [
+      "The Visual Bible: Acts Ganda",
+      "Visual Bible Int.",
+      "3:06:31"
+     ],
+     "href": "https://dbs.org/video/acts_vb/lug-acts-vb-ganda",
+     "row": "The Visual Bible: Acts GandaVisual Bible Int.3:06:31",
+     "title": "The Visual Bible: Acts"
+    },
+    {
+     "cells": [
+      "Rescue Project Deaf Gospel LùGáànda",
+      "Jesus Film Project",
+      "28:17"
+     ],
+     "href": "https://dbs.org/video/deafproject/lug_luganda_rescue_project_deaf_gospel",
+     "row": "Rescue Project Deaf Gospel LùGáàndaJesus Film Project28:17",
+     "title": "Rescue Project Deaf Gospel"
+    }
+   ]
+  },
+  "Historic Bible (Scans)": {
+   "heading": "Historic Bible (Scans) 6",
+   "links": [
+    {
+     "cells": [
+      "Ganda (1902) Bible Luganda (1902) Bayibuli",
+      "1902"
+     ],
+     "href": "https://dbs.org/bibles/historic/Ganda-1902-Bible-Ekitabo-ikitukuvu-ekya-katonda",
+     "row": "Ganda (1902) Bible Luganda (1902) Bayibuli1902",
+     "title": "Ganda (1902) Bible"
+    },
+    {
+     "cells": [
+      "Ganda (1908) Matthew Luganda (1908) Matayo",
+      "1908"
+     ],
+     "href": "https://dbs.org/bibles/historic/Ganda-1908-Matthew-Enjiri-nga-bweyawandikibwa-Mathayo-omut",
+     "row": "Ganda (1908) Matthew Luganda (1908) Matayo1908",
+     "title": "Ganda (1908) Matthew"
+    },
+    {
+     "cells": [
+      "Ganda (2009) Genesis Portion Luganda (2009) Olubereberye Omugabo",
+      "2009"
+     ],
+     "href": "https://dbs.org/bibles/historic/Ganda-2009-Genesis-Portion-Ekitabo-Ekitukuvu",
+     "row": "Ganda (2009) Genesis Portion Luganda (2009) Olubereberye Omugabo2009",
+     "title": "Ganda (2009) Genesis Portion"
+    },
+    {
+     "cells": [
+      "Luganda (1890) Biscuit Tin Bible (WDL-18411) Luganda (1890) Ekitabo Kya Biscuit Tin (WDL-18411)",
+      "1890"
+     ],
+     "href": "https://dbs.org/bibles/historic/Luganda-1890-Biscuit-Tin-Bible-WDL-18411",
+     "row": "Luganda (1890) Biscuit Tin Bible (WDL-18411) Luganda (1890) Ekitabo Kya Biscuit Tin (WDL-18411)1890",
+     "title": "Luganda (1890) Biscuit Tin Bible (WDL-18411)"
+    },
+    {
+     "cells": [
+      "Luganda - Bible (Book) Luganda Baibuli (Nwoma)",
+      "2003"
+     ],
+     "href": "https://dbs.org/bibles/historic/Luganda-Bible-book",
+     "row": "Luganda - Bible (Book) Luganda Baibuli (Nwoma)2003",
+     "title": "Luganda - Bible (Book)"
+    },
+    {
+     "cells": [
+      "Luganda - NT (Book) Luganda Endagaano Empya (Nwoma)",
+      "2003"
+     ],
+     "href": "https://dbs.org/bibles/historic/Luganda-NT-book",
+     "row": "Luganda - NT (Book) Luganda Endagaano Empya (Nwoma)2003",
+     "title": "Luganda - NT (Book)"
+    }
+   ]
+  },
+  "Links to Other Sites": {
+   "heading": "Links to Other Sites 15",
+   "links": [
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=LUGBSU",
+     "row": "Luganda Bible 2003",
+     "title": "Luganda Bible"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=LUGUBS",
+     "row": "Old Luganda Bible 1968",
+     "title": "Old Luganda Bible"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=LUGRPA",
+     "row": "Oluganda Ashe Bible 1890",
+     "title": "Oluganda Ashe Bible"
+    },
+    {
+     "cells": [],
+     "href": "https://arc.gt/fkfh6?apiSessionId=5f875ca7c2d044.26150791",
+     "row": "The Story of Jesus for Children The JESUS Film Project",
+     "title": "The Story of Jesus for Children"
+    },
+    {
+     "cells": [],
+     "href": "https://arc.gt/1yqms?apiSessionId=5f875caa6eb2b5.10081539",
+     "row": "Magdalena - Director's Cut The JESUS Film Project",
+     "title": "Magdalena - Director's Cut"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73600",
+     "row": "Look, Listen & Live globalrecordings.net",
+     "title": "Look, Listen & Live"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73610",
+     "row": "Look, Listen & Live 2 Mighty Men of GOD globalrecordings.net",
+     "title": "Look, Listen & Live 2 Mighty Men of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73620",
+     "row": "Look, Listen & Live 3 Victory through GOD globalrecordings.net",
+     "title": "Look, Listen & Live 3 Victory through GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73630",
+     "row": "Look, Listen & Live 4 Servants of GOD globalrecordings.net",
+     "title": "Look, Listen & Live 4 Servants of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73640",
+     "row": "Look, Listen & Live 5 On Trial for GOD globalrecordings.net",
+     "title": "Look, Listen & Live 5 On Trial for GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73650",
+     "row": "Look, Listen & Live 6 JESUS - Teacher & Healer globalrecordings.net",
+     "title": "Look, Listen & Live 6 JESUS - Teacher & Healer"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73660",
+     "row": "Look, Listen & Live 7 JESUS - Lord & Saviour globalrecordings.net",
+     "title": "Look, Listen & Live 7 JESUS - Lord & Saviour"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73670",
+     "row": "Look, Listen & Live 8 Acts of the HOLY SPIRIT globalrecordings.net",
+     "title": "Look, Listen & Live 8 Acts of the HOLY SPIRIT"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/5950",
+     "row": "Words of Life 1 globalrecordings.net",
+     "title": "Words of Life 1"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/5951",
+     "row": "Words of Life 2 globalrecordings.net",
+     "title": "Words of Life 2"
+    }
+   ]
   }
+ },
+ "luo": {
+  "Audio Collections": {
+   "heading": "Audio Collections 2",
+   "links": [
+    {
+     "cells": [
+      "Luo (Kenya and Tanzania)",
+      "Global Recordings Network",
+      "321 files · 813.1 MB"
+     ],
+     "href": "https://dbs.org/audio/collections/grn/luo_GlobalRecordings_dholuo",
+     "row": "Luo (Kenya and Tanzania) Global Recordings Network321 files · 813.1 MB",
+     "title": "Luo (Kenya and Tanzania)"
+    },
+    {
+     "cells": [
+      "Luo (Kenya and Tanzania)",
+      "Story of Jesus",
+      "8 files · 123.3 MB"
+     ],
+     "href": "https://dbs.org/audio/collections/soj/luo_StoryJesus_luo",
+     "row": "Luo (Kenya and Tanzania) Story of Jesus8 files · 123.3 MB",
+     "title": "Luo (Kenya and Tanzania)"
+    }
+   ]
+  },
+  "Bibles": {
+   "heading": "Bibles 5",
+   "links": [
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/LUOONT",
+     "row": "Open New Luo Translation LUOONT Ochiw Thuolo Motingʼo Loko Manyien Read Study Download Print on Demand Biblica · 1980 · Kenya",
+     "title": "Open New Luo Translation"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/LUOGEN_DAVR_FB_N",
+     "row": "The Bible in Luo LUOGEN Audio · Full Bible (Davar Partners) 1968 · Kenya",
+     "title": "The Bible in Luo"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/LUOOLT",
+     "row": "Luo (Kenya and Tanzania) Scriptures LUOOLT Read Study Download Kenya",
+     "title": "Luo (Kenya and Tanzania) Scriptures"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/LUOBIB_DAVR_FB_N",
+     "row": "Biblica® Open New Luo Translation™ LUOBIB Biblica® Ochiw Thuolo Motingʼo Loko Manyien™ Audio · Full Bible (Davar Partners) Kenya",
+     "title": "Biblica® Open New Luo Translation™"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/LUOBSK_DAVR_OT_N",
+     "row": "Dholuo Old Testament LUOBSK Dholuo DC Bible 1976 Audio · Old Testament (Davar Partners) Kenya",
+     "title": "Dholuo Old Testament"
+    }
+   ]
+  },
+  "Films": {
+   "heading": "Films 3",
+   "links": [
+    {
+     "cells": [
+      "JESUS Dholuo",
+      "Jesus Film Project",
+      "2:01:44"
+     ],
+     "href": "https://dbs.org/video/jesus/luo_luo_jesus",
+     "row": "JESUS DholuoJesus Film Project2:01:44",
+     "title": "JESUS"
+    },
+    {
+     "cells": [
+      "LUMO: The Covenant Dholuo",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-covenant/luo_luo_covenant",
+     "row": "LUMO: The Covenant DholuoLUMO Project",
+     "title": "LUMO: The Covenant"
+    },
+    {
+     "cells": [
+      "iBible: Salvation Story Dholuo",
+      "iBible: Salvation Story",
+      "9:17"
+     ],
+     "href": "https://dbs.org/video/ibible/luo-dholuo-ibible_salvation",
+     "row": "iBible: Salvation Story DholuoiBible: Salvation Story9:17",
+     "title": "iBible: Salvation Story"
+    }
+   ]
+  },
+  "Links to Other Sites": {
+   "heading": "Links to Other Sites 20",
+   "links": [
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=LUOUBS",
+     "row": "Dholuo Bible",
+     "title": "Dholuo Bible"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=LUOGEN",
+     "row": "The Bible in Luo",
+     "title": "The Bible in Luo"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/62736",
+     "row": "AIDS",
+     "title": "AIDS"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/24360",
+     "row": "Good News",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73551",
+     "row": "Jotich ruoth Nyasaye(LLL4) [Look, Listen & Live 4 Servants of GOD]",
+     "title": "Jotich ruoth Nyasaye(LLL4) [Look, Listen & Live 4 Servants of GOD]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73520",
+     "row": "Look, Listen & Live",
+     "title": "Look, Listen & Live"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73530",
+     "row": "Look, Listen & Live 2 Mighty Men of GOD",
+     "title": "Look, Listen & Live 2 Mighty Men of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73540",
+     "row": "Look, Listen & Live 3 Victory through GOD",
+     "title": "Look, Listen & Live 3 Victory through GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73560",
+     "row": "Look, Listen & Live 5 On Trial for GOD",
+     "title": "Look, Listen & Live 5 On Trial for GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73570",
+     "row": "Look, Listen & Live 6 JESUS - Teacher & Healer",
+     "title": "Look, Listen & Live 6 JESUS - Teacher & Healer"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73580",
+     "row": "Look, Listen & Live 7 JESUS - Lord & Saviour",
+     "title": "Look, Listen & Live 7 JESUS - Lord & Saviour"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73590",
+     "row": "Look, Listen & Live 8 Acts of the HOLY SPIRIT",
+     "title": "Look, Listen & Live 8 Acts of the HOLY SPIRIT"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/24351",
+     "row": "Songs",
+     "title": "Songs"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/220",
+     "row": "Words of Life 1",
+     "title": "Words of Life 1"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/221",
+     "row": "Words of Life 2",
+     "title": "Words of Life 2"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/11241",
+     "row": "Words of Life 3",
+     "title": "Words of Life 3"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/9460",
+     "row": "Words of Life 1",
+     "title": "Words of Life 1"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82771",
+     "row": "Words of Life 2",
+     "title": "Words of Life 2"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/9460",
+     "row": "Words of Life 1",
+     "title": "Words of Life 1"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82771",
+     "row": "Words of Life 2",
+     "title": "Words of Life 2"
+    }
+   ]
+  }
+ }
 }

@@ -16,6 +16,8 @@
     ['nepali', 'npi', 'Nepali', 'नेपाली'],
     ['sindhi', 'snd', 'Sindhi', 'سنڌي'],
     ['luganda', 'lug', 'Luganda', 'Luganda'],
+    ['luo', 'luo', 'Luo', 'Dholuo'],
+    ['oromo', 'orm', 'Oromo', 'Afaan Oromoo'],
     ['kikuyu', 'kik', 'Kikuyu', 'Gĩkũyũ'],
     ['gusii', 'guz', 'Gusii / Ekegusii / Kisii', 'Ekegusii / Kisii'],
     ['maasai', 'mas', 'Maasai', 'ɔl Maa']

@@ -120,6 +120,12 @@ def card_catalog(catalog, chosen, profile, all_index, sizes=None):
             f = local(ref(src)) if src.get("local") else (local(src["sample"]) or secure(src["sample"]))
             if f:
                 play = {"kind": "audio", "file": f}
+                # Collections with an audited track list can play every
+                # recording; packed tracks keep their local card paths.
+                if src.get("items"):
+                    play["items"] = [{"n": it["n"], "title": it["title"],
+                                      "file": local(it["file"]) or secure(it["file"])}
+                                     for it in src["items"]]
         elif kind == "audio-bible":
             # Chapter URLs are generated from the fileset in the app: 1,189 of
             # them for a full Bible is not something to list in a catalogue.
@@ -127,6 +133,10 @@ def card_catalog(catalog, chosen, profile, all_index, sizes=None):
                     "version": src["version"], "testaments": src["testaments"]}
             if src.get("dirs"):
                 play["dirs"] = src["dirs"]
+            if src.get("saveChapter"):
+                play["saveChapter"] = True
+            if src.get("bookNames"):
+                play["bookNames"] = src["bookNames"]
 
         read = None
         rd = ((online.get("read") if use_online else r.get("read")) or {})
@@ -150,7 +160,10 @@ def card_catalog(catalog, chosen, profile, all_index, sizes=None):
                         files.append({"label": f"Video — {q.upper()}", "file": secure(src[q]),
                                       "bytes": sizes.get(src[q], 0), "remote": True})
             if kind == "audio-collection" and src.get("sample"):
-                files.append({"label": "Audio (MP3)", "file": secure(src["sample"]),
+                sample_title = next((i["title"] for i in src.get("items", [])
+                                     if i["file"] == src["sample"]), None)
+                files.append({"label": sample_title + " (MP3)" if sample_title else "Audio (MP3)",
+                              "file": secure(src["sample"]),
                               "bytes": sizes.get(src["sample"], 0), "remote": True})
             for d in ((online.get("downloads") if use_online else r.get("downloads")) or []):
                 if is_file_url(d["url"]):

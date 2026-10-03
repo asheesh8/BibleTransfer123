@@ -1,0 +1,856 @@
+{
+ "gaz": {
+  "Bibles": {
+   "heading": "Bibles 4",
+   "links": [
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/GAZBIB",
+     "row": "Open New Oromo Contemporary Version\nGAZBIB\nKitaaba Qulqulluu, Biblica® Hiikkaa Ammayyaa Banamaa Haaraa, Loqoda Dhiʼaa\nRead\nStudy\nDownload\nAudio · Full Bible (Davar Partners)\nBiblica · 2022 · Ethiopia",
+     "title": "Open New Oromo Contemporary Version\nGAZBIB\nKitaaba Qulqulluu, Biblica® Hiikkaa Ammayyaa Banamaa Haaraa, Loqoda Dhiʼaa\nRead\nStudy\nDownload\nAudio · Full Bible (Davar Partners)\nBiblica · 2022 · Ethiopia"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/GAZBIBL",
+     "row": "New Oromo Contemporary Latin Version\nGAZBIBL\nBiblica® Katabbiiwwan Qulqulluu, Turjumaana Ammayyaa Banamaa\nRead\nStudy\nDownload\nBiblica · 2022 · Ethiopia",
+     "title": "New Oromo Contemporary Latin Version\nGAZBIBL\nBiblica® Katabbiiwwan Qulqulluu, Turjumaana Ammayyaa Banamaa\nRead\nStudy\nDownload\nBiblica · 2022 · Ethiopia"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/GAZGAZ_DAVR_OT_N",
+     "row": "The New Testament in West Central Oromo\nGAZGAZ\nAudio · Old Testament (Davar Partners)\n1993 · Ethiopia",
+     "title": "The New Testament in West Central Oromo\nGAZGAZ\nAudio · Old Testament (Davar Partners)\n1993 · Ethiopia"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/GAZBSE_DAVR_OT_N",
+     "row": "West Oromo Old Testament\nGAZBSE\nAudio · Old Testament (Davar Partners)\nEthiopia",
+     "title": "West Oromo Old Testament\nGAZBSE\nAudio · Old Testament (Davar Partners)\nEthiopia"
+    }
+   ]
+  },
+  "Films": {
+   "heading": "Films 8",
+   "links": [
+    {
+     "cells": [
+      "JESUS\nOromo, West-Central",
+      "Jesus Film Project",
+      "2:07:53"
+     ],
+     "href": "https://dbs.org/video/jesus/gaz_oromo-west-central_jesus",
+     "row": "JESUS\nOromo, West-Central\n\tJesus Film Project\t2:07:53",
+     "title": "JESUS"
+    },
+    {
+     "cells": [
+      "Magdalena\nOromo, West-Central",
+      "Jesus Film Project",
+      "58:24"
+     ],
+     "href": "https://dbs.org/video/magdalena/gaz_oromo-west-central_magdalena",
+     "row": "Magdalena\nOromo, West-Central\n\tJesus Film Project\t58:24",
+     "title": "Magdalena"
+    },
+    {
+     "cells": [
+      "Story of Jesus for Children\nOromo, West-Central",
+      "Jesus Film Project",
+      "1:01:19"
+     ],
+     "href": "https://dbs.org/video/storyjesus/gaz_oromo-west-central_story_of_jesus_for_children",
+     "row": "Story of Jesus for Children\nOromo, West-Central\n\tJesus Film Project\t1:01:19",
+     "title": "Story of Jesus for Children"
+    },
+    {
+     "cells": [
+      "The Savior\nOromo, West-Central",
+      "Jesus Film Project",
+      "2:11:58"
+     ],
+     "href": "https://dbs.org/video/savior/gaz_oromo-west-central_the_savior",
+     "row": "The Savior\nOromo, West-Central\n\tJesus Film Project\t2:11:58",
+     "title": "The Savior"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Mark\nAfaan Oromoo",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-mark/gaz_oromo-west-central_mark",
+     "row": "LUMO: The Gospel of Mark\nAfaan Oromoo\n\tLUMO Project\t",
+     "title": "LUMO: The Gospel of Mark"
+    },
+    {
+     "cells": [
+      "LUMO: The Covenant\nAfaan Oromoo",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-covenant/gaz_oromo-west-central_covenant",
+     "row": "LUMO: The Covenant\nAfaan Oromoo\n\tLUMO Project\t",
+     "title": "LUMO: The Covenant"
+    },
+    {
+     "cells": [
+      "iBible: Salvation Story\nAfaan Oromoo",
+      "iBible: Salvation Story",
+      "9:17"
+     ],
+     "href": "https://dbs.org/video/ibible/gaz-oromo-ibible_salvation",
+     "row": "iBible: Salvation Story\nAfaan Oromoo\n\tiBible: Salvation Story\t9:17",
+     "title": "iBible: Salvation Story"
+    },
+    {
+     "cells": [
+      "The Visual Bible: Matthew\nAfaan Oromoo",
+      "Visual Bible Int.",
+      "4:12:04"
+     ],
+     "href": "https://dbs.org/video/matthew/gaz-matthew-vb-west-central-oromo",
+     "row": "The Visual Bible: Matthew\nAfaan Oromoo\n\tVisual Bible Int.\t4:12:04",
+     "title": "The Visual Bible: Matthew"
+    }
+   ]
+  },
+  "Audio Collections": {
+   "heading": "Audio Collections 2",
+   "links": [
+    {
+     "cells": [
+      "West Central Oromo",
+      "Global Recordings Network",
+      "281 files · 642.7 MB"
+     ],
+     "href": "https://dbs.org/audio/collections/grn/gaz_GlobalRecordings_oromo_west_central",
+     "row": "West Central Oromo\tGlobal Recordings Network\t281 files · 642.7 MB",
+     "title": "West Central Oromo"
+    },
+    {
+     "cells": [
+      "West Central Oromo",
+      "Story of Jesus",
+      "8 files · 124.1 MB"
+     ],
+     "href": "https://dbs.org/audio/collections/soj/gaz_StoryJesus_oromo_west_central",
+     "row": "West Central Oromo\tStory of Jesus\t8 files · 124.1 MB",
+     "title": "West Central Oromo"
+    }
+   ]
+  },
+  "Links to Other Sites": {
+   "heading": "Links to Other Sites 31",
+   "links": [
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=GAZGAZ",
+     "row": "The New Testament in West Central Oromo",
+     "title": "The New Testament in West Central Oromo"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/Oromo-Ethiopia_Yaadanii_sm.mp4",
+     "row": "Yaadanii",
+     "title": "Yaadanii"
+    },
+    {
+     "cells": [],
+     "href": "https://arc.gt/pqtdt?apiSessionId=5f87551a437a64.42869958",
+     "row": "The Story of Jesus for Children",
+     "title": "The Story of Jesus for Children"
+    },
+    {
+     "cells": [],
+     "href": "https://arc.gt/8q6oi?apiSessionId=5f87551c998466.74442839",
+     "row": "Magdalena - Director's Cut",
+     "title": "Magdalena - Director's Cut"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/2171",
+     "row": "Words of Life w/ DANAKIL",
+     "title": "Words of Life w/ DANAKIL"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/191",
+     "row": "Words of Life w/ AMHARIC",
+     "title": "Words of Life w/ AMHARIC"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/180",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/74796",
+     "row": "Good News",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82635",
+     "row": "Look, Listen & Live 1 Beginning with GOD (Long Version)",
+     "title": "Look, Listen & Live 1 Beginning with GOD (Long Version)"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/74617",
+     "row": "Look, Listen & Live 1 Beginning with GOD (Short)",
+     "title": "Look, Listen & Live 1 Beginning with GOD (Short)"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82613",
+     "row": "Look, Listen & Live 2 Mighty Men of GOD",
+     "title": "Look, Listen & Live 2 Mighty Men of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82614",
+     "row": "Look, Listen & Live 3 Victory through GOD",
+     "title": "Look, Listen & Live 3 Victory through GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82615",
+     "row": "Look, Listen & Live 4 Servants of GOD",
+     "title": "Look, Listen & Live 4 Servants of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82616",
+     "row": "Look, Listen & Live 5 On Trial for GOD",
+     "title": "Look, Listen & Live 5 On Trial for GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82636",
+     "row": "Look, Listen & Live 6 JESUS - Teacher & Healer",
+     "title": "Look, Listen & Live 6 JESUS - Teacher & Healer"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/74618",
+     "row": "Look, Listen & Live 6 JESUS - Teacher & Healer (Short)",
+     "title": "Look, Listen & Live 6 JESUS - Teacher & Healer (Short)"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/180",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/191",
+     "row": "Words of Life w/ AMHARIC",
+     "title": "Words of Life w/ AMHARIC"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/181",
+     "row": "Words of Life w/ AMHARIC",
+     "title": "Words of Life w/ AMHARIC"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/2171",
+     "row": "Words of Life w/ DANAKIL",
+     "title": "Words of Life w/ DANAKIL"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/74796",
+     "row": "Good News",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82635",
+     "row": "Look, Listen & Live 1 Beginning with GOD (Long Version)",
+     "title": "Look, Listen & Live 1 Beginning with GOD (Long Version)"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/74617",
+     "row": "Look, Listen & Live 1 Beginning with GOD (Short)",
+     "title": "Look, Listen & Live 1 Beginning with GOD (Short)"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82613",
+     "row": "Look, Listen & Live 2 Mighty Men of GOD",
+     "title": "Look, Listen & Live 2 Mighty Men of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82614",
+     "row": "Look, Listen & Live 3 Victory through GOD",
+     "title": "Look, Listen & Live 3 Victory through GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82615",
+     "row": "Look, Listen & Live 4 Servants of GOD",
+     "title": "Look, Listen & Live 4 Servants of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82616",
+     "row": "Look, Listen & Live 5 On Trial for GOD",
+     "title": "Look, Listen & Live 5 On Trial for GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82636",
+     "row": "Look, Listen & Live 6 JESUS - Teacher & Healer",
+     "title": "Look, Listen & Live 6 JESUS - Teacher & Healer"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/74618",
+     "row": "Look, Listen & Live 6 JESUS - Teacher & Healer (Short)",
+     "title": "Look, Listen & Live 6 JESUS - Teacher & Healer (Short)"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/181",
+     "row": "Words of Life w/ AMHARIC",
+     "title": "Words of Life w/ AMHARIC"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/Oromo-Ethiopia_Yaadanii_sm.mp4",
+     "row": "Yaadanii",
+     "title": "Yaadanii"
+    }
+   ]
+  }
+ },
+ "orm": {
+  "Films": {
+   "heading": "Films 3",
+   "links": [
+    {
+     "cells": [
+      "LUMO: Acts of the Apostles\nOromoo",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-acts/orm_oromo_acts",
+     "row": "LUMO: Acts of the Apostles\nOromoo\n\tLUMO Project\t",
+     "title": "LUMO: Acts of the Apostles"
+    },
+    {
+     "cells": [
+      "LUMO: The Covenant\nOromoo",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-covenant/orm_oromo_covenant",
+     "row": "LUMO: The Covenant\nOromoo\n\tLUMO Project\t",
+     "title": "LUMO: The Covenant"
+    },
+    {
+     "cells": [
+      "The Visual Bible: Acts\nOromoo",
+      "Visual Bible Int.",
+      "3:06:31"
+     ],
+     "href": "https://dbs.org/video/acts_vb/orm-acts-vb-oromo",
+     "row": "The Visual Bible: Acts\nOromoo\n\tVisual Bible Int.\t3:06:31",
+     "title": "The Visual Bible: Acts"
+    }
+   ]
+  },
+  "Audio Collections": {
+   "heading": "Audio Collections 1",
+   "links": [
+    {
+     "cells": [
+      "Oromo",
+      "Global Recordings Network",
+      "1792 files · 4.4 GB"
+     ],
+     "href": "https://dbs.org/audio/collections/grn/orm_GlobalRecordings_oromo",
+     "row": "Oromo\tGlobal Recordings Network\t1792 files · 4.4 GB",
+     "title": "Oromo"
+    }
+   ]
+  },
+  "Links to Other Sites": {
+   "heading": "Links to Other Sites 2",
+   "links": [
+    {
+     "cells": [],
+     "href": "https://rockintl.org/rock-audio/karaa-haqa-the-way-of-righteousness-oromo/",
+     "row": "The WAY of RIGHTEOUSNESS",
+     "title": "The WAY of RIGHTEOUSNESS"
+    },
+    {
+     "cells": [],
+     "href": "https://rockintl.org/rock-document/oromo-karaa-haqa-the-way-of-rigteousness/",
+     "row": "The WAY of RIGHTEOUSNESS",
+     "title": "The WAY of RIGHTEOUSNESS"
+    }
+   ]
+  }
+ },
+ "hae": {
+  "Bibles": {
+   "heading": "Bibles 1",
+   "links": [
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/HAEBSE",
+     "row": "Eastern Oromo 2005 Edition\nHAEBSE\nIrbuu Haaraya\nRead\nStudy\nDownload\nPrint on Demand\n2005 · Ethiopia",
+     "title": "Eastern Oromo 2005 Edition\nHAEBSE\nIrbuu Haaraya\nRead\nStudy\nDownload\nPrint on Demand\n2005 · Ethiopia"
+    }
+   ]
+  },
+  "Films": {
+   "heading": "Films 3",
+   "links": [
+    {
+     "cells": [
+      "JESUS\nOromo, Eastern",
+      "Jesus Film Project",
+      "2:07:53"
+     ],
+     "href": "https://dbs.org/video/jesus/hae_oromo-eastern_jesus",
+     "row": "JESUS\nOromo, Eastern\n\tJesus Film Project\t2:07:53",
+     "title": "JESUS"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Mark\nHarar",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-mark/hae_oromo-eastern_mark",
+     "row": "LUMO: The Gospel of Mark\nHarar\n\tLUMO Project\t",
+     "title": "LUMO: The Gospel of Mark"
+    },
+    {
+     "cells": [
+      "Gospel of John\nHarar",
+      "Gospel of John",
+      "3:00:27"
+     ],
+     "href": "https://dbs.org/video/john/hae-john-eastern-oromo",
+     "row": "Gospel of John\nHarar\n\tGospel of John\t3:00:27",
+     "title": "Gospel of John"
+    }
+   ]
+  },
+  "Audio Collections": {
+   "heading": "Audio Collections 1",
+   "links": [
+    {
+     "cells": [
+      "Eastern Oromo",
+      "Global Recordings Network",
+      "14 files · 38.6 MB"
+     ],
+     "href": "https://dbs.org/audio/collections/grn/hae_GlobalRecordings_oromo_eastern",
+     "row": "Eastern Oromo\tGlobal Recordings Network\t14 files · 38.6 MB",
+     "title": "Eastern Oromo"
+    }
+   ]
+  },
+  "Links to Other Sites": {
+   "heading": "Links to Other Sites 2",
+   "links": [
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/15781",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/15781",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    }
+   ]
+  }
+ },
+ "gax": {
+  "Bibles": {
+   "heading": "Bibles 4",
+   "links": [
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/GAXWFW_DAVR_FB_N",
+     "row": "Arsi-Bale Oromo New Testament\nGAXWFW\nWaadaa Haarawa\nAudio · Full Bible (Davar Partners)\n2007 · Ethiopia",
+     "title": "Arsi-Bale Oromo New Testament\nGAXWFW\nWaadaa Haarawa\nAudio · Full Bible (Davar Partners)\n2007 · Ethiopia"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/GAXBSK_DAVR_OT_N",
+     "row": "Borana 1994 Edition\nGAXBSK\nAudio · Old Testament (Davar Partners)\n1994 · Ethiopia",
+     "title": "Borana 1994 Edition\nGAXBSK\nAudio · Old Testament (Davar Partners)\n1994 · Ethiopia"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/GAXBSK01440_DAVR_OT_N",
+     "row": "Borana Old Testament\nGAXBSK01440\nBorana Bible\nAudio · Old Testament (Davar Partners)\nKenya",
+     "title": "Borana Old Testament\nGAXBSK01440\nBorana Bible\nAudio · Old Testament (Davar Partners)\nKenya"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/GAXWFW01446_DAVR_FB_N",
+     "row": "Guji Oromo Bible\nGAXWFW01446\nAudio · Full Bible (Davar Partners)\nEthiopia",
+     "title": "Guji Oromo Bible\nGAXWFW01446\nAudio · Full Bible (Davar Partners)\nEthiopia"
+    }
+   ]
+  },
+  "Films": {
+   "heading": "Films 5",
+   "links": [
+    {
+     "cells": [
+      "JESUS\nGuji",
+      "Jesus Film Project",
+      "2:07:53"
+     ],
+     "href": "https://dbs.org/video/jesus/gax_guji_jesus",
+     "row": "JESUS\nGuji\n\tJesus Film Project\t2:07:53",
+     "title": "JESUS"
+    },
+    {
+     "cells": [
+      "JESUS\nOromo, Borana-Arsi-Guji",
+      "Jesus Film Project",
+      "2:01:44"
+     ],
+     "href": "https://dbs.org/video/jesus/gax_oromo-borana-arsi-guji_jesus",
+     "row": "JESUS\nOromo, Borana-Arsi-Guji\n\tJesus Film Project\t2:01:44",
+     "title": "JESUS"
+    },
+    {
+     "cells": [
+      "King of Glory - HAYYU GUDDINNA\nHAYYU GUDDINNA",
+      "King of Glory",
+      "3:42:13"
+     ],
+     "href": "https://dbs.org/video/rock/gax-borana",
+     "row": "King of Glory - HAYYU GUDDINNA\nHAYYU GUDDINNA\n\tKing of Glory\t3:42:13",
+     "title": "King of Glory - HAYYU GUDDINNA"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Luke\nBorana",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-luke/gax_guji_luke",
+     "row": "LUMO: The Gospel of Luke\nBorana\n\tLUMO Project\t",
+     "title": "LUMO: The Gospel of Luke"
+    },
+    {
+     "cells": [
+      "Gospel of John\nBorana",
+      "Gospel of John",
+      "2:53:21"
+     ],
+     "href": "https://dbs.org/video/john/gax-john-borana-arsi-guji-oromo",
+     "row": "Gospel of John\nBorana\n\tGospel of John\t2:53:21",
+     "title": "Gospel of John"
+    }
+   ]
+  },
+  "Audio Collections": {
+   "heading": "Audio Collections 2",
+   "links": [
+    {
+     "cells": [
+      "Borana-Arsi-Guji Oromo",
+      "Global Recordings Network",
+      "444 files · 1.2 GB"
+     ],
+     "href": "https://dbs.org/audio/collections/grn/gax_GlobalRecordings_oromo_borana-arsi-guji",
+     "row": "Borana-Arsi-Guji Oromo\tGlobal Recordings Network\t444 files · 1.2 GB",
+     "title": "Borana-Arsi-Guji Oromo"
+    },
+    {
+     "cells": [
+      "Borana-Arsi-Guji Oromo",
+      "Story Runners",
+      "39 files · 87.7 MB"
+     ],
+     "href": "https://dbs.org/audio/collections/srun/gax_storyset_oromo_borana",
+     "row": "Borana-Arsi-Guji Oromo\tStory Runners\t39 files · 87.7 MB",
+     "title": "Borana-Arsi-Guji Oromo"
+    }
+   ]
+  },
+  "Historic Bible (Scans)": {
+   "heading": "Historic Bible (Scans) 2",
+   "links": [
+    {
+     "cells": [
+      "Oromo - John (Print)\nOromo - Yohaannis",
+      "1994"
+     ],
+     "href": "https://dbs.org/bibles/historic/Oromo-John-print",
+     "row": "Oromo - John (Print)\nOromo - Yohaannis\n\t1994",
+     "title": "Oromo - John (Print)"
+    },
+    {
+     "cells": [
+      "Oromo (Latin) John (Book)\nOromo (Latin) Yohaannis",
+      "1994"
+     ],
+     "href": "https://dbs.org/bibles/historic/Oromo-Latin-John-book",
+     "row": "Oromo (Latin) John (Book)\nOromo (Latin) Yohaannis\n\t1994",
+     "title": "Oromo (Latin) John (Book)"
+    }
+   ]
+  },
+  "Links to Other Sites": {
+   "heading": "Links to Other Sites 39",
+   "links": [
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=GAXWFW",
+     "row": "Arsi-Bale Oromo New Testament",
+     "title": "Arsi-Bale Oromo New Testament"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=GAXBSK",
+     "row": "Borana 1994 Edition",
+     "title": "Borana 1994 Edition"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=GAXGAX",
+     "row": "New Testament in Borana (Oromo)",
+     "title": "New Testament in Borana (Oromo)"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=GAXTBN",
+     "row": "New Testament in Borana",
+     "title": "New Testament in Borana"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/KoG/King-of-Glory_Borana_Ep14.mp4",
+     "row": "King of Glory, Episode 14",
+     "title": "King of Glory, Episode 14"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/KoG/King-of-Glory_Borana_Ep15.mp4",
+     "row": "King of Glory, Episode 15",
+     "title": "King of Glory, Episode 15"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/2041",
+     "row": "Words of Life 1",
+     "title": "Words of Life 1"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/37575",
+     "row": "Words of Life 2",
+     "title": "Words of Life 2"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/80807",
+     "row": "Look, Listen & Live 7 JESUS - Lord & Saviour",
+     "title": "Look, Listen & Live 7 JESUS - Lord & Saviour"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/9330",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/71270",
+     "row": "Look, Listen & Live",
+     "title": "Look, Listen & Live"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/71280",
+     "row": "Look, Listen & Live 6 JESUS - Teacher & Healer",
+     "title": "Look, Listen & Live 6 JESUS - Teacher & Healer"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/71290",
+     "row": "Look, Listen & Live 7 JESUS - Lord & Saviour",
+     "title": "Look, Listen & Live 7 JESUS - Lord & Saviour"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/15650",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/81726",
+     "row": "Good News",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/75120",
+     "row": "Look, Listen & Live",
+     "title": "Look, Listen & Live"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/75113",
+     "row": "Look, Listen & Live 2 Mighty Men of GOD",
+     "title": "Look, Listen & Live 2 Mighty Men of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/75119",
+     "row": "Look, Listen & Live 3 Victory through GOD",
+     "title": "Look, Listen & Live 3 Victory through GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/75114",
+     "row": "Look, Listen & Live 4 Servants of GOD",
+     "title": "Look, Listen & Live 4 Servants of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/75116",
+     "row": "Look, Listen & Live 5 On Trial for GOD",
+     "title": "Look, Listen & Live 5 On Trial for GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/75115",
+     "row": "Look, Listen & Live 6 JESUS - Teacher & Healer",
+     "title": "Look, Listen & Live 6 JESUS - Teacher & Healer"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/75117",
+     "row": "Look, Listen & Live 7 JESUS - Lord & Saviour",
+     "title": "Look, Listen & Live 7 JESUS - Lord & Saviour"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/75118",
+     "row": "Look, Listen & Live 8 Acts of the HOLY SPIRIT",
+     "title": "Look, Listen & Live 8 Acts of the HOLY SPIRIT"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82757",
+     "row": "Songs",
+     "title": "Songs"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/12770",
+     "row": "Words of Life 1",
+     "title": "Words of Life 1"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/81725",
+     "row": "Words of Life 2",
+     "title": "Words of Life 2"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/85210",
+     "row": "Words of Life 3",
+     "title": "Words of Life 3"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/65287",
+     "row": "Laali, Chaqasi & Jiradin 1: Waaqan Yayabadi [Look, Listen & Live 1 Beginning with GOD]",
+     "title": "Laali, Chaqasi & Jiradin 1: Waaqan Yayabadi [Look, Listen & Live 1 Beginning with GOD]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/65288",
+     "row": "Laali, Chaqasi & Jiradin 2: Nama Waaqa [Look, Listen & Live 2 Mighty Men of GOD]",
+     "title": "Laali, Chaqasi & Jiradin 2: Nama Waaqa [Look, Listen & Live 2 Mighty Men of GOD]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/65289",
+     "row": "Laali, Chaqasi & Jiradin 3: Dabsacha Gara Waaqatin [Look, Listen & Live 3 Victory through GOD]",
+     "title": "Laali, Chaqasi & Jiradin 3: Dabsacha Gara Waaqatin [Look, Listen & Live 3 Victory through GOD]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/65290",
+     "row": "Laali, Chaqasi & Jiradin 4: Hojatu Waaqa [Look, Listen & Live 4 Servants of GOD]",
+     "title": "Laali, Chaqasi & Jiradin 4: Hojatu Waaqa [Look, Listen & Live 4 Servants of GOD]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/65291",
+     "row": "Laali, Chaqasi, Jiradin 5- Jilalacha Waaqat [Look, Listen & Live 5 On Trial for GOD]",
+     "title": "Laali, Chaqasi, Jiradin 5- Jilalacha Waaqat [Look, Listen & Live 5 On Trial for GOD]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/65292",
+     "row": "Laali, Chaqasi, Jiradin 6-Yeson Barsisa [Look, Listen & Live 6 JESUS - Teacher & Healer]",
+     "title": "Laali, Chaqasi, Jiradin 6-Yeson Barsisa [Look, Listen & Live 6 JESUS - Teacher & Healer]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/65293",
+     "row": "Laali, Chaqasi, Jiradin 7 [Look, Listen & Live 7 JESUS - Lord & Saviour]",
+     "title": "Laali, Chaqasi, Jiradin 7 [Look, Listen & Live 7 JESUS - Lord & Saviour]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/65294",
+     "row": "Laali, Chaqasi, Jiradin 8 [Look, Listen & Live 8 Acts of the HOLY SPIRIT]",
+     "title": "Laali, Chaqasi, Jiradin 8 [Look, Listen & Live 8 Acts of the HOLY SPIRIT]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/65286",
+     "row": "Oddu Dansa [Good News]",
+     "title": "Oddu Dansa [Good News]"
+    },
+    {
+     "cells": [],
+     "href": "https://rockintl.org/rock-video/hayyu-guddinna-borana-king-of-glory/",
+     "row": "KING of GLORY",
+     "title": "KING of GLORY"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/KoG/King-of-Glory_Borana_Ep14.mp4",
+     "row": "King of Glory, Episode 14",
+     "title": "King of Glory, Episode 14"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/KoG/King-of-Glory_Borana_Ep15.mp4",
+     "row": "King of Glory, Episode 15",
+     "title": "King of Glory, Episode 15"
+    }
+   ]
+  }
+ }
+}

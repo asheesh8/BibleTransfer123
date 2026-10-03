@@ -70,7 +70,12 @@
 
     if (p.kind === 'audio') {
       return '<audio id="a" controls preload="metadata" src="' + ET.esc(p.file) +
-        '" style="width:100%"></audio>';
+        '" style="width:100%"></audio>' + (p.items && p.items.length ?
+        '<div class="picker"><label class="flabel" for="track">' + h('item.recordings') +
+        '</label><select id="track">' + p.items.map(function (c, i) {
+          return '<option value="' + i + '">' + ET.esc(c.title) + '</option>';
+        }).join('') + '</select><button class="btn ghost" id="track-next">' +
+        h('item.next.recording') + ET.icon('chev', 'flip') + '</button></div>' : '');
     }
 
     if (p.kind === 'audio-bible') {
@@ -82,7 +87,7 @@
         '<div class="picker two">' +
           '<div><label class="flabel" for="bk">' + h('item.book') + '</label>' +
           '<select id="bk">' + books.map(function (b, i) {
-            return '<option value="' + i + '">' + ET.esc(ET.bookName(b[2])) + '</option>';
+            return '<option value="' + i + '">' + ET.esc((p.bookNames && p.bookNames[b[2]]) || ET.bookName(b[2])) + '</option>';
           }).join('') + '</select></div>' +
           '<div><label class="flabel" for="bc">' + h('item.chapter.pick') + '</label>' +
           '<select id="bc"></select></div>' +
@@ -164,7 +169,8 @@
     html += reader();
 
     // The verbs.
-    var canSave = (r.files || []).some(function (f) { return f.file || f.chapters; });
+    var canSaveChapter = r.play && r.play.kind === 'audio-bible' && r.play.saveChapter;
+    var canSave = canSaveChapter || (r.files || []).some(function (f) { return f.file || f.chapters; });
     html += '<div class="btn-row" style="margin-top:1.3rem">' +
       (canSave ? '<button class="btn green" id="save">' + ET.icon('save') + h('item.save') + '</button>' : '') +
       '<button class="btn sky" id="share">' + ET.icon('share') + h('item.share') + '</button></div>';
@@ -194,7 +200,14 @@
     ET.$('#item').innerHTML = html;
     wirePlayer();
     var sv = ET.$('#save');
-    if (sv) sv.addEventListener('click', function () { ET.save.open(r); });
+    if (sv) sv.addEventListener('click', function () {
+      if (!canSaveChapter) return ET.save.open(r);
+      var book = ET.$('#bk'), chapter = ET.$('#bc');
+      var currentFile = { label: book.options[book.selectedIndex].text + ' — ' +
+        t('item.chapter', { n: chapter.value }) + ' (MP3)',
+        file: ET.$('#a').src, remote: true, bytes: 0 };
+      ET.save.open(Object.assign({}, r, { title: ET.displayTitle(r), files: [currentFile].concat(r.files || []) }));
+    });
     ET.$('#share').addEventListener('click', shareSheet);
   }
 
@@ -202,6 +215,25 @@
   function wirePlayer() {
     var p = r.play;
     if (!p) return;
+
+    if (p.kind === 'audio' && p.items && p.items.length) {
+      var audio = ET.$('#a'), track = ET.$('#track');
+      track.value = String(Math.max(0, Math.min(+ET.store.get(KEY, 0) || 0, p.items.length - 1)));
+      function loadTrack(autoplay) {
+        audio.src = p.items[+track.value].file;
+        ET.store.set(KEY, track.value);
+        if (autoplay) audio.play().catch(function () {});
+      }
+      function nextTrack() {
+        if (+track.value < p.items.length - 1) {
+          track.value = String(+track.value + 1); loadTrack(true);
+        }
+      }
+      loadTrack(false);
+      track.addEventListener('change', function () { loadTrack(true); });
+      ET.$('#track-next').addEventListener('click', nextTrack);
+      audio.addEventListener('ended', nextTrack);
+    }
 
     if (p.kind === 'chapters') {
       var v = ET.$('#v'), ch = ET.$('#ch');

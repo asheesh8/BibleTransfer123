@@ -1,0 +1,17 @@
+{
+ "verified": "2026-10-03",
+ "alive_files": [
+  "https://bibles.dbs.org/GAZBIB/pdf/GAZBIB.pdf",
+  "https://bibles.dbs.org/GAZBIBL/pdf/GAZBIBL.pdf",
+  "https://bibles.dbs.org/HAEBSE/pdf/HAEBSE.pdf",
+  "https://rockintl.org/wp-content/uploads/2021/06/TWOR_Oromo_GAZ_001-100-2.pdf",
+  "https://scripture.dbs.org/books/Oromo-John-print.pdf",
+  "https://scripture.dbs.org/books/Oromo-Latin-John-book.pdf"
+ ],
+ "playable_audio_filesets": [
+  "GAXBSK_DAVR_OT_N",
+  "GAXWFW_DAVR_FB_N",
+  "GAZBIB_DAVR_FB_N",
+  "GAZGAZ_DAVR_OT_N"
+ ]
+}

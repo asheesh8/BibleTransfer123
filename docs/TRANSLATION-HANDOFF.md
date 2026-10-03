@@ -170,3 +170,58 @@ were inspected and each contains all 215 MP3s. All seven PDFs were also
 downloaded and their PDF headers verified. Bible ZIPs and EPUB are omitted
 when the file verifier and browser cannot confirm them. Three full audio
 Bible editions remain available for streaming.
+
+## Luo and Oromo additions — 2026-10-03
+
+Dholuo uses content and interface code `luo`, with `/luo` and `/dholuo` routes.
+Afaan Oromoo uses content code `orm` and interface code `om`, with `/oromo` and
+`/afaan-oromoo` routes. Both include native filters, resource actions, help,
+file troubleshooting, saving, and all ten device-sharing guides. Their book
+selectors use the published DBS names; Oromo preserves each audio edition's
+own book labels. Short controls were compared with published
+[Dholuo](https://www.jw.org/luo/) and [Oromo](https://www.jw.org/om/) interfaces.
+The longer instructions are AI-assisted drafts and still need fluent local
+review. The language selectors and landing pages disclose this. The separate
+computer screenshot guide and privacy notice remain English. No resources
+from those vocabulary reference sites were imported.
+
+The [DBS Dholuo inventory](https://dbs.org/discover/languages/luo) produces 24
+resources: three films, two text editions, one complete audio Bible, the
+complete Dholuo recordings, fourteen publisher programmes, Story of Jesus,
+and two current Bible directory entries. Two retired audio editions and two
+Luhya programme rows are excluded. The recordings player has all 299 Dholuo
+tracks. Its published ZIP additionally contains 22 Luhya/Lunyore tracks; the
+download label and description explicitly disclose this. Five complete ZIP
+downloads were checked in the browser and their contents and CRCs inspected.
+The PDF, all Dholuo tracks and film chapter endpoints were probed; native
+players and the audio chapter save flow were checked in the browser.
+
+Oromo combines DBS's four listings: [West Central](https://dbs.org/discover/languages/gaz),
+[general Oromo](https://dbs.org/discover/languages/orm),
+[Eastern/Harar](https://dbs.org/discover/languages/hae), and
+[Borana, Arsi and Guji](https://dbs.org/discover/languages/gax). The 93 distinct
+listed URLs map to 86 resources after combining aliases and excluding three
+retired audio editions. Regional varieties remain identified on the shelves.
+There are 20 films, four current audio Bibles, six readable PDFs, six audio
+collections, 44 named GRN programmes, five current Bible directory entries,
+and the ROCK lesson page. Several DBS audio headings said New Testament
+even though their selectors contained the Old Testament or the full Bible;
+the catalogue labels follow the actual books.
+
+All individual DBS audio files and the six PDF signatures were verified.
+The complete Eastern Oromo low-quality ZIP was downloaded in the browser;
+all 14 MP3 files and their ZIP CRCs were verified.
+Publisher pages, current film provider downloads and current Bible editions
+were captured from their rendered pages. The general Oromo player excludes
+1,067 Orma and Afan Munyoyaya tracks from the mixed collection, retaining all
+725 Oromo tracks; its unmodified publisher ZIP is labeled with all three
+languages. ROCK's 100 lesson links are available through the publisher page,
+whose individual MP3 downloads rejected verification; they are not advertised
+as verified direct downloads. The confirmed ROCK PDF is directly readable.
+Unconfirmed EPUBs, Bible ZIPs and broken legacy endpoints are omitted.
+
+`catalog/source/dbs-*-2026-10-03.json` records the Oromo inventories, detail
+pages, direct-file results and exact external allowlist. `packer/build_oromo.py`
+rebuilds the native catalogue from these captures. The external exceptions
+are exact URLs scoped to Oromo or Luo; existing languages retain their prior
+curation. The startup home and language catalogues remain slim.

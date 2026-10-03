@@ -6,9 +6,9 @@ const assert = require('node:assert/strict');
 const test = require('node:test');
 const app = path.join(__dirname, '../app');
 const source = fs.readFileSync(path.join(app, 'assets/js/i18n.js'), 'utf8');
-function harness(elements = {}) {
+function harness(elements = {}, scope = null) {
   const attributes = {};
-  const ET = { libraryScope: () => null, store: { get: (_, fallback) => fallback, set() {} },
+  const ET = { libraryScope: () => scope, store: { get: (_, fallback) => fallback, set() {} },
     $$: selector => elements[selector] || [], $: () => null, esc: value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') };
   const window = { ET };
   const document = { documentElement: { setAttribute: (key, value) => { attributes[key] = value; } } };
@@ -19,9 +19,9 @@ function harness(elements = {}) {
 }
 const placeholders = value => [...value.matchAll(/\{(\w+)\}/g)].map(match => match[1]).sort();
 
-test('all seventeen languages retain formatter variables and render escaped strings', () => {
+test('all nineteen languages retain formatter variables and render escaped strings', () => {
   const { ET, dictionaries, attributes } = harness();
-  assert.equal(ET.i18n.langs.length, 17);
+  assert.equal(ET.i18n.langs.length, 19);
   for (const language of ET.i18n.langs) {
     ET.i18n.set(language.code);
     assert.equal(attributes.dir, language.dir);
@@ -118,4 +118,18 @@ test('untranslated copy is marked as English and changes back when translated', 
   ET.i18n.set('mr');
   assert.equal(heading.attributes.lang, 'mr');
   assert.doesNotMatch(ET.i18n.h('help.title'), /lang="en"/);
+});
+
+ test('new shared libraries initialize in their native interface without a stored preference', () => {
+  for (const scope of [{lang: 'orm', ui: 'om'}, {lang: 'luo', ui: 'luo'}]) {
+    const {ET, dictionaries, attributes} = harness({}, scope);
+    assert.equal(ET.i18n.current(), scope.ui);
+    ET.i18n.apply();
+    assert.equal(attributes.lang, scope.ui);
+    for (const key of ['lib.search', 'item.save', 'item.missing', 'help.title',
+                       'route.iphone-android.1.h', 'route.computer-android.1.p']) {
+      assert.ok(dictionaries[scope.ui][key], scope.ui + '.' + key);
+      assert.notEqual(ET.i18n.t(key), dictionaries.en[key], scope.ui + '.' + key);
+    }
+  }
 });

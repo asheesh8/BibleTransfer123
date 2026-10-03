@@ -2,6 +2,7 @@
  "verified": "2026-10-02",
  "alive_files": [
   "https://bibles.dbs.org/LUGBIB/pdf/LUGBIB.pdf",
+  "https://bibles.dbs.org/LUOONT/pdf/LUOONT.pdf",
   "https://scripture.dbs.org/pdfs/Ganda-1902-Bible-Ekitabo-ikitukuvu-ekya-katonda.pdf",
   "https://scripture.dbs.org/pdfs/Ganda-1908-Matthew-Enjiri-nga-bweyawandikibwa-Mathayo-omut.pdf",
   "https://scripture.dbs.org/pdfs/Ganda-2009-Genesis-Portion-Ekitabo-Ekitukuvu.pdf",
@@ -12,6 +13,7 @@
  "playable_audio_filesets": [
   "LUGBIB_FCBH_FB_N",
   "LUGBSU_DAVR_FB_N",
-  "LUGRPA_DAVR_FB_N"
+  "LUGRPA_DAVR_FB_N",
+  "LUOGEN_DAVR_FB_N"
  ]
 }
