@@ -39,6 +39,7 @@ LANGUAGES = {
     "lug": ("lug", "Luganda", ""),
     "luo": ("luo", "Luo", ""),
     "orm": ("orm", "Oromo", "General"),
+    "ibo": ("ibo", "Igbo", ""),
     "gaz": ("orm", "Oromo", "West Central"),
     "hae": ("orm", "Oromo", "Eastern"),
     "gax": ("orm", "Oromo", "Borana-Arsi-Guji"),
@@ -369,7 +370,7 @@ def main():
                 r["title"] += f" — {variant}"
 
     OUT.write_text(json.dumps({
-        "generated": "Rendered Digital Bible Society language pages — verified " + ", ".join(s.stem[-10:] for s in SOURCES),
+        "generated": "Rendered Digital Bible Society language pages — verified " + ", ".join(sorted({s.stem[-10:] for s in SOURCES})),
         "languages": {},
         "resources": added,
     }, ensure_ascii=False, indent=1), encoding="utf-8")

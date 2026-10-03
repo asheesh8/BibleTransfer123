@@ -8,7 +8,7 @@
 
    VERSION must change whenever the shell changes, or an installed copy keeps
    serving the old one. `easytransfer build` rewrites it. */
-var VERSION = 'shell-v36';
+var VERSION = 'shell-v37';
 
 var SHELL = [
   'index.html', 'library.html', 'item.html', 'share.html', 'help.html', 'nearby.html',
@@ -22,7 +22,7 @@ var SHELL = [
   'english/index.html', 'mandarin/index.html', 'hindi/index.html', 'urdu/index.html',
   'swahili/index.html', 'cantonese/index.html', 'pashto/index.html', 'sindhi/index.html',
   'zulu/index.html', 'maasai/index.html',
-  'luganda/index.html', 'luo/index.html', 'oromo/index.html', 'kikuyu/index.html', 'marathi/index.html',
+  'luganda/index.html', 'luo/index.html', 'oromo/index.html', 'igbo/index.html', 'kikuyu/index.html', 'marathi/index.html',
   'gusii/index.html', 'ekegusii/index.html', 'kisii/index.html', 'northern-pashto/index.html',
   'eastern-punjabi/index.html', 'western-punjabi/index.html', 'nepali/index.html',
   'share-libraries/index.html',
@@ -32,7 +32,7 @@ var SHELL = [
   'data/catalog-mar.js', 'data/catalog-urd.js', 'data/catalog-swh.js',
   'data/catalog-zul.js', 'data/catalog-pnb.js', 'data/catalog-yue.js',
   'data/catalog-pus.js', 'data/catalog-pan.js', 'data/catalog-npi.js',
-  'data/catalog-luo.js', 'data/catalog-orm.js', 'data/catalog-snd.js', 'data/catalog-lug.js', 'data/catalog-kik.js',
+  'data/catalog-luo.js', 'data/catalog-orm.js', 'data/catalog-ibo.js', 'data/catalog-snd.js', 'data/catalog-lug.js', 'data/catalog-kik.js',
   'data/catalog-guz.js', 'data/catalog-mas.js',
   'assets/save-guide/macos/slide-01.webp', 'assets/save-guide/macos/slide-02.webp',
   'assets/save-guide/macos/slide-03.webp', 'assets/save-guide/macos/slide-04.webp',

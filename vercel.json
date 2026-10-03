@@ -20,6 +20,8 @@
     { "source": "/luganda", "destination": "/luganda/index.html" },
     { "source": "/luo", "destination": "/luo/index.html" },
     { "source": "/dholuo", "destination": "/luo/index.html" },
+    { "source": "/igbo", "destination": "/igbo/index.html" },
+    { "source": "/ibo", "destination": "/igbo/index.html" },
     { "source": "/oromo", "destination": "/oromo/index.html" },
     { "source": "/afaan-oromoo", "destination": "/oromo/index.html" },
     { "source": "/kikuyu", "destination": "/kikuyu/index.html" },

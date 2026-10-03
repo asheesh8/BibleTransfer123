@@ -1,0 +1,3327 @@
+{
+ "generated": "DBS rendered Igbo inventory — 2026-10-03",
+ "languages": {
+  "ibo": {
+   "code": "ibo",
+   "name": "Igbo",
+   "native": "Asụsụ Igbo",
+   "script": "latn",
+   "dir": "ltr",
+   "font": "latin",
+   "region": "Nigeria",
+   "blurb": "Igbo Scripture, films and audio from DBS, with regional varieties labeled."
+  }
+ },
+ "resources": [
+  {
+   "id": "ibo-ac-ibo_globalrecordings_igbo",
+   "lang": "ibo",
+   "type": "audio",
+   "title": "Igbo",
+   "native": "Ụda e dekọrọ n’Igbo",
+   "scope": "Igbo",
+   "langName": "Asụsụ Igbo",
+   "source": "https://dbs.org/audio/collections/grn/ibo_GlobalRecordings_igbo",
+   "org": "Global Recordings Network",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20A%20Welcome%20to%20Travellers%2068154/Igbo%20A%20Welcome%20to%20Travellers%20001%20A%20Welcome%20to%20the%20Traveler%2068154.mp3",
+     "label": "Igbo — Ụda 1 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20001%20The%20True%20God%2001010.mp3",
+     "label": "Igbo — Ụda 2 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20002%20Do%20Not%20Refuse%2001010.mp3",
+     "label": "Igbo — Ụda 3 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20003%20How%20to%20Find%20Peace%2001010.mp3",
+     "label": "Igbo — Ụda 4 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20004%20Do%20Not%20Refuse%2001010.mp3",
+     "label": "Igbo — Ụda 5 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20005%20Praise%20Ye%20the%20Lord%2001010.mp3",
+     "label": "Igbo — Ụda 6 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20006%20The%20House%20on%20the%20Rock%2001010.mp3",
+     "label": "Igbo — Ụda 7 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20007%20Come%20to%20Jesus%2001010.mp3",
+     "label": "Igbo — Ụda 8 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20008%20The%20Rich%20Man%20and%20Lazarus%2001010.mp3",
+     "label": "Igbo — Ụda 9 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20009%20Are%20You%20Ready%2001010.mp3",
+     "label": "Igbo — Ụda 10 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20010%20Are%20You%20Ready%2001010.mp3",
+     "label": "Igbo — Ụda 11 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20011%20Noah%2001010.mp3",
+     "label": "Igbo — Ụda 12 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20012%20Follow%20Jesus%2001010.mp3",
+     "label": "Igbo — Ụda 13 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20013%20Gehazi%2001010.mp3",
+     "label": "Igbo — Ụda 14 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20014%20Be%20Strong%2001010.mp3",
+     "label": "Igbo — Ụda 15 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20015%20God%27s%20Answers%2001010.mp3",
+     "label": "Igbo — Ụda 16 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20016%20Into%20My%20Heart%2001010.mp3",
+     "label": "Igbo — Ụda 17 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20017%20The%20Prodigal%20Son%2001010.mp3",
+     "label": "Igbo — Ụda 18 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20018%20How%20to%20Walk%20the%20Jesus%20Road%2001010.mp3",
+     "label": "Igbo — Ụda 19 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Asaa/Igbo%20Asaa%20Words%20of%20Life%2001670/Igbo%20Asaa%20Words%20of%20Life%20001%20Who%20is%20He%2001670.mp3",
+     "label": "Igbo Asaa — Ụda 20 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Asaa/Igbo%20Asaa%20Words%20of%20Life%2001670/Igbo%20Asaa%20Words%20of%20Life%20002%20Prepare%20for%20the%20Future%2001670.mp3",
+     "label": "Igbo Asaa — Ụda 21 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Asaa/Igbo%20Asaa%20Words%20of%20Life%2001670/Igbo%20Asaa%20Words%20of%20Life%20003%20The%20House%20on%20the%20Rock%2001670.mp3",
+     "label": "Igbo Asaa — Ụda 22 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Asaa/Igbo%20Asaa%20Words%20of%20Life%2001670/Igbo%20Asaa%20Words%20of%20Life%20004%20How%20to%20Find%20Peace%2001670.mp3",
+     "label": "Igbo Asaa — Ụda 23 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20001%20Follow%20Jesus%2005650.mp3",
+     "label": "Igbo Ohafia — Ụda 24 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20002%20I%20Shall%20Meet%20Him%2005650.mp3",
+     "label": "Igbo Ohafia — Ụda 25 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20003%20Igbo%20How%20to%20Find%20Peace%2005650.mp3",
+     "label": "Igbo Ohafia — Ụda 26 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20004%20Igbo%20Do%20Not%20Refuse%2005650.mp3",
+     "label": "Igbo Ohafia — Ụda 27 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20005%20Igbo%20Are%20You%20Ready%2005650.mp3",
+     "label": "Igbo Ohafia — Ụda 28 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20006%20Igbo%20The%20House%20on%20the%20Rock%2005650.mp3",
+     "label": "Igbo Ohafia — Ụda 29 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo_high.zip",
+     "label": "Ụda niile (ZIP) · Ụda dị mma karịa"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo_low.zip",
+     "label": "Ụda niile (ZIP) · Nha faịlụ pere mpe"
+    }
+   ],
+   "links": [],
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20A%20Welcome%20to%20Travellers%2068154/Igbo%20A%20Welcome%20to%20Travellers%20001%20A%20Welcome%20to%20the%20Traveler%2068154.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20A%20Welcome%20to%20Travellers%2068154/Igbo%20A%20Welcome%20to%20Travellers%20001%20A%20Welcome%20to%20the%20Traveler%2068154.mp3",
+      "title": "Igbo — Ụda 1"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20001%20The%20True%20God%2001010.mp3",
+      "title": "Igbo — Ụda 2"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20002%20Do%20Not%20Refuse%2001010.mp3",
+      "title": "Igbo — Ụda 3"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20003%20How%20to%20Find%20Peace%2001010.mp3",
+      "title": "Igbo — Ụda 4"
+     },
+     {
+      "n": 5,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20004%20Do%20Not%20Refuse%2001010.mp3",
+      "title": "Igbo — Ụda 5"
+     },
+     {
+      "n": 6,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20005%20Praise%20Ye%20the%20Lord%2001010.mp3",
+      "title": "Igbo — Ụda 6"
+     },
+     {
+      "n": 7,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20006%20The%20House%20on%20the%20Rock%2001010.mp3",
+      "title": "Igbo — Ụda 7"
+     },
+     {
+      "n": 8,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20007%20Come%20to%20Jesus%2001010.mp3",
+      "title": "Igbo — Ụda 8"
+     },
+     {
+      "n": 9,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20008%20The%20Rich%20Man%20and%20Lazarus%2001010.mp3",
+      "title": "Igbo — Ụda 9"
+     },
+     {
+      "n": 10,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20009%20Are%20You%20Ready%2001010.mp3",
+      "title": "Igbo — Ụda 10"
+     },
+     {
+      "n": 11,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20010%20Are%20You%20Ready%2001010.mp3",
+      "title": "Igbo — Ụda 11"
+     },
+     {
+      "n": 12,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20011%20Noah%2001010.mp3",
+      "title": "Igbo — Ụda 12"
+     },
+     {
+      "n": 13,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20012%20Follow%20Jesus%2001010.mp3",
+      "title": "Igbo — Ụda 13"
+     },
+     {
+      "n": 14,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20013%20Gehazi%2001010.mp3",
+      "title": "Igbo — Ụda 14"
+     },
+     {
+      "n": 15,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20014%20Be%20Strong%2001010.mp3",
+      "title": "Igbo — Ụda 15"
+     },
+     {
+      "n": 16,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20015%20God%27s%20Answers%2001010.mp3",
+      "title": "Igbo — Ụda 16"
+     },
+     {
+      "n": 17,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20016%20Into%20My%20Heart%2001010.mp3",
+      "title": "Igbo — Ụda 17"
+     },
+     {
+      "n": 18,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20017%20The%20Prodigal%20Son%2001010.mp3",
+      "title": "Igbo — Ụda 18"
+     },
+     {
+      "n": 19,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20018%20How%20to%20Walk%20the%20Jesus%20Road%2001010.mp3",
+      "title": "Igbo — Ụda 19"
+     },
+     {
+      "n": 20,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Asaa/Igbo%20Asaa%20Words%20of%20Life%2001670/Igbo%20Asaa%20Words%20of%20Life%20001%20Who%20is%20He%2001670.mp3",
+      "title": "Igbo Asaa — Ụda 20"
+     },
+     {
+      "n": 21,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Asaa/Igbo%20Asaa%20Words%20of%20Life%2001670/Igbo%20Asaa%20Words%20of%20Life%20002%20Prepare%20for%20the%20Future%2001670.mp3",
+      "title": "Igbo Asaa — Ụda 21"
+     },
+     {
+      "n": 22,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Asaa/Igbo%20Asaa%20Words%20of%20Life%2001670/Igbo%20Asaa%20Words%20of%20Life%20003%20The%20House%20on%20the%20Rock%2001670.mp3",
+      "title": "Igbo Asaa — Ụda 22"
+     },
+     {
+      "n": 23,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Asaa/Igbo%20Asaa%20Words%20of%20Life%2001670/Igbo%20Asaa%20Words%20of%20Life%20004%20How%20to%20Find%20Peace%2001670.mp3",
+      "title": "Igbo Asaa — Ụda 23"
+     },
+     {
+      "n": 24,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20001%20Follow%20Jesus%2005650.mp3",
+      "title": "Igbo Ohafia — Ụda 24"
+     },
+     {
+      "n": 25,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20002%20I%20Shall%20Meet%20Him%2005650.mp3",
+      "title": "Igbo Ohafia — Ụda 25"
+     },
+     {
+      "n": 26,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20003%20Igbo%20How%20to%20Find%20Peace%2005650.mp3",
+      "title": "Igbo Ohafia — Ụda 26"
+     },
+     {
+      "n": 27,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20004%20Igbo%20Do%20Not%20Refuse%2005650.mp3",
+      "title": "Igbo Ohafia — Ụda 27"
+     },
+     {
+      "n": 28,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20005%20Igbo%20Are%20You%20Ready%2005650.mp3",
+      "title": "Igbo Ohafia — Ụda 28"
+     },
+     {
+      "n": 29,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20006%20Igbo%20The%20House%20on%20the%20Rock%2005650.mp3",
+      "title": "Igbo Ohafia — Ụda 29"
+     }
+    ]
+   }
+  },
+  {
+   "id": "ibo-ab-igrnbt-fcbh-nt-n",
+   "lang": "ibo",
+   "type": "audio-bible",
+   "title": "Ehugbo New Testament — Audio",
+   "native": "Agba Ọhụrụ n’ụda — Ehugbo",
+   "scope": "Ehugbo",
+   "langName": "Asụsụ Igbo · Ehugbo",
+   "source": "https://dbs.org/bibles/audio/IGRNBT_FCBH_NT_N",
+   "org": "Faith Comes By Hearing",
+   "desc": "",
+   "downloads": [],
+   "links": [],
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "IGRNBT_FCBH_NT_N",
+    "version": "IGRNBT",
+    "testaments": [
+     "NT"
+    ],
+    "saveChapter": true
+   }
+  },
+  {
+   "id": "ibo-ab-iboilb-davr-fb-n",
+   "lang": "ibo",
+   "type": "audio-bible",
+   "title": "Igbo Union Version — Audio",
+   "native": "Baịbụl n’ụda — Union",
+   "scope": "Igbo",
+   "langName": "Asụsụ Igbo",
+   "source": "https://dbs.org/bibles/audio/IBOILB_DAVR_FB_N",
+   "org": "Davar Partners International",
+   "desc": "",
+   "downloads": [],
+   "links": [],
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "IBOILB_DAVR_FB_N",
+    "version": "IBOILB",
+    "testaments": [
+     "OT",
+     "NT"
+    ],
+    "saveChapter": true,
+    "bookNames": {
+     "Genesis": "Jenesis",
+     "Exodus": "ỌPUPU",
+     "Leviticus": "LEVITIKỌS",
+     "Numbers": "ỌNỤỌGỤGỤ",
+     "Deuteronomy": "Diuteronomi",
+     "Joshua": "Joshua",
+     "Judges": "Ndi-Ikpe",
+     "Ruth": "Rut",
+     "1Samuel": "1 Samuel",
+     "2Samuel": "2 Samuel",
+     "1Kings": "1 NDỊ EZE",
+     "2Kings": "2 NDỊ EZE",
+     "1Chronicles": "1 Ihe E Mere",
+     "2Chronicles": "2 Ihe E Mere",
+     "Ezra": "Ezra",
+     "Nehemiah": "Nehemaia",
+     "Esther": "Esta",
+     "Job": "Job",
+     "Psalms": "ABỤ ỌMA",
+     "Proverbs": "Ilu",
+     "Ecclesiastes": "Eklisiastis",
+     "SongofSongs": "ABÙ NKE ABÙ",
+     "Isaiah": "AỊZAYA",
+     "Jeremiah": "Jeremaya",
+     "Lamentations": "ABÙ-ÁKWÁ",
+     "Ezekiel": "Ezikiel",
+     "Daniel": "Daniel",
+     "Hosea": "Hosiya",
+     "Joel": "Juel",
+     "Amos": "Emos",
+     "Obadiah": "Obadaia",
+     "Jonah": "Jona",
+     "Micah": "Maika",
+     "Nahum": "Nehum",
+     "Habakkuk": "Habakuk",
+     "Zephaniah": "Zefanaya",
+     "Haggai": "Hegai",
+     "Zechariah": "Zekaraya",
+     "Malachi": "Malakai",
+     "Matthew": "Matiu",
+     "Mark": "Mak",
+     "Luke": "Luk",
+     "John": "JỌN",
+     "Acts": "ỌLU NDI-OZI",
+     "Romans": "NDỊ ROM",
+     "1Corinthians": "1 NDỊ KỌRINT",
+     "2Corinthians": "2 NDỊ KỌRINT",
+     "Galatians": "Ndi Galetia",
+     "Ephesians": "NDI EFESỌS",
+     "Philippians": "NDỊ FILIPAI",
+     "Colossians": "NDỊ KỌLỌSỊ",
+     "1Thessalonians": "1 NDỊ TESALONAỊKA",
+     "2Thessalonians": "2 NDỊ TESALONAỊKA",
+     "1Timothy": "1 Timoti",
+     "2Timothy": "2 Timoti",
+     "Titus": "TAỊTỌS",
+     "Philemon": "FỊLỊMỌN",
+     "Hebrews": "Ndi-Hibru",
+     "James": "Jemis",
+     "1Peter": "1 Pita",
+     "2Peter": "2 Pita",
+     "1John": "1 JỌN",
+     "2John": "2 JỌN",
+     "3John": "3 JỌN",
+     "Jude": "Jud",
+     "Revelation": "Nkpughe"
+    }
+   }
+  },
+  {
+   "id": "ibo-text-ibobib",
+   "lang": "ibo",
+   "type": "scripture",
+   "title": "Igbo Contemporary Bible™",
+   "native": "Baịbụlụ Nsọ n’Igbo Ndị Ugbu a",
+   "scope": "Igbo",
+   "langName": "Asụsụ Igbo",
+   "source": "https://dbs.org/bibles/IBOBIB",
+   "org": "Biblica",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://bibles.dbs.org/IBOBIB/html_IBOBIB.zip",
+     "label": "Baịbụl HTML maka iji ya n’enweghị ịntanetị (ZIP)"
+    }
+   ],
+   "links": [
+    {
+     "label": "Gụọ Baịbụl na DBS",
+     "url": "https://bibles.dbs.org/IBOBIB/app-json-study/index.html"
+    }
+   ]
+  },
+  {
+   "id": "ibo-film-ibo_ehugbo_jesus",
+   "lang": "ibo",
+   "type": "film",
+   "title": "JESUS",
+   "native": "Jizọs — Ehugbo",
+   "scope": "Ehugbo",
+   "langName": "Asụsụ Igbo · Ehugbo",
+   "source": "https://dbs.org/video/jesus/ibo_ehugbo_jesus",
+   "org": "Jesus Film Project",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://stream.mux.com/4zgkn3uJmTRn246RLSf02YBRIjp02XvL3omoKqfx01NB4A/720p.mp4?download=JESUS-Ehugbo-HD",
+     "label": "Vidio zuru ezu (MP4) · HD"
+    },
+    {
+     "url": "https://stream.mux.com/4zgkn3uJmTRn246RLSf02YBRIjp02XvL3omoKqfx01NB4A/270p.mp4?download=JESUS-Ehugbo-SD",
+     "label": "Vidio zuru ezu (MP4) · SD"
+    }
+   ],
+   "links": [],
+   "play": {
+    "kind": "file",
+    "sd": "https://stream.mux.com/4zgkn3uJmTRn246RLSf02YBRIjp02XvL3omoKqfx01NB4A/270p.mp4?download=JESUS-Ehugbo-SD",
+    "hd": "https://stream.mux.com/4zgkn3uJmTRn246RLSf02YBRIjp02XvL3omoKqfx01NB4A/720p.mp4?download=JESUS-Ehugbo-HD"
+   }
+  },
+  {
+   "id": "ibo-film-ibo_enuani_jesus",
+   "lang": "ibo",
+   "type": "film",
+   "title": "JESUS",
+   "native": "Jizọs — Enuani",
+   "scope": "Enuani",
+   "langName": "Asụsụ Igbo · Enuani",
+   "source": "https://dbs.org/video/jesus/ibo_enuani_jesus",
+   "org": "Jesus Film Project",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_01_the_beginning_1_jf6101_0_0_low.mp4",
+     "label": "Isi 1 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_02_birth_of_jesus_1_jf6102_0_0_low.mp4",
+     "label": "Isi 2 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_03_childhood_of_jesus_1_jf6103_0_0_low.mp4",
+     "label": "Isi 3 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_04_baptism_of_jesus_by_john_1_jf6104_0_0_low.mp4",
+     "label": "Isi 4 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_05_the_devil_tempts_jesus_1_jf6105_0_0_low.mp4",
+     "label": "Isi 5 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_06_jesus_proclaims_fulfillment_of_the_scriptures_1_jf6106_0_0_low.mp4",
+     "label": "Isi 6 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_07_parable_of_the_pharisee_and_tax_collector_1_jf6107_0_0_low.mp4",
+     "label": "Isi 7 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_08_miraculous_catch_of_fish_1_jf6108_0_0_low.mp4",
+     "label": "Isi 8 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_09_jairuss_daughter_brought_back_to_life_1_jf6109_0_0_low.mp4",
+     "label": "Isi 9 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_10_disciples_chosen_1_jf6110_0_0_low.mp4",
+     "label": "Isi 10 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_11_beatitudes_1_jf6111_0_0_low.mp4",
+     "label": "Isi 11 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_12_sermon_on_the_mount_1_jf6112_0_0_low.mp4",
+     "label": "Isi 12 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_13_blessed_are_those_who_hear_and_obey_1_jf6113_0_0_low.mp4",
+     "label": "Isi 13 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_14_sinful_woman_forgiven_1_jf6114_0_0_low.mp4",
+     "label": "Isi 14 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_15_women_disciples_1_jf6115_0_0_low.mp4",
+     "label": "Isi 15 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_16_john_the_baptist_in_prison_1_jf6116_0_0_low.mp4",
+     "label": "Isi 16 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_17_parable_of_the_sower_and_the_seed_1_jf6117_0_0_low.mp4",
+     "label": "Isi 17 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_18_parable_of_the_lamp_1_jf6118_0_0_low.mp4",
+     "label": "Isi 18 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_19_jesus_calms_the_storm_1_jf6119_0_0_low.mp4",
+     "label": "Isi 19 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_20_healing_of_the_demoniac_1_jf6120_0_0_low.mp4",
+     "label": "Isi 20 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_21_jesus_feeds_5000_1_jf6121_0_0_low.mp4",
+     "label": "Isi 21 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_22_peter_declares_jesus_to_be_the_christ_1_jf6122_0_0_low.mp4",
+     "label": "Isi 22 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_23_the_transfiguration_1_jf6123_0_0_low.mp4",
+     "label": "Isi 23 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_24_jesus_heals_boy_from_evil_spirit_1_jf6124_0_0_low.mp4",
+     "label": "Isi 24 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_25_the_lords_prayer_1_jf6125_0_0_low.mp4",
+     "label": "Isi 25 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_26_teaching_about_prayer_and_faith_1_jf6126_0_0_low.mp4",
+     "label": "Isi 26 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_27_woe_to_those_who_cause_others_to_sin_1_jf6127_0_0_low.mp4",
+     "label": "Isi 27 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_28_the_kingdom_of_god_as_a_mustard_seed_1_jf6128_0_0_low.mp4",
+     "label": "Isi 28 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_29_jesus_spends_time_with_sinners_1_jf6129_0_0_low.mp4",
+     "label": "Isi 29 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_30_healing_on_the_sabbath_1_jf6130_0_0_low.mp4",
+     "label": "Isi 30 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_31_parable_of_the_good_samaritan_1_jf6131_0_0_low.mp4",
+     "label": "Isi 31 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_32_healing_of_bartimaeus_1_jf6132_0_0_low.mp4",
+     "label": "Isi 32 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_33_jesus_and_zaccheus_1_jf6133_0_0_low.mp4",
+     "label": "Isi 33 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_34_jesus_predicts_his_death_and_resurrection_1_jf6134_0_0_low.mp4",
+     "label": "Isi 34 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_35_jesuss_triumphal_entry_1_jf6135_0_0_low.mp4",
+     "label": "Isi 35 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_36_jesus_weeps_over_jerusalem_1_jf6136_0_0_low.mp4",
+     "label": "Isi 36 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_37_jesus_drives_out_money_changers_1_jf6137_0_0_low.mp4",
+     "label": "Isi 37 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_38_widows_offering_1_jf6138_0_0_low.mp4",
+     "label": "Isi 38 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_39_annas_questions_jesuss_authority_1_jf6139_0_0_low.mp4",
+     "label": "Isi 39 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_40_parable_of_the_vineyard_and_tenants_1_jf6140_0_0_low.mp4",
+     "label": "Isi 40 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_41_paying_taxes_to_caesar_1_jf6141_0_0_low.mp4",
+     "label": "Isi 41 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_42_the_last_supper_1_jf6142_0_0_low.mp4",
+     "label": "Isi 42 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_43_upper_room_teaching_1_jf6143_0_0_low.mp4",
+     "label": "Isi 43 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_44_jesus_is_betrayed_and_arrested_1_jf6144_0_0_low.mp4",
+     "label": "Isi 44 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_45_peter_disowns_jesus_1_jf6145_0_0_low.mp4",
+     "label": "Isi 45 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_46_jesus_is_mocked_and_questioned_1_jf6146_0_0_low.mp4",
+     "label": "Isi 46 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_47_jesus_is_brought_to_pilate_1_jf6147_0_0_low.mp4",
+     "label": "Isi 47 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_48_jesus_is_brought_to_herod_1_jf6148_0_0_low.mp4",
+     "label": "Isi 48 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_49_jesus_is_sentenced_1_jf6149_0_0_low.mp4",
+     "label": "Isi 49 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_50_jesus_carries_his_cross_1_jf6150_0_0_low.mp4",
+     "label": "Isi 50 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_51_jesus_is_crucified_1_jf6151_0_0_low.mp4",
+     "label": "Isi 51 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_52_soldiers_gamble_for_jesuss_clothes_1_jf6152_0_0_low.mp4",
+     "label": "Isi 52 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_53_sign_on_the_cross_1_jf6153_0_0_low.mp4",
+     "label": "Isi 53 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_54_crucified_convicts_1_jf6154_0_0_low.mp4",
+     "label": "Isi 54 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_55_death_of_jesus_1_jf6155_0_0_low.mp4",
+     "label": "Isi 55 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_56_burial_of_jesus_1_jf6156_0_0_low.mp4",
+     "label": "Isi 56 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_57_angels_at_the_tomb_1_jf6157_0_0_low.mp4",
+     "label": "Isi 57 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_58_the_tomb_is_empty_1_jf6158_0_0_low.mp4",
+     "label": "Isi 58 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_59_resurrected_jesus_appears_1_jf6159_0_0_low.mp4",
+     "label": "Isi 59 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_60_great_commission_and_ascension_1_jf6160_0_0_low.mp4",
+     "label": "Isi 60 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_61_invitation_to_know_jesus_personally_1_jf6161_0_0_low.mp4",
+     "label": "Isi 61 (MP4)"
+    },
+    {
+     "url": "https://stream.mux.com/inOvlJknyHh27EyUISXh88xbJrBznVyiSCJjnunvRxI/720p.mp4?download=JESUS-Enuani-HD",
+     "label": "Vidio zuru ezu (MP4) · HD"
+    },
+    {
+     "url": "https://stream.mux.com/inOvlJknyHh27EyUISXh88xbJrBznVyiSCJjnunvRxI/270p.mp4?download=JESUS-Enuani-SD",
+     "label": "Vidio zuru ezu (MP4) · SD"
+    }
+   ],
+   "links": [],
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_01_the_beginning_1_jf6101_0_0_low.mp4",
+      "title": "Isi 1"
+     },
+     {
+      "n": 2,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_02_birth_of_jesus_1_jf6102_0_0_low.mp4",
+      "title": "Isi 2"
+     },
+     {
+      "n": 3,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_03_childhood_of_jesus_1_jf6103_0_0_low.mp4",
+      "title": "Isi 3"
+     },
+     {
+      "n": 4,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_04_baptism_of_jesus_by_john_1_jf6104_0_0_low.mp4",
+      "title": "Isi 4"
+     },
+     {
+      "n": 5,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_05_the_devil_tempts_jesus_1_jf6105_0_0_low.mp4",
+      "title": "Isi 5"
+     },
+     {
+      "n": 6,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_06_jesus_proclaims_fulfillment_of_the_scriptures_1_jf6106_0_0_low.mp4",
+      "title": "Isi 6"
+     },
+     {
+      "n": 7,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_07_parable_of_the_pharisee_and_tax_collector_1_jf6107_0_0_low.mp4",
+      "title": "Isi 7"
+     },
+     {
+      "n": 8,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_08_miraculous_catch_of_fish_1_jf6108_0_0_low.mp4",
+      "title": "Isi 8"
+     },
+     {
+      "n": 9,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_09_jairuss_daughter_brought_back_to_life_1_jf6109_0_0_low.mp4",
+      "title": "Isi 9"
+     },
+     {
+      "n": 10,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_10_disciples_chosen_1_jf6110_0_0_low.mp4",
+      "title": "Isi 10"
+     },
+     {
+      "n": 11,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_11_beatitudes_1_jf6111_0_0_low.mp4",
+      "title": "Isi 11"
+     },
+     {
+      "n": 12,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_12_sermon_on_the_mount_1_jf6112_0_0_low.mp4",
+      "title": "Isi 12"
+     },
+     {
+      "n": 13,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_13_blessed_are_those_who_hear_and_obey_1_jf6113_0_0_low.mp4",
+      "title": "Isi 13"
+     },
+     {
+      "n": 14,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_14_sinful_woman_forgiven_1_jf6114_0_0_low.mp4",
+      "title": "Isi 14"
+     },
+     {
+      "n": 15,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_15_women_disciples_1_jf6115_0_0_low.mp4",
+      "title": "Isi 15"
+     },
+     {
+      "n": 16,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_16_john_the_baptist_in_prison_1_jf6116_0_0_low.mp4",
+      "title": "Isi 16"
+     },
+     {
+      "n": 17,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_17_parable_of_the_sower_and_the_seed_1_jf6117_0_0_low.mp4",
+      "title": "Isi 17"
+     },
+     {
+      "n": 18,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_18_parable_of_the_lamp_1_jf6118_0_0_low.mp4",
+      "title": "Isi 18"
+     },
+     {
+      "n": 19,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_19_jesus_calms_the_storm_1_jf6119_0_0_low.mp4",
+      "title": "Isi 19"
+     },
+     {
+      "n": 20,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_20_healing_of_the_demoniac_1_jf6120_0_0_low.mp4",
+      "title": "Isi 20"
+     },
+     {
+      "n": 21,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_21_jesus_feeds_5000_1_jf6121_0_0_low.mp4",
+      "title": "Isi 21"
+     },
+     {
+      "n": 22,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_22_peter_declares_jesus_to_be_the_christ_1_jf6122_0_0_low.mp4",
+      "title": "Isi 22"
+     },
+     {
+      "n": 23,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_23_the_transfiguration_1_jf6123_0_0_low.mp4",
+      "title": "Isi 23"
+     },
+     {
+      "n": 24,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_24_jesus_heals_boy_from_evil_spirit_1_jf6124_0_0_low.mp4",
+      "title": "Isi 24"
+     },
+     {
+      "n": 25,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_25_the_lords_prayer_1_jf6125_0_0_low.mp4",
+      "title": "Isi 25"
+     },
+     {
+      "n": 26,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_26_teaching_about_prayer_and_faith_1_jf6126_0_0_low.mp4",
+      "title": "Isi 26"
+     },
+     {
+      "n": 27,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_27_woe_to_those_who_cause_others_to_sin_1_jf6127_0_0_low.mp4",
+      "title": "Isi 27"
+     },
+     {
+      "n": 28,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_28_the_kingdom_of_god_as_a_mustard_seed_1_jf6128_0_0_low.mp4",
+      "title": "Isi 28"
+     },
+     {
+      "n": 29,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_29_jesus_spends_time_with_sinners_1_jf6129_0_0_low.mp4",
+      "title": "Isi 29"
+     },
+     {
+      "n": 30,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_30_healing_on_the_sabbath_1_jf6130_0_0_low.mp4",
+      "title": "Isi 30"
+     },
+     {
+      "n": 31,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_31_parable_of_the_good_samaritan_1_jf6131_0_0_low.mp4",
+      "title": "Isi 31"
+     },
+     {
+      "n": 32,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_32_healing_of_bartimaeus_1_jf6132_0_0_low.mp4",
+      "title": "Isi 32"
+     },
+     {
+      "n": 33,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_33_jesus_and_zaccheus_1_jf6133_0_0_low.mp4",
+      "title": "Isi 33"
+     },
+     {
+      "n": 34,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_34_jesus_predicts_his_death_and_resurrection_1_jf6134_0_0_low.mp4",
+      "title": "Isi 34"
+     },
+     {
+      "n": 35,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_35_jesuss_triumphal_entry_1_jf6135_0_0_low.mp4",
+      "title": "Isi 35"
+     },
+     {
+      "n": 36,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_36_jesus_weeps_over_jerusalem_1_jf6136_0_0_low.mp4",
+      "title": "Isi 36"
+     },
+     {
+      "n": 37,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_37_jesus_drives_out_money_changers_1_jf6137_0_0_low.mp4",
+      "title": "Isi 37"
+     },
+     {
+      "n": 38,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_38_widows_offering_1_jf6138_0_0_low.mp4",
+      "title": "Isi 38"
+     },
+     {
+      "n": 39,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_39_annas_questions_jesuss_authority_1_jf6139_0_0_low.mp4",
+      "title": "Isi 39"
+     },
+     {
+      "n": 40,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_40_parable_of_the_vineyard_and_tenants_1_jf6140_0_0_low.mp4",
+      "title": "Isi 40"
+     },
+     {
+      "n": 41,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_41_paying_taxes_to_caesar_1_jf6141_0_0_low.mp4",
+      "title": "Isi 41"
+     },
+     {
+      "n": 42,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_42_the_last_supper_1_jf6142_0_0_low.mp4",
+      "title": "Isi 42"
+     },
+     {
+      "n": 43,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_43_upper_room_teaching_1_jf6143_0_0_low.mp4",
+      "title": "Isi 43"
+     },
+     {
+      "n": 44,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_44_jesus_is_betrayed_and_arrested_1_jf6144_0_0_low.mp4",
+      "title": "Isi 44"
+     },
+     {
+      "n": 45,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_45_peter_disowns_jesus_1_jf6145_0_0_low.mp4",
+      "title": "Isi 45"
+     },
+     {
+      "n": 46,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_46_jesus_is_mocked_and_questioned_1_jf6146_0_0_low.mp4",
+      "title": "Isi 46"
+     },
+     {
+      "n": 47,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_47_jesus_is_brought_to_pilate_1_jf6147_0_0_low.mp4",
+      "title": "Isi 47"
+     },
+     {
+      "n": 48,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_48_jesus_is_brought_to_herod_1_jf6148_0_0_low.mp4",
+      "title": "Isi 48"
+     },
+     {
+      "n": 49,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_49_jesus_is_sentenced_1_jf6149_0_0_low.mp4",
+      "title": "Isi 49"
+     },
+     {
+      "n": 50,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_50_jesus_carries_his_cross_1_jf6150_0_0_low.mp4",
+      "title": "Isi 50"
+     },
+     {
+      "n": 51,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_51_jesus_is_crucified_1_jf6151_0_0_low.mp4",
+      "title": "Isi 51"
+     },
+     {
+      "n": 52,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_52_soldiers_gamble_for_jesuss_clothes_1_jf6152_0_0_low.mp4",
+      "title": "Isi 52"
+     },
+     {
+      "n": 53,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_53_sign_on_the_cross_1_jf6153_0_0_low.mp4",
+      "title": "Isi 53"
+     },
+     {
+      "n": 54,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_54_crucified_convicts_1_jf6154_0_0_low.mp4",
+      "title": "Isi 54"
+     },
+     {
+      "n": 55,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_55_death_of_jesus_1_jf6155_0_0_low.mp4",
+      "title": "Isi 55"
+     },
+     {
+      "n": 56,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_56_burial_of_jesus_1_jf6156_0_0_low.mp4",
+      "title": "Isi 56"
+     },
+     {
+      "n": 57,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_57_angels_at_the_tomb_1_jf6157_0_0_low.mp4",
+      "title": "Isi 57"
+     },
+     {
+      "n": 58,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_58_the_tomb_is_empty_1_jf6158_0_0_low.mp4",
+      "title": "Isi 58"
+     },
+     {
+      "n": 59,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_59_resurrected_jesus_appears_1_jf6159_0_0_low.mp4",
+      "title": "Isi 59"
+     },
+     {
+      "n": 60,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_60_great_commission_and_ascension_1_jf6160_0_0_low.mp4",
+      "title": "Isi 60"
+     },
+     {
+      "n": 61,
+      "file": "https://video.dbs.org/Jesus/chapters/ibo_enuani/ibo_jesus_chapter_61_invitation_to_know_jesus_personally_1_jf6161_0_0_low.mp4",
+      "title": "Isi 61"
+     }
+    ]
+   }
+  },
+  {
+   "id": "ibo-film-ibo_igbo_jesus",
+   "lang": "ibo",
+   "type": "film",
+   "title": "JESUS",
+   "native": "Jizọs — Igbo",
+   "scope": "Igbo",
+   "langName": "Asụsụ Igbo",
+   "source": "https://dbs.org/video/jesus/ibo_igbo_jesus",
+   "org": "Jesus Film Project",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://stream.mux.com/x55iCmmhjF7pNJcG00XRVQvKUU89TnaQMNKGAFixE0001Q/720p.mp4?download=JESUS-Igbo-HD",
+     "label": "Vidio zuru ezu (MP4) · HD"
+    },
+    {
+     "url": "https://stream.mux.com/x55iCmmhjF7pNJcG00XRVQvKUU89TnaQMNKGAFixE0001Q/270p.mp4?download=JESUS-Igbo-SD",
+     "label": "Vidio zuru ezu (MP4) · SD"
+    }
+   ],
+   "links": [],
+   "play": {
+    "kind": "file",
+    "sd": "https://stream.mux.com/x55iCmmhjF7pNJcG00XRVQvKUU89TnaQMNKGAFixE0001Q/270p.mp4?download=JESUS-Igbo-SD",
+    "hd": "https://stream.mux.com/x55iCmmhjF7pNJcG00XRVQvKUU89TnaQMNKGAFixE0001Q/720p.mp4?download=JESUS-Igbo-HD"
+   }
+  },
+  {
+   "id": "ibo-film-ibo_igbo_story_of_jesus_for_children",
+   "lang": "ibo",
+   "type": "film",
+   "title": "Story of Jesus for Children",
+   "native": "Akụkọ Jizọs maka ụmụaka",
+   "scope": "Igbo",
+   "langName": "Asụsụ Igbo",
+   "source": "https://dbs.org/video/storyjesus/ibo_igbo_story_of_jesus_for_children",
+   "org": "Jesus Film Project",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://api-media-core.jesusfilm.org/1_cl-0-0/variants/9774/downloads/1_9774-cl-0-0_high.mp4",
+     "label": "Vidio zuru ezu (MP4) · HD"
+    },
+    {
+     "url": "https://api-media-core.jesusfilm.org/1_cl-0-0/variants/9774/downloads/1_9774-cl-0-0_low.mp4",
+     "label": "Vidio zuru ezu (MP4) · SD"
+    }
+   ],
+   "links": [],
+   "play": {
+    "kind": "file",
+    "sd": "https://api-media-core.jesusfilm.org/1_cl-0-0/variants/9774/downloads/1_9774-cl-0-0_low.mp4",
+    "hd": "https://api-media-core.jesusfilm.org/1_cl-0-0/variants/9774/downloads/1_9774-cl-0-0_high.mp4"
+   }
+  },
+  {
+   "id": "ibo-film-ibo_enuani_luke",
+   "lang": "ibo",
+   "type": "film",
+   "title": "LUMO: The Gospel of Luke",
+   "native": "LUMO: Ozi Ọma Luk — Enuani",
+   "scope": "Enuani",
+   "langName": "Asụsụ Igbo · Enuani",
+   "source": "https://dbs.org/video/lumo-luke/ibo_enuani_luke",
+   "org": "LUMO Project",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_01_360.mp4",
+     "label": "Isi 1 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_02_360.mp4",
+     "label": "Isi 2 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_03_360.mp4",
+     "label": "Isi 3 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_04_360.mp4",
+     "label": "Isi 4 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_05_360.mp4",
+     "label": "Isi 5 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_06_360.mp4",
+     "label": "Isi 6 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_07_360.mp4",
+     "label": "Isi 7 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_08_360.mp4",
+     "label": "Isi 8 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_09_360.mp4",
+     "label": "Isi 9 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_10_360.mp4",
+     "label": "Isi 10 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_11_360.mp4",
+     "label": "Isi 11 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_12_360.mp4",
+     "label": "Isi 12 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_13_360.mp4",
+     "label": "Isi 13 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_14_360.mp4",
+     "label": "Isi 14 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_15_360.mp4",
+     "label": "Isi 15 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_16_360.mp4",
+     "label": "Isi 16 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_17_360.mp4",
+     "label": "Isi 17 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_18_360.mp4",
+     "label": "Isi 18 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_19_360.mp4",
+     "label": "Isi 19 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_20_360.mp4",
+     "label": "Isi 20 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_21_360.mp4",
+     "label": "Isi 21 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_22_360.mp4",
+     "label": "Isi 22 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_23_360.mp4",
+     "label": "Isi 23 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_24_360.mp4",
+     "label": "Isi 24 (MP4)"
+    }
+   ],
+   "links": [],
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_01_360.mp4",
+      "title": "Isi 1"
+     },
+     {
+      "n": 2,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_02_360.mp4",
+      "title": "Isi 2"
+     },
+     {
+      "n": 3,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_03_360.mp4",
+      "title": "Isi 3"
+     },
+     {
+      "n": 4,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_04_360.mp4",
+      "title": "Isi 4"
+     },
+     {
+      "n": 5,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_05_360.mp4",
+      "title": "Isi 5"
+     },
+     {
+      "n": 6,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_06_360.mp4",
+      "title": "Isi 6"
+     },
+     {
+      "n": 7,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_07_360.mp4",
+      "title": "Isi 7"
+     },
+     {
+      "n": 8,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_08_360.mp4",
+      "title": "Isi 8"
+     },
+     {
+      "n": 9,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_09_360.mp4",
+      "title": "Isi 9"
+     },
+     {
+      "n": 10,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_10_360.mp4",
+      "title": "Isi 10"
+     },
+     {
+      "n": 11,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_11_360.mp4",
+      "title": "Isi 11"
+     },
+     {
+      "n": 12,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_12_360.mp4",
+      "title": "Isi 12"
+     },
+     {
+      "n": 13,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_13_360.mp4",
+      "title": "Isi 13"
+     },
+     {
+      "n": 14,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_14_360.mp4",
+      "title": "Isi 14"
+     },
+     {
+      "n": 15,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_15_360.mp4",
+      "title": "Isi 15"
+     },
+     {
+      "n": 16,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_16_360.mp4",
+      "title": "Isi 16"
+     },
+     {
+      "n": 17,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_17_360.mp4",
+      "title": "Isi 17"
+     },
+     {
+      "n": 18,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_18_360.mp4",
+      "title": "Isi 18"
+     },
+     {
+      "n": 19,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_19_360.mp4",
+      "title": "Isi 19"
+     },
+     {
+      "n": 20,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_20_360.mp4",
+      "title": "Isi 20"
+     },
+     {
+      "n": 21,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_21_360.mp4",
+      "title": "Isi 21"
+     },
+     {
+      "n": 22,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_22_360.mp4",
+      "title": "Isi 22"
+     },
+     {
+      "n": 23,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_23_360.mp4",
+      "title": "Isi 23"
+     },
+     {
+      "n": 24,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Enuani_Luke_Direct-Translation-FCBH_low/ibo_LUMO_Enuani_Luke_Direct-Translation-FCBH_24_360.mp4",
+      "title": "Isi 24"
+     }
+    ]
+   }
+  },
+  {
+   "id": "ibo-film-ibo_igbo_john",
+   "lang": "ibo",
+   "type": "film",
+   "title": "LUMO: The Gospel of John",
+   "native": "LUMO: Ozi Ọma Jọn",
+   "scope": "Igbo",
+   "langName": "Asụsụ Igbo",
+   "source": "https://dbs.org/video/lumo-john/ibo_igbo_john",
+   "org": "LUMO Project",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_01_360.mp4",
+     "label": "Isi 1 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_02_360.mp4",
+     "label": "Isi 2 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_03_360.mp4",
+     "label": "Isi 3 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_04_360.mp4",
+     "label": "Isi 4 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_05_360.mp4",
+     "label": "Isi 5 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_06_360.mp4",
+     "label": "Isi 6 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_07_360.mp4",
+     "label": "Isi 7 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_08_360.mp4",
+     "label": "Isi 8 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_09_360.mp4",
+     "label": "Isi 9 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_10_360.mp4",
+     "label": "Isi 10 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_11_360.mp4",
+     "label": "Isi 11 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_12_360.mp4",
+     "label": "Isi 12 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_13_360.mp4",
+     "label": "Isi 13 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_14_360.mp4",
+     "label": "Isi 14 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_15_360.mp4",
+     "label": "Isi 15 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_16_360.mp4",
+     "label": "Isi 16 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_17_360.mp4",
+     "label": "Isi 17 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_18_360.mp4",
+     "label": "Isi 18 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_19_360.mp4",
+     "label": "Isi 19 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_20_360.mp4",
+     "label": "Isi 20 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_21_360.mp4",
+     "label": "Isi 21 (MP4)"
+    }
+   ],
+   "links": [],
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_01_360.mp4",
+      "title": "Isi 1"
+     },
+     {
+      "n": 2,
+      "file": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_02_360.mp4",
+      "title": "Isi 2"
+     },
+     {
+      "n": 3,
+      "file": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_03_360.mp4",
+      "title": "Isi 3"
+     },
+     {
+      "n": 4,
+      "file": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_04_360.mp4",
+      "title": "Isi 4"
+     },
+     {
+      "n": 5,
+      "file": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_05_360.mp4",
+      "title": "Isi 5"
+     },
+     {
+      "n": 6,
+      "file": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_06_360.mp4",
+      "title": "Isi 6"
+     },
+     {
+      "n": 7,
+      "file": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_07_360.mp4",
+      "title": "Isi 7"
+     },
+     {
+      "n": 8,
+      "file": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_08_360.mp4",
+      "title": "Isi 8"
+     },
+     {
+      "n": 9,
+      "file": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_09_360.mp4",
+      "title": "Isi 9"
+     },
+     {
+      "n": 10,
+      "file": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_10_360.mp4",
+      "title": "Isi 10"
+     },
+     {
+      "n": 11,
+      "file": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_11_360.mp4",
+      "title": "Isi 11"
+     },
+     {
+      "n": 12,
+      "file": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_12_360.mp4",
+      "title": "Isi 12"
+     },
+     {
+      "n": 13,
+      "file": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_13_360.mp4",
+      "title": "Isi 13"
+     },
+     {
+      "n": 14,
+      "file": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_14_360.mp4",
+      "title": "Isi 14"
+     },
+     {
+      "n": 15,
+      "file": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_15_360.mp4",
+      "title": "Isi 15"
+     },
+     {
+      "n": 16,
+      "file": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_16_360.mp4",
+      "title": "Isi 16"
+     },
+     {
+      "n": 17,
+      "file": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_17_360.mp4",
+      "title": "Isi 17"
+     },
+     {
+      "n": 18,
+      "file": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_18_360.mp4",
+      "title": "Isi 18"
+     },
+     {
+      "n": 19,
+      "file": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_19_360.mp4",
+      "title": "Isi 19"
+     },
+     {
+      "n": 20,
+      "file": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_20_360.mp4",
+      "title": "Isi 20"
+     },
+     {
+      "n": 21,
+      "file": "https://video.dbs.org/Lumo-John/films_low/ibo_Igbo_John_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_John_Igbo-Contemporary-Bible_21_360.mp4",
+      "title": "Isi 21"
+     }
+    ]
+   },
+   "dbsListedUrls": [
+    "https://youtu.be/wosnMnMekI0"
+   ]
+  },
+  {
+   "id": "ibo-film-ibo_igbo_luke",
+   "lang": "ibo",
+   "type": "film",
+   "title": "LUMO: The Gospel of Luke",
+   "native": "LUMO: Ozi Ọma Luk",
+   "scope": "Igbo",
+   "langName": "Asụsụ Igbo",
+   "source": "https://dbs.org/video/lumo-luke/ibo_igbo_luke",
+   "org": "LUMO Project",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_01_360.mp4",
+     "label": "Isi 1 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_02_360.mp4",
+     "label": "Isi 2 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_03_360.mp4",
+     "label": "Isi 3 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_04_360.mp4",
+     "label": "Isi 4 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_05_360.mp4",
+     "label": "Isi 5 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_06_360.mp4",
+     "label": "Isi 6 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_07_360.mp4",
+     "label": "Isi 7 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_08_360.mp4",
+     "label": "Isi 8 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_09_360.mp4",
+     "label": "Isi 9 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_10_360.mp4",
+     "label": "Isi 10 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_11_360.mp4",
+     "label": "Isi 11 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_12_360.mp4",
+     "label": "Isi 12 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_13_360.mp4",
+     "label": "Isi 13 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_14_360.mp4",
+     "label": "Isi 14 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_15_360.mp4",
+     "label": "Isi 15 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_16_360.mp4",
+     "label": "Isi 16 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_17_360.mp4",
+     "label": "Isi 17 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_18_360.mp4",
+     "label": "Isi 18 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_19_360.mp4",
+     "label": "Isi 19 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_20_360.mp4",
+     "label": "Isi 20 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_21_360.mp4",
+     "label": "Isi 21 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_22_360.mp4",
+     "label": "Isi 22 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_23_360.mp4",
+     "label": "Isi 23 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_24_360.mp4",
+     "label": "Isi 24 (MP4)"
+    }
+   ],
+   "links": [],
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_01_360.mp4",
+      "title": "Isi 1"
+     },
+     {
+      "n": 2,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_02_360.mp4",
+      "title": "Isi 2"
+     },
+     {
+      "n": 3,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_03_360.mp4",
+      "title": "Isi 3"
+     },
+     {
+      "n": 4,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_04_360.mp4",
+      "title": "Isi 4"
+     },
+     {
+      "n": 5,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_05_360.mp4",
+      "title": "Isi 5"
+     },
+     {
+      "n": 6,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_06_360.mp4",
+      "title": "Isi 6"
+     },
+     {
+      "n": 7,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_07_360.mp4",
+      "title": "Isi 7"
+     },
+     {
+      "n": 8,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_08_360.mp4",
+      "title": "Isi 8"
+     },
+     {
+      "n": 9,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_09_360.mp4",
+      "title": "Isi 9"
+     },
+     {
+      "n": 10,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_10_360.mp4",
+      "title": "Isi 10"
+     },
+     {
+      "n": 11,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_11_360.mp4",
+      "title": "Isi 11"
+     },
+     {
+      "n": 12,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_12_360.mp4",
+      "title": "Isi 12"
+     },
+     {
+      "n": 13,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_13_360.mp4",
+      "title": "Isi 13"
+     },
+     {
+      "n": 14,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_14_360.mp4",
+      "title": "Isi 14"
+     },
+     {
+      "n": 15,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_15_360.mp4",
+      "title": "Isi 15"
+     },
+     {
+      "n": 16,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_16_360.mp4",
+      "title": "Isi 16"
+     },
+     {
+      "n": 17,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_17_360.mp4",
+      "title": "Isi 17"
+     },
+     {
+      "n": 18,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_18_360.mp4",
+      "title": "Isi 18"
+     },
+     {
+      "n": 19,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_19_360.mp4",
+      "title": "Isi 19"
+     },
+     {
+      "n": 20,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_20_360.mp4",
+      "title": "Isi 20"
+     },
+     {
+      "n": 21,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_21_360.mp4",
+      "title": "Isi 21"
+     },
+     {
+      "n": 22,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_22_360.mp4",
+      "title": "Isi 22"
+     },
+     {
+      "n": 23,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_23_360.mp4",
+      "title": "Isi 23"
+     },
+     {
+      "n": 24,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/ibo_Igbo_Luke_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Luke_Igbo-Contemporary-Bible_24_360.mp4",
+      "title": "Isi 24"
+     }
+    ]
+   },
+   "dbsListedUrls": [
+    "https://youtu.be/raBzSRz7tWo"
+   ]
+  },
+  {
+   "id": "ibo-film-ibo_igbo_mark",
+   "lang": "ibo",
+   "type": "film",
+   "title": "LUMO: The Gospel of Mark",
+   "native": "LUMO: Ozi Ọma Mak",
+   "scope": "Igbo",
+   "langName": "Asụsụ Igbo",
+   "source": "https://dbs.org/video/lumo-mark/ibo_igbo_mark",
+   "org": "LUMO Project",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_01_360.mp4",
+     "label": "Isi 1 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_02_360.mp4",
+     "label": "Isi 2 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_03_360.mp4",
+     "label": "Isi 3 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_04_360.mp4",
+     "label": "Isi 4 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_05_360.mp4",
+     "label": "Isi 5 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_06_360.mp4",
+     "label": "Isi 6 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_07_360.mp4",
+     "label": "Isi 7 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_08_360.mp4",
+     "label": "Isi 8 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_09_360.mp4",
+     "label": "Isi 9 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_10_360.mp4",
+     "label": "Isi 10 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_11_360.mp4",
+     "label": "Isi 11 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_12_360.mp4",
+     "label": "Isi 12 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_13_360.mp4",
+     "label": "Isi 13 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_14_360.mp4",
+     "label": "Isi 14 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_15_360.mp4",
+     "label": "Isi 15 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_16_360.mp4",
+     "label": "Isi 16 (MP4)"
+    }
+   ],
+   "links": [],
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_01_360.mp4",
+      "title": "Isi 1"
+     },
+     {
+      "n": 2,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_02_360.mp4",
+      "title": "Isi 2"
+     },
+     {
+      "n": 3,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_03_360.mp4",
+      "title": "Isi 3"
+     },
+     {
+      "n": 4,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_04_360.mp4",
+      "title": "Isi 4"
+     },
+     {
+      "n": 5,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_05_360.mp4",
+      "title": "Isi 5"
+     },
+     {
+      "n": 6,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_06_360.mp4",
+      "title": "Isi 6"
+     },
+     {
+      "n": 7,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_07_360.mp4",
+      "title": "Isi 7"
+     },
+     {
+      "n": 8,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_08_360.mp4",
+      "title": "Isi 8"
+     },
+     {
+      "n": 9,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_09_360.mp4",
+      "title": "Isi 9"
+     },
+     {
+      "n": 10,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_10_360.mp4",
+      "title": "Isi 10"
+     },
+     {
+      "n": 11,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_11_360.mp4",
+      "title": "Isi 11"
+     },
+     {
+      "n": 12,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_12_360.mp4",
+      "title": "Isi 12"
+     },
+     {
+      "n": 13,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_13_360.mp4",
+      "title": "Isi 13"
+     },
+     {
+      "n": 14,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_14_360.mp4",
+      "title": "Isi 14"
+     },
+     {
+      "n": 15,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_15_360.mp4",
+      "title": "Isi 15"
+     },
+     {
+      "n": 16,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/ibo_Igbo_Mark_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Mark_Igbo-Contemporary-Bible_16_360.mp4",
+      "title": "Isi 16"
+     }
+    ]
+   },
+   "dbsListedUrls": [
+    "https://youtu.be/t98Ooce4B24"
+   ]
+  },
+  {
+   "id": "ibo-film-ibo_igbo_matthew",
+   "lang": "ibo",
+   "type": "film",
+   "title": "LUMO: The Gospel of Matthew",
+   "native": "LUMO: Ozi Ọma Matiu",
+   "scope": "Igbo",
+   "langName": "Asụsụ Igbo",
+   "source": "https://dbs.org/video/lumo-matthew/ibo_igbo_matthew",
+   "org": "LUMO Project",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_01_360.mp4",
+     "label": "Isi 1 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_02_360.mp4",
+     "label": "Isi 2 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_03_360.mp4",
+     "label": "Isi 3 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_04_360.mp4",
+     "label": "Isi 4 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_05_360.mp4",
+     "label": "Isi 5 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_06_360.mp4",
+     "label": "Isi 6 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_07_360.mp4",
+     "label": "Isi 7 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_08_360.mp4",
+     "label": "Isi 8 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_09_360.mp4",
+     "label": "Isi 9 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_10_360.mp4",
+     "label": "Isi 10 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_11_360.mp4",
+     "label": "Isi 11 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_12_360.mp4",
+     "label": "Isi 12 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_13_360.mp4",
+     "label": "Isi 13 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_14_360.mp4",
+     "label": "Isi 14 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_15_360.mp4",
+     "label": "Isi 15 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_16_360.mp4",
+     "label": "Isi 16 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_17_360.mp4",
+     "label": "Isi 17 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_18_360.mp4",
+     "label": "Isi 18 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_19_360.mp4",
+     "label": "Isi 19 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_20_360.mp4",
+     "label": "Isi 20 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_21_360.mp4",
+     "label": "Isi 21 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_22_360.mp4",
+     "label": "Isi 22 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_23_360.mp4",
+     "label": "Isi 23 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_24_360.mp4",
+     "label": "Isi 24 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_25_360.mp4",
+     "label": "Isi 25 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_26_360.mp4",
+     "label": "Isi 26 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_27_360.mp4",
+     "label": "Isi 27 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_28_360.mp4",
+     "label": "Isi 28 (MP4)"
+    }
+   ],
+   "links": [],
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_01_360.mp4",
+      "title": "Isi 1"
+     },
+     {
+      "n": 2,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_02_360.mp4",
+      "title": "Isi 2"
+     },
+     {
+      "n": 3,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_03_360.mp4",
+      "title": "Isi 3"
+     },
+     {
+      "n": 4,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_04_360.mp4",
+      "title": "Isi 4"
+     },
+     {
+      "n": 5,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_05_360.mp4",
+      "title": "Isi 5"
+     },
+     {
+      "n": 6,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_06_360.mp4",
+      "title": "Isi 6"
+     },
+     {
+      "n": 7,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_07_360.mp4",
+      "title": "Isi 7"
+     },
+     {
+      "n": 8,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_08_360.mp4",
+      "title": "Isi 8"
+     },
+     {
+      "n": 9,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_09_360.mp4",
+      "title": "Isi 9"
+     },
+     {
+      "n": 10,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_10_360.mp4",
+      "title": "Isi 10"
+     },
+     {
+      "n": 11,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_11_360.mp4",
+      "title": "Isi 11"
+     },
+     {
+      "n": 12,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_12_360.mp4",
+      "title": "Isi 12"
+     },
+     {
+      "n": 13,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_13_360.mp4",
+      "title": "Isi 13"
+     },
+     {
+      "n": 14,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_14_360.mp4",
+      "title": "Isi 14"
+     },
+     {
+      "n": 15,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_15_360.mp4",
+      "title": "Isi 15"
+     },
+     {
+      "n": 16,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_16_360.mp4",
+      "title": "Isi 16"
+     },
+     {
+      "n": 17,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_17_360.mp4",
+      "title": "Isi 17"
+     },
+     {
+      "n": 18,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_18_360.mp4",
+      "title": "Isi 18"
+     },
+     {
+      "n": 19,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_19_360.mp4",
+      "title": "Isi 19"
+     },
+     {
+      "n": 20,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_20_360.mp4",
+      "title": "Isi 20"
+     },
+     {
+      "n": 21,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_21_360.mp4",
+      "title": "Isi 21"
+     },
+     {
+      "n": 22,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_22_360.mp4",
+      "title": "Isi 22"
+     },
+     {
+      "n": 23,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_23_360.mp4",
+      "title": "Isi 23"
+     },
+     {
+      "n": 24,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_24_360.mp4",
+      "title": "Isi 24"
+     },
+     {
+      "n": 25,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_25_360.mp4",
+      "title": "Isi 25"
+     },
+     {
+      "n": 26,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_26_360.mp4",
+      "title": "Isi 26"
+     },
+     {
+      "n": 27,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_27_360.mp4",
+      "title": "Isi 27"
+     },
+     {
+      "n": 28,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/ibo_Igbo_Matthew_Igbo-Contemporary-Bible_low/ibo_LUMO_Igbo_Matthew_Igbo-Contemporary-Bible_28_360.mp4",
+      "title": "Isi 28"
+     }
+    ]
+   },
+   "dbsListedUrls": [
+    "https://youtu.be/smiIy05SxKk"
+   ]
+  },
+  {
+   "id": "ibo-film-ibo_igbo_acts",
+   "lang": "ibo",
+   "type": "film",
+   "title": "LUMO: Acts of the Apostles",
+   "native": "LUMO: Ọrụ Ndị Ozi",
+   "scope": "Igbo",
+   "langName": "Asụsụ Igbo",
+   "source": "https://dbs.org/video/lumo-acts/ibo_igbo_acts",
+   "org": "LUMO Project",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/Lumo-Acts/films_low/ibo_Igbo_Acts_Igbo-Contemporary-Bible/ibo_Acts_Igbo_Igbo-Contemporary-Bible_full_360.mp4",
+     "label": "Vidio zuru ezu (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Acts/films_low/ibo_Igbo_Acts_Igbo-Contemporary-Bible/ibo_Acts_Igbo_Igbo-Contemporary-Bible_01_360.mp4",
+     "label": "Akụkụ 1 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Acts/films_low/ibo_Igbo_Acts_Igbo-Contemporary-Bible/ibo_Acts_Igbo_Igbo-Contemporary-Bible_02_360.mp4",
+     "label": "Akụkụ 2 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Acts/films_low/ibo_Igbo_Acts_Igbo-Contemporary-Bible/ibo_Acts_Igbo_Igbo-Contemporary-Bible_03_360.mp4",
+     "label": "Akụkụ 3 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Acts/films_low/ibo_Igbo_Acts_Igbo-Contemporary-Bible/ibo_Acts_Igbo_Igbo-Contemporary-Bible_04_360.mp4",
+     "label": "Akụkụ 4 (MP4)"
+    }
+   ],
+   "links": [],
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://video.dbs.org/Lumo-Acts/films_low/ibo_Igbo_Acts_Igbo-Contemporary-Bible/ibo_Acts_Igbo_Igbo-Contemporary-Bible_full_360.mp4",
+      "title": "Vidio zuru ezu"
+     },
+     {
+      "n": 2,
+      "file": "https://video.dbs.org/Lumo-Acts/films_low/ibo_Igbo_Acts_Igbo-Contemporary-Bible/ibo_Acts_Igbo_Igbo-Contemporary-Bible_01_360.mp4",
+      "title": "Akụkụ 1"
+     },
+     {
+      "n": 3,
+      "file": "https://video.dbs.org/Lumo-Acts/films_low/ibo_Igbo_Acts_Igbo-Contemporary-Bible/ibo_Acts_Igbo_Igbo-Contemporary-Bible_02_360.mp4",
+      "title": "Akụkụ 2"
+     },
+     {
+      "n": 4,
+      "file": "https://video.dbs.org/Lumo-Acts/films_low/ibo_Igbo_Acts_Igbo-Contemporary-Bible/ibo_Acts_Igbo_Igbo-Contemporary-Bible_03_360.mp4",
+      "title": "Akụkụ 3"
+     },
+     {
+      "n": 5,
+      "file": "https://video.dbs.org/Lumo-Acts/films_low/ibo_Igbo_Acts_Igbo-Contemporary-Bible/ibo_Acts_Igbo_Igbo-Contemporary-Bible_04_360.mp4",
+      "title": "Akụkụ 4"
+     }
+    ]
+   }
+  },
+  {
+   "id": "ibo-film-ibo_igbo_covenant",
+   "lang": "ibo",
+   "type": "film",
+   "title": "LUMO: The Covenant",
+   "native": "LUMO: Ọgbụgba Ndụ",
+   "scope": "Igbo",
+   "langName": "Asụsụ Igbo",
+   "source": "https://dbs.org/video/lumo-covenant/ibo_igbo_covenant",
+   "org": "LUMO Project",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/Lumo-Covenant/films_low/ibo_Igbo_Covenant_Igbo-Contemporary-Bible/ibo_Covenant_Igbo_Igbo-Contemporary-Bible_01_360.mp4",
+     "label": "Isi 1 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Covenant/films_low/ibo_Igbo_Covenant_Igbo-Contemporary-Bible/ibo_Covenant_Igbo_Igbo-Contemporary-Bible_02_360.mp4",
+     "label": "Isi 2 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Covenant/films_low/ibo_Igbo_Covenant_Igbo-Contemporary-Bible/ibo_Covenant_Igbo_Igbo-Contemporary-Bible_03_360.mp4",
+     "label": "Isi 3 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Covenant/films_low/ibo_Igbo_Covenant_Igbo-Contemporary-Bible/ibo_Covenant_Igbo_Igbo-Contemporary-Bible_04_360.mp4",
+     "label": "Isi 4 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Covenant/films_low/ibo_Igbo_Covenant_Igbo-Contemporary-Bible/ibo_Covenant_Igbo_Igbo-Contemporary-Bible_05_360.mp4",
+     "label": "Isi 5 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Covenant/films_low/ibo_Igbo_Covenant_Igbo-Contemporary-Bible/ibo_Covenant_Igbo_Igbo-Contemporary-Bible_06_360.mp4",
+     "label": "Isi 6 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Covenant/films_low/ibo_Igbo_Covenant_Igbo-Contemporary-Bible/ibo_Covenant_Igbo_Igbo-Contemporary-Bible_07_360.mp4",
+     "label": "Isi 7 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Covenant/films_low/ibo_Igbo_Covenant_Igbo-Contemporary-Bible/ibo_Covenant_Igbo_Igbo-Contemporary-Bible_08_360.mp4",
+     "label": "Isi 8 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Covenant/films_low/ibo_Igbo_Covenant_Igbo-Contemporary-Bible/ibo_Covenant_Igbo_Igbo-Contemporary-Bible_09_360.mp4",
+     "label": "Isi 9 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Covenant/films_low/ibo_Igbo_Covenant_Igbo-Contemporary-Bible/ibo_Covenant_Igbo_Igbo-Contemporary-Bible_10_360.mp4",
+     "label": "Isi 10 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Covenant/films_low/ibo_Igbo_Covenant_Igbo-Contemporary-Bible/ibo_Covenant_Igbo_Igbo-Contemporary-Bible_11_360.mp4",
+     "label": "Isi 11 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Covenant/films_low/ibo_Igbo_Covenant_Igbo-Contemporary-Bible/ibo_Covenant_Igbo_Igbo-Contemporary-Bible_12_360.mp4",
+     "label": "Isi 12 (MP4)"
+    }
+   ],
+   "links": [],
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/ibo_Igbo_Covenant_Igbo-Contemporary-Bible/ibo_Covenant_Igbo_Igbo-Contemporary-Bible_01_360.mp4",
+      "title": "Isi 1"
+     },
+     {
+      "n": 2,
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/ibo_Igbo_Covenant_Igbo-Contemporary-Bible/ibo_Covenant_Igbo_Igbo-Contemporary-Bible_02_360.mp4",
+      "title": "Isi 2"
+     },
+     {
+      "n": 3,
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/ibo_Igbo_Covenant_Igbo-Contemporary-Bible/ibo_Covenant_Igbo_Igbo-Contemporary-Bible_03_360.mp4",
+      "title": "Isi 3"
+     },
+     {
+      "n": 4,
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/ibo_Igbo_Covenant_Igbo-Contemporary-Bible/ibo_Covenant_Igbo_Igbo-Contemporary-Bible_04_360.mp4",
+      "title": "Isi 4"
+     },
+     {
+      "n": 5,
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/ibo_Igbo_Covenant_Igbo-Contemporary-Bible/ibo_Covenant_Igbo_Igbo-Contemporary-Bible_05_360.mp4",
+      "title": "Isi 5"
+     },
+     {
+      "n": 6,
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/ibo_Igbo_Covenant_Igbo-Contemporary-Bible/ibo_Covenant_Igbo_Igbo-Contemporary-Bible_06_360.mp4",
+      "title": "Isi 6"
+     },
+     {
+      "n": 7,
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/ibo_Igbo_Covenant_Igbo-Contemporary-Bible/ibo_Covenant_Igbo_Igbo-Contemporary-Bible_07_360.mp4",
+      "title": "Isi 7"
+     },
+     {
+      "n": 8,
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/ibo_Igbo_Covenant_Igbo-Contemporary-Bible/ibo_Covenant_Igbo_Igbo-Contemporary-Bible_08_360.mp4",
+      "title": "Isi 8"
+     },
+     {
+      "n": 9,
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/ibo_Igbo_Covenant_Igbo-Contemporary-Bible/ibo_Covenant_Igbo_Igbo-Contemporary-Bible_09_360.mp4",
+      "title": "Isi 9"
+     },
+     {
+      "n": 10,
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/ibo_Igbo_Covenant_Igbo-Contemporary-Bible/ibo_Covenant_Igbo_Igbo-Contemporary-Bible_10_360.mp4",
+      "title": "Isi 10"
+     },
+     {
+      "n": 11,
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/ibo_Igbo_Covenant_Igbo-Contemporary-Bible/ibo_Covenant_Igbo_Igbo-Contemporary-Bible_11_360.mp4",
+      "title": "Isi 11"
+     },
+     {
+      "n": 12,
+      "file": "https://video.dbs.org/Lumo-Covenant/films_low/ibo_Igbo_Covenant_Igbo-Contemporary-Bible/ibo_Covenant_Igbo_Igbo-Contemporary-Bible_12_360.mp4",
+      "title": "Isi 12"
+     }
+    ]
+   }
+  },
+  {
+   "id": "ibo-film-ibo-acts-vb-igbo",
+   "lang": "ibo",
+   "type": "film",
+   "title": "The Visual Bible: Acts",
+   "native": "Baịbụl na vidio: Ọrụ Ndị Ozi",
+   "scope": "Igbo",
+   "langName": "Asụsụ Igbo",
+   "source": "https://dbs.org/video/acts_vb/ibo-acts-vb-igbo",
+   "org": "Visual Bible Int.",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-01.mp4",
+     "label": "Isi 1 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-02.mp4",
+     "label": "Isi 2 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-03.mp4",
+     "label": "Isi 3 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-04.mp4",
+     "label": "Isi 4 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-05.mp4",
+     "label": "Isi 5 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-06.mp4",
+     "label": "Isi 6 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-07.mp4",
+     "label": "Isi 7 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-08.mp4",
+     "label": "Isi 8 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-09.mp4",
+     "label": "Isi 9 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-10.mp4",
+     "label": "Isi 10 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-11.mp4",
+     "label": "Isi 11 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-12.mp4",
+     "label": "Isi 12 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-13.mp4",
+     "label": "Isi 13 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-14.mp4",
+     "label": "Isi 14 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-15.mp4",
+     "label": "Isi 15 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-16.mp4",
+     "label": "Isi 16 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-17.mp4",
+     "label": "Isi 17 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-18.mp4",
+     "label": "Isi 18 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-19.mp4",
+     "label": "Isi 19 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-20.mp4",
+     "label": "Isi 20 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-21.mp4",
+     "label": "Isi 21 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-22.mp4",
+     "label": "Isi 22 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-23.mp4",
+     "label": "Isi 23 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-24.mp4",
+     "label": "Isi 24 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-25.mp4",
+     "label": "Isi 25 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-26.mp4",
+     "label": "Isi 26 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-27.mp4",
+     "label": "Isi 27 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-28.mp4",
+     "label": "Isi 28 (MP4)"
+    },
+    {
+     "url": "https://dbs.org/cdn/video/Acts_VB/films/ibo-acts-vb-igbo/ibo-acts-vb-igbo.mp4",
+     "label": "Vidio zuru ezu (MP4) · SD"
+    }
+   ],
+   "links": [],
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-01.mp4",
+      "title": "Isi 1"
+     },
+     {
+      "n": 2,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-02.mp4",
+      "title": "Isi 2"
+     },
+     {
+      "n": 3,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-03.mp4",
+      "title": "Isi 3"
+     },
+     {
+      "n": 4,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-04.mp4",
+      "title": "Isi 4"
+     },
+     {
+      "n": 5,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-05.mp4",
+      "title": "Isi 5"
+     },
+     {
+      "n": 6,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-06.mp4",
+      "title": "Isi 6"
+     },
+     {
+      "n": 7,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-07.mp4",
+      "title": "Isi 7"
+     },
+     {
+      "n": 8,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-08.mp4",
+      "title": "Isi 8"
+     },
+     {
+      "n": 9,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-09.mp4",
+      "title": "Isi 9"
+     },
+     {
+      "n": 10,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-10.mp4",
+      "title": "Isi 10"
+     },
+     {
+      "n": 11,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-11.mp4",
+      "title": "Isi 11"
+     },
+     {
+      "n": 12,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-12.mp4",
+      "title": "Isi 12"
+     },
+     {
+      "n": 13,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-13.mp4",
+      "title": "Isi 13"
+     },
+     {
+      "n": 14,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-14.mp4",
+      "title": "Isi 14"
+     },
+     {
+      "n": 15,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-15.mp4",
+      "title": "Isi 15"
+     },
+     {
+      "n": 16,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-16.mp4",
+      "title": "Isi 16"
+     },
+     {
+      "n": 17,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-17.mp4",
+      "title": "Isi 17"
+     },
+     {
+      "n": 18,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-18.mp4",
+      "title": "Isi 18"
+     },
+     {
+      "n": 19,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-19.mp4",
+      "title": "Isi 19"
+     },
+     {
+      "n": 20,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-20.mp4",
+      "title": "Isi 20"
+     },
+     {
+      "n": 21,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-21.mp4",
+      "title": "Isi 21"
+     },
+     {
+      "n": 22,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-22.mp4",
+      "title": "Isi 22"
+     },
+     {
+      "n": 23,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-23.mp4",
+      "title": "Isi 23"
+     },
+     {
+      "n": 24,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-24.mp4",
+      "title": "Isi 24"
+     },
+     {
+      "n": 25,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-25.mp4",
+      "title": "Isi 25"
+     },
+     {
+      "n": 26,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-26.mp4",
+      "title": "Isi 26"
+     },
+     {
+      "n": 27,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-27.mp4",
+      "title": "Isi 27"
+     },
+     {
+      "n": 28,
+      "file": "https://video.dbs.org/Acts_VB/chapters/ibo-acts-vb-igbo/ibo-acts-vb-igbo-chapter-28.mp4",
+      "title": "Isi 28"
+     }
+    ]
+   }
+  },
+  {
+   "id": "ibo-film-ibo_igbo_rescue_project_deaf_gospel",
+   "lang": "ibo",
+   "type": "film",
+   "title": "Rescue Project Deaf Gospel",
+   "native": "Rescue Project: Ozi Ọma maka ndị ntị chiri",
+   "scope": "Igbo",
+   "langName": "Asụsụ Igbo",
+   "source": "https://dbs.org/video/deafproject/ibo_igbo_rescue_project_deaf_gospel",
+   "org": "Jesus Film Project",
+   "desc": "Ozi Ọma e gosiri site na mmegharị ahụ na ihe a na-ahụ anya maka ndị ntị chiri.",
+   "downloads": [
+    {
+     "url": "https://stream.mux.com/h6XpGmwZDYO1g01BPQsKDRR1WYsafJr6YGpLSBtPQG00U/720p.mp4?download=Rescue-Project-Deaf-Gospel-Igbo-HD",
+     "label": "Vidio zuru ezu (MP4) · HD"
+    },
+    {
+     "url": "https://stream.mux.com/h6XpGmwZDYO1g01BPQsKDRR1WYsafJr6YGpLSBtPQG00U/270p.mp4?download=Rescue-Project-Deaf-Gospel-Igbo-SD",
+     "label": "Vidio zuru ezu (MP4) · SD"
+    }
+   ],
+   "links": [],
+   "play": {
+    "kind": "file",
+    "sd": "https://stream.mux.com/h6XpGmwZDYO1g01BPQsKDRR1WYsafJr6YGpLSBtPQG00U/270p.mp4?download=Rescue-Project-Deaf-Gospel-Igbo-SD",
+    "hd": "https://stream.mux.com/h6XpGmwZDYO1g01BPQsKDRR1WYsafJr6YGpLSBtPQG00U/720p.mp4?download=Rescue-Project-Deaf-Gospel-Igbo-HD"
+   }
+  },
+  {
+   "id": "ibo-scan-igbo-1905-genesis-portion",
+   "lang": "ibo",
+   "type": "historic",
+   "title": "Igbo (1905) Genesis Portion",
+   "native": "Akụkụ Jenesis — 1905",
+   "scope": "Igbo",
+   "langName": "Asụsụ Igbo",
+   "source": "https://dbs.org/bibles/historic/Igbo-1905-Genesis-Portion",
+   "org": "Digital Bible Society",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://scripture.dbs.org/books/Igbo-1905-Genesis-Portion.pdf",
+     "label": "Akwụkwọ e nyochara (PDF)"
+    }
+   ],
+   "links": [],
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/books/Igbo-1905-Genesis-Portion.pdf"
+   }
+  },
+  {
+   "id": "ibo-scan-igbo-1906-job-malachi",
+   "lang": "ibo",
+   "type": "historic",
+   "title": "Igbo (1906) Job- Malachi",
+   "native": "Job ruo Malakai — 1906",
+   "scope": "Igbo",
+   "langName": "Asụsụ Igbo",
+   "source": "https://dbs.org/bibles/historic/Igbo-1906-Job-Malachi",
+   "org": "Digital Bible Society",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://scripture.dbs.org/books/Igbo-1906-Job-Malachi.pdf",
+     "label": "Akwụkwọ e nyochara (PDF)"
+    }
+   ],
+   "links": [],
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/books/Igbo-1906-Job-Malachi.pdf"
+   }
+  },
+  {
+   "id": "ibo-scan-igbo-1982-genesis-portion",
+   "lang": "ibo",
+   "type": "historic",
+   "title": "Igbo (1982) Genesis Portion",
+   "native": "Akụkụ Jenesis — 1982",
+   "scope": "Igbo",
+   "langName": "Asụsụ Igbo",
+   "source": "https://dbs.org/bibles/historic/Igbo-1982-Genesis-Portion",
+   "org": "Digital Bible Society",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://scripture.dbs.org/books/Igbo-1982-Genesis-Portion.pdf",
+     "label": "Akwụkwọ e nyochara (PDF)"
+    }
+   ],
+   "links": [],
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/books/Igbo-1982-Genesis-Portion.pdf"
+   }
+  },
+  {
+   "id": "ibo-scan-igbo-bible-print",
+   "lang": "ibo",
+   "type": "historic",
+   "title": "Igbo - Bible (Print)",
+   "native": "Baịbụl Igbo — akwụkwọ e nyochara",
+   "scope": "Igbo",
+   "langName": "Asụsụ Igbo",
+   "source": "https://dbs.org/bibles/historic/Igbo-Bible-print",
+   "org": "Digital Bible Society",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://scripture.dbs.org/books/Igbo-Bible-print.pdf",
+     "label": "Akwụkwọ e nyochara (PDF)"
+    }
+   ],
+   "links": [],
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/books/Igbo-Bible-print.pdf"
+   }
+  },
+  {
+   "id": "ibo-scan-igbo-john-print",
+   "lang": "ibo",
+   "type": "historic",
+   "title": "Igbo - John (Print)",
+   "native": "Ozi Ọma Jọn — akwụkwọ e nyochara",
+   "scope": "Igbo",
+   "langName": "Asụsụ Igbo",
+   "source": "https://dbs.org/bibles/historic/Igbo-John-print",
+   "org": "Digital Bible Society",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://scripture.dbs.org/books/Igbo-John-print.pdf",
+     "label": "Akwụkwọ e nyochara (PDF)"
+    }
+   ],
+   "links": [],
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/books/Igbo-John-print.pdf"
+   }
+  },
+  {
+   "id": "ibo-scan-igbo-new-testament-print",
+   "lang": "ibo",
+   "type": "historic",
+   "title": "Igbo - New Testament (Print)",
+   "native": "Agba Ọhụrụ — akwụkwọ e nyochara",
+   "scope": "Igbo",
+   "langName": "Asụsụ Igbo",
+   "source": "https://dbs.org/bibles/historic/Igbo-New-Testament-print",
+   "org": "Digital Bible Society",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://scripture.dbs.org/books/Igbo-New-Testament-print.pdf",
+     "label": "Akwụkwọ e nyochara (PDF)"
+    }
+   ],
+   "links": [],
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/books/Igbo-New-Testament-print.pdf"
+   }
+  },
+  {
+   "id": "ibo-ab-ibobib-davr-fb-n",
+   "lang": "ibo",
+   "type": "audio-bible",
+   "title": "Igbo Contemporary Bible — Audio",
+   "native": "Baịbụlụ Nsọ n’Igbo Ndị Ugbu a — n’ụda",
+   "scope": "Igbo",
+   "langName": "Asụsụ Igbo",
+   "source": "https://dbs.org/bibles/audio/IBOBIB_DAVR_FB_N",
+   "org": "Davar Partners International",
+   "desc": "Ndi-Ikpe isi 18 adịghị na faịlụ DBS maka mbipụta a. Ị nwere ike ịnụ isi ahụ na mbipụta Union.",
+   "downloads": [],
+   "links": [],
+   "play": {
+    "kind": "audio-bible",
+    "fileset": "IBOBIB_DAVR_FB_N",
+    "version": "IBOBIB",
+    "testaments": [
+     "OT",
+     "NT"
+    ],
+    "saveChapter": true,
+    "bookNames": {
+     "Genesis": "Jenesis",
+     "Exodus": "ỌPUPU",
+     "Leviticus": "LEVITIKỌS",
+     "Numbers": "ỌNỤỌGỤGỤ",
+     "Deuteronomy": "Diuteronomi",
+     "Joshua": "Joshua",
+     "Judges": "Ndi-Ikpe",
+     "Ruth": "Rut",
+     "1Samuel": "1 Samuel",
+     "2Samuel": "2 Samuel",
+     "1Kings": "1 NDỊ EZE",
+     "2Kings": "2 NDỊ EZE",
+     "1Chronicles": "1 Ihe E Mere",
+     "2Chronicles": "2 Ihe E Mere",
+     "Ezra": "Ezra",
+     "Nehemiah": "Nehemaia",
+     "Esther": "Esta",
+     "Job": "Job",
+     "Psalms": "ABỤ ỌMA",
+     "Proverbs": "Ilu",
+     "Ecclesiastes": "Eklisiastis",
+     "SongofSongs": "ABÙ NKE ABÙ",
+     "Isaiah": "AỊZAYA",
+     "Jeremiah": "Jeremaya",
+     "Lamentations": "ABÙ-ÁKWÁ",
+     "Ezekiel": "Ezikiel",
+     "Daniel": "Daniel",
+     "Hosea": "Hosiya",
+     "Joel": "Juel",
+     "Amos": "Emos",
+     "Obadiah": "Obadaia",
+     "Jonah": "Jona",
+     "Micah": "Maika",
+     "Nahum": "Nehum",
+     "Habakkuk": "Habakuk",
+     "Zephaniah": "Zefanaya",
+     "Haggai": "Hegai",
+     "Zechariah": "Zekaraya",
+     "Malachi": "Malakai",
+     "Matthew": "Matiu",
+     "Mark": "Mak",
+     "Luke": "Luk",
+     "John": "JỌN",
+     "Acts": "ỌLU NDI-OZI",
+     "Romans": "NDỊ ROM",
+     "1Corinthians": "1 NDỊ KỌRINT",
+     "2Corinthians": "2 NDỊ KỌRINT",
+     "Galatians": "Ndi Galetia",
+     "Ephesians": "NDI EFESỌS",
+     "Philippians": "NDỊ FILIPAI",
+     "Colossians": "NDỊ KỌLỌSỊ",
+     "1Thessalonians": "1 NDỊ TESALONAỊKA",
+     "2Thessalonians": "2 NDỊ TESALONAỊKA",
+     "1Timothy": "1 Timoti",
+     "2Timothy": "2 Timoti",
+     "Titus": "TAỊTỌS",
+     "Philemon": "FỊLỊMỌN",
+     "Hebrews": "Ndi-Hibru",
+     "James": "Jemis",
+     "1Peter": "1 Pita",
+     "2Peter": "2 Pita",
+     "1John": "1 JỌN",
+     "2John": "2 JỌN",
+     "3John": "3 JỌN",
+     "Jude": "Jud",
+     "Revelation": "Nkpughe"
+    },
+    "missingChapters": {
+     "Judges": [
+      18
+     ]
+    }
+   }
+  },
+  {
+   "id": "ibo-publisher-iboilb",
+   "lang": "ibo",
+   "type": "scripture",
+   "title": "Igbo Union Version",
+   "native": "Baịbụl Igbo — mbipụta Union (1988)",
+   "scope": "Igbo",
+   "langName": "Asụsụ Igbo",
+   "source": "https://find.bible/bibles/IBOILB/index.html",
+   "org": "find.bible",
+   "desc": "",
+   "downloads": [],
+   "links": [
+    {
+     "label": "Lee nkọwa mbipụta Baịbụl a",
+     "url": "https://find.bible/bibles/IBOILB/index.html"
+    }
+   ],
+   "dbsListedUrl": "https://find.bible/?abbr=IBOILB"
+  },
+  {
+   "id": "ibo-grn-1010",
+   "lang": "ibo",
+   "type": "audio",
+   "title": "Words of Life - Igbo: Union",
+   "native": "Okwu Ndụ — Union",
+   "scope": "Union",
+   "langName": "Asụsụ Igbo · Union",
+   "source": "https://globalrecordings.net/en/program/1010",
+   "org": "Global Recordings Network",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20001%20The%20True%20God%2001010.mp3",
+     "label": "Ụda 1 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20002%20Do%20Not%20Refuse%2001010.mp3",
+     "label": "Ụda 2 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20003%20How%20to%20Find%20Peace%2001010.mp3",
+     "label": "Ụda 3 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20004%20Do%20Not%20Refuse%2001010.mp3",
+     "label": "Ụda 4 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20005%20Praise%20Ye%20the%20Lord%2001010.mp3",
+     "label": "Ụda 5 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20006%20The%20House%20on%20the%20Rock%2001010.mp3",
+     "label": "Ụda 6 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20007%20Come%20to%20Jesus%2001010.mp3",
+     "label": "Ụda 7 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20008%20The%20Rich%20Man%20and%20Lazarus%2001010.mp3",
+     "label": "Ụda 8 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20009%20Are%20You%20Ready%2001010.mp3",
+     "label": "Ụda 9 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20010%20Are%20You%20Ready%2001010.mp3",
+     "label": "Ụda 10 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20011%20Noah%2001010.mp3",
+     "label": "Ụda 11 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20012%20Follow%20Jesus%2001010.mp3",
+     "label": "Ụda 12 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20013%20Gehazi%2001010.mp3",
+     "label": "Ụda 13 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20014%20Be%20Strong%2001010.mp3",
+     "label": "Ụda 14 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20015%20God%27s%20Answers%2001010.mp3",
+     "label": "Ụda 15 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20016%20Into%20My%20Heart%2001010.mp3",
+     "label": "Ụda 16 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20017%20The%20Prodigal%20Son%2001010.mp3",
+     "label": "Ụda 17 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20018%20How%20to%20Walk%20the%20Jesus%20Road%2001010.mp3",
+     "label": "Ụda 18 (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "label": "Mepee na weebụsaịtị onye bipụtara ya",
+     "url": "https://globalrecordings.net/en/program/1010"
+    }
+   ],
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20001%20The%20True%20God%2001010.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20001%20The%20True%20God%2001010.mp3",
+      "title": "Ụda 1"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20002%20Do%20Not%20Refuse%2001010.mp3",
+      "title": "Ụda 2"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20003%20How%20to%20Find%20Peace%2001010.mp3",
+      "title": "Ụda 3"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20004%20Do%20Not%20Refuse%2001010.mp3",
+      "title": "Ụda 4"
+     },
+     {
+      "n": 5,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20005%20Praise%20Ye%20the%20Lord%2001010.mp3",
+      "title": "Ụda 5"
+     },
+     {
+      "n": 6,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20006%20The%20House%20on%20the%20Rock%2001010.mp3",
+      "title": "Ụda 6"
+     },
+     {
+      "n": 7,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20007%20Come%20to%20Jesus%2001010.mp3",
+      "title": "Ụda 7"
+     },
+     {
+      "n": 8,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20008%20The%20Rich%20Man%20and%20Lazarus%2001010.mp3",
+      "title": "Ụda 8"
+     },
+     {
+      "n": 9,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20009%20Are%20You%20Ready%2001010.mp3",
+      "title": "Ụda 9"
+     },
+     {
+      "n": 10,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20010%20Are%20You%20Ready%2001010.mp3",
+      "title": "Ụda 10"
+     },
+     {
+      "n": 11,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20011%20Noah%2001010.mp3",
+      "title": "Ụda 11"
+     },
+     {
+      "n": 12,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20012%20Follow%20Jesus%2001010.mp3",
+      "title": "Ụda 12"
+     },
+     {
+      "n": 13,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20013%20Gehazi%2001010.mp3",
+      "title": "Ụda 13"
+     },
+     {
+      "n": 14,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20014%20Be%20Strong%2001010.mp3",
+      "title": "Ụda 14"
+     },
+     {
+      "n": 15,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20015%20God%27s%20Answers%2001010.mp3",
+      "title": "Ụda 15"
+     },
+     {
+      "n": 16,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20016%20Into%20My%20Heart%2001010.mp3",
+      "title": "Ụda 16"
+     },
+     {
+      "n": 17,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20017%20The%20Prodigal%20Son%2001010.mp3",
+      "title": "Ụda 17"
+     },
+     {
+      "n": 18,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo/Igbo%20Words%20of%20Life%2001010/Igbo%20Words%20of%20Life%20018%20How%20to%20Walk%20the%20Jesus%20Road%2001010.mp3",
+      "title": "Ụda 18"
+     }
+    ]
+   }
+  },
+  {
+   "id": "ibo-grn-1670",
+   "lang": "ibo",
+   "type": "audio",
+   "title": "Words of Life - Igbo: Asaa",
+   "native": "Okwu Ndụ — Asaa",
+   "scope": "Asaa",
+   "langName": "Asụsụ Igbo · Asaa",
+   "source": "https://globalrecordings.net/en/program/1670",
+   "org": "Global Recordings Network",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Asaa/Igbo%20Asaa%20Words%20of%20Life%2001670/Igbo%20Asaa%20Words%20of%20Life%20001%20Who%20is%20He%2001670.mp3",
+     "label": "Ụda 1 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Asaa/Igbo%20Asaa%20Words%20of%20Life%2001670/Igbo%20Asaa%20Words%20of%20Life%20002%20Prepare%20for%20the%20Future%2001670.mp3",
+     "label": "Ụda 2 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Asaa/Igbo%20Asaa%20Words%20of%20Life%2001670/Igbo%20Asaa%20Words%20of%20Life%20003%20The%20House%20on%20the%20Rock%2001670.mp3",
+     "label": "Ụda 3 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Asaa/Igbo%20Asaa%20Words%20of%20Life%2001670/Igbo%20Asaa%20Words%20of%20Life%20004%20How%20to%20Find%20Peace%2001670.mp3",
+     "label": "Ụda 4 (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "label": "Mepee na weebụsaịtị onye bipụtara ya",
+     "url": "https://globalrecordings.net/en/program/1670"
+    }
+   ],
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Asaa/Igbo%20Asaa%20Words%20of%20Life%2001670/Igbo%20Asaa%20Words%20of%20Life%20001%20Who%20is%20He%2001670.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Asaa/Igbo%20Asaa%20Words%20of%20Life%2001670/Igbo%20Asaa%20Words%20of%20Life%20001%20Who%20is%20He%2001670.mp3",
+      "title": "Ụda 1"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Asaa/Igbo%20Asaa%20Words%20of%20Life%2001670/Igbo%20Asaa%20Words%20of%20Life%20002%20Prepare%20for%20the%20Future%2001670.mp3",
+      "title": "Ụda 2"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Asaa/Igbo%20Asaa%20Words%20of%20Life%2001670/Igbo%20Asaa%20Words%20of%20Life%20003%20The%20House%20on%20the%20Rock%2001670.mp3",
+      "title": "Ụda 3"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Asaa/Igbo%20Asaa%20Words%20of%20Life%2001670/Igbo%20Asaa%20Words%20of%20Life%20004%20How%20to%20Find%20Peace%2001670.mp3",
+      "title": "Ụda 4"
+     }
+    ]
+   }
+  },
+  {
+   "id": "ibo-grn-5650",
+   "lang": "ibo",
+   "type": "audio",
+   "title": "Words of Life w/ IBO: Union - Igbo: Ohafia",
+   "native": "Okwu Ndụ — Ohafia na Union",
+   "scope": "Ohafia",
+   "langName": "Asụsụ Igbo · Ohafia",
+   "source": "https://globalrecordings.net/en/program/5650",
+   "org": "Global Recordings Network",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20001%20Follow%20Jesus%2005650.mp3",
+     "label": "Ụda 1 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20002%20I%20Shall%20Meet%20Him%2005650.mp3",
+     "label": "Ụda 2 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20003%20Igbo%20How%20to%20Find%20Peace%2005650.mp3",
+     "label": "Ụda 3 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20004%20Igbo%20Do%20Not%20Refuse%2005650.mp3",
+     "label": "Ụda 4 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20005%20Igbo%20Are%20You%20Ready%2005650.mp3",
+     "label": "Ụda 5 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20006%20Igbo%20The%20House%20on%20the%20Rock%2005650.mp3",
+     "label": "Ụda 6 (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "label": "Mepee na weebụsaịtị onye bipụtara ya",
+     "url": "https://globalrecordings.net/en/program/5650"
+    }
+   ],
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20001%20Follow%20Jesus%2005650.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20001%20Follow%20Jesus%2005650.mp3",
+      "title": "Ụda 1"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20002%20I%20Shall%20Meet%20Him%2005650.mp3",
+      "title": "Ụda 2"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20003%20Igbo%20How%20to%20Find%20Peace%2005650.mp3",
+      "title": "Ụda 3"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20004%20Igbo%20Do%20Not%20Refuse%2005650.mp3",
+      "title": "Ụda 4"
+     },
+     {
+      "n": 5,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20005%20Igbo%20Are%20You%20Ready%2005650.mp3",
+      "title": "Ụda 5"
+     },
+     {
+      "n": 6,
+      "file": "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo/Igbo%20Ohafia/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%2005650/Igbo%20Ohafia%20Words%20of%20Life%20w%20IBO%20Union%20006%20Igbo%20The%20House%20on%20the%20Rock%2005650.mp3",
+      "title": "Ụda 6"
+     }
+    ]
+   }
+  }
+ ]
+}

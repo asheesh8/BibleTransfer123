@@ -1,0 +1,19 @@
+{
+ "verified": "2026-10-03",
+ "alive_files": [
+  "https://bibles.dbs.org/IBOBIB/html_IBOBIB.zip",
+  "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo_high.zip",
+  "https://media.dbs.org/audio/grn/ibo_GlobalRecordings_igbo_low.zip",
+  "https://scripture.dbs.org/books/Igbo-1905-Genesis-Portion.pdf",
+  "https://scripture.dbs.org/books/Igbo-1906-Job-Malachi.pdf",
+  "https://scripture.dbs.org/books/Igbo-1982-Genesis-Portion.pdf",
+  "https://scripture.dbs.org/books/Igbo-Bible-print.pdf",
+  "https://scripture.dbs.org/books/Igbo-John-print.pdf",
+  "https://scripture.dbs.org/books/Igbo-New-Testament-print.pdf"
+ ],
+ "playable_audio_filesets": [
+  "IGRNBT_FCBH_NT_N",
+  "IBOILB_DAVR_FB_N",
+  "IBOBIB_DAVR_FB_N"
+ ]
+}

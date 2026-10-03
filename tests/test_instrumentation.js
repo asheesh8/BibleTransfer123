@@ -381,7 +381,37 @@ async function guides() {
   assert.equal(count(f, 'share_complete').length, 0, 'reading instructions never confirms an external transfer');
 }
 
+
+async function missingBibleChapter() {
+  const f = fixture({ itemPage: true });
+  f.item.type = 'audio-bible';
+  f.item.play = { kind: 'audio-bible', testaments: ['OT'], saveChapter: true,
+    missingChapters: { Judges: [18] } };
+  f.context.ET.BOOKS = { OT: [[7, 'Judges', 21], [8, 'Ruth', 4]] };
+  f.context.ET.bookName = name => name;
+  f.context.ET.audioBibleUrl = (_, tt, n, book, chapter) => book + '/' + chapter + '.mp3';
+  f.context.ET.store.get = (_, fallback) => fallback === '0:1' ? '0:18' : fallback;
+  const notices = []; f.context.ET.toast = value => notices.push(value);
+  f.load('item');
+  const audio = f.query('#a'), book = f.query('#bk'), chapter = f.query('#bc');
+  audio.play = async () => {};
+  assert.match(chapter.innerHTML, /value="18" disabled>18 · item.chapter.unavailable/);
+  assert.equal(chapter.value, '1', 'an old bookmark cannot load the missing chapter');
+  assert.equal(audio.src, 'Judges/1.mp3');
+  chapter.value = '17'; chapter.listeners.change[0]();
+  audio.listeners.ended[0]();
+  assert.equal(chapter.value, '17', 'autoplay must stop rather than silently skip Scripture');
+  assert.equal(audio.src, 'Judges/17.mp3');
+  assert.equal(notices.length, 1);
+  chapter.value = '18'; chapter.listeners.change[0]();
+  assert.equal(audio.src, 'Judges/17.mp3', 'even a synthetic change cannot request missing audio');
+  chapter.value = '19'; chapter.listeners.change[0]();
+  assert.equal(audio.src, 'Judges/19.mp3', 'a reader can explicitly continue past the missing chapter');
+  chapter.value = '21'; audio.listeners.ended[0]();
+  assert.equal(book.value, '1'); assert.equal(audio.src, 'Ruth/1.mp3');
+}
+
 (async () => {
-  await sharing(); await languageLibraries(); await composers(); await saving(); await nearby(); await guides();
+  await missingBibleChapter(); await sharing(); await languageLibraries(); await composers(); await saving(); await nearby(); await guides();
   console.log('Sharing, WhatsApp/Telegram composers, clipboard, native handoff, save, cancellation, Nearby receipts and guide instrumentation passed.');
 })().catch(err => { console.error(err); process.exitCode = 1; });

@@ -456,7 +456,7 @@ window.ET = (function () {
      English title and heard Sindhi. Choosing a language picks both: English
      shows English films, اردو shows Urdu, سنڌي shows Sindhi. The library can
      still browse the others on purpose. */
-  var CONTENT = { en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', zul: 'zul', mas: 'mas', kik: 'kik', hi: 'hin', mr: 'mar', lg: 'lug', luo: 'luo', om: 'orm', pa: 'pan', pnb: 'pnb', ne: 'npi' };
+  var CONTENT = { en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', zul: 'zul', mas: 'mas', kik: 'kik', hi: 'hin', mr: 'mar', lg: 'lug', luo: 'luo', om: 'orm', ig: 'ibo', pa: 'pan', pnb: 'pnb', ne: 'npi' };
   function contentCode(ui) { return CONTENT[ui] || 'eng'; }
   function contentLang() {
     var scope = libraryScope();
@@ -485,6 +485,75 @@ window.ET = (function () {
       [65,'Jude',1],[66,'Revelation',22]]
   };
   var LOCAL_BOOKS = {
+    // Published names from DBS’s Igbo Union audio Bible selector.
+    ig: {
+      "Genesis": "Jenesis",
+      "Exodus": "ỌPUPU",
+      "Leviticus": "LEVITIKỌS",
+      "Numbers": "ỌNỤỌGỤGỤ",
+      "Deuteronomy": "Diuteronomi",
+      "Joshua": "Joshua",
+      "Judges": "Ndi-Ikpe",
+      "Ruth": "Rut",
+      "1Samuel": "1 Samuel",
+      "2Samuel": "2 Samuel",
+      "1Kings": "1 NDỊ EZE",
+      "2Kings": "2 NDỊ EZE",
+      "1Chronicles": "1 Ihe E Mere",
+      "2Chronicles": "2 Ihe E Mere",
+      "Ezra": "Ezra",
+      "Nehemiah": "Nehemaia",
+      "Esther": "Esta",
+      "Job": "Job",
+      "Psalms": "ABỤ ỌMA",
+      "Proverbs": "Ilu",
+      "Ecclesiastes": "Eklisiastis",
+      "SongofSongs": "ABÙ NKE ABÙ",
+      "Isaiah": "AỊZAYA",
+      "Jeremiah": "Jeremaya",
+      "Lamentations": "ABÙ-ÁKWÁ",
+      "Ezekiel": "Ezikiel",
+      "Daniel": "Daniel",
+      "Hosea": "Hosiya",
+      "Joel": "Juel",
+      "Amos": "Emos",
+      "Obadiah": "Obadaia",
+      "Jonah": "Jona",
+      "Micah": "Maika",
+      "Nahum": "Nehum",
+      "Habakkuk": "Habakuk",
+      "Zephaniah": "Zefanaya",
+      "Haggai": "Hegai",
+      "Zechariah": "Zekaraya",
+      "Malachi": "Malakai",
+      "Matthew": "Matiu",
+      "Mark": "Mak",
+      "Luke": "Luk",
+      "John": "JỌN",
+      "Acts": "ỌLU NDI-OZI",
+      "Romans": "NDỊ ROM",
+      "1Corinthians": "1 NDỊ KỌRINT",
+      "2Corinthians": "2 NDỊ KỌRINT",
+      "Galatians": "Ndi Galetia",
+      "Ephesians": "NDI EFESỌS",
+      "Philippians": "NDỊ FILIPAI",
+      "Colossians": "NDỊ KỌLỌSỊ",
+      "1Thessalonians": "1 NDỊ TESALONAỊKA",
+      "2Thessalonians": "2 NDỊ TESALONAỊKA",
+      "1Timothy": "1 Timoti",
+      "2Timothy": "2 Timoti",
+      "Titus": "TAỊTỌS",
+      "Philemon": "FỊLỊMỌN",
+      "Hebrews": "Ndi-Hibru",
+      "James": "Jemis",
+      "1Peter": "1 Pita",
+      "2Peter": "2 Pita",
+      "1John": "1 JỌN",
+      "2John": "2 JỌN",
+      "3John": "3 JỌN",
+      "Jude": "Jud",
+      "Revelation": "Nkpughe"
+},
     // Native names from DBS’s current Oromo audio Bible.
     om: {
     "Genesis": "Uumama",

@@ -96,6 +96,7 @@
   function sizeOf(f) { return f.bytes ? '<span class="num">' + ET.human(f.bytes) + '</span>' : ''; }
 
   function open(r, preselect) {
+    if (r.lang === 'ibo') r = Object.assign({}, r, { title: ET.displayTitle(r) });
     var S = { file: null, jobs: null, target: null, ctrl: null, done: [], blobUrl: null };
     var sheet = ET.sheet('<div id="save-flow"></div>');
     var root = ET.$('#save-flow', sheet.el);

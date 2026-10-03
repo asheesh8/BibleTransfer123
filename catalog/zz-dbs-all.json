@@ -28488,6 +28488,28 @@
    "downloads": [],
    "links": [],
    "source": "https://dbs.org/bibles/audio/GAXWFW01446_DAVR_FB_N"
+  },
+  {
+   "id": "ibo-audio-bible-dbs-igbo-bible-0247d38c5",
+   "lang": "ibo",
+   "type": "audio-bible",
+   "title": "Igbo Bible",
+   "native": null,
+   "org": "Digital Bible Society",
+   "year": null,
+   "duration": null,
+   "desc": "",
+   "license": null,
+   "scope": null,
+   "stats": null,
+   "langName": "Igbo",
+   "typeLabel": "Audio Bibles",
+   "cover": null,
+   "play": null,
+   "read": null,
+   "downloads": [],
+   "links": [],
+   "source": "https://dbs.org/bibles/audio/IBOBSN_DAVR_FB_N"
   }
  ]
 }

@@ -225,3 +225,43 @@ pages, direct-file results and exact external allowlist. `packer/build_oromo.py`
 rebuilds the native catalogue from these captures. The external exceptions
 are exact URLs scoped to Oromo or Luo; existing languages retain their prior
 curation. The startup home and language catalogues remain slim.
+
+
+## Igbo — 2026-10-03
+
+The Igbo shelf (`ibo`, interface `ig`, `/igbo`) has 28 resources from the
+[rendered DBS inventory](https://dbs.org/discover/languages/ibo): 13 films,
+three current audio Bibles, the contemporary text reader and checked HTML ZIP,
+six historic PDF scans, the complete GRN collection (29 recordings), three GRN
+programmes (18 Union, four Asaa, six Ohafia/Union tracks), and the Union Bible
+directory. Four YouTube rows refer to LUMO films already carried on DBS; those
+URLs remain in `dbsListedUrls`. One retired IBOBSN audio edition is excluded.
+`packer/build_igbo.py` rebuilds this shelf from the saved rendered evidence.
+
+The 398 Igbo strings cover the library, item controls, saving, nearby transfer,
+help and all ten sharing routes. Published Igbo UI vocabulary was compared with
+https://www.jw.org/ig/; that page is only a language reference, not a library
+resource. All 66 book names use DBS’s own Union/contemporary Bible selectors.
+The interface is a translation draft requiring review by a fluent Igbo speaker.
+OS menu names remain recognizable (Files, Downloads, Finder, File Transfer,
+Trust, AirDrop). The computer screenshot guide and privacy controls remain in
+English, as disclosed in the language note. “If the file does not open” refers
+to the file, not the app. The New Testament scan is labeled “Agba Ọhụrụ” rather
+than DBS’s misleading “Ọhụrụ Ọrụ”.
+
+All 2,638 published audio chapter paths were checked: 2,637 respond with MP3;
+Contemporary Judges 18 returns 404 and is also absent from DBS’s own selector.
+The disabled chapter is labeled unavailable; old bookmarks cannot request it,
+and autoplay stops with an explanation after Judges 17 instead of silently
+skipping Scripture. The Union edition includes the chapter. All 29 recording
+MP3s and six PDF signatures passed probes. Both complete GRN ZIPs (29 MP3s each)
+and the contemporary HTML Bible ZIP (74 entries) passed full-download CRC
+checks. DBS’s video CDN rejects command-line probes with 403; browser metadata
+checks cover the in-app film players and chapter boundaries instead.
+
+DBS’s Ehugbo and Igbo JESUS pages incorrectly link Enuani chapters/ZIPs. The
+shelf uses the respective, verified full-film SD/HD provider files for those
+two varieties. Enuani retains its 61 chapters. The exact 14 publisher page and
+media URLs are allowed only for the Igbo shelf; other curation is unchanged.
+Unverified optional archives stay accessible from each original DBS page.
+The existing 834 raw and compiled resources were compared and remain unchanged.

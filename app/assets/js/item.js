@@ -143,7 +143,8 @@
 
     // What language this is actually in, before anyone presses play.
     var tongue = '<span class="chip lang">' + ET.icon('globe') +
-      h(isText ? 'item.written' : 'item.spoken', { lang: L.native && L.native !== L.name
+      h(isText ? 'item.written' : 'item.spoken', { lang: r.lang === 'ibo' && r.scope && r.scope !== 'Igbo'
+        ? r.langName : L.native && L.native !== L.name
         ? L.native + ' · ' + L.name : (L.name || r.langName || '') }) + '</span>';
 
     var html = hero() + '<div id="media">' + player() + '</div>' +
@@ -275,13 +276,25 @@
         ET.BOOKS[tt].forEach(function (b) { books.push([tt, b[0], b[1], b[2]]); });
       });
       var saved = (ET.store.get(KEY, '0:1') || '0:1').split(':');
+      function unavailable(chapter) {
+        var missing = (p.missingChapters || {})[books[+bk.value][2]] || [];
+        return missing.indexOf(chapter) !== -1;
+      }
       function fill(sel) {
         var n = books[+bk.value][3], out = '';
-        for (var i = 1; i <= n; i++) out += '<option value="' + i + '">' + i + '</option>';
+        for (var i = 1; i <= n; i++) out += '<option value="' + i + '"' +
+          (unavailable(i) ? ' disabled' : '') + '>' + i +
+          (unavailable(i) ? ' · ' + h('item.chapter.unavailable') : '') + '</option>';
         bc.innerHTML = out;
-        bc.value = String(Math.min(sel || 1, n));
+        var choice = Math.max(1, Math.min(sel || 1, n));
+        if (unavailable(choice)) {
+          choice = 1;
+          while (choice <= n && unavailable(choice)) choice++;
+        }
+        bc.value = choice <= n ? String(choice) : '';
       }
       function load(autoplay) {
+        if (!bc.value || unavailable(+bc.value)) return;
         var b = books[+bk.value];
         a.src = ET.audioBibleUrl(p, b[0], b[1], b[2], +bc.value);
         ET.store.set(KEY, bk.value + ':' + bc.value);
@@ -294,7 +307,13 @@
       bc.addEventListener('change', function () { load(true); });
       // Carry on into the next chapter, and the next book after that.
       a.addEventListener('ended', function () {
-        if (+bc.value < books[+bk.value][3]) { bc.value = String(+bc.value + 1); }
+        if (+bc.value < books[+bk.value][3]) {
+          if (unavailable(+bc.value + 1)) {
+            ET.toast(t('item.chapter.unavailable.notice', { n: +bc.value + 1 }));
+            return;
+          }
+          bc.value = String(+bc.value + 1);
+        }
         else if (+bk.value < books.length - 1) { bk.value = String(+bk.value + 1); fill(1); }
         else return;
         load(true);

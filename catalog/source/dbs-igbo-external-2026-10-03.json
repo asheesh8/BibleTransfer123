@@ -1,0 +1,20 @@
+{
+ "language": "ibo",
+ "verified": "2026-10-03",
+ "urls": [
+  "https://api-media-core.jesusfilm.org/1_cl-0-0/variants/9774/downloads/1_9774-cl-0-0_high.mp4",
+  "https://api-media-core.jesusfilm.org/1_cl-0-0/variants/9774/downloads/1_9774-cl-0-0_low.mp4",
+  "https://find.bible/bibles/IBOILB/index.html",
+  "https://globalrecordings.net/en/program/1010",
+  "https://globalrecordings.net/en/program/1670",
+  "https://globalrecordings.net/en/program/5650",
+  "https://stream.mux.com/4zgkn3uJmTRn246RLSf02YBRIjp02XvL3omoKqfx01NB4A/270p.mp4?download=JESUS-Ehugbo-SD",
+  "https://stream.mux.com/4zgkn3uJmTRn246RLSf02YBRIjp02XvL3omoKqfx01NB4A/720p.mp4?download=JESUS-Ehugbo-HD",
+  "https://stream.mux.com/h6XpGmwZDYO1g01BPQsKDRR1WYsafJr6YGpLSBtPQG00U/270p.mp4?download=Rescue-Project-Deaf-Gospel-Igbo-SD",
+  "https://stream.mux.com/h6XpGmwZDYO1g01BPQsKDRR1WYsafJr6YGpLSBtPQG00U/720p.mp4?download=Rescue-Project-Deaf-Gospel-Igbo-HD",
+  "https://stream.mux.com/inOvlJknyHh27EyUISXh88xbJrBznVyiSCJjnunvRxI/270p.mp4?download=JESUS-Enuani-SD",
+  "https://stream.mux.com/inOvlJknyHh27EyUISXh88xbJrBznVyiSCJjnunvRxI/720p.mp4?download=JESUS-Enuani-HD",
+  "https://stream.mux.com/x55iCmmhjF7pNJcG00XRVQvKUU89TnaQMNKGAFixE0001Q/270p.mp4?download=JESUS-Igbo-SD",
+  "https://stream.mux.com/x55iCmmhjF7pNJcG00XRVQvKUU89TnaQMNKGAFixE0001Q/720p.mp4?download=JESUS-Igbo-HD"
+ ]
+}

@@ -19,10 +19,10 @@ says about it. The rule here is strict: an item stays only when its title,
 publisher or DBS record shows it is Christian. Anything uncertain is left out
 rather than guessed in.
 
-For the requested complete Luo and Oromo inventories, exact audited publisher
+For the requested complete Luo, Oromo and Igbo inventories, exact audited publisher
 pages and media URLs are also carried for their respective languages. Luo
 adds Dholuo programme and Bible directory pages; Oromo adds its programme,
-Bible directory, ROCK and film links. The explicit allowlists do not change
+Bible directory, ROCK and film links; Igbo adds its audited programmes, Bible directory and full-film files. The explicit allowlists do not change
 any other language's curation or permit arbitrary files on those hosts.
 
 Applied in catalog.load(), so every build and every fresh DBS import passes
@@ -98,6 +98,8 @@ _OFF_LANGUAGE = re.compile(r"/StudyBible/content/texts/(ENGNAS|HBOWLC|GRCTIS)/",
 # pages return "not found", and the audio Bibles say "no longer at this
 # address". The library only carries what DBS has up.
 RETIRED = {
+    # Igbo’s rendered moved-edition notice links to current editions.
+    "https://dbs.org/bibles/audio/IBOBSN_DAVR_FB_N",
     # Rendered Oromo pages explicitly point to their current editions.
     "https://dbs.org/bibles/audio/GAZBSE_DAVR_OT_N",
     "https://dbs.org/bibles/audio/GAXBSK01440_DAVR_OT_N",
@@ -244,6 +246,9 @@ LUO_PUBLISHERS = {
 OROMO_EXTERNAL = set(json.loads((pathlib.Path(__file__).resolve().parents[2] /
     "catalog/source/dbs-oromo-external-2026-10-03.json").read_text())["urls"])
 
+IGBO_EXTERNAL = set(json.loads((pathlib.Path(__file__).resolve().parents[2] /
+    "catalog/source/dbs-igbo-external-2026-10-03.json").read_text())["urls"])
+
 
 def _dbs(url):
     """On DBS's servers, and still up there."""
@@ -261,9 +266,11 @@ def _dbs_only(r):
     r = dict(r)
     def allowed(url):
         return (_dbs(url) or (r.get("lang") == "luo" and url in LUO_PUBLISHERS)
-                or (r.get("lang") == "orm" and url in OROMO_EXTERNAL))
+                or (r.get("lang") == "orm" and url in OROMO_EXTERNAL)
+                or (r.get("lang") == "ibo" and url in IGBO_EXTERNAL))
     def allowed_file(url):
-        return _dbs(url) or (r.get("lang") == "orm" and url in OROMO_EXTERNAL)
+        return (_dbs(url) or (r.get("lang") == "orm" and url in OROMO_EXTERNAL)
+                or (r.get("lang") == "ibo" and url in IGBO_EXTERNAL))
     for k in ("play", "read"):
         v = r.get(k)
         if v and _has_url(v) and not all(allowed_file(u) for u in re.findall(r"https?://[^\"\s]+", json.dumps(v))):
