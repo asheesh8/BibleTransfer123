@@ -1,0 +1,31 @@
+{
+ "language": "yor",
+ "verified": "2026-10-04",
+ "urls": [
+  "https://api-media-core.jesusfilm.org/1_cl-0-0/variants/1308/downloads/1_1308-cl-0-0_high.mp4",
+  "https://api-media-core.jesusfilm.org/1_cl-0-0/variants/1308/downloads/1_1308-cl-0-0_low.mp4",
+  "https://find.bible/bibles/YORBSN/index.html",
+  "https://find.bible/bibles/YOROLD/index.html",
+  "https://find.bible/bibles/YORUBS/index.html",
+  "https://find.bible/bibles/YORYBA/index.html",
+  "https://globalrecordings.net/en/program/10191",
+  "https://globalrecordings.net/en/program/10261",
+  "https://globalrecordings.net/en/program/11181",
+  "https://globalrecordings.net/en/program/27720",
+  "https://globalrecordings.net/en/program/35560",
+  "https://globalrecordings.net/en/program/37859",
+  "https://globalrecordings.net/en/program/40",
+  "https://globalrecordings.net/en/program/41",
+  "https://globalrecordings.net/en/program/66367",
+  "https://globalrecordings.net/en/program/8291",
+  "https://inscript.org/?w1=bible&t1=local%3AYORYCB&v1=JN1_1",
+  "https://stream.mux.com/oIvXT01YmoRLLxU7VlgjvCFht9jteEfe02KWX2aFOpZUI/270p.mp4?download=JESUS-Yoruba-SD",
+  "https://stream.mux.com/oIvXT01YmoRLLxU7VlgjvCFht9jteEfe02KWX2aFOpZUI/720p.mp4?download=JESUS-Yoruba-HD",
+  "https://stream.mux.com/tIMZ1mnQXFCE8Y9SBLMIzXWFbsr8YjX00taF00AWAJlU00/270p.mp4?download=Rescue-Project-Deaf-Gospel-Yoruba-SD",
+  "https://stream.mux.com/tIMZ1mnQXFCE8Y9SBLMIzXWFbsr8YjX00taF00AWAJlU00/720p.mp4?download=Rescue-Project-Deaf-Gospel-Yoruba-HD"
+ ],
+ "excluded": {
+  "https://dbs.org/bibles/audio/YORBIB_DAVR_FB_N": "DBS has retired this audio edition and lists different replacement editions.",
+  "https://arc.gt/mgxwf?apiSessionId=5f876a492d7f38.62025083": "Legacy short-link redirect is blocked in the browser. The DBS Story of Jesus for Children film is included through its working DBS page."
+ }
+}

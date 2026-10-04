@@ -1,0 +1,443 @@
+{
+ "yor": {
+  "Audio Collections": {
+   "count": 3,
+   "links": [
+    {
+     "cells": [
+      "Yoruba",
+      "Global Recordings Network",
+      "171 files · 347.1 MB"
+     ],
+     "href": "https://dbs.org/audio/collections/grn/yor_GlobalRecordings_yoruba",
+     "native": "",
+     "row": "Yoruba\tGlobal Recordings Network\t171 files · 347.1 MB",
+     "title": "Yoruba"
+    },
+    {
+     "cells": [
+      "Yoruba",
+      "Story of Jesus",
+      "8 files · 123.4 MB"
+     ],
+     "href": "https://dbs.org/audio/collections/soj/yor_StoryJesus_yoruba",
+     "native": "",
+     "row": "Yoruba\tStory of Jesus\t8 files · 123.4 MB",
+     "title": "Yoruba"
+    },
+    {
+     "cells": [
+      "Yoruba",
+      "Story Runners",
+      "48 files · 198.6 MB"
+     ],
+     "href": "https://dbs.org/audio/collections/srun/yor_storyset_yoruba",
+     "native": "",
+     "row": "Yoruba\tStory Runners\t48 files · 198.6 MB",
+     "title": "Yoruba"
+    }
+   ]
+  },
+  "Bibles": {
+   "count": 6,
+   "links": [
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/YORYCB",
+     "native": "Yoruba Contemporary Bible",
+     "row": "Yoruba Contemporary Bible\nYORYCB\nBíbélì Mímọ́ ní Èdè Yorùbá Òde-Òní\nRead\nStudy\nDownload\nPrint on Demand\nBiblica · 2017 · Nigeria",
+     "title": "Yoruba Contemporary Bible"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/YORBSN.31308_FCBH_NT_N",
+     "native": "The Bible in Yoruba",
+     "row": "The Bible in Yoruba\nYORBSN.31308\nBibeli Mimọ (BM)\nAudio · New Testament (FCBH)\n2004 · Nigeria",
+     "title": "The Bible in Yoruba"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/YORBSN_DAVR_FB_N",
+     "native": "The Bible in Yoruba",
+     "row": "The Bible in Yoruba\nYORBSN\nBibeli Mimọ (BM)\nAudio · Full Bible (Davar Partners)\n2004 · Nigeria",
+     "title": "The Bible in Yoruba"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/YOROBV_FCBH_NT_D",
+     "native": "Okun New Testament",
+     "row": "Okun New Testament\nYOROBV\nAudio · New Testament (FCBH)\nNigeria",
+     "title": "Okun New Testament"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/YORBIB_DAVR_FB_N",
+     "native": "Biblica® Open Yoruba Contemporary Bible 2017",
+     "row": "Biblica® Open Yoruba Contemporary Bible 2017\nYORBIB\nBiblica® ní oore ọ̀fẹ́ láti lo Bíbélì Mímọ́ ní Èdè Yorùbá Òde-Òní\nAudio · Full Bible (Davar Partners)\nNigeria",
+     "title": "Biblica® Open Yoruba Contemporary Bible 2017"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/YOROLD.18623_DAVR_FB_N",
+     "native": "Old Yoruba Bible",
+     "row": "Old Yoruba Bible\nYOROLD.18623\nBibeli Memo\nAudio · Full Bible (Davar Partners)\n1879 · Nigeria",
+     "title": "Old Yoruba Bible"
+    }
+   ]
+  },
+  "Films": {
+   "count": 12,
+   "links": [
+    {
+     "cells": [
+      "JESUS\nÈdè Yorùbá",
+      "Jesus Film Project",
+      "2:07:53"
+     ],
+     "href": "https://dbs.org/video/jesus/yor_yoruba_jesus",
+     "native": "",
+     "row": "JESUS\nÈdè Yorùbá\n\tJesus Film Project\t2:07:53",
+     "title": "JESUS"
+    },
+    {
+     "cells": [
+      "Story of Jesus for Children\nÈdè Yorùbá",
+      "Jesus Film Project",
+      "1:08:08"
+     ],
+     "href": "https://dbs.org/video/storyjesus/yor_yoruba_story_of_jesus_for_children",
+     "native": "",
+     "row": "Story of Jesus for Children\nÈdè Yorùbá\n\tJesus Film Project\t1:08:08",
+     "title": "Story of Jesus for Children"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of John\nÈdè Yorùbá",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-john/yor_yoruba_john",
+     "native": "",
+     "row": "LUMO: The Gospel of John\nÈdè Yorùbá\n\tLUMO Project\t",
+     "title": "LUMO: The Gospel of John"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Luke\nÈdè Yorùbá",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-luke/yor_yoruba_luke",
+     "native": "",
+     "row": "LUMO: The Gospel of Luke\nÈdè Yorùbá\n\tLUMO Project\t",
+     "title": "LUMO: The Gospel of Luke"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Mark\nÈdè Yorùbá",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-mark/yor_yoruba_mark",
+     "native": "",
+     "row": "LUMO: The Gospel of Mark\nÈdè Yorùbá\n\tLUMO Project\t",
+     "title": "LUMO: The Gospel of Mark"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Matthew\nÈdè Yorùbá",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-matthew/yor_yoruba_matthew",
+     "native": "",
+     "row": "LUMO: The Gospel of Matthew\nÈdè Yorùbá\n\tLUMO Project\t",
+     "title": "LUMO: The Gospel of Matthew"
+    },
+    {
+     "cells": [
+      "LUMO: Acts of the Apostles\nÈdè Yorùbá",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-acts/yor_yoruba_acts",
+     "native": "",
+     "row": "LUMO: Acts of the Apostles\nÈdè Yorùbá\n\tLUMO Project\t",
+     "title": "LUMO: Acts of the Apostles"
+    },
+    {
+     "cells": [
+      "LUMO: The Covenant\nÈdè Yorùbá",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-covenant/yor_yoruba_covenant",
+     "native": "",
+     "row": "LUMO: The Covenant\nÈdè Yorùbá\n\tLUMO Project\t",
+     "title": "LUMO: The Covenant"
+    },
+    {
+     "cells": [
+      "iBible: Salvation Story\nÈdè Yorùbá",
+      "iBible: Salvation Story",
+      "9:19"
+     ],
+     "href": "https://dbs.org/video/ibible/yor-yoruba-ibible_salvation",
+     "native": "",
+     "row": "iBible: Salvation Story\nÈdè Yorùbá\n\tiBible: Salvation Story\t9:19",
+     "title": "iBible: Salvation Story"
+    },
+    {
+     "cells": [
+      "The Visual Bible: Matthew\nÈdè Yorùbá",
+      "Visual Bible Int.",
+      "4:12:04"
+     ],
+     "href": "https://dbs.org/video/matthew/yor-matthew-vb-yoruba",
+     "native": "",
+     "row": "The Visual Bible: Matthew\nÈdè Yorùbá\n\tVisual Bible Int.\t4:12:04",
+     "title": "The Visual Bible: Matthew"
+    },
+    {
+     "cells": [
+      "The Visual Bible: Acts\nÈdè Yorùbá",
+      "Visual Bible Int.",
+      "3:06:31"
+     ],
+     "href": "https://dbs.org/video/acts_vb/yor-acts-vb-yoruba",
+     "native": "",
+     "row": "The Visual Bible: Acts\nÈdè Yorùbá\n\tVisual Bible Int.\t3:06:31",
+     "title": "The Visual Bible: Acts"
+    },
+    {
+     "cells": [
+      "Rescue Project Deaf Gospel\nÈdè Yorùbá",
+      "Jesus Film Project",
+      "28:17"
+     ],
+     "href": "https://dbs.org/video/deafproject/yor_yoruba_rescue_project_deaf_gospel",
+     "native": "",
+     "row": "Rescue Project Deaf Gospel\nÈdè Yorùbá\n\tJesus Film Project\t28:17",
+     "title": "Rescue Project Deaf Gospel"
+    }
+   ]
+  },
+  "Historic Bible (Scans)": {
+   "count": 6,
+   "links": [
+    {
+     "cells": [
+      "Yoruba (1879) Psalms and Portions\nIwe adura Bibeli Mimọ",
+      "1879"
+     ],
+     "href": "https://dbs.org/bibles/historic/Yoruba-1879-Psalms-and-Portions-Iwe-adura-Bibeli-Mimo",
+     "native": "",
+     "row": "Yoruba (1879) Psalms and Portions\nIwe adura Bibeli Mimọ\n\t1879",
+     "title": "Yoruba (1879) Psalms and Portions"
+    },
+    {
+     "cells": [
+      "Yoruba (1887) New Testament\nTestamenti Titun ti Jesu Kristi oluwa ati olugbala wa",
+      "1887"
+     ],
+     "href": "https://dbs.org/bibles/historic/Yoruba-1887-New-Testament-Testamenti-Titun-ti-Jesu-Kristi-oluwa-ati-olugbala-wa",
+     "native": "",
+     "row": "Yoruba (1887) New Testament\nTestamenti Titun ti Jesu Kristi oluwa ati olugbala wa\n\t1887",
+     "title": "Yoruba (1887) New Testament"
+    },
+    {
+     "cells": [
+      "Yoruba (1900) Bible\nYorùbá (1900) Bíbélì Mímọ́",
+      "1900"
+     ],
+     "href": "https://dbs.org/bibles/historic/Yoruba-1900-Bible-Bibeli-Memo",
+     "native": "",
+     "row": "Yoruba (1900) Bible\nYorùbá (1900) Bíbélì Mímọ́\n\t1900",
+     "title": "Yoruba (1900) Bible"
+    },
+    {
+     "cells": [
+      "Yoruba (1959) Genesis Portion\nYorùbá (1959) Apá Genesisi",
+      "1959"
+     ],
+     "href": "https://dbs.org/bibles/historic/Yoruba-1959-Genesis-Portion",
+     "native": "",
+     "row": "Yoruba (1959) Genesis Portion\nYorùbá (1959) Apá Genesisi\n\t1959",
+     "title": "Yoruba (1959) Genesis Portion"
+    },
+    {
+     "cells": [
+      "Yoruba - Bible (Print)\nYorùbá - Bíbélì Mímọ́",
+      "2004"
+     ],
+     "href": "https://dbs.org/bibles/historic/Yoruba-Bible-print",
+     "native": "",
+     "row": "Yoruba - Bible (Print)\nYorùbá - Bíbélì Mímọ́\n\t2004",
+     "title": "Yoruba - Bible (Print)"
+    },
+    {
+     "cells": [
+      "Yoruba - New Testament (Print)\nYorùbá - Màjẹ̀mú Tuntun",
+      "2004"
+     ],
+     "href": "https://dbs.org/bibles/historic/Yoruba-New-Testament-print",
+     "native": "",
+     "row": "Yoruba - New Testament (Print)\nYorùbá - Màjẹ̀mú Tuntun\n\t2004",
+     "title": "Yoruba - New Testament (Print)"
+    }
+   ]
+  },
+  "Links to Other Sites": {
+   "count": 21,
+   "links": [
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=YORBSN",
+     "native": "",
+     "row": "The Bible in Yoruba",
+     "title": "The Bible in Yoruba"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=YORUBS",
+     "native": "",
+     "row": "Yoruba 1960 Edition",
+     "title": "Yoruba 1960 Edition"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=YOROLD",
+     "native": "",
+     "row": "Old Yoruba Bible",
+     "title": "Old Yoruba Bible"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=YORYBA",
+     "native": "",
+     "row": "The Yoruba Reference Bible",
+     "title": "The Yoruba Reference Bible"
+    },
+    {
+     "cells": [],
+     "href": "https://arc.gt/mgxwf?apiSessionId=5f876a492d7f38.62025083",
+     "native": "",
+     "row": "The Story of Jesus for Children",
+     "title": "The Story of Jesus for Children"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/10191",
+     "native": "",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/11181",
+     "native": "",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/10261",
+     "native": "",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/37859",
+     "native": "",
+     "row": "Good News",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/8291",
+     "native": "",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/27720",
+     "native": "",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/66367",
+     "native": "",
+     "row": "Awọn ipin ti Ihinrere Lukes [Portions of Luke]",
+     "title": "Awọn ipin ti Ihinrere Lukes [Portions of Luke]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/35560",
+     "native": "",
+     "row": "Good News",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/40",
+     "native": "",
+     "row": "Words of Life 1",
+     "title": "Words of Life 1"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/41",
+     "native": "",
+     "row": "Words of Life 2",
+     "title": "Words of Life 2"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/37859",
+     "native": "",
+     "row": "Good News",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/27720",
+     "native": "",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/11181",
+     "native": "",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/8291",
+     "native": "",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/10191",
+     "native": "",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/10261",
+     "native": "",
+     "row": "Words of Life",
+     "title": "Words of Life"
+    }
+   ]
+  }
+ }
+}

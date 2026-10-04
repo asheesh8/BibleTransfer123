@@ -1,0 +1,23 @@
+{
+ "verified": "2026-10-04",
+ "alive_files": [
+  "https://bibles.dbs.org/YORYCB/epub/YORYCB.epub",
+  "https://bibles.dbs.org/YORYCB/html_YORYCB.zip",
+  "https://bibles.dbs.org/YORYCB/pdf/YORYCB.pdf",
+  "https://media.dbs.org/audio/grn/yor_GlobalRecordings_yoruba_high.zip",
+  "https://media.dbs.org/audio/grn/yor_GlobalRecordings_yoruba_low.zip",
+  "https://scripture.dbs.org/books/Yoruba-1879-Psalms-and-Portions-Iwe-adura-Bibeli-Mimo.pdf",
+  "https://scripture.dbs.org/books/Yoruba-1887-New-Testament-Testamenti-Titun-ti-Jesu-Kristi-oluwa-ati-olugbala-wa.pdf",
+  "https://scripture.dbs.org/books/Yoruba-1900-Bible-Bibeli-Memo.pdf",
+  "https://scripture.dbs.org/books/Yoruba-1959-Genesis-Portion.pdf",
+  "https://scripture.dbs.org/books/Yoruba-Bible-print.pdf",
+  "https://scripture.dbs.org/books/Yoruba-New-Testament-print.pdf",
+  "https://storysets.s3.amazonaws.com/yor/Yoruba_Nigeria_Storyset.zip"
+ ],
+ "playable_audio_filesets": [
+  "YORBSN.31308_FCBH_NT_N",
+  "YORBSN_DAVR_FB_N",
+  "YOROBV_FCBH_NT_D",
+  "YOROLD.18623_DAVR_FB_N"
+ ]
+}

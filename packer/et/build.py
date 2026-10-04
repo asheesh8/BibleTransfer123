@@ -163,7 +163,7 @@ def card_catalog(catalog, chosen, profile, all_index, sizes=None):
             if kind == "file":
                 for q in ("sd", "hd"):
                     if src.get(q):
-                        label = next((d['label'] for d in r.get('downloads', []) if d['url'] == src[q]), f"Video — {q.upper()}") if r.get('lang') in ('ibo', 'fra', 'amh', 'por') else f"Video — {q.upper()}"
+                        label = next((d['label'] for d in r.get('downloads', []) if d['url'] == src[q]), f"Video — {q.upper()}") if r.get('lang') in ('ibo', 'fra', 'amh', 'por', 'yor') else f"Video — {q.upper()}"
                         files.append({"label": label, "file": secure(src[q]),
                                       "bytes": sizes.get(src[q], 0), "remote": True})
             if kind == "audio-collection" and src.get("sample"):
@@ -178,7 +178,7 @@ def card_catalog(catalog, chosen, profile, all_index, sizes=None):
                                   "bytes": sizes.get(d["url"], 0), "remote": True})
         # A chaptered film saves as a set of chapters, into a folder.
         if play and play["kind"] == "chapters":
-            files.insert(0, {"label": (f"Isi niile {len(play['items'])}" if r.get("lang") == "ibo" else f"Tous les {len(play['items'])} chapitres" if r.get("lang") == "fra" else f"ሁሉም {len(play['items'])} ምዕራፎች" if r.get("lang") == "amh" else f"Todos os {len(play['items'])} capítulos" if r.get("lang") == "por" else f"All {len(play['items'])} chapters"),
+            files.insert(0, {"label": (f"Isi niile {len(play['items'])}" if r.get("lang") == "ibo" else f"Tous les {len(play['items'])} chapitres" if r.get("lang") == "fra" else f"ሁሉም {len(play['items'])} ምዕራፎች" if r.get("lang") == "amh" else f"Todos os {len(play['items'])} capítulos" if r.get("lang") == "por" else f"Gbogbo orí {len(play['items'])}" if r.get("lang") == "yor" else f"All {len(play['items'])} chapters"),
                              "chapters": True,
                              "bytes": (sum(a.nbytes for a in mine.values() if a.n) if local_view
                                        else sum(sizes.get(src["base"] + it["file"], 0)

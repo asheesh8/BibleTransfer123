@@ -484,3 +484,69 @@ preventing retired or excluded original rows from returning. Source captures,
 file probes, archive results and exclusions are retained in
 `catalog/source/dbs-*-portuguese-2026-10-03.json`. Rebuild with
 `python3 packer/build_portuguese.py`, then run `npm run dbs:import`.
+
+## Yoruba — 4 October 2026
+
+The complete rendered DBS Yoruba inventory has 48 rows and 42 unique original
+URLs. The library now has 38 Yoruba cards: 12 films, four playable audio Bible
+editions, three audio collections, six historic scans, one modern text Bible,
+two additional edition directories and ten GRN programme cards. Every original
+URL is represented or has an explicit exclusion. The retired YORBIB audio page
+is excluded; it lists different replacement editions. The blocked arc.gt short
+link is excluded, while its children's film is retained through the working
+DBS film page. Four legacy find.bible query links were resolved through the
+publisher's current Yoruba search results.
+
+The UI has 411 Yoruba strings, native resource titles, native download labels,
+and 66 published Yoruba book names. Phone file instructions retain the English
+names users may see on their devices, including Files, Downloads and On My
+iPhone. “Tí fáìlì náà kò bá ṣí” explicitly means “if the file does not open”.
+The wording is a translation draft requiring native-speaker review; passing
+formatter tests is not native-speaker certification. The separate computer
+screenshot guide and privacy notice remain English, with an English disclosure.
+
+Scope is preserved: the Okun New Testament is labeled Okun; Iyara/Ijumu, Abunu,
+Aworo, Ekiti, Igbomina and Yagba programmes retain their regional identity.
+The GRN collection has all 171 recordings, and its ten DBS-listed programme
+cards cover 170 of them. The additional recording, programme 68155, is also
+included: GRN identifies it as Christian stories and teaching, rather than
+public-service material. Story of Jesus has nine MP3 files; StoryRunners has
+38 stories followed by ten songs, labeled separately. Historic Genesis and
+Psalms/portions are not described as complete Bibles.
+
+All 2,898 canonical chapter URLs in four audio Bible editions were checked.
+2,883 returned valid audio. The old 1879 recording lacks 1 Chronicles 1–15;
+the DBS selector starts at chapter 16 and the app disables the missing options,
+automatically selecting 16. Its chapter save flow uses the same selection.
+The other three audio filesets have no missing chapter URLs. Of 3,388 binary
+range probes in total, 3,125 returned recognized file signatures, 248 refused
+the non-browser request, and 15 returned 404 (those same missing chapters).
+Protected requests are retained only where published in the observed DBS UI;
+they are not counted as valid binary probes.
+
+The actual modern Bible HTML ZIP and EPUB downloaded through the browser and
+passed full archive CRC checks; both cover 66 books. Both GRN quality ZIPs
+also downloaded and passed CRC checks for all 171 MP3s, including MP3 signatures
+and matching high-quality filenames. Large unverified film, historic and Bible
+audio bundles remain available through the original DBS page rather than being
+promoted as verified app bundle downloads. Individual published files remain
+available. Browser verification loaded all 12 film players with media metadata
+and no media errors, played samples from all four Bible audio editions, loaded
+all three audio collections, and checked regional programme samples. These
+checks do not mean every recording was watched or listened to in full.
+
+Search, film filtering, native help, the Android-to-iPhone guide, scoped email
+links and copy acknowledgment were checked. The browser clipboard readback was
+not reliable, so copy verification relies on the visible acknowledgment and
+existing clipboard instrumentation tests. The chapter save flow fetched the
+selected 1 Chronicles 16 MP3 and reached its native browser-download handoff;
+it is not described as a verified archive download. A phone-sized layout has
+no horizontal overflow. The scoped catalogue compresses to about 26 KB.
+
+The existing 1,192 resource records are unchanged. Existing theology curation
+remains in force; no identified LGBTQ-affirming edition or theology was added.
+This is an edition/source check, not a verse-by-verse theological assessment.
+Exact publisher exceptions and source exclusions are Yoruba-only and survive
+fresh rendered imports. Rebuild with `python3 packer/build_yoruba.py`, then
+`npm run dbs:import`. Audits are retained in
+`catalog/source/dbs-*-yoruba-2026-10-04.json`.

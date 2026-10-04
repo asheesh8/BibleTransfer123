@@ -15,6 +15,17 @@
   var CHANNELS = ['email', 'copy_link', 'native_share', 'nearby', 'bluetooth', 'wifi',
     'sd_card', 'usb', 'whatsapp', 'telegram', 'facebook', 'sms', 'unknown'];
   var COPY = {
+    yo: {
+ "title": "Àwọn kúkì àti àṣírí rẹ",
+ "body": "Pẹ̀lú ìyọ̀nda rẹ, a ń lo ibi ìpamọ́ ẹ̀rọ aṣàwákiri láti ka ìbẹ̀wò, ohun tí a lò, ọ̀nà tí a gbà pín àti ìbẹ̀wò tó wá láti ìjápọ̀ tí a pín. Ìròyìn lè ní orílẹ̀-èdè rẹ àti ojúlé tí o ti wá. A ń pa dátà náà mọ́ fún ọjọ́ 90. A kò lè rí àwọn ẹni tí o ránṣẹ́ sí, ìfiránṣẹ́ àṣírí rẹ tàbí ibi tí o fi ìjápọ̀ tí o da kọ sí.",
+ "accept": "Gba ìṣirò láàyè",
+ "reject": "Má gba ìṣirò láàyè",
+ "settings": "Ètò àwọn kúkì",
+ "details": "Ka àlàyé àṣírí",
+ "enabled": "Ìṣirò ti wà ní ṣíṣí.",
+ "disabled": "Ìṣirò ti wà ní pípa.",
+ "signal": "Ẹ̀rọ aṣàwákiri rẹ ti fi àṣàyàn àṣírí ránṣẹ́. Ìṣirò yóò wà ní pípa."
+},
     pt: {
   "title": "Cookies e privacidade",
   "body": "Com sua permissão, usamos o armazenamento do navegador para contar visitas, recursos utilizados, formas de compartilhar e visitas que vêm de links compartilhados. Os relatórios podem incluir seu país e o site de origem. Guardamos os dados por 90 dias. Não temos acesso aos destinatários, às mensagens privadas nem ao local onde você colou um link copiado.",

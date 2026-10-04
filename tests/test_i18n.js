@@ -19,9 +19,9 @@ function harness(elements = {}, scope = null) {
 }
 const placeholders = value => [...value.matchAll(/\{(\w+)\}/g)].map(match => match[1]).sort();
 
-test('all twenty-three languages retain formatter variables and render escaped strings', () => {
+test('all twenty-four languages retain formatter variables and render escaped strings', () => {
   const { ET, dictionaries, attributes } = harness();
-  assert.equal(ET.i18n.langs.length, 23);
+  assert.equal(ET.i18n.langs.length, 24);
   for (const language of ET.i18n.langs) {
     ET.i18n.set(language.code);
     assert.equal(attributes.dir, language.dir);
@@ -121,7 +121,7 @@ test('untranslated copy is marked as English and changes back when translated', 
 });
 
  test('new shared libraries initialize in their native interface without a stored preference', () => {
-  for (const scope of [{lang: 'orm', ui: 'om'}, {lang: 'luo', ui: 'luo'}, {lang: 'ibo', ui: 'ig'}, {lang: 'fra', ui: 'fr'}, {lang: 'amh', ui: 'am'}, {lang: 'por', ui: 'pt'}]) {
+  for (const scope of [{lang: 'orm', ui: 'om'}, {lang: 'luo', ui: 'luo'}, {lang: 'ibo', ui: 'ig'}, {lang: 'fra', ui: 'fr'}, {lang: 'amh', ui: 'am'}, {lang: 'por', ui: 'pt'}, {lang: 'yor', ui: 'yo'}]) {
     const {ET, dictionaries, attributes} = harness({}, scope);
     assert.equal(ET.i18n.current(), scope.ui);
     ET.i18n.apply();
@@ -172,4 +172,17 @@ test('Portuguese covers the controls, help, sharing and singular resource counts
     assert.ok(dictionaries.pt[key], `Portuguese lacks ${key}`);
   }
   assert.equal(ET.i18n.meta('pt').native, 'Português');
+});
+
+test('Yoruba covers every interface and help key with usable file wording', () => {
+  const { ET, dictionaries } = harness();
+  ET.i18n.set('yo');
+  for (const key of Object.keys(dictionaries.pt)) assert.ok(dictionaries.yo[key], 'Yoruba fallback: ' + key);
+  assert.equal(ET.i18n.t('help.android.4.h'), 'Tí fáìlì náà kò bá ṣí');
+  assert.match(ET.i18n.t('help.ios.openfile.p'), /Tí fáìlì náà kò bá ṣí/);
+  assert.equal(ET.i18n.t('lib.countall', { n: 1 }), 'Ohun 1');
+  assert.equal(ET.i18n.t('lib.countall', { n: 2 }), 'Ohun 2');
+  assert.equal(ET.i18n.t('item.chapter', { n: 3 }), 'Orí 3');
+  assert.equal(ET.i18n.meta('yo').native, 'Èdè Yorùbá');
+  assert.match(ET.i18n.t('route.computer-android.2.p'), /File transfer/);
 });

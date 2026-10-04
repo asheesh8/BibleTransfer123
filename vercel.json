@@ -9,6 +9,8 @@
     "api/*.py": { "includeFiles": "packer/analytics.py" }
   },
   "rewrites": [
+    { "source": "/yoruba", "destination": "/yoruba/index.html" },
+    { "source": "/yor", "destination": "/yoruba/index.html" },
     { "source": "/admin", "destination": "/admin/index.html" },
     { "source": "/privacy", "destination": "/privacy.html" },
     { "source": "/english", "destination": "/english/index.html" },

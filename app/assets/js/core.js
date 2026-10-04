@@ -456,7 +456,7 @@ window.ET = (function () {
      English title and heard Sindhi. Choosing a language picks both: English
      shows English films, اردو shows Urdu, سنڌي shows Sindhi. The library can
      still browse the others on purpose. */
-  var CONTENT = { pt: 'por', am: 'amh', fr: 'fra', en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', zul: 'zul', mas: 'mas', kik: 'kik', hi: 'hin', mr: 'mar', lg: 'lug', luo: 'luo', om: 'orm', ig: 'ibo', pa: 'pan', pnb: 'pnb', ne: 'npi' };
+  var CONTENT = { yo: 'yor', pt: 'por', am: 'amh', fr: 'fra', en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', zul: 'zul', mas: 'mas', kik: 'kik', hi: 'hin', mr: 'mar', lg: 'lug', luo: 'luo', om: 'orm', ig: 'ibo', pa: 'pan', pnb: 'pnb', ne: 'npi' };
   function contentCode(ui) { return CONTENT[ui] || 'eng'; }
   function contentLang() {
     var scope = libraryScope();
@@ -485,6 +485,74 @@ window.ET = (function () {
       [65,'Jude',1],[66,'Revelation',22]]
   };
   var LOCAL_BOOKS = {
+    yo: {
+ "Genesis": "Gẹnẹsisi",
+ "Exodus": "Eksodu",
+ "Leviticus": "Lefitiku",
+ "Numbers": "Numeri",
+ "Deuteronomy": "Deuteronomi",
+ "Joshua": "Joṣua",
+ "Judges": "Onidajọ",
+ "Ruth": "Rutu",
+ "1Samuel": "1 Samuẹli",
+ "2Samuel": "2 Samuẹli",
+ "1Kings": "1 Ọba",
+ "2Kings": "2 Ọba",
+ "1Chronicles": "1 Kronika",
+ "2Chronicles": "2 Kronika",
+ "Ezra": "Esra",
+ "Nehemiah": "Nehemiah",
+ "Esther": "Esteri",
+ "Job": "Jobu",
+ "Psalms": "Saamu",
+ "Proverbs": "Òwe",
+ "Ecclesiastes": "Oniwaasu",
+ "SongofSongs": "Orin Solomoni",
+ "Isaiah": "Isaiah",
+ "Jeremiah": "Jeremiah",
+ "Lamentations": "Ẹkún Jeremiah",
+ "Ezekiel": "Esekiẹli",
+ "Daniel": "Daniẹli",
+ "Hosea": "Hosea",
+ "Joel": "Joẹli",
+ "Amos": "Amosi",
+ "Obadiah": "Obadiah",
+ "Jonah": "Jona",
+ "Micah": "Mika",
+ "Nahum": "Nahumu",
+ "Habakkuk": "Habakuku",
+ "Zephaniah": "Sefaniah",
+ "Haggai": "Hagai",
+ "Zechariah": "Sekariah",
+ "Malachi": "Malaki",
+ "Matthew": "Matiu",
+ "Mark": "Marku",
+ "Luke": "Luku",
+ "John": "Johanu",
+ "Acts": "Ìṣe àwọn Aposteli",
+ "Romans": "Romu",
+ "1Corinthians": "1 Kọrinti",
+ "2Corinthians": "2 Kọrinti",
+ "Galatians": "Galatia",
+ "Ephesians": "Efesu",
+ "Philippians": "Filipi",
+ "Colossians": "Kolose",
+ "1Thessalonians": "1 Tẹsalonika",
+ "2Thessalonians": "2 Tẹsalonika",
+ "1Timothy": "1 Timotiu",
+ "2Timothy": "2 Timotiu",
+ "Titus": "Titu",
+ "Philemon": "Filemoni",
+ "Hebrews": "Heberu",
+ "James": "Jakọbu",
+ "1Peter": "1 Peteru",
+ "2Peter": "2 Peteru",
+ "1John": "1 Johanu",
+ "2John": "2 Johanu",
+ "3John": "3 Johanu",
+ "Jude": "Juda",
+ "Revelation": "Ìfihàn"
+},
     pt: {
   "Genesis": "Gênesis",
   "Exodus": "Êxodo",
