@@ -15,6 +15,17 @@
   var CHANNELS = ['email', 'copy_link', 'native_share', 'nearby', 'bluetooth', 'wifi',
     'sd_card', 'usb', 'whatsapp', 'telegram', 'facebook', 'sms', 'unknown'];
   var COPY = {
+    ln: {
+ "title": "Cookies mpe bomoi na yo ya privé",
+ "body": "Soki ondimi, tokosalela esika ya kobomba na navigateur mpo na kotánga ba visites, biloko oyo bato basaleli, ndenge batindi yango mpe ba visites oyo euti na ba liens oyo batindi. Rapport ekoki kozala na mboka, région, appareil mpe navigateur. Tozwaka te ba fichiers oyo otindi, maloba oyo oluki to bato oyo otindeli. Okoki kobongola oyo oponi ntango nyonso.",
+ "accept": "Ndima",
+ "reject": "Te, matɔndi",
+ "settings": "Ba réglages ya cookies",
+ "details": "Makambo ya ba rapports ya mosala",
+ "enabled": "Kotinda ba rapports endimami.",
+ "disabled": "Kotinda ba rapports endimami te.",
+ "signal": "Ba réglages ya privé ya navigateur na yo epekisi kotinda ba rapports."
+},
     pcm: {
  "title": "Cookies and your privacy",
  "body": "If you allow am, we go use browser storage to count visits, di things wey people use, how dem share am and visits wey come from shared links. Di report fit include country, region, device and browser. We no collect di files wey you send, di words wey you search, or di people wey you share with. You fit change your choice anytime.",

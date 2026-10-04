@@ -602,3 +602,80 @@ Publisher exceptions are exact URLs scoped only to Nigerian Pidgin. Rebuild
 with `python3 packer/build_nigerian_pidgin.py`, then `npm run dbs:import`.
 Audits and browser evidence are retained in
 `catalog/source/dbs-*-nigerian-pidgin-2026-10-04.json`.
+
+## Lingala — 4 October 2026
+
+The complete rendered DBS Lingala inventory contains 46 rows and 44 unique
+source URLs. It produces 40 resources: 12 films, two audio Bibles, a full text
+Bible, two historic scans, two audio collections, 20 GRN programme cards and
+one edition directory. Two find.bible references are aliases on the matching
+audio Bibles. Duplicate rows are folded. The retired LINBIB audio page is
+excluded rather than substituted with a different edition; the public-health
+AIDS education programme 81699 is excluded under the Christian-resource scope.
+All original URLs are either represented (including aliases) or explained.
+
+The interface has 411 Lingala strings covering controls, help, sharing,
+transfer routes and singular counts, plus a localized privacy notice, native
+resource/download titles and 66 published Bible book names. “Soki fichier
+efungwami te” explicitly refers to a file that does not open. Device labels
+such as Files, Downloads, On My iPhone and File Transfer remain recognizable.
+This is a translation draft requiring native-speaker review, not a certified
+translation. The separate computer screenshot guide remains English and is
+explicitly disclosed. The language picker, home page and /lingala, /lin and
+/ln routes map UI code ln to content code lin.
+
+Both LINDRC and LINBSC audio selectors contain all 66 Bible books, despite the
+older DBS New Testament labels. Both editions divide Malachi into three
+chapters; this was confirmed in DBS's own selectors and is preserved through
+build and playback. All 1,188 published MP3 chapter URLs per edition returned
+recognized binary signatures. The extra canonical Malachi 4 probes returned
+404 and are not exposed as missing chapters in these editions. App samples
+played from Genesis 1, Malachi 3 and Revelation 22 for both Bibles. Revelation
+22 from LINDRC also downloaded through the app save flow as a 2,185,086-byte
+MP3 with a valid ID3 header and a Lingala filename.
+
+All 12 film players loaded with finite durations, including the final part of
+each of the eight chaptered/partitioned films. Their playlists retain all
+194 published parts. JESUS was played through the native video controls.
+This checks representative playback and boundaries, not every complete film.
+The separate Magdalena director's cut resolves to the observed Mux MP4.
+Additional formats remain accessible from the DBS film pages; large film
+bundles were not downloaded in full.
+
+The GRN collection retains 332 Christian recordings from 17 programmes,
+excluding the 13 public-health tracks. Its original aggregate ZIP includes
+those excluded tracks and is not advertised as an app download. The related
+Kiyansi: Banningville programme retains its two mixed-language recordings
+with explicit scope and descriptions. For the Monjombo and Pomo programmes,
+only the one explicitly identified Lingala song file from each is retained.
+The other-language files are not presented as Lingala. These four additional
+files plus nine Story of Jesus recordings give 345 unique non-Bible MP3 URLs.
+The collection and all 20 programme players loaded first/last samples with
+finite durations; most were played, with playback states retained in evidence.
+GRN programme 34561's publisher page was blocked by the browser, so its card
+uses the working DBS collection/recording and preserves the original listed
+URL for inventory coverage without promoting a blocked publisher link.
+
+The HTML Bible ZIP and EPUB downloaded through the browser and passed full
+CRC checks, each with 66 books. Story of Jesus ZIP likewise passed CRC and
+signature checks for all eight part MP3s. inScript rendered Lingala Scripture,
+and the linked YouVersion edition page loaded with the correct native Bible
+name. PDF signatures were valid for the modern Bible and both historic scans.
+The in-app browser's native PDF preview was blank, so native PDF rendering
+is not claimed; full PDF links and the working inScript reader are available.
+Of 3,753 binary Range probes, 3,540 returned recognized signatures, 211 refused
+non-browser requests with HTTP 403, and two were the unused Malachi 4 URLs.
+Protected responses are not counted as successful binary checks.
+
+Search, the 12-film filter, native save flow, library/resource clipboard links,
+scoped email links, help, nearby role controls and the computer-to-Android
+transfer guide were checked. The regular browser viewport had no horizontal
+page overflow. No phone-sized layout or two-device transfer is claimed.
+Existing theology curation remains in force; no identified LGBTQ-affirming
+edition or theology was added. This is an edition/source check, not a
+verse-by-verse theological assessment. All 1,245 existing resource records
+are unchanged. Exact publisher exceptions and exclusions apply only to
+Lingala. Rebuild with `python3 packer/build_lingala.py`, then `npm run dbs:import`.
+Audits and browser evidence are retained in
+`catalog/source/dbs-*-lingala-2026-10-04.json` and
+`catalog/source/dbs-lingala-external-2026-10-04.json`.

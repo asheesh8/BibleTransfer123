@@ -282,7 +282,7 @@
         var tail = f.file.split('?')[0].split('/').pop();
         out.push({ label: f.label, bytes: f.bytes, many: [{
           url: f.file, size: f.bytes,
-          name: ET.save.clean(((r.lang === 'yor' || r.lang === 'pcm') ? ET.displayTitle(r) : r.title) + (/^(PDF|Read)$/i.test(f.label) ? '' : ' - ' + f.label)) +
+          name: ET.save.clean(((r.lang === 'yor' || r.lang === 'pcm' || r.lang === 'lin') ? ET.displayTitle(r) : r.title) + (/^(PDF|Read)$/i.test(f.label) ? '' : ' - ' + f.label)) +
                 (ET.save.extOf(tail) || '')
         }] });
       }

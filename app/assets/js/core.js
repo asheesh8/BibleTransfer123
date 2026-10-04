@@ -456,7 +456,7 @@ window.ET = (function () {
      English title and heard Sindhi. Choosing a language picks both: English
      shows English films, اردو shows Urdu, سنڌي shows Sindhi. The library can
      still browse the others on purpose. */
-  var CONTENT = { pcm: 'pcm', yo: 'yor', pt: 'por', am: 'amh', fr: 'fra', en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', zul: 'zul', mas: 'mas', kik: 'kik', hi: 'hin', mr: 'mar', lg: 'lug', luo: 'luo', om: 'orm', ig: 'ibo', pa: 'pan', pnb: 'pnb', ne: 'npi' };
+  var CONTENT = { ln: 'lin', pcm: 'pcm', yo: 'yor', pt: 'por', am: 'amh', fr: 'fra', en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', zul: 'zul', mas: 'mas', kik: 'kik', hi: 'hin', mr: 'mar', lg: 'lug', luo: 'luo', om: 'orm', ig: 'ibo', pa: 'pan', pnb: 'pnb', ne: 'npi' };
   function contentCode(ui) { return CONTENT[ui] || 'eng'; }
   function contentLang() {
     var scope = libraryScope();
@@ -485,6 +485,74 @@ window.ET = (function () {
       [65,'Jude',1],[66,'Revelation',22]]
   };
   var LOCAL_BOOKS = {
+    ln: {
+  "Genesis": "Ebandeli",
+  "Exodus": "Kobima",
+  "Leviticus": "Levitike",
+  "Numbers": "Mitango",
+  "Deuteronomy": "Deteronomi",
+  "Joshua": "Jozue",
+  "Judges": "Bilombe",
+  "Ruth": "Rite",
+  "1Samuel": "1 Samuele",
+  "2Samuel": "2 Samuele",
+  "1Kings": "1 Bakonzi",
+  "2Kings": "2 Bakonzi",
+  "1Chronicles": "1 Masolo ya Kala",
+  "2Chronicles": "2 Masolo ya Kala",
+  "Ezra": "Esidrasi",
+  "Nehemiah": "Neyemi",
+  "Esther": "Ester",
+  "Job": "Yobo",
+  "Psalms": "Banzembo",
+  "Proverbs": "Masese",
+  "Ecclesiastes": "Mosakoli",
+  "SongofSongs": "Loyembo ya Salomo",
+  "Isaiah": "Ezayi",
+  "Jeremiah": "Jeremi",
+  "Lamentations": "Bileli",
+  "Ezekiel": "Ezekieli",
+  "Daniel": "Daniele",
+  "Hosea": "Oze",
+  "Joel": "Joeli",
+  "Amos": "Amosi",
+  "Obadiah": "Abidiasi",
+  "Jonah": "Yona",
+  "Micah": "Mishe",
+  "Nahum": "Naumi",
+  "Habakkuk": "Abakuki",
+  "Zephaniah": "Sofoni",
+  "Haggai": "Aje",
+  "Zechariah": "Zakari",
+  "Malachi": "Malashi",
+  "Matthew": "Matayo",
+  "Mark": "Malako",
+  "Luke": "Luka",
+  "John": "Yoane",
+  "Acts": "Misala ya Bantoma",
+  "Romans": "Barome",
+  "1Corinthians": "1 Bakolinto",
+  "2Corinthians": "2 Bakolinto",
+  "Galatians": "Bagalatia",
+  "Ephesians": "Ba-Efeso",
+  "Philippians": "Bafilipi",
+  "Colossians": "Bakolose",
+  "1Thessalonians": "1 Batesalonika",
+  "2Thessalonians": "2 Batesalonika",
+  "1Timothy": "1 Timote",
+  "2Timothy": "2 Timote",
+  "Titus": "Tito",
+  "Philemon": "Filemo",
+  "Hebrews": "Ba-Ebre",
+  "James": "Jake",
+  "1Peter": "1 Petelo",
+  "2Peter": "2 Petelo",
+  "1John": "1 Yoane",
+  "2John": "2 Yoane",
+  "3John": "3 Yoane",
+  "Jude": "Jide",
+  "Revelation": "Emoniseli"
+},
     pcm: {
   "Genesis": "Jenesis",
   "Exodus": "Exodus",

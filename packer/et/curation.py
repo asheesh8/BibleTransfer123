@@ -199,6 +199,10 @@ def _urls(r):
 def excluded(r):
     """The reason a resource is left out, or None if it stays."""
     title = (r.get("title") or "").strip()
+    if r.get("lang") == "lin":
+        for url in _urls(r):
+            if url in LINGALA_EXCLUDED:
+                return LINGALA_EXCLUDED[url]
     if r.get("lang") == "pcm":
         for url in _urls(r):
             if url in PIDGIN_EXCLUDED:
@@ -306,6 +310,13 @@ PIDGIN_EXTERNAL = set(_PIDGIN_POLICY["urls"])
 PIDGIN_EXCLUDED = _PIDGIN_POLICY["excluded"]
 
 
+# Exact Lingala publisher pages and media from the complete DBS inventory.
+_LINGALA_POLICY = json.loads((pathlib.Path(__file__).resolve().parents[2] /
+    "catalog/source/dbs-lingala-external-2026-10-04.json").read_text())
+LINGALA_EXTERNAL = set(_LINGALA_POLICY["urls"])
+LINGALA_EXCLUDED = _LINGALA_POLICY["excluded"]
+
+
 def _dbs(url):
     """On DBS's servers, and still up there."""
     host = urllib.parse.urlparse(url or "").netloc.lower()
@@ -324,6 +335,7 @@ def _dbs_only(r):
         return (_dbs(url) or (r.get("lang") == "luo" and url in LUO_PUBLISHERS)
                 or (r.get("lang") == "orm" and url in OROMO_EXTERNAL)
                 or (r.get("lang") == "pcm" and url in PIDGIN_EXTERNAL)
+                or (r.get("lang") == "lin" and url in LINGALA_EXTERNAL)
                 or (r.get("lang") == "yor" and url in YORUBA_EXTERNAL)
                 or (r.get("lang") == "por" and url in PORTUGUESE_EXTERNAL)
                 or (r.get("lang") == "amh" and url in AMHARIC_EXTERNAL)
@@ -332,6 +344,7 @@ def _dbs_only(r):
     def allowed_file(url):
         return (_dbs(url) or (r.get("lang") == "orm" and url in OROMO_EXTERNAL)
                 or (r.get("lang") == "pcm" and url in PIDGIN_EXTERNAL)
+                or (r.get("lang") == "lin" and url in LINGALA_EXTERNAL)
                 or (r.get("lang") == "yor" and url in YORUBA_EXTERNAL)
                 or (r.get("lang") == "por" and url in PORTUGUESE_EXTERNAL)
                 or (r.get("lang") == "amh" and url in AMHARIC_EXTERNAL)
@@ -367,7 +380,7 @@ def _dbs_only(r):
 def curate(resources):
     kept, dropped = [], []
     for r in resources:
-        if r.get("lang") in ("fra", "amh", "por", "yor", "pcm") and excluded(r):
+        if r.get("lang") in ("fra", "amh", "por", "yor", "pcm", "lin") and excluded(r):
             dropped.append((r, excluded(r)))
             continue
         d = _dbs_only(r)

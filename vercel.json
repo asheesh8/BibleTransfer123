@@ -9,6 +9,9 @@
     "api/*.py": { "includeFiles": "packer/analytics.py" }
   },
   "rewrites": [
+    { "source": "/lingala", "destination": "/lingala/index.html" },
+    { "source": "/lin", "destination": "/lingala/index.html" },
+    { "source": "/ln", "destination": "/lingala/index.html" },
     { "source": "/nigerian-pidgin", "destination": "/nigerian-pidgin/index.html" },
     { "source": "/pcm", "destination": "/nigerian-pidgin/index.html" },
     { "source": "/pidgin", "destination": "/nigerian-pidgin/index.html" },

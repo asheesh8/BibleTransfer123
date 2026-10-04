@@ -1,0 +1,409 @@
+{
+ "lin": {
+  "Audio Collections": {
+   "count": 2,
+   "links": [
+    {
+     "cells": [
+      "Lingala",
+      "Global Recordings Network",
+      "345 files · 836.1 MB"
+     ],
+     "href": "https://dbs.org/audio/collections/grn/lin_GlobalRecordings_lingala",
+     "native": "",
+     "row": "Lingala\tGlobal Recordings Network\t345 files · 836.1 MB",
+     "title": "Lingala"
+    },
+    {
+     "cells": [
+      "Lingala",
+      "Story of Jesus",
+      "8 files · 123.2 MB"
+     ],
+     "href": "https://dbs.org/audio/collections/soj/lin_StoryJesus_lingala",
+     "native": "",
+     "row": "Lingala\tStory of Jesus\t8 files · 123.2 MB",
+     "title": "Lingala"
+    }
+   ]
+  },
+  "Bibles": {
+   "count": 4,
+   "links": [
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/LINOCB",
+     "native": "Mokanda na Bomoi™ Makomi na se ya bokonz",
+     "row": "Open Lingala Contemporary Bible\nLINOCB\nMokanda na Bomoi™ Makomi na se ya bokonz\nRead\nStudy\nDownload\nPrint on Demand\nBiblica Esalelami na ndingisa ya Biblica · 2002 · DR Congo",
+     "title": "Open Lingala Contemporary Bible"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/LINDRC_DAVR_FB_N",
+     "native": "",
+     "row": "1982 Byokant Ya Sika\nLINDRC\nAudio · Full Bible (Davar Partners)\n1982 · DR Congo",
+     "title": "1982 Byokant Ya Sika"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/LINBIB_DAVR_FB_N",
+     "native": "Biblica® Salela na bonsomi Mokanda na Bomoi™",
+     "row": "Biblica® Open Lingala Contemporary Bible™\nLINBIB\nBiblica® Salela na bonsomi Mokanda na Bomoi™\nAudio · Full Bible (Davar Partners)\nDRC",
+     "title": "Biblica® Open Lingala Contemporary Bible™"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/LINBSC_DAVR_FB_N",
+     "native": "",
+     "row": "The New Testament in Lingala\nLINBSC\nAudio · Full Bible (Davar Partners)\n1942 · DR Congo",
+     "title": "The New Testament in Lingala"
+    }
+   ]
+  },
+  "Films": {
+   "count": 11,
+   "links": [
+    {
+     "cells": [
+      "JESUS\nLingála",
+      "Jesus Film Project",
+      "2:01:44"
+     ],
+     "href": "https://dbs.org/video/jesus/lin_lingala_jesus",
+     "native": "",
+     "row": "JESUS\nLingála\n\tJesus Film Project\t2:01:44",
+     "title": "JESUS"
+    },
+    {
+     "cells": [
+      "Magdalena\nLingála",
+      "Jesus Film Project",
+      "58:24"
+     ],
+     "href": "https://dbs.org/video/magdalena/lin_lingala_magdalena",
+     "native": "",
+     "row": "Magdalena\nLingála\n\tJesus Film Project\t58:24",
+     "title": "Magdalena"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of John\nNgala",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-john/lin_lingala_john",
+     "native": "",
+     "row": "LUMO: The Gospel of John\nNgala\n\tLUMO Project",
+     "title": "LUMO: The Gospel of John"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Luke\nNgala",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-luke/lin_lingala_luke",
+     "native": "",
+     "row": "LUMO: The Gospel of Luke\nNgala\n\tLUMO Project",
+     "title": "LUMO: The Gospel of Luke"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Mark\nNgala",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-mark/lin_lingala_mark",
+     "native": "",
+     "row": "LUMO: The Gospel of Mark\nNgala\n\tLUMO Project",
+     "title": "LUMO: The Gospel of Mark"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Matthew\nNgala",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-matthew/lin_lingala_matthew",
+     "native": "",
+     "row": "LUMO: The Gospel of Matthew\nNgala\n\tLUMO Project",
+     "title": "LUMO: The Gospel of Matthew"
+    },
+    {
+     "cells": [
+      "LUMO: Acts of the Apostles\nNgala",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-acts/lin_lingala_acts",
+     "native": "",
+     "row": "LUMO: Acts of the Apostles\nNgala\n\tLUMO Project",
+     "title": "LUMO: Acts of the Apostles"
+    },
+    {
+     "cells": [
+      "LUMO: The Covenant\nNgala",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-covenant/lin_lingala_covenant",
+     "native": "",
+     "row": "LUMO: The Covenant\nNgala\n\tLUMO Project",
+     "title": "LUMO: The Covenant"
+    },
+    {
+     "cells": [
+      "iBible: Salvation Story\nNgala",
+      "iBible: Salvation Story",
+      "9:17"
+     ],
+     "href": "https://dbs.org/video/ibible/lin-lingala-ibible_salvation",
+     "native": "",
+     "row": "iBible: Salvation Story\nNgala\n\tiBible: Salvation Story\t9:17",
+     "title": "iBible: Salvation Story"
+    },
+    {
+     "cells": [
+      "The Visual Bible: Acts\nNgala",
+      "Visual Bible Int.",
+      "3:08:14"
+     ],
+     "href": "https://dbs.org/video/acts_vb/lin-acts-vb-lingala",
+     "native": "",
+     "row": "The Visual Bible: Acts\nNgala\n\tVisual Bible Int.\t3:08:14",
+     "title": "The Visual Bible: Acts"
+    },
+    {
+     "cells": [
+      "Rescue Project Deaf Gospel\nLingála",
+      "Jesus Film Project",
+      "28:17"
+     ],
+     "href": "https://dbs.org/video/deafproject/lin_lingala_rescue_project_deaf_gospel",
+     "native": "",
+     "row": "Rescue Project Deaf Gospel\nLingála\n\tJesus Film Project\t28:17",
+     "title": "Rescue Project Deaf Gospel"
+    }
+   ]
+  },
+  "Historic Bible (Scans)": {
+   "count": 2,
+   "links": [
+    {
+     "cells": [
+      "Lingala - New Testament (Print)\nLingala Liloba lya sika",
+      "2000"
+     ],
+     "href": "https://dbs.org/bibles/historic/Lingala-New-Testament-print",
+     "native": "",
+     "row": "Lingala - New Testament (Print)\nLingala Liloba lya sika\n\t2000",
+     "title": "Lingala - New Testament (Print)"
+    },
+    {
+     "cells": [
+      "Lingala - Psalms (Print)\nLingala Nzembo",
+      "2000"
+     ],
+     "href": "https://dbs.org/bibles/historic/Lingala-Psalms-print",
+     "native": "",
+     "row": "Lingala - Psalms (Print)\nLingala Nzembo\n\t2000",
+     "title": "Lingala - Psalms (Print)"
+    }
+   ]
+  },
+  "Links to Other Sites": {
+   "count": 27,
+   "links": [
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=LINBSC",
+     "native": "",
+     "row": "The New Testament in Lingala",
+     "title": "The New Testament in Lingala"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=LINDRC",
+     "native": "",
+     "row": "1982 Byokant Ya Sika",
+     "title": "1982 Byokant Ya Sika"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=LINCLV",
+     "native": "",
+     "row": "Lingala Common Language Bible",
+     "title": "Lingala Common Language Bible"
+    },
+    {
+     "cells": [],
+     "href": "https://arc.gt/5vr27?apiSessionId=5f875c09a86740.32480153",
+     "native": "",
+     "row": "Magdalena - Director's Cut",
+     "title": "Magdalena - Director's Cut"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/34561",
+     "native": "",
+     "row": "Becoming a Friend of God",
+     "title": "Becoming a Friend of God"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/1821",
+     "native": "",
+     "row": "Words of Life 1",
+     "title": "Words of Life 1"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/81699",
+     "native": "",
+     "row": "AIDS",
+     "title": "AIDS"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/32210",
+     "native": "",
+     "row": "Good News^",
+     "title": "Good News^"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/22091",
+     "native": "",
+     "row": "Good News w/ LINGALA: West",
+     "title": "Good News w/ LINGALA: West"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82760",
+     "native": "",
+     "row": "Kindoki (Witchcraft)",
+     "title": "Kindoki (Witchcraft)"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/71950",
+     "native": "",
+     "row": "Look, Listen & Live",
+     "title": "Look, Listen & Live"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/71960",
+     "native": "",
+     "row": "Look, Listen & Live 2 Mighty Men of GOD",
+     "title": "Look, Listen & Live 2 Mighty Men of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/74739",
+     "native": "",
+     "row": "Look, Listen & Live 3 Victory through GOD",
+     "title": "Look, Listen & Live 3 Victory through GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/74738",
+     "native": "",
+     "row": "Look, Listen & Live 4 Servants of GOD",
+     "title": "Look, Listen & Live 4 Servants of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/74737",
+     "native": "",
+     "row": "Look, Listen & Live 5 On Trial for GOD",
+     "title": "Look, Listen & Live 5 On Trial for GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/71970",
+     "native": "",
+     "row": "Look, Listen & Live 6 JESUS - Teacher & Healer",
+     "title": "Look, Listen & Live 6 JESUS - Teacher & Healer"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/74736",
+     "native": "",
+     "row": "Look, Listen & Live 7 JESUS - Lord & Saviour",
+     "title": "Look, Listen & Live 7 JESUS - Lord & Saviour"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/71980",
+     "native": "",
+     "row": "Look, Listen & Live 8 Acts of the HOLY SPIRIT",
+     "title": "Look, Listen & Live 8 Acts of the HOLY SPIRIT"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/1820",
+     "native": "",
+     "row": "Words of Life 1",
+     "title": "Words of Life 1"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/13061",
+     "native": "",
+     "row": "Words of Life 2",
+     "title": "Words of Life 2"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/22100",
+     "native": "",
+     "row": "Words of Life 3",
+     "title": "Words of Life 3"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/22101",
+     "native": "",
+     "row": "Words of Life 4",
+     "title": "Words of Life 4"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/34561",
+     "native": "",
+     "row": "Becoming a Friend of God",
+     "title": "Becoming a Friend of God"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/1821",
+     "native": "",
+     "row": "Words of Life 1",
+     "title": "Words of Life 1"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/9981",
+     "native": "",
+     "row": "Words of Life w/ LINGALA",
+     "title": "Words of Life w/ LINGALA"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/24940",
+     "native": "",
+     "row": "Words of Life w/ LINGALA songs",
+     "title": "Words of Life w/ LINGALA songs"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/2460",
+     "native": "",
+     "row": "Words of Life w/ songs in LINGALA",
+     "title": "Words of Life w/ songs in LINGALA"
+    }
+   ]
+  }
+ }
+}
