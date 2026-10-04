@@ -199,6 +199,10 @@ def _urls(r):
 def excluded(r):
     """The reason a resource is left out, or None if it stays."""
     title = (r.get("title") or "").strip()
+    if r.get("lang") == "pcm":
+        for url in _urls(r):
+            if url in PIDGIN_EXCLUDED:
+                return PIDGIN_EXCLUDED[url]
     if r.get("lang") == "yor":
         for url in _urls(r):
             if url in YORUBA_EXCLUDED:
@@ -296,6 +300,12 @@ YORUBA_EXTERNAL = set(_YORUBA_POLICY["urls"])
 YORUBA_EXCLUDED = _YORUBA_POLICY["excluded"]
 
 
+_PIDGIN_POLICY = json.loads((pathlib.Path(__file__).resolve().parents[2] /
+    "catalog/source/dbs-nigerian-pidgin-external-2026-10-04.json").read_text())
+PIDGIN_EXTERNAL = set(_PIDGIN_POLICY["urls"])
+PIDGIN_EXCLUDED = _PIDGIN_POLICY["excluded"]
+
+
 def _dbs(url):
     """On DBS's servers, and still up there."""
     host = urllib.parse.urlparse(url or "").netloc.lower()
@@ -313,6 +323,7 @@ def _dbs_only(r):
     def allowed(url):
         return (_dbs(url) or (r.get("lang") == "luo" and url in LUO_PUBLISHERS)
                 or (r.get("lang") == "orm" and url in OROMO_EXTERNAL)
+                or (r.get("lang") == "pcm" and url in PIDGIN_EXTERNAL)
                 or (r.get("lang") == "yor" and url in YORUBA_EXTERNAL)
                 or (r.get("lang") == "por" and url in PORTUGUESE_EXTERNAL)
                 or (r.get("lang") == "amh" and url in AMHARIC_EXTERNAL)
@@ -320,6 +331,7 @@ def _dbs_only(r):
                 or (r.get("lang") == "ibo" and url in IGBO_EXTERNAL))
     def allowed_file(url):
         return (_dbs(url) or (r.get("lang") == "orm" and url in OROMO_EXTERNAL)
+                or (r.get("lang") == "pcm" and url in PIDGIN_EXTERNAL)
                 or (r.get("lang") == "yor" and url in YORUBA_EXTERNAL)
                 or (r.get("lang") == "por" and url in PORTUGUESE_EXTERNAL)
                 or (r.get("lang") == "amh" and url in AMHARIC_EXTERNAL)
@@ -355,7 +367,7 @@ def _dbs_only(r):
 def curate(resources):
     kept, dropped = [], []
     for r in resources:
-        if r.get("lang") in ("fra", "amh", "por", "yor") and excluded(r):
+        if r.get("lang") in ("fra", "amh", "por", "yor", "pcm") and excluded(r):
             dropped.append((r, excluded(r)))
             continue
         d = _dbs_only(r)

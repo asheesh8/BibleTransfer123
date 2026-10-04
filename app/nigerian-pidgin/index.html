@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pcm" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<base href="../">
+<title>Bible Library for Naija Pidgin</title>
+<meta name="description" content="Bible, films and Christian recordings for Naija Pidgin.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="assets/icon/apple-touch-icon.png">
+<link rel="icon" href="assets/icon/favicon-32.png" sizes="32x32">
+<meta name="theme-color" content="#4E1F64">
+<link rel="stylesheet" href="assets/css/app.css">
+<link rel="stylesheet" href="assets/css/consent.css">
+<script>
+window.ET_SHARED_LIBRARY = {"lang":"pcm","ui":"pcm","slug":"nigerian-pidgin","name":"Nigerian Pidgin","native":"Naija Pidgin"};
+// Older installed shells may not know this newly added interface. Refresh
+// only after the current worker has installed and can serve the new strings.
+if ('serviceWorker' in navigator) navigator.serviceWorker.addEventListener('controllerchange', function () {
+  if (document.documentElement.lang !== window.ET_SHARED_LIBRARY.ui) location.reload();
+});
+try {
+  var theme = localStorage.getItem("et.theme");
+  if (theme) document.documentElement.setAttribute("data-theme", theme);
+} catch (e) {}
+</script>
+</head>
+<body>
+<main class="wrap" id="main">
+  <section class="shared-hero">
+    <p class="eyebrow" id="shared-badge">Only Naija Pidgin</p>
+    <h1 id="shared-title" dir="auto">Bible Library for Naija Pidgin</h1>
+    <p class="muted" id="shared-lead">Di things for dis library dey for Naija Pidgin.</p>
+    <div class="btn-row shared-actions">
+      <a class="btn green" id="email-library" href="#">Send dis library by email</a>
+      <button class="btn ghost" id="copy-library" type="button">Copy di link</button>
+    </div>
+    <p class="sr" id="copy-status" aria-live="polite"></p>
+  </section>
+
+  <div class="search" style="margin-bottom:.9rem">
+    <span id="search-ico"></span>
+    <input type="search" id="q" data-i18n-placeholder="lib.search" placeholder="Search with name" autocomplete="off" enterkeyhint="search">
+  </div>
+  <p class="flabel" data-i18n="lib.kind">Kind of thing</p>
+  <div class="filters" id="type-filters" role="group" data-i18n-aria="lib.kind" aria-label="Kind of thing"></div>
+  <div id="bulk-controls"></div>
+  <p class="muted" id="count" style="margin:1rem 0 .6rem"></p>
+  <div class="row-list" id="results"></div>
+  <div id="empty" hidden class="card center" style="padding:2rem 1.2rem">
+    <div id="empty-art"></div>
+    <h3 data-i18n="lib.none">We no find wetin match your search</h3>
+    <p class="muted" data-i18n="lib.none.sub">Try shorter word, or tap All.</p>
+    <button class="btn ghost" id="reset" data-i18n="lib.clear">Clear am</button>
+  </div>
+  <div class="foot-nav"></div>
+</main>
+<div id="bulk-dock" class="bulk-dock" hidden></div>
+<script defer src="data/catalog-pcm.js"></script>
+<script defer src="assets/js/core.js"></script>
+<script defer src="assets/js/art.js"></script>
+<script defer src="assets/js/i18n.js"></script>
+<script defer src="assets/js/analytics.js"></script>
+<script defer src="assets/js/save.js"></script>
+<script defer src="assets/js/shared-library.js"></script>
+<script defer src="assets/js/library.js"></script>
+</body>
+</html>

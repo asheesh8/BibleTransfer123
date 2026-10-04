@@ -550,3 +550,55 @@ Exact publisher exceptions and source exclusions are Yoruba-only and survive
 fresh rendered imports. Rebuild with `python3 packer/build_yoruba.py`, then
 `npm run dbs:import`. Audits are retained in
 `catalog/source/dbs-*-yoruba-2026-10-04.json`.
+
+## Nigerian Pidgin — 4 October 2026
+
+All 15 sources in the rendered DBS Nigerian Pidgin inventory are represented:
+one text Bible, ten films, two audio collections and two GRN programmes.
+The GRN collection has 14 recordings; programmes 33050 and 33051 contain
+12 and two of those same recordings. Story of Jesus has the whole recording
+and eight separate parts. There are 23 unique MP3 URLs across these collections.
+The film players preserve all 271 published chapter URLs and the separate
+iBible film. DBS source links retain access to additional bundle formats.
+
+The interface has 411 Nigerian Pidgin strings, native resource and recording
+titles, native download labels, a localized privacy notice, and 66 book names
+from the published Bible archive. Phone instructions retain recognizable device
+labels such as Files, Downloads, File Transfer and On My iPhone. “If di file
+no open” explicitly refers to the file. The interface is a translation draft
+requiring native-speaker review; it is not certified by a native reviewer.
+The separate computer screenshot guide remains English, with a disclosure.
+
+The Bible HTML ZIP downloaded through the browser and passed complete CRC
+checks. It contains 66 books and all 31 verses of Genesis 1. The DBS legacy
+app-json-study reader omitted Genesis 1:3–25 from its rendered output, so the
+card uses DBS's listed inScript reader and the complete HTML archive instead.
+inScript rendered Nigerian Pidgin Scripture successfully. The downloadable
+edition keeps DBS's 2012 date. DBS's linked YouVersion page and both Android
+app pages loaded; current Wycliffe publisher pages identify a 2020 text edition,
+which is not claimed to be the same edition as the 2012 DBS archive.
+
+The GRN low-quality ZIP and Story of Jesus ZIP downloaded through the browser
+and passed complete CRC checks, including valid signatures for all 14 and
+eight MP3 files respectively. Of 350 binary Range probes, 61 returned recognized
+file signatures and 289 refused non-browser requests with HTTP 403. Protected
+responses are not counted as successful binary checks. Browser checks loaded
+usable media with finite durations for all ten film players, the final chapter
+of each of the nine chaptered films, and the JESUS next-chapter transition.
+Samples played from both GRN programmes and from the full and first-part Story
+of Jesus recordings. This verifies representative playback, not every chapter
+or complete viewing/listening. Large film bundles were not downloaded in full;
+their additional formats remain accessible through their DBS pages.
+
+Search, filters, scoped email links, native save screens, help and the
+computer-to-Android transfer guide were checked. The regular browser viewport
+had no horizontal page overflow. The requested phone viewport override did
+not apply in this browser, so no phone-sized layout verification is claimed.
+
+The existing 1,230 resource records are unchanged. Existing theology curation
+remains in force; no identified LGBTQ-affirming edition or theology was added.
+This is an edition/source check, not a verse-by-verse theological assessment.
+Publisher exceptions are exact URLs scoped only to Nigerian Pidgin. Rebuild
+with `python3 packer/build_nigerian_pidgin.py`, then `npm run dbs:import`.
+Audits and browser evidence are retained in
+`catalog/source/dbs-*-nigerian-pidgin-2026-10-04.json`.

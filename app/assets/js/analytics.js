@@ -15,6 +15,17 @@
   var CHANNELS = ['email', 'copy_link', 'native_share', 'nearby', 'bluetooth', 'wifi',
     'sd_card', 'usb', 'whatsapp', 'telegram', 'facebook', 'sms', 'unknown'];
   var COPY = {
+    pcm: {
+ "title": "Cookies and your privacy",
+ "body": "If you allow am, we go use browser storage to count visits, di things wey people use, how dem share am and visits wey come from shared links. Di report fit include country, region, device and browser. We no collect di files wey you send, di words wey you search, or di people wey you share with. You fit change your choice anytime.",
+ "accept": "Allow am",
+ "reject": "No, thank you",
+ "settings": "Cookie settings",
+ "details": "About activity reports",
+ "enabled": "Activity reports dey on.",
+ "disabled": "Activity reports no dey on.",
+ "signal": "Your browser privacy setting dey block activity reports."
+},
     yo: {
  "title": "Àwọn kúkì àti àṣírí rẹ",
  "body": "Pẹ̀lú ìyọ̀nda rẹ, a ń lo ibi ìpamọ́ ẹ̀rọ aṣàwákiri láti ka ìbẹ̀wò, ohun tí a lò, ọ̀nà tí a gbà pín àti ìbẹ̀wò tó wá láti ìjápọ̀ tí a pín. Ìròyìn lè ní orílẹ̀-èdè rẹ àti ojúlé tí o ti wá. A ń pa dátà náà mọ́ fún ọjọ́ 90. A kò lè rí àwọn ẹni tí o ránṣẹ́ sí, ìfiránṣẹ́ àṣírí rẹ tàbí ibi tí o fi ìjápọ̀ tí o da kọ sí.",

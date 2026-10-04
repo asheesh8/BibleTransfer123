@@ -17,6 +17,7 @@
     ['sindhi', 'snd', 'Sindhi', 'سنڌي'],
     ['luganda', 'lug', 'Luganda', 'Luganda'],
     ['luo', 'luo', 'Luo', 'Dholuo'],
+    ['nigerian-pidgin', 'pcm', 'Nigerian Pidgin', 'Naija Pidgin'],
     ['yoruba', 'yor', 'Yoruba', 'Èdè Yorùbá'],
     ['portuguese', 'por', 'Portuguese', 'Português'],
     ['amharic', 'amh', 'Amharic', 'አማርኛ'],

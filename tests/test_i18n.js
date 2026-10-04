@@ -19,9 +19,9 @@ function harness(elements = {}, scope = null) {
 }
 const placeholders = value => [...value.matchAll(/\{(\w+)\}/g)].map(match => match[1]).sort();
 
-test('all twenty-four languages retain formatter variables and render escaped strings', () => {
+test('all twenty-five languages retain formatter variables and render escaped strings', () => {
   const { ET, dictionaries, attributes } = harness();
-  assert.equal(ET.i18n.langs.length, 24);
+  assert.equal(ET.i18n.langs.length, 25);
   for (const language of ET.i18n.langs) {
     ET.i18n.set(language.code);
     assert.equal(attributes.dir, language.dir);
@@ -121,7 +121,7 @@ test('untranslated copy is marked as English and changes back when translated', 
 });
 
  test('new shared libraries initialize in their native interface without a stored preference', () => {
-  for (const scope of [{lang: 'orm', ui: 'om'}, {lang: 'luo', ui: 'luo'}, {lang: 'ibo', ui: 'ig'}, {lang: 'fra', ui: 'fr'}, {lang: 'amh', ui: 'am'}, {lang: 'por', ui: 'pt'}, {lang: 'yor', ui: 'yo'}]) {
+  for (const scope of [{lang: 'orm', ui: 'om'}, {lang: 'luo', ui: 'luo'}, {lang: 'ibo', ui: 'ig'}, {lang: 'fra', ui: 'fr'}, {lang: 'amh', ui: 'am'}, {lang: 'por', ui: 'pt'}, {lang: 'yor', ui: 'yo'}, {lang: 'pcm', ui: 'pcm'}]) {
     const {ET, dictionaries, attributes} = harness({}, scope);
     assert.equal(ET.i18n.current(), scope.ui);
     ET.i18n.apply();
@@ -185,4 +185,18 @@ test('Yoruba covers every interface and help key with usable file wording', () =
   assert.equal(ET.i18n.t('item.chapter', { n: 3 }), 'Orí 3');
   assert.equal(ET.i18n.meta('yo').native, 'Èdè Yorùbá');
   assert.match(ET.i18n.t('route.computer-android.2.p'), /File transfer/);
+});
+
+test('Nigerian Pidgin covers all controls and guides with clear file wording', () => {
+  const { ET, dictionaries } = harness();
+  ET.i18n.set('pcm');
+  for (const key of Object.keys(dictionaries.pt)) assert.ok(dictionaries.pcm[key], 'Pidgin fallback: ' + key);
+  assert.equal(ET.i18n.t('help.android.4.h'), 'If di file no open');
+  assert.match(ET.i18n.t('help.ios.openfile.p'), /If di file no open/);
+  assert.equal(ET.i18n.t('lib.countall', { n: 1 }), '1 thing');
+  assert.equal(ET.i18n.t('lib.countall', { n: 2 }), '2 things');
+  assert.equal(ET.i18n.t('item.chapter', { n: 3 }), 'Chapter 3');
+  assert.equal(ET.i18n.meta('pcm').native, 'Naija Pidgin');
+  assert.equal(ET.i18n.meta('unknown').name, 'English');
+  assert.match(ET.i18n.t('route.computer-android.2.p'), /File Transfer/);
 });

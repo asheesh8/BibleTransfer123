@@ -1,0 +1,3245 @@
+{
+ "generated": "DBS rendered Nigerian Pidgin inventory — 2026-10-04",
+ "languages": {
+  "pcm": {
+   "code": "pcm",
+   "name": "Nigerian Pidgin",
+   "native": "Naija Pidgin",
+   "script": "latn",
+   "dir": "ltr",
+   "font": "latin",
+   "region": "Nigeria",
+   "blurb": "Bible, films and Christian recordings for Naija Pidgin."
+  }
+ },
+ "resources": [
+  {
+   "id": "pcm-text-pcmwbt",
+   "lang": "pcm",
+   "type": "scripture",
+   "title": "Nigerian Pidgin 2012 Edition",
+   "native": "Holy Bible for Naija Pidgin — DBS 2012 edition",
+   "langName": "Naija Pidgin",
+   "scope": "Naija Pidgin",
+   "source": "https://dbs.org/bibles/PCMWBT",
+   "org": "Wycliffe Bible Translators",
+   "desc": "Read di Bible online, or download di HTML ZIP. To read am without internet, extract di ZIP and open html/index.html. Di ZIP get all 66 books. DBS list dis edition as 2012.",
+   "downloads": [
+    {
+     "url": "https://bibles.dbs.org/PCMWBT/html_PCMWBT.zip",
+     "label": "Bible to read without internet (HTML ZIP)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://inscript.org/?w1=bible&t1=local%3APCMWBT&v1=JN1_1",
+     "label": "Read di Bible online"
+    },
+    {
+     "url": "https://www.bible.com/versions/2516",
+     "label": "See dis Bible for YouVersion"
+    },
+    {
+     "url": "https://play.google.com/store/apps/details?id=org.fcbh.pcmtsc.n2.nigerianpidginbible",
+     "label": "Bible app for Android · Faith Comes By Hearing"
+    },
+    {
+     "url": "https://play.google.com/store/apps/details?id=org.wycliffe.pcm.nigerian.pidgin.bible",
+     "label": "Bible app for Android · Wycliffe"
+    },
+    {
+     "url": "https://inscript.org/?w1=bible&t1=local%3APCMWBT&v1=JN1_1",
+     "label": "Read di Bible online"
+    },
+    {
+     "url": "https://www.bible.com/versions/2516",
+     "label": "See dis Bible for YouVersion"
+    },
+    {
+     "url": "https://play.google.com/store/apps/details?id=org.fcbh.pcmtsc.n2.nigerianpidginbible",
+     "label": "Bible app for Android · Faith Comes By Hearing"
+    },
+    {
+     "url": "https://play.google.com/store/apps/details?id=org.wycliffe.pcm.nigerian.pidgin.bible",
+     "label": "Bible app for Android · Wycliffe"
+    }
+   ],
+   "year": 2012
+  },
+  {
+   "id": "pcm-film-pcm_nigerian-pidgin-english_jesus",
+   "lang": "pcm",
+   "type": "film",
+   "title": "JESUS",
+   "native": "JESUS",
+   "langName": "Naija Pidgin",
+   "scope": "Naija Pidgin",
+   "source": "https://dbs.org/video/jesus/pcm_nigerian-pidgin-english_jesus",
+   "org": "Jesus Film Project",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_01_the-beginning_1_jf6101-0-0_low.mp4",
+     "label": "Chapter 1 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_02_birth-of-jesus_1_jf6102-0-0_low.mp4",
+     "label": "Chapter 2 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_03_childhood-of-jesus_1_jf6103-0-0_low.mp4",
+     "label": "Chapter 3 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_04_baptism-of-jesus-by-john_1_jf6104-0-0_low.mp4",
+     "label": "Chapter 4 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_05_the-devil-tempts-jesus_1_jf6105-0-0_low.mp4",
+     "label": "Chapter 5 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_06_jesus-proclaims-fulfillment-of-the-scriptures_1_jf6106-0-0_low.mp4",
+     "label": "Chapter 6 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_07_parable-of-the-pharisee-and-tax-collector_1_jf6107-0-0_low.mp4",
+     "label": "Chapter 7 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_08_miraculous-catch-of-fish_1_jf6108-0-0_low.mp4",
+     "label": "Chapter 8 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_09_jairuss-daughter-brought-back-to-life_1_jf6109-0-0_low.mp4",
+     "label": "Chapter 9 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_10_disciples-chosen_1_jf6110-0-0_low.mp4",
+     "label": "Chapter 10 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_11_beatitudes_1_jf6111-0-0_low.mp4",
+     "label": "Chapter 11 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_12_sermon-on-the-mount_1_jf6112-0-0_low.mp4",
+     "label": "Chapter 12 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_13_blessed-are-those-who-hear-and-obey_1_jf6113-0-0_low.mp4",
+     "label": "Chapter 13 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_14_sinful-woman-forgiven_1_jf6114-0-0_low.mp4",
+     "label": "Chapter 14 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_15_women-disciples_1_jf6115-0-0_low.mp4",
+     "label": "Chapter 15 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_16_john-the-baptist-in-prison_1_jf6116-0-0_low.mp4",
+     "label": "Chapter 16 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_17_parable-of-the-sower-and-the-seed_1_jf6117-0-0_low.mp4",
+     "label": "Chapter 17 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_18_parable-of-the-lamp_1_jf6118-0-0_low.mp4",
+     "label": "Chapter 18 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_19_jesus-calms-the-storm_1_jf6119-0-0_low.mp4",
+     "label": "Chapter 19 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_20_healing-of-the-demoniac_1_jf6120-0-0_low.mp4",
+     "label": "Chapter 20 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_21_jesus-feeds-5000_1_jf6121-0-0_low.mp4",
+     "label": "Chapter 21 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_22_peter-declares-jesus-to-be-the-christ_1_jf6122-0-0_low.mp4",
+     "label": "Chapter 22 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_23_the-transfiguration_1_jf6123-0-0_low.mp4",
+     "label": "Chapter 23 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_24_jesus-heals-boy-from-evil-spirit_1_jf6124-0-0_low.mp4",
+     "label": "Chapter 24 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_25_the-lords-prayer_1_jf6125-0-0_low.mp4",
+     "label": "Chapter 25 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_26_teaching-about-prayer-and-faith_1_jf6126-0-0_low.mp4",
+     "label": "Chapter 26 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_27_woe-to-those-who-cause-others-to-sin_1_jf6127-0-0_low.mp4",
+     "label": "Chapter 27 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_28_the-kingdom-of-god-as-a-mustard-seed_1_jf6128-0-0_low.mp4",
+     "label": "Chapter 28 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_29_jesus-spends-time-with-sinners_1_jf6129-0-0_low.mp4",
+     "label": "Chapter 29 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_30_healing-on-the-sabbath_1_jf6130-0-0_low.mp4",
+     "label": "Chapter 30 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_31_parable-of-the-good-samaritan_1_jf6131-0-0_low.mp4",
+     "label": "Chapter 31 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_32_healing-of-bartimaeus_1_jf6132-0-0_low.mp4",
+     "label": "Chapter 32 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_33_jesus-and-zaccheus_1_jf6133-0-0_low.mp4",
+     "label": "Chapter 33 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_34_jesus-predicts-his-death-and-resurrection_1_jf6134-0-0_low.mp4",
+     "label": "Chapter 34 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_35_jesuss-triumphal-entry_1_jf6135-0-0_low.mp4",
+     "label": "Chapter 35 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_36_jesus-weeps-over-jerusalem_1_jf6136-0-0_low.mp4",
+     "label": "Chapter 36 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_37_jesus-drives-out-money-changers_1_jf6137-0-0_low.mp4",
+     "label": "Chapter 37 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_38_widows-offering_1_jf6138-0-0_low.mp4",
+     "label": "Chapter 38 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_39_annas-questions-jesuss-authority_1_jf6139-0-0_low.mp4",
+     "label": "Chapter 39 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_40_parable-of-the-vineyard-and-tenants_1_jf6140-0-0_low.mp4",
+     "label": "Chapter 40 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_41_paying-taxes-to-caesar_1_jf6141-0-0_low.mp4",
+     "label": "Chapter 41 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_42_the-last-supper_1_jf6142-0-0_low.mp4",
+     "label": "Chapter 42 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_43_upper-room-teaching_1_jf6143-0-0_low.mp4",
+     "label": "Chapter 43 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_44_jesus-is-betrayed-and-arrested_1_jf6144-0-0_low.mp4",
+     "label": "Chapter 44 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_45_peter-disowns-jesus_1_jf6145-0-0_low.mp4",
+     "label": "Chapter 45 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_46_jesus-is-mocked-and-questioned_1_jf6146-0-0_low.mp4",
+     "label": "Chapter 46 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_47_jesus-is-brought-to-pilate_1_jf6147-0-0_low.mp4",
+     "label": "Chapter 47 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_48_jesus-is-brought-to-herod_1_jf6148-0-0_low.mp4",
+     "label": "Chapter 48 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_49_jesus-is-sentenced_1_jf6149-0-0_low.mp4",
+     "label": "Chapter 49 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_50_jesus-carries-his-cross_1_jf6150-0-0_low.mp4",
+     "label": "Chapter 50 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_51_jesus-is-crucified_1_jf6151-0-0_low.mp4",
+     "label": "Chapter 51 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_52_soldiers-gamble-for-jesuss-clothes_1_jf6152-0-0_low.mp4",
+     "label": "Chapter 52 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_53_sign-on-the-cross_1_jf6153-0-0_low.mp4",
+     "label": "Chapter 53 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_54_crucified-convicts_1_jf6154-0-0_low.mp4",
+     "label": "Chapter 54 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_55_death-of-jesus_1_jf6155-0-0_low.mp4",
+     "label": "Chapter 55 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_56_burial-of-jesus_1_jf6156-0-0_low.mp4",
+     "label": "Chapter 56 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_57_angels-at-the-tomb_1_jf6157-0-0_low.mp4",
+     "label": "Chapter 57 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_58_the-tomb-is-empty_1_jf6158-0-0_low.mp4",
+     "label": "Chapter 58 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_59_resurrected-jesus-appears_1_jf6159-0-0_low.mp4",
+     "label": "Chapter 59 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_60_great-commission-and-ascension_1_jf6160-0-0_low.mp4",
+     "label": "Chapter 60 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_61_invitation-to-know-jesus-personally_1_jf6161-0-0_low.mp4",
+     "label": "Chapter 61 (MP4)"
+    },
+    {
+     "url": "https://stream.mux.com/J7Kks01WAnfGQJ8umOFFuAMWo6lRXcvAxuzgYy9sUdHk/720p.mp4?download=JESUS-Nigerian-Pidgin-English-HD",
+     "label": "Whole film (MP4) · HD"
+    },
+    {
+     "url": "https://stream.mux.com/J7Kks01WAnfGQJ8umOFFuAMWo6lRXcvAxuzgYy9sUdHk/270p.mp4?download=JESUS-Nigerian-Pidgin-English-SD",
+     "label": "Whole film (MP4) · Use less data"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/video/jesus/pcm_nigerian-pidgin-english_jesus",
+     "label": "See di film and other downloads for DBS"
+    }
+   ],
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_01_the-beginning_1_jf6101-0-0_low.mp4",
+      "title": "Chapter 1"
+     },
+     {
+      "n": 2,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_02_birth-of-jesus_1_jf6102-0-0_low.mp4",
+      "title": "Chapter 2"
+     },
+     {
+      "n": 3,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_03_childhood-of-jesus_1_jf6103-0-0_low.mp4",
+      "title": "Chapter 3"
+     },
+     {
+      "n": 4,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_04_baptism-of-jesus-by-john_1_jf6104-0-0_low.mp4",
+      "title": "Chapter 4"
+     },
+     {
+      "n": 5,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_05_the-devil-tempts-jesus_1_jf6105-0-0_low.mp4",
+      "title": "Chapter 5"
+     },
+     {
+      "n": 6,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_06_jesus-proclaims-fulfillment-of-the-scriptures_1_jf6106-0-0_low.mp4",
+      "title": "Chapter 6"
+     },
+     {
+      "n": 7,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_07_parable-of-the-pharisee-and-tax-collector_1_jf6107-0-0_low.mp4",
+      "title": "Chapter 7"
+     },
+     {
+      "n": 8,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_08_miraculous-catch-of-fish_1_jf6108-0-0_low.mp4",
+      "title": "Chapter 8"
+     },
+     {
+      "n": 9,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_09_jairuss-daughter-brought-back-to-life_1_jf6109-0-0_low.mp4",
+      "title": "Chapter 9"
+     },
+     {
+      "n": 10,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_10_disciples-chosen_1_jf6110-0-0_low.mp4",
+      "title": "Chapter 10"
+     },
+     {
+      "n": 11,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_11_beatitudes_1_jf6111-0-0_low.mp4",
+      "title": "Chapter 11"
+     },
+     {
+      "n": 12,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_12_sermon-on-the-mount_1_jf6112-0-0_low.mp4",
+      "title": "Chapter 12"
+     },
+     {
+      "n": 13,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_13_blessed-are-those-who-hear-and-obey_1_jf6113-0-0_low.mp4",
+      "title": "Chapter 13"
+     },
+     {
+      "n": 14,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_14_sinful-woman-forgiven_1_jf6114-0-0_low.mp4",
+      "title": "Chapter 14"
+     },
+     {
+      "n": 15,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_15_women-disciples_1_jf6115-0-0_low.mp4",
+      "title": "Chapter 15"
+     },
+     {
+      "n": 16,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_16_john-the-baptist-in-prison_1_jf6116-0-0_low.mp4",
+      "title": "Chapter 16"
+     },
+     {
+      "n": 17,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_17_parable-of-the-sower-and-the-seed_1_jf6117-0-0_low.mp4",
+      "title": "Chapter 17"
+     },
+     {
+      "n": 18,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_18_parable-of-the-lamp_1_jf6118-0-0_low.mp4",
+      "title": "Chapter 18"
+     },
+     {
+      "n": 19,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_19_jesus-calms-the-storm_1_jf6119-0-0_low.mp4",
+      "title": "Chapter 19"
+     },
+     {
+      "n": 20,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_20_healing-of-the-demoniac_1_jf6120-0-0_low.mp4",
+      "title": "Chapter 20"
+     },
+     {
+      "n": 21,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_21_jesus-feeds-5000_1_jf6121-0-0_low.mp4",
+      "title": "Chapter 21"
+     },
+     {
+      "n": 22,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_22_peter-declares-jesus-to-be-the-christ_1_jf6122-0-0_low.mp4",
+      "title": "Chapter 22"
+     },
+     {
+      "n": 23,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_23_the-transfiguration_1_jf6123-0-0_low.mp4",
+      "title": "Chapter 23"
+     },
+     {
+      "n": 24,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_24_jesus-heals-boy-from-evil-spirit_1_jf6124-0-0_low.mp4",
+      "title": "Chapter 24"
+     },
+     {
+      "n": 25,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_25_the-lords-prayer_1_jf6125-0-0_low.mp4",
+      "title": "Chapter 25"
+     },
+     {
+      "n": 26,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_26_teaching-about-prayer-and-faith_1_jf6126-0-0_low.mp4",
+      "title": "Chapter 26"
+     },
+     {
+      "n": 27,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_27_woe-to-those-who-cause-others-to-sin_1_jf6127-0-0_low.mp4",
+      "title": "Chapter 27"
+     },
+     {
+      "n": 28,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_28_the-kingdom-of-god-as-a-mustard-seed_1_jf6128-0-0_low.mp4",
+      "title": "Chapter 28"
+     },
+     {
+      "n": 29,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_29_jesus-spends-time-with-sinners_1_jf6129-0-0_low.mp4",
+      "title": "Chapter 29"
+     },
+     {
+      "n": 30,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_30_healing-on-the-sabbath_1_jf6130-0-0_low.mp4",
+      "title": "Chapter 30"
+     },
+     {
+      "n": 31,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_31_parable-of-the-good-samaritan_1_jf6131-0-0_low.mp4",
+      "title": "Chapter 31"
+     },
+     {
+      "n": 32,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_32_healing-of-bartimaeus_1_jf6132-0-0_low.mp4",
+      "title": "Chapter 32"
+     },
+     {
+      "n": 33,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_33_jesus-and-zaccheus_1_jf6133-0-0_low.mp4",
+      "title": "Chapter 33"
+     },
+     {
+      "n": 34,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_34_jesus-predicts-his-death-and-resurrection_1_jf6134-0-0_low.mp4",
+      "title": "Chapter 34"
+     },
+     {
+      "n": 35,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_35_jesuss-triumphal-entry_1_jf6135-0-0_low.mp4",
+      "title": "Chapter 35"
+     },
+     {
+      "n": 36,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_36_jesus-weeps-over-jerusalem_1_jf6136-0-0_low.mp4",
+      "title": "Chapter 36"
+     },
+     {
+      "n": 37,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_37_jesus-drives-out-money-changers_1_jf6137-0-0_low.mp4",
+      "title": "Chapter 37"
+     },
+     {
+      "n": 38,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_38_widows-offering_1_jf6138-0-0_low.mp4",
+      "title": "Chapter 38"
+     },
+     {
+      "n": 39,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_39_annas-questions-jesuss-authority_1_jf6139-0-0_low.mp4",
+      "title": "Chapter 39"
+     },
+     {
+      "n": 40,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_40_parable-of-the-vineyard-and-tenants_1_jf6140-0-0_low.mp4",
+      "title": "Chapter 40"
+     },
+     {
+      "n": 41,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_41_paying-taxes-to-caesar_1_jf6141-0-0_low.mp4",
+      "title": "Chapter 41"
+     },
+     {
+      "n": 42,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_42_the-last-supper_1_jf6142-0-0_low.mp4",
+      "title": "Chapter 42"
+     },
+     {
+      "n": 43,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_43_upper-room-teaching_1_jf6143-0-0_low.mp4",
+      "title": "Chapter 43"
+     },
+     {
+      "n": 44,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_44_jesus-is-betrayed-and-arrested_1_jf6144-0-0_low.mp4",
+      "title": "Chapter 44"
+     },
+     {
+      "n": 45,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_45_peter-disowns-jesus_1_jf6145-0-0_low.mp4",
+      "title": "Chapter 45"
+     },
+     {
+      "n": 46,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_46_jesus-is-mocked-and-questioned_1_jf6146-0-0_low.mp4",
+      "title": "Chapter 46"
+     },
+     {
+      "n": 47,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_47_jesus-is-brought-to-pilate_1_jf6147-0-0_low.mp4",
+      "title": "Chapter 47"
+     },
+     {
+      "n": 48,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_48_jesus-is-brought-to-herod_1_jf6148-0-0_low.mp4",
+      "title": "Chapter 48"
+     },
+     {
+      "n": 49,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_49_jesus-is-sentenced_1_jf6149-0-0_low.mp4",
+      "title": "Chapter 49"
+     },
+     {
+      "n": 50,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_50_jesus-carries-his-cross_1_jf6150-0-0_low.mp4",
+      "title": "Chapter 50"
+     },
+     {
+      "n": 51,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_51_jesus-is-crucified_1_jf6151-0-0_low.mp4",
+      "title": "Chapter 51"
+     },
+     {
+      "n": 52,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_52_soldiers-gamble-for-jesuss-clothes_1_jf6152-0-0_low.mp4",
+      "title": "Chapter 52"
+     },
+     {
+      "n": 53,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_53_sign-on-the-cross_1_jf6153-0-0_low.mp4",
+      "title": "Chapter 53"
+     },
+     {
+      "n": 54,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_54_crucified-convicts_1_jf6154-0-0_low.mp4",
+      "title": "Chapter 54"
+     },
+     {
+      "n": 55,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_55_death-of-jesus_1_jf6155-0-0_low.mp4",
+      "title": "Chapter 55"
+     },
+     {
+      "n": 56,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_56_burial-of-jesus_1_jf6156-0-0_low.mp4",
+      "title": "Chapter 56"
+     },
+     {
+      "n": 57,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_57_angels-at-the-tomb_1_jf6157-0-0_low.mp4",
+      "title": "Chapter 57"
+     },
+     {
+      "n": 58,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_58_the-tomb-is-empty_1_jf6158-0-0_low.mp4",
+      "title": "Chapter 58"
+     },
+     {
+      "n": 59,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_59_resurrected-jesus-appears_1_jf6159-0-0_low.mp4",
+      "title": "Chapter 59"
+     },
+     {
+      "n": 60,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_60_great-commission-and-ascension_1_jf6160-0-0_low.mp4",
+      "title": "Chapter 60"
+     },
+     {
+      "n": 61,
+      "file": "https://video.dbs.org/Jesus/chapters/pcm_nigerian-pidgin-english/pcm_jesus_chapter_61_invitation-to-know-jesus-personally_1_jf6161-0-0_low.mp4",
+      "title": "Chapter 61"
+     }
+    ]
+   }
+  },
+  {
+   "id": "pcm-film-pcm_nigerian-pidgin_john",
+   "lang": "pcm",
+   "type": "film",
+   "title": "LUMO: The Gospel of John",
+   "native": "LUMO: Di Good News wey John write",
+   "langName": "Naija Pidgin",
+   "scope": "Naija Pidgin",
+   "source": "https://dbs.org/video/lumo-john/pcm_nigerian-pidgin_john",
+   "org": "LUMO Project",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_01_360.mp4",
+     "label": "Chapter 1 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_02_360.mp4",
+     "label": "Chapter 2 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_03_360.mp4",
+     "label": "Chapter 3 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_04_360.mp4",
+     "label": "Chapter 4 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_05_360.mp4",
+     "label": "Chapter 5 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_06_360.mp4",
+     "label": "Chapter 6 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_07_360.mp4",
+     "label": "Chapter 7 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_08_360.mp4",
+     "label": "Chapter 8 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_09_360.mp4",
+     "label": "Chapter 9 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_10_360.mp4",
+     "label": "Chapter 10 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_11_360.mp4",
+     "label": "Chapter 11 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_12_360.mp4",
+     "label": "Chapter 12 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_13_360.mp4",
+     "label": "Chapter 13 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_14_360.mp4",
+     "label": "Chapter 14 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_15_360.mp4",
+     "label": "Chapter 15 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_16_360.mp4",
+     "label": "Chapter 16 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_17_360.mp4",
+     "label": "Chapter 17 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_18_360.mp4",
+     "label": "Chapter 18 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_19_360.mp4",
+     "label": "Chapter 19 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_20_360.mp4",
+     "label": "Chapter 20 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_21_360.mp4",
+     "label": "Chapter 21 (MP4)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/video/lumo-john/pcm_nigerian-pidgin_john",
+     "label": "See di film and other downloads for DBS"
+    }
+   ],
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_01_360.mp4",
+      "title": "Chapter 1"
+     },
+     {
+      "n": 2,
+      "file": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_02_360.mp4",
+      "title": "Chapter 2"
+     },
+     {
+      "n": 3,
+      "file": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_03_360.mp4",
+      "title": "Chapter 3"
+     },
+     {
+      "n": 4,
+      "file": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_04_360.mp4",
+      "title": "Chapter 4"
+     },
+     {
+      "n": 5,
+      "file": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_05_360.mp4",
+      "title": "Chapter 5"
+     },
+     {
+      "n": 6,
+      "file": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_06_360.mp4",
+      "title": "Chapter 6"
+     },
+     {
+      "n": 7,
+      "file": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_07_360.mp4",
+      "title": "Chapter 7"
+     },
+     {
+      "n": 8,
+      "file": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_08_360.mp4",
+      "title": "Chapter 8"
+     },
+     {
+      "n": 9,
+      "file": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_09_360.mp4",
+      "title": "Chapter 9"
+     },
+     {
+      "n": 10,
+      "file": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_10_360.mp4",
+      "title": "Chapter 10"
+     },
+     {
+      "n": 11,
+      "file": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_11_360.mp4",
+      "title": "Chapter 11"
+     },
+     {
+      "n": 12,
+      "file": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_12_360.mp4",
+      "title": "Chapter 12"
+     },
+     {
+      "n": 13,
+      "file": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_13_360.mp4",
+      "title": "Chapter 13"
+     },
+     {
+      "n": 14,
+      "file": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_14_360.mp4",
+      "title": "Chapter 14"
+     },
+     {
+      "n": 15,
+      "file": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_15_360.mp4",
+      "title": "Chapter 15"
+     },
+     {
+      "n": 16,
+      "file": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_16_360.mp4",
+      "title": "Chapter 16"
+     },
+     {
+      "n": 17,
+      "file": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_17_360.mp4",
+      "title": "Chapter 17"
+     },
+     {
+      "n": 18,
+      "file": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_18_360.mp4",
+      "title": "Chapter 18"
+     },
+     {
+      "n": 19,
+      "file": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_19_360.mp4",
+      "title": "Chapter 19"
+     },
+     {
+      "n": 20,
+      "file": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_20_360.mp4",
+      "title": "Chapter 20"
+     },
+     {
+      "n": 21,
+      "file": "https://video.dbs.org/Lumo-John/films_low/pcm_Nigerian-Pidgin_John_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_John_Direct-Translation-FCBH_21_360.mp4",
+      "title": "Chapter 21"
+     }
+    ]
+   }
+  },
+  {
+   "id": "pcm-film-pcm_nigerian-pidgin_luke",
+   "lang": "pcm",
+   "type": "film",
+   "title": "LUMO: The Gospel of Luke",
+   "native": "LUMO: Di Good News wey Luke write",
+   "langName": "Naija Pidgin",
+   "scope": "Naija Pidgin",
+   "source": "https://dbs.org/video/lumo-luke/pcm_nigerian-pidgin_luke",
+   "org": "LUMO Project",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_01_360.mp4",
+     "label": "Chapter 1 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_02_360.mp4",
+     "label": "Chapter 2 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_03_360.mp4",
+     "label": "Chapter 3 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_04_360.mp4",
+     "label": "Chapter 4 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_05_360.mp4",
+     "label": "Chapter 5 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_06_360.mp4",
+     "label": "Chapter 6 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_07_360.mp4",
+     "label": "Chapter 7 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_08_360.mp4",
+     "label": "Chapter 8 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_09_360.mp4",
+     "label": "Chapter 9 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_10_360.mp4",
+     "label": "Chapter 10 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_11_360.mp4",
+     "label": "Chapter 11 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_12_360.mp4",
+     "label": "Chapter 12 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_13_360.mp4",
+     "label": "Chapter 13 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_14_360.mp4",
+     "label": "Chapter 14 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_15_360.mp4",
+     "label": "Chapter 15 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_16_360.mp4",
+     "label": "Chapter 16 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_17_360.mp4",
+     "label": "Chapter 17 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_18_360.mp4",
+     "label": "Chapter 18 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_19_360.mp4",
+     "label": "Chapter 19 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_20_360.mp4",
+     "label": "Chapter 20 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_21_360.mp4",
+     "label": "Chapter 21 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_22_360.mp4",
+     "label": "Chapter 22 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_23_360.mp4",
+     "label": "Chapter 23 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_24_360.mp4",
+     "label": "Chapter 24 (MP4)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/video/lumo-luke/pcm_nigerian-pidgin_luke",
+     "label": "See di film and other downloads for DBS"
+    }
+   ],
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_01_360.mp4",
+      "title": "Chapter 1"
+     },
+     {
+      "n": 2,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_02_360.mp4",
+      "title": "Chapter 2"
+     },
+     {
+      "n": 3,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_03_360.mp4",
+      "title": "Chapter 3"
+     },
+     {
+      "n": 4,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_04_360.mp4",
+      "title": "Chapter 4"
+     },
+     {
+      "n": 5,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_05_360.mp4",
+      "title": "Chapter 5"
+     },
+     {
+      "n": 6,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_06_360.mp4",
+      "title": "Chapter 6"
+     },
+     {
+      "n": 7,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_07_360.mp4",
+      "title": "Chapter 7"
+     },
+     {
+      "n": 8,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_08_360.mp4",
+      "title": "Chapter 8"
+     },
+     {
+      "n": 9,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_09_360.mp4",
+      "title": "Chapter 9"
+     },
+     {
+      "n": 10,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_10_360.mp4",
+      "title": "Chapter 10"
+     },
+     {
+      "n": 11,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_11_360.mp4",
+      "title": "Chapter 11"
+     },
+     {
+      "n": 12,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_12_360.mp4",
+      "title": "Chapter 12"
+     },
+     {
+      "n": 13,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_13_360.mp4",
+      "title": "Chapter 13"
+     },
+     {
+      "n": 14,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_14_360.mp4",
+      "title": "Chapter 14"
+     },
+     {
+      "n": 15,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_15_360.mp4",
+      "title": "Chapter 15"
+     },
+     {
+      "n": 16,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_16_360.mp4",
+      "title": "Chapter 16"
+     },
+     {
+      "n": 17,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_17_360.mp4",
+      "title": "Chapter 17"
+     },
+     {
+      "n": 18,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_18_360.mp4",
+      "title": "Chapter 18"
+     },
+     {
+      "n": 19,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_19_360.mp4",
+      "title": "Chapter 19"
+     },
+     {
+      "n": 20,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_20_360.mp4",
+      "title": "Chapter 20"
+     },
+     {
+      "n": 21,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_21_360.mp4",
+      "title": "Chapter 21"
+     },
+     {
+      "n": 22,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_22_360.mp4",
+      "title": "Chapter 22"
+     },
+     {
+      "n": 23,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_23_360.mp4",
+      "title": "Chapter 23"
+     },
+     {
+      "n": 24,
+      "file": "https://video.dbs.org/Lumo-Luke/films_low/pcm_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Luke_Direct-Translation-FCBH_24_360.mp4",
+      "title": "Chapter 24"
+     }
+    ]
+   }
+  },
+  {
+   "id": "pcm-film-pcm_nigerian-pidgin_mark",
+   "lang": "pcm",
+   "type": "film",
+   "title": "LUMO: The Gospel of Mark",
+   "native": "LUMO: Di Good News wey Mark write",
+   "langName": "Naija Pidgin",
+   "scope": "Naija Pidgin",
+   "source": "https://dbs.org/video/lumo-mark/pcm_nigerian-pidgin_mark",
+   "org": "LUMO Project",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_01_360.mp4",
+     "label": "Chapter 1 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_02_360.mp4",
+     "label": "Chapter 2 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_03_360.mp4",
+     "label": "Chapter 3 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_04_360.mp4",
+     "label": "Chapter 4 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_05_360.mp4",
+     "label": "Chapter 5 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_06_360.mp4",
+     "label": "Chapter 6 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_07_360.mp4",
+     "label": "Chapter 7 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_08_360.mp4",
+     "label": "Chapter 8 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_09_360.mp4",
+     "label": "Chapter 9 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_10_360.mp4",
+     "label": "Chapter 10 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_11_360.mp4",
+     "label": "Chapter 11 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_12_360.mp4",
+     "label": "Chapter 12 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_13_360.mp4",
+     "label": "Chapter 13 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_14_360.mp4",
+     "label": "Chapter 14 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_15_360.mp4",
+     "label": "Chapter 15 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_16_360.mp4",
+     "label": "Chapter 16 (MP4)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/video/lumo-mark/pcm_nigerian-pidgin_mark",
+     "label": "See di film and other downloads for DBS"
+    }
+   ],
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_01_360.mp4",
+      "title": "Chapter 1"
+     },
+     {
+      "n": 2,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_02_360.mp4",
+      "title": "Chapter 2"
+     },
+     {
+      "n": 3,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_03_360.mp4",
+      "title": "Chapter 3"
+     },
+     {
+      "n": 4,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_04_360.mp4",
+      "title": "Chapter 4"
+     },
+     {
+      "n": 5,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_05_360.mp4",
+      "title": "Chapter 5"
+     },
+     {
+      "n": 6,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_06_360.mp4",
+      "title": "Chapter 6"
+     },
+     {
+      "n": 7,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_07_360.mp4",
+      "title": "Chapter 7"
+     },
+     {
+      "n": 8,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_08_360.mp4",
+      "title": "Chapter 8"
+     },
+     {
+      "n": 9,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_09_360.mp4",
+      "title": "Chapter 9"
+     },
+     {
+      "n": 10,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_10_360.mp4",
+      "title": "Chapter 10"
+     },
+     {
+      "n": 11,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_11_360.mp4",
+      "title": "Chapter 11"
+     },
+     {
+      "n": 12,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_12_360.mp4",
+      "title": "Chapter 12"
+     },
+     {
+      "n": 13,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_13_360.mp4",
+      "title": "Chapter 13"
+     },
+     {
+      "n": 14,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_14_360.mp4",
+      "title": "Chapter 14"
+     },
+     {
+      "n": 15,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_15_360.mp4",
+      "title": "Chapter 15"
+     },
+     {
+      "n": 16,
+      "file": "https://video.dbs.org/Lumo-Mark/films_low/pcm_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Mark_Direct-Translation-FCBH_16_360.mp4",
+      "title": "Chapter 16"
+     }
+    ]
+   }
+  },
+  {
+   "id": "pcm-film-pcm_nigerian-pidgin_matthew",
+   "lang": "pcm",
+   "type": "film",
+   "title": "LUMO: The Gospel of Matthew",
+   "native": "LUMO: Di Good News wey Matiu write",
+   "langName": "Naija Pidgin",
+   "scope": "Naija Pidgin",
+   "source": "https://dbs.org/video/lumo-matthew/pcm_nigerian-pidgin_matthew",
+   "org": "LUMO Project",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_01_360.mp4",
+     "label": "Chapter 1 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_02_360.mp4",
+     "label": "Chapter 2 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_03_360.mp4",
+     "label": "Chapter 3 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_04_360.mp4",
+     "label": "Chapter 4 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_05_360.mp4",
+     "label": "Chapter 5 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_06_360.mp4",
+     "label": "Chapter 6 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_07_360.mp4",
+     "label": "Chapter 7 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_08_360.mp4",
+     "label": "Chapter 8 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_09_360.mp4",
+     "label": "Chapter 9 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_10_360.mp4",
+     "label": "Chapter 10 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_11_360.mp4",
+     "label": "Chapter 11 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_12_360.mp4",
+     "label": "Chapter 12 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_13_360.mp4",
+     "label": "Chapter 13 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_14_360.mp4",
+     "label": "Chapter 14 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_15_360.mp4",
+     "label": "Chapter 15 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_16_360.mp4",
+     "label": "Chapter 16 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_17_360.mp4",
+     "label": "Chapter 17 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_18_360.mp4",
+     "label": "Chapter 18 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_19_360.mp4",
+     "label": "Chapter 19 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_20_360.mp4",
+     "label": "Chapter 20 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_21_360.mp4",
+     "label": "Chapter 21 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_22_360.mp4",
+     "label": "Chapter 22 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_23_360.mp4",
+     "label": "Chapter 23 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_24_360.mp4",
+     "label": "Chapter 24 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_25_360.mp4",
+     "label": "Chapter 25 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_26_360.mp4",
+     "label": "Chapter 26 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_27_360.mp4",
+     "label": "Chapter 27 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_28_360.mp4",
+     "label": "Chapter 28 (MP4)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/video/lumo-matthew/pcm_nigerian-pidgin_matthew",
+     "label": "See di film and other downloads for DBS"
+    }
+   ],
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_01_360.mp4",
+      "title": "Chapter 1"
+     },
+     {
+      "n": 2,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_02_360.mp4",
+      "title": "Chapter 2"
+     },
+     {
+      "n": 3,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_03_360.mp4",
+      "title": "Chapter 3"
+     },
+     {
+      "n": 4,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_04_360.mp4",
+      "title": "Chapter 4"
+     },
+     {
+      "n": 5,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_05_360.mp4",
+      "title": "Chapter 5"
+     },
+     {
+      "n": 6,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_06_360.mp4",
+      "title": "Chapter 6"
+     },
+     {
+      "n": 7,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_07_360.mp4",
+      "title": "Chapter 7"
+     },
+     {
+      "n": 8,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_08_360.mp4",
+      "title": "Chapter 8"
+     },
+     {
+      "n": 9,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_09_360.mp4",
+      "title": "Chapter 9"
+     },
+     {
+      "n": 10,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_10_360.mp4",
+      "title": "Chapter 10"
+     },
+     {
+      "n": 11,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_11_360.mp4",
+      "title": "Chapter 11"
+     },
+     {
+      "n": 12,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_12_360.mp4",
+      "title": "Chapter 12"
+     },
+     {
+      "n": 13,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_13_360.mp4",
+      "title": "Chapter 13"
+     },
+     {
+      "n": 14,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_14_360.mp4",
+      "title": "Chapter 14"
+     },
+     {
+      "n": 15,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_15_360.mp4",
+      "title": "Chapter 15"
+     },
+     {
+      "n": 16,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_16_360.mp4",
+      "title": "Chapter 16"
+     },
+     {
+      "n": 17,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_17_360.mp4",
+      "title": "Chapter 17"
+     },
+     {
+      "n": 18,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_18_360.mp4",
+      "title": "Chapter 18"
+     },
+     {
+      "n": 19,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_19_360.mp4",
+      "title": "Chapter 19"
+     },
+     {
+      "n": 20,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_20_360.mp4",
+      "title": "Chapter 20"
+     },
+     {
+      "n": 21,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_21_360.mp4",
+      "title": "Chapter 21"
+     },
+     {
+      "n": 22,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_22_360.mp4",
+      "title": "Chapter 22"
+     },
+     {
+      "n": 23,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_23_360.mp4",
+      "title": "Chapter 23"
+     },
+     {
+      "n": 24,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_24_360.mp4",
+      "title": "Chapter 24"
+     },
+     {
+      "n": 25,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_25_360.mp4",
+      "title": "Chapter 25"
+     },
+     {
+      "n": 26,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_26_360.mp4",
+      "title": "Chapter 26"
+     },
+     {
+      "n": 27,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_27_360.mp4",
+      "title": "Chapter 27"
+     },
+     {
+      "n": 28,
+      "file": "https://video.dbs.org/Lumo-Matthew/films_low/pcm_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_low/pcm_LUMO_Nigerian-Pidgin_Matthew_Direct-Translation-FCBH_28_360.mp4",
+      "title": "Chapter 28"
+     }
+    ]
+   }
+  },
+  {
+   "id": "pcm-film-pcm_nigerian-pidgin_john_slides",
+   "lang": "pcm",
+   "type": "film",
+   "title": "Gospel of John Slides",
+   "native": "Di Good News wey John write with pictures",
+   "langName": "Naija Pidgin",
+   "scope": "Naija Pidgin",
+   "source": "https://dbs.org/video/john_slides/pcm_nigerian-pidgin_john_slides",
+   "org": "Gospel of John Slides",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_01.mp4",
+     "label": "Part 1 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_02.mp4",
+     "label": "Part 2 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_03.mp4",
+     "label": "Part 3 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_04.mp4",
+     "label": "Part 4 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_05.mp4",
+     "label": "Part 5 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_06.mp4",
+     "label": "Part 6 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_07.mp4",
+     "label": "Part 7 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_08.mp4",
+     "label": "Part 8 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_09.mp4",
+     "label": "Part 9 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_10.mp4",
+     "label": "Part 10 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_11.mp4",
+     "label": "Part 11 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_12.mp4",
+     "label": "Part 12 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_13.mp4",
+     "label": "Part 13 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_14.mp4",
+     "label": "Part 14 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_15.mp4",
+     "label": "Part 15 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_16.mp4",
+     "label": "Part 16 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_17.mp4",
+     "label": "Part 17 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_18.mp4",
+     "label": "Part 18 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_19.mp4",
+     "label": "Part 19 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_20.mp4",
+     "label": "Part 20 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_21.mp4",
+     "label": "Part 21 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_22.mp4",
+     "label": "Part 22 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_23.mp4",
+     "label": "Part 23 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_24.mp4",
+     "label": "Part 24 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_25.mp4",
+     "label": "Part 25 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_26.mp4",
+     "label": "Part 26 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_27.mp4",
+     "label": "Part 27 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_28.mp4",
+     "label": "Part 28 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_29.mp4",
+     "label": "Part 29 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_30.mp4",
+     "label": "Part 30 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_31.mp4",
+     "label": "Part 31 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_32.mp4",
+     "label": "Part 32 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_33.mp4",
+     "label": "Part 33 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_34.mp4",
+     "label": "Part 34 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_35.mp4",
+     "label": "Part 35 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_36.mp4",
+     "label": "Part 36 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_37.mp4",
+     "label": "Part 37 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_38.mp4",
+     "label": "Part 38 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_39.mp4",
+     "label": "Part 39 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_40.mp4",
+     "label": "Part 40 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_41.mp4",
+     "label": "Part 41 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_42.mp4",
+     "label": "Part 42 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_43.mp4",
+     "label": "Part 43 (MP4)"
+    },
+    {
+     "url": "https://dbs.org/cdn/video/John_Slides/films/pcm_nigerian-pidgin.mp4",
+     "label": "Whole film (MP4) · Use less data"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/video/john_slides/pcm_nigerian-pidgin_john_slides",
+     "label": "See di film and other downloads for DBS"
+    }
+   ],
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_01.mp4",
+      "title": "Part 1"
+     },
+     {
+      "n": 2,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_02.mp4",
+      "title": "Part 2"
+     },
+     {
+      "n": 3,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_03.mp4",
+      "title": "Part 3"
+     },
+     {
+      "n": 4,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_04.mp4",
+      "title": "Part 4"
+     },
+     {
+      "n": 5,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_05.mp4",
+      "title": "Part 5"
+     },
+     {
+      "n": 6,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_06.mp4",
+      "title": "Part 6"
+     },
+     {
+      "n": 7,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_07.mp4",
+      "title": "Part 7"
+     },
+     {
+      "n": 8,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_08.mp4",
+      "title": "Part 8"
+     },
+     {
+      "n": 9,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_09.mp4",
+      "title": "Part 9"
+     },
+     {
+      "n": 10,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_10.mp4",
+      "title": "Part 10"
+     },
+     {
+      "n": 11,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_11.mp4",
+      "title": "Part 11"
+     },
+     {
+      "n": 12,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_12.mp4",
+      "title": "Part 12"
+     },
+     {
+      "n": 13,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_13.mp4",
+      "title": "Part 13"
+     },
+     {
+      "n": 14,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_14.mp4",
+      "title": "Part 14"
+     },
+     {
+      "n": 15,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_15.mp4",
+      "title": "Part 15"
+     },
+     {
+      "n": 16,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_16.mp4",
+      "title": "Part 16"
+     },
+     {
+      "n": 17,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_17.mp4",
+      "title": "Part 17"
+     },
+     {
+      "n": 18,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_18.mp4",
+      "title": "Part 18"
+     },
+     {
+      "n": 19,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_19.mp4",
+      "title": "Part 19"
+     },
+     {
+      "n": 20,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_20.mp4",
+      "title": "Part 20"
+     },
+     {
+      "n": 21,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_21.mp4",
+      "title": "Part 21"
+     },
+     {
+      "n": 22,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_22.mp4",
+      "title": "Part 22"
+     },
+     {
+      "n": 23,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_23.mp4",
+      "title": "Part 23"
+     },
+     {
+      "n": 24,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_24.mp4",
+      "title": "Part 24"
+     },
+     {
+      "n": 25,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_25.mp4",
+      "title": "Part 25"
+     },
+     {
+      "n": 26,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_26.mp4",
+      "title": "Part 26"
+     },
+     {
+      "n": 27,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_27.mp4",
+      "title": "Part 27"
+     },
+     {
+      "n": 28,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_28.mp4",
+      "title": "Part 28"
+     },
+     {
+      "n": 29,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_29.mp4",
+      "title": "Part 29"
+     },
+     {
+      "n": 30,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_30.mp4",
+      "title": "Part 30"
+     },
+     {
+      "n": 31,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_31.mp4",
+      "title": "Part 31"
+     },
+     {
+      "n": 32,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_32.mp4",
+      "title": "Part 32"
+     },
+     {
+      "n": 33,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_33.mp4",
+      "title": "Part 33"
+     },
+     {
+      "n": 34,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_34.mp4",
+      "title": "Part 34"
+     },
+     {
+      "n": 35,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_35.mp4",
+      "title": "Part 35"
+     },
+     {
+      "n": 36,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_36.mp4",
+      "title": "Part 36"
+     },
+     {
+      "n": 37,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_37.mp4",
+      "title": "Part 37"
+     },
+     {
+      "n": 38,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_38.mp4",
+      "title": "Part 38"
+     },
+     {
+      "n": 39,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_39.mp4",
+      "title": "Part 39"
+     },
+     {
+      "n": 40,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_40.mp4",
+      "title": "Part 40"
+     },
+     {
+      "n": 41,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_41.mp4",
+      "title": "Part 41"
+     },
+     {
+      "n": 42,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_42.mp4",
+      "title": "Part 42"
+     },
+     {
+      "n": 43,
+      "file": "https://video.dbs.org/John_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_43.mp4",
+      "title": "Part 43"
+     }
+    ]
+   }
+  },
+  {
+   "id": "pcm-film-pcm_nigerian-pidgin_bible_slides",
+   "lang": "pcm",
+   "type": "film",
+   "title": "Bible Slides",
+   "native": "Bible stories with pictures",
+   "langName": "Naija Pidgin",
+   "scope": "Naija Pidgin",
+   "source": "https://dbs.org/video/bible_slides/pcm_nigerian-pidgin_bible_slides",
+   "org": "Bible Slides",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_01.mp4",
+     "label": "Part 1 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_02.mp4",
+     "label": "Part 2 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_03.mp4",
+     "label": "Part 3 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_04.mp4",
+     "label": "Part 4 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_05.mp4",
+     "label": "Part 5 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_06.mp4",
+     "label": "Part 6 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_07.mp4",
+     "label": "Part 7 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_08.mp4",
+     "label": "Part 8 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_09.mp4",
+     "label": "Part 9 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_10.mp4",
+     "label": "Part 10 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_11.mp4",
+     "label": "Part 11 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_12.mp4",
+     "label": "Part 12 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_13.mp4",
+     "label": "Part 13 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_14.mp4",
+     "label": "Part 14 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_15.mp4",
+     "label": "Part 15 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_16.mp4",
+     "label": "Part 16 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_17.mp4",
+     "label": "Part 17 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_18.mp4",
+     "label": "Part 18 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_19.mp4",
+     "label": "Part 19 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_20.mp4",
+     "label": "Part 20 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_21.mp4",
+     "label": "Part 21 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_22.mp4",
+     "label": "Part 22 (MP4)"
+    },
+    {
+     "url": "https://dbs.org/cdn/video/Bible_Slides/films/pcm_nigerian-pidgin.mp4",
+     "label": "Whole film (MP4) · Use less data"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/video/bible_slides/pcm_nigerian-pidgin_bible_slides",
+     "label": "See di film and other downloads for DBS"
+    }
+   ],
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_01.mp4",
+      "title": "Part 1"
+     },
+     {
+      "n": 2,
+      "file": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_02.mp4",
+      "title": "Part 2"
+     },
+     {
+      "n": 3,
+      "file": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_03.mp4",
+      "title": "Part 3"
+     },
+     {
+      "n": 4,
+      "file": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_04.mp4",
+      "title": "Part 4"
+     },
+     {
+      "n": 5,
+      "file": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_05.mp4",
+      "title": "Part 5"
+     },
+     {
+      "n": 6,
+      "file": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_06.mp4",
+      "title": "Part 6"
+     },
+     {
+      "n": 7,
+      "file": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_07.mp4",
+      "title": "Part 7"
+     },
+     {
+      "n": 8,
+      "file": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_08.mp4",
+      "title": "Part 8"
+     },
+     {
+      "n": 9,
+      "file": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_09.mp4",
+      "title": "Part 9"
+     },
+     {
+      "n": 10,
+      "file": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_10.mp4",
+      "title": "Part 10"
+     },
+     {
+      "n": 11,
+      "file": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_11.mp4",
+      "title": "Part 11"
+     },
+     {
+      "n": 12,
+      "file": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_12.mp4",
+      "title": "Part 12"
+     },
+     {
+      "n": 13,
+      "file": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_13.mp4",
+      "title": "Part 13"
+     },
+     {
+      "n": 14,
+      "file": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_14.mp4",
+      "title": "Part 14"
+     },
+     {
+      "n": 15,
+      "file": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_15.mp4",
+      "title": "Part 15"
+     },
+     {
+      "n": 16,
+      "file": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_16.mp4",
+      "title": "Part 16"
+     },
+     {
+      "n": 17,
+      "file": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_17.mp4",
+      "title": "Part 17"
+     },
+     {
+      "n": 18,
+      "file": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_18.mp4",
+      "title": "Part 18"
+     },
+     {
+      "n": 19,
+      "file": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_19.mp4",
+      "title": "Part 19"
+     },
+     {
+      "n": 20,
+      "file": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_20.mp4",
+      "title": "Part 20"
+     },
+     {
+      "n": 21,
+      "file": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_21.mp4",
+      "title": "Part 21"
+     },
+     {
+      "n": 22,
+      "file": "https://video.dbs.org/Bible_Slides/chapters/pcm_nigerian-pidgin/pcm_nigerian-pidgin_chapter_22.mp4",
+      "title": "Part 22"
+     }
+    ]
+   }
+  },
+  {
+   "id": "pcm-film-pcm-nigerian_pidgin-ibible_salvation",
+   "lang": "pcm",
+   "type": "film",
+   "title": "iBible: Salvation Story",
+   "native": "iBible: Di Ril Tori of Jesus",
+   "langName": "Naija Pidgin",
+   "scope": "Naija Pidgin",
+   "source": "https://dbs.org/video/ibible/pcm-nigerian_pidgin-ibible_salvation",
+   "org": "iBible: Salvation Story",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://dbs.org/cdn/video/ibible/films/pcm-nigerian_pidgin-ibible_salvation-hd.mp4",
+     "label": "Whole film (MP4) · HD"
+    },
+    {
+     "url": "https://dbs.org/cdn/video/ibible/films_low/pcm-nigerian_pidgin-ibible_salvation-sd.mp4",
+     "label": "Whole film (MP4) · Use less data"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/video/ibible/pcm-nigerian_pidgin-ibible_salvation",
+     "label": "See di film and other downloads for DBS"
+    }
+   ],
+   "play": {
+    "kind": "file",
+    "sd": "https://dbs.org/cdn/video/ibible/films_low/pcm-nigerian_pidgin-ibible_salvation-sd.mp4",
+    "hd": "https://dbs.org/cdn/video/ibible/films/pcm-nigerian_pidgin-ibible_salvation-hd.mp4"
+   }
+  },
+  {
+   "id": "pcm-film-pcm-matthew-vb-nigerian-pidgin",
+   "lang": "pcm",
+   "type": "film",
+   "title": "The Visual Bible: Matthew",
+   "native": "Bible film: Matiu",
+   "langName": "Naija Pidgin",
+   "scope": "Naija Pidgin",
+   "source": "https://dbs.org/video/matthew/pcm-matthew-vb-nigerian-pidgin",
+   "org": "Visual Bible Int.",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-01.mp4",
+     "label": "Chapter 1 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-02.mp4",
+     "label": "Chapter 2 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-03.mp4",
+     "label": "Chapter 3 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-04.mp4",
+     "label": "Chapter 4 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-05.mp4",
+     "label": "Chapter 5 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-06.mp4",
+     "label": "Chapter 6 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-07.mp4",
+     "label": "Chapter 7 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-08.mp4",
+     "label": "Chapter 8 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-09.mp4",
+     "label": "Chapter 9 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-10.mp4",
+     "label": "Chapter 10 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-11.mp4",
+     "label": "Chapter 11 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-12.mp4",
+     "label": "Chapter 12 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-13.mp4",
+     "label": "Chapter 13 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-14.mp4",
+     "label": "Chapter 14 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-15.mp4",
+     "label": "Chapter 15 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-16.mp4",
+     "label": "Chapter 16 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-17.mp4",
+     "label": "Chapter 17 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-18.mp4",
+     "label": "Chapter 18 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-19.mp4",
+     "label": "Chapter 19 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-20.mp4",
+     "label": "Chapter 20 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-21.mp4",
+     "label": "Chapter 21 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-22.mp4",
+     "label": "Chapter 22 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-23.mp4",
+     "label": "Chapter 23 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-24.mp4",
+     "label": "Chapter 24 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-25.mp4",
+     "label": "Chapter 25 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-26.mp4",
+     "label": "Chapter 26 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-27.mp4",
+     "label": "Chapter 27 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-28.mp4",
+     "label": "Chapter 28 (MP4)"
+    },
+    {
+     "url": "https://dbs.org/cdn/video/Matthew/films/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin.mp4",
+     "label": "Whole film (MP4) · Use less data"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/video/matthew/pcm-matthew-vb-nigerian-pidgin",
+     "label": "See di film and other downloads for DBS"
+    }
+   ],
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-01.mp4",
+      "title": "Chapter 1"
+     },
+     {
+      "n": 2,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-02.mp4",
+      "title": "Chapter 2"
+     },
+     {
+      "n": 3,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-03.mp4",
+      "title": "Chapter 3"
+     },
+     {
+      "n": 4,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-04.mp4",
+      "title": "Chapter 4"
+     },
+     {
+      "n": 5,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-05.mp4",
+      "title": "Chapter 5"
+     },
+     {
+      "n": 6,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-06.mp4",
+      "title": "Chapter 6"
+     },
+     {
+      "n": 7,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-07.mp4",
+      "title": "Chapter 7"
+     },
+     {
+      "n": 8,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-08.mp4",
+      "title": "Chapter 8"
+     },
+     {
+      "n": 9,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-09.mp4",
+      "title": "Chapter 9"
+     },
+     {
+      "n": 10,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-10.mp4",
+      "title": "Chapter 10"
+     },
+     {
+      "n": 11,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-11.mp4",
+      "title": "Chapter 11"
+     },
+     {
+      "n": 12,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-12.mp4",
+      "title": "Chapter 12"
+     },
+     {
+      "n": 13,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-13.mp4",
+      "title": "Chapter 13"
+     },
+     {
+      "n": 14,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-14.mp4",
+      "title": "Chapter 14"
+     },
+     {
+      "n": 15,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-15.mp4",
+      "title": "Chapter 15"
+     },
+     {
+      "n": 16,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-16.mp4",
+      "title": "Chapter 16"
+     },
+     {
+      "n": 17,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-17.mp4",
+      "title": "Chapter 17"
+     },
+     {
+      "n": 18,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-18.mp4",
+      "title": "Chapter 18"
+     },
+     {
+      "n": 19,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-19.mp4",
+      "title": "Chapter 19"
+     },
+     {
+      "n": 20,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-20.mp4",
+      "title": "Chapter 20"
+     },
+     {
+      "n": 21,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-21.mp4",
+      "title": "Chapter 21"
+     },
+     {
+      "n": 22,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-22.mp4",
+      "title": "Chapter 22"
+     },
+     {
+      "n": 23,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-23.mp4",
+      "title": "Chapter 23"
+     },
+     {
+      "n": 24,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-24.mp4",
+      "title": "Chapter 24"
+     },
+     {
+      "n": 25,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-25.mp4",
+      "title": "Chapter 25"
+     },
+     {
+      "n": 26,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-26.mp4",
+      "title": "Chapter 26"
+     },
+     {
+      "n": 27,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-27.mp4",
+      "title": "Chapter 27"
+     },
+     {
+      "n": 28,
+      "file": "https://video.dbs.org/Matthew/chapters/pcm-matthew-vb-nigerian-pidgin/pcm-matthew-vb-nigerian-pidgin-chapter-28.mp4",
+      "title": "Chapter 28"
+     }
+    ]
+   }
+  },
+  {
+   "id": "pcm-film-pcm-acts-vb-nigerian-pidgin",
+   "lang": "pcm",
+   "type": "film",
+   "title": "The Visual Bible: Acts",
+   "native": "Bible film: Acts",
+   "langName": "Naija Pidgin",
+   "scope": "Naija Pidgin",
+   "source": "https://dbs.org/video/acts_vb/pcm-acts-vb-nigerian-pidgin",
+   "org": "Visual Bible Int.",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-01.mp4",
+     "label": "Chapter 1 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-02.mp4",
+     "label": "Chapter 2 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-03.mp4",
+     "label": "Chapter 3 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-04.mp4",
+     "label": "Chapter 4 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-05.mp4",
+     "label": "Chapter 5 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-06.mp4",
+     "label": "Chapter 6 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-07.mp4",
+     "label": "Chapter 7 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-08.mp4",
+     "label": "Chapter 8 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-09.mp4",
+     "label": "Chapter 9 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-10.mp4",
+     "label": "Chapter 10 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-11.mp4",
+     "label": "Chapter 11 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-12.mp4",
+     "label": "Chapter 12 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-13.mp4",
+     "label": "Chapter 13 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-14.mp4",
+     "label": "Chapter 14 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-15.mp4",
+     "label": "Chapter 15 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-16.mp4",
+     "label": "Chapter 16 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-17.mp4",
+     "label": "Chapter 17 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-18.mp4",
+     "label": "Chapter 18 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-19.mp4",
+     "label": "Chapter 19 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-20.mp4",
+     "label": "Chapter 20 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-21.mp4",
+     "label": "Chapter 21 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-22.mp4",
+     "label": "Chapter 22 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-23.mp4",
+     "label": "Chapter 23 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-24.mp4",
+     "label": "Chapter 24 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-25.mp4",
+     "label": "Chapter 25 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-26.mp4",
+     "label": "Chapter 26 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-27.mp4",
+     "label": "Chapter 27 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-28.mp4",
+     "label": "Chapter 28 (MP4)"
+    },
+    {
+     "url": "https://dbs.org/cdn/video/Acts_VB/films/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin.mp4",
+     "label": "Whole film (MP4) · Use less data"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/video/acts_vb/pcm-acts-vb-nigerian-pidgin",
+     "label": "See di film and other downloads for DBS"
+    }
+   ],
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-01.mp4",
+      "title": "Chapter 1"
+     },
+     {
+      "n": 2,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-02.mp4",
+      "title": "Chapter 2"
+     },
+     {
+      "n": 3,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-03.mp4",
+      "title": "Chapter 3"
+     },
+     {
+      "n": 4,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-04.mp4",
+      "title": "Chapter 4"
+     },
+     {
+      "n": 5,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-05.mp4",
+      "title": "Chapter 5"
+     },
+     {
+      "n": 6,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-06.mp4",
+      "title": "Chapter 6"
+     },
+     {
+      "n": 7,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-07.mp4",
+      "title": "Chapter 7"
+     },
+     {
+      "n": 8,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-08.mp4",
+      "title": "Chapter 8"
+     },
+     {
+      "n": 9,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-09.mp4",
+      "title": "Chapter 9"
+     },
+     {
+      "n": 10,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-10.mp4",
+      "title": "Chapter 10"
+     },
+     {
+      "n": 11,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-11.mp4",
+      "title": "Chapter 11"
+     },
+     {
+      "n": 12,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-12.mp4",
+      "title": "Chapter 12"
+     },
+     {
+      "n": 13,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-13.mp4",
+      "title": "Chapter 13"
+     },
+     {
+      "n": 14,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-14.mp4",
+      "title": "Chapter 14"
+     },
+     {
+      "n": 15,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-15.mp4",
+      "title": "Chapter 15"
+     },
+     {
+      "n": 16,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-16.mp4",
+      "title": "Chapter 16"
+     },
+     {
+      "n": 17,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-17.mp4",
+      "title": "Chapter 17"
+     },
+     {
+      "n": 18,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-18.mp4",
+      "title": "Chapter 18"
+     },
+     {
+      "n": 19,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-19.mp4",
+      "title": "Chapter 19"
+     },
+     {
+      "n": 20,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-20.mp4",
+      "title": "Chapter 20"
+     },
+     {
+      "n": 21,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-21.mp4",
+      "title": "Chapter 21"
+     },
+     {
+      "n": 22,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-22.mp4",
+      "title": "Chapter 22"
+     },
+     {
+      "n": 23,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-23.mp4",
+      "title": "Chapter 23"
+     },
+     {
+      "n": 24,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-24.mp4",
+      "title": "Chapter 24"
+     },
+     {
+      "n": 25,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-25.mp4",
+      "title": "Chapter 25"
+     },
+     {
+      "n": 26,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-26.mp4",
+      "title": "Chapter 26"
+     },
+     {
+      "n": 27,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-27.mp4",
+      "title": "Chapter 27"
+     },
+     {
+      "n": 28,
+      "file": "https://video.dbs.org/Acts_VB/chapters/pcm-acts-vb-nigerian-pidgin/pcm-acts-vb-nigerian-pidgin-chapter-28.mp4",
+      "title": "Chapter 28"
+     }
+    ]
+   }
+  },
+  {
+   "id": "pcm-ac-pcm_globalrecordings_pidgin_nigeria",
+   "lang": "pcm",
+   "type": "audio",
+   "title": "Nigerian Pidgin",
+   "native": "Words wey give life — all recordings",
+   "langName": "Naija Pidgin",
+   "scope": "Naija Pidgin",
+   "source": "https://dbs.org/audio/collections/grn/pcm_GlobalRecordings_pidgin_nigeria",
+   "org": "Global Recordings Network",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20001%20Our%20Great%20Enemy%20Satan%2033050.mp3",
+     "label": "Satan, awa big enemy (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20002%20Good%20News%2033050.mp3",
+     "label": "Di Good News (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20003%20God%27s%20Peace%20Payment%2033050.mp3",
+     "label": "Wetin God pay to bring peace (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20004%20How%20to%20be%20Born%20Again%2033050.mp3",
+     "label": "How to be born again (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20005%20How%20to%20Become%20God%27s%20Child%2033050.mp3",
+     "label": "How to become God pikin (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20006%20Jesus%20is%20Alive%2033050.mp3",
+     "label": "Jesus dey alive (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20007%20First%20Seek%20Ye%20the%20Kingdom%20of%20God%2033050.mp3",
+     "label": "Find God kingdom first (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20008%20The%20Gadarene%2033050.mp3",
+     "label": "Di man from Gadara (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20009%20Jesus%20is%20Great%2033050.mp3",
+     "label": "Jesus dey great (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20010%20Jesus%20Heals%20and%20Forgives%2033050.mp3",
+     "label": "Jesus dey heal and forgive (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20011%20Repent%20and%20Believe%2033050.mp3",
+     "label": "Turn from sin and believe (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20012%20Judgement%20Day%2033050.mp3",
+     "label": "Judgement Day (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%202%2033051/Pidgin%20Nigeria%20Words%20of%20Life%202%20001%20God%20or%20Baal%20_%20Choose%20Ye%20Today%20_%20Are%20You%20Afraid%20_%20Be%20Ca%2033051.mp3",
+     "label": "God or Baal · Choose today · You dey fear? · Be careful (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%202%2033051/Pidgin%20Nigeria%20Words%20of%20Life%202%20002%20Christ%20our%20Victory%20_%20Light%20is%20What%20We%20Want%20_%20A%20Clean%20H%2033051.mp3",
+     "label": "Christ na awa victory · Na light we want · Clean heart · Who get power to forgive sin? · After you believe · Your name dey higher (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria_low.zip",
+     "label": "All recordings (ZIP) · Use less data"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/grn/pcm_GlobalRecordings_pidgin_nigeria",
+     "label": "See all downloads for DBS"
+    }
+   ],
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20001%20Our%20Great%20Enemy%20Satan%2033050.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20001%20Our%20Great%20Enemy%20Satan%2033050.mp3",
+      "title": "Satan, awa big enemy"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20002%20Good%20News%2033050.mp3",
+      "title": "Di Good News"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20003%20God%27s%20Peace%20Payment%2033050.mp3",
+      "title": "Wetin God pay to bring peace"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20004%20How%20to%20be%20Born%20Again%2033050.mp3",
+      "title": "How to be born again"
+     },
+     {
+      "n": 5,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20005%20How%20to%20Become%20God%27s%20Child%2033050.mp3",
+      "title": "How to become God pikin"
+     },
+     {
+      "n": 6,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20006%20Jesus%20is%20Alive%2033050.mp3",
+      "title": "Jesus dey alive"
+     },
+     {
+      "n": 7,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20007%20First%20Seek%20Ye%20the%20Kingdom%20of%20God%2033050.mp3",
+      "title": "Find God kingdom first"
+     },
+     {
+      "n": 8,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20008%20The%20Gadarene%2033050.mp3",
+      "title": "Di man from Gadara"
+     },
+     {
+      "n": 9,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20009%20Jesus%20is%20Great%2033050.mp3",
+      "title": "Jesus dey great"
+     },
+     {
+      "n": 10,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20010%20Jesus%20Heals%20and%20Forgives%2033050.mp3",
+      "title": "Jesus dey heal and forgive"
+     },
+     {
+      "n": 11,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20011%20Repent%20and%20Believe%2033050.mp3",
+      "title": "Turn from sin and believe"
+     },
+     {
+      "n": 12,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20012%20Judgement%20Day%2033050.mp3",
+      "title": "Judgement Day"
+     },
+     {
+      "n": 13,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%202%2033051/Pidgin%20Nigeria%20Words%20of%20Life%202%20001%20God%20or%20Baal%20_%20Choose%20Ye%20Today%20_%20Are%20You%20Afraid%20_%20Be%20Ca%2033051.mp3",
+      "title": "God or Baal · Choose today · You dey fear? · Be careful"
+     },
+     {
+      "n": 14,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%202%2033051/Pidgin%20Nigeria%20Words%20of%20Life%202%20002%20Christ%20our%20Victory%20_%20Light%20is%20What%20We%20Want%20_%20A%20Clean%20H%2033051.mp3",
+      "title": "Christ na awa victory · Na light we want · Clean heart · Who get power to forgive sin? · After you believe · Your name dey higher"
+     }
+    ]
+   }
+  },
+  {
+   "id": "pcm-ac-pcm_storyjesus_nigerian_pidgin_english",
+   "lang": "pcm",
+   "type": "audio",
+   "title": "Nigerian Pidgin",
+   "native": "Di story of Jesus for audio",
+   "langName": "Naija Pidgin",
+   "scope": "Naija Pidgin",
+   "source": "https://dbs.org/audio/collections/soj/pcm_StoryJesus_nigerian_pidgin_english",
+   "org": "Story of Jesus",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/soj/pcm_StoryJesus_nigerian_pidgin_english_full.mp3",
+     "label": "Di whole story (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/pcm_StoryJesus_nigerian_pidgin_english/StoryJesus_Nigerian_Pidgin_English_1/StoryJesus_Nigerian_Pidgin_English_Part_1.mp3",
+     "label": "Part 1 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/pcm_StoryJesus_nigerian_pidgin_english/StoryJesus_Nigerian_Pidgin_English_2/StoryJesus_Nigerian_Pidgin_English_Part_2.mp3",
+     "label": "Part 2 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/pcm_StoryJesus_nigerian_pidgin_english/StoryJesus_Nigerian_Pidgin_English_3/StoryJesus_Nigerian_Pidgin_English_Part_3.mp3",
+     "label": "Part 3 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/pcm_StoryJesus_nigerian_pidgin_english/StoryJesus_Nigerian_Pidgin_English_4/StoryJesus_Nigerian_Pidgin_English_Part_4.mp3",
+     "label": "Part 4 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/pcm_StoryJesus_nigerian_pidgin_english/StoryJesus_Nigerian_Pidgin_English_5/StoryJesus_Nigerian_Pidgin_English_Part_5.mp3",
+     "label": "Part 5 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/pcm_StoryJesus_nigerian_pidgin_english/StoryJesus_Nigerian_Pidgin_English_6/StoryJesus_Nigerian_Pidgin_English_Part_6.mp3",
+     "label": "Part 6 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/pcm_StoryJesus_nigerian_pidgin_english/StoryJesus_Nigerian_Pidgin_English_7/StoryJesus_Nigerian_Pidgin_English_Part_7.mp3",
+     "label": "Part 7 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/pcm_StoryJesus_nigerian_pidgin_english/StoryJesus_Nigerian_Pidgin_English_8/StoryJesus_Nigerian_Pidgin_English_Part_8.mp3",
+     "label": "Part 8 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/pcm_StoryJesus_nigerian_pidgin_english.zip",
+     "label": "All recordings (ZIP) · All parts"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/soj/pcm_StoryJesus_nigerian_pidgin_english",
+     "label": "See all downloads for DBS"
+    }
+   ],
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/soj/pcm_StoryJesus_nigerian_pidgin_english_full.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/soj/pcm_StoryJesus_nigerian_pidgin_english_full.mp3",
+      "title": "Di whole story"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/soj/pcm_StoryJesus_nigerian_pidgin_english/StoryJesus_Nigerian_Pidgin_English_1/StoryJesus_Nigerian_Pidgin_English_Part_1.mp3",
+      "title": "Part 1"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/soj/pcm_StoryJesus_nigerian_pidgin_english/StoryJesus_Nigerian_Pidgin_English_2/StoryJesus_Nigerian_Pidgin_English_Part_2.mp3",
+      "title": "Part 2"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/soj/pcm_StoryJesus_nigerian_pidgin_english/StoryJesus_Nigerian_Pidgin_English_3/StoryJesus_Nigerian_Pidgin_English_Part_3.mp3",
+      "title": "Part 3"
+     },
+     {
+      "n": 5,
+      "file": "https://media.dbs.org/audio/soj/pcm_StoryJesus_nigerian_pidgin_english/StoryJesus_Nigerian_Pidgin_English_4/StoryJesus_Nigerian_Pidgin_English_Part_4.mp3",
+      "title": "Part 4"
+     },
+     {
+      "n": 6,
+      "file": "https://media.dbs.org/audio/soj/pcm_StoryJesus_nigerian_pidgin_english/StoryJesus_Nigerian_Pidgin_English_5/StoryJesus_Nigerian_Pidgin_English_Part_5.mp3",
+      "title": "Part 5"
+     },
+     {
+      "n": 7,
+      "file": "https://media.dbs.org/audio/soj/pcm_StoryJesus_nigerian_pidgin_english/StoryJesus_Nigerian_Pidgin_English_6/StoryJesus_Nigerian_Pidgin_English_Part_6.mp3",
+      "title": "Part 6"
+     },
+     {
+      "n": 8,
+      "file": "https://media.dbs.org/audio/soj/pcm_StoryJesus_nigerian_pidgin_english/StoryJesus_Nigerian_Pidgin_English_7/StoryJesus_Nigerian_Pidgin_English_Part_7.mp3",
+      "title": "Part 7"
+     },
+     {
+      "n": 9,
+      "file": "https://media.dbs.org/audio/soj/pcm_StoryJesus_nigerian_pidgin_english/StoryJesus_Nigerian_Pidgin_English_8/StoryJesus_Nigerian_Pidgin_English_Part_8.mp3",
+      "title": "Part 8"
+     }
+    ]
+   }
+  },
+  {
+   "id": "pcm-grn-33050",
+   "lang": "pcm",
+   "type": "audio",
+   "title": "Words of Life 1",
+   "native": "Words wey give life 1",
+   "langName": "Naija Pidgin",
+   "scope": "Naija Pidgin",
+   "source": "https://globalrecordings.net/en/program/33050",
+   "org": "Global Recordings Network",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20001%20Our%20Great%20Enemy%20Satan%2033050.mp3",
+     "label": "Satan, awa big enemy (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20002%20Good%20News%2033050.mp3",
+     "label": "Di Good News (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20003%20God%27s%20Peace%20Payment%2033050.mp3",
+     "label": "Wetin God pay to bring peace (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20004%20How%20to%20be%20Born%20Again%2033050.mp3",
+     "label": "How to be born again (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20005%20How%20to%20Become%20God%27s%20Child%2033050.mp3",
+     "label": "How to become God pikin (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20006%20Jesus%20is%20Alive%2033050.mp3",
+     "label": "Jesus dey alive (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20007%20First%20Seek%20Ye%20the%20Kingdom%20of%20God%2033050.mp3",
+     "label": "Find God kingdom first (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20008%20The%20Gadarene%2033050.mp3",
+     "label": "Di man from Gadara (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20009%20Jesus%20is%20Great%2033050.mp3",
+     "label": "Jesus dey great (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20010%20Jesus%20Heals%20and%20Forgives%2033050.mp3",
+     "label": "Jesus dey heal and forgive (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20011%20Repent%20and%20Believe%2033050.mp3",
+     "label": "Turn from sin and believe (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20012%20Judgement%20Day%2033050.mp3",
+     "label": "Judgement Day (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://globalrecordings.net/en/program/33050",
+     "label": "See di programme and other formats for GRN"
+    }
+   ],
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20001%20Our%20Great%20Enemy%20Satan%2033050.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20001%20Our%20Great%20Enemy%20Satan%2033050.mp3",
+      "title": "Satan, awa big enemy"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20002%20Good%20News%2033050.mp3",
+      "title": "Di Good News"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20003%20God%27s%20Peace%20Payment%2033050.mp3",
+      "title": "Wetin God pay to bring peace"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20004%20How%20to%20be%20Born%20Again%2033050.mp3",
+      "title": "How to be born again"
+     },
+     {
+      "n": 5,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20005%20How%20to%20Become%20God%27s%20Child%2033050.mp3",
+      "title": "How to become God pikin"
+     },
+     {
+      "n": 6,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20006%20Jesus%20is%20Alive%2033050.mp3",
+      "title": "Jesus dey alive"
+     },
+     {
+      "n": 7,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20007%20First%20Seek%20Ye%20the%20Kingdom%20of%20God%2033050.mp3",
+      "title": "Find God kingdom first"
+     },
+     {
+      "n": 8,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20008%20The%20Gadarene%2033050.mp3",
+      "title": "Di man from Gadara"
+     },
+     {
+      "n": 9,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20009%20Jesus%20is%20Great%2033050.mp3",
+      "title": "Jesus dey great"
+     },
+     {
+      "n": 10,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20010%20Jesus%20Heals%20and%20Forgives%2033050.mp3",
+      "title": "Jesus dey heal and forgive"
+     },
+     {
+      "n": 11,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20011%20Repent%20and%20Believe%2033050.mp3",
+      "title": "Turn from sin and believe"
+     },
+     {
+      "n": 12,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%201%2033050/Pidgin%20Nigeria%20Words%20of%20Life%201%20012%20Judgement%20Day%2033050.mp3",
+      "title": "Judgement Day"
+     }
+    ]
+   }
+  },
+  {
+   "id": "pcm-grn-33051",
+   "lang": "pcm",
+   "type": "audio",
+   "title": "Words of Life 2",
+   "native": "Words wey give life 2",
+   "langName": "Naija Pidgin",
+   "scope": "Naija Pidgin",
+   "source": "https://globalrecordings.net/en/program/33051",
+   "org": "Global Recordings Network",
+   "desc": "",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%202%2033051/Pidgin%20Nigeria%20Words%20of%20Life%202%20001%20God%20or%20Baal%20_%20Choose%20Ye%20Today%20_%20Are%20You%20Afraid%20_%20Be%20Ca%2033051.mp3",
+     "label": "God or Baal · Choose today · You dey fear? · Be careful (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%202%2033051/Pidgin%20Nigeria%20Words%20of%20Life%202%20002%20Christ%20our%20Victory%20_%20Light%20is%20What%20We%20Want%20_%20A%20Clean%20H%2033051.mp3",
+     "label": "Christ na awa victory · Na light we want · Clean heart · Who get power to forgive sin? · After you believe · Your name dey higher (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://globalrecordings.net/en/program/33051",
+     "label": "See di programme and other formats for GRN"
+    }
+   ],
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%202%2033051/Pidgin%20Nigeria%20Words%20of%20Life%202%20001%20God%20or%20Baal%20_%20Choose%20Ye%20Today%20_%20Are%20You%20Afraid%20_%20Be%20Ca%2033051.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%202%2033051/Pidgin%20Nigeria%20Words%20of%20Life%202%20001%20God%20or%20Baal%20_%20Choose%20Ye%20Today%20_%20Are%20You%20Afraid%20_%20Be%20Ca%2033051.mp3",
+      "title": "God or Baal · Choose today · You dey fear? · Be careful"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/pcm_GlobalRecordings_pidgin_nigeria/Pidgin%20Nigeria/Pidgin%20Nigeria%20Words%20of%20Life%202%2033051/Pidgin%20Nigeria%20Words%20of%20Life%202%20002%20Christ%20our%20Victory%20_%20Light%20is%20What%20We%20Want%20_%20A%20Clean%20H%2033051.mp3",
+      "title": "Christ na awa victory · Na light we want · Clean heart · Who get power to forgive sin? · After you believe · Your name dey higher"
+     }
+    ]
+   }
+  }
+ ]
+}
