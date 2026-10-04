@@ -82,7 +82,8 @@
       var books = [];
       p.testaments.forEach(function (tt) {
         ET.BOOKS[tt].forEach(function (b) {
-          if (!p.books || p.books.indexOf(b[1]) !== -1) books.push([tt, b[0], b[1], b[2]]);
+          if (!p.books || p.books.indexOf(b[1]) !== -1) books.push([tt, b[0], b[1],
+            (p.chapterCounts && p.chapterCounts[b[1]]) || b[2]]);
         });
       });
       return '<audio id="a" controls preload="none" style="width:100%"></audio>' +
@@ -145,7 +146,7 @@
 
     // What language this is actually in, before anyone presses play.
     var tongue = '<span class="chip lang">' + ET.icon('globe') +
-      h(isText ? 'item.written' : 'item.spoken', { lang: (r.lang === 'ibo' && r.scope && r.scope !== 'Igbo') || r.lang === 'fra' || r.lang === 'amh'
+      h(isText ? 'item.written' : 'item.spoken', { lang: (r.lang === 'ibo' && r.scope && r.scope !== 'Igbo') || r.lang === 'fra' || r.lang === 'amh' || r.lang === 'por'
         ? r.langName : L.native && L.native !== L.name
         ? L.native + ' · ' + L.name : (L.name || r.langName || '') }) + '</span>';
 
@@ -154,7 +155,7 @@
         '<div style="display:flex;gap:.4rem;flex-wrap:wrap">' + tongue + where +
           '<span class="chip">' + h('type.' + r.type) + '</span></div>' +
         '<h1 dir="auto" style="margin:.3rem 0 0">' + ET.esc(ET.displayTitle(r)) + '</h1>' +
-        (r.native && r.native !== r.title && !(r.lang === 'amh' && ET.i18n.current() === 'am') ? '<p class="latin" style="font-size:1rem;margin:0">' +
+        (r.native && r.native !== r.title && !((r.lang === 'amh' && ET.i18n.current() === 'am') || (r.lang === 'por' && ET.i18n.current() === 'pt')) ? '<p class="latin" style="font-size:1rem;margin:0">' +
           ET.esc(ET.displayTitle(r) === r.native ? r.title : r.native) + '</p>' : '') +
         '<p class="muted latin" style="margin:0">' + ET.esc([r.org, r.year, r.duration, r.stats]
           .filter(Boolean).join(' · ')) + '</p>' +
@@ -276,7 +277,8 @@
       var books = [];
       p.testaments.forEach(function (tt) {
         ET.BOOKS[tt].forEach(function (b) {
-          if (!p.books || p.books.indexOf(b[1]) !== -1) books.push([tt, b[0], b[1], b[2]]);
+          if (!p.books || p.books.indexOf(b[1]) !== -1) books.push([tt, b[0], b[1],
+            (p.chapterCounts && p.chapterCounts[b[1]]) || b[2]]);
         });
       });
       var saved = (ET.store.get(KEY, '0:1') || '0:1').split(':');

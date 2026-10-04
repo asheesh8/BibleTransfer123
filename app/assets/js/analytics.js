@@ -15,6 +15,17 @@
   var CHANNELS = ['email', 'copy_link', 'native_share', 'nearby', 'bluetooth', 'wifi',
     'sd_card', 'usb', 'whatsapp', 'telegram', 'facebook', 'sms', 'unknown'];
   var COPY = {
+    pt: {
+  "title": "Cookies e privacidade",
+  "body": "Com sua permissão, usamos o armazenamento do navegador para contar visitas, recursos utilizados, formas de compartilhar e visitas que vêm de links compartilhados. Os relatórios podem incluir seu país e o site de origem. Guardamos os dados por 90 dias. Não temos acesso aos destinatários, às mensagens privadas nem ao local onde você colou um link copiado.",
+  "accept": "Permitir estatísticas",
+  "reject": "Recusar estatísticas",
+  "settings": "Configurações de cookies",
+  "details": "Ler o aviso de privacidade",
+  "enabled": "As estatísticas estão ativadas.",
+  "disabled": "As estatísticas estão desativadas.",
+  "signal": "Seu navegador enviou uma preferência de privacidade. As estatísticas continuarão desativadas."
+},
     am: {
   "title": "ኩኪዎችና የግል መረጃዎ",
   "body": "በእርስዎ ፈቃድ ጉብኝቶችን፣ የተጠቀሙባቸውን ይዘቶች፣ የማጋራት ዘዴዎችንና ከተጋሩ አገናኞች የመጡ ጉብኝቶችን ለመቁጠር የአሳሹን ማከማቻ እንጠቀማለን። ሪፖርቶች አገርዎንና የመጡበትን ድረ ገጽ ሊያካትቱ ይችላሉ። መረጃውን ለ90 ቀናት እናቆያለን። ተቀባዮችን፣ የግል መልዕክቶችን ወይም የተቀዱ አገናኞች የት እንደተለጠፉ ማየት አንችልም።",

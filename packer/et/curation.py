@@ -199,6 +199,10 @@ def _urls(r):
 def excluded(r):
     """The reason a resource is left out, or None if it stays."""
     title = (r.get("title") or "").strip()
+    if r.get("lang") == "por":
+        for url in _urls(r):
+            if url in PORTUGUESE_EXCLUDED:
+                return PORTUGUESE_EXCLUDED[url]
     if r.get("lang") == "amh":
         for url in _urls(r):
             if url in AMHARIC_EXCLUDED:
@@ -275,6 +279,12 @@ _AMHARIC_POLICY = json.loads((pathlib.Path(__file__).resolve().parents[2] /
 AMHARIC_EXTERNAL = set(_AMHARIC_POLICY["urls"])
 AMHARIC_EXCLUDED = _AMHARIC_POLICY["excluded"]
 
+# Exact Portuguese publisher pages and files captured from the DBS inventory.
+_PORTUGUESE_POLICY = json.loads((pathlib.Path(__file__).resolve().parents[2] /
+    "catalog/source/dbs-portuguese-external-2026-10-03.json").read_text())
+PORTUGUESE_EXTERNAL = set(_PORTUGUESE_POLICY["urls"])
+PORTUGUESE_EXCLUDED = _PORTUGUESE_POLICY["excluded"]
+
 def _dbs(url):
     """On DBS's servers, and still up there."""
     host = urllib.parse.urlparse(url or "").netloc.lower()
@@ -292,11 +302,13 @@ def _dbs_only(r):
     def allowed(url):
         return (_dbs(url) or (r.get("lang") == "luo" and url in LUO_PUBLISHERS)
                 or (r.get("lang") == "orm" and url in OROMO_EXTERNAL)
+                or (r.get("lang") == "por" and url in PORTUGUESE_EXTERNAL)
                 or (r.get("lang") == "amh" and url in AMHARIC_EXTERNAL)
                 or (r.get("lang") == "fra" and url in FRENCH_EXTERNAL)
                 or (r.get("lang") == "ibo" and url in IGBO_EXTERNAL))
     def allowed_file(url):
         return (_dbs(url) or (r.get("lang") == "orm" and url in OROMO_EXTERNAL)
+                or (r.get("lang") == "por" and url in PORTUGUESE_EXTERNAL)
                 or (r.get("lang") == "amh" and url in AMHARIC_EXTERNAL)
                 or (r.get("lang") == "fra" and url in FRENCH_EXTERNAL)
                 or (r.get("lang") == "ibo" and url in IGBO_EXTERNAL))
@@ -330,7 +342,7 @@ def _dbs_only(r):
 def curate(resources):
     kept, dropped = [], []
     for r in resources:
-        if r.get("lang") in ("fra", "amh") and excluded(r):
+        if r.get("lang") in ("fra", "amh", "por") and excluded(r):
             dropped.append((r, excluded(r)))
             continue
         d = _dbs_only(r)

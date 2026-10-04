@@ -456,7 +456,7 @@ window.ET = (function () {
      English title and heard Sindhi. Choosing a language picks both: English
      shows English films, اردو shows Urdu, سنڌي shows Sindhi. The library can
      still browse the others on purpose. */
-  var CONTENT = { am: 'amh', fr: 'fra', en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', zul: 'zul', mas: 'mas', kik: 'kik', hi: 'hin', mr: 'mar', lg: 'lug', luo: 'luo', om: 'orm', ig: 'ibo', pa: 'pan', pnb: 'pnb', ne: 'npi' };
+  var CONTENT = { pt: 'por', am: 'amh', fr: 'fra', en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', zul: 'zul', mas: 'mas', kik: 'kik', hi: 'hin', mr: 'mar', lg: 'lug', luo: 'luo', om: 'orm', ig: 'ibo', pa: 'pan', pnb: 'pnb', ne: 'npi' };
   function contentCode(ui) { return CONTENT[ui] || 'eng'; }
   function contentLang() {
     var scope = libraryScope();
@@ -485,6 +485,74 @@ window.ET = (function () {
       [65,'Jude',1],[66,'Revelation',22]]
   };
   var LOCAL_BOOKS = {
+    pt: {
+  "Genesis": "Gênesis",
+  "Exodus": "Êxodo",
+  "Leviticus": "Levítico",
+  "Numbers": "Números",
+  "Deuteronomy": "Deuteronômio",
+  "Joshua": "Josué",
+  "Judges": "Juízes",
+  "Ruth": "Rute",
+  "1Samuel": "1 Samuel",
+  "2Samuel": "2 Samuel",
+  "1Kings": "1 Reis",
+  "2Kings": "2 Reis",
+  "1Chronicles": "1 Crônicas",
+  "2Chronicles": "2 Crônicas",
+  "Ezra": "Esdras",
+  "Nehemiah": "Neemias",
+  "Esther": "Ester",
+  "Job": "Jó",
+  "Psalms": "Salmos",
+  "Proverbs": "Provérbios",
+  "Ecclesiastes": "Eclesiastes",
+  "SongofSongs": "Cântico dos Cânticos",
+  "Isaiah": "Isaías",
+  "Jeremiah": "Jeremias",
+  "Lamentations": "Lamentações",
+  "Ezekiel": "Ezequiel",
+  "Daniel": "Daniel",
+  "Hosea": "Oseias",
+  "Joel": "Joel",
+  "Amos": "Amós",
+  "Obadiah": "Obadias",
+  "Jonah": "Jonas",
+  "Micah": "Miqueias",
+  "Nahum": "Naum",
+  "Habakkuk": "Habacuque",
+  "Zephaniah": "Sofonias",
+  "Haggai": "Ageu",
+  "Zechariah": "Zacarias",
+  "Malachi": "Malaquias",
+  "Matthew": "Mateus",
+  "Mark": "Marcos",
+  "Luke": "Lucas",
+  "John": "João",
+  "Acts": "Atos dos Apóstolos",
+  "Romans": "Romanos",
+  "1Corinthians": "1 Coríntios",
+  "2Corinthians": "2 Coríntios",
+  "Galatians": "Gálatas",
+  "Ephesians": "Efésios",
+  "Philippians": "Filipenses",
+  "Colossians": "Colossenses",
+  "1Thessalonians": "1 Tessalonicenses",
+  "2Thessalonians": "2 Tessalonicenses",
+  "1Timothy": "1 Timóteo",
+  "2Timothy": "2 Timóteo",
+  "Titus": "Tito",
+  "Philemon": "Filemom",
+  "Hebrews": "Hebreus",
+  "James": "Tiago",
+  "1Peter": "1 Pedro",
+  "2Peter": "2 Pedro",
+  "1John": "1 João",
+  "2John": "2 João",
+  "3John": "3 João",
+  "Jude": "Judas",
+  "Revelation": "Apocalipse"
+},
     am: {
   "Genesis": "ዘፍጥረት",
   "Exodus": "ዘጸአት",

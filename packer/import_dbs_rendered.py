@@ -27,6 +27,7 @@ SOURCES = sorted((CATALOG / "source").glob("dbs-rendered-*.json"))
 OUT = CATALOG / "zz-dbs-all.json"
 
 LANGUAGES = {
+    "por": ("por", "Portuguese", ""),
     "amh": ("amh", "Amharic", "አማርኛ"),
     "fra": ("fra", "French", ""),
     "eng": ("eng", "English", ""),
@@ -323,6 +324,12 @@ def main():
     # DBS entry too: it has the searchable DBS title and keeps regeneration
     # independent of whether a local folder was imported first.
     represented = {canonical(url) for r in existing for url in urls_in(r, skip_online=True)}
+    audited_exclusions, explained = {}, set()
+    for path in (CATALOG / 'source').glob('dbs-*-external-*.json'):
+        policy = json.loads(path.read_text(encoding='utf-8'))
+        if policy.get('language') and policy.get('excluded'):
+            audited_exclusions.setdefault(policy['language'], set()).update(
+                canonical(url) for url in policy['excluded'])
     added = []
     rendered = []
 
@@ -333,6 +340,10 @@ def main():
                 if not url:
                     continue
                 rendered.append(canonical(url))
+                language = LANGUAGES[source_code][0]
+                if canonical(url) in audited_exclusions.get(language, set()):
+                    explained.add(canonical(url))
+                    continue
                 if canonical(url) in represented:
                     continue
                 resource = make_resource(source_code, section, item)
@@ -378,14 +389,14 @@ def main():
     }, ensure_ascii=False, indent=1), encoding="utf-8")
 
     final_urls = represented
-    missing = sorted(set(rendered) - final_urls)
+    missing = sorted(set(rendered) - final_urls - explained)
     if missing:
         raise SystemExit(f"coverage failure: {len(missing)} rendered URLs are absent")
 
     by_lang = {}
     for r in added:
         by_lang[r["lang"]] = by_lang.get(r["lang"], 0) + 1
-    print(f"  audited {len(rendered)} rendered links · 100% represented")
+    print(f"  audited {len(rendered)} rendered links · 100% included or explained")
     print(f"  added {len(added)} searchable resources: {by_lang}")
     print(f"  wrote {OUT.relative_to(ROOT)}")
 

@@ -410,3 +410,77 @@ USB sharing instructions and chapter-saving labels were checked. The app's
 EPUB save flow produced an Amharic filename; that downloaded file passed
 CRC and EPUB mimetype checks. The scoped catalog is approximately 45 KB
 when gzipped and does not download the entire multilingual catalog on startup.
+
+## Portuguese — 2026-10-03
+
+The Portuguese shelf uses content code `por`, interface `pt`, native name
+`Português` and `/portuguese` (`/portugues` and `/por` aliases). All five
+sections of the expanded [DBS Portuguese listing](https://dbs.org/discover/languages/por)
+were captured: 406 rows, representing 382 distinct source URLs. All 338
+external publisher pages were opened; the three remaining external URLs
+are direct legacy videos. Every distinct listed source is included, merged
+with its matching resource, or covered by a persisted exclusion reason.
+
+The shelf has 112 entries: six audio Bibles, 14 text Bible or edition entries,
+28 films or film collections, 33 audio collections or programmes, five
+historic scans, 25 Portuguese studies and a current BibleProject publisher
+link. Native titles and 66 book names accompany the 411 Portuguese interface
+strings, including help, saving, sharing and device instructions. Regional
+variants identify Brazil, Portugal and Mozambique. Proper publisher names
+and phone menu names retain their published spelling. The separate screenshot
+guide is disclosed as English. The wording is a translation draft; automated
+checks do not replace review by a fluent Portuguese speaker.
+
+The six audio Bibles have 5,945 playable chapters. The dramatized Bible for
+Everyone Old Testament divides Joel into four chapters and Malachi into
+three, as confirmed on the DBS selectors. Its app selector and saved chapter
+URL follow that division, instead of omitting Joel 4 or offering a nonexistent
+Malachi 4. Both testament scope and chapter counts survive catalog generation.
+The 824 Christian GRN recordings are reused by their 30 individual programme
+cards. The COVID public-service recording and its unfiltered collection ZIP
+are omitted. The Tupari programme with some Portuguese is clearly labeled
+multilingual and links to its publisher rather than assigning unidentified
+tracks to Portuguese. Story of Jesus contains the full recording plus eight
+parts, nine files in total.
+
+The JESUS Brazil chapter list actually points to Acts, and the Portugal list
+points to Brazil recordings. Those 134 mismatched chapter URLs are omitted;
+each regional full film retains the actual DBS-published SD and HD sources.
+Published LUMO and Visual Bible chapters remain individually selectable and
+downloadable. Large unverified film archives remain on the original source
+pages. The Portuguese New Testament for Translators archive contains 27 New
+Testament books, rather than a complete Bible. That HTML ZIP, its EPUB and
+the Free Bible HTML ZIP passed complete archive CRC checks; the Free Bible
+archive contains all 66 books. Text and historic PDF signatures were checked.
+The 1869 scan is explicitly labeled Portuguese/English bilingual.
+
+The retained binary audit covers 7,276 URLs: 6,840 valid file signatures,
+435 protected responses and the obsolete Malachi 4 URL returning 404.
+Protected requests are recorded separately from successful binary checks.
+Browser checks loaded media with positive durations for all 28 film entries,
+all six audio Bibles and both main audio collections. The final tracks of both
+collections were also checked. These checks verify representative playback,
+not complete viewing of every recording. Native search, filtering, link copying,
+help, device sharing instructions and a mobile layout without page overflow
+were checked. The scoped catalog is approximately 76 KB when gzipped. The app save flow fetches the selected chapter
+and displays the native book/chapter label; browser download-event observation
+was unavailable, so it is not recorded as an archive integrity result.
+
+The 258 excluded original URLs include all 240 retired Mundo Cristão retailer
+links, seven retired Lifewords store links, foreign-language study material,
+missing legacy directories, two GRN programmes without identified Portuguese
+recordings, a ROCK link actually in Pulaar, and three study pages served with
+broken character encoding. The old BibleProject URL was replaced by its
+observed current Portuguese page. The 16 legacy find.bible aliases were resolved
+through its current Portuguese directory; matching editions share cards and
+additional editions use native edition names.
+
+The existing source curation policy remains in force, with exact publisher
+exceptions scoped only to Portuguese. No identified LGBTQ-affirming edition
+or theology was added. This is a source and edition check, not a verse-by-verse
+theological assessment. The existing 1,080 resource records are unchanged.
+Language-scoped audited exclusions now survive a fresh rendered import,
+preventing retired or excluded original rows from returning. Source captures,
+file probes, archive results and exclusions are retained in
+`catalog/source/dbs-*-portuguese-2026-10-03.json`. Rebuild with
+`python3 packer/build_portuguese.py`, then run `npm run dbs:import`.

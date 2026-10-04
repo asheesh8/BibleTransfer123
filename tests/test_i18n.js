@@ -19,9 +19,9 @@ function harness(elements = {}, scope = null) {
 }
 const placeholders = value => [...value.matchAll(/\{(\w+)\}/g)].map(match => match[1]).sort();
 
-test('all twenty-two languages retain formatter variables and render escaped strings', () => {
+test('all twenty-three languages retain formatter variables and render escaped strings', () => {
   const { ET, dictionaries, attributes } = harness();
-  assert.equal(ET.i18n.langs.length, 22);
+  assert.equal(ET.i18n.langs.length, 23);
   for (const language of ET.i18n.langs) {
     ET.i18n.set(language.code);
     assert.equal(attributes.dir, language.dir);
@@ -121,7 +121,7 @@ test('untranslated copy is marked as English and changes back when translated', 
 });
 
  test('new shared libraries initialize in their native interface without a stored preference', () => {
-  for (const scope of [{lang: 'orm', ui: 'om'}, {lang: 'luo', ui: 'luo'}, {lang: 'ibo', ui: 'ig'}, {lang: 'fra', ui: 'fr'}, {lang: 'amh', ui: 'am'}]) {
+  for (const scope of [{lang: 'orm', ui: 'om'}, {lang: 'luo', ui: 'luo'}, {lang: 'ibo', ui: 'ig'}, {lang: 'fra', ui: 'fr'}, {lang: 'amh', ui: 'am'}, {lang: 'por', ui: 'pt'}]) {
     const {ET, dictionaries, attributes} = harness({}, scope);
     assert.equal(ET.i18n.current(), scope.ui);
     ET.i18n.apply();
@@ -159,4 +159,17 @@ test('Amharic translates all interface keys and keeps clear file troubleshooting
   assert.match(ET.i18n.t('help.ios.openfile.p'), /ፋይሉ ካልተከፈተ/);
   assert.match(ET.i18n.t('route.computer-android.2.p'), /File Transfer/);
   assert.equal(ET.i18n.meta('am').native, 'አማርኛ');
+});
+
+test('Portuguese covers the controls, help, sharing and singular resource counts', () => {
+  const { ET, dictionaries } = harness();
+  ET.i18n.set('pt');
+  assert.equal(ET.i18n.t('lib.countall', { n: 1 }), '1 recurso');
+  assert.equal(ET.i18n.t('lib.countall', { n: 2 }), '2 recursos');
+  assert.equal(ET.i18n.t('help.android.4.h'), 'Se o arquivo não abrir');
+  assert.equal(ET.i18n.t('item.chapter', { n: 3 }), 'Capítulo 3');
+  for (const key of Object.keys(dictionaries.fr)) {
+    assert.ok(dictionaries.pt[key], `Portuguese lacks ${key}`);
+  }
+  assert.equal(ET.i18n.meta('pt').native, 'Português');
 });

@@ -1,0 +1,2597 @@
+{
+ "por": {
+  "Audio Collections": {
+   "count": "2",
+   "links": [
+    {
+     "cells": [
+      "Portuguese",
+      "Global Recordings Network",
+      "825 files · 1.4 GB"
+     ],
+     "href": "https://dbs.org/audio/collections/grn/por_GlobalRecordings_portuguese",
+     "row": "Portuguese\tGlobal Recordings Network\t825 files · 1.4 GB",
+     "title": "Portuguese"
+    },
+    {
+     "cells": [
+      "Portuguese",
+      "Story of Jesus",
+      "8 files · 124.0 MB"
+     ],
+     "href": "https://dbs.org/audio/collections/soj/por_StoryJesus_portuguese",
+     "row": "Portuguese\tStory of Jesus\t8 files · 124.0 MB",
+     "title": "Portuguese"
+    }
+   ]
+  },
+  "Bibles": {
+   "count": "9",
+   "links": [
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/PORTFT",
+     "native": "Portuguese Translation for Translators",
+     "row": "Portuguese Translation for Translators\nPORTFT\nA Bíblia Sagrada, Tradução para Tradutores\nRead\nStudy\nDownload\nPrint on Demand\nEllis W. Deibler, Jr · 2018 · Brazil",
+     "title": "Portuguese Translation for Translators"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/PORBBS_FCBH_FB_N",
+     "native": "Nova Almeida Atualizada Bible",
+     "row": "Nova Almeida Atualizada Bible\nPORBBS\nBíblia Sagrada\nAudio · Full Bible (FCBH)\n2017 · Portugal",
+     "title": "Nova Almeida Atualizada Bible"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/PORWBT_ISA_FB_N",
+     "native": "Easy-to-Read Portuguese New Testament",
+     "row": "Easy-to-Read Portuguese New Testament\nPORWBT\nPortuguês Novo Testamento: Versão Fácil de Ler\nAudio · Full Bible (ISA)\n2006 · Portugal",
+     "title": "Easy-to-Read Portuguese New Testament"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/PORNLH_FCBH_FB_N",
+     "native": "Nova Tradução na Linguagem de Hoje",
+     "row": "Nova Tradução na Linguagem de Hoje\nPORNLH\nNTLH\nAudio · Full Bible (FCBH)\n2000 · Brazil",
+     "title": "Nova Tradução na Linguagem de Hoje"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/PORTLH_FCBH_NT_D",
+     "native": "New Translation in Today’s Language",
+     "row": "New Translation in Today’s Language\nPORTLH\nNova Tradução na Linguagem de Hoje\nAudio · New Testament (FCBH)\n2000 · Portugal",
+     "title": "New Translation in Today’s Language"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/PORERV",
+     "native": "Portuguese Bible, PORERV",
+     "row": "Portuguese Bible, PORERV\nPORERV\nBíblia Sagrada: Versão Fácil de Ler\nRead\nStudy\nDownload\n1999 · Portugal",
+     "title": "Portuguese Bible, PORERV"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/PORB09.00047_FCBH_FB_N",
+     "native": "Portuguese Bible for Everyone",
+     "row": "Portuguese Bible for Everyone\nPORB09.00047\nTradução Interconfessional - a BÍBLIA para todos\nAudio · Full Bible (FCBH)\n1993 · Portugal",
+     "title": "Portuguese Bible for Everyone"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/PORB09_FCBH_OT_D",
+     "native": "Portuguese Bible for Everyone",
+     "row": "Portuguese Bible for Everyone\nPORB09\nTradução Interconfessional - a BÍBLIA para todos\nAudio · Old Testament (FCBH)\nAudio · Old Testament (FCBH)\n1993 · Portugal",
+     "title": "Portuguese Bible for Everyone"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/PORBRB",
+     "native": "Portuguese Free Bible for All",
+     "row": "Portuguese Free Bible for All\nPORBRB\nBiblia Livre Para Todos\nRead\nStudy\nDownload\nBrazil",
+     "title": "Portuguese Free Bible for All"
+    }
+   ]
+  },
+  "Films": {
+   "count": "25",
+   "links": [
+    {
+     "cells": [
+      "Gospel of John\nPortuguês",
+      "Gospel of John",
+      "3:03:13"
+     ],
+     "href": "https://dbs.org/video/john/por_portuguese-brazil_gospel_of_john",
+     "row": "Gospel of John\nPortuguês\n\tGospel of John\t3:03:13",
+     "title": "Gospel of John"
+    },
+    {
+     "cells": [
+      "JESUS\nPortuguês",
+      "Jesus Film Project",
+      "2:07:53"
+     ],
+     "href": "https://dbs.org/video/jesus/por_portuguese-brazil_jesus",
+     "row": "JESUS\nPortuguês\n\tJesus Film Project\t2:07:53",
+     "title": "JESUS"
+    },
+    {
+     "cells": [
+      "Magdalena\nPortuguês",
+      "Jesus Film Project",
+      "58:24"
+     ],
+     "href": "https://dbs.org/video/magdalena/por_portuguese-brazil_magdalena",
+     "row": "Magdalena\nPortuguês\n\tJesus Film Project\t58:24",
+     "title": "Magdalena"
+    },
+    {
+     "cells": [
+      "Story of Jesus for Children\nPortuguês",
+      "Jesus Film Project",
+      "1:01:19"
+     ],
+     "href": "https://dbs.org/video/storyjesus/por_portuguese-brazil_story_of_jesus_for_children",
+     "row": "Story of Jesus for Children\nPortuguês\n\tJesus Film Project\t1:01:19",
+     "title": "Story of Jesus for Children"
+    },
+    {
+     "cells": [
+      "The Savior\nPortuguês",
+      "Jesus Film Project",
+      "2:11:53"
+     ],
+     "href": "https://dbs.org/video/savior/por_portuguese-brazil_the_savior",
+     "row": "The Savior\nPortuguês\n\tJesus Film Project\t2:11:53",
+     "title": "The Savior"
+    },
+    {
+     "cells": [
+      "JESUS\nPortuguês",
+      "Jesus Film Project",
+      "2:01:44"
+     ],
+     "href": "https://dbs.org/video/jesus/por_portuguese-portugal_jesus",
+     "row": "JESUS\nPortuguês\n\tJesus Film Project\t2:01:44",
+     "title": "JESUS"
+    },
+    {
+     "cells": [
+      "Magdalena\nPortuguês",
+      "Jesus Film Project",
+      "58:17"
+     ],
+     "href": "https://dbs.org/video/magdalena/por_portuguese-portugal_magdalena",
+     "row": "Magdalena\nPortuguês\n\tJesus Film Project\t58:17",
+     "title": "Magdalena"
+    },
+    {
+     "cells": [
+      "Story of Jesus for Children\nPortuguês",
+      "Jesus Film Project",
+      "1:02:24"
+     ],
+     "href": "https://dbs.org/video/storyjesus/por_portuguese-portugal_story_of_jesus_for_children",
+     "row": "Story of Jesus for Children\nPortuguês\n\tJesus Film Project\t1:02:24",
+     "title": "Story of Jesus for Children"
+    },
+    {
+     "cells": [
+      "King of Glory - REI da GLÓRIA\nREI da GLÓRIA",
+      "King of Glory",
+      "3:42:13"
+     ],
+     "href": "https://dbs.org/video/rock/por-portuguese",
+     "row": "King of Glory - REI da GLÓRIA\nREI da GLÓRIA\n\tKing of Glory\t3:42:13",
+     "title": "King of Glory - REI da GLÓRIA"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of John\nportuguês",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-john/por_portuguese_john",
+     "row": "LUMO: The Gospel of John\nportuguês\n\tLUMO Project",
+     "title": "LUMO: The Gospel of John"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Luke\nportuguês",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-luke/por_portuguese_luke",
+     "row": "LUMO: The Gospel of Luke\nportuguês\n\tLUMO Project",
+     "title": "LUMO: The Gospel of Luke"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Mark\nportuguês",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-mark/por_portuguese_mark",
+     "row": "LUMO: The Gospel of Mark\nportuguês\n\tLUMO Project",
+     "title": "LUMO: The Gospel of Mark"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Matthew\nportuguês",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-matthew/por_portuguese_matthew",
+     "row": "LUMO: The Gospel of Matthew\nportuguês\n\tLUMO Project",
+     "title": "LUMO: The Gospel of Matthew"
+    },
+    {
+     "cells": [
+      "LUMO: Acts of the Apostles\nportuguês",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-acts/por_portuguese_acts",
+     "row": "LUMO: Acts of the Apostles\nportuguês\n\tLUMO Project",
+     "title": "LUMO: Acts of the Apostles"
+    },
+    {
+     "cells": [
+      "LUMO: The Covenant\nportuguês",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-covenant/por_portuguese_covenant",
+     "row": "LUMO: The Covenant\nportuguês\n\tLUMO Project",
+     "title": "LUMO: The Covenant"
+    },
+    {
+     "cells": [
+      "The Visual Bible: Acts\nPortuguês",
+      "Visual Bible Int.",
+      "3:12:10"
+     ],
+     "href": "https://dbs.org/video/acts_vb/por_portuguese-brazil_book_of_acts",
+     "row": "The Visual Bible: Acts\nPortuguês\n\tVisual Bible Int.\t3:12:10",
+     "title": "The Visual Bible: Acts"
+    },
+    {
+     "cells": [
+      "Days of Creation\nportuguês",
+      "Days of Creation",
+      "11:46"
+     ],
+     "href": "https://dbs.org/video/creation/por_portuguese_creation",
+     "row": "Days of Creation\nportuguês\n\tDays of Creation\t11:46",
+     "title": "Days of Creation"
+    },
+    {
+     "cells": [
+      "The HOPE\nPortuguês",
+      "The HOPE",
+      "1:19:13"
+     ],
+     "href": "https://dbs.org/video/hope/por_portuguese_the_hope",
+     "row": "The HOPE\nPortuguês\n\tThe HOPE\t1:19:13",
+     "title": "The HOPE"
+    },
+    {
+     "cells": [
+      "The HOPE\nStorytellers",
+      "The HOPE",
+      "1:19:16"
+     ],
+     "href": "https://dbs.org/video/hope/por_portuguese-storytellers_the_hope",
+     "row": "The HOPE\nStorytellers\n\tThe HOPE\t1:19:16",
+     "title": "The HOPE"
+    },
+    {
+     "cells": [
+      "iBible: Salvation Story\nBrasil",
+      "iBible: Salvation Story",
+      "9:19"
+     ],
+     "href": "https://dbs.org/video/ibible/por-portuguese_brazilian-ibible_salvation",
+     "row": "iBible: Salvation Story\nBrasil\n\tiBible: Salvation Story\t9:19",
+     "title": "iBible: Salvation Story"
+    },
+    {
+     "cells": [
+      "iBible: Salvation Story\nEuropeu",
+      "iBible: Salvation Story",
+      "9:17"
+     ],
+     "href": "https://dbs.org/video/ibible/por-portuguese_european-ibible_salvation",
+     "row": "iBible: Salvation Story\nEuropeu\n\tiBible: Salvation Story\t9:17",
+     "title": "iBible: Salvation Story"
+    },
+    {
+     "cells": [
+      "The Visual Bible: Matthew\nportuguês",
+      "Visual Bible Int.",
+      "4:11:02"
+     ],
+     "href": "https://dbs.org/video/matthew/por-matthew-vb-portuguese",
+     "row": "The Visual Bible: Matthew\nportuguês\n\tVisual Bible Int.\t4:11:02",
+     "title": "The Visual Bible: Matthew"
+    },
+    {
+     "cells": [
+      "Rescue Project Deaf Gospel\nPortuguês",
+      "Jesus Film Project",
+      "28:17"
+     ],
+     "href": "https://dbs.org/video/deafproject/por_portuguese-brazil_rescue_project_deaf_gospel",
+     "row": "Rescue Project Deaf Gospel\nPortuguês\n\tJesus Film Project\t28:17",
+     "title": "Rescue Project Deaf Gospel"
+    },
+    {
+     "cells": [
+      "Rescue Project Deaf Gospel\nPortuguês",
+      "Jesus Film Project",
+      "28:17"
+     ],
+     "href": "https://dbs.org/video/deafproject/por_portuguese-mozambique_rescue_project_deaf_gospel",
+     "row": "Rescue Project Deaf Gospel\nPortuguês\n\tJesus Film Project\t28:17",
+     "title": "Rescue Project Deaf Gospel"
+    },
+    {
+     "cells": [
+      "Rescue Project Deaf Gospel\nPortuguês",
+      "Jesus Film Project",
+      "28:17"
+     ],
+     "href": "https://dbs.org/video/deafproject/por_portuguese-portugal_rescue_project_deaf_gospel",
+     "row": "Rescue Project Deaf Gospel\nPortuguês\n\tJesus Film Project\t28:17",
+     "title": "Rescue Project Deaf Gospel"
+    }
+   ]
+  },
+  "Historic Bible (Scans)": {
+   "count": "5",
+   "links": [
+    {
+     "cells": [
+      "Portuguese (1681) Novo Testamento Almeida\nPortuguês (1681) Novo Testamento Almeida",
+      "1681"
+     ],
+     "href": "https://dbs.org/bibles/historic/Portuguese-1681-Novo-Testamento-Almeida",
+     "row": "Portuguese (1681) Novo Testamento Almeida\nPortuguês (1681) Novo Testamento Almeida\n\t1681",
+     "title": "Portuguese (1681) Novo Testamento Almeida"
+    },
+    {
+     "cells": [
+      "Portuguese (1821) Bible Figueiredo\nPortuguês (1821) Bíblia Figueiredo",
+      "1821"
+     ],
+     "href": "https://dbs.org/bibles/historic/Portuguese-1821-Bible-A-Sancta-Biblia-contendo-o-Velho-e-o-Novo-Testamento-Figueiredo",
+     "row": "Portuguese (1821) Bible Figueiredo\nPortuguês (1821) Bíblia Figueiredo\n\t1821",
+     "title": "Portuguese (1821) Bible Figueiredo"
+    },
+    {
+     "cells": [
+      "Portuguese (1848) Almeida Corrigida Bible (Print)\nPortuguês (1848) Almeida Corrigida",
+      "1848"
+     ],
+     "href": "https://dbs.org/bibles/historic/Portuguese-1848-Almeida-Corrigida-Bible-print",
+     "row": "Portuguese (1848) Almeida Corrigida Bible (Print)\nPortuguês (1848) Almeida Corrigida\n\t1848",
+     "title": "Portuguese (1848) Almeida Corrigida Bible (Print)"
+    },
+    {
+     "cells": [
+      "Portuguese Brazil (2006) WBTC New Testament\nPortuguês Brasil (2006) WBTC Novo Testamento",
+      "2006"
+     ],
+     "href": "https://dbs.org/bibles/historic/Portuguese-Brazil-2006-WBTC-New-Testament",
+     "row": "Portuguese Brazil (2006) WBTC New Testament\nPortuguês Brasil (2006) WBTC Novo Testamento\n\t2006",
+     "title": "Portuguese Brazil (2006) WBTC New Testament"
+    },
+    {
+     "cells": [
+      "Portuguese-English (1869)\nPortuguês-Inglês (1869) Novo Testamento - English Parallel",
+      "1869"
+     ],
+     "href": "https://dbs.org/bibles/historic/Portuguese-English-1869-New-Testament-O-Novo-Testamento-Bilingue",
+     "row": "Portuguese-English (1869)\nPortuguês-Inglês (1869) Novo Testamento - English Parallel\n\t1869",
+     "title": "Portuguese-English (1869)"
+    }
+   ]
+  },
+  "Links to Other Sites": {
+   "count": "365",
+   "links": [
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PORARC",
+     "row": "King James Version (Portugal) 1898",
+     "title": "King James Version (Portugal)"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PORBAP",
+     "row": "De Almeida Bible (1641) 1681",
+     "title": "De Almeida Bible (1641)"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PORBAR",
+     "row": "Portuguese Almeida Revised (Brasil) 1993",
+     "title": "Portuguese Almeida Revised (Brasil)"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PORB09",
+     "row": "Portuguese Bible for Everyone 1993",
+     "title": "Portuguese Bible for Everyone"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PORBNV",
+     "row": "New Living Bible in Portuguese 1993",
+     "title": "New Living Bible in Portuguese"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PORCER",
+     "row": "Portuguese European Catholic Version Bible 1993",
+     "title": "Portuguese European Catholic Version Bible"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PORFIE",
+     "row": "Portuguese King James Faithful 1994",
+     "title": "Portuguese King James Faithful"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=POREUR",
+     "row": "Portuguese European Version Bible 2000",
+     "title": "Portuguese European Version Bible"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PORTLH",
+     "row": "New Translation in Today’s Language 2000",
+     "title": "New Translation in Today’s Language"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PORBARR",
+     "row": "Almeida Received Text Version (1848) 1848",
+     "title": "Almeida Received Text Version (1848)"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PORTB1",
+     "row": "Portuguese Brazilian Translation 1917",
+     "title": "Portuguese Brazilian Translation"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PORFIGU",
+     "row": "Portuguese Bible Antônio Pereira de Figueiredo 1821",
+     "title": "Portuguese Bible Antônio Pereira de Figueiredo"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PORWBT",
+     "row": "Easy-to-Read Portuguese New Testament 2006",
+     "title": "Easy-to-Read Portuguese New Testament"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PORNVT",
+     "row": "New Transforming Version 2016",
+     "title": "New Transforming Version"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PORABT",
+     "row": "Portuguese - A Brazilian Translation 2010",
+     "title": "Portuguese - A Brazilian Translation"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=PORBAS",
+     "row": "21st Century Bible (Portuguese - Brazil) 2008",
+     "title": "21st Century Bible (Portuguese - Brazil)"
+    },
+    {
+     "cells": [],
+     "href": "https://youtu.be/0LcpadSDrTM",
+     "row": "Lumo: Mark LUMO Project",
+     "title": "Lumo: Mark"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mars-hill.org/the-hope/store/the-portuguese-hope-portugu%C3%AAs-storyteller-version",
+     "row": "The Portuguese HOPE Mars Hill",
+     "title": "The Portuguese HOPE"
+    },
+    {
+     "cells": [],
+     "href": "https://youtu.be/qYXvow8OkhM",
+     "row": "Lumo: Luke LUMO Project",
+     "title": "Lumo: Luke"
+    },
+    {
+     "cells": [],
+     "href": "https://youtu.be/xuZO4ARuh8E",
+     "row": "Lumo: MATTHEW LUMO Project",
+     "title": "Lumo: MATTHEW"
+    },
+    {
+     "cells": [],
+     "href": "https://youtu.be/HEpkuNw97jw",
+     "row": "Lumo: John LUMO Project",
+     "title": "Lumo: John"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mars-hill.org/the-hope/store/the-portuguese-hope-esperan%C3%A7a-voice-only-version",
+     "row": "The Portuguese HOPE Mars Hill",
+     "title": "The Portuguese HOPE"
+    },
+    {
+     "cells": [],
+     "href": "https://bibleproject.com/brazilian-portuguese",
+     "row": "Brazilian-Portuguese Bible Project Videos The Bible Project",
+     "title": "Brazilian-Portuguese Bible Project Videos"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Bible/StudyBible/content/texts/por_aav/index.html",
+     "row": "Portugese: Easy to Read Version\nlibraries.dbs.org",
+     "title": "Portugese: Easy to Read Version"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Bible/StudyBible/content/texts/ENGNAS/index.html",
+     "row": "New American Standard Version\nlibraries.dbs.org",
+     "title": "New American Standard Version"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Bible/StudyBible/content/texts/GRCTIS/index.html",
+     "row": "Greek New Testament\nlibraries.dbs.org",
+     "title": "Greek New Testament"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Bible/StudyBible/content/texts/HBOWLC/index.html",
+     "row": "Hebrew Old Testament\nlibraries.dbs.org",
+     "title": "Hebrew Old Testament"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Audio/Bible/por_bsp/",
+     "row": "Audio Bible (New Testament)\nlibraries.dbs.org",
+     "title": "Audio Bible (New Testament)"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Bible/Images/",
+     "row": "Images from the Bible\nlibraries.dbs.org",
+     "title": "Images from the Bible"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Video/000_Movies/001_POR_JesusFilm.mp4",
+     "row": "The Jesus Film\nlibraries.dbs.org",
+     "title": "The Jesus Film"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Video/000_Movies/003_POR_JesusStory.mp4",
+     "row": "The Story of Jesus for Children\nlibraries.dbs.org",
+     "title": "The Story of Jesus for Children"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Video/000_Movies/007_POR_MyLastDay.mp4",
+     "row": "My Last Day\nlibraries.dbs.org",
+     "title": "My Last Day"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/010_GQ_BoasNovas.html",
+     "row": "Questions about The Good News\nlibraries.dbs.org",
+     "title": "Questions about The Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/011_GQ_Importantes.html",
+     "row": "Important Questions\nlibraries.dbs.org",
+     "title": "Important Questions"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/012_GQ_Frequentes.html",
+     "row": "FAQ\nlibraries.dbs.org",
+     "title": "FAQ"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/013_GQ_SobreDeus.html",
+     "row": "Questions about God\nlibraries.dbs.org",
+     "title": "Questions about God"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/014_GQ_JesusCristo.html",
+     "row": "Questions about Jesus Christ\nlibraries.dbs.org",
+     "title": "Questions about Jesus Christ"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/015_GQ_EspiritoSanto.html",
+     "row": "Questions about the Holy Spirit\nlibraries.dbs.org",
+     "title": "Questions about the Holy Spirit"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/016_GQ_Salvacao.html",
+     "row": "Questions about Salvation\nlibraries.dbs.org",
+     "title": "Questions about Salvation"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/017_GQ_Biblia.html",
+     "row": "Questions about the Bible\nlibraries.dbs.org",
+     "title": "Questions about the Bible"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/018_GQ_Igreja.html",
+     "row": "Questions about the Church\nlibraries.dbs.org",
+     "title": "Questions about the Church"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/019_GQ_FimTempos.html",
+     "row": "Questions about the End Times\nlibraries.dbs.org",
+     "title": "Questions about the End Times"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/020_GQ_AnjosDemonios.html",
+     "row": "Questions about Angels and Demons\nlibraries.dbs.org",
+     "title": "Questions about Angels and Demons"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/021_GQ_Humanidade.html",
+     "row": "Questions about Humanity\nlibraries.dbs.org",
+     "title": "Questions about Humanity"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/022_GQ_Teologia.html",
+     "row": "Questions about Theology\nlibraries.dbs.org",
+     "title": "Questions about Theology"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/023_GQ_ApologeticaCrista.html",
+     "row": "Questions about Christian Apologetics\nlibraries.dbs.org",
+     "title": "Questions about Christian Apologetics"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/024_GQ_VidaCrista.html",
+     "row": "Questions about the Christian Life\nlibraries.dbs.org",
+     "title": "Questions about the Christian Life"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/025_GQ_Oracao.html",
+     "row": "Questions about Prayer\nlibraries.dbs.org",
+     "title": "Questions about Prayer"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/026_GQ_Pecado.html",
+     "row": "Questions about Sin\nlibraries.dbs.org",
+     "title": "Questions about Sin"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/027_GQ_CeuInferno.html",
+     "row": "Questions about Heaven and Hell\nlibraries.dbs.org",
+     "title": "Questions about Heaven and Hell"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/028_CQ_Casamento.html",
+     "row": "Questions about Marriage\nlibraries.dbs.org",
+     "title": "Questions about Marriage"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/029_GQ_Relacionamentos.html",
+     "row": "Questions about Relationships\nlibraries.dbs.org",
+     "title": "Questions about Relationships"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/030_GQ_Familia.html",
+     "row": "Questions about Family\nlibraries.dbs.org",
+     "title": "Questions about Family"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/031_GQ_Criacao.html",
+     "row": "Questions about Creation\nlibraries.dbs.org",
+     "title": "Questions about Creation"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/032_GQ_SeitasReligioes.html",
+     "row": "Questions about Cults and Religions\nlibraries.dbs.org",
+     "title": "Questions about Cults and Religions"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/033_GQ_FalsasDoutrinas.html",
+     "row": "Questions about False Doctrine\nlibraries.dbs.org",
+     "title": "Questions about False Doctrine"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/034_GQ_DecisoesCotidianas.html",
+     "row": "Questions about Everyday Decisions\nlibraries.dbs.org",
+     "title": "Questions about Everyday Decisions"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/035_GQ_BiblicasTopicas.html",
+     "row": "Topical Bible Questions\nlibraries.dbs.org",
+     "title": "Topical Bible Questions"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/036_GQ_BiblicasDiversas.html",
+     "row": "Several Bible Questions\nlibraries.dbs.org",
+     "title": "Several Bible Questions"
+    },
+    {
+     "cells": [],
+     "href": "https://libraries.dbs.org//POR/Books/037_GQ_VistoriaBiblica.html",
+     "row": "Questions about Biblical Survey\nlibraries.dbs.org",
+     "title": "Questions about Biblical Survey"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/17181",
+     "row": "Good News\nglobalrecordings.net",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/74995",
+     "row": "Look, Listen & Live\nglobalrecordings.net",
+     "title": "Look, Listen & Live"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/74996",
+     "row": "Look, Listen & Live 2 Mighty Men of GOD\nglobalrecordings.net",
+     "title": "Look, Listen & Live 2 Mighty Men of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/34020",
+     "row": "Portrait of Jesus\nglobalrecordings.net",
+     "title": "Portrait of Jesus"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/63545",
+     "row": "Vida! [Life with Christ]\nglobalrecordings.net",
+     "title": "Vida! [Life with Christ]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/18341",
+     "row": "Words of Life for Children\nglobalrecordings.net",
+     "title": "Words of Life for Children"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/37470",
+     "row": "Good News\nglobalrecordings.net",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/61022",
+     "row": "Good News\nglobalrecordings.net",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/32321",
+     "row": "Good News with songs\nglobalrecordings.net",
+     "title": "Good News with songs"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/61023",
+     "row": "The Living Christ\nglobalrecordings.net",
+     "title": "The Living Christ"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73940",
+     "row": "Livro 3 - Vitória com Deus [Look, Listen & Live 3 Victory through GOD]\nglobalrecordings.net",
+     "title": "Livro 3 - Vitória com Deus [Look, Listen & Live 3 Victory through GOD]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73770",
+     "row": "Look, Listen & Live\nglobalrecordings.net",
+     "title": "Look, Listen & Live"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/61014",
+     "row": "Look, Listen & Live\nglobalrecordings.net",
+     "title": "Look, Listen & Live"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/74711",
+     "row": "Look, Listen & Live 2 Mighty Men of GOD\nglobalrecordings.net",
+     "title": "Look, Listen & Live 2 Mighty Men of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/61015",
+     "row": "Look, Listen & Live 2 Mighty Men of GOD\nglobalrecordings.net",
+     "title": "Look, Listen & Live 2 Mighty Men of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/61016",
+     "row": "Look, Listen & Live 3 Victory through GOD\nglobalrecordings.net",
+     "title": "Look, Listen & Live 3 Victory through GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73780",
+     "row": "Look, Listen & Live 4 Servants of GOD\nglobalrecordings.net",
+     "title": "Look, Listen & Live 4 Servants of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/61017",
+     "row": "Look, Listen & Live 4 Servants of GOD\nglobalrecordings.net",
+     "title": "Look, Listen & Live 4 Servants of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73950",
+     "row": "Look, Listen & Live 5 On Trial for GOD\nglobalrecordings.net",
+     "title": "Look, Listen & Live 5 On Trial for GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/61018",
+     "row": "Look, Listen & Live 5 On Trial for GOD\nglobalrecordings.net",
+     "title": "Look, Listen & Live 5 On Trial for GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73790",
+     "row": "Look, Listen & Live 6 JESUS - Teacher & Healer\nglobalrecordings.net",
+     "title": "Look, Listen & Live 6 JESUS - Teacher & Healer"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/61019",
+     "row": "Look, Listen & Live 6 JESUS - Teacher & Healer\nglobalrecordings.net",
+     "title": "Look, Listen & Live 6 JESUS - Teacher & Healer"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73800",
+     "row": "Look, Listen & Live 7 JESUS - Lord & Saviour\nglobalrecordings.net",
+     "title": "Look, Listen & Live 7 JESUS - Lord & Saviour"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/61020",
+     "row": "Look, Listen & Live 7 JESUS - Lord & Saviour\nglobalrecordings.net",
+     "title": "Look, Listen & Live 7 JESUS - Lord & Saviour"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73810",
+     "row": "Look, Listen & Live 8 Acts of the HOLY SPIRIT\nglobalrecordings.net",
+     "title": "Look, Listen & Live 8 Acts of the HOLY SPIRIT"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/61021",
+     "row": "Look, Listen & Live 8 Acts of the HOLY SPIRIT\nglobalrecordings.net",
+     "title": "Look, Listen & Live 8 Acts of the HOLY SPIRIT"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/34420",
+     "row": "Words of Life\nglobalrecordings.net",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/37480",
+     "row": "Words of Life\nglobalrecordings.net",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/4030",
+     "row": "Words of Life 1\nglobalrecordings.net",
+     "title": "Words of Life 1"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/4031",
+     "row": "Words of Life 2\nglobalrecordings.net",
+     "title": "Words of Life 2"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/5991",
+     "row": "Words of Life\nglobalrecordings.net",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/61022",
+     "row": "Good News\nglobalrecordings.net",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/61023",
+     "row": "The Living Christ\nglobalrecordings.net",
+     "title": "The Living Christ"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/61014",
+     "row": "Look, Listen & Live\nglobalrecordings.net",
+     "title": "Look, Listen & Live"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/61015",
+     "row": "Look, Listen & Live 2 Mighty Men of GOD\nglobalrecordings.net",
+     "title": "Look, Listen & Live 2 Mighty Men of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/61016",
+     "row": "Look, Listen & Live 3 Victory through GOD\nglobalrecordings.net",
+     "title": "Look, Listen & Live 3 Victory through GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/61017",
+     "row": "Look, Listen & Live 4 Servants of GOD\nglobalrecordings.net",
+     "title": "Look, Listen & Live 4 Servants of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/61018",
+     "row": "Look, Listen & Live 5 On Trial for GOD\nglobalrecordings.net",
+     "title": "Look, Listen & Live 5 On Trial for GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/61019",
+     "row": "Look, Listen & Live 6 JESUS - Teacher & Healer\nglobalrecordings.net",
+     "title": "Look, Listen & Live 6 JESUS - Teacher & Healer"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/61020",
+     "row": "Look, Listen & Live 7 JESUS - Lord & Saviour\nglobalrecordings.net",
+     "title": "Look, Listen & Live 7 JESUS - Lord & Saviour"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/61021",
+     "row": "Look, Listen & Live 8 Acts of the HOLY SPIRIT\nglobalrecordings.net",
+     "title": "Look, Listen & Live 8 Acts of the HOLY SPIRIT"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/32321",
+     "row": "Good News with songs\nglobalrecordings.net",
+     "title": "Good News with songs"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73940",
+     "row": "Livro 3 - Vitória com Deus [Look, Listen & Live 3 Victory through GOD]\nglobalrecordings.net",
+     "title": "Livro 3 - Vitória com Deus [Look, Listen & Live 3 Victory through GOD]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73770",
+     "row": "Look, Listen & Live\nglobalrecordings.net",
+     "title": "Look, Listen & Live"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/74711",
+     "row": "Look, Listen & Live 2 Mighty Men of GOD\nglobalrecordings.net",
+     "title": "Look, Listen & Live 2 Mighty Men of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73780",
+     "row": "Look, Listen & Live 4 Servants of GOD\nglobalrecordings.net",
+     "title": "Look, Listen & Live 4 Servants of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73950",
+     "row": "Look, Listen & Live 5 On Trial for GOD\nglobalrecordings.net",
+     "title": "Look, Listen & Live 5 On Trial for GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73790",
+     "row": "Look, Listen & Live 6 JESUS - Teacher & Healer\nglobalrecordings.net",
+     "title": "Look, Listen & Live 6 JESUS - Teacher & Healer"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73800",
+     "row": "Look, Listen & Live 7 JESUS - Lord & Saviour\nglobalrecordings.net",
+     "title": "Look, Listen & Live 7 JESUS - Lord & Saviour"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/73810",
+     "row": "Look, Listen & Live 8 Acts of the HOLY SPIRIT\nglobalrecordings.net",
+     "title": "Look, Listen & Live 8 Acts of the HOLY SPIRIT"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/4030",
+     "row": "Words of Life 1\nglobalrecordings.net",
+     "title": "Words of Life 1"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/4031",
+     "row": "Words of Life 2\nglobalrecordings.net",
+     "title": "Words of Life 2"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/34370",
+     "row": "God and I, Songs\nglobalrecordings.net",
+     "title": "God and I, Songs"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/37470",
+     "row": "Good News\nglobalrecordings.net",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/34420",
+     "row": "Words of Life\nglobalrecordings.net",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/37480",
+     "row": "Words of Life\nglobalrecordings.net",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/63701",
+     "row": "Como o Evangelho Transformou Nossa Vida [How the Gospel Changed Our Lives]\nglobalrecordings.net",
+     "title": "Como o Evangelho Transformou Nossa Vida [How the Gospel Changed Our Lives]"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-que-a-biblia-fala-sobre-dinheiro/p",
+     "row": "What the Bible says about money\nwww.mundocristao.com.br",
+     "title": "What the Bible says about money"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/exclusao-e-abraco/p",
+     "row": "Exclusion and Embrace\nwww.mundocristao.com.br",
+     "title": "Exclusion and Embrace"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/voce-esta-preparado/p",
+     "row": "Are you prepared?\nwww.mundocristao.com.br",
+     "title": "Are you prepared?"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/e-a-verdade-os-libertara/p",
+     "row": "And the truth will set you free\nwww.mundocristao.com.br",
+     "title": "And the truth will set you free"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/as-cinco-linguagens-do-amor-3edicao/p",
+     "row": "THE FIVE LANGUAGES OF LOVE\nwww.mundocristao.com.br",
+     "title": "THE FIVE LANGUAGES OF LOVE"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/como-deus-transforma-a-tristeza-em-alegria/p",
+     "row": "How God turns sadness into joy\nwww.mundocristao.com.br",
+     "title": "How God turns sadness into joy"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/promessas-de-deus-para-abencoar-seu-casamento/p",
+     "row": "God's promises to bless your marriage\nwww.mundocristao.com.br",
+     "title": "God's promises to bless your marriage"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/convite-a-solitude/p",
+     "row": "Invitation to solitude\nwww.mundocristao.com.br",
+     "title": "Invitation to solitude"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-poder-do-adolescente-que-ora/p",
+     "row": "The power of the adolescent who prays\nwww.mundocristao.com.br",
+     "title": "The power of the adolescent who prays"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-que-nao-me-contaram-sobre-casamento/p",
+     "row": "What they didn't tell me about marriage\nwww.mundocristao.com.br",
+     "title": "What they didn't tell me about marriage"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/amor-e-um-verbo/p",
+     "row": "Love is a Word\nwww.mundocristao.com.br",
+     "title": "Love is a Word"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/jesus-e-as-mulheres---o-que-ele-pensa-de-nos/p",
+     "row": "Jesus and Women - What does He think of us\nwww.mundocristao.com.br",
+     "title": "Jesus and Women - What does He think of us"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-poder-do-marido-que-ora/p",
+     "row": "The power of the praying husband\nwww.mundocristao.com.br",
+     "title": "The power of the praying husband"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/como-mudar-o-que-mais-irrita-no-casamento/p",
+     "row": "How to Change the Most Annoying in Marriage\nwww.mundocristao.com.br",
+     "title": "How to Change the Most Annoying in Marriage"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/a-experiencia-da-mesa/p",
+     "row": "The Experience of the Bureau\nwww.mundocristao.com.br",
+     "title": "The Experience of the Bureau"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/mae-de-primeira-viagem/p",
+     "row": "First time mom\nwww.mundocristao.com.br",
+     "title": "First time mom"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/historias-da-biblia-para-pequeninos/p",
+     "row": "Bible stories for little ones\nwww.mundocristao.com.br",
+     "title": "Bible stories for little ones"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-poder-dos-pais-que-oram/p",
+     "row": "The power of praying parents\nwww.mundocristao.com.br",
+     "title": "The power of praying parents"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/eu-sou-n/p",
+     "row": "I'm n\nwww.mundocristao.com.br",
+     "title": "I'm n"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/fazer-amor/p",
+     "row": "Make love\nwww.mundocristao.com.br",
+     "title": "Make love"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/as-cinco-linguagens-do-amor-de-deus/p",
+     "row": "The five languages ​​of God's love\nwww.mundocristao.com.br",
+     "title": "The five languages ​​of God's love"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-poder-da-fe-em-tempos-dificeis/p",
+     "row": "The power of faith in difficult times\nwww.mundocristao.com.br",
+     "title": "The power of faith in difficult times"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/apagando-o-inferno/p",
+     "row": "Erasing Hell\nwww.mundocristao.com.br",
+     "title": "Erasing Hell"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/dez-minutos-de-oracao-para-transformar-sua-vida/p",
+     "row": "Ten minutes of prayer to transform your life\nwww.mundocristao.com.br",
+     "title": "Ten minutes of prayer to transform your life"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/sobre-viver--brochura-/p",
+     "row": "About living (Brochure)\nwww.mundocristao.com.br",
+     "title": "About living (Brochure)"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/uma-teoria-de-tudo--que-importa-/p",
+     "row": "A Theory of Everything (That Matters)\nwww.mundocristao.com.br",
+     "title": "A Theory of Everything (That Matters)"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/antes-de-dizer-sim--nova-capa-/p",
+     "row": "BEFORE SAYING YES (NEW COVER)\nwww.mundocristao.com.br",
+     "title": "BEFORE SAYING YES (NEW COVER)"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/santidade/p",
+     "row": "Holiness\nwww.mundocristao.com.br",
+     "title": "Holiness"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/esperanca-e-cura/p",
+     "row": "Hope & healing: Biblical inspiration for times of crisis\nwww.mundocristao.com.br",
+     "title": "Hope & healing: Biblical inspiration for times of crisis"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-poder-de-orar-pelos-filhos-adultos/p",
+     "row": "The power to pray for adult children\nwww.mundocristao.com.br",
+     "title": "The power to pray for adult children"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/guia-me-espirito-santo/p",
+     "row": "Guide me, Holy Spirit\nwww.mundocristao.com.br",
+     "title": "Guide me, Holy Spirit"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/escolha-a-alegria/p",
+     "row": "Choose joy\nwww.mundocristao.com.br",
+     "title": "Choose joy"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/de-bem-com-voce/p",
+     "row": "Get well with you\nwww.mundocristao.com.br",
+     "title": "Get well with you"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/vivendo-com-propositos-brochura/p",
+     "row": "Living with Purposes\nwww.mundocristao.com.br",
+     "title": "Living with Purposes"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/minha-biblinha-2/p",
+     "row": "My little Bible 2\nwww.mundocristao.com.br",
+     "title": "My little Bible 2"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/inesperada-graca/p",
+     "row": "Unexpected Grace\nwww.mundocristao.com.br",
+     "title": "Unexpected Grace"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/como-reinventar-o-casamento-quando-os-filhos-nascem/p",
+     "row": "How to reinvent marriage when children are born\nwww.mundocristao.com.br",
+     "title": "How to reinvent marriage when children are born"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/escolha-o-amor/p",
+     "row": "Choose Love\nwww.mundocristao.com.br",
+     "title": "Choose Love"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/deus-e-o-dinheiro/p",
+     "row": "God and money: how we discovered true wealth at Harvard Business School\nwww.mundocristao.com.br",
+     "title": "God and money: how we discovered true wealth at Harvard Business School"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/ande-com-fe/p",
+     "row": "Walk with faith\nwww.mundocristao.com.br",
+     "title": "Walk with faith"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/cartas-a-igreja----capa-dura/p",
+     "row": "Letters to the church - Hardcover\nwww.mundocristao.com.br",
+     "title": "Letters to the church - Hardcover"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/cristianismo-simplificado/p",
+     "row": "Simplified Christianity\nwww.mundocristao.com.br",
+     "title": "Simplified Christianity"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/familia-indestrutivel/p",
+     "row": "Indestructible family\nwww.mundocristao.com.br",
+     "title": "Indestructible family"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/superando-limites/p",
+     "row": "Overcoming limits - Get ready for great achievements\nwww.mundocristao.com.br",
+     "title": "Overcoming limits - Get ready for great achievements"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-poder-da-fe-em-tempos-dificeis-ed-bolso/p",
+     "row": "The power of faith in difficult times (Pocket Edition)\nwww.mundocristao.com.br",
+     "title": "The power of faith in difficult times (Pocket Edition)"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/pais-apostolicos-classicos/p",
+     "row": "Apostolic Fathers\nwww.mundocristao.com.br",
+     "title": "Apostolic Fathers"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/voce-e-eu-para-sempre/p",
+     "row": "You and me forever\nwww.mundocristao.com.br",
+     "title": "You and me forever"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/cristianismo-descomplicado/p",
+     "row": "DECOMPLICATED CHRISTIANITY\nwww.mundocristao.com.br",
+     "title": "DECOMPLICATED CHRISTIANITY"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/uma-vida-com-prioridades/p",
+     "row": "A life with priorities\nwww.mundocristao.com.br",
+     "title": "A life with priorities"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/pais-admiraveis-educam-pelo-exemplo/p",
+     "row": "Brave parents educate by example\nwww.mundocristao.com.br",
+     "title": "Brave parents educate by example"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/deus-o-ama-do-jeito-que-voce-e/p",
+     "row": "God loves you the way you are\nwww.mundocristao.com.br",
+     "title": "God loves you the way you are"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/comentario-biblico-popular-novo-testamento/p",
+     "row": "Popular Biblical Commentary New Testament\nwww.mundocristao.com.br",
+     "title": "Popular Biblical Commentary New Testament"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/licoes-da-biblia-para-o-sucesso-no-trabalho/p",
+     "row": "Bible lessons for success at work\nwww.mundocristao.com.br",
+     "title": "Bible lessons for success at work"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/a-biblia-das-meninas/p",
+     "row": "The Girls' Bible\nwww.mundocristao.com.br",
+     "title": "The Girls' Bible"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/sermoes-de-spurgeon-sobre-a-cruz-de-cristo/p",
+     "row": "Spurgeon sermons on the cross of christ\nwww.mundocristao.com.br",
+     "title": "Spurgeon sermons on the cross of christ"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/sermoes-de-spurgeon-sobre-os-milagres-de-jesus/p",
+     "row": "Spurgeon's Sermons on Jesus' Miracles\nwww.mundocristao.com.br",
+     "title": "Spurgeon's Sermons on Jesus' Miracles"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/sermoes-de-spurgeon-sobre-as-grandes-oracoes-da-b/p",
+     "row": "Spurgeon's Sermons on the Bible's Great Prayers\nwww.mundocristao.com.br",
+     "title": "Spurgeon's Sermons on the Bible's Great Prayers"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/sermoes-de-spurgeon-sobre-as-parabolas/p",
+     "row": "Spurgeon sermons on parables\nwww.mundocristao.com.br",
+     "title": "Spurgeon sermons on parables"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/privilegio-sagrado/p",
+     "row": "Sacred privilege\nwww.mundocristao.com.br",
+     "title": "Sacred privilege"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/ame-o-seu-proximo/p",
+     "row": "Love your neighbor\nwww.mundocristao.com.br",
+     "title": "Love your neighbor"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/cristianismo-bem-explicado/p",
+     "row": "Christianity well explained\nwww.mundocristao.com.br",
+     "title": "Christianity well explained"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/ele-diz--ela-diz/p",
+     "row": "He Says She Says\nwww.mundocristao.com.br",
+     "title": "He Says She Says"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/formacao-espiritual/p",
+     "row": "Spiritual formation\nwww.mundocristao.com.br",
+     "title": "Spiritual formation"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/por-que-a-ciencia-nao-consegue-enterrar-deus/p",
+     "row": "Why science can't bury God\nwww.mundocristao.com.br",
+     "title": "Why science can't bury God"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/confissao-vitoriosa/p",
+     "row": "Victorious Confession - The Transforming Power of the Word\nwww.mundocristao.com.br",
+     "title": "Victorious Confession - The Transforming Power of the Word"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/as-cinco-linguagens-da-valorizacao-pessoal-no-amb/p",
+     "row": "The five languages ​​of personal enhancement in the workplace\nwww.mundocristao.com.br",
+     "title": "The five languages ​​of personal enhancement in the workplace"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-deus-esquecido/p",
+     "row": "The Forgotten God\nwww.mundocristao.com.br",
+     "title": "The Forgotten God"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-fim-do-sofrimento/p",
+     "row": "THE END OF SUFFERING\nwww.mundocristao.com.br",
+     "title": "THE END OF SUFFERING"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/acabe-com-o-estresse-antes-que-ele-acabe-com-voce/p",
+     "row": "Put an end to stress before it ends with you\nwww.mundocristao.com.br",
+     "title": "Put an end to stress before it ends with you"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/direto-ao-ponto-sexo-e-intimidade-no-casamento/p",
+     "row": "Straight to the Point - Sex and Intimacy in Marriage\nwww.mundocristao.com.br",
+     "title": "Straight to the Point - Sex and Intimacy in Marriage"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/de-repente-acordei/p",
+     "row": "Suddenly I woke up\nwww.mundocristao.com.br",
+     "title": "Suddenly I woke up"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/inspiratio/p",
+     "row": "Inspiratio\nwww.mundocristao.com.br",
+     "title": "Inspiratio"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/a-vida-de-c-s-lewis/p",
+     "row": "The life of C. S. Lewis: from atheism to the land of Narnia\nwww.mundocristao.com.br",
+     "title": "The life of C. S. Lewis: from atheism to the land of Narnia"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/conversa-com-deus/p",
+     "row": "Conversation with God\nwww.mundocristao.com.br",
+     "title": "Conversation with God"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/incertezas-de-outono/p",
+     "row": "Autumn Uncertainties\nwww.mundocristao.com.br",
+     "title": "Autumn Uncertainties"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/cristianismo-facilitado/p",
+     "row": "Christianity Made Easy\nwww.mundocristao.com.br",
+     "title": "Christianity Made Easy"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/a-sala-de-espera-de-deus/p",
+     "row": "God's waiting room\nwww.mundocristao.com.br",
+     "title": "God's waiting room"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/a-descida-da-pomba/p",
+     "row": "The descent of the dove\nwww.mundocristao.com.br",
+     "title": "The descent of the dove"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/as-5-linguagens-do-perdao-2-ed/p",
+     "row": "The 5 languages ​​of forgiveness 2 edition\nwww.mundocristao.com.br",
+     "title": "The 5 languages ​​of forgiveness 2 edition"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-homem-que-deus-usa/p",
+     "row": "The man God uses\nwww.mundocristao.com.br",
+     "title": "The man God uses"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/brasil-polifonico/p",
+     "row": "Polyphonic Brazil\nwww.mundocristao.com.br",
+     "title": "Polyphonic Brazil"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/a-mulher-sabia-edifica-o-lar/p",
+     "row": "The wise woman builds the home\nwww.mundocristao.com.br",
+     "title": "The wise woman builds the home"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/guia-de-estudo-igrejas-que-transformam-o-brasil/p",
+     "row": "Study Guide - Churches that transform Brazil\nwww.mundocristao.com.br",
+     "title": "Study Guide - Churches that transform Brazil"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/ortodoxia-classicos/p",
+     "row": "Orthodoxy\nwww.mundocristao.com.br",
+     "title": "Orthodoxy"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/mulheres-rendidas-aos-pes-de-jesus/p",
+     "row": "Women surrendered at the feet of Jesus\nwww.mundocristao.com.br",
+     "title": "Women surrendered at the feet of Jesus"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/sociedade-com-deus/p",
+     "row": "Society with God\nwww.mundocristao.com.br",
+     "title": "Society with God"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/guerreiras-de-oracao---livro-de-oracoes/p",
+     "row": "PRAYER WARRIORS - PRAYER BOOK\nwww.mundocristao.com.br",
+     "title": "PRAYER WARRIORS - PRAYER BOOK"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/casados-e-ainda-apaixonados/p",
+     "row": "Married and still in love\nwww.mundocristao.com.br",
+     "title": "Married and still in love"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/uma-fe-publica/p",
+     "row": "A public faith\nwww.mundocristao.com.br",
+     "title": "A public faith"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/as-cinco-linguagens-do-amor-para-homens--nova-ed-/p",
+     "row": "The five languages ​​of love for men - new edition\nwww.mundocristao.com.br",
+     "title": "The five languages ​​of love for men - new edition"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/a-pergunta-que-nao-quer-calar/p",
+     "row": "THE QUESTION THAT EVERYBODY WANTS TO HEAR\nwww.mundocristao.com.br",
+     "title": "THE QUESTION THAT EVERYBODY WANTS TO HEAR"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/talmidim52/p",
+     "row": "Talmidim 52\nwww.mundocristao.com.br",
+     "title": "Talmidim 52"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/mulheres-que-comovem-o-coracao-de-deus/p",
+     "row": "Women who touch the Heart of God\nwww.mundocristao.com.br",
+     "title": "Women who touch the Heart of God"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/sos-dos-pais/p",
+     "row": "Parents' S.O.S\nwww.mundocristao.com.br",
+     "title": "Parents' S.O.S"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/mulher-do-reino/p",
+     "row": "Kingdom Woman\nwww.mundocristao.com.br",
+     "title": "Kingdom Woman"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/teleios--o-homem-completo/p",
+     "row": "Teleios: The Complete Man\nwww.mundocristao.com.br",
+     "title": "Teleios: The Complete Man"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-ateismo-cristao-e-outras-ameacas-a-igreja/p",
+     "row": "Christian Atheism\nwww.mundocristao.com.br",
+     "title": "Christian Atheism"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-que-estao-fazendo-com-a-igreja/p",
+     "row": "What they are doing with the church\nwww.mundocristao.com.br",
+     "title": "What they are doing with the church"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/as-quatro-estacoes-do-casamento/p",
+     "row": "The four seasons of marriage\nwww.mundocristao.com.br",
+     "title": "The four seasons of marriage"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/pais-responsaveis-educam-juntos/p",
+     "row": "Responsible parents educate together\nwww.mundocristao.com.br",
+     "title": "Responsible parents educate together"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/transforme-seu-marido-ate-sexta---nova-capa/p",
+     "row": "Transform your husband by Friday\nwww.mundocristao.com.br",
+     "title": "Transform your husband by Friday"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/livro-de-oracoes-para-mulheres-jovens/p",
+     "row": "Prayer book for young woman\nwww.mundocristao.com.br",
+     "title": "Prayer book for young woman"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-caminho-do-sabio/p",
+     "row": "The Path of the Sage\nwww.mundocristao.com.br",
+     "title": "The Path of the Sage"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/feridos-em-nome-de-deus/p",
+     "row": "Wounded in the Name of God\nwww.mundocristao.com.br",
+     "title": "Wounded in the Name of God"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/na-jornada-com-cristo-mz/p",
+     "row": "On the Journey with Christ (Pocket Edition)\nwww.mundocristao.com.br",
+     "title": "On the Journey with Christ (Pocket Edition)"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/ah-se-eu-soubesse/p",
+     "row": "Ah, if I only knew!\nwww.mundocristao.com.br",
+     "title": "Ah, if I only knew!"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/terceirizacao-da-fe/p",
+     "row": "Outsourcing of Faith - Take responsibility for your relationship with God\nwww.mundocristao.com.br",
+     "title": "Outsourcing of Faith - Take responsibility for your relationship with God"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/nao-aguento-meu-emprego/p",
+     "row": "I can't take my job\nwww.mundocristao.com.br",
+     "title": "I can't take my job"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/perdao-total-na-igreja-nova-capa/p",
+     "row": "Total forgiveness in the church - New cover\nwww.mundocristao.com.br",
+     "title": "Total forgiveness in the church - New cover"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/a-familia-em-meio-a-tormenta/p",
+     "row": "The family in the midst of the storm: how the cross redefines home\nwww.mundocristao.com.br",
+     "title": "The family in the midst of the storm: how the cross redefines home"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/aviva-a-tua-obra/p",
+     "row": "Enliven your work\nwww.mundocristao.com.br",
+     "title": "Enliven your work"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/a-menina-da-foto/p",
+     "row": "The girl in the photo\nwww.mundocristao.com.br",
+     "title": "The girl in the photo"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/a-essencia-da-mulher/p",
+     "row": "The essence of the woman\nwww.mundocristao.com.br",
+     "title": "The essence of the woman"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/igreja-sinfonica/p",
+     "row": "SYMPHONIC CHURCH\nwww.mundocristao.com.br",
+     "title": "SYMPHONIC CHURCH"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/teologia-da-trincheira/p",
+     "row": "Trench Theology\nwww.mundocristao.com.br",
+     "title": "Trench Theology"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/mulher-completa/p",
+     "row": "Complete woman\nwww.mundocristao.com.br",
+     "title": "Complete woman"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/perdao-total-no-casamento/p",
+     "row": "Total forgiveness in marriage\nwww.mundocristao.com.br",
+     "title": "Total forgiveness in marriage"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/gloriosas-ruinas/p",
+     "row": "Glorious ruins\nwww.mundocristao.com.br",
+     "title": "Glorious ruins"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/unidos-pelo-casamento/p",
+     "row": "United by marriage: A covenant made with God for life\nwww.mundocristao.com.br",
+     "title": "United by marriage: A covenant made with God for life"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/jesuscopy-a-revolucao-das-copias-de-jesus/p",
+     "row": "JESUSCOPY - The Jesus Copy Revolution\nwww.mundocristao.com.br",
+     "title": "JESUSCOPY - The Jesus Copy Revolution"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/reflexos-da-alma/p",
+     "row": "Soul Reflections\nwww.mundocristao.com.br",
+     "title": "Soul Reflections"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-poder-da-mulher-que-ora-livro-de-oracoes/p",
+     "row": "The power of the woman who prays - prayer book\nwww.mundocristao.com.br",
+     "title": "The power of the woman who prays - prayer book"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-poder-da-oracao-no-casamento/p",
+     "row": "The Power of Prayer in Marriage\nwww.mundocristao.com.br",
+     "title": "The Power of Prayer in Marriage"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/comentario-biblico-popular-antigo-testamento/p",
+     "row": "Old Testament Popular Biblical Commentary\nwww.mundocristao.com.br",
+     "title": "Old Testament Popular Biblical Commentary"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/introducao-a-restauracao-da-alma/p",
+     "row": "Introduction to soul restoration\nwww.mundocristao.com.br",
+     "title": "Introduction to soul restoration"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/a-biblia-dos-meninos/p",
+     "row": "The Boys' Bible\nwww.mundocristao.com.br",
+     "title": "The Boys' Bible"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/plano-mestre-de-evangelismo/p",
+     "row": "MASTER PLAN OF EVANGELISM\nwww.mundocristao.com.br",
+     "title": "MASTER PLAN OF EVANGELISM"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/dia-a-dia-com-spurgeon---caixa-presente-manha-e-n/p",
+     "row": "Day to day with Spurgeon - gift box morning and night\nwww.mundocristao.com.br",
+     "title": "Day to day with Spurgeon - gift box morning and night"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/lendo-os-salmos-com-charles-h--spurgeon/p",
+     "row": "Reading the Psalms with Charles H. Spurgeon\nwww.mundocristao.com.br",
+     "title": "Reading the Psalms with Charles H. Spurgeon"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/marina-a-vida-por-uma-causa/p",
+     "row": "Marina: Life for a cause\nwww.mundocristao.com.br",
+     "title": "Marina: Life for a cause"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/a-experiencia-da-mesa--nova-capa-/p",
+     "row": "The table experience - (New Cover)\nwww.mundocristao.com.br",
+     "title": "The table experience - (New Cover)"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/arame-farpado-no-paraiso/p",
+     "row": "Barbed wire in paradise\nwww.mundocristao.com.br",
+     "title": "Barbed wire in paradise"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/missao-urbana/p",
+     "row": "Urban mission\nwww.mundocristao.com.br",
+     "title": "Urban mission"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/transforme-se/p",
+     "row": "Transform yourself\nwww.mundocristao.com.br",
+     "title": "Transform yourself"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/um-evangelho-de-esperanca/p",
+     "row": "A gospel of hope\nwww.mundocristao.com.br",
+     "title": "A gospel of hope"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-ritual/p",
+     "row": "The ritual\nwww.mundocristao.com.br",
+     "title": "The ritual"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/para-que-serve-deus/p",
+     "row": "What is God for - In search of true faith\nwww.mundocristao.com.br",
+     "title": "What is God for - In search of true faith"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/a-crianca-digital/p",
+     "row": "The Digital Child - Teaching your child to find balance in the virtual world\nwww.mundocristao.com.br",
+     "title": "The Digital Child - Teaching your child to find balance in the virtual world"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/explicacao-clara-da-perfeicao-crista/p",
+     "row": "Clear explanation of Christian perfection\nwww.mundocristao.com.br",
+     "title": "Clear explanation of Christian perfection"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/box-herois-da-igreja/p",
+     "row": "Church Heroes Box\nwww.mundocristao.com.br",
+     "title": "Church Heroes Box"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/as-cinco-linguagens-do-amor-para-solteiros/p",
+     "row": "The 5 languages ​​of love for singles\nwww.mundocristao.com.br",
+     "title": "The 5 languages ​​of love for singles"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-poder-da-mae-que-ora/p",
+     "row": "The power of the praying mother\nwww.mundocristao.com.br",
+     "title": "The power of the praying mother"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-peregrino---classicos/p",
+     "row": "The Pilgrim - Classics\nwww.mundocristao.com.br",
+     "title": "The Pilgrim - Classics"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/educando-meninas/p",
+     "row": "Educating girls\nwww.mundocristao.com.br",
+     "title": "Educating girls"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/ore-pelas-nacoes/p",
+     "row": "Pray for the Nations - A comprehensive guide to missions and intercession around the world\nwww.mundocristao.com.br",
+     "title": "Pray for the Nations - A comprehensive guide to missions and intercession around the world"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/diga-sim-com-conviccao/p",
+     "row": "Say yes with conviction - What you need to know before you get married\nwww.mundocristao.com.br",
+     "title": "Say yes with conviction - What you need to know before you get married"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-poder-de-orar-pelos-filhos-adultos-livro-de-ora/p",
+     "row": "THE POWER OF PRAYING FOR ADULT CHILDREN-BOOK OF PRAYER\nwww.mundocristao.com.br",
+     "title": "THE POWER OF PRAYING FOR ADULT CHILDREN-BOOK OF PRAYER"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/bianca-toledo-prova-viva-de-um-milagre/p",
+     "row": "Bianca Toledo - Living Proof of a Miracle\nwww.mundocristao.com.br",
+     "title": "Bianca Toledo - Living Proof of a Miracle"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-discipulado-verdadeiro---2-edicao-ampliada/p",
+     "row": "True Discipleship - 2 Extended Edition\nwww.mundocristao.com.br",
+     "title": "True Discipleship - 2 Extended Edition"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/me-da-um-abraco/p",
+     "row": "Give me a hug\nwww.mundocristao.com.br",
+     "title": "Give me a hug"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/transforme-seu-filho-ate-sexta-nova-capa/p",
+     "row": "Transform your child by Friday\nwww.mundocristao.com.br",
+     "title": "Transform your child by Friday"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/brisa-de-verao/p",
+     "row": "Summer breeze\nwww.mundocristao.com.br",
+     "title": "Summer breeze"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/xelotes-o-desafio-de-viver-na-contramao-da-normalidade/p",
+     "row": "XELOTES - The challenge of living against normality\nwww.mundocristao.com.br",
+     "title": "XELOTES - The challenge of living against normality"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/sonhe-grande/p",
+     "row": "Dream big\nwww.mundocristao.com.br",
+     "title": "Dream big"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-deus-da-esperanca/p",
+     "row": "The God of Hope\nwww.mundocristao.com.br",
+     "title": "The God of Hope"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/a-oracao-de-jabez---nova-capa/p",
+     "row": "Jabe's Prayer\nwww.mundocristao.com.br",
+     "title": "Jabe's Prayer"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-brasil-tem-cura/p",
+     "row": "Brazil has a cure\nwww.mundocristao.com.br",
+     "title": "Brazil has a cure"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/escolhas-inteligentes-para-melhorar-sua-vida/p",
+     "row": "Smart Picks to Improve Your Life\nwww.mundocristao.com.br",
+     "title": "Smart Picks to Improve Your Life"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/transforme-sua-familia-em-cinco-dias/p",
+     "row": "Transform your family in five days\nwww.mundocristao.com.br",
+     "title": "Transform your family in five days"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/comentario-biblico-contemporaneo-espanhol/p",
+     "row": "Contemporary Biblical Commentary - Spanish\nwww.mundocristao.com.br",
+     "title": "Contemporary Biblical Commentary - Spanish"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/examinando-as-escrituras/p",
+     "row": "Examining the scriptures\nwww.mundocristao.com.br",
+     "title": "Examining the scriptures"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/oracoes-do-meu-coracao/p",
+     "row": "Prayers from my heart\nwww.mundocristao.com.br",
+     "title": "Prayers from my heart"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-tesouro-de-davi/p",
+     "row": "David's treasure\nwww.mundocristao.com.br",
+     "title": "David's treasure"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-misterio-de-cruz-das-almas/p",
+     "row": "The mystery of the cross of souls\nwww.mundocristao.com.br",
+     "title": "The mystery of the cross of souls"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-poder-dos-avos-que-oram/p",
+     "row": "The power of grandparents who pray\nwww.mundocristao.com.br",
+     "title": "The power of grandparents who pray"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/aprendendo-a-viver-como-jesus/p",
+     "row": "Learning to live like Jesus\nwww.mundocristao.com.br",
+     "title": "Learning to live like Jesus"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/cartas-a-igreja/p",
+     "row": "Letters to the Church\nwww.mundocristao.com.br",
+     "title": "Letters to the Church"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/homem-do-reino/p",
+     "row": "Kingdom Man\nwww.mundocristao.com.br",
+     "title": "Kingdom Man"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-poder-da-oracao-que-domina-o-medo/p",
+     "row": "The power of prayer that dominates fear\nwww.mundocristao.com.br",
+     "title": "The power of prayer that dominates fear"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/inteligencia-pra-que/p",
+     "row": "Intelligence for what?\nwww.mundocristao.com.br",
+     "title": "Intelligence for what?"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/a-culpa-nao-e-sua/p",
+     "row": "It's not your fault\nwww.mundocristao.com.br",
+     "title": "It's not your fault"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/a-dificil-arte-de-ser-voce-mesmo/p",
+     "row": "The Difficult Art of Being Yourself\nwww.mundocristao.com.br",
+     "title": "The Difficult Art of Being Yourself"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-fim-para-o-qual-deus-criou-o-mundo/p",
+     "row": "The end for which God created the world\nwww.mundocristao.com.br",
+     "title": "The end for which God created the world"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/a-dama--seu-amado-e-seu-senhor--nova-capa-/p",
+     "row": "The lady, her lover and her lord\nwww.mundocristao.com.br",
+     "title": "The lady, her lover and her lord"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/discipulado-capa-dura-ed-especial/p",
+     "row": "Discipleship (special edition)\nwww.mundocristao.com.br",
+     "title": "Discipleship (special edition)"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-poder-da-mulher-que-ora-capa-dura-ed-especial/p",
+     "row": "The power of the woman who prays (special edition)\nwww.mundocristao.com.br",
+     "title": "The power of the woman who prays (special edition)"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-poder-da-esposa-que-ora-capa-dura-ed-especial/p",
+     "row": "The power of the praying wife (special edition)\nwww.mundocristao.com.br",
+     "title": "The power of the praying wife (special edition)"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/realize-seus-sonhos/p",
+     "row": "Make your dreams come true\nwww.mundocristao.com.br",
+     "title": "Make your dreams come true"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-enigma-da-biblia-de-gutenberg/p",
+     "row": "The enigma of the gutenberg bible\nwww.mundocristao.com.br",
+     "title": "The enigma of the gutenberg bible"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/avante-guia-biblico-para-vencer-os-problemas/p",
+     "row": "Forward! Biblical Guide to Overcoming Life's Problems\nwww.mundocristao.com.br",
+     "title": "Forward! Biblical Guide to Overcoming Life's Problems"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/uma-jornada-de-autodescoberta/p",
+     "row": "A Journey of Self-Discovery - What the Enneagram Reveals About You\nwww.mundocristao.com.br",
+     "title": "A Journey of Self-Discovery - What the Enneagram Reveals About You"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/transformado-para-vencer/p",
+     "row": "Transformed to win\nwww.mundocristao.com.br",
+     "title": "Transformed to win"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/imitacao-de-cristo-classicos/p",
+     "row": "Imitation of Christ\nwww.mundocristao.com.br",
+     "title": "Imitation of Christ"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/confissoes/p",
+     "row": "Confessions\nwww.mundocristao.com.br",
+     "title": "Confessions"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/precisamos-falar-sobre-pecado/p",
+     "row": "We need to talk about sin\nwww.mundocristao.com.br",
+     "title": "We need to talk about sin"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/azorrague/p",
+     "row": "Azorrague\nwww.mundocristao.com.br",
+     "title": "Azorrague"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/sete-enigmas-e-um-tesouro/p",
+     "row": "Seven riddles and a treasure\nwww.mundocristao.com.br",
+     "title": "Seven riddles and a treasure"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/fe-cidada/p",
+     "row": "Citizen faith\nwww.mundocristao.com.br",
+     "title": "Citizen faith"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-homem-eterno---classicos/p",
+     "row": "The Eternal Man - Classics\nwww.mundocristao.com.br",
+     "title": "The Eternal Man - Classics"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-livro-dos-martires---classicos/p",
+     "row": "THE BOOK OF MARTIRES - CLASSICS\nwww.mundocristao.com.br",
+     "title": "THE BOOK OF MARTIRES - CLASSICS"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/meu-dia-melhor/p",
+     "row": "My best day\nwww.mundocristao.com.br",
+     "title": "My best day"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/cristao-homoafetivo/p",
+     "row": "Homoaffective Christian?\nwww.mundocristao.com.br",
+     "title": "Homoaffective Christian?"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/uma-confissao/p",
+     "row": "A confession\nwww.mundocristao.com.br",
+     "title": "A confession"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/igrejas-que-transformam-o-brasil/p",
+     "row": "Churches that transform Brazil\nwww.mundocristao.com.br",
+     "title": "Churches that transform Brazil"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/discipulado/p",
+     "row": "Discipleship\nwww.mundocristao.com.br",
+     "title": "Discipleship"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/obediencia-e-intimidade/p",
+     "row": "Obedience and Intimacy\nwww.mundocristao.com.br",
+     "title": "Obedience and Intimacy"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/classicos-da-literatura-crista/p",
+     "row": "Classics of Christian Literature\nwww.mundocristao.com.br",
+     "title": "Classics of Christian Literature"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/livre-o-que-o-dependente-e-sua-familia-precisam/p",
+     "row": "Free! What the addict and his family need\nwww.mundocristao.com.br",
+     "title": "Free! What the addict and his family need"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/espiritualidade-em-familia/p",
+     "row": "Family spirituality\nwww.mundocristao.com.br",
+     "title": "Family spirituality"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/maior-que-a-tempestade/p",
+     "row": "Bigger than the storm\nwww.mundocristao.com.br",
+     "title": "Bigger than the storm"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/a-gentileza-que-cativa/p",
+     "row": "The kindness that captivates\nwww.mundocristao.com.br",
+     "title": "The kindness that captivates"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/eu-escolhi-esperar/p",
+     "row": "I decided to wait\nwww.mundocristao.com.br",
+     "title": "I decided to wait"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/maes-de-joelhos--filhos-de-pe/p",
+     "row": "KNEES OF KNEES, CHILDREN OF PE\nwww.mundocristao.com.br",
+     "title": "KNEES OF KNEES, CHILDREN OF PE"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-eclipse-da-graca/p",
+     "row": "The eclipse of grace\nwww.mundocristao.com.br",
+     "title": "The eclipse of grace"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/as-cinco-linguagens-do-amor-das-criancas-nova-ed/p",
+     "row": "The 5 languages ​​of children's love - new edition\nwww.mundocristao.com.br",
+     "title": "The 5 languages ​​of children's love - new edition"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/confianca-inabalavel/p",
+     "row": "UNSHABBLE TRUST\nwww.mundocristao.com.br",
+     "title": "UNSHABBLE TRUST"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/codigo-de-honra/p",
+     "row": "Code of Honor: 10 virtues for a relevant life\nwww.mundocristao.com.br",
+     "title": "Code of Honor: 10 virtues for a relevant life"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-deus-que-abre-portas/p",
+     "row": "The God Who Opens Doors\nwww.mundocristao.com.br",
+     "title": "The God Who Opens Doors"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/atencao_tem-gente-influenciando-seus-filhos/p",
+     "row": "Attention! There are people influencing their children\nwww.mundocristao.com.br",
+     "title": "Attention! There are people influencing their children"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/formigas/p",
+     "row": "Ants\nwww.mundocristao.com.br",
+     "title": "Ants"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/convulsao-protestante/p",
+     "row": "Protestant Seizure\nwww.mundocristao.com.br",
+     "title": "Protestant Seizure"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/perdao-total/p",
+     "row": "Total Forgiveness\nwww.mundocristao.com.br",
+     "title": "Total Forgiveness"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/meu-filho-do-coracao/p",
+     "row": "My son of the heart\nwww.mundocristao.com.br",
+     "title": "My son of the heart"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/multiplique--discipulos-que-fazem-discipulos/p",
+     "row": "Multiply: Disciples who make disciples\nwww.mundocristao.com.br",
+     "title": "Multiply: Disciples who make disciples"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/guerreiras-de-oracao/p",
+     "row": "PRAYER WARRIORS\nwww.mundocristao.com.br",
+     "title": "PRAYER WARRIORS"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/deus-esta-no-controle-ed-bolso/p",
+     "row": "God Is in Control - Pocket Edition\nwww.mundocristao.com.br",
+     "title": "God Is in Control - Pocket Edition"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/sete-necessidades-basicas-da-crianca--3-edicao/p",
+     "row": "Seven basic needs of the child\nwww.mundocristao.com.br",
+     "title": "Seven basic needs of the child"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/nana-nene-edicao/p",
+     "row": "Nana Nene\nwww.mundocristao.com.br",
+     "title": "Nana Nene"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-poder-da-esposa-que-ora---mensagens-de-fe/p",
+     "row": "The power of the praying wife - Messages of faith\nwww.mundocristao.com.br",
+     "title": "The power of the praying wife - Messages of faith"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/minutos-de-oracao-para-a-mulher-de-fe/p",
+     "row": "Minutes of prayer for the woman of faith\nwww.mundocristao.com.br",
+     "title": "Minutes of prayer for the woman of faith"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/entre-lencois/p",
+     "row": "Between Lençóis - Kevin Leman\nwww.mundocristao.com.br",
+     "title": "Between Lençóis - Kevin Leman"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/em-seus-passos-o-que-faria-jesus--capa-nova/p",
+     "row": "IN YOUR STEPS WHAT WOULD JESUS ​​DO? NEW COVER\nwww.mundocristao.com.br",
+     "title": "IN YOUR STEPS WHAT WOULD JESUS ​​DO? NEW COVER"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/talmidim-o-passo-a-passo-de-jesus/p",
+     "row": "Talmidim: Jesus' walkthrough\nwww.mundocristao.com.br",
+     "title": "Talmidim: Jesus' walkthrough"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-anseio-furioso-de-deus/p",
+     "row": "God's furious yearning\nwww.mundocristao.com.br",
+     "title": "God's furious yearning"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/louco-amor/p",
+     "row": "Crazy Love\nwww.mundocristao.com.br",
+     "title": "Crazy Love"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-obstinado-amor-de-deus/p",
+     "row": "God's Stubborn Love\nwww.mundocristao.com.br",
+     "title": "God's Stubborn Love"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-peregrino-ilustrado--2-edicao-/p",
+     "row": "The illustrated pilgrim - (2.ED)\nwww.mundocristao.com.br",
+     "title": "The illustrated pilgrim - (2.ED)"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/aprofundando-a-restauracao-da-alma-atraves-de-grupo-de-apoio/p",
+     "row": "Deepening the restoration of the soul through support groups\nwww.mundocristao.com.br",
+     "title": "Deepening the restoration of the soul through support groups"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-evangelho-maltrapilho/p",
+     "row": "The Ragged Gospel\nwww.mundocristao.com.br",
+     "title": "The Ragged Gospel"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/a-arte-de-influenciar-pessoas/p",
+     "row": "THE ART OF INFLUENCING PEOPLE\nwww.mundocristao.com.br",
+     "title": "THE ART OF INFLUENCING PEOPLE"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-impostor-que-vive-em-mim-2-edicao/p",
+     "row": "The impostor who lives in me\nwww.mundocristao.com.br",
+     "title": "The impostor who lives in me"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/moises-serie-herois-da-fe/p",
+     "row": "moisés\nwww.mundocristao.com.br",
+     "title": "moisés"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-poder-da-mulher-que-ora/p",
+     "row": "The power of the woman who prays\nwww.mundocristao.com.br",
+     "title": "The power of the woman who prays"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/temperamentos-transformados/p",
+     "row": "Transformed temperaments\nwww.mundocristao.com.br",
+     "title": "Transformed temperaments"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-que-acontece-quando-eu-falo-com-deus-/p",
+     "row": "What happens when I speak to God?\nwww.mundocristao.com.br",
+     "title": "What happens when I speak to God?"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/sabedoria-para-casais/p",
+     "row": "Wisdom for couples\nwww.mundocristao.com.br",
+     "title": "Wisdom for couples"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/transforme-seu-adolescente-ate-sexta/p",
+     "row": "Transform your teen by Friday\nwww.mundocristao.com.br",
+     "title": "Transform your teen by Friday"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-poder-da-igreja-que-ora/p",
+     "row": "The power of the praying church\nwww.mundocristao.com.br",
+     "title": "The power of the praying church"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/o-que-jesus-disse/p",
+     "row": "What Jesus Said\nwww.mundocristao.com.br",
+     "title": "What Jesus Said"
+    },
+    {
+     "cells": [],
+     "href": "https://www.mundocristao.com.br/a-esposa-que-eu-quero-ser/p",
+     "row": "The Wife I Want to Be - The Role of the Wife in Christian Marriage\nwww.mundocristao.com.br",
+     "title": "The Wife I Want to Be - The Role of the Wife in Christian Marriage"
+    },
+    {
+     "cells": [],
+     "href": "https://resources.lifewords.global/portuguese-brazilian/325-an-invitation-portuguese-brazilian-9780721308050.html",
+     "row": "An invitation\nresources.lifewords.global",
+     "title": "An invitation"
+    },
+    {
+     "cells": [],
+     "href": "https://resources.lifewords.global/portuguese-brazilian/442-portuguese-brazilian-encounters-with-jesus-9780721309873.html",
+     "row": "Encounters with Jesus\nresources.lifewords.global",
+     "title": "Encounters with Jesus"
+    },
+    {
+     "cells": [],
+     "href": "https://resources.lifewords.global/portuguese-brazilian/318-finding-hope-portuguese-brazilian-9780721308067.html",
+     "row": "Finding hope\nresources.lifewords.global",
+     "title": "Finding hope"
+    },
+    {
+     "cells": [],
+     "href": "https://resources.lifewords.global/portuguese-brazilian/341-the-way-to-life-portuguese-brazilian-9780721308005.html",
+     "row": "The way to life\nresources.lifewords.global",
+     "title": "The way to life"
+    },
+    {
+     "cells": [],
+     "href": "https://resources.lifewords.global/portuguese-brazilian/374-words-for-the-journey-portuguese-brazilian-9780721308876.html",
+     "row": "Words for the journey\nresources.lifewords.global",
+     "title": "Words for the journey"
+    },
+    {
+     "cells": [],
+     "href": "https://resources.lifewords.global/portuguese-brazilian/393-you-matter-portuguese-brazilian-9780721309415.html",
+     "row": "You matter\nresources.lifewords.global",
+     "title": "You matter"
+    },
+    {
+     "cells": [],
+     "href": "https://resources.lifewords.global/portuguese-brazilian/436-consider-the-wildflowers-portuguese-brazilian-9780721309927.html",
+     "row": "Consider the wildflowers\nresources.lifewords.global",
+     "title": "Consider the wildflowers"
+    },
+    {
+     "cells": [],
+     "href": "https://rockintl.org/rock-audio/the-way-of-righteousness-pulaar/",
+     "row": "KING of GLORY\nrockintl.org",
+     "title": "KING of GLORY"
+    }
+   ]
+  }
+ }
+}
