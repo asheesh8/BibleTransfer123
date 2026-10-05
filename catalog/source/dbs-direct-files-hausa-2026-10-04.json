@@ -1,0 +1,18 @@
+{
+ "verified": "2026-10-04",
+ "alive_files": [
+  "https://bibles.dbs.org/HAUDOR/epub/HAUDOR.epub",
+  "https://rockintl.org/wp-content/uploads/2020/10/TWOR_Hausa-1-100.pdf",
+  "https://scripture.dbs.org/books/Hausa-1857-Acts-Schon.pdf",
+  "https://scripture.dbs.org/books/Hausa-1879-Epsitles-and-Revelation.pdf",
+  "https://scripture.dbs.org/books/Hausa-1914-Gospels-and-Acts.pdf",
+  "https://scripture.dbs.org/pdfs/Hausa-1877-John-Labari-nagari-ko-linzila-na-yahaha.pdf",
+  "https://scripture.dbs.org/pdfs/Hausa-1932-Genesis-Portion.pdf",
+  "https://scripture.dbs.org/pdfs/Hausa-New-Testament-book.pdf",
+  "https://storysets.s3.amazonaws.com/hau-niger/Hausa-Niger_Storyset.zip"
+ ],
+ "playable_audio_filesets": [
+  "HAUBSN_DAVR_FB_N",
+  "HAUPOR_DAVR_FB_N"
+ ]
+}

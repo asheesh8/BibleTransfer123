@@ -679,3 +679,51 @@ Lingala. Rebuild with `python3 packer/build_lingala.py`, then `npm run dbs:impor
 Audits and browser evidence are retained in
 `catalog/source/dbs-*-lingala-2026-10-04.json` and
 `catalog/source/dbs-lingala-external-2026-10-04.json`.
+
+## Hausa — 4 October 2026
+
+Hausa uses Latin script and the interface code `ha`; the resource language is
+`hau`. The language picker, home shelves, share launcher, and `/hausa`, `/hau`
+and `/ha` routes are connected. All 411 interface/control/help/sharing strings
+have Hausa drafts, including “Idan fayil ɗin bai buɗe ba” for “If the file does
+not open.” English operating-system labels remain recognizable. The separate
+screenshot guide remains in English and is disclosed. Native-speaker review
+has not been performed.
+
+The fully expanded DBS inventory has 107 rows and 83 unique source URLs.
+Every source is represented or has an explicit exclusion. The resulting
+library has 64 resources, including two full audio Bibles (66 books and 1,189
+chapters each), 16 film cards, six historic scans, the GRN collection of 372
+Christian recordings, nine Story of Jesus recordings, 43 StoryRunners stories,
+and ROCK's 100 Bible lessons with their PDF. Publisher programmes are also
+exposed individually. Six programmes retain only explicitly identified Hausa
+tracks; eight combined programmes disclose the other language alongside Hausa.
+Unavailable GRN programme 5690 and the retired HAUBIB audio edition are omitted.
+
+Six COVID education files and both unfiltered GRN ZIPs are excluded. The five
+More Than Dreams conversion testimonies are omitted under the user's requested
+content selection; these are Christian testimonies set in Muslim communities,
+not Islamic teaching. Arabic has not been added. The Ajami Bible directory entry
+is labeled Hausa in Ajami script, which is a writing system, not Arabic-language
+content.
+
+DBS describes HAUDOR as a full Bible, but its downloaded, CRC-checked EPUB
+contains exactly the 27 New Testament books. The download is labeled accordingly.
+HAUSRK's current DBS record is marked New Testament and offers an inScript
+reader, not downloadable files; its card follows that published scope. The
+historical New Testament scan has conflicting twentieth-century/2010 metadata,
+so its card avoids asserting an exact printing year.
+
+Both audio filesets' 2,378 chapter URLs returned valid MP3 signatures. Other
+published media were checked for file signatures; DBS film servers and ROCK
+block command-line probes (403/406). Browser sampling confirmed video metadata,
+playback and the ROCK audio download. These checks establish link availability
+and playlist structure, not native-language listening review of every recording.
+Large, unverified ZIP bundles are accessed via the original DBS source rather
+than promoted as checked downloads.
+
+Rebuild with `python3 packer/build_hausa.py`, then `npm run dbs:import`.
+`packer/audit_hausa_files.py` refreshes network checks. Source inventories,
+publisher captures, CRC evidence and file results are in
+`catalog/source/dbs-*-hausa-2026-10-04.json`; publisher exceptions apply to exact
+URLs and to Hausa only.

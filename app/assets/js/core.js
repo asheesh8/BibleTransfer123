@@ -456,7 +456,7 @@ window.ET = (function () {
      English title and heard Sindhi. Choosing a language picks both: English
      shows English films, اردو shows Urdu, سنڌي shows Sindhi. The library can
      still browse the others on purpose. */
-  var CONTENT = { ln: 'lin', pcm: 'pcm', yo: 'yor', pt: 'por', am: 'amh', fr: 'fra', en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', zul: 'zul', mas: 'mas', kik: 'kik', hi: 'hin', mr: 'mar', lg: 'lug', luo: 'luo', om: 'orm', ig: 'ibo', pa: 'pan', pnb: 'pnb', ne: 'npi' };
+  var CONTENT = { ha: 'hau', ln: 'lin', pcm: 'pcm', yo: 'yor', pt: 'por', am: 'amh', fr: 'fra', en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', zul: 'zul', mas: 'mas', kik: 'kik', hi: 'hin', mr: 'mar', lg: 'lug', luo: 'luo', om: 'orm', ig: 'ibo', pa: 'pan', pnb: 'pnb', ne: 'npi' };
   function contentCode(ui) { return CONTENT[ui] || 'eng'; }
   function contentLang() {
     var scope = libraryScope();
@@ -485,6 +485,74 @@ window.ET = (function () {
       [65,'Jude',1],[66,'Revelation',22]]
   };
   var LOCAL_BOOKS = {
+    ha: {
+  "Genesis": "Farawa",
+  "Exodus": "Fitowa",
+  "Leviticus": "Firistoci",
+  "Numbers": "ƘIDAYA",
+  "Deuteronomy": "MAIMAITAWAR SHARIʼA",
+  "Joshua": "Yoshuwa",
+  "Judges": "Mahukunta",
+  "Ruth": "Rut",
+  "1Samuel": "1 SAMAʼILA",
+  "2Samuel": "2 SAMAʼILA",
+  "1Kings": "1 Sarakuna",
+  "2Kings": "2 Sarakuna",
+  "1Chronicles": "1 Tarihi",
+  "2Chronicles": "2 Tarihi",
+  "Ezra": "Ezra",
+  "Nehemiah": "Nehemiya",
+  "Esther": "Esta",
+  "Job": "Ayuba",
+  "Psalms": "Zabura",
+  "Proverbs": "Karin Magana",
+  "Ecclesiastes": "Mai Hadishi",
+  "SongofSongs": "WAƘAR WAƘOƘI",
+  "Isaiah": "Ishaya",
+  "Jeremiah": "Irmiya",
+  "Lamentations": "Makoki",
+  "Ezekiel": "Ezekiyel",
+  "Daniel": "Daniyel",
+  "Hosea": "Hosiya",
+  "Joel": "Yowel",
+  "Amos": "Amos",
+  "Obadiah": "Obadiya",
+  "Jonah": "Yunana",
+  "Micah": "Mika",
+  "Nahum": "Nahum",
+  "Habakkuk": "Habakkuk",
+  "Zephaniah": "Zefaniya",
+  "Haggai": "Haggai",
+  "Zechariah": "Zakariya",
+  "Malachi": "Malaki",
+  "Matthew": "Mattiyu",
+  "Mark": "Markus",
+  "Luke": "Luka",
+  "John": "Yohanna",
+  "Acts": "Ayyukan Manzanni",
+  "Romans": "Romawa",
+  "1Corinthians": "1 Korintiyawa",
+  "2Corinthians": "2 Korintiyawa",
+  "Galatians": "Galatiyawa",
+  "Ephesians": "Afisawa",
+  "Philippians": "Filibbiyawa",
+  "Colossians": "Kolossiyawa",
+  "1Thessalonians": "1 Tessalonikawa",
+  "2Thessalonians": "2 Tessalonikawa",
+  "1Timothy": "1 Timoti",
+  "2Timothy": "2 Timoti",
+  "Titus": "Titus",
+  "Philemon": "Filemon",
+  "Hebrews": "Ibraniyawa",
+  "James": "YAƘUB",
+  "1Peter": "1 Bitrus",
+  "2Peter": "2 Bitrus",
+  "1John": "1 Yohanna",
+  "2John": "2 Yohanna",
+  "3John": "3 Yohanna",
+  "Jude": "Yahuda",
+  "Revelation": "RUʼUYA TA YOHANNA"
+},
     ln: {
   "Genesis": "Ebandeli",
   "Exodus": "Kobima",

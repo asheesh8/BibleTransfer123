@@ -19,9 +19,9 @@ function harness(elements = {}, scope = null) {
 }
 const placeholders = value => [...value.matchAll(/\{(\w+)\}/g)].map(match => match[1]).sort();
 
-test('all twenty-six languages retain formatter variables and render escaped strings', () => {
+test('all twenty-seven languages retain formatter variables and render escaped strings', () => {
   const { ET, dictionaries, attributes } = harness();
-  assert.equal(ET.i18n.langs.length, 26);
+  assert.equal(ET.i18n.langs.length, 27);
   for (const language of ET.i18n.langs) {
     ET.i18n.set(language.code);
     assert.equal(attributes.dir, language.dir);
@@ -121,7 +121,7 @@ test('untranslated copy is marked as English and changes back when translated', 
 });
 
  test('new shared libraries initialize in their native interface without a stored preference', () => {
-  for (const scope of [{lang: 'lin', ui: 'ln'}, {lang: 'orm', ui: 'om'}, {lang: 'luo', ui: 'luo'}, {lang: 'ibo', ui: 'ig'}, {lang: 'fra', ui: 'fr'}, {lang: 'amh', ui: 'am'}, {lang: 'por', ui: 'pt'}, {lang: 'yor', ui: 'yo'}, {lang: 'pcm', ui: 'pcm'}]) {
+  for (const scope of [{lang: 'hau', ui: 'ha'}, {lang: 'lin', ui: 'ln'}, {lang: 'orm', ui: 'om'}, {lang: 'luo', ui: 'luo'}, {lang: 'ibo', ui: 'ig'}, {lang: 'fra', ui: 'fr'}, {lang: 'amh', ui: 'am'}, {lang: 'por', ui: 'pt'}, {lang: 'yor', ui: 'yo'}, {lang: 'pcm', ui: 'pcm'}]) {
     const {ET, dictionaries, attributes} = harness({}, scope);
     assert.equal(ET.i18n.current(), scope.ui);
     ET.i18n.apply();
@@ -215,4 +215,32 @@ test('Lingala covers every control and guide with clear file instructions', () =
   assert.equal(ET.i18n.meta('ln').native, 'Lingála');
   assert.equal(ET.i18n.meta('unknown').name, 'English');
   assert.match(ET.i18n.t('route.computer-android.2.p'), /File Transfer/);
+});
+
+test('Hausa covers all controls and guides with clear file wording', () => {
+  const { ET, dictionaries } = harness();
+  ET.i18n.set('ha');
+  assert.equal(Object.keys(dictionaries.ha).length, 411);
+  for (const key of Object.keys(dictionaries.pt)) assert.ok(dictionaries.ha[key], 'Hausa fallback: ' + key);
+  assert.equal(ET.i18n.t('help.android.4.h'), 'Idan fayil ɗin bai buɗe ba');
+  assert.match(ET.i18n.t('help.ios.openfile.p'), /Idan fayil ɗin bai buɗe ba/);
+  assert.equal(ET.i18n.t('item.chapter', { n: 3 }), 'Babi na 3');
+  assert.equal(ET.i18n.meta('ha').native, 'Hausa');
+  assert.match(ET.i18n.t('route.computer-android.2.p'), /File Transfer/);
+});
+
+test('Hausa refreshes an older installed shell that falls back to English', () => {
+  const html = fs.readFileSync(path.join(app, 'hausa/index.html'), 'utf8');
+  const inline = html.match(/<script>([\s\S]*?)<\/script>/)[1];
+  for (const known of [false, true]) {
+    let onControllerChange, reloads = 0;
+    vm.runInNewContext(inline, {
+      window: { ET: { i18n: { meta: () => ({code: known ? 'ha' : 'en'}) } } },
+      navigator: { serviceWorker: { addEventListener: (_, fn) => { onControllerChange = fn; } } },
+      document: { documentElement: {lang: 'ha'} },
+      localStorage: {getItem: () => null}, location: {reload: () => { reloads++; }}
+    });
+    onControllerChange();
+    assert.equal(reloads, known ? 0 : 1);
+  }
 });

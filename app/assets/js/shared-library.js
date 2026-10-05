@@ -12,7 +12,7 @@
     ? location.href.split(/[?#]/)[0]
     : location.origin + '/' + scope.slug;
 
-  document.title = t('sharelib.title', { lang: (scope.lang === 'fra' || scope.lang === 'amh' || scope.lang === 'por' || scope.lang === 'yor' || scope.lang === 'pcm' || scope.lang === 'lin') ? language : L.name || scope.name || language });
+  document.title = t('sharelib.title', { lang: (scope.lang === 'fra' || scope.lang === 'amh' || scope.lang === 'por' || scope.lang === 'yor' || scope.lang === 'pcm' || scope.lang === 'lin' || scope.lang === 'hau') ? language : L.name || scope.name || language });
   ET.$('#shared-badge').innerHTML = h('sharelib.only', { lang: language });
   ET.$('#shared-title').innerHTML = h('sharelib.title', { lang: language });
   var languageNote = ET.i18n.meta && ET.i18n.meta(scope.ui || 'en').interfaceNote;
@@ -22,7 +22,7 @@
   var email = ET.$('#email-library');
   email.innerHTML = ET.icon('share') + h('sharelib.email');
   function emailUrl(url) {
-    var mailLanguage = (scope.lang === 'fra' || scope.lang === 'amh' || scope.lang === 'por' || scope.lang === 'yor' || scope.lang === 'pcm' || scope.lang === 'lin') ? language : L.name || language;
+    var mailLanguage = (scope.lang === 'fra' || scope.lang === 'amh' || scope.lang === 'por' || scope.lang === 'yor' || scope.lang === 'pcm' || scope.lang === 'lin' || scope.lang === 'hau') ? language : L.name || language;
     return 'mailto:?subject=' + encodeURIComponent(t('sharelib.subject', { lang: mailLanguage })) +
       '&body=' + encodeURIComponent(t('sharelib.body', { lang: mailLanguage, url: url }));
   }

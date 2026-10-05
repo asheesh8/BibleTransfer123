@@ -1,0 +1,753 @@
+{
+ "hau": {
+  "Audio Collections": {
+   "count": 3,
+   "links": [
+    {
+     "cells": [
+      "Hausa",
+      "Global Recordings Network",
+      "378 files · 863.2 MB"
+     ],
+     "href": "https://dbs.org/audio/collections/grn/hau_GlobalRecordings_hausa",
+     "row": "Hausa Global Recordings Network378 files · 863.2 MB",
+     "title": "Hausa"
+    },
+    {
+     "cells": [
+      "Hausa",
+      "Story of Jesus",
+      "8 files · 123.3 MB"
+     ],
+     "href": "https://dbs.org/audio/collections/soj/hau_StoryJesus_hausa",
+     "row": "Hausa Story of Jesus8 files · 123.3 MB",
+     "title": "Hausa"
+    },
+    {
+     "cells": [
+      "Hausa",
+      "Story Runners",
+      "43 files · 134.3 MB"
+     ],
+     "href": "https://dbs.org/audio/collections/srun/hau_storyset_hausa",
+     "row": "Hausa Story Runners43 files · 134.3 MB",
+     "title": "Hausa"
+    }
+   ]
+  },
+  "Bibles": {
+   "count": 5,
+   "links": [
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/HAUDOR",
+     "row": "Hausa Door Version HAUDOR Litafi Mai-tsarki  Read  Study  Download Print on Demand Door43 World Missions Community · 2020 · Nigeria",
+     "title": "Hausa Door Version HAUDOR Litafi Mai-tsarki  Read  Study  Download Print on Demand Door43 World Missions Community · 2020 · Nigeria"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/HAUSRK",
+     "row": "Biblica® Open Hausa Contemporary Bible™ HAUSRK Sabon Rai Don Kowa  Read  Study  Download Biblica · 2020 · Nigeria",
+     "title": "Biblica® Open Hausa Contemporary Bible™ HAUSRK Sabon Rai Don Kowa  Read  Study  Download Biblica · 2020 · Nigeria"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/HAUBIB_DAVR_FB_N",
+     "row": "Biblica® Open Hausa Contemporary Bible™ HAUBIB Sabon Rai Don Kowa  Audio · Full Bible (Davar Partners) Nigeria",
+     "title": "Biblica® Open Hausa Contemporary Bible™ HAUBIB Sabon Rai Don Kowa  Audio · Full Bible (Davar Partners) Nigeria"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/HAUBSN_DAVR_FB_N",
+     "row": "The Bible in Hausa HAUBSN Littafi Mai Tsarki  Audio · Full Bible (Davar Partners) 1932 · Nigeria",
+     "title": "The Bible in Hausa HAUBSN Littafi Mai Tsarki  Audio · Full Bible (Davar Partners) 1932 · Nigeria"
+    },
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/audio/HAUPOR_DAVR_FB_N",
+     "row": "Hausa Gospels and Portions HAUPOR Labari Nagari  Audio · Full Bible (Davar Partners) 1857 · Nigeria",
+     "title": "Hausa Gospels and Portions HAUPOR Labari Nagari  Audio · Full Bible (Davar Partners) 1857 · Nigeria"
+    }
+   ]
+  },
+  "Films": {
+   "count": 13,
+   "links": [
+    {
+     "cells": [
+      "JESUS  حَوْسَ",
+      "Jesus Film Project",
+      "2:07:53"
+     ],
+     "href": "https://dbs.org/video/jesus/hau_hausa_jesus",
+     "row": "JESUS  حَوْسَJesus Film Project2:07:53",
+     "title": "JESUS"
+    },
+    {
+     "cells": [
+      "Magdalena  حَوْسَ",
+      "Jesus Film Project",
+      "58:24"
+     ],
+     "href": "https://dbs.org/video/magdalena/hau_hausa_magdalena",
+     "row": "Magdalena  حَوْسَJesus Film Project58:24",
+     "title": "Magdalena"
+    },
+    {
+     "cells": [
+      "Story of Jesus for Children  حَوْسَ",
+      "Jesus Film Project",
+      "1:08:08"
+     ],
+     "href": "https://dbs.org/video/storyjesus/hau_hausa_story_of_jesus_for_children",
+     "row": "Story of Jesus for Children  حَوْسَJesus Film Project1:08:08",
+     "title": "Story of Jesus for Children"
+    },
+    {
+     "cells": [
+      "The Savior  حَوْسَ",
+      "Jesus Film Project",
+      "2:11:53"
+     ],
+     "href": "https://dbs.org/video/savior/hau_hausa_the_savior",
+     "row": "The Savior  حَوْسَJesus Film Project2:11:53",
+     "title": "The Savior"
+    },
+    {
+     "cells": [
+      "The Prophets' Story - Hausa",
+      "Prophet's Story",
+      "0:07:03"
+     ],
+     "href": "https://dbs.org/video/ps/hau_ps_labarin_annabawa_hausa_of_niger_and_nigeria",
+     "row": "The Prophets' Story - Hausa Prophet's Story0:07:03",
+     "title": "The Prophets' Story - Hausa"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of John  هَرْشَن هَوْسَ",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-john/hau_hausa_john",
+     "row": "LUMO: The Gospel of John  هَرْشَن هَوْسَLUMO Project",
+     "title": "LUMO: The Gospel of John"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Luke  هَرْشَن هَوْسَ",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-luke/hau_hausa_luke",
+     "row": "LUMO: The Gospel of Luke  هَرْشَن هَوْسَLUMO Project",
+     "title": "LUMO: The Gospel of Luke"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Mark  هَرْشَن هَوْسَ",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-mark/hau_hausa_mark",
+     "row": "LUMO: The Gospel of Mark  هَرْشَن هَوْسَLUMO Project",
+     "title": "LUMO: The Gospel of Mark"
+    },
+    {
+     "cells": [
+      "LUMO: The Covenant  هَرْشَن هَوْسَ",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-covenant/hau_hausa_covenant",
+     "row": "LUMO: The Covenant  هَرْشَن هَوْسَLUMO Project",
+     "title": "LUMO: The Covenant"
+    },
+    {
+     "cells": [
+      "iBible: Salvation Story  هَرْشَن هَوْسَ",
+      "iBible: Salvation Story",
+      "9:17"
+     ],
+     "href": "https://dbs.org/video/ibible/hau-hausa-ibible_salvation",
+     "row": "iBible: Salvation Story  هَرْشَن هَوْسَiBible: Salvation Story9:17",
+     "title": "iBible: Salvation Story"
+    },
+    {
+     "cells": [
+      "The Visual Bible: Matthew  هَرْشَن هَوْسَ",
+      "Visual Bible Int.",
+      "4:12:04"
+     ],
+     "href": "https://dbs.org/video/matthew/hau-matthew-vb-hausa",
+     "row": "The Visual Bible: Matthew  هَرْشَن هَوْسَVisual Bible Int.4:12:04",
+     "title": "The Visual Bible: Matthew"
+    },
+    {
+     "cells": [
+      "The Visual Bible: Acts  هَرْشَن هَوْسَ",
+      "Visual Bible Int.",
+      "3:06:31"
+     ],
+     "href": "https://dbs.org/video/acts_vb/hau-acts-vb-hausa",
+     "row": "The Visual Bible: Acts  هَرْشَن هَوْسَVisual Bible Int.3:06:31",
+     "title": "The Visual Bible: Acts"
+    },
+    {
+     "cells": [
+      "Rescue Project Deaf Gospel  حَوْسَ",
+      "Jesus Film Project",
+      "28:17"
+     ],
+     "href": "https://dbs.org/video/deafproject/hau_hausa_rescue_project_deaf_gospel",
+     "row": "Rescue Project Deaf Gospel  حَوْسَJesus Film Project28:17",
+     "title": "Rescue Project Deaf Gospel"
+    }
+   ]
+  },
+  "Historic Bible (Scans)": {
+   "count": 6,
+   "links": [
+    {
+     "cells": [
+      "Hausa (1857) Acts (Schon) Ayyukan Manzanni (1857, Schon)",
+      "1857"
+     ],
+     "href": "https://dbs.org/bibles/historic/Hausa-1857-Acts-Schon",
+     "row": "Hausa (1857) Acts (Schon) Ayyukan Manzanni (1857, Schon)1857",
+     "title": "Hausa (1857) Acts (Schon)"
+    },
+    {
+     "cells": [
+      "Hausa (1877) John (Labari nagari) Yohanna (1877, Labari Nagari)",
+      "1877"
+     ],
+     "href": "https://dbs.org/bibles/historic/Hausa-1877-John-Labari-nagari-ko-linzila-na-yahaha",
+     "row": "Hausa (1877) John (Labari nagari) Yohanna (1877, Labari Nagari)1877",
+     "title": "Hausa (1877) John (Labari nagari)"
+    },
+    {
+     "cells": [
+      "Hausa (1879) Epsitles and Revelation Wasiku da Wahayin Yohanna (1879)",
+      "1879"
+     ],
+     "href": "https://dbs.org/bibles/historic/Hausa-1879-Epsitles-and-Revelation",
+     "row": "Hausa (1879) Epsitles and Revelation Wasiku da Wahayin Yohanna (1879)1879",
+     "title": "Hausa (1879) Epsitles and Revelation"
+    },
+    {
+     "cells": [
+      "Hausa (1914) Gospels and Acts  Linjila da Ayyukan Manzanni (1914)",
+      "1914"
+     ],
+     "href": "https://dbs.org/bibles/historic/Hausa-1914-Gospels-and-Acts",
+     "row": "Hausa (1914) Gospels and Acts  Linjila da Ayyukan Manzanni (1914)1914",
+     "title": "Hausa (1914) Gospels and Acts"
+    },
+    {
+     "cells": [
+      "Hausa (1932) Genesis Portion Farawa (1932, Sashe)",
+      "1932"
+     ],
+     "href": "https://dbs.org/bibles/historic/Hausa-1932-Genesis-Portion",
+     "row": "Hausa (1932) Genesis Portion Farawa (1932, Sashe)1932",
+     "title": "Hausa (1932) Genesis Portion"
+    },
+    {
+     "cells": [
+      "Hausa - New Testament (Book) Sabon Alkawari (Littafi)",
+      "2010"
+     ],
+     "href": "https://dbs.org/bibles/historic/Hausa-New-Testament-book",
+     "row": "Hausa - New Testament (Book) Sabon Alkawari (Littafi)2010",
+     "title": "Hausa - New Testament (Book)"
+    }
+   ]
+  },
+  "Links to Other Sites": {
+   "count": 80,
+   "links": [
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=HAUPOR",
+     "row": "Hausa Gospels and Portions 1857",
+     "title": "Hausa Gospels and Portions"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=HAUBSN",
+     "row": "The Bible in Hausa 1932",
+     "title": "The Bible in Hausa"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=HAUZZZP",
+     "row": "Hausa Common Language Ajami Bible",
+     "title": "Hausa Common Language Ajami Bible"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/PS/The-Prophets-Story_Hausa.mp4",
+     "row": "The Prophets' Story Create International",
+     "title": "The Prophets' Story"
+    },
+    {
+     "cells": [],
+     "href": "https://arc.gt/z12ca?apiSessionId=5f875666096355.72284008",
+     "row": "The Story of Jesus for Children The JESUS Film Project",
+     "title": "The Story of Jesus for Children"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/MTD/Dini_More-Than-Dreams_Hausa_sm.mp4",
+     "row": "More Than Dreams-Dini Create International",
+     "title": "More Than Dreams-Dini"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/Savior/Hausa_0-The-Savior-Trailer.mp4",
+     "row": "The Savior 0 - The Savior Trailer Create International",
+     "title": "The Savior 0 - The Savior Trailer"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/MTD/Khalil_More-Than-Dreams_Hausa_sm.mp4",
+     "row": "More Than Dreams-Khalil Create International",
+     "title": "More Than Dreams-Khalil"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/MTD/Khosrow_More-Than-Dreams_Hausa_sm.mp4",
+     "row": "More Than Dreams-Khosrow Create International",
+     "title": "More Than Dreams-Khosrow"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/Savior/Hausa_7-Golgotha_sm.mp4",
+     "row": "The Savior 7 - Golgotha Create International",
+     "title": "The Savior 7 - Golgotha"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/Savior/Hausa_6-The-Lords-Prayer.mp4",
+     "row": "The Savior 6 - The Lord's Prayer Create International",
+     "title": "The Savior 6 - The Lord's Prayer"
+    },
+    {
+     "cells": [],
+     "href": "https://arc.gt/yhcvv?apiSessionId=5f875668827886.01527432",
+     "row": "Magdalena - Director's Cut The JESUS Film Project",
+     "title": "Magdalena - Director's Cut"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/Savior/Hausa_5-The-Good-Samaritan_sm.mp4",
+     "row": "The Savior 5 - The Good Samaritan Create International",
+     "title": "The Savior 5 - The Good Samaritan"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/MTD/Mohammed_Hausa-Language-Film.mp4",
+     "row": "More Than Dreams-Mohammed (EngSub) Create International",
+     "title": "More Than Dreams-Mohammed (EngSub)"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/Savior/Hausa_3-Woman-at-the-Well_sm.mp4",
+     "row": "The Savior 3 - Woman at the Well Create International",
+     "title": "The Savior 3 - Woman at the Well"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/MTD/Ali_More-Than-Dreams_Hausa_sm.mp4",
+     "row": "More Than Dreams-Ali Create International",
+     "title": "More Than Dreams-Ali"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/Savior/Hausa_8-Jesus-is-Risen.mp4",
+     "row": "The Savior 8 - Jesus is Risen Create International",
+     "title": "The Savior 8 - Jesus is Risen"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/Savior/Hausa_1-Jesus-Birth_sm.mp4",
+     "row": "The Savior 1 - Jesus' Birth Create International",
+     "title": "The Savior 1 - Jesus' Birth"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/Savior/Hausa_2-Jesus-Baptism.mp4",
+     "row": "The Savior 2 - Jesus' Baptism Create International",
+     "title": "The Savior 2 - Jesus' Baptism"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/Savior/Hausa_4-Sowing-the-Word_sm.mp4",
+     "row": "The Savior 4 - Sowing of the Word Create International",
+     "title": "The Savior 4 - Sowing of the Word"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/37742",
+     "row": "Becoming a Friend of God globalrecordings.net",
+     "title": "Becoming a Friend of God"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/37743",
+     "row": "Good News globalrecordings.net",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/35171",
+     "row": "Good News globalrecordings.net",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/130",
+     "row": "Words of Life 1 globalrecordings.net",
+     "title": "Words of Life 1"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/131",
+     "row": "Words of Life 2 globalrecordings.net",
+     "title": "Words of Life 2"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/550",
+     "row": "Words of Life globalrecordings.net",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/600",
+     "row": "Words of Life w/ HAUSA: Kano song globalrecordings.net",
+     "title": "Words of Life w/ HAUSA: Kano song"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/2301",
+     "row": "Words of Life w/ HAUSA: Kano globalrecordings.net",
+     "title": "Words of Life w/ HAUSA: Kano"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/2330",
+     "row": "Words of Life w/ HAUSA: Kano globalrecordings.net",
+     "title": "Words of Life w/ HAUSA: Kano"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/2320",
+     "row": "Words of Life w/ HAUSA: Kano globalrecordings.net",
+     "title": "Words of Life w/ HAUSA: Kano"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/391",
+     "row": "Words of Life w/ HAUSA: Kano globalrecordings.net",
+     "title": "Words of Life w/ HAUSA: Kano"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/14600",
+     "row": "Words of Life w/ HAUSA: Kano globalrecordings.net",
+     "title": "Words of Life w/ HAUSA: Kano"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/5690",
+     "row": "Words of Life w HAUSA: Kano globalrecordings.net",
+     "title": "Words of Life w HAUSA: Kano"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/610",
+     "row": "Words of Life w/ HAUSA: Kano globalrecordings.net",
+     "title": "Words of Life w/ HAUSA: Kano"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/611",
+     "row": "Words of Life w/ HAUSA: Kano globalrecordings.net",
+     "title": "Words of Life w/ HAUSA: Kano"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/5701",
+     "row": "Words of Life w HAUSA: Kano globalrecordings.net",
+     "title": "Words of Life w HAUSA: Kano"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/531",
+     "row": "Words of Life w/ HAUSA: Kano globalrecordings.net",
+     "title": "Words of Life w/ HAUSA: Kano"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/401",
+     "row": "Words of Life w/ HAUSA: Kano globalrecordings.net",
+     "title": "Words of Life w/ HAUSA: Kano"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/370",
+     "row": "Words of Life w/ HAUSA: Kano globalrecordings.net",
+     "title": "Words of Life w/ HAUSA: Kano"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/121",
+     "row": "Words of Life globalrecordings.net",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/120",
+     "row": "Words of Life globalrecordings.net",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/10500",
+     "row": "Words of Life 1 globalrecordings.net",
+     "title": "Words of Life 1"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/10810",
+     "row": "Words of Life 2 globalrecordings.net",
+     "title": "Words of Life 2"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/74541",
+     "row": "Good News globalrecordings.net",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/74543",
+     "row": "Look, Listen & Live globalrecordings.net",
+     "title": "Look, Listen & Live"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/74546",
+     "row": "Look, Listen & Live 2 Mighty Men of GOD globalrecordings.net",
+     "title": "Look, Listen & Live 2 Mighty Men of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/74542",
+     "row": "Look, Listen & Live 3 Victory through GOD globalrecordings.net",
+     "title": "Look, Listen & Live 3 Victory through GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/80293",
+     "row": "Look, Listen & Live 4 Servants of GOD globalrecordings.net",
+     "title": "Look, Listen & Live 4 Servants of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/74540",
+     "row": "Look, Listen & Live 5 On Trial for GOD globalrecordings.net",
+     "title": "Look, Listen & Live 5 On Trial for GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/74544",
+     "row": "Look, Listen & Live 6 JESUS - Teacher & Healer globalrecordings.net",
+     "title": "Look, Listen & Live 6 JESUS - Teacher & Healer"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/74547",
+     "row": "Look, Listen & Live 7 JESUS - Lord & Saviour globalrecordings.net",
+     "title": "Look, Listen & Live 7 JESUS - Lord & Saviour"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/80294",
+     "row": "Look, Listen & Live 8 Acts of the HOLY SPIRIT globalrecordings.net",
+     "title": "Look, Listen & Live 8 Acts of the HOLY SPIRIT"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/37742",
+     "row": "Becoming a Friend of God globalrecordings.net",
+     "title": "Becoming a Friend of God"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/35171",
+     "row": "Good News globalrecordings.net",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/37743",
+     "row": "Good News globalrecordings.net",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/120",
+     "row": "Words of Life globalrecordings.net",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/121",
+     "row": "Words of Life globalrecordings.net",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/10500",
+     "row": "Words of Life 1 globalrecordings.net",
+     "title": "Words of Life 1"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/130",
+     "row": "Words of Life 1 globalrecordings.net",
+     "title": "Words of Life 1"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/10810",
+     "row": "Words of Life 2 globalrecordings.net",
+     "title": "Words of Life 2"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/131",
+     "row": "Words of Life 2 globalrecordings.net",
+     "title": "Words of Life 2"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/14821",
+     "row": "Words of Life w/ HAUSA globalrecordings.net",
+     "title": "Words of Life w/ HAUSA"
+    },
+    {
+     "cells": [],
+     "href": "https://my.pcloud.com/publink/show?code=kZTSP9kZ2FmblmQbC7pQe2O8VkrXobUsryey",
+     "row": "Hausa StoryRunners Stories my.pcloud.com",
+     "title": "Hausa StoryRunners Stories"
+    },
+    {
+     "cells": [],
+     "href": "https://rockintl.org/rock-audio/the-way-of-righteousness-hausa/",
+     "row": "The WAY of RIGHTEOUSNESS rockintl.org",
+     "title": "The WAY of RIGHTEOUSNESS"
+    },
+    {
+     "cells": [],
+     "href": "https://rockintl.org/rock-document/hanyar-adalci-the-way-of-righteousness-hausa/",
+     "row": "The WAY of RIGHTEOUSNESS rockintl.org",
+     "title": "The WAY of RIGHTEOUSNESS"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/PS/The-Prophets-Story_Hausa.mp4",
+     "row": "The Prophets' Story cdn.createinternational.com.s3.amazonaws.com",
+     "title": "The Prophets' Story"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/MTD/Ali_More-Than-Dreams_Hausa_sm.mp4",
+     "row": "More Than Dreams-Ali cdn.createinternational.com.s3.amazonaws.com",
+     "title": "More Than Dreams-Ali"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/MTD/Dini_More-Than-Dreams_Hausa_sm.mp4",
+     "row": "More Than Dreams-Dini cdn.createinternational.com.s3.amazonaws.com",
+     "title": "More Than Dreams-Dini"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/MTD/Khalil_More-Than-Dreams_Hausa_sm.mp4",
+     "row": "More Than Dreams-Khalil cdn.createinternational.com.s3.amazonaws.com",
+     "title": "More Than Dreams-Khalil"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/MTD/Khosrow_More-Than-Dreams_Hausa_sm.mp4",
+     "row": "More Than Dreams-Khosrow cdn.createinternational.com.s3.amazonaws.com",
+     "title": "More Than Dreams-Khosrow"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/MTD/Mohammed_Hausa-Language-Film.mp4",
+     "row": "More Than Dreams-Mohammed (EngSub) cdn.createinternational.com.s3.amazonaws.com",
+     "title": "More Than Dreams-Mohammed (EngSub)"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/Savior/Hausa_0-The-Savior-Trailer.mp4",
+     "row": "The Savior 0 - The Savior Trailer cdn.createinternational.com.s3.amazonaws.com",
+     "title": "The Savior 0 - The Savior Trailer"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/Savior/Hausa_1-Jesus-Birth_sm.mp4",
+     "row": "The Savior 1 - Jesus' Birth cdn.createinternational.com.s3.amazonaws.com",
+     "title": "The Savior 1 - Jesus' Birth"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/Savior/Hausa_2-Jesus-Baptism.mp4",
+     "row": "The Savior 2 - Jesus' Baptism cdn.createinternational.com.s3.amazonaws.com",
+     "title": "The Savior 2 - Jesus' Baptism"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/Savior/Hausa_3-Woman-at-the-Well_sm.mp4",
+     "row": "The Savior 3 - Woman at the Well cdn.createinternational.com.s3.amazonaws.com",
+     "title": "The Savior 3 - Woman at the Well"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/Savior/Hausa_4-Sowing-the-Word_sm.mp4",
+     "row": "The Savior 4 - Sowing of the Word cdn.createinternational.com.s3.amazonaws.com",
+     "title": "The Savior 4 - Sowing of the Word"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/Savior/Hausa_5-The-Good-Samaritan_sm.mp4",
+     "row": "The Savior 5 - The Good Samaritan cdn.createinternational.com.s3.amazonaws.com",
+     "title": "The Savior 5 - The Good Samaritan"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/Savior/Hausa_6-The-Lords-Prayer.mp4",
+     "row": "The Savior 6 - The Lord's Prayer cdn.createinternational.com.s3.amazonaws.com",
+     "title": "The Savior 6 - The Lord's Prayer"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/Savior/Hausa_7-Golgotha_sm.mp4",
+     "row": "The Savior 7 - Golgotha cdn.createinternational.com.s3.amazonaws.com",
+     "title": "The Savior 7 - Golgotha"
+    },
+    {
+     "cells": [],
+     "href": "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/Savior/Hausa_8-Jesus-is-Risen.mp4",
+     "row": "The Savior 8 - Jesus is Risen cdn.createinternational.com.s3.amazonaws.com",
+     "title": "The Savior 8 - Jesus is Risen"
+    }
+   ]
+  }
+ }
+}

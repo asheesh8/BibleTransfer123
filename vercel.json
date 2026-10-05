@@ -9,6 +9,9 @@
     "api/*.py": { "includeFiles": "packer/analytics.py" }
   },
   "rewrites": [
+    { "source": "/hausa", "destination": "/hausa/index.html" },
+    { "source": "/hau", "destination": "/hausa/index.html" },
+    { "source": "/ha", "destination": "/hausa/index.html" },
     { "source": "/lingala", "destination": "/lingala/index.html" },
     { "source": "/lin", "destination": "/lingala/index.html" },
     { "source": "/ln", "destination": "/lingala/index.html" },
