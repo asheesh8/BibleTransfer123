@@ -199,6 +199,10 @@ def _urls(r):
 def excluded(r):
     """The reason a resource is left out, or None if it stays."""
     title = (r.get("title") or "").strip()
+    if r.get("lang") == "mlg":
+        for url in _urls(r):
+            if url in MALAGASY_EXCLUDED:
+                return MALAGASY_EXCLUDED[url]
     if r.get("lang") == "hau":
         for url in _urls(r):
             if url in HAUSA_EXCLUDED:
@@ -328,6 +332,12 @@ HAUSA_EXTERNAL = set(_HAUSA_POLICY["urls"])
 HAUSA_EXCLUDED = _HAUSA_POLICY["excluded"]
 
 
+# Exact Malagasy publisher pages verified from the complete DBS inventory.
+_MALAGASY_POLICY = json.loads((pathlib.Path(__file__).resolve().parents[2] /
+    "catalog/source/dbs-malagasy-external-2026-10-04.json").read_text())
+MALAGASY_EXTERNAL = set(_MALAGASY_POLICY["urls"])
+MALAGASY_EXCLUDED = _MALAGASY_POLICY["excluded"]
+
 def _dbs(url):
     """On DBS's servers, and still up there."""
     host = urllib.parse.urlparse(url or "").netloc.lower()
@@ -347,6 +357,7 @@ def _dbs_only(r):
                 or (r.get("lang") == "orm" and url in OROMO_EXTERNAL)
                 or (r.get("lang") == "pcm" and url in PIDGIN_EXTERNAL)
                 or (r.get("lang") == "hau" and url in HAUSA_EXTERNAL)
+                or (r.get("lang") == "mlg" and url in MALAGASY_EXTERNAL)
                 or (r.get("lang") == "lin" and url in LINGALA_EXTERNAL)
                 or (r.get("lang") == "yor" and url in YORUBA_EXTERNAL)
                 or (r.get("lang") == "por" and url in PORTUGUESE_EXTERNAL)
@@ -357,6 +368,7 @@ def _dbs_only(r):
         return (_dbs(url) or (r.get("lang") == "orm" and url in OROMO_EXTERNAL)
                 or (r.get("lang") == "pcm" and url in PIDGIN_EXTERNAL)
                 or (r.get("lang") == "hau" and url in HAUSA_EXTERNAL)
+                or (r.get("lang") == "mlg" and url in MALAGASY_EXTERNAL)
                 or (r.get("lang") == "lin" and url in LINGALA_EXTERNAL)
                 or (r.get("lang") == "yor" and url in YORUBA_EXTERNAL)
                 or (r.get("lang") == "por" and url in PORTUGUESE_EXTERNAL)
@@ -393,7 +405,7 @@ def _dbs_only(r):
 def curate(resources):
     kept, dropped = [], []
     for r in resources:
-        if r.get("lang") in ("fra", "amh", "por", "yor", "pcm", "lin", "hau") and excluded(r):
+        if r.get("lang") in ("fra", "amh", "por", "yor", "pcm", "lin", "hau", "mlg") and excluded(r):
             dropped.append((r, excluded(r)))
             continue
         d = _dbs_only(r)

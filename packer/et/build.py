@@ -163,7 +163,7 @@ def card_catalog(catalog, chosen, profile, all_index, sizes=None):
             if kind == "file":
                 for q in ("sd", "hd"):
                     if src.get(q):
-                        label = next((d['label'] for d in r.get('downloads', []) if d['url'] == src[q]), f"Video — {q.upper()}") if r.get('lang') in ('ibo', 'fra', 'amh', 'por', 'yor', 'pcm', 'lin', 'hau') else f"Video — {q.upper()}"
+                        label = next((d['label'] for d in r.get('downloads', []) if d['url'] == src[q]), f"Video — {q.upper()}") if r.get('lang') in ('ibo', 'fra', 'amh', 'por', 'yor', 'pcm', 'lin', 'hau', 'mlg') else f"Video — {q.upper()}"
                         files.append({"label": label, "file": secure(src[q]),
                                       "bytes": sizes.get(src[q], 0), "remote": True})
             if kind == "audio-collection" and src.get("sample"):

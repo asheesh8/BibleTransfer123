@@ -9,6 +9,9 @@
     "api/*.py": { "includeFiles": "packer/analytics.py" }
   },
   "rewrites": [
+    { "source": "/malagasy", "destination": "/malagasy/index.html" },
+    { "source": "/mlg", "destination": "/malagasy/index.html" },
+    { "source": "/mg", "destination": "/malagasy/index.html" },
     { "source": "/hausa", "destination": "/hausa/index.html" },
     { "source": "/hau", "destination": "/hausa/index.html" },
     { "source": "/ha", "destination": "/hausa/index.html" },

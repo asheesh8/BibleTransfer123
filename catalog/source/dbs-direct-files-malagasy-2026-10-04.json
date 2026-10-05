@@ -1,0 +1,15 @@
+{
+ "verified": "2026-10-04",
+ "alive_files": [
+  "https://bibles.dbs.org/MLGDPV/epub/MLGDPV.epub",
+  "https://bibles.dbs.org/MLGDPV/html_MLGDPV.zip",
+  "https://bibles.dbs.org/MLGDPV/pdf/MLGDPV.pdf",
+  "https://scripture.dbs.org/books/Malagasy-Genesis-print.pdf",
+  "https://scripture.dbs.org/books/Malagasy-John-print.pdf",
+  "https://scripture.dbs.org/pdfs/Malagasy-1830-New-Testament.pdf",
+  "https://scripture.dbs.org/pdfs/Malagasy-1865-Bible.pdf"
+ ],
+ "playable_audio_filesets": [
+  "MLGDPV_FCBH_NT_N"
+ ]
+}

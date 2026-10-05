@@ -1,0 +1,393 @@
+{
+ "mlg": {
+  "Audio Collections": {
+   "count": 2,
+   "links": [
+    {
+     "cells": [
+      "Malagasy",
+      "Global Recordings Network",
+      "1440 files · 3.5 GB"
+     ],
+     "href": "https://dbs.org/audio/collections/grn/mlg_GlobalRecordings_malagasy",
+     "row": "Malagasy\tGlobal Recordings Network\t1440 files · 3.5 GB",
+     "title": "Malagasy"
+    },
+    {
+     "cells": [
+      "Malagasy",
+      "Story of Jesus",
+      "8 files · 123.3 MB"
+     ],
+     "href": "https://dbs.org/audio/collections/soj/mlg_StoryJesus_malagasy",
+     "row": "Malagasy\tStory of Jesus\t8 files · 123.3 MB",
+     "title": "Malagasy"
+    }
+   ]
+  },
+  "Bibles": {
+   "count": 1,
+   "links": [
+    {
+     "cells": [],
+     "href": "https://dbs.org/bibles/MLGDPV",
+     "row": "Malagasy Protestant Version\nMLGDPV\nRead\nStudy\nDownload\nAudio · New Testament (FCBH)\nPrint on Demand\n1965 · Madagascar",
+     "title": "Malagasy Protestant Version"
+    }
+   ]
+  },
+  "Films": {
+   "count": 8,
+   "links": [
+    {
+     "cells": [
+      "LUMO: The Gospel of John\nمَلَغَسِ",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-john/mlg_malagasy_john",
+     "row": "LUMO: The Gospel of John\nمَلَغَسِ\n\tLUMO Project",
+     "title": "LUMO: The Gospel of John"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Luke\nمَلَغَسِ",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-luke/mlg_malagasy_luke",
+     "row": "LUMO: The Gospel of Luke\nمَلَغَسِ\n\tLUMO Project",
+     "title": "LUMO: The Gospel of Luke"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Mark\nمَلَغَسِ",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-mark/mlg_malagasy_mark",
+     "row": "LUMO: The Gospel of Mark\nمَلَغَسِ\n\tLUMO Project",
+     "title": "LUMO: The Gospel of Mark"
+    },
+    {
+     "cells": [
+      "LUMO: The Gospel of Matthew\nمَلَغَسِ",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-matthew/mlg_malagasy_matthew",
+     "row": "LUMO: The Gospel of Matthew\nمَلَغَسِ\n\tLUMO Project",
+     "title": "LUMO: The Gospel of Matthew"
+    },
+    {
+     "cells": [
+      "LUMO: The Covenant\nمَلَغَسِ",
+      "LUMO Project",
+      ""
+     ],
+     "href": "https://dbs.org/video/lumo-covenant/mlg_malagasy_covenant",
+     "row": "LUMO: The Covenant\nمَلَغَسِ\n\tLUMO Project",
+     "title": "LUMO: The Covenant"
+    },
+    {
+     "cells": [
+      "iBible: Salvation Story\nمَلَغَسِ",
+      "iBible: Salvation Story",
+      "9:17"
+     ],
+     "href": "https://dbs.org/video/ibible/mlg-malagasy-ibible_salvation",
+     "row": "iBible: Salvation Story\nمَلَغَسِ\n\tiBible: Salvation Story\t9:17",
+     "title": "iBible: Salvation Story"
+    },
+    {
+     "cells": [
+      "The Visual Bible: Matthew\nمَلَغَسِ",
+      "Visual Bible Int.",
+      "4:11:01"
+     ],
+     "href": "https://dbs.org/video/matthew/mlg-matthew-vb-malagasy",
+     "row": "The Visual Bible: Matthew\nمَلَغَسِ\n\tVisual Bible Int.\t4:11:01",
+     "title": "The Visual Bible: Matthew"
+    },
+    {
+     "cells": [
+      "The Visual Bible: Acts\nمَلَغَسِ",
+      "Visual Bible Int.",
+      "3:05:44"
+     ],
+     "href": "https://dbs.org/video/acts_vb/mlg-acts-vb-malagasy",
+     "row": "The Visual Bible: Acts\nمَلَغَسِ\n\tVisual Bible Int.\t3:05:44",
+     "title": "The Visual Bible: Acts"
+    }
+   ]
+  },
+  "Historic Bible (Scans)": {
+   "count": 4,
+   "links": [
+    {
+     "cells": [
+      "Malagasy (1830) New Testament\nMalagasy Testamenta Vaovao 1830",
+      "1830"
+     ],
+     "href": "https://dbs.org/bibles/historic/Malagasy-1830-New-Testament",
+     "row": "Malagasy (1830) New Testament\nMalagasy Testamenta Vaovao 1830\n\t1830",
+     "title": "Malagasy (1830) New Testament"
+    },
+    {
+     "cells": [
+      "Malagasy (1865) Bible\nMalagasy Baiboly 1865",
+      "1865"
+     ],
+     "href": "https://dbs.org/bibles/historic/Malagasy-1865-Bible",
+     "row": "Malagasy (1865) Bible\nMalagasy Baiboly 1865\n\t1865",
+     "title": "Malagasy (1865) Bible"
+    },
+    {
+     "cells": [
+      "Malagasy - Genesis (Print)\nMalagasy Genesisy",
+      "1999"
+     ],
+     "href": "https://dbs.org/bibles/historic/Malagasy-Genesis-print",
+     "row": "Malagasy - Genesis (Print)\nMalagasy Genesisy\n\t1999",
+     "title": "Malagasy - Genesis (Print)"
+    },
+    {
+     "cells": [
+      "Malagasy - John (Print)\nMalagasy Jaona",
+      "1965"
+     ],
+     "href": "https://dbs.org/bibles/historic/Malagasy-John-print",
+     "row": "Malagasy - John (Print)\nMalagasy Jaona\n\t1965",
+     "title": "Malagasy - John (Print)"
+    }
+   ]
+  },
+  "Links to Other Sites": {
+   "count": 37,
+   "links": [
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=MLGMNT",
+     "row": "Malagasy Old Bible 1830",
+     "title": "Malagasy Old Bible"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=MLGRCV",
+     "row": "Malagasy Roman Catholic Version 2003",
+     "title": "Malagasy Roman Catholic Version"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=MLGOLD",
+     "row": "Malagasy Bible 1865",
+     "title": "Malagasy Bible"
+    },
+    {
+     "cells": [],
+     "href": "https://find.bible/?abbr=MLGEIV",
+     "row": "Malagasy Interconfessional Version 2003",
+     "title": "Malagasy Interconfessional Version"
+    },
+    {
+     "cells": [],
+     "href": "https://youtu.be/CAMj7DdzJPk",
+     "row": "Lumo: John LUMO Project",
+     "title": "Lumo: John"
+    },
+    {
+     "cells": [],
+     "href": "https://youtu.be/OXBAEOUizC4",
+     "row": "Lumo: Matthew LUMO Project",
+     "title": "Lumo: Matthew"
+    },
+    {
+     "cells": [],
+     "href": "https://youtu.be/XhUuv88MDzs",
+     "row": "Lumo: Mark LUMO Project",
+     "title": "Lumo: Mark"
+    },
+    {
+     "cells": [],
+     "href": "https://youtu.be/b5rZKvuUWho",
+     "row": "Lumo: Luke LUMO Project",
+     "title": "Lumo: Luke"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82270",
+     "row": "Good News\nglobalrecordings.net",
+     "title": "Good News"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82256",
+     "row": "Look, Listen & Live\nglobalrecordings.net",
+     "title": "Look, Listen & Live"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82257",
+     "row": "Look, Listen & Live 2 Mighty Men of GOD\nglobalrecordings.net",
+     "title": "Look, Listen & Live 2 Mighty Men of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82258",
+     "row": "Look, Listen & Live 3 Victory through GOD\nglobalrecordings.net",
+     "title": "Look, Listen & Live 3 Victory through GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82259",
+     "row": "Look, Listen & Live 4 Servants of GOD\nglobalrecordings.net",
+     "title": "Look, Listen & Live 4 Servants of GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82260",
+     "row": "Look, Listen & Live 5 On Trial for GOD\nglobalrecordings.net",
+     "title": "Look, Listen & Live 5 On Trial for GOD"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82261",
+     "row": "Look, Listen & Live 6 JESUS - Teacher & Healer\nglobalrecordings.net",
+     "title": "Look, Listen & Live 6 JESUS - Teacher & Healer"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82262",
+     "row": "Look, Listen & Live 7 JESUS - Lord & Saviour\nglobalrecordings.net",
+     "title": "Look, Listen & Live 7 JESUS - Lord & Saviour"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82263",
+     "row": "Look, Listen & Live 8 Acts of the HOLY SPIRIT\nglobalrecordings.net",
+     "title": "Look, Listen & Live 8 Acts of the HOLY SPIRIT"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/66469",
+     "row": "Talily Soa [Good News]\nglobalrecordings.net",
+     "title": "Talily Soa [Good News]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/66289",
+     "row": "Vaovao Tsara [Good News]\nglobalrecordings.net",
+     "title": "Vaovao Tsara [Good News]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/66470",
+     "row": "Vazoho, Tsendreño, Iaiño 1: Maharese Ty Miarake Aman'Añahare [Look, Listen & Live 1 Beginning with GOD]\nglobalrecordings.net",
+     "title": "Vazoho, Tsendreño, Iaiño 1: Maharese Ty Miarake Aman'Añahare [Look, Listen & Live 1 Beginning with GOD]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/66471",
+     "row": "Vazoho, Tsendreño, Iaiño 2: Lahilahin'Añahare Maozatse Reo [Look, Listen & Live 2 Mighty Men of GOD]\nglobalrecordings.net",
+     "title": "Vazoho, Tsendreño, Iaiño 2: Lahilahin'Añahare Maozatse Reo [Look, Listen & Live 2 Mighty Men of GOD]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/66472",
+     "row": "Vazoho, Tsendreño, Iaiño 3: Fandreseañe Amy Ty Alalan'Añahare [Look, Listen & Live 3 Victory through GOD]\nglobalrecordings.net",
+     "title": "Vazoho, Tsendreño, Iaiño 3: Fandreseañe Amy Ty Alalan'Añahare [Look, Listen & Live 3 Victory through GOD]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/66473",
+     "row": "Vazoho, Tsendreño, Iaiño 4: O'Mpisoroñ'Añahareo [Look, Listen & Live 4 Servants of GOD]\nglobalrecordings.net",
+     "title": "Vazoho, Tsendreño, Iaiño 4: O'Mpisoroñ'Añahareo [Look, Listen & Live 4 Servants of GOD]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/66474",
+     "row": "Vazoho, Tsendreño, Iaiño 5: Fitsapan'Añahare [Look, Listen & Live 5 On Trial for GOD]\nglobalrecordings.net",
+     "title": "Vazoho, Tsendreño, Iaiño 5: Fitsapan'Añahare [Look, Listen & Live 5 On Trial for GOD]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/66475",
+     "row": "Vazoho, Tsendreño, Iaiño 6: Jesosy-Mpañanatse Naho Pañasitrae [Look, Listen & Live 6 JESUS - Teacher & Healer]\nglobalrecordings.net",
+     "title": "Vazoho, Tsendreño, Iaiño 6: Jesosy-Mpañanatse Naho Pañasitrae [Look, Listen & Live 6 JESUS - Teacher & Healer]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/66476",
+     "row": "Vazoho, Tsendreño, Iaiño 7: Jesosy Tompo Ro Mbandrombake [Look, Listen & Live 7 JESUS - Lord & Saviour]\nglobalrecordings.net",
+     "title": "Vazoho, Tsendreño, Iaiño 7: Jesosy Tompo Ro Mbandrombake [Look, Listen & Live 7 JESUS - Lord & Saviour]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/66477",
+     "row": "Vazoho, Tsendreño, Iaiño 8: Asa Ty Fañahy Masiñy [Look, Listen & Live 8 Acts of the HOLY SPIRIT]\nglobalrecordings.net",
+     "title": "Vazoho, Tsendreño, Iaiño 8: Asa Ty Fañahy Masiñy [Look, Listen & Live 8 Acts of the HOLY SPIRIT]"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/12160",
+     "row": "Words of Life\nglobalrecordings.net",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/12150",
+     "row": "Words of Life\nglobalrecordings.net",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/12161",
+     "row": "Words of Life\nglobalrecordings.net",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/12151",
+     "row": "Words of Life\nglobalrecordings.net",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/12110",
+     "row": "Words of Life\nglobalrecordings.net",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/12011",
+     "row": "Words of Life\nglobalrecordings.net",
+     "title": "Words of Life"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/10870",
+     "row": "Words of Life 1\nglobalrecordings.net",
+     "title": "Words of Life 1"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/10871",
+     "row": "Words of Life 2\nglobalrecordings.net",
+     "title": "Words of Life 2"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82772",
+     "row": "Words of Life 3\nglobalrecordings.net",
+     "title": "Words of Life 3"
+    },
+    {
+     "cells": [],
+     "href": "https://globalrecordings.net/en/program/82773",
+     "row": "Words of Life 4\nglobalrecordings.net",
+     "title": "Words of Life 4"
+    }
+   ]
+  }
+ }
+}

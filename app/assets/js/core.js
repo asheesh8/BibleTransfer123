@@ -456,7 +456,7 @@ window.ET = (function () {
      English title and heard Sindhi. Choosing a language picks both: English
      shows English films, اردو shows Urdu, سنڌي shows Sindhi. The library can
      still browse the others on purpose. */
-  var CONTENT = { ha: 'hau', ln: 'lin', pcm: 'pcm', yo: 'yor', pt: 'por', am: 'amh', fr: 'fra', en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', zul: 'zul', mas: 'mas', kik: 'kik', hi: 'hin', mr: 'mar', lg: 'lug', luo: 'luo', om: 'orm', ig: 'ibo', pa: 'pan', pnb: 'pnb', ne: 'npi' };
+  var CONTENT = { mg: 'mlg', ha: 'hau', ln: 'lin', pcm: 'pcm', yo: 'yor', pt: 'por', am: 'amh', fr: 'fra', en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', zul: 'zul', mas: 'mas', kik: 'kik', hi: 'hin', mr: 'mar', lg: 'lug', luo: 'luo', om: 'orm', ig: 'ibo', pa: 'pan', pnb: 'pnb', ne: 'npi' };
   function contentCode(ui) { return CONTENT[ui] || 'eng'; }
   function contentLang() {
     var scope = libraryScope();
@@ -485,6 +485,35 @@ window.ET = (function () {
       [65,'Jude',1],[66,'Revelation',22]]
   };
   var LOCAL_BOOKS = {
+    mg: {
+  "Matthew": "Matio",
+  "Mark": "Marka",
+  "Luke": "Lioka",
+  "John": "Jaona",
+  "Acts": "Asan’ny Apostoly",
+  "Romans": "Romana",
+  "1Corinthians": "1 Korintiana",
+  "2Corinthians": "2 Korintiana",
+  "Galatians": "Galatiana",
+  "Ephesians": "Efesiana",
+  "Philippians": "Filipiana",
+  "Colossians": "Kolosiana",
+  "1Thessalonians": "1 Tesaloniana",
+  "2Thessalonians": "2 Tesaloniana",
+  "1Timothy": "1 Timoty",
+  "2Timothy": "2 Timoty",
+  "Titus": "Titosy",
+  "Philemon": "Filemona",
+  "Hebrews": "Hebreo",
+  "James": "Jakoba",
+  "1Peter": "1 Petera",
+  "2Peter": "2 Petera",
+  "1John": "1 Jaona",
+  "2John": "2 Jaona",
+  "3John": "3 Jaona",
+  "Jude": "Joda",
+  "Revelation": "Apokalipsy"
+},
     ha: {
   "Genesis": "Farawa",
   "Exodus": "Fitowa",

@@ -727,3 +727,16 @@ Rebuild with `python3 packer/build_hausa.py`, then `npm run dbs:import`.
 publisher captures, CRC evidence and file results are in
 `catalog/source/dbs-*-hausa-2026-10-04.json`; publisher exceptions apply to exact
 URLs and to Hausa only.
+
+
+### Malagasy — 2026-10-04
+
+Added `/malagasy`, `/mlg`, and `/mg`, with Malagasy interface code `mg` and content code `mlg`. The complete rendered DBS Malagasy page contains 52 source links across all five sections. All are represented or explained: GRN programme 12011 reports an unknown programme and is excluded. Current directory links replace the four legacy find.bible query links; duplicate historical editions and LUMO YouTube excerpts attach to their existing entries.
+
+The 85 entries contain a full Protestant Bible in PDF, EPUB and HTML ZIP; the 27-book, 260-chapter New Testament audio; eight films with 157 authored film chapters plus full films; four historical PDFs; 68 regional GRN programmes with all 1,440 DBS tracks; Story of Jesus as a complete recording and eight parts; and two additional Bible edition directory entries. The twelve regional audio groups retain their labels, including Tandroy/Ntandroy, Betsimisaraka Avaratra, Antakarana, Antemoro, Atesaka, Bara, Betsileo, Masikoro, Merina, Tanosy, Tsimihety, and Vezo. They are not presented as interchangeable standard Malagasy.
+
+The audit records 2,490 file probes. All 2,317 responses with file signatures were valid; DBS blocked the HTTP client for 173 video/archive requests. Browser downloads verified a complete sample from each of the eight films, with MP4 duration and both video and audio streams confirmed; a LUMO film, an audio Bible chapter, and a Merina recording were also played in the app. These are sample checks, not a claim that every film or recording was watched. Unverified large film ZIPs remain accessible on the original DBS pages. EPUB and HTML ZIP CRCs passed and both contain 66 books. The inScript reader showed a passage-heading/content mismatch and is omitted as a direct reader. Every existing non-Malagasy catalogue entry is unchanged.
+
+All 411 interface, saving, sharing, help and transfer-guide keys have draft Malagasy wording, with formatter variables preserved. File troubleshooting says “Raha tsy misokatra ilay rakitra” (if the file does not open). OS menu names remain recognizable, while authored regional programme names are retained. Native-speaker review remains required before marking the translation verified. The separate screenshot saving guide remains in English and is disclosed in the language picker and page.
+
+Rebuild with `python3 packer/build_malagasy.py`, then `npm run dbs:import`. `packer/audit_malagasy_files.py` refreshes file checks. Source inventories, publisher captures and file evidence are in `catalog/source/dbs-*-malagasy-2026-10-04.json`.
