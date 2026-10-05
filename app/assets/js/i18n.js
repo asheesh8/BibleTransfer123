@@ -10071,7 +10071,7 @@
   "sharelib.only": "Amin’ny teny {lang} ihany",
   "sharelib.title": "Trano famakiam-boky ara-baiboly amin’ny teny {lang}",
   "sharelib.lead": "Amin’ny teny {lang} ny votoaty ato amin’ity trano famakiam-boky ity.",
-  "sharelib.email": "Alefaso amin’ny mailaka ity trano famakiam-boky ity",
+  "sharelib.email": "Alefaso amin’ny mailaka",
   "sharelib.copy": "Adikao ny rohy",
   "sharelib.copied": "Voadika ny rohy",
   "sharelib.subject": "Trano famakiam-boky ara-baiboly amin’ny teny {lang}",
