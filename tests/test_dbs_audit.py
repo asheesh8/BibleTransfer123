@@ -1,4 +1,4 @@
-"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi and Akan: complete, verified and DBS-hosted."""
+"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan and Tigrinya: complete, verified and DBS-hosted."""
 import json
 import pathlib
 import re
@@ -11,7 +11,8 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATE = '2026-10-06'
 SHELVES = {'xho': ('xhosa', 'xh', 13), 'nya': ('chichewa', 'ny', 34),
            'kin': ('kinyarwanda', 'rw', 26), 'sna': ('shona', 'sn', 32),
-           'run': ('kirundi', 'rn', 27), 'aka': ('akan', 'ak', 47)}
+           'run': ('kirundi', 'rn', 27), 'aka': ('akan', 'ak', 47),
+           'tir': ('tigrinya', 'ti', 26)}
 
 
 def urls(r):
@@ -113,6 +114,9 @@ class DbsAuditTest(unittest.TestCase):
         aka = [r['id'] for r in self.shelf('aka') if r['type'] in ('scripture', 'audio-bible')]
         self.assertEqual(aka[:5], ['aka-ab-twibsg-00360-davr-fb-n', 'aka-ab-akabsg-fcbh-fb-n', 'aka-ab-akaubs-fcbh-nt-n',
                                    'aka-ab-twintp-davr-fb-n', 'aka-ab-fatbsg-davr-ot-n'])
+        tir = [r for r in self.shelf('tir') if r['type'] in ('scripture', 'audio-bible')]
+        self.assertEqual([r['id'] for r in tir], ['tir-text-tirtbi'])
+        self.assertEqual(tir[0]['org'], 'Bible Society of Ethiopia')
         for code in SHELVES:
             for r in self.shelf(code):
                 self.assertIsNone(excluded(r), r['id'])
@@ -134,6 +138,19 @@ class DbsAuditTest(unittest.TestCase):
         self.assertEqual(len(grn), 14)
         self.assertEqual(len({u for r in grn for u in urls(r)}), sum(len(r['play']['items']) for r in grn))
         self.assertIn('https://dbs.org/audio/collections/grn/fat_GlobalRecordings_fante', self.built['aka']['notCarried'])
+
+    def test_tigrinya_names_each_country_and_lists_missing_stories(self):
+        tir = self.shelf('tir')
+        self.assertEqual(self.built['tir']['languages']['tir']['script'], 'ethi')
+        jesus = {r['scope']: r for r in tir if '/video/jesus/' in r['source']}
+        self.assertEqual(set(jesus), {'Eritrea', 'Ethiopia'})
+        self.assertEqual(jesus['Eritrea']['native'], 'ኢየሱስ (ኤርትራ)')
+        self.assertEqual(len(jesus['Ethiopia']['play']['items']), 61)
+        for r in tir:
+            self.assertNotRegex(r['native'], r'[A-Za-z]{4,}(?<!LUMO)', r['id'])
+        story = next(r for r in tir if r['id'] == 'tir-storyset')
+        self.assertEqual(len(story['play']['items']), 24)
+        self.assertIn('18 StoryRunners stories', self.built['tir']['notCarried']['https://dbs.org/audio/collections/srun/tir_storyset_tigrigna'])
 
     def test_pages_routes_worker_and_interface(self):
         sw = (ROOT / 'app/sw.js').read_text()

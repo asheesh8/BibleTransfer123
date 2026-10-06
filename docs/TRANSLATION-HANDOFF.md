@@ -236,6 +236,13 @@ Actions use plain Twi verbs: Hwɛ (watch), Kenkan (read), Tie (listen), Bue (ope
 Everyday Ghanaian loanwords are kept where speakers use them: fon, fael, folda, kaad / microSD kaad, kɔmputa, intanɛt, browser, link, app, Kɔpi (copy), ahoma (cable), afidie / mfidie (device / devices), kratafa (page), nɔma (the pairing code).
 On-screen names stay as the phone shows them (Files, My Files, Downloads, Settings, Control Centre, Copy, Paste, Trust, On My iPhone / On My iPad), as do brands (AirDrop, Quick Share, LocalSend, VillageServer, START-HERE.html).
 
+### Tigrinya (`ti`)
+
+One Tigrinya interface for Eritrea and Ethiopia, in Ge'ez script with the spelling of the Tigrinya Bible (ኣ not አ for the a-vowel, ቐ/ኸ, መጽሓፍ ቅዱስ, ሓድሽ ኪዳን, ኢየሱስ, እግዚኣብሔር). Readers are addressed with the polite plural (ክፈቱ, ምረጹ, ጠውቑ) as Tigrinya apps and signs do.
+Church and library words: መጽሓፍ ቅዱስ (Bible), ምዕራፍ / ምዕራፋት (chapter / chapters), ቤተ መጻሕፍቲ (library), ፊልምታት (films), ናይ ድምጺ ቅዳሕ / ቅዳሓት (recording / recordings), ትሕዝቶ (item).
+Actions: ርኣዩ (watch), ኣንብቡ (read), ስምዑ (listen), ክፈቱ / ዕጸዉ (open / close), ዓቅቡ (save), ኣውርዱ (download), ቕድሑ (copy), ስደዱ (send), ተቐበሉ (receive), ኣካፍሉ (share), ድለዩ (search), ሰርዙ (cancel), ተመለሱ (back); waiting uses ንጽበ ኣለና, progress uses ይ... ኣሎ (ይዕቀብ ኣሎ).
+Everyday loanwords Eritrean and Ethiopian speakers use are kept: ስልኪ, ፋይል / ፋይላት, ፎልደር, ካርድ, ኮምፒተር, ኢንተርነት, ብራውዘር, ኣፕ, ኢመይል, መላግቦ (link), ገመድ (cable), ስክሪን. On-screen names stay as the phone shows them (Files, Downloads, Settings, Share, Copy, Trust, On My iPhone).
+
 ## Source files
 
 Interface translations live in `app/assets/js/i18n.js`. Longer English help and
@@ -887,3 +894,19 @@ RUNBSB was checked by hand because DBS's About paragraph credits the Watch Tower
 Not carried: links to other sites; four audio Bible pages DBS marks as moved (RUNBSB2018, TWIBIB02272, TWIBSG00360, TWIBIB00360); the Kirundi GRN "Kaze muri Leta zunze Ubumwe za Amerika" (a US resettlement welcome that GRN has withdrawn); and DBS's Fante GRN collection, which holds the same Twi programme files as its Twi collection, so they are carried once. All three Akan JESUS pages list the Fante chapter files; those chapters stay with Fante and the Asante Twi and Twi pages keep their own full film. Each shelf's `notCarried` map records every listed link left out and why.
 
 Rebuild with `python3 packer/build_dbs_audit.py`, then `python3 packer/easytransfer.py preview`. The audits are `catalog/source/dbs-audit-{kirundi,akan}-2026-10-06.json`.
+
+### Tigrinya — 2026-10-06
+
+Added one shelf for Eritrea and Ethiopia with its own interface and page: `/tigrinya` (`ti`, content `tir`, also `/tigrigna`, `/tir`). The interface covers all 411 keys, 66 Bible book names (New Testament names from the DBS Tigrinya Bible) and the privacy notice, in Ge'ez script. The screenshot saving guide remains in English and is disclosed in the language picker.
+
+The same browser audit as the shelves above: DBS's Tigrinya page and every page it lists rendered in headless Chromium, and every carried file checked by a ranged request and its leading bytes. DBS lists no Tigrinya audio Bible.
+
+| Shelf | Resources | What is carried |
+|---|---|---|
+| Tigrinya | 26 | Bible Society of Ethiopia New Testament (1991; PDF, EPUB, HTML); 9 films: JESUS in the Eritrean and Ethiopian dubs (Ethiopian with 61 chapters), The Savior (Eritrea), Magdalena, Story of Jesus for Children, LUMO Mark, Visual Bible Matthew and Acts and The Gospel of John; 12 GRN programmes (Look, Listen & Live 1–8, Words of Life 1–3, The Day Is Coming), Story of Jesus and 24 StoryRunners stories; the 1998 Genesis portion and the Tigrinya New Testament scan |
+
+Each film from one country names it (ኤርትራ / ኢትዮጵያ). TIRTBI was opened to confirm it is the New Testament (27 books; John 1:1 "እቲ ቓልውን እግዚኣብሔር ነበረ"). No inclusive-language or LGBTQ-affirming edition appears on the page.
+
+Not carried: links to other sites (GRN programme pages and ROCK), whose DBS-hosted media is carried; 18 of the 42 StoryRunners stories, which DBS links under file names its server returns 404 for. StoryRunners' own file names were UTF-8 read as code page 437; the titles are decoded, and a few in Amharic or cut short are given in Tigrinya.
+
+Rebuild with `python3 packer/build_dbs_audit.py tir`, then `npm run dbs:import`. The audit is `catalog/source/dbs-audit-tigrinya-2026-10-06.json`.

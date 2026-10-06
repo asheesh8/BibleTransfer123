@@ -301,6 +301,17 @@
       disabled: "Nhwehwɛmu nyɛ adwuma seesei.",
       signal: "Wo browser de kokoamsɛm ho apɛdeɛ bi kɔ. Enti nhwehwɛmu renyɛ adwuma."
     },
+    ti: {
+      title: "ኩኪታት (cookies)ን ውልቃውነትኩምን",
+      body: "እንተፍቒድኩም፡ ንበጻሕቲ፣ ዝተጠቐምሉ ትሕዝቶ፣ ዝተኻፈሉሉ መገድታትን ብዝተኻፈለ መላግቦ ዝመጹ በጻሕትን ንምቑጻር መኽዘን ብራውዘር ንጥቀም። ጸብጻባት ዘለኹምዎ ሃገርን ዝመጻእኩምሉ መርበብ ሓበሬታን ከርእዩ ይኽእሉ። ንጥፈታት ን90 መዓልታት ንዕቅቦ። ንመን ከም ዝሰደድኩም፣ ብሕታዊ መልእኽትታትኩም ወይ ዝቐዳሕኩምዎ መላግቦ ኣበይ ከም ዝተለጠፈ ክንርኢ ኣይንኽእልን።",
+      accept: "ትንተና ፍቐዱ",
+      reject: "ትንተና ኣብዩ",
+      settings: "ቅጥዕታት ኩኪታት",
+      details: "መግለጺ ውልቃውነት ኣንብቡ",
+      enabled: "ትንተና ሕጂ ይሰርሕ ኣሎ።",
+      disabled: "ትንተና ሕጂ ጠፊኡ ኣሎ።",
+      signal: "ብራውዘርኩም ድሌት ውልቃውነት ይሰድድ ኣሎ። ስለዚ ትንተና ጠፊኡ ክጸንሕ እዩ።"
+    },
     ha: {
       title: "Kukis da sirrinka",
       body: "Da izininka, muna amfani da ma'ajiyar burauza don auna ziyarori, kayan da aka yi amfani da su, hanyoyin rabawa da ziyarorin da suka fito daga hanyoyin haɗin da aka raba. Rahotanni na iya nuna ƙasarka da gidan yanar gizon da ya kawo ka nan. Muna adana bayanan ayyuka na tsawon kwanaki 90. Ba za mu iya ganin waɗanda suka karɓa ba, ko saƙonni na sirri, ko inda aka liƙa hanyoyin haɗin da aka kwafa.",

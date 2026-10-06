@@ -20,6 +20,7 @@
     ['malagasy', 'mlg', 'Malagasy', 'Malagasy'],
     ['kirundi', 'run', 'Kirundi', 'Ikirundi'],
     ['akan', 'aka', 'Akan', 'Twi (Akan)'],
+    ['tigrinya', 'tir', 'Tigrinya', 'ትግርኛ'],
     ['chichewa', 'nya', 'Chichewa', 'Chichewa'],
     ['kinyarwanda', 'kin', 'Kinyarwanda', 'Ikinyarwanda'],
     ['xhosa', 'xho', 'Xhosa', 'isiXhosa'],
