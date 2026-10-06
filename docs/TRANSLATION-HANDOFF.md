@@ -195,6 +195,32 @@ Malagasy reviewed in full. Replaced the English slang "swipe" with "asosay miaka
 Cancel buttons now say "Foano" (cancel) instead of "Ajanony" (stop). Download actions now use the imperative "Sintomy", matching the other buttons.
 Smoothed some stiff phrases: "Tsy tafandray", "Tsy nety nisokatra", "Inona no anjaran’ity finday ity?", "Izao, avelao izy hanao izany" (this drops the wrong "indray"/again), "Jereo ny votoaty {n} rehetra", and removed a doubled "ity ity". Kept Baiboly and Soratra Masina.
 
+### isiXhosa (`xh`)
+
+isiXhosa: existing text was already natural; kept traditional church vocabulary (iBhayibhile, iZibhalo for "Scripture").
+Fixed present-tense passive for waiting states (Kulindwa, not perfect Kulindwe); "Done" button now Kulungile; Back buttons now "Buyela emva"; Guide tab uses Isikhokelo.
+Restored meaning dropped in several guide steps (test-file timing, "only its listing is stored", "nothing will be visible" without Trust, silent incomplete copies, untested cards failing).
+Fixed headings that had drifted from the English (why iPhone-to-Android is harder, copy-don't-just-open, straight into the card slot).
+
+### Chichewa (`ny`)
+
+Chichewa (Malawi standard): kept traditional church terms (Baibulo, Malemba).
+Fixed a few stiff or ungrammatical lines (missing "pa" in share.lead, "palibe" agreement in catalogue error, awkward "Udinani"/"itsegulireni"), and "Main navigation" now Menyu yaikulu.
+"Now let them do it" reworded to the natural "asiyeni ayese okha"; failure/success states made clearer (Sizinatheke kulumikiza, Yasungidwa).
+Restored meaning dropped in guide steps (listing-only items, Trust prompt, file-transfer mode, folder renames opening an empty library, eject before removing, untested cards) and fixed headings that had drifted from the English.
+
+### Kinyarwanda (`rw`)
+
+Kinyarwanda was already natural and consistent (Bibiliya, dosiye, mushakisha, ububiko); only 11 strings changed.
+Restored meaning lost in over-shortened guide steps (why the iPhone-Android route is harder, renamed folders open an empty library, untested cards fail in front of the recipient, "needs internet" means only the listing is on the card).
+Fixed "Control Center" to the on-screen name Control Centre, clarified PDF scroll/zoom wording, and made the card-slot route title match the English.
+
+### chiShona (`sn`)
+
+Shona was already in good standard Zimbabwean form (Bhaibheri, Magwaro, faira/mafaira, dzvanya); only 12 strings changed.
+Fixed item.spoken, which said "Audio in {lang}" instead of "Spoken in {lang}"; made "Could not connect" more idiomatic (Kubatana hakuna kubudirira).
+Restored meaning dropped from guide steps: ten-seconds-vs-forty-minutes test file, Trust prompt consequence, renamed folders opening empty, untested cards, "needs internet" explanation, card duplication purpose.
+
 ## Source files
 
 Interface translations live in `app/assets/js/i18n.js`. Longer English help and
