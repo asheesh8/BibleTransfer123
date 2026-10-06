@@ -279,6 +279,28 @@
       disabled: "Ongororo yakadzimwa izvozvi.",
       signal: "Browser yako inotumira sarudzo yekuvanzika. Ongororo icharamba yakadzimwa."
     },
+    rn: {
+      title: "Kuki (cookies) n’ibanga ryawe",
+      body: "Ubitwemereye, dukoresha ububiko bwa navigateri kugira ngo duharure abatugendera, ivyakoreshejwe, uburyo bwo gusangiza n’abatugendera baciye kuri link zasangijwe. Raporo zirashobora kwerekana igihugu urimwo n’urubuga waciyeko. Ivyakozwe tubibika imisi 90. Ntidushobora kubona abo warungikiye, ubutumwa bwite canke aho link wakopye zishirwa.",
+      accept: "Emera isesengura",
+      reject: "Anka isesengura",
+      settings: "Gutunganya kuki",
+      details: "Soma itangazo ryerekeye ibanga",
+      enabled: "Isesengura rirakora ubu.",
+      disabled: "Isesengura ntirikora ubu.",
+      signal: "Navigateri yawe irungika icipfuzo co gukingira ibanga. Isesengura ntirizokora."
+    },
+    ak: {
+      title: "Cookies ne wo kokoamsɛm",
+      body: "Sɛ wopene so a, yɛde browser no sieeɛ di dwuma de kan nsrahwɛ, nneɛma a wɔde di dwuma, akwan a wɔfa so kyɛ, ne nsrahwɛ a efi link a wɔakyɛ so. Amanneɛbɔ bɛtumi akyerɛ ɔman a wowɔ mu ne website a ɛde wo baeɛ. Yɛkora dwumadie no nda 90. Yɛntumi nhunu wɔn a wɔgye, nkrasɛm a ɛyɛ kokoam, anaa baabi a wɔde link a wɔakɔpi kɔhyɛ.",
+      accept: "Gye nhwehwɛmu tom",
+      reject: "Mpene nhwehwɛmu so",
+      settings: "Cookies nhyehyɛeɛ",
+      details: "Kenkan kokoamsɛm ho nkaebɔ",
+      enabled: "Nhwehwɛmu reyɛ adwuma seesei.",
+      disabled: "Nhwehwɛmu nyɛ adwuma seesei.",
+      signal: "Wo browser de kokoamsɛm ho apɛdeɛ bi kɔ. Enti nhwehwɛmu renyɛ adwuma."
+    },
     ha: {
       title: "Kukis da sirrinka",
       body: "Da izininka, muna amfani da ma'ajiyar burauza don auna ziyarori, kayan da aka yi amfani da su, hanyoyin rabawa da ziyarorin da suka fito daga hanyoyin haɗin da aka raba. Rahotanni na iya nuna ƙasarka da gidan yanar gizon da ya kawo ka nan. Muna adana bayanan ayyuka na tsawon kwanaki 90. Ba za mu iya ganin waɗanda suka karɓa ba, ko saƙonni na sirri, ko inda aka liƙa hanyoyin haɗin da aka kwafa.",

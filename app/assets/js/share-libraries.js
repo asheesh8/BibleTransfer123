@@ -18,6 +18,8 @@
     ['luganda', 'lug', 'Luganda', 'Luganda'],
     ['luo', 'luo', 'Luo', 'Dholuo'],
     ['malagasy', 'mlg', 'Malagasy', 'Malagasy'],
+    ['kirundi', 'run', 'Kirundi', 'Ikirundi'],
+    ['akan', 'aka', 'Akan', 'Twi (Akan)'],
     ['chichewa', 'nya', 'Chichewa', 'Chichewa'],
     ['kinyarwanda', 'kin', 'Kinyarwanda', 'Ikinyarwanda'],
     ['xhosa', 'xho', 'Xhosa', 'isiXhosa'],

@@ -221,6 +221,21 @@ Shona was already in good standard Zimbabwean form (Bhaibheri, Magwaro, faira/ma
 Fixed item.spoken, which said "Audio in {lang}" instead of "Spoken in {lang}"; made "Could not connect" more idiomatic (Kubatana hakuna kubudirira).
 Restored meaning dropped from guide steps: ten-seconds-vs-forty-minutes test file, Trust prompt consequence, renamed folders opening empty, untested cards, "needs internet" explanation, card duplication purpose.
 
+### Kirundi (`rn`)
+
+Kirundi (Burundi standard, Bibiliya Yera vocabulary): Bibiliya, Ivyanditswe Vyeranda for "Scripture"; Kirundi spelling throughout (ivyo/vyose, canke, nimba, terefone, ikarata, nshasha, imisi), never Kinyarwanda by-/cy-/cyangwa/niba forms.
+Device and file words: dosiye (file), ububiko (folder, glossed "(folder)" once), ikarata (card), mudasobwa (computer), navigateri (browser), rezo (network), umugozi (cable), icuma gisoma ikarata (card reader), porogaramu (app), link, imeyili.
+Actions: Fyonda (tap), Ugurura/Ugara (open/close), Rondera (search), Bika (save), Kuramwo (download), Kopa (copy), Rungika (send), Akira (receive), Sangiza (share), Hitamwo (choose); progress states use Biriko bira- (Biriko birabikwa), waiting uses Turarindiye.
+On-screen phone names stay in English as the phone shows them (Files, My Files, Downloads, Settings, Share, Accept, Copy, Paste, File Transfer, Control Centre); Home tab is Intango, Guide tab is Inyobozo, and "home screen" is ku ntango ya terefone.
+Guide steps follow the English rather than the shortened Kinyarwanda: Contacts Only consequence, charge-only cables looking identical, a file left on the card leaves with the card, renamed folders opening an empty library, silent incomplete copies, and untested cards failing in front of the recipient.
+
+### Akan, Asante Twi (`ak`)
+
+One Akan interface for Ghana, written in Asante Twi in the standard Akan orthography (ɛ, ɔ; no tone marks; Asante spellings such as adeɛ, foforɔ, kɛseɛ). Church terms follow the Twi Bibles: Twerɛ Kronkron (Bible), Kyerɛwsɛm (Scripture), ti / ati (chapter / chapters), Nwomakorabea (library), sini (film), "nne a wɔakyere" (recordings).
+Actions use plain Twi verbs: Hwɛ (watch), Kenkan (read), Tie (listen), Bue (open), To mu (close), Kora (save), Kyɛ (share), Fa kɔma (send), Gye (receive/accept), Hwehwɛ (search), Mia (tap), Twa mu (cancel), San w'akyi (back), "Twe ... fa" (download), Ka bɔ mu (connect).
+Everyday Ghanaian loanwords are kept where speakers use them: fon, fael, folda, kaad / microSD kaad, kɔmputa, intanɛt, browser, link, app, Kɔpi (copy), ahoma (cable), afidie / mfidie (device / devices), kratafa (page), nɔma (the pairing code).
+On-screen names stay as the phone shows them (Files, My Files, Downloads, Settings, Control Centre, Copy, Paste, Trust, On My iPhone / On My iPad), as do brands (AirDrop, Quick Share, LocalSend, VillageServer, START-HERE.html).
+
 ## Source files
 
 Interface translations live in `app/assets/js/i18n.js`. Longer English help and
@@ -855,3 +870,20 @@ The traditional editions (Chichewa Buku Lopatulika, Shona 1949 Union Bible) lead
 Not carried: links to other sites (find.bible, GRN programme pages, arc.gt, YouTube, ROCK and pCloud), whose DBS-hosted media is carried where DBS has it; three audio Bible pages that DBS marks as moved (NYABSM04605, NYABSMW00333, KINBSR); and four Kinyarwanda GRN programmes with nothing showing they are Christian (a US resettlement welcome, "Helper", untitled "Filmstrip" messages and untitled "Songs"). DBS's Kinyarwanda, Kinyamulenge and Shona JESUS pages list another dialect's chapter files; those chapters stay only with Rufumbira and Karanga, and the other pages keep their own full film. Each shelf's `notCarried` map records every listed link that is left out and why.
 
 Rebuild with `python3 packer/build_dbs_audit.py`, then `python3 packer/easytransfer.py preview`. The audits are `catalog/source/dbs-audit-{xhosa,chichewa,kinyarwanda,shona}-2026-10-06.json`.
+
+### Kirundi and Akan — 2026-10-06
+
+Added two shelves with their own interfaces and pages: `/kirundi` (`rn`, content `run`, also `/rundi`, `/run`) and `/akan` (`ak`, content `aka`, also `/twi`, `/fante`, `/aka`). Akan is one library built from DBS's three Akan pages (aka, twi and fat), so it holds Asante Twi, Akuapem Twi and Fante; the interface is Asante Twi in standard orthography, and every film, audio Bible and text Bible names its dialect. Each interface covers all 411 interface, saving, sharing, help and transfer-guide keys, 66 Bible book names (from the DBS Kirundi and Twi Bibles), and the privacy notice. The separate screenshot saving guide remains in English and is disclosed in the language picker.
+
+The same browser audit as the four shelves above: every DBS page rendered in headless Chromium, every carried file checked by a ranged request and its leading bytes, and every audio Bible book picker stepped through (1,189 Kirundi and 7,386 Akan chapter files, all valid). Nothing on these shelves is hosted outside DBS.
+
+| Shelf | Resources | What is carried |
+|---|---|---|
+| Kirundi | 27 | Bible Society of Burundi New Testament text (PDF, EPUB, HTML; listed first) and the 2018 full audio Bible; 8 films including JESUS (61 chapters), LUMO Luke, Visual Bible Matthew and Acts, iBible and the Deaf Gospel; 16 GRN programmes and Story of Jesus |
+| Akan | 47 | Bible Society of Ghana editions first (Asante Twi Twerɛ Kronkron, Akuapem Kyerɛw Kronkron, the 1964 Asante NT, the 1964 Twi Bible, the Mfantse Old Testament), then three contemporary audio Bibles and the Nkwa Asɛm text Bibles; 13 films (JESUS in Fante with 61 chapters plus Asante Twi and Twi, Magdalena, five LUMO films, Visual Bible, iBible); 14 GRN programmes and Story of Jesus; 9 historic PDFs from the 1870 Akuapem NT to the 1964 Asante Bible |
+
+RUNBSB was checked by hand because DBS's About paragraph credits the Watch Tower Society: the file is the Bible Society of Burundi New Testament ("uwo Jambo yari Imana", John 1:1), so it is carried. No inclusive-language, LGBTQ-affirming or New World Translation edition appears on these pages.
+
+Not carried: links to other sites; four audio Bible pages DBS marks as moved (RUNBSB2018, TWIBIB02272, TWIBSG00360, TWIBIB00360); the Kirundi GRN "Kaze muri Leta zunze Ubumwe za Amerika" (a US resettlement welcome that GRN has withdrawn); and DBS's Fante GRN collection, which holds the same Twi programme files as its Twi collection, so they are carried once. All three Akan JESUS pages list the Fante chapter files; those chapters stay with Fante and the Asante Twi and Twi pages keep their own full film. Each shelf's `notCarried` map records every listed link left out and why.
+
+Rebuild with `python3 packer/build_dbs_audit.py`, then `python3 packer/easytransfer.py preview`. The audits are `catalog/source/dbs-audit-{kirundi,akan}-2026-10-06.json`.

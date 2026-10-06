@@ -9,6 +9,15 @@
     "api/*.py": { "includeFiles": "packer/analytics.py" }
   },
   "rewrites": [
+    { "source": "/kirundi", "destination": "/kirundi/index.html" },
+    { "source": "/rundi", "destination": "/kirundi/index.html" },
+    { "source": "/run", "destination": "/kirundi/index.html" },
+    { "source": "/rn", "destination": "/kirundi/index.html" },
+    { "source": "/akan", "destination": "/akan/index.html" },
+    { "source": "/twi", "destination": "/akan/index.html" },
+    { "source": "/fante", "destination": "/akan/index.html" },
+    { "source": "/aka", "destination": "/akan/index.html" },
+    { "source": "/ak", "destination": "/akan/index.html" },
     { "source": "/chichewa", "destination": "/chichewa/index.html" },
     { "source": "/nyanja", "destination": "/chichewa/index.html" },
     { "source": "/nya", "destination": "/chichewa/index.html" },

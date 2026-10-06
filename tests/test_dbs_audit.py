@@ -1,4 +1,4 @@
-"""Xhosa, Chichewa, Kinyarwanda and Shona: complete, verified and DBS-hosted."""
+"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi and Akan: complete, verified and DBS-hosted."""
 import json
 import pathlib
 import re
@@ -10,7 +10,8 @@ from packer.et.profiles import PROFILES
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATE = '2026-10-06'
 SHELVES = {'xho': ('xhosa', 'xh', 13), 'nya': ('chichewa', 'ny', 34),
-           'kin': ('kinyarwanda', 'rw', 26), 'sna': ('shona', 'sn', 32)}
+           'kin': ('kinyarwanda', 'rw', 26), 'sna': ('shona', 'sn', 32),
+           'run': ('kirundi', 'rn', 27), 'aka': ('akan', 'ak', 47)}
 
 
 def urls(r):
@@ -52,7 +53,7 @@ class DbsAuditTest(unittest.TestCase):
                     self.assertRegex(u, r'^https://([a-z0-9]+\.)?dbs\.org/')
 
     def test_audio_bibles_cover_every_published_chapter(self):
-        total = 0
+        totals = {}
         for code in SHELVES:
             audit = self.audit[code]['audio_bibles']
             for r in self.shelf(code):
@@ -61,24 +62,31 @@ class DbsAuditTest(unittest.TestCase):
                 books = audit[r['source']]['books']
                 self.assertEqual(audit[r['source']]['bad'], [])
                 self.assertEqual(audit[r['source']]['chapters_verified'], sum(len(b['chapters']) for b in books))
-                total += audit[r['source']]['chapters_verified']
+                totals[code] = totals.get(code, 0) + audit[r['source']]['chapters_verified']
                 p = r['play']
                 self.assertEqual(len(p['bookNames']), len(books))
                 self.assertTrue(all(not n.isupper() for n in p['bookNames'].values()), r['id'])
-        self.assertEqual(total, 1189 * 4 + 260 * 2 + 24)
+        self.assertEqual(sum(totals[c] for c in ('xho', 'nya', 'kin', 'sna') if c in totals), 1189 * 4 + 260 * 2 + 24)
+        self.assertEqual(totals['run'], 1189)
+        # Two NTs, five full Bibles (one DBS picker omits eight chapters) and the Fante Old Testament.
+        self.assertEqual(totals['aka'], 260 * 2 + 1189 * 4 + 1181 + 929)
 
     def test_moved_audio_bibles_are_left_out(self):
         moved = {'https://dbs.org/bibles/audio/NYABSM04605_DAVR_FB_N',
                  'https://dbs.org/bibles/audio/NYABSMW00333_DAVR_FB_N',
-                 'https://dbs.org/bibles/audio/KINBSR_DAVR_OT_N'}
+                 'https://dbs.org/bibles/audio/KINBSR_DAVR_OT_N',
+                 'https://dbs.org/bibles/audio/RUNBSB2018_DAVR_FB_N',
+                 'https://dbs.org/bibles/audio/TWIBIB02272_DAVR_FB_N',
+                 'https://dbs.org/bibles/audio/TWIBSG00360_DAVR_FB_N',
+                 'https://dbs.org/bibles/audio/TWIBIB00360_DAVR_FB_N'}
         carried = {r['source'] for c in SHELVES for r in self.shelf(c)}
         self.assertFalse(moved & carried)
         for u in moved:
-            code = 'kin' if 'KIN' in u else 'nya'
+            code = {'KIN': 'kin', 'RUN': 'run', 'TWI': 'aka'}.get(u.rsplit('/', 1)[1][:3], 'nya')
             self.assertIn('moved', self.built[code]['notCarried'][u])
 
     def test_jesus_chapters_stay_with_the_dialect_that_recorded_them(self):
-        for code in ('kin', 'sna'):
+        for code in ('kin', 'sna', 'aka'):
             for r in self.shelf(code):
                 if '/video/jesus/' not in r['source']:
                     continue
@@ -89,22 +97,43 @@ class DbsAuditTest(unittest.TestCase):
         self.assertEqual(len(rufumbira['play']['items']), 61)
         kinyarwanda = next(r for r in self.shelf('kin') if r['id'] == 'kin-film-kin-kinyarwanda-jesus')
         self.assertEqual(kinyarwanda['play']['kind'], 'file')
+        fante = next(r for r in self.shelf('aka') if r['id'] == 'aka-film-aka-fante-jesus')
+        self.assertEqual(len(fante['play']['items']), 61)
+        for ident in ('asante-twi', 'twi'):
+            asante = next(r for r in self.shelf('aka') if r['id'] == f'aka-film-aka-{ident}-jesus')
+            self.assertEqual(asante['play']['kind'], 'file')
 
     def test_traditional_editions_lead_and_no_inclusive_translation_is_carried(self):
         nya = [r for r in self.shelf('nya') if r['type'] == 'audio-bible']
         self.assertEqual(nya[0]['native'], 'Buku Lopatulika ndilo Mau a Mulungu')
         sna = [r for r in self.shelf('sna') if r['type'] in ('scripture', 'audio-bible')]
         self.assertEqual(sna[0]['id'], 'sna-text-snaold')
+        run = [r for r in self.shelf('run') if r['type'] in ('scripture', 'audio-bible')]
+        self.assertEqual(run[0]['id'], 'run-text-runbsb')
+        aka = [r['id'] for r in self.shelf('aka') if r['type'] in ('scripture', 'audio-bible')]
+        self.assertEqual(aka[:5], ['aka-ab-twibsg-00360-davr-fb-n', 'aka-ab-akabsg-fcbh-fb-n', 'aka-ab-akaubs-fcbh-nt-n',
+                                   'aka-ab-twintp-davr-fb-n', 'aka-ab-fatbsg-davr-ot-n'])
         for code in SHELVES:
             for r in self.shelf(code):
                 self.assertIsNone(excluded(r), r['id'])
                 self.assertNotRegex(r['title'] + ' ' + r['native'], re.compile(r'inclusive|queen james', re.I))
 
     def test_unconfirmed_programmes_are_not_carried(self):
-        ids = {r['id'] for r in self.shelf('kin')}
-        for n in ('67900', '85249', '79090', '81791'):
-            self.assertNotIn('kin-grn-' + n, ids)
-            self.assertIn('https://globalrecordings.net/en/program/' + n, self.built['kin']['notCarried'])
+        for code, numbers in (('kin', ('67900', '85249', '79090', '81791')), ('run', ('67169',))):
+            ids = {r['id'] for r in self.shelf(code)}
+            for n in numbers:
+                self.assertNotIn(f'{code}-grn-' + n, ids)
+                self.assertIn('https://globalrecordings.net/en/program/' + n, self.built[code]['notCarried'])
+
+    def test_akan_dialects_are_named_and_shared_grn_files_carried_once(self):
+        aka = self.shelf('aka')
+        for r in aka:
+            if r['type'] in ('film', 'audio-bible', 'scripture'):
+                self.assertIn(r['scope'], ('Asante Twi', 'Akuapem Twi', 'Fante', 'Twi'), r['id'])
+        grn = [r for r in aka if r['id'].startswith('aka-grn-')]
+        self.assertEqual(len(grn), 14)
+        self.assertEqual(len({u for r in grn for u in urls(r)}), sum(len(r['play']['items']) for r in grn))
+        self.assertIn('https://dbs.org/audio/collections/grn/fat_GlobalRecordings_fante', self.built['aka']['notCarried'])
 
     def test_pages_routes_worker_and_interface(self):
         sw = (ROOT / 'app/sw.js').read_text()
