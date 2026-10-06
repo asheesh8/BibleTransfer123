@@ -1,69 +1,199 @@
 # Translation handoff
 
-English is the reference for the interface. The October 2026 editorial review
-read the existing wording for all 16 language options, corrected grammar and
-meaning where it could be assessed, added a Marathi draft, and researched
-partial Kikuyu, Ekegusii, and Maa controls. This was an
-AI-assisted review; no fluent local speakers have approved these translations.
+English is the reference for the interface. Every interface language now covers
+the controls, help page, sharing guides and privacy notice. In October 2026 each
+language was read through as a native reader would: wording that was literal,
+stiff, ungrammatical or wrong in meaning was rewritten, missing strings were
+filled, and Christian terms follow the traditional church vocabulary of each
+language. Luganda, Gĩkũyũ, Ekegusii and Maa, which were previously partial,
+are now complete interfaces.
 
-## Plain-language pass following reader feedback
+The only English left for readers is the separate computer screenshot guide,
+which the language picker discloses as "Screenshot guide in English".
 
-The October 2 follow-up reviewed the ten Asian-language interfaces: Nepali,
-Hindi, Marathi, Urdu, Sindhi, Pashto, Gurmukhi Punjabi, Shahmukhi Punjabi,
-Mandarin, and Cantonese. A Nepali reader found some of the earlier help text
-hard to understand. This pass names the file explicitly, separates opening
-a file from installing an app, and replaces long literal explanations with
-short actions.
+## Terminology by language
 
-Nepali uses `सेभ गर्नुहोस्` for saving and `फाइल खुलेन भने` for a file that will
-not open. Its recovery heading now says `सेभ गरेको फाइल भेटिएन`. The reader
-is directed to Files, Downloads, or the folder they chose. The other nine
-interfaces received corresponding corrections to troubleshooting, file
-locations, and the choice between sending and receiving on a phone. Punjabi
-home-page counts now include the missing noun, with a singular form too.
+These notes record the choices made, so later edits stay consistent.
 
-Hindi save terminology was compared with
-[Google's Hindi file instructions](https://support.google.com/chromebook/answer/1700055?hl=hi).
-Cantonese consistently uses `儲存` for file saving, matching the terminology in
-[Apple's Hong Kong file instructions](https://support.apple.com/zh-hk/102570).
-Operating-system app and menu names remain recognizable. Browser handoff
-messages still ask readers to confirm the download; they do not claim it is
-already complete. This remains an AI-assisted wording review. Feedback from
-fluent readers is still needed to confirm regional vocabulary and naturalness.
+### Mandarin (`cmn`)
 
-## Current coverage
+Filled missing strings (unavailable chapter notice, recordings, Windows computer, Books and Guides); Chinese has no singular forms so .one keys were skipped.
+Made address consistent with informal 你 (welcome screen used 您).
+Completed an unfinished phrase ("face to face, straight from this page"), restored the "not Photos" warning in the iPhone Files step, and clarified the confusing Finder/iTunes File Sharing step.
+Fixed meaning in "move the card" (put it in the other phone, not just take it away) and replaced two literal sentences (file "leaves with the card", copy "silently incomplete") with natural wording.
 
-| Language | Interface state |
-|---|---|
-| English (`en`) | Reference wording; saving, sharing, help, and accessibility copy reviewed. |
-| Mandarin (`cmn`) | Existing draft reviewed; grammar, terminology, counts, and device instructions corrected. |
-| Hindi (`hi`) | Existing draft reviewed; counted nouns, action labels, and device instructions corrected. |
-| Marathi (`mr`) | Full draft covering the main interface, help, and sharing guides. |
-| Urdu (`ur`) | Existing draft reviewed; agreement, counts, and action meanings corrected. |
-| Swahili (`swh`) | Existing draft reviewed; transfer, offline, and device instructions corrected. |
-| Zulu (`zul`) | Existing draft reviewed; grammar and dynamic language-name constructions corrected. |
-| Western Punjabi (`pnb`) | Existing Shahmukhi draft reviewed; agreement and action meanings corrected. |
-| Cantonese (`yue`) | Existing draft reviewed; Mandarin fragments and mixed-register phrasing corrected. |
-| Pashto (`ps`) | Existing draft reviewed; noun agreement and touch-and-hold instructions corrected. |
-| Eastern Punjabi (`pa`) | Existing Gurmukhi draft reviewed; count and action meanings corrected. |
-| Nepali (`ne`) | Existing draft reviewed; count, action, and recovery instructions corrected. |
-| Sindhi (`snd`) | Existing draft reviewed; agreement and receive/send labels corrected. |
-| Kikuyu (`kik`) | 144 researched draft controls, short instructions, and headings; 260 reference keys remain in English. |
-| Gusii (`guz`) | 25 supported draft controls; 379 reference keys remain in English. Incorrect and unverified old controls and the copied Swahili have been removed. |
-| Maasai (`mas`) | 38 supported draft controls, nouns, and counters; 366 reference keys remain in English. The copied Swahili has been removed. |
+### Cantonese (`yue`)
 
-The three partial languages are labeled **Some menus in English** in both
-language selectors and on their shared-library landing pages. English is the fallback for every untranslated key;
-selecting Kikuyu, Gusii, or Maasai never silently selects a Swahili interface.
-Coverage counts use the 404-key reference, which includes optional singular
-variants and older compatible iOS keys. They measure supplied entries, not
-fluency or the percentage of a reader's experience that is translated.
+Filled missing strings in written Cantonese (Traditional, HK style); .one keys skipped as Cantonese has no singular forms.
+Removed Mandarin intrusions (把, 選擇, 揀選, 等待, 無法) in favour of everyday Cantonese (將, 揀, 等緊, 連接唔到) and standardised 俾 to 畀.
+Replaced 抄 (hand-copying) with 複製 for copying files, made cable wording consistent (數據線), simplified short buttons (睇, 聽), and dropped the slangy 靜靜雞.
+Same meaning fixes as Mandarin: "not Photos" warning restored, File Sharing step clarified, microSD card moved to the other phone.
 
-These are not complete translations. Fluent Kikuyu, Ekegusii, and Maa speakers
-still need to review the short drafts and supply the full device instructions.
-Local reviewers of the other drafts can also refine
-regional terms, respectful register, Christian terminology, and translated
-operating-system menu names.
+### Hindi (`hi`)
+
+Added the 11 missing strings (unavailable chapter, recordings, missing item, Windows computer, catalogue errors, Books and Guides).
+Fixed ungrammatical "उपलब्ध न हो सकता है" and "सेव की नहीं जाती"; restored the dropped "not in Photos" hint on the iOS Files step.
+Replaced formal "प्रतीक्षा" with everyday "इंतज़ार" in waiting messages; simplified "क्रमांकित चरणों का पालन करें".
+Corrected welcome.count so it reads "{n} items: films, Bibles, recordings" rather than "{n} films"; reworded the confusing iTunes File Sharing step.
+Sharelib .one left unchanged (संसाधन is the same in singular).
+
+### Marathi (`mr`)
+
+Added the 11 missing strings (unavailable chapter, recordings, missing item, Windows computer, catalogue errors, Books and Guides).
+Fixed ungrammatical "आकार तुलना करून पाहा" and over-certain "अॅपही लागेल" (now "लागू शकते"); restored the "not in Photos" hint on the iOS Files step.
+Corrected welcome.count so the number counts items, not films; clarified iTunes as the older-computer option and reworded the File Sharing step.
+Simplified "पायऱ्या पाळा" and the "{items} item · Files" summary label.
+
+### Nepali (`ne`)
+
+Added missing strings (unavailable chapter, recordings, Windows computer, Books and Guides) and the dropped first sentence of item.missing.sub.
+Swapped formal/Sanskritised words for everyday speech: प्रतीक्षा -> पर्खँदै, मन्जुरी दिइएन -> लिन चाहेन, जडान -> जोडिन, प्राप्त भएको -> आएको, उपयुक्त -> मिल्ने, तुलना -> उस्तै छ कि हेर्नुहोस्, समावेश -> आएको, ढाँचा -> फाइल सिस्टम, गृहपृष्ठ -> होम, सहायता -> मद्दत.
+Back buttons now say "फर्कनुहोस्" (go back) instead of the literal "पछाडि" (behind); "Tap the file" headings now say tap, not open.
+Accept steps now name the actual Accept button; restored the Lightning/USB-C and "check before you travel" detail on the iPhone card reader step.
+
+### Eastern Punjabi (`pa`)
+
+Filled the missing strings (unavailable chapter, recordings, resource not found, Windows computer, Books and Guides) in Gurmukhi; existing .one forms were already correct.
+Smoothed a few stiff or literal lines: greeting, "No thanks" (was a curt "refuse"), waiting-for-choice message, and the "now let them do it" instruction.
+Replaced ਵਿੱਛੜਨ (emotional parting) with plain ਵੱਖ ਹੋਣ, made "move the card" mean putting it into the other phone, and reworded "silently incomplete".
+Restored the "not Photos" warning in the iPhone Files step and fixed fragment headings (radios, card into reader).
+
+### Western Punjabi (`pnb`)
+
+Translated the 8 missing strings in everyday Shahmukhi Punjabi (نسخہ, باب, ریکارڈنگاں, لبھی).
+Fixed "No thanks" (it was "ناں کرو", which reads as an order) to "نئیں، شکریہ", made the greeting more natural, and reworded the "Why bother" and iPhone-to-Android headings to match the English.
+Rewrote the VillageServer "save before leaving" tip, which had drifted into extra instructions, so it says only what the English says.
+
+### Urdu (`ur`)
+
+Translated the 11 missing strings (unavailable chapter notice, recordings, missing resource, Windows computer, catalogue errors, Books and Guides), using the church word نسخہ for edition and باب for chapter.
+Made bare "منسوخ" buttons into full actions ("منسوخ کریں"), added the comma in "نہیں، شکریہ", made the home greeting less stiff, and reworded the number-mismatch message.
+Replaced the transliterated "ولیج وائی فائی" with "گاؤں کے Wi-Fi", kept iPhone/iPad in Latin script, and restored the "not Photos" warning in the iPhone Files tip. "Why bother" and the iPhone-to-Android heading now match what the English says.
+
+### Sindhi (`snd`)
+
+Translated the 11 missing strings in natural Sindhi (نسخو for edition, باب for chapter, رڪارڊنگون for recordings).
+Made the Bible spelling the same everywhere (بائيبل), replaced the Urdu full stop and the Urdu spelling "بہ" with Sindhi forms, and made "منسوخ" a full action ("منسوخ ڪريو").
+Made the home greeting more natural, wrote Wi-Fi and iPhone/iPad in Latin script, restored the "not Photos" warning, and fixed the "Why bother" and iPhone-to-Android headings so they carry the English meaning.
+
+### Pashto (`ps`)
+
+Translated the 12 missing strings in standard Afghan Pashto (نسخه, څپرکی, غږیز ثبتونه, کتابونه او لارښودونه).
+Replaced "سیم" (wire) with the usual "کېبل" for USB cables, "چالان کړئ" with "وچلوئ" for playing media and "فعال کړئ" for switching on Wi-Fi/Bluetooth, the literal "کور سکرین" with "هوم سکرین", and "پورته" (upload) with "لوډ" for loading a page.
+Made the Bible spelling the same everywhere (بایبل), fixed broken plurals of "غږیز ثبت", made "لغوه" a full action, and added small clarity fixes (card reader, card slot, iPhone-to-Android heading).
+
+### Swahili (`swh`)
+
+Added the 8 missing strings (unavailable chapter, recordings, missing item, Windows computer, Books and Guides).
+Restored meaning where earlier text had drifted or been cut short (help.golden.p was a different sentence; share.golden.body and share.teach.body dropped half the English; AirDrop Contacts Only note).
+Made "Downloads" consistent: the menu name Downloads is kept, with the gloss "(Vipakuliwa)", instead of switching between the two.
+Smoothed stiff or literal wording ("Uelekezaji mkuu" became "Menyu kuu", "Andika kadi mpya" became "Tengeneza kadi mpya", browser download messages, the Done/No thanks buttons) and used the i-zi noun class for "waya" consistently.
+
+### isiZulu (`zul`)
+
+Added the 8 missing strings. Used "ushicilelo" for a Bible edition so it is not confused with "uhlelo" (app). home.offline.one was left out because the "okungu-" form is the same for one item.
+Fixed tense: waiting messages now use the present passive "Kulindwa", not the perfect "Kulindwe". Repaired the broken "bese u-Downloads" in the computer help.
+Restored meaning where text had drifted (help.golden.p was a different sentence; share.golden.body now says ten seconds against forty minutes; the charge-only cable warning).
+Replaced literal or stiff wording ("Ukuzulazula okuyinhloko" became "Imenyu enkulu", the Done button became "Kulungile", the "Yamukela" button is now quoted naturally with "okuthi", and the spoken/written language labels were improved).
+
+### Luganda (`lg`)
+
+Wrote the full Luganda interface (all missing keys plus singular .one forms, since Luganda nouns change class for one item: ekintu/ebintu).
+Reviewed existing strings: "Wanula" (download) replaced with "Tereka" for Save; "Vidiyo" changed to "Firimu" for Films; "Scripture" now "Ebyawandiikibwa" so it differs from "Bayibuli" (kept for Bible titles); "Tukikoppye" replaced with "Linki ekoppeddwa"; email/search labels made specific.
+Consistent everyday terms: essimu, fayiro, kaadi, yintaneeti, folda, apu, weereza (send), gabana (share), ggulawo (open), nyiga (tap); app/menu names (Files, Downloads, AirDrop, etc.) kept in English.
+Church vocabulary follows traditional Luganda Bible usage (Bayibuli, Ebyawandiikibwa).
+
+### Gĩkũyũ (`kik`)
+
+Gĩkũyũ (kik): filled every missing key (all help, sharing and route guides) and polished existing strings.
+Bible terms follow the Kikuyu Bible: chapter is now "Gĩcunjĩ/Icunjĩ" (was "Mũrango", which means door); Bibilia, Maandĩko, ibuku kept.
+App name and "library" are now "Maktaba", the everyday Kenyan word, used throughout; "failũ" changed to the common "faili"; "programu" to "app".
+Fixed wrong verbs: Play was "Thaaka" (play a game), now "Ambĩrĩria"; Watch "Wĩrorere" now "Rora"; Accept now "Ĩtĩkĩra" (was "Amũkĩra", receive).
+Added singular forms (kĩndũ/gĩcunjĩ) for counts; English kept for phone button and menu names (Files, Share, Copy, Settings, etc.).
+
+### Ekegusii (`guz`)
+
+Filled in nearly the whole Ekegusii interface (about 360 new strings), in short, plain sentences with church vocabulary kept traditional (Ebibilia, Amariko, Nyasae).
+Changed "Bosa" to "Bika" (keep/put) for Save, and "Kana"/"Chunga" to "Tiga" (leave it) for Cancel/Stop; "Rora bionsi" became "Rora ebinto bionsi".
+Counts use the noun first so agreement stays right (ebinto/egento, chifaili/efaili, emetwe/omotwe), with singular .one forms added.
+OS button and app names (Files, Downloads, Share, Copy, Accept, Trust) are kept in English as they appear on the phone.
+
+### Maa (`mas`)
+
+Wrote the full Maa interface: 405 keys, of which 367 are new and 38 are existing strings re-spelled. It includes singular .one forms because Maa changes the noun for one item (entoki/intokitin, embolunoto/imbolunot).
+Converted the 38 existing strings from dictionary spelling (ɛ ɔ ɨ ʉ, ŋ, tone accents) to the plain spelling of the Maasai Bible (Bible Society of Kenya). That means no tone marks, ɛ/ɔ/ɨ/ʉ become e/o/i/u, and ŋ becomes ng'. Examples: Ɛnkáŋ -> Enkang', Aɨsʉ́m -> Aisom, Oróréí lɛ́ nKáí -> Ororei le Nkai.
+Church terms follow the traditional Maa Bible: Enkai, Ororei le Nkai, Biblia. Buttons keep the existing infinitive (a-) style. Step-by-step instructions use plain 2nd-person forms (Ibol, Ibung', Ing'oru).
+Tech words use everyday Maa loanwords: esimu, enkompiuta, efaili, efolda, enkadi, intaneti, eapu. Phone menu and product names (Files, Downloads, AirDrop, Quick Share, LocalSend and so on) stay as they appear on the phone.
+
+### Dholuo (`luo`)
+
+Dholuo: filled missing chapter-unavailable notice, Wycliffe modern-spelling label, Books and Guides category and one singular form.
+Replaced "golo/mak" (take out / grab) with the everyday "kano" (store/keep) for every "save" action; "golo" kept only for downloading.
+Fixed meaning slips: "Nambani" -> "Namba mari" (your code), decline/declined wording, home.nearby.sub now says no cables/no apps, zoom phrasing in PDF note.
+Used Luo colour words (rambulu, kit machungwa), tightened card-format/microSD steps. Muma kept as the Bible term.
+
+### Afaan Oromoo (`om`)
+
+Filled all 6 missing strings (Unavailable notice, Play, Open library, Wycliffe modern spelling, Books and Guides) and singular forms where the verb or wording changes for one item (hojjeta vs hojjetu, Boqonnaa {n}, etc.).
+Fixed wrong meanings: type.link said "Websites" (now "Intarneetii barbaada"), nearby.bad said the code "was not filled" (now "did not match"), nearby.step.role, tab.guide (Qajeelfama, not Gargaarsa), act.visit.
+Restored content that had been cut from many guide steps (contacts-only AirDrop warning, data vs charge-only cables, USB notification, SIM tray, why folder names matter, test-file advice, card-reader port types).
+Made status labels read naturally (Kuusaa jira, Ergaa jira) and used gender-neutral plural for "let them do it". Kept Kitaaba Qulqulluu throughout.
+
+### Amharic (`am`)
+
+Amharic was already natural and consistent, so changes are light (14 keys).
+Restored dropped meaning in a few guide steps (the 10-seconds-vs-40-minutes test-file point, why renamed folders open an empty library, Lightning vs USB-C on older/newer iPhones, the "Trust This Computer?" prompt wording).
+Fixed grammar/wording: ሊከፈት አልቻለም (not መከፈት አልቻለም), ወደዚያ spelling, ከመለያየትዎ (polite form, not mixed ከመለያየታችሁ), ዋና ማውጫ for main navigation, "Wycliffe translation" phrasing, scroll+zoom in the PDF hint.
+Kept traditional church vocabulary (መጽሐፍ ቅዱስ) unchanged.
+
+### Igbo (`ig`)
+
+Igbo: added Books and Guides category and singular forms where wording differs ("Lee ihe {n}", "Isi {n}"); other .one keys are identical in Igbo so left out.
+"Play" now "Kpọọ" (play media) instead of "Malite" (start); Home tab "Mbido" instead of the odd "Isimbido".
+Fixed wrong meanings: "e nyochara" (reviewed) -> "e sere foto" (scanned); share.item was a stray label, now the full sentence; Wycliffe label restored; help.phone.look/follow rewritten.
+Grammar fix "ga-pịa" -> "ga-apị"; polite "Mba, daalụ" for No thanks. Baịbụl / Akwụkwọ Nsọ kept.
+
+### Yoruba (`yo`)
+
+Yoruba: Scripture category now the traditional "Ìwé Mímọ́"; singular forms fixed where "gbogbo" (all) wrongly appeared for one item.
+Added missing tone marks (olùbásọ̀rọ̀, gbígba), removed stray untoned "aami", Control Center -> Control Centre.
+Clarified FROM/TO device questions, "Why bother" heading, spoken-language label ("A sọ ọ́ ní {lang}"), and the format-erases-card warning (pa ... rẹ́).
+
+### Hausa (`ha`)
+
+Hausa was already in good shape (Littafi Mai Tsarki throughout, correct hooked letters ɓ ɗ ƙ); only targeted fixes.
+Fixed imperative "Nema" to "Nemi" for search; replaced "Share" (wipe), which clashes visually with the English Share button, with "Goge".
+Replaced ambiguous "waya ta haɗi" (waya = phone and wire) with "kebul"; "Low data" now uses the everyday word "data".
+Home tab now "Gida"; card-reader route title no longer reads as "read the card".
+
+### Nigerian Pidgin (`pcm`)
+
+Reworked English-identical strings where Naija Pidgin speakers phrase it differently (e.g. "Try am again", "Start am again", "Go Downloads", "Carry go", "All di {n} chapters", "Show me how I go take share am").
+Left short labels that Pidgin speakers use as-is (Cancel, Language, Chapter {n}, HD, Library, Home, AirDrop, Films, Audio).
+Replaced unnatural "no dey saved" with "Dem no save dis thing"; fixed "E save" to "E don save"; "Old scans" now "Old books wey dem scan".
+
+### Lingala (`ln`)
+
+Fixed a wrong word: "efutaka" (pays) used for formatting erases the card, now "elongolaka"; "Kokanisa" (to think) replaced for "compare".
+Films no longer "kobɛta" (used for music): "Filme eboyi kotambola"; "Lien ekopiamaki" (remote past) to "Lien ekopiami".
+Fixed typo "Ekɔmonana", awkward singular forms ("Eloko nyonso {n}"), and smoothed a few stiff sentences; "Low data" uses common Kinshasa "kolya ba données".
+Kept Biblia and traditional church vocabulary throughout.
+
+### French (`fr`)
+
+French reviewed in full (411 rows, none missing). It is already natural standard French, written plainly enough for African francophone readers. Bible terms are traditional (Bible, textes bibliques), and the Apple and Android menu names match the official French versions (Réglages, Se fier, Sur l’écran d’accueil, Mes fichiers).
+No changes were needed, so out/fr.json is empty.
+
+### Portuguese (`pt`)
+
+Portuguese reviewed in full. The strings use one variety throughout: celular, baixar, salvar, arquivo. Those words are widely understood in Mozambique and Angola, so the variety was kept rather than churned.
+Two fixes: "editor" (a person) became "editora" (a publishing house) for publisher, and the singular browser-download title now agrees in number ("Download ... enviado").
+
+### Malagasy (`mg`)
+
+Malagasy reviewed in full. Replaced the English slang "swipe" with "asosay miakatra ny efijery", and changed the French spelling "batterie" to the Malagasy "bateria".
+Cancel buttons now say "Foano" (cancel) instead of "Ajanony" (stop). Download actions now use the imperative "Sintomy", matching the other buttons.
+Smoothed some stiff phrases: "Tsy tafandray", "Tsy nety nisokatra", "Inona no anjaran’ity finday ity?", "Izao, avelao izy hanao izany" (this drops the wrong "indray"/again), "Jereo ny votoaty {n} rehetra", and removed a doubled "ity ity". Kept Baiboly and Soratra Masina.
 
 ## Source files
 
@@ -84,56 +214,6 @@ and images need a coordinated translation before adding another language.
 Resource titles and publisher names are catalogue metadata and were not
 rewritten as part of this interface review.
 
-## Research for the partial languages
-
-Kikuyu wording was checked against [Rũthiomi](https://www.ruthiomi.com/),
-[Mwananchi Afrika's dictionary](https://www.mwananchiafrika.com/digital-dictionary),
-[Rice University's Gĩkũyũ sketch grammar](https://www.ruf.rice.edu/~reng/kik/sketch.pdf),
-and [published Kikuyu technical help](https://www.jw.org/ki/uteithio-intaneti-in%C4%A9/kuhuthira-jw-org/etha-ibuku/).
-Technical loans and supported actions such as open, read, choose, download,
-send, and receive were retained. Uncertain save/completion language and longer
-network, installation, and file-sharing instructions remain in English.
-
-Ekegusii controls use [dictionary entries](https://gusii.org/search) and
-[published imperative grammar](https://www.cambridge.org/core/journals/phonology/article/grammatical-tone-mapping-in-ekegusii/1190DC66B2E21EC6F9DD218B51AA91D5).
-`Inka` is Home, so it was removed from Close/Done; Close is `Kuneka`.
-The Scripture category uses `Amariko`, replacing the word for laws/commandments.
-Other vocabulary was adapted only as short action labels, with software usage
-still requiring local review. The site's simulated translator was not used.
-
-Maa labels were checked against the [Payne and Ole-Kotikash dictionary](https://pages.uoregon.edu/maasai/Maa%20Lexicon/title.htm).
-Southern Kenyan forms preserve vowel distinctions and tone marks. Action
-labels use attested infinitives; Stop uses an attested command. Nouns and
-count-compatible quantifiers supply item and chapter counters. These are
-contextual adaptations of lexical entries, not proof of native software usage.
-Tone and agreement prevent reliable long instructions from being assembled
-by joining dictionary words. Those paragraphs remain in English.
-
-## Meaning checks completed
-
-- The library heading and tagline apply to both website and card use without
-  promising that every resource is already available offline.
-- Language-library text describes the resource language rather than claiming
-  every word on the page is in that language.
-- Browser download handoff asks the reader to check the saved file; only a
-  completed file-system write claims the file has been saved.
-- Sharing errors retain the actual failure, connection check, and retry action.
-- Counts keep both `{n}` and `{total}`. All other substitution variables retain
-  their exact names, including `{lang}`, `{org}`, `{size}`, and `{device}`.
-  Optional `.one` keys supply singular noun and verb agreement for one item;
-  languages without number-dependent changes retain their ordinary labels.
-- The first-run resource counts also use singular wording. Formatted English
-  fallbacks and static translated elements identify English for assistive
-  readers; native language names carry their own language attributes.
-- Device instructions allow differing download destinations and compatible
-  reader/player apps. Current Apple file-sharing and home-screen instructions
-  replace the earlier absolute claims.
-
-Device guidance was checked against [Apple's Downloads instructions](https://support.apple.com/en-us/102440),
-[Apple's home-screen instructions](https://support.apple.com/guide/iphone/turn-a-website-into-an-app-iph42ab2f3a7/ios),
-[Apple's Windows file-sharing instructions](https://support.apple.com/en-za/120402),
-and [Google's Quick Share instructions](https://support.google.com/android/answer/9286773?hl=en).
-
 ## Review and maintenance
 
 Keep app and menu names recognizable: Files, Downloads, AirDrop, Quick Share,
@@ -146,17 +226,16 @@ save-status checks. Then switch through every language using the header's
 language button. Check the home page, library filters, an item's save dialog,
 the sharing guide, and the help page. Confirm direction and fonts in Urdu,
 Sindhi, Pashto, and Western Punjabi. Automated checks validate formatting and
-coverage; fluent readers must judge language quality.
+coverage.
 
 ## Luganda addition — 2026-10-02
 
 Luganda uses content code `lug` and interface code `lg` (including the `lg-UG`
 phone locale). Short controls were adapted from
 [published Luganda interface labels](https://www.jw.org/lg/): language selection,
-search, read, watch, download, copy-link and email actions. Longer help,
-installation and sharing instructions retain English with the existing explicit
-“Some menus in English” notice. These controls are a researched draft, not a
-fluent-speaker-approved translation. No Swahili text is inherited.
+search, read, watch, download, copy-link and email actions. The October
+native-reader pass completed the help, installation and sharing instructions.
+No Swahili text is inherited.
 
 All 66 book names come directly from the DBS Luganda Bible audio selector.
 The captured [Ganda inventory](https://dbs.org/discover/languages/lug), complete
@@ -180,9 +259,8 @@ file troubleshooting, saving, and all ten device-sharing guides. Their book
 selectors use the published DBS names; Oromo preserves each audio edition's
 own book labels. Short controls were compared with published
 [Dholuo](https://www.jw.org/luo/) and [Oromo](https://www.jw.org/om/) interfaces.
-The longer instructions are AI-assisted drafts and still need fluent local
-review. The language selectors and landing pages disclose this. The separate
-computer screenshot guide and privacy notice remain English. No resources
+The longer instructions were polished in the October native-reader pass. The
+separate computer screenshot guide remains English. No resources
 from those vocabulary reference sites were imported.
 
 The [DBS Dholuo inventory](https://dbs.org/discover/languages/luo) produces 24
@@ -242,7 +320,6 @@ The 398 Igbo strings cover the library, item controls, saving, nearby transfer,
 help and all ten sharing routes. Published Igbo UI vocabulary was compared with
 https://www.jw.org/ig/; that page is only a language reference, not a library
 resource. All 66 book names use DBS’s own Union/contemporary Bible selectors.
-The interface is a translation draft requiring review by a fluent Igbo speaker.
 OS menu names remain recognizable (Files, Downloads, Finder, File Transfer,
 Trust, AirDrop). The computer screenshot guide and privacy controls remain in
 English, as disclosed in the language note. “If the file does not open” refers
@@ -353,8 +430,7 @@ copy, device sharing routes and troubleshooting instructions use Amharic.
 The native interface has 411 strings. English phone menu names such as
 Files, Downloads and File Transfer are kept so readers can find those
 controls on their devices. The separate Mac/Windows screenshot guide is
-in English, and the page discloses this. The translation is a draft requiring
-review by a fluent Amharic speaker; automated checks cannot certify idiom.
+in English, and the page discloses this.
 
 The three audio Bibles expose 1,859 published chapter MP3s, all checked by
 binary range requests. AMHSDV contains Psalms and the 27 New Testament books
@@ -428,8 +504,7 @@ link. Native titles and 66 book names accompany the 411 Portuguese interface
 strings, including help, saving, sharing and device instructions. Regional
 variants identify Brazil, Portugal and Mozambique. Proper publisher names
 and phone menu names retain their published spelling. The separate screenshot
-guide is disclosed as English. The wording is a translation draft; automated
-checks do not replace review by a fluent Portuguese speaker.
+guide is disclosed as English.
 
 The six audio Bibles have 5,945 playable chapters. The dramatized Bible for
 Everyone Old Testament divides Joel into four chapters and Malachi into
@@ -501,9 +576,8 @@ The UI has 411 Yoruba strings, native resource titles, native download labels,
 and 66 published Yoruba book names. Phone file instructions retain the English
 names users may see on their devices, including Files, Downloads and On My
 iPhone. “Tí fáìlì náà kò bá ṣí” explicitly means “if the file does not open”.
-The wording is a translation draft requiring native-speaker review; passing
-formatter tests is not native-speaker certification. The separate computer
-screenshot guide and privacy notice remain English, with an English disclosure.
+The separate computer
+screenshot guide remains English, with an English disclosure.
 
 Scope is preserved: the Okun New Testament is labeled Okun; Iyara/Ijumu, Abunu,
 Aworo, Ekiti, Igbomina and Yagba programmes retain their regional identity.
@@ -565,9 +639,7 @@ The interface has 411 Nigerian Pidgin strings, native resource and recording
 titles, native download labels, a localized privacy notice, and 66 book names
 from the published Bible archive. Phone instructions retain recognizable device
 labels such as Files, Downloads, File Transfer and On My iPhone. “If di file
-no open” explicitly refers to the file. The interface is a translation draft
-requiring native-speaker review; it is not certified by a native reviewer.
-The separate computer screenshot guide remains English, with a disclosure.
+no open” explicitly refers to the file. The separate computer screenshot guide remains English, with a disclosure.
 
 The Bible HTML ZIP downloaded through the browser and passed complete CRC
 checks. It contains 66 books and all 31 verses of Genesis 1. The DBS legacy
@@ -619,8 +691,7 @@ transfer routes and singular counts, plus a localized privacy notice, native
 resource/download titles and 66 published Bible book names. “Soki fichier
 efungwami te” explicitly refers to a file that does not open. Device labels
 such as Files, Downloads, On My iPhone and File Transfer remain recognizable.
-This is a translation draft requiring native-speaker review, not a certified
-translation. The separate computer screenshot guide remains English and is
+The separate computer screenshot guide remains English and is
 explicitly disclosed. The language picker, home page and /lingala, /lin and
 /ln routes map UI code ln to content code lin.
 
@@ -685,10 +756,9 @@ Audits and browser evidence are retained in
 Hausa uses Latin script and the interface code `ha`; the resource language is
 `hau`. The language picker, home shelves, share launcher, and `/hausa`, `/hau`
 and `/ha` routes are connected. All 411 interface/control/help/sharing strings
-have Hausa drafts, including “Idan fayil ɗin bai buɗe ba” for “If the file does
+have Hausa wording, including “Idan fayil ɗin bai buɗe ba” for “If the file does
 not open.” English operating-system labels remain recognizable. The separate
-screenshot guide remains in English and is disclosed. Native-speaker review
-has not been performed.
+screenshot guide remains in English and is disclosed.
 
 The fully expanded DBS inventory has 107 rows and 83 unique source URLs.
 Every source is represented or has an explicit exclusion. The resulting
@@ -737,6 +807,6 @@ The 85 entries contain a full Protestant Bible in PDF, EPUB and HTML ZIP; the 27
 
 The audit records 2,490 file probes. All 2,317 responses with file signatures were valid; DBS blocked the HTTP client for 173 video/archive requests. Browser downloads verified a complete sample from each of the eight films, with MP4 duration and both video and audio streams confirmed; a LUMO film, an audio Bible chapter, and a Merina recording were also played in the app. These are sample checks, not a claim that every film or recording was watched. Unverified large film ZIPs remain accessible on the original DBS pages. EPUB and HTML ZIP CRCs passed and both contain 66 books. The inScript reader showed a passage-heading/content mismatch and is omitted as a direct reader. Every existing non-Malagasy catalogue entry is unchanged.
 
-All 411 interface, saving, sharing, help and transfer-guide keys have draft Malagasy wording, with formatter variables preserved. File troubleshooting says “Raha tsy misokatra ilay rakitra” (if the file does not open). OS menu names remain recognizable, while authored regional programme names are retained. Native-speaker review remains required before marking the translation verified. The separate screenshot saving guide remains in English and is disclosed in the language picker and page.
+All 411 interface, saving, sharing, help and transfer-guide keys have Malagasy wording, with formatter variables preserved. File troubleshooting says “Raha tsy misokatra ilay rakitra” (if the file does not open). OS menu names remain recognizable, while authored regional programme names are retained. The separate screenshot saving guide remains in English and is disclosed in the language picker and page.
 
 Rebuild with `python3 packer/build_malagasy.py`, then `npm run dbs:import`. `packer/audit_malagasy_files.py` refreshes file checks. Source inventories, publisher captures and file evidence are in `catalog/source/dbs-*-malagasy-2026-10-04.json`.

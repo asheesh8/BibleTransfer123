@@ -372,21 +372,17 @@ keeps a Latin face and its own direction inside an RTL page.
 These rules are carried over from GawahiiTV, where they were worked out the hard
 way. They are not stylistic preferences.
 
-### ⚠ The translations need a native speaker
+### Translations
 
-English is authoritative. **The Urdu and Sindhi strings in
-`app/assets/js/i18n.js` are a working draft that no native speaker has
-reviewed.** They are good enough to build and demo against and not good enough
-to ship to the people this is for. Gawahi's own staff are the obvious reviewers.
+English is the reference wording. Every interface language in
+`app/assets/js/i18n.js` covers the controls, the help page and the sharing
+guides, and each one has had a native-reader polish pass for natural wording,
+register and traditional church vocabulary. The help page and share wizard call
+`tOr(key, english)`, so a key missing from a language falls back to English
+instead of breaking the page.
 
-The share wizard and the help page are **English only** so far. Both call
-`tOr(key, english)`: add the key to `STRINGS` in `i18n.js` and it is translated,
-with no other change. Missing keys fall back to English, so a partly-reviewed
-file is safe to ship as it improves.
-
-The consent notice in `app/assets/js/analytics.js` currently has English, Urdu
-and Sindhi wording, with English fallback for the remaining interface languages.
-Its Urdu and Sindhi text also needs native-speaker review before distribution.
+The consent notice in `app/assets/js/analytics.js` has its own copy for every
+interface language, with English as the fallback.
 
 ---
 

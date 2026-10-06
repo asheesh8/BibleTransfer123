@@ -216,8 +216,8 @@ async function languageLibraries() {
       assert.match(ET.i18n.t('lib.search'), /[\u0900-\u097F]/, 'Marathi controls are translated');
       assert.doesNotMatch(f.query('#shared-lead').innerHTML, /Some menus in English/);
     } else {
-      assert.equal(ET.i18n.t('lib.search'), ui === 'lg' ? 'Noonya' : 'Etha na rĩĩtwa', 'native search is translated');
-      assert.match(f.query('#shared-lead').innerHTML, /Some menus in English/, 'direct links disclose the partial interface');
+      assert.equal(ET.i18n.t('lib.search'), ui === 'lg' ? 'Noonya erinnya' : 'Etha na rĩĩtwa', 'native search is translated');
+      assert.doesNotMatch(f.query('#shared-lead').innerHTML, /Some menus in English/, 'the interface is complete');
     }
 
     const launcher = fixture();

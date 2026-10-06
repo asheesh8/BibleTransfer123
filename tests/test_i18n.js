@@ -56,15 +56,15 @@ test('literal interface and accessibility keys have an English fallback', () => 
   }
 });
 
-test('native draft controls render and untranslated guides use disclosed English', () => {
+test('native controls render and untranslated guides use disclosed English', () => {
   const { ET, dictionaries } = harness();
   ET.i18n.set('mr');
   for (const key of ['home.pick', 'lib.search', 'item.save', 'share.title', 'help.title']) {
     assert.match(ET.i18n.t(key), /[\u0900-\u097F]/, `Marathi ${key} is still English`);
   }
   ET.i18n.set('lg');
-  assert.equal(ET.i18n.t('lib.search'), 'Noonya');
-  assert.equal(ET.i18n.t('item.save'), 'Wanula');
+  assert.equal(ET.i18n.t('lib.search'), 'Noonya erinnya');
+  assert.equal(ET.i18n.t('item.save'), 'Tereka ku ssimu yange');
   ET.i18n.set('kik');
   assert.equal(ET.i18n.t('lib.search'), 'Etha na rĩĩtwa');
   ET.i18n.set('guz');
@@ -72,13 +72,16 @@ test('native draft controls render and untranslated guides use disclosed English
   assert.equal(ET.i18n.t('tab.home'), 'Inka');
   assert.equal(ET.i18n.t('type.scripture'), 'Amariko', 'Scripture must not say laws');
   ET.i18n.set('mas');
-  assert.equal(ET.i18n.t('item.read'), 'Aɨsʉ́m');
+  assert.equal(ET.i18n.t('item.read'), 'Aisom');
   for (const language of ['lg', 'kik', 'guz', 'mas']) {
     ET.i18n.set(language);
-    assert.equal(ET.i18n.meta(language).interfaceNote, 'Some menus in English');
-    assert.equal(dictionaries[language]['route.computer-iphone.4.p'], undefined, 'an unverified guide must not copy Swahili');
-    assert.equal(ET.i18n.tOr('route.computer-iphone.4.p', 'Copy the file'), 'Copy the file');
+    assert.equal(ET.i18n.meta(language).interfaceNote, 'Screenshot guide in English');
+    for (const key of ['route.computer-iphone.4.p', 'help.android.1.h', 'help.trouble.0.p', 'share.item']) {
+      assert.ok(dictionaries[language][key], `${language}.${key} falls back to English`);
+      assert.notEqual(dictionaries[language][key], dictionaries.swh[key], `${language}.${key} copies Swahili`);
+    }
   }
+  delete dictionaries.ur['ui.catalog.missing'];
   ET.i18n.set('ur');
   assert.match(ET.i18n.h('ui.catalog.missing'), /class="latin"/, 'an untranslated error stays readable in an RTL interface');
   assert.equal(ET.i18n.tOr('not.translated', 'Readable fallback'), 'Readable fallback');
@@ -96,10 +99,11 @@ test('resource counts select singular wording without forcing English', () => {
   assert.equal(ET.i18n.t('lib.countall', { n: 1 }), 'Kĩndũ 1');
   assert.equal(ET.i18n.t('lib.countall', { n: 2 }), 'Indo 2');
   ET.i18n.set('mas');
-  assert.equal(ET.i18n.t('lib.countall', { n: 1 }), 'Entóki 1');
-  assert.equal(ET.i18n.t('lib.countall', { n: 2 }), 'Intokitín 2');
+  assert.equal(ET.i18n.t('lib.countall', { n: 1 }), 'Entoki 1');
+  assert.equal(ET.i18n.t('lib.countall', { n: 2 }), 'Intokitin 2');
   ET.i18n.set('guz');
-  assert.equal(ET.i18n.t('lib.countall', { n: 1 }), '1 item');
+  assert.equal(ET.i18n.t('lib.countall', { n: 1 }), 'Egento 1');
+  assert.equal(ET.i18n.t('lib.countall', { n: 2 }), 'Ebinto 2');
   ET.i18n.set('cmn');
   assert.equal(ET.i18n.t('lib.countall', { n: 1 }), '共 1 项');
   assert.equal(ET.i18n.say('welcome.count', 'en', { n: 1 }), '1 resource: a film, Bible, or recording');
@@ -111,7 +115,10 @@ test('untranslated copy is marked as English and changes back when translated', 
     getAttribute(name) { return this.attributes[name]; },
     setAttribute(name, value) { this.attributes[name] = value; } });
   const heading = element('help.title');
-  const { ET } = harness({ '[data-i18n]': [heading] });
+  const { ET, dictionaries } = harness({ '[data-i18n]': [heading] });
+  // Every language is complete, so simulate a key a future change leaves untranslated.
+  delete dictionaries.mas['help.title'];
+  delete dictionaries.mas['route.computer-iphone.4.p'];
   ET.i18n.set('mas');
   assert.equal(heading.attributes.lang, 'en');
   assert.match(ET.i18n.tOrHTML('route.computer-iphone.4.p', 'Copy the file'), /lang="en" dir="ltr">Copy the file/);
