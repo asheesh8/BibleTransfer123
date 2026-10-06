@@ -1,0 +1,2681 @@
+{
+ "generated": "DBS rendered Xhosa inventory — 2026-10-06",
+ "languages": {
+  "xho": {
+   "name": "Xhosa",
+   "native": "isiXhosa",
+   "region": "South Africa",
+   "speakers": "~8.2 million",
+   "blurb": "IiBhayibhile, iifilimu neerekhodingi zobuKristu ngesiXhosa.",
+   "code": "xho",
+   "script": "latn",
+   "dir": "ltr",
+   "font": "latin"
+  }
+ },
+ "resources": [
+  {
+   "id": "xho-film-xho-xhosa-jesus",
+   "lang": "xho",
+   "type": "film",
+   "title": "JESUS",
+   "native": "UYesu",
+   "langName": "isiXhosa",
+   "source": "https://dbs.org/video/jesus/xho_xhosa_jesus",
+   "org": "Jesus Film Project",
+   "desc": "Ifilimu esekelwe eBhayibhileni ngesiXhosa. Khetha isahluko ofuna ukusibukela okanye ukusigcina.",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_01_the_beginning_1_jf6101_0_0_low.mp4",
+     "label": "Isahluko 1 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_02_birth_of_jesus_1_jf6102_0_0_low.mp4",
+     "label": "Isahluko 2 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_03_childhood_of_jesus_1_jf6103_0_0_low.mp4",
+     "label": "Isahluko 3 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_04_baptism_of_jesus_by_john_1_jf6104_0_0_low.mp4",
+     "label": "Isahluko 4 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_05_the_devil_tempts_jesus_1_jf6105_0_0_low.mp4",
+     "label": "Isahluko 5 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_06_jesus_proclaims_fulfillment_of_the_scriptures_1_jf6106_0_0_low.mp4",
+     "label": "Isahluko 6 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_07_parable_of_the_pharisee_and_tax_collector_1_jf6107_0_0_low.mp4",
+     "label": "Isahluko 7 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_08_miraculous_catch_of_fish_1_jf6108_0_0_low.mp4",
+     "label": "Isahluko 8 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_09_jairuss_daughter_brought_back_to_life_1_jf6109_0_0_low.mp4",
+     "label": "Isahluko 9 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_10_disciples_chosen_1_jf6110_0_0_low.mp4",
+     "label": "Isahluko 10 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_11_beatitudes_1_jf6111_0_0_low.mp4",
+     "label": "Isahluko 11 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_12_sermon_on_the_mount_1_jf6112_0_0_low.mp4",
+     "label": "Isahluko 12 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_13_blessed_are_those_who_hear_and_obey_1_jf6113_0_0_low.mp4",
+     "label": "Isahluko 13 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_14_sinful_woman_forgiven_1_jf6114_0_0_low.mp4",
+     "label": "Isahluko 14 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_15_women_disciples_1_jf6115_0_0_low.mp4",
+     "label": "Isahluko 15 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_16_john_the_baptist_in_prison_1_jf6116_0_0_low.mp4",
+     "label": "Isahluko 16 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_17_parable_of_the_sower_and_the_seed_1_jf6117_0_0_low.mp4",
+     "label": "Isahluko 17 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_18_parable_of_the_lamp_1_jf6118_0_0_low.mp4",
+     "label": "Isahluko 18 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_19_jesus_calms_the_storm_1_jf6119_0_0_low.mp4",
+     "label": "Isahluko 19 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_20_healing_of_the_demoniac_1_jf6120_0_0_low.mp4",
+     "label": "Isahluko 20 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_21_jesus_feeds_5000_1_jf6121_0_0_low.mp4",
+     "label": "Isahluko 21 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_22_peter_declares_jesus_to_be_the_christ_1_jf6122_0_0_low.mp4",
+     "label": "Isahluko 22 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_23_the_transfiguration_1_jf6123_0_0_low.mp4",
+     "label": "Isahluko 23 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_24_jesus_heals_boy_from_evil_spirit_1_jf6124_0_0_low.mp4",
+     "label": "Isahluko 24 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_25_the_lords_prayer_1_jf6125_0_0_low.mp4",
+     "label": "Isahluko 25 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_26_teaching_about_prayer_and_faith_1_jf6126_0_0_low.mp4",
+     "label": "Isahluko 26 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_27_woe_to_those_who_cause_others_to_sin_1_jf6127_0_0_low.mp4",
+     "label": "Isahluko 27 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_28_the_kingdom_of_god_as_a_mustard_seed_1_jf6128_0_0_low.mp4",
+     "label": "Isahluko 28 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_29_jesus_spends_time_with_sinners_1_jf6129_0_0_low.mp4",
+     "label": "Isahluko 29 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_30_healing_on_the_sabbath_1_jf6130_0_0_low.mp4",
+     "label": "Isahluko 30 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_31_parable_of_the_good_samaritan_1_jf6131_0_0_low.mp4",
+     "label": "Isahluko 31 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_32_healing_of_bartimaeus_1_jf6132_0_0_low.mp4",
+     "label": "Isahluko 32 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_33_jesus_and_zaccheus_1_jf6133_0_0_low.mp4",
+     "label": "Isahluko 33 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_34_jesus_predicts_his_death_and_resurrection_1_jf6134_0_0_low.mp4",
+     "label": "Isahluko 34 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_35_jesuss_triumphal_entry_1_jf6135_0_0_low.mp4",
+     "label": "Isahluko 35 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_36_jesus_weeps_over_jerusalem_1_jf6136_0_0_low.mp4",
+     "label": "Isahluko 36 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_37_jesus_drives_out_money_changers_1_jf6137_0_0_low.mp4",
+     "label": "Isahluko 37 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_38_widows_offering_1_jf6138_0_0_low.mp4",
+     "label": "Isahluko 38 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_39_annas_questions_jesuss_authority_1_jf6139_0_0_low.mp4",
+     "label": "Isahluko 39 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_40_parable_of_the_vineyard_and_tenants_1_jf6140_0_0_low.mp4",
+     "label": "Isahluko 40 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_41_paying_taxes_to_caesar_1_jf6141_0_0_low.mp4",
+     "label": "Isahluko 41 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_42_the_last_supper_1_jf6142_0_0_low.mp4",
+     "label": "Isahluko 42 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_43_upper_room_teaching_1_jf6143_0_0_low.mp4",
+     "label": "Isahluko 43 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_44_jesus_is_betrayed_and_arrested_1_jf6144_0_0_low.mp4",
+     "label": "Isahluko 44 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_45_peter_disowns_jesus_1_jf6145_0_0_low.mp4",
+     "label": "Isahluko 45 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_46_jesus_is_mocked_and_questioned_1_jf6146_0_0_low.mp4",
+     "label": "Isahluko 46 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_47_jesus_is_brought_to_pilate_1_jf6147_0_0_low.mp4",
+     "label": "Isahluko 47 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_48_jesus_is_brought_to_herod_1_jf6148_0_0_low.mp4",
+     "label": "Isahluko 48 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_49_jesus_is_sentenced_1_jf6149_0_0_low.mp4",
+     "label": "Isahluko 49 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_50_jesus_carries_his_cross_1_jf6150_0_0_low.mp4",
+     "label": "Isahluko 50 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_51_jesus_is_crucified_1_jf6151_0_0_low.mp4",
+     "label": "Isahluko 51 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_52_soldiers_gamble_for_jesuss_clothes_1_jf6152_0_0_low.mp4",
+     "label": "Isahluko 52 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_53_sign_on_the_cross_1_jf6153_0_0_low.mp4",
+     "label": "Isahluko 53 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_54_crucified_convicts_1_jf6154_0_0_low.mp4",
+     "label": "Isahluko 54 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_55_death_of_jesus_1_jf6155_0_0_low.mp4",
+     "label": "Isahluko 55 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_56_burial_of_jesus_1_jf6156_0_0_low.mp4",
+     "label": "Isahluko 56 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_57_angels_at_the_tomb_1_jf6157_0_0_low.mp4",
+     "label": "Isahluko 57 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_58_the_tomb_is_empty_1_jf6158_0_0_low.mp4",
+     "label": "Isahluko 58 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_59_resurrected_jesus_appears_1_jf6159_0_0_low.mp4",
+     "label": "Isahluko 59 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_60_great_commission_and_ascension_1_jf6160_0_0_low.mp4",
+     "label": "Isahluko 60 (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_61_invitation_to_know_jesus_personally_1_jf6161_0_0_low.mp4",
+     "label": "Isahluko 61 (MP4)"
+    },
+    {
+     "url": "https://download.dbs.org/Jesus/xho_xhosa/xho_jesus_chapters_high.zip",
+     "label": "Zonke izahluko (ZIP)"
+    },
+    {
+     "url": "https://download.dbs.org/Jesus/xho_xhosa/xho_jesus_chapters_low.zip",
+     "label": "Zonke izahluko (ZIP)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/films/xho_xhosa/xho_JESUS_low.mp4",
+     "label": "Ifilimu epheleleyo (MP4) · SD"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/films/xho_xhosa/xho_JESUS.mp4",
+     "label": "Ifilimu epheleleyo (MP4) · HD"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/video/jesus/xho_xhosa_jesus",
+     "label": "Bona kwi-DBS"
+    }
+   ],
+   "duration": "2:07:53",
+   "year": null,
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_01_the_beginning_1_jf6101_0_0_low.mp4",
+      "title": "Isahluko 1"
+     },
+     {
+      "n": 2,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_02_birth_of_jesus_1_jf6102_0_0_low.mp4",
+      "title": "Isahluko 2"
+     },
+     {
+      "n": 3,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_03_childhood_of_jesus_1_jf6103_0_0_low.mp4",
+      "title": "Isahluko 3"
+     },
+     {
+      "n": 4,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_04_baptism_of_jesus_by_john_1_jf6104_0_0_low.mp4",
+      "title": "Isahluko 4"
+     },
+     {
+      "n": 5,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_05_the_devil_tempts_jesus_1_jf6105_0_0_low.mp4",
+      "title": "Isahluko 5"
+     },
+     {
+      "n": 6,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_06_jesus_proclaims_fulfillment_of_the_scriptures_1_jf6106_0_0_low.mp4",
+      "title": "Isahluko 6"
+     },
+     {
+      "n": 7,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_07_parable_of_the_pharisee_and_tax_collector_1_jf6107_0_0_low.mp4",
+      "title": "Isahluko 7"
+     },
+     {
+      "n": 8,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_08_miraculous_catch_of_fish_1_jf6108_0_0_low.mp4",
+      "title": "Isahluko 8"
+     },
+     {
+      "n": 9,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_09_jairuss_daughter_brought_back_to_life_1_jf6109_0_0_low.mp4",
+      "title": "Isahluko 9"
+     },
+     {
+      "n": 10,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_10_disciples_chosen_1_jf6110_0_0_low.mp4",
+      "title": "Isahluko 10"
+     },
+     {
+      "n": 11,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_11_beatitudes_1_jf6111_0_0_low.mp4",
+      "title": "Isahluko 11"
+     },
+     {
+      "n": 12,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_12_sermon_on_the_mount_1_jf6112_0_0_low.mp4",
+      "title": "Isahluko 12"
+     },
+     {
+      "n": 13,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_13_blessed_are_those_who_hear_and_obey_1_jf6113_0_0_low.mp4",
+      "title": "Isahluko 13"
+     },
+     {
+      "n": 14,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_14_sinful_woman_forgiven_1_jf6114_0_0_low.mp4",
+      "title": "Isahluko 14"
+     },
+     {
+      "n": 15,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_15_women_disciples_1_jf6115_0_0_low.mp4",
+      "title": "Isahluko 15"
+     },
+     {
+      "n": 16,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_16_john_the_baptist_in_prison_1_jf6116_0_0_low.mp4",
+      "title": "Isahluko 16"
+     },
+     {
+      "n": 17,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_17_parable_of_the_sower_and_the_seed_1_jf6117_0_0_low.mp4",
+      "title": "Isahluko 17"
+     },
+     {
+      "n": 18,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_18_parable_of_the_lamp_1_jf6118_0_0_low.mp4",
+      "title": "Isahluko 18"
+     },
+     {
+      "n": 19,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_19_jesus_calms_the_storm_1_jf6119_0_0_low.mp4",
+      "title": "Isahluko 19"
+     },
+     {
+      "n": 20,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_20_healing_of_the_demoniac_1_jf6120_0_0_low.mp4",
+      "title": "Isahluko 20"
+     },
+     {
+      "n": 21,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_21_jesus_feeds_5000_1_jf6121_0_0_low.mp4",
+      "title": "Isahluko 21"
+     },
+     {
+      "n": 22,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_22_peter_declares_jesus_to_be_the_christ_1_jf6122_0_0_low.mp4",
+      "title": "Isahluko 22"
+     },
+     {
+      "n": 23,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_23_the_transfiguration_1_jf6123_0_0_low.mp4",
+      "title": "Isahluko 23"
+     },
+     {
+      "n": 24,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_24_jesus_heals_boy_from_evil_spirit_1_jf6124_0_0_low.mp4",
+      "title": "Isahluko 24"
+     },
+     {
+      "n": 25,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_25_the_lords_prayer_1_jf6125_0_0_low.mp4",
+      "title": "Isahluko 25"
+     },
+     {
+      "n": 26,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_26_teaching_about_prayer_and_faith_1_jf6126_0_0_low.mp4",
+      "title": "Isahluko 26"
+     },
+     {
+      "n": 27,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_27_woe_to_those_who_cause_others_to_sin_1_jf6127_0_0_low.mp4",
+      "title": "Isahluko 27"
+     },
+     {
+      "n": 28,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_28_the_kingdom_of_god_as_a_mustard_seed_1_jf6128_0_0_low.mp4",
+      "title": "Isahluko 28"
+     },
+     {
+      "n": 29,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_29_jesus_spends_time_with_sinners_1_jf6129_0_0_low.mp4",
+      "title": "Isahluko 29"
+     },
+     {
+      "n": 30,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_30_healing_on_the_sabbath_1_jf6130_0_0_low.mp4",
+      "title": "Isahluko 30"
+     },
+     {
+      "n": 31,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_31_parable_of_the_good_samaritan_1_jf6131_0_0_low.mp4",
+      "title": "Isahluko 31"
+     },
+     {
+      "n": 32,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_32_healing_of_bartimaeus_1_jf6132_0_0_low.mp4",
+      "title": "Isahluko 32"
+     },
+     {
+      "n": 33,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_33_jesus_and_zaccheus_1_jf6133_0_0_low.mp4",
+      "title": "Isahluko 33"
+     },
+     {
+      "n": 34,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_34_jesus_predicts_his_death_and_resurrection_1_jf6134_0_0_low.mp4",
+      "title": "Isahluko 34"
+     },
+     {
+      "n": 35,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_35_jesuss_triumphal_entry_1_jf6135_0_0_low.mp4",
+      "title": "Isahluko 35"
+     },
+     {
+      "n": 36,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_36_jesus_weeps_over_jerusalem_1_jf6136_0_0_low.mp4",
+      "title": "Isahluko 36"
+     },
+     {
+      "n": 37,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_37_jesus_drives_out_money_changers_1_jf6137_0_0_low.mp4",
+      "title": "Isahluko 37"
+     },
+     {
+      "n": 38,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_38_widows_offering_1_jf6138_0_0_low.mp4",
+      "title": "Isahluko 38"
+     },
+     {
+      "n": 39,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_39_annas_questions_jesuss_authority_1_jf6139_0_0_low.mp4",
+      "title": "Isahluko 39"
+     },
+     {
+      "n": 40,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_40_parable_of_the_vineyard_and_tenants_1_jf6140_0_0_low.mp4",
+      "title": "Isahluko 40"
+     },
+     {
+      "n": 41,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_41_paying_taxes_to_caesar_1_jf6141_0_0_low.mp4",
+      "title": "Isahluko 41"
+     },
+     {
+      "n": 42,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_42_the_last_supper_1_jf6142_0_0_low.mp4",
+      "title": "Isahluko 42"
+     },
+     {
+      "n": 43,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_43_upper_room_teaching_1_jf6143_0_0_low.mp4",
+      "title": "Isahluko 43"
+     },
+     {
+      "n": 44,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_44_jesus_is_betrayed_and_arrested_1_jf6144_0_0_low.mp4",
+      "title": "Isahluko 44"
+     },
+     {
+      "n": 45,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_45_peter_disowns_jesus_1_jf6145_0_0_low.mp4",
+      "title": "Isahluko 45"
+     },
+     {
+      "n": 46,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_46_jesus_is_mocked_and_questioned_1_jf6146_0_0_low.mp4",
+      "title": "Isahluko 46"
+     },
+     {
+      "n": 47,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_47_jesus_is_brought_to_pilate_1_jf6147_0_0_low.mp4",
+      "title": "Isahluko 47"
+     },
+     {
+      "n": 48,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_48_jesus_is_brought_to_herod_1_jf6148_0_0_low.mp4",
+      "title": "Isahluko 48"
+     },
+     {
+      "n": 49,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_49_jesus_is_sentenced_1_jf6149_0_0_low.mp4",
+      "title": "Isahluko 49"
+     },
+     {
+      "n": 50,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_50_jesus_carries_his_cross_1_jf6150_0_0_low.mp4",
+      "title": "Isahluko 50"
+     },
+     {
+      "n": 51,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_51_jesus_is_crucified_1_jf6151_0_0_low.mp4",
+      "title": "Isahluko 51"
+     },
+     {
+      "n": 52,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_52_soldiers_gamble_for_jesuss_clothes_1_jf6152_0_0_low.mp4",
+      "title": "Isahluko 52"
+     },
+     {
+      "n": 53,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_53_sign_on_the_cross_1_jf6153_0_0_low.mp4",
+      "title": "Isahluko 53"
+     },
+     {
+      "n": 54,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_54_crucified_convicts_1_jf6154_0_0_low.mp4",
+      "title": "Isahluko 54"
+     },
+     {
+      "n": 55,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_55_death_of_jesus_1_jf6155_0_0_low.mp4",
+      "title": "Isahluko 55"
+     },
+     {
+      "n": 56,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_56_burial_of_jesus_1_jf6156_0_0_low.mp4",
+      "title": "Isahluko 56"
+     },
+     {
+      "n": 57,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_57_angels_at_the_tomb_1_jf6157_0_0_low.mp4",
+      "title": "Isahluko 57"
+     },
+     {
+      "n": 58,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_58_the_tomb_is_empty_1_jf6158_0_0_low.mp4",
+      "title": "Isahluko 58"
+     },
+     {
+      "n": 59,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_59_resurrected_jesus_appears_1_jf6159_0_0_low.mp4",
+      "title": "Isahluko 59"
+     },
+     {
+      "n": 60,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_60_great_commission_and_ascension_1_jf6160_0_0_low.mp4",
+      "title": "Isahluko 60"
+     },
+     {
+      "n": 61,
+      "file": "https://video.dbs.org/Jesus/chapters/xho_xhosa/xho_jesus_chapter_61_invitation_to_know_jesus_personally_1_jf6161_0_0_low.mp4",
+      "title": "Isahluko 61"
+     }
+    ]
+   }
+  },
+  {
+   "id": "xho-film-xho-xhosa-magdalena",
+   "lang": "xho",
+   "type": "film",
+   "title": "Magdalena",
+   "native": "Magdalena",
+   "langName": "isiXhosa",
+   "source": "https://dbs.org/video/magdalena/xho_xhosa_magdalena",
+   "org": "Jesus Film Project",
+   "desc": "Ifilimu esekelwe eBhayibhileni ngesiXhosa.",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/Magdalena/films/xho_xhosa/xho_Magdalena_low.mp4",
+     "label": "Ifilimu epheleleyo (MP4) · SD"
+    },
+    {
+     "url": "https://video.dbs.org/Magdalena/films/xho_xhosa/xho_Magdalena.mp4",
+     "label": "Ifilimu epheleleyo (MP4) · HD"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/video/magdalena/xho_xhosa_magdalena",
+     "label": "Bona kwi-DBS"
+    }
+   ],
+   "duration": "58:24",
+   "year": null,
+   "play": {
+    "kind": "file",
+    "sd": "https://video.dbs.org/Magdalena/films/xho_xhosa/xho_Magdalena_low.mp4",
+    "hd": "https://video.dbs.org/Magdalena/films/xho_xhosa/xho_Magdalena.mp4"
+   }
+  },
+  {
+   "id": "xho-film-xho-xhosa-story-of-jesus-for-children",
+   "lang": "xho",
+   "type": "film",
+   "title": "Story of Jesus for Children",
+   "native": "Ibali likaYesu labantwana",
+   "langName": "isiXhosa",
+   "source": "https://dbs.org/video/storyjesus/xho_xhosa_story_of_jesus_for_children",
+   "org": "Jesus Film Project",
+   "desc": "Ifilimu esekelwe eBhayibhileni ngesiXhosa.",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/StoryJesus/films/xho_xhosa/xho_Story_of_Jesus_for_Children_low.mp4",
+     "label": "Ifilimu epheleleyo (MP4) · SD"
+    },
+    {
+     "url": "https://video.dbs.org/StoryJesus/films/xho_xhosa/xho_Story_of_Jesus_for_Children.mp4",
+     "label": "Ifilimu epheleleyo (MP4) · HD"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/video/storyjesus/xho_xhosa_story_of_jesus_for_children",
+     "label": "Bona kwi-DBS"
+    }
+   ],
+   "duration": "1:08:08",
+   "year": null,
+   "play": {
+    "kind": "file",
+    "sd": "https://video.dbs.org/StoryJesus/films/xho_xhosa/xho_Story_of_Jesus_for_Children_low.mp4",
+    "hd": "https://video.dbs.org/StoryJesus/films/xho_xhosa/xho_Story_of_Jesus_for_Children.mp4"
+   }
+  },
+  {
+   "id": "xho-film-xho-xhosa-rescue-project-deaf-gospel",
+   "lang": "xho",
+   "type": "film",
+   "title": "Rescue Project Deaf Gospel",
+   "native": "Ivangeli ngolwimi lwezandla",
+   "langName": "isiXhosa",
+   "source": "https://dbs.org/video/deafproject/xho_xhosa_rescue_project_deaf_gospel",
+   "org": "Jesus Film Project",
+   "desc": "Ivangeli ngolwimi lwezandla lwabangevayo, ekhutshwe kunye neXhosa kwi-DBS.",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/DeafProject/films/xho_xhosa/xho_Rescue_Project_Deaf_Gospel_low.mp4",
+     "label": "Ifilimu epheleleyo (MP4) · SD"
+    },
+    {
+     "url": "https://video.dbs.org/DeafProject/films/xho_xhosa/xho_Rescue_Project_Deaf_Gospel.mp4",
+     "label": "Ifilimu epheleleyo (MP4) · HD"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/video/deafproject/xho_xhosa_rescue_project_deaf_gospel",
+     "label": "Bona kwi-DBS"
+    }
+   ],
+   "duration": "28:17",
+   "year": null,
+   "play": {
+    "kind": "file",
+    "sd": "https://video.dbs.org/DeafProject/films/xho_xhosa/xho_Rescue_Project_Deaf_Gospel_low.mp4",
+    "hd": "https://video.dbs.org/DeafProject/films/xho_xhosa/xho_Rescue_Project_Deaf_Gospel.mp4"
+   }
+  },
+  {
+   "id": "xho-grn-15611",
+   "lang": "xho",
+   "type": "audio",
+   "title": "Good News",
+   "native": "Iindaba Ezilungileyo",
+   "langName": "isiXhosa",
+   "source": "https://dbs.org/audio/collections/xho_GlobalRecordings_xhosa",
+   "org": "Global Recordings Network",
+   "desc": "Amabali eBhayibhile, iingoma nemiyalezo yobuKristu erekhodiweyo ngu-Global Recordings Network.",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20001%20Introduction%20Picture%201%20In%20the%20Beginning%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 1 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20002%20Picture%202%20The%20Word%20of%20God%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 2 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20003%20Picture%203%20Creation%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 3 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20004%20Picture%204%20Adam%20and%20Eve%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 4 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20005%20Picture%205%20Cain%20and%20Abel%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 5 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20006%20Picture%206%20Noah%27s%20Ark%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 6 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20007%20Picture%207%20The%20Flood%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 7 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20008%20Picture%208%20Abraham%20Sarah%20and%20Isaac%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 8 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20009%20Picture%209%20Moses%20and%20the%20Law%20of%20God%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 9 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20010%20Picture%2010%20The%20Ten%20Commandments%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 10 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20011%20Picture%2011%20Sacrifice%20for%20Sin%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 11 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20012%20Picture%2012%20A%20Saviour%20Promised%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 12 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20013%20Picture%2013%20The%20Birth%20of%20Jesus%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 13 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20014%20Picture%2014%20Jesus%20the%20Teacher%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 14 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20015%20Picture%2015%20Miracles%20of%20Jesus%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 15 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20016%20Picture%2016%20Jesus%20Suffers%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 16 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20017%20Picture%2017%20Jesus%20is%20Crucified%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 17 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20018%20Picture%2018%20The%20Resurrection%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 18 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20019%20Picture%2019%20Thomas%20Believes%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 19 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20020%20Picture%2020%20The%20Ascension%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 20 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20021%20Picture%2021%20The%20Empty%20Cross%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 21 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20022%20Picture%2022%20The%20Two%20Roads%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 22 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20023%20Picture%2023%20God%27s%20Children%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 23 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20024%20Picture%2024%20Born%20Again%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 24 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20025%20Picture%2025%20The%20Holy%20Spirit%20Comes%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 25 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20026%20Picture%2026%20Walking%20in%20the%20Light%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 26 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20027%20Picture%2027%20A%20New%20Person%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 27 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20028%20Picture%2028%20The%20Christian%20Family%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 28 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20029%20Picture%2029%20Love%20Your%20Enemies%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 29 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20030%20Picture%2030%20Jesus%20is%20the%20Powerful%20One%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 30 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20031%20Picture%2031%20Casting%20out%20Evil%20Spirits%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 31 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20032%20Picture%2032%20Temptation%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 32 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20033%20Picture%2033%20If%20We%20Sin%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 33 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20034%20Picture%2034%20Sickness%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 34 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20035%20Picture%2035%20Death%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 35 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20036%20Picture%2036%20The%20Body%20of%20Christ%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 36 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20037%20Picture%2037%20Meeting%20for%20Worship%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 37 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20038%20Picture%2038%20Jesus%20Will%20Return%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 38 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20039%20Picture%2039%20Bearing%20Fruit%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 39 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20040%20Picture%2040%20Witnessing%2015611.mp3",
+     "label": "Iindaba Ezilungileyo · Inxalenye 40 (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/xho_GlobalRecordings_xhosa",
+     "label": "Bona kwi-DBS"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/grn/xho_GlobalRecordings_xhosa",
+   "stats": "40",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20001%20Introduction%20Picture%201%20In%20the%20Beginning%2015611.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20001%20Introduction%20Picture%201%20In%20the%20Beginning%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 1"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20002%20Picture%202%20The%20Word%20of%20God%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 2"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20003%20Picture%203%20Creation%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 3"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20004%20Picture%204%20Adam%20and%20Eve%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 4"
+     },
+     {
+      "n": 5,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20005%20Picture%205%20Cain%20and%20Abel%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 5"
+     },
+     {
+      "n": 6,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20006%20Picture%206%20Noah%27s%20Ark%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 6"
+     },
+     {
+      "n": 7,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20007%20Picture%207%20The%20Flood%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 7"
+     },
+     {
+      "n": 8,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20008%20Picture%208%20Abraham%20Sarah%20and%20Isaac%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 8"
+     },
+     {
+      "n": 9,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20009%20Picture%209%20Moses%20and%20the%20Law%20of%20God%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 9"
+     },
+     {
+      "n": 10,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20010%20Picture%2010%20The%20Ten%20Commandments%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 10"
+     },
+     {
+      "n": 11,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20011%20Picture%2011%20Sacrifice%20for%20Sin%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 11"
+     },
+     {
+      "n": 12,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20012%20Picture%2012%20A%20Saviour%20Promised%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 12"
+     },
+     {
+      "n": 13,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20013%20Picture%2013%20The%20Birth%20of%20Jesus%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 13"
+     },
+     {
+      "n": 14,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20014%20Picture%2014%20Jesus%20the%20Teacher%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 14"
+     },
+     {
+      "n": 15,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20015%20Picture%2015%20Miracles%20of%20Jesus%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 15"
+     },
+     {
+      "n": 16,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20016%20Picture%2016%20Jesus%20Suffers%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 16"
+     },
+     {
+      "n": 17,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20017%20Picture%2017%20Jesus%20is%20Crucified%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 17"
+     },
+     {
+      "n": 18,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20018%20Picture%2018%20The%20Resurrection%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 18"
+     },
+     {
+      "n": 19,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20019%20Picture%2019%20Thomas%20Believes%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 19"
+     },
+     {
+      "n": 20,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20020%20Picture%2020%20The%20Ascension%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 20"
+     },
+     {
+      "n": 21,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20021%20Picture%2021%20The%20Empty%20Cross%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 21"
+     },
+     {
+      "n": 22,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20022%20Picture%2022%20The%20Two%20Roads%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 22"
+     },
+     {
+      "n": 23,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20023%20Picture%2023%20God%27s%20Children%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 23"
+     },
+     {
+      "n": 24,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20024%20Picture%2024%20Born%20Again%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 24"
+     },
+     {
+      "n": 25,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20025%20Picture%2025%20The%20Holy%20Spirit%20Comes%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 25"
+     },
+     {
+      "n": 26,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20026%20Picture%2026%20Walking%20in%20the%20Light%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 26"
+     },
+     {
+      "n": 27,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20027%20Picture%2027%20A%20New%20Person%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 27"
+     },
+     {
+      "n": 28,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20028%20Picture%2028%20The%20Christian%20Family%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 28"
+     },
+     {
+      "n": 29,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20029%20Picture%2029%20Love%20Your%20Enemies%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 29"
+     },
+     {
+      "n": 30,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20030%20Picture%2030%20Jesus%20is%20the%20Powerful%20One%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 30"
+     },
+     {
+      "n": 31,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20031%20Picture%2031%20Casting%20out%20Evil%20Spirits%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 31"
+     },
+     {
+      "n": 32,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20032%20Picture%2032%20Temptation%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 32"
+     },
+     {
+      "n": 33,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20033%20Picture%2033%20If%20We%20Sin%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 33"
+     },
+     {
+      "n": 34,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20034%20Picture%2034%20Sickness%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 34"
+     },
+     {
+      "n": 35,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20035%20Picture%2035%20Death%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 35"
+     },
+     {
+      "n": 36,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20036%20Picture%2036%20The%20Body%20of%20Christ%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 36"
+     },
+     {
+      "n": 37,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20037%20Picture%2037%20Meeting%20for%20Worship%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 37"
+     },
+     {
+      "n": 38,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20038%20Picture%2038%20Jesus%20Will%20Return%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 38"
+     },
+     {
+      "n": 39,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20039%20Picture%2039%20Bearing%20Fruit%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 39"
+     },
+     {
+      "n": 40,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Good%20News%2015611/isiXhosa%20Good%20News%20040%20Picture%2040%20Witnessing%2015611.mp3",
+      "title": "Iindaba Ezilungileyo · Inxalenye 40"
+     }
+    ]
+   }
+  },
+  {
+   "id": "xho-grn-82273",
+   "lang": "xho",
+   "type": "audio",
+   "title": "Songs by Newborn Gospel Choir w Sesotho",
+   "native": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu)",
+   "langName": "isiXhosa",
+   "source": "https://dbs.org/audio/collections/xho_GlobalRecordings_xhosa",
+   "org": "Global Recordings Network",
+   "desc": "Amabali eBhayibhile, iingoma nemiyalezo yobuKristu erekhodiweyo ngu-Global Recordings Network.",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20001%20Sesotho%20When%20we%20Drive%20the%20Lambs%20of%20t%2082273.mp3",
+     "label": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu) · Inxalenye 1 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20002%20Amen%2082273.mp3",
+     "label": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu) · Inxalenye 2 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20003%20Kanan%20We%20Will%20Arrive%2082273.mp3",
+     "label": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu) · Inxalenye 3 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20004%20My%20Soul%20is%20Troubled%2082273.mp3",
+     "label": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu) · Inxalenye 4 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20005%20It%20Will%20be%20Like%20This%20When%20We%20Pray%2082273.mp3",
+     "label": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu) · Inxalenye 5 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20006%20Sesotho%20Thy%20Burden%20is%20Light%2082273.mp3",
+     "label": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu) · Inxalenye 6 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20007%20Nothing%20defeats%20Jesu%2082273.mp3",
+     "label": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu) · Inxalenye 7 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20008%20Sesotho%20We%20Promise%20You%20Our%20Lord%2082273.mp3",
+     "label": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu) · Inxalenye 8 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20009%20Sesotho%20When%20In%20Trouble%20My%20Jesus%20See%2082273.mp3",
+     "label": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu) · Inxalenye 9 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20010%20Blood%20of%20the%20Lamb%2082273.mp3",
+     "label": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu) · Inxalenye 10 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20011%20Sesotho%20Newborn%20of%20God%2082273.mp3",
+     "label": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu) · Inxalenye 11 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20012%20Amen%2082273.mp3",
+     "label": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu) · Inxalenye 12 (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/xho_GlobalRecordings_xhosa",
+     "label": "Bona kwi-DBS"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/grn/xho_GlobalRecordings_xhosa",
+   "stats": "12",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20001%20Sesotho%20When%20we%20Drive%20the%20Lambs%20of%20t%2082273.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20001%20Sesotho%20When%20we%20Drive%20the%20Lambs%20of%20t%2082273.mp3",
+      "title": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu) · Inxalenye 1"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20002%20Amen%2082273.mp3",
+      "title": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu) · Inxalenye 2"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20003%20Kanan%20We%20Will%20Arrive%2082273.mp3",
+      "title": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu) · Inxalenye 3"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20004%20My%20Soul%20is%20Troubled%2082273.mp3",
+      "title": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu) · Inxalenye 4"
+     },
+     {
+      "n": 5,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20005%20It%20Will%20be%20Like%20This%20When%20We%20Pray%2082273.mp3",
+      "title": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu) · Inxalenye 5"
+     },
+     {
+      "n": 6,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20006%20Sesotho%20Thy%20Burden%20is%20Light%2082273.mp3",
+      "title": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu) · Inxalenye 6"
+     },
+     {
+      "n": 7,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20007%20Nothing%20defeats%20Jesu%2082273.mp3",
+      "title": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu) · Inxalenye 7"
+     },
+     {
+      "n": 8,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20008%20Sesotho%20We%20Promise%20You%20Our%20Lord%2082273.mp3",
+      "title": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu) · Inxalenye 8"
+     },
+     {
+      "n": 9,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20009%20Sesotho%20When%20In%20Trouble%20My%20Jesus%20See%2082273.mp3",
+      "title": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu) · Inxalenye 9"
+     },
+     {
+      "n": 10,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20010%20Blood%20of%20the%20Lamb%2082273.mp3",
+      "title": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu) · Inxalenye 10"
+     },
+     {
+      "n": 11,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20011%20Sesotho%20Newborn%20of%20God%2082273.mp3",
+      "title": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu) · Inxalenye 11"
+     },
+     {
+      "n": 12,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%2082273/isiXhosa%20Songs%20by%20Newborn%20Gospel%20Choir%20w%20Sesotho%20012%20Amen%2082273.mp3",
+      "title": "Iingoma zeNewborn Gospel Choir (kunye nesiSuthu) · Inxalenye 12"
+     }
+    ]
+   }
+  },
+  {
+   "id": "xho-grn-61039",
+   "lang": "xho",
+   "type": "audio",
+   "title": "The Living Christ",
+   "native": "UKristu Ophilayo",
+   "langName": "isiXhosa",
+   "source": "https://dbs.org/audio/collections/xho_GlobalRecordings_xhosa",
+   "org": "Global Recordings Network",
+   "desc": "Amabali eBhayibhile, iingoma nemiyalezo yobuKristu erekhodiweyo ngu-Global Recordings Network.",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20001%20Picture%201%20Christ%20in%20the%20Beginning%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 1 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20002%20Picture%202%20God%20Created%20all%20Things%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 2 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20003%20Picture%203%20Satan%20Tempts%20Adam%20and%20Eve%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 3 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20004%20Picture%204%20Adam%20and%20Eve%20Cast%20Out%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 4 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20005%20Picture%205%20God%27s%20Promise%20to%20Abraham%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 5 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20006%20Picture%206%20Zechariah%20and%20the%20Angel%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 6 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20007%20Picture%207%20The%20Angel%20Speaks%20to%20Mary%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 7 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20008%20Picture%208%20The%20Angel%20and%20Joseph%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 8 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20009%20Picture%209%20The%20Birth%20of%20Jesus%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 9 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20010%20Picture%2010%20The%20Shepherds%20and%20the%20Angels%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 10 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20011%20Picture%2011%20The%20Shepherds%20Visit%20Baby%20Jesus%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 11 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20012%20Picture%2012%20Simeon%20Prophesies%20about%20Jesus%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 12 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20013%20Picture%2013%20The%20Visit%20of%20the%20Wise%20Men%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 13 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20014%20Picture%2014%20The%20Boy%20Jesus%20at%20the%20Temple%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 14 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20015%20Picture%2015%20The%20Message%20of%20John%20the%20Baptist%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 15 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20016%20Picture%2016%20The%20Baptism%20of%20Jesus%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 16 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20017%20Picture%2017%20Jesus%20Tested%20by%20Satan%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 17 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20018%20Picture%2018%20The%20Marriage%20Feast%20at%20Cana%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 18 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20019%20Picture%2019%20Jesus%20Teaches%20Nicodemus%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 19 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20020%20Picture%2020%20Jesus%20and%20the%20Samaritan%20Woman%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 20 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20021%20Picture%2021%20Jesus%20and%20the%20Official%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 21 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20022%20Picture%2022%20Jesus%20Calls%20the%20First%20Disciples%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 22 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20023%20Picture%2023%20The%20Great%20Catch%20of%20Fish%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 23 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20024%20Picture%2024%20Jesus%20Drives%20Out%20an%20Evil%20Spirit%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 24 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20025%20Picture%2025%20Jesus%20Heals%20Peter%27s%20Mother-in-Law%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 25 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20026%20Picture%2026%20Jesus%20Touches%20a%20Man%20with%20Leprosy%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 26 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20027%20Picture%2027%20Jesus%20Heals%20a%20Paralysed%20Man%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 27 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20028%20Picture%2028%20Jesus%20calls%20Matthew%20to%20Follow%20Him%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 28 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20029%20Picture%2029%20Jesus%20at%20Matthew%27s%20Feast%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 29 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20030%20Picture%2030%20Jesus%20Heals%20the%20Man%20at%20the%20Pool%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 30 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20031%20Picture%2031%20Disciples%20Pick%20Grain%20on%20the%20Sabbath%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 31 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20032%20Picture%2032%20Jesus%20Heals%20a%20Withered%20Hand%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 32 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20033%20Picture%2033%20Jesus%20Teaches%20the%20People%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 33 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20034%20Picture%2034%20Teaching%20about%20Light%20in%20the%20Darkness%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 34 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20035%20Picture%2035%20Teaching%20about%20Revenge%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 35 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20036%20Picture%2036%20Teaching%20about%20Prayer%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 36 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20037%20Picture%2037%20The%20Two%20Ways%20of%20Life%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 37 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20038%20Picture%2038%20The%20House%20on%20the%20Rock%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 38 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20039%20Picture%2039%20Jesus%20Raises%20a%20Widow%27s%20Son%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 39 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20040%20Picture%2040%20John%20the%20Baptist%20in%20Prison%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 40 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20041%20Picture%2041%20A%20Woman%20Washes%20Jesus%27%20Feet%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 41 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20042%20Picture%2042%20The%20Parable%20of%20the%20Sower%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 42 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20043%20Picture%2043%20The%20Parable%20of%20the%20Seed%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 43 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20044%20Picture%2044%20The%20Parable%20of%20the%20Weeds%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 44 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20045%20Picture%2045%20The%20Parable%20of%20the%20Hidden%20Treasure%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 45 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20046%20Picture%2046%20Jesus%20Calms%20the%20Storm%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 46 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20047%20Picture%2047%20Jesus%20Heals%20a%20Man%20with%20Many%20Demons%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 47 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20048%20Picture%2048%20The%20Healing%20of%20a%20Woman%20in%20the%20Crowd%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 48 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20049%20Picture%2049%20A%20Dead%20Girl%20is%20Raised%20to%20Life%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 49 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20050%20Picture%2050%20Jesus%20Sends%20Out%20the%20Twelve%20Disciples%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 50 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20051%20Picture%2051%20Jesus%20Feeds%20Five%20Thousand%20People%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 51 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20052%20Picture%2052%20Jesus%20Walks%20on%20the%20Water%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 52 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20053%20Picture%2053%20The%20Bread%20of%20Life%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 53 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20054%20Picture%2054%20The%20Faith%20of%20a%20Foreign%20Woman%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 54 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20055%20Picture%2055%20The%20Healing%20of%20a%20Deaf%20and%20Dumb%20Man%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 55 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20056%20Picture%2056%20Jesus%20Heals%20a%20Blind%20Man%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 56 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20057%20Picture%2057%20Peter%27s%20Confession%20of%20the%20Christ%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 57 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20058%20Picture%2058%20The%20Transfiguration%20of%20Jesus%20Christ%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 58 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20059%20Picture%2059%20Jesus%20Heals%20a%20Boy%20with%20a%20Demon%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 59 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20060%20Picture%2060%20Peter%20Pays%20the%20Temple%20Tax%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 60 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20061%20Picture%2061%20Who%20is%20the%20Greatest%20in%20God%27s%20Kingdom%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 61 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20062%20Picture%2062%20Parable%20of%20the%20Lost%20Sheep%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 62 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20063%20Picture%2063%20Parable%20of%20the%20Unforgiving%20Servant%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 63 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20064%20Picture%2064%20The%20Woman%20Caught%20in%20Adultery%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 64 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20065%20Picture%2065%20Jesus%20Heals%20a%20Man%20Born%20Blind%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 65 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20066%20Picture%2066%20Parable%20of%20the%20Good%20Shepherd%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 66 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20067%20Picture%2067%20Parable%20of%20the%20Good%20Samaritan%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 67 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20068%20Picture%2068%20Jesus%20at%20the%20Home%20of%20Mary%20and%20Martha%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 68 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20069%20Picture%2069%20Parable%20of%20the%20Friend%20at%20Midnight%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 69 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20070%20Picture%2070%20Parable%20of%20the%20Rich%20Fool%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 70 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20071%20Picture%2071%20Servants%20Ready%20for%20their%20Master%27s%20Return%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 71 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20072%20Picture%2072%20Jesus%20Heals%20a%20Crippled%20Woman%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 72 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20073%20Picture%2073%20Parable%20of%20the%20Great%20Feast%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 73 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20074%20Picture%2074%20Parable%20of%20the%20Lost%20Coin%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 74 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20075%20Picture%2075%20Parable%20of%20the%20Lost%20Son%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 75 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20076%20Picture%2076%20The%20Lost%20Son%20Among%20the%20Pigs%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 76 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20077%20Picture%2077%20The%20Lost%20Son%20Returns%20Home%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 77 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20078%20Picture%2078%20The%20Rich%20Man%20and%20the%20Beggar%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 78 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20079%20Picture%2079%20Jesus%20Raises%20Lazarus%20from%20Death%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 79 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20080%20Picture%2080%20Jesus%20Heals%20Ten%20Lepers%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 80 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20081%20Picture%2081%20Parable%20of%20the%20Persistent%20Widow%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 81 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20082%20Picture%2082%20The%20Pharisee%20and%20the%20Tax%20Collector%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 82 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20083%20Picture%2083%20Jesus%20Blesses%20the%20Children%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 83 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20084%20Picture%2084%20Jesus%20and%20the%20Rich%20Young%20Man%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 84 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20085%20Picture%2085%20Parable%20of%20Workers%20in%20the%20Vineyard%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 85 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20086%20Picture%2086%20A%20Blind%20Beggar%20Healed%20at%20Jericho%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 86 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20087%20Picture%2087%20Jesus%20and%20Zacchaeus%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 87 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20088%20Picture%2088%20Jesus%20Enters%20Jerusalem%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 88 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20089%20Picture%2089%20Jesus%20Clears%20the%20Temple%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 89 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20090%20Picture%2090%20Parable%20of%20the%20Wicked%20Tenants%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 90 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20091%20Picture%2091%20Paying%20Taxes%20to%20Caesar%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 91 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20092%20Picture%2092%20The%20Poor%20Widow%27s%20Offering%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 92 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20093%20Picture%2093%20Jesus%20Teaches%20about%20the%20End%20Times%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 93 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20094%20Picture%2094%20Parable%20of%20the%20Ten%20Virgins%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 94 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20095%20Picture%2095%20Parable%20of%20the%20Talents%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 95 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20096%20Picture%2096%20Parable%20of%20the%20Sheep%20and%20the%20Goats%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 96 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20097%20Picture%2097%20Jesus%20Anointed%20at%20Bethany%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 97 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20098%20Picture%2098%20Judas%20Iscariot%20Betrays%20Jesus%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 98 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20099%20Picture%2099%20Jesus%20Washes%20the%20Disciples%27%20Feet%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 99 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20100%20Picture%20100%20Teaching%20at%20the%20Last%20Supper%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 100 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20101%20Picture%20101%20Teaching%20about%20the%20True%20Vine%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 101 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20102%20Picture%20102%20Jesus%20Prays%20in%20Gethsemane%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 102 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20103%20Picture%20103%20Jesus%20Arrested%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 103 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20104%20Picture%20104%20Jesus%20Tried%20Before%20the%20High%20Priest%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 104 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20105%20Picture%20105%20Peter%20Denies%20Jesus%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 105 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20106%20Picture%20106%20Jesus%20Tried%20Before%20Pilate%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 106 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20107%20Picture%20107%20Jesus%20Led%20Out%20to%20be%20Crucified%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 107 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20108%20Picture%20108%20The%20Crucifixion%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 108 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20109%20Picture%20109%20The%20Burial%20of%20Jesus%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 109 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20110%20Picture%20110%20The%20Women%20at%20the%20Tomb%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 110 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20111%20Picture%20111%20Peter%20and%20John%20at%20the%20Empty%20Tomb%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 111 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20112%20Picture%20112%20Jesus%20Appears%20to%20Mary%20Magdalene%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 112 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20113%20Picture%20113%20Jesus%20on%20the%20Road%20to%20Emmaus%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 113 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20114%20Picture%20114%20Jesus%20Appears%20to%20His%20Disciples%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 114 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20115%20Picture%20115%20Jesus%20Appears%20to%20Thomas%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 115 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20116%20Picture%20116%20Jesus%20Appears%20in%20Galilee%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 116 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20117%20Picture%20117%20Jesus%20Commissions%20His%20Disciples%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 117 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20118%20Picture%20118%20Jesus%20Ascends%20into%20Heaven%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 118 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20119%20Picture%20119%20Jesus%20at%20God%27s%20Right%20Hand%20in%20Heaven%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 119 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20120%20Picture%20120%20Jesus%20Will%20Return%2061039.mp3",
+     "label": "UKristu Ophilayo · Inxalenye 120 (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/xho_GlobalRecordings_xhosa",
+     "label": "Bona kwi-DBS"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/grn/xho_GlobalRecordings_xhosa",
+   "stats": "120",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20001%20Picture%201%20Christ%20in%20the%20Beginning%2061039.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20001%20Picture%201%20Christ%20in%20the%20Beginning%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 1"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20002%20Picture%202%20God%20Created%20all%20Things%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 2"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20003%20Picture%203%20Satan%20Tempts%20Adam%20and%20Eve%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 3"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20004%20Picture%204%20Adam%20and%20Eve%20Cast%20Out%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 4"
+     },
+     {
+      "n": 5,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20005%20Picture%205%20God%27s%20Promise%20to%20Abraham%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 5"
+     },
+     {
+      "n": 6,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20006%20Picture%206%20Zechariah%20and%20the%20Angel%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 6"
+     },
+     {
+      "n": 7,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20007%20Picture%207%20The%20Angel%20Speaks%20to%20Mary%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 7"
+     },
+     {
+      "n": 8,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20008%20Picture%208%20The%20Angel%20and%20Joseph%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 8"
+     },
+     {
+      "n": 9,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20009%20Picture%209%20The%20Birth%20of%20Jesus%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 9"
+     },
+     {
+      "n": 10,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20010%20Picture%2010%20The%20Shepherds%20and%20the%20Angels%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 10"
+     },
+     {
+      "n": 11,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20011%20Picture%2011%20The%20Shepherds%20Visit%20Baby%20Jesus%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 11"
+     },
+     {
+      "n": 12,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20012%20Picture%2012%20Simeon%20Prophesies%20about%20Jesus%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 12"
+     },
+     {
+      "n": 13,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20013%20Picture%2013%20The%20Visit%20of%20the%20Wise%20Men%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 13"
+     },
+     {
+      "n": 14,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20014%20Picture%2014%20The%20Boy%20Jesus%20at%20the%20Temple%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 14"
+     },
+     {
+      "n": 15,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20015%20Picture%2015%20The%20Message%20of%20John%20the%20Baptist%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 15"
+     },
+     {
+      "n": 16,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20016%20Picture%2016%20The%20Baptism%20of%20Jesus%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 16"
+     },
+     {
+      "n": 17,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20017%20Picture%2017%20Jesus%20Tested%20by%20Satan%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 17"
+     },
+     {
+      "n": 18,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20018%20Picture%2018%20The%20Marriage%20Feast%20at%20Cana%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 18"
+     },
+     {
+      "n": 19,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20019%20Picture%2019%20Jesus%20Teaches%20Nicodemus%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 19"
+     },
+     {
+      "n": 20,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20020%20Picture%2020%20Jesus%20and%20the%20Samaritan%20Woman%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 20"
+     },
+     {
+      "n": 21,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20021%20Picture%2021%20Jesus%20and%20the%20Official%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 21"
+     },
+     {
+      "n": 22,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20022%20Picture%2022%20Jesus%20Calls%20the%20First%20Disciples%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 22"
+     },
+     {
+      "n": 23,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20023%20Picture%2023%20The%20Great%20Catch%20of%20Fish%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 23"
+     },
+     {
+      "n": 24,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20024%20Picture%2024%20Jesus%20Drives%20Out%20an%20Evil%20Spirit%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 24"
+     },
+     {
+      "n": 25,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20025%20Picture%2025%20Jesus%20Heals%20Peter%27s%20Mother-in-Law%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 25"
+     },
+     {
+      "n": 26,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20026%20Picture%2026%20Jesus%20Touches%20a%20Man%20with%20Leprosy%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 26"
+     },
+     {
+      "n": 27,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20027%20Picture%2027%20Jesus%20Heals%20a%20Paralysed%20Man%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 27"
+     },
+     {
+      "n": 28,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20028%20Picture%2028%20Jesus%20calls%20Matthew%20to%20Follow%20Him%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 28"
+     },
+     {
+      "n": 29,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20029%20Picture%2029%20Jesus%20at%20Matthew%27s%20Feast%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 29"
+     },
+     {
+      "n": 30,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20030%20Picture%2030%20Jesus%20Heals%20the%20Man%20at%20the%20Pool%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 30"
+     },
+     {
+      "n": 31,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20031%20Picture%2031%20Disciples%20Pick%20Grain%20on%20the%20Sabbath%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 31"
+     },
+     {
+      "n": 32,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20032%20Picture%2032%20Jesus%20Heals%20a%20Withered%20Hand%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 32"
+     },
+     {
+      "n": 33,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20033%20Picture%2033%20Jesus%20Teaches%20the%20People%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 33"
+     },
+     {
+      "n": 34,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20034%20Picture%2034%20Teaching%20about%20Light%20in%20the%20Darkness%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 34"
+     },
+     {
+      "n": 35,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20035%20Picture%2035%20Teaching%20about%20Revenge%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 35"
+     },
+     {
+      "n": 36,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20036%20Picture%2036%20Teaching%20about%20Prayer%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 36"
+     },
+     {
+      "n": 37,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20037%20Picture%2037%20The%20Two%20Ways%20of%20Life%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 37"
+     },
+     {
+      "n": 38,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20038%20Picture%2038%20The%20House%20on%20the%20Rock%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 38"
+     },
+     {
+      "n": 39,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20039%20Picture%2039%20Jesus%20Raises%20a%20Widow%27s%20Son%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 39"
+     },
+     {
+      "n": 40,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20040%20Picture%2040%20John%20the%20Baptist%20in%20Prison%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 40"
+     },
+     {
+      "n": 41,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20041%20Picture%2041%20A%20Woman%20Washes%20Jesus%27%20Feet%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 41"
+     },
+     {
+      "n": 42,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20042%20Picture%2042%20The%20Parable%20of%20the%20Sower%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 42"
+     },
+     {
+      "n": 43,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20043%20Picture%2043%20The%20Parable%20of%20the%20Seed%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 43"
+     },
+     {
+      "n": 44,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20044%20Picture%2044%20The%20Parable%20of%20the%20Weeds%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 44"
+     },
+     {
+      "n": 45,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20045%20Picture%2045%20The%20Parable%20of%20the%20Hidden%20Treasure%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 45"
+     },
+     {
+      "n": 46,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20046%20Picture%2046%20Jesus%20Calms%20the%20Storm%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 46"
+     },
+     {
+      "n": 47,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20047%20Picture%2047%20Jesus%20Heals%20a%20Man%20with%20Many%20Demons%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 47"
+     },
+     {
+      "n": 48,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20048%20Picture%2048%20The%20Healing%20of%20a%20Woman%20in%20the%20Crowd%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 48"
+     },
+     {
+      "n": 49,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20049%20Picture%2049%20A%20Dead%20Girl%20is%20Raised%20to%20Life%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 49"
+     },
+     {
+      "n": 50,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20050%20Picture%2050%20Jesus%20Sends%20Out%20the%20Twelve%20Disciples%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 50"
+     },
+     {
+      "n": 51,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20051%20Picture%2051%20Jesus%20Feeds%20Five%20Thousand%20People%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 51"
+     },
+     {
+      "n": 52,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20052%20Picture%2052%20Jesus%20Walks%20on%20the%20Water%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 52"
+     },
+     {
+      "n": 53,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20053%20Picture%2053%20The%20Bread%20of%20Life%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 53"
+     },
+     {
+      "n": 54,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20054%20Picture%2054%20The%20Faith%20of%20a%20Foreign%20Woman%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 54"
+     },
+     {
+      "n": 55,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20055%20Picture%2055%20The%20Healing%20of%20a%20Deaf%20and%20Dumb%20Man%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 55"
+     },
+     {
+      "n": 56,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20056%20Picture%2056%20Jesus%20Heals%20a%20Blind%20Man%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 56"
+     },
+     {
+      "n": 57,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20057%20Picture%2057%20Peter%27s%20Confession%20of%20the%20Christ%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 57"
+     },
+     {
+      "n": 58,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20058%20Picture%2058%20The%20Transfiguration%20of%20Jesus%20Christ%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 58"
+     },
+     {
+      "n": 59,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20059%20Picture%2059%20Jesus%20Heals%20a%20Boy%20with%20a%20Demon%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 59"
+     },
+     {
+      "n": 60,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20060%20Picture%2060%20Peter%20Pays%20the%20Temple%20Tax%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 60"
+     },
+     {
+      "n": 61,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20061%20Picture%2061%20Who%20is%20the%20Greatest%20in%20God%27s%20Kingdom%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 61"
+     },
+     {
+      "n": 62,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20062%20Picture%2062%20Parable%20of%20the%20Lost%20Sheep%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 62"
+     },
+     {
+      "n": 63,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20063%20Picture%2063%20Parable%20of%20the%20Unforgiving%20Servant%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 63"
+     },
+     {
+      "n": 64,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20064%20Picture%2064%20The%20Woman%20Caught%20in%20Adultery%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 64"
+     },
+     {
+      "n": 65,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20065%20Picture%2065%20Jesus%20Heals%20a%20Man%20Born%20Blind%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 65"
+     },
+     {
+      "n": 66,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20066%20Picture%2066%20Parable%20of%20the%20Good%20Shepherd%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 66"
+     },
+     {
+      "n": 67,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20067%20Picture%2067%20Parable%20of%20the%20Good%20Samaritan%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 67"
+     },
+     {
+      "n": 68,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20068%20Picture%2068%20Jesus%20at%20the%20Home%20of%20Mary%20and%20Martha%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 68"
+     },
+     {
+      "n": 69,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20069%20Picture%2069%20Parable%20of%20the%20Friend%20at%20Midnight%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 69"
+     },
+     {
+      "n": 70,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20070%20Picture%2070%20Parable%20of%20the%20Rich%20Fool%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 70"
+     },
+     {
+      "n": 71,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20071%20Picture%2071%20Servants%20Ready%20for%20their%20Master%27s%20Return%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 71"
+     },
+     {
+      "n": 72,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20072%20Picture%2072%20Jesus%20Heals%20a%20Crippled%20Woman%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 72"
+     },
+     {
+      "n": 73,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20073%20Picture%2073%20Parable%20of%20the%20Great%20Feast%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 73"
+     },
+     {
+      "n": 74,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20074%20Picture%2074%20Parable%20of%20the%20Lost%20Coin%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 74"
+     },
+     {
+      "n": 75,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20075%20Picture%2075%20Parable%20of%20the%20Lost%20Son%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 75"
+     },
+     {
+      "n": 76,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20076%20Picture%2076%20The%20Lost%20Son%20Among%20the%20Pigs%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 76"
+     },
+     {
+      "n": 77,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20077%20Picture%2077%20The%20Lost%20Son%20Returns%20Home%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 77"
+     },
+     {
+      "n": 78,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20078%20Picture%2078%20The%20Rich%20Man%20and%20the%20Beggar%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 78"
+     },
+     {
+      "n": 79,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20079%20Picture%2079%20Jesus%20Raises%20Lazarus%20from%20Death%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 79"
+     },
+     {
+      "n": 80,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20080%20Picture%2080%20Jesus%20Heals%20Ten%20Lepers%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 80"
+     },
+     {
+      "n": 81,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20081%20Picture%2081%20Parable%20of%20the%20Persistent%20Widow%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 81"
+     },
+     {
+      "n": 82,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20082%20Picture%2082%20The%20Pharisee%20and%20the%20Tax%20Collector%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 82"
+     },
+     {
+      "n": 83,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20083%20Picture%2083%20Jesus%20Blesses%20the%20Children%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 83"
+     },
+     {
+      "n": 84,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20084%20Picture%2084%20Jesus%20and%20the%20Rich%20Young%20Man%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 84"
+     },
+     {
+      "n": 85,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20085%20Picture%2085%20Parable%20of%20Workers%20in%20the%20Vineyard%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 85"
+     },
+     {
+      "n": 86,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20086%20Picture%2086%20A%20Blind%20Beggar%20Healed%20at%20Jericho%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 86"
+     },
+     {
+      "n": 87,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20087%20Picture%2087%20Jesus%20and%20Zacchaeus%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 87"
+     },
+     {
+      "n": 88,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20088%20Picture%2088%20Jesus%20Enters%20Jerusalem%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 88"
+     },
+     {
+      "n": 89,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20089%20Picture%2089%20Jesus%20Clears%20the%20Temple%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 89"
+     },
+     {
+      "n": 90,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20090%20Picture%2090%20Parable%20of%20the%20Wicked%20Tenants%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 90"
+     },
+     {
+      "n": 91,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20091%20Picture%2091%20Paying%20Taxes%20to%20Caesar%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 91"
+     },
+     {
+      "n": 92,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20092%20Picture%2092%20The%20Poor%20Widow%27s%20Offering%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 92"
+     },
+     {
+      "n": 93,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20093%20Picture%2093%20Jesus%20Teaches%20about%20the%20End%20Times%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 93"
+     },
+     {
+      "n": 94,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20094%20Picture%2094%20Parable%20of%20the%20Ten%20Virgins%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 94"
+     },
+     {
+      "n": 95,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20095%20Picture%2095%20Parable%20of%20the%20Talents%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 95"
+     },
+     {
+      "n": 96,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20096%20Picture%2096%20Parable%20of%20the%20Sheep%20and%20the%20Goats%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 96"
+     },
+     {
+      "n": 97,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20097%20Picture%2097%20Jesus%20Anointed%20at%20Bethany%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 97"
+     },
+     {
+      "n": 98,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20098%20Picture%2098%20Judas%20Iscariot%20Betrays%20Jesus%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 98"
+     },
+     {
+      "n": 99,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20099%20Picture%2099%20Jesus%20Washes%20the%20Disciples%27%20Feet%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 99"
+     },
+     {
+      "n": 100,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20100%20Picture%20100%20Teaching%20at%20the%20Last%20Supper%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 100"
+     },
+     {
+      "n": 101,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20101%20Picture%20101%20Teaching%20about%20the%20True%20Vine%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 101"
+     },
+     {
+      "n": 102,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20102%20Picture%20102%20Jesus%20Prays%20in%20Gethsemane%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 102"
+     },
+     {
+      "n": 103,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20103%20Picture%20103%20Jesus%20Arrested%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 103"
+     },
+     {
+      "n": 104,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20104%20Picture%20104%20Jesus%20Tried%20Before%20the%20High%20Priest%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 104"
+     },
+     {
+      "n": 105,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20105%20Picture%20105%20Peter%20Denies%20Jesus%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 105"
+     },
+     {
+      "n": 106,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20106%20Picture%20106%20Jesus%20Tried%20Before%20Pilate%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 106"
+     },
+     {
+      "n": 107,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20107%20Picture%20107%20Jesus%20Led%20Out%20to%20be%20Crucified%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 107"
+     },
+     {
+      "n": 108,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20108%20Picture%20108%20The%20Crucifixion%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 108"
+     },
+     {
+      "n": 109,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20109%20Picture%20109%20The%20Burial%20of%20Jesus%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 109"
+     },
+     {
+      "n": 110,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20110%20Picture%20110%20The%20Women%20at%20the%20Tomb%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 110"
+     },
+     {
+      "n": 111,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20111%20Picture%20111%20Peter%20and%20John%20at%20the%20Empty%20Tomb%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 111"
+     },
+     {
+      "n": 112,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20112%20Picture%20112%20Jesus%20Appears%20to%20Mary%20Magdalene%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 112"
+     },
+     {
+      "n": 113,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20113%20Picture%20113%20Jesus%20on%20the%20Road%20to%20Emmaus%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 113"
+     },
+     {
+      "n": 114,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20114%20Picture%20114%20Jesus%20Appears%20to%20His%20Disciples%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 114"
+     },
+     {
+      "n": 115,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20115%20Picture%20115%20Jesus%20Appears%20to%20Thomas%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 115"
+     },
+     {
+      "n": 116,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20116%20Picture%20116%20Jesus%20Appears%20in%20Galilee%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 116"
+     },
+     {
+      "n": 117,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20117%20Picture%20117%20Jesus%20Commissions%20His%20Disciples%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 117"
+     },
+     {
+      "n": 118,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20118%20Picture%20118%20Jesus%20Ascends%20into%20Heaven%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 118"
+     },
+     {
+      "n": 119,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20119%20Picture%20119%20Jesus%20at%20God%27s%20Right%20Hand%20in%20Heaven%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 119"
+     },
+     {
+      "n": 120,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20The%20Living%20Christ%2061039/isiXhosa%20The%20Living%20Christ%20120%20Picture%20120%20Jesus%20Will%20Return%2061039.mp3",
+      "title": "UKristu Ophilayo · Inxalenye 120"
+     }
+    ]
+   }
+  },
+  {
+   "id": "xho-grn-1881",
+   "lang": "xho",
+   "type": "audio",
+   "title": "Words of Life",
+   "native": "Amazwi oBomi",
+   "langName": "isiXhosa",
+   "source": "https://dbs.org/audio/collections/xho_GlobalRecordings_xhosa",
+   "org": "Global Recordings Network",
+   "desc": "Amabali eBhayibhile, iingoma nemiyalezo yobuKristu erekhodiweyo ngu-Global Recordings Network.",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%2001881/isiXhosa%20Words%20of%20Life%20001%20The%20Fear%20of%20Death%2001881.mp3",
+     "label": "Amazwi oBomi · Inxalenye 1 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%2001881/isiXhosa%20Words%20of%20Life%20002%20God%20Loves%20Us%2001881.mp3",
+     "label": "Amazwi oBomi · Inxalenye 2 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%2001881/isiXhosa%20Words%20of%20Life%20003%20The%20Fear%20of%20Death%2001881.mp3",
+     "label": "Amazwi oBomi · Inxalenye 3 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%2001881/isiXhosa%20Words%20of%20Life%20004%20We%20are%20Like%20Stones%2001881.mp3",
+     "label": "Amazwi oBomi · Inxalenye 4 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%2001881/isiXhosa%20Words%20of%20Life%20005%20After%20This%20the%20Judgement%2001881.mp3",
+     "label": "Amazwi oBomi · Inxalenye 5 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%2001881/isiXhosa%20Words%20of%20Life%20006%20A%20New%20Nature%2001881.mp3",
+     "label": "Amazwi oBomi · Inxalenye 6 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%2001881/isiXhosa%20Words%20of%20Life%20007%20How%20to%20Walk%20the%20Jesus%20Road%2001881.mp3",
+     "label": "Amazwi oBomi · Inxalenye 7 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%2001881/isiXhosa%20Words%20of%20Life%20008%20Ocean%20of%20Salvation%2001881.mp3",
+     "label": "Amazwi oBomi · Inxalenye 8 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%2001881/isiXhosa%20Words%20of%20Life%20009%20Be%20Careful%2001881.mp3",
+     "label": "Amazwi oBomi · Inxalenye 9 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%2001881/isiXhosa%20Words%20of%20Life%20010%20Christ%20Our%20Victory%2001881.mp3",
+     "label": "Amazwi oBomi · Inxalenye 10 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%2001881/isiXhosa%20Words%20of%20Life%20011%20Christ%20Our%20Victory%2001881.mp3",
+     "label": "Amazwi oBomi · Inxalenye 11 (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/xho_GlobalRecordings_xhosa",
+     "label": "Bona kwi-DBS"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/grn/xho_GlobalRecordings_xhosa",
+   "stats": "11",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%2001881/isiXhosa%20Words%20of%20Life%20001%20The%20Fear%20of%20Death%2001881.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%2001881/isiXhosa%20Words%20of%20Life%20001%20The%20Fear%20of%20Death%2001881.mp3",
+      "title": "Amazwi oBomi · Inxalenye 1"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%2001881/isiXhosa%20Words%20of%20Life%20002%20God%20Loves%20Us%2001881.mp3",
+      "title": "Amazwi oBomi · Inxalenye 2"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%2001881/isiXhosa%20Words%20of%20Life%20003%20The%20Fear%20of%20Death%2001881.mp3",
+      "title": "Amazwi oBomi · Inxalenye 3"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%2001881/isiXhosa%20Words%20of%20Life%20004%20We%20are%20Like%20Stones%2001881.mp3",
+      "title": "Amazwi oBomi · Inxalenye 4"
+     },
+     {
+      "n": 5,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%2001881/isiXhosa%20Words%20of%20Life%20005%20After%20This%20the%20Judgement%2001881.mp3",
+      "title": "Amazwi oBomi · Inxalenye 5"
+     },
+     {
+      "n": 6,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%2001881/isiXhosa%20Words%20of%20Life%20006%20A%20New%20Nature%2001881.mp3",
+      "title": "Amazwi oBomi · Inxalenye 6"
+     },
+     {
+      "n": 7,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%2001881/isiXhosa%20Words%20of%20Life%20007%20How%20to%20Walk%20the%20Jesus%20Road%2001881.mp3",
+      "title": "Amazwi oBomi · Inxalenye 7"
+     },
+     {
+      "n": 8,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%2001881/isiXhosa%20Words%20of%20Life%20008%20Ocean%20of%20Salvation%2001881.mp3",
+      "title": "Amazwi oBomi · Inxalenye 8"
+     },
+     {
+      "n": 9,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%2001881/isiXhosa%20Words%20of%20Life%20009%20Be%20Careful%2001881.mp3",
+      "title": "Amazwi oBomi · Inxalenye 9"
+     },
+     {
+      "n": 10,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%2001881/isiXhosa%20Words%20of%20Life%20010%20Christ%20Our%20Victory%2001881.mp3",
+      "title": "Amazwi oBomi · Inxalenye 10"
+     },
+     {
+      "n": 11,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%2001881/isiXhosa%20Words%20of%20Life%20011%20Christ%20Our%20Victory%2001881.mp3",
+      "title": "Amazwi oBomi · Inxalenye 11"
+     }
+    ]
+   }
+  },
+  {
+   "id": "xho-grn-15231",
+   "lang": "xho",
+   "type": "audio",
+   "title": "Words of Life for Children",
+   "native": "Amazwi oBomi abantwana",
+   "langName": "isiXhosa",
+   "source": "https://dbs.org/audio/collections/xho_GlobalRecordings_xhosa",
+   "org": "Global Recordings Network",
+   "desc": "Amabali eBhayibhile, iingoma nemiyalezo yobuKristu erekhodiweyo ngu-Global Recordings Network.",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%20for%20Children%2015231/isiXhosa%20Words%20of%20Life%20for%20Children%20001%20We%20Belong%20to%20Him%20-%20American%20Children%2015231.mp3",
+     "label": "Amazwi oBomi abantwana · Inxalenye 1 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%20for%20Children%2015231/isiXhosa%20Words%20of%20Life%20for%20Children%20002%20Jonah%2015231.mp3",
+     "label": "Amazwi oBomi abantwana · Inxalenye 2 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%20for%20Children%2015231/isiXhosa%20Words%20of%20Life%20for%20Children%20003%20Samuel%2015231.mp3",
+     "label": "Amazwi oBomi abantwana · Inxalenye 3 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%20for%20Children%2015231/isiXhosa%20Words%20of%20Life%20for%20Children%20004%20The%20Prodigal%20Son%2015231.mp3",
+     "label": "Amazwi oBomi abantwana · Inxalenye 4 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%20for%20Children%2015231/isiXhosa%20Words%20of%20Life%20for%20Children%20005%20Tell%20Me%20About%20Jesus%2015231.mp3",
+     "label": "Amazwi oBomi abantwana · Inxalenye 5 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%20for%20Children%2015231/isiXhosa%20Words%20of%20Life%20for%20Children%20006%20The%20Resurrection%2015231.mp3",
+     "label": "Amazwi oBomi abantwana · Inxalenye 6 (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%20for%20Children%2015231/isiXhosa%20Words%20of%20Life%20for%20Children%20007%20The%20Fear%20of%20Death%2015231.mp3",
+     "label": "Amazwi oBomi abantwana · Inxalenye 7 (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/xho_GlobalRecordings_xhosa",
+     "label": "Bona kwi-DBS"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/grn/xho_GlobalRecordings_xhosa",
+   "stats": "7",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%20for%20Children%2015231/isiXhosa%20Words%20of%20Life%20for%20Children%20001%20We%20Belong%20to%20Him%20-%20American%20Children%2015231.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%20for%20Children%2015231/isiXhosa%20Words%20of%20Life%20for%20Children%20001%20We%20Belong%20to%20Him%20-%20American%20Children%2015231.mp3",
+      "title": "Amazwi oBomi abantwana · Inxalenye 1"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%20for%20Children%2015231/isiXhosa%20Words%20of%20Life%20for%20Children%20002%20Jonah%2015231.mp3",
+      "title": "Amazwi oBomi abantwana · Inxalenye 2"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%20for%20Children%2015231/isiXhosa%20Words%20of%20Life%20for%20Children%20003%20Samuel%2015231.mp3",
+      "title": "Amazwi oBomi abantwana · Inxalenye 3"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%20for%20Children%2015231/isiXhosa%20Words%20of%20Life%20for%20Children%20004%20The%20Prodigal%20Son%2015231.mp3",
+      "title": "Amazwi oBomi abantwana · Inxalenye 4"
+     },
+     {
+      "n": 5,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%20for%20Children%2015231/isiXhosa%20Words%20of%20Life%20for%20Children%20005%20Tell%20Me%20About%20Jesus%2015231.mp3",
+      "title": "Amazwi oBomi abantwana · Inxalenye 5"
+     },
+     {
+      "n": 6,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%20for%20Children%2015231/isiXhosa%20Words%20of%20Life%20for%20Children%20006%20The%20Resurrection%2015231.mp3",
+      "title": "Amazwi oBomi abantwana · Inxalenye 6"
+     },
+     {
+      "n": 7,
+      "file": "https://media.dbs.org/audio/grn/xho_GlobalRecordings_xhosa/isiXhosa/isiXhosa%20Words%20of%20Life%20for%20Children%2015231/isiXhosa%20Words%20of%20Life%20for%20Children%20007%20The%20Fear%20of%20Death%2015231.mp3",
+      "title": "Amazwi oBomi abantwana · Inxalenye 7"
+     }
+    ]
+   }
+  },
+  {
+   "id": "xho-scan-xhosa-1850-psalms-incwadi-yezihlabelelo",
+   "lang": "xho",
+   "type": "historic",
+   "title": "Xhosa (1850) Psalms",
+   "native": "Incwadi yezihlabelelo",
+   "langName": "isiXhosa",
+   "source": "https://dbs.org/bibles/historic/Xhosa-1850-Psalms-Incwadi-yezihlabelelo",
+   "org": "Digital Bible Society",
+   "desc": "Ushicilelo oludala olukhutshelwe kwi-PDF. Upelo lwamagama lunokwahluka kolwanamhlanje.",
+   "downloads": [
+    {
+     "url": "https://scripture.dbs.org/books/Xhosa-1850-Psalms-Incwadi-yezihlabelelo.pdf",
+     "label": "Incwadi (PDF)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/bibles/historic/Xhosa-1850-Psalms-Incwadi-yezihlabelelo",
+     "label": "Bona kwi-DBS"
+    }
+   ],
+   "year": 1850,
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/books/Xhosa-1850-Psalms-Incwadi-yezihlabelelo.pdf"
+   }
+  },
+  {
+   "id": "xho-scan-xhosa-1865-bible-incwadi-yemitandazo",
+   "lang": "xho",
+   "type": "historic",
+   "title": "Xhosa (1865) Bible (Incwadi yemitandazo)",
+   "native": "Incwadi yemitandazo, neyemimiselo yokwenziwa kwe-sakramente",
+   "langName": "isiXhosa",
+   "source": "https://dbs.org/bibles/historic/Xhosa-1865-Bible-Incwadi-yemitandazo",
+   "org": "Digital Bible Society",
+   "desc": "Ushicilelo oludala olukhutshelwe kwi-PDF. Upelo lwamagama lunokwahluka kolwanamhlanje.",
+   "downloads": [
+    {
+     "url": "https://scripture.dbs.org/books/Xhosa-1865-Bible-Incwadi-yemitandazo.pdf",
+     "label": "Incwadi (PDF)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/bibles/historic/Xhosa-1865-Bible-Incwadi-yemitandazo",
+     "label": "Bona kwi-DBS"
+    }
+   ],
+   "year": 1865,
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/books/Xhosa-1865-Bible-Incwadi-yemitandazo.pdf"
+   }
+  },
+  {
+   "id": "xho-scan-xhosa-1886-bible-incwadi-yezibalo",
+   "lang": "xho",
+   "type": "historic",
+   "title": "Xhosa (1886) Bible",
+   "native": "Inncwadi Yezibalo Ezingcwele - e Zetestamente Endala ne Zetestamente Entsha",
+   "langName": "isiXhosa",
+   "source": "https://dbs.org/bibles/historic/Xhosa-1886-Bible-Incwadi-Yezibalo",
+   "org": "Digital Bible Society",
+   "desc": "Ushicilelo oludala olukhutshelwe kwi-PDF. Upelo lwamagama lunokwahluka kolwanamhlanje.",
+   "downloads": [
+    {
+     "url": "https://scripture.dbs.org/books/Xhosa-1886-Bible-Incwadi-Yezibalo.pdf",
+     "label": "Incwadi (PDF)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/bibles/historic/Xhosa-1886-Bible-Incwadi-Yezibalo",
+     "label": "Bona kwi-DBS"
+    }
+   ],
+   "year": 1886,
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/books/Xhosa-1886-Bible-Incwadi-Yezibalo.pdf"
+   }
+  },
+  {
+   "id": "xho-scan-xhosa-1906-bible-incwadi-yezibalo",
+   "lang": "xho",
+   "type": "historic",
+   "title": "Xhosa (1906) Bible",
+   "native": "Incwadi Yezibálo Ezingcwele",
+   "langName": "isiXhosa",
+   "source": "https://dbs.org/bibles/historic/Xhosa-1906-Bible-Incwadi-Yezibalo",
+   "org": "Digital Bible Society",
+   "desc": "Ushicilelo oludala olukhutshelwe kwi-PDF. Upelo lwamagama lunokwahluka kolwanamhlanje.",
+   "downloads": [
+    {
+     "url": "https://scripture.dbs.org/books/Xhosa-1906-Bible-Incwadi-Yezibalo.pdf",
+     "label": "Incwadi (PDF)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/bibles/historic/Xhosa-1906-Bible-Incwadi-Yezibalo",
+     "label": "Bona kwi-DBS"
+    }
+   ],
+   "year": 1906,
+   "read": {
+    "kind": "pdf",
+    "url": "https://scripture.dbs.org/books/Xhosa-1906-Bible-Incwadi-Yezibalo.pdf"
+   }
+  }
+ ],
+ "notCarried": {
+  "https://find.bible/?abbr=XHOOLD": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://find.bible/?abbr=XHOB96": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://find.bible/?abbr=XHOB75": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://arc.gt/aux7i?apiSessionId=5f876987164275.21603499": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://arc.gt/zvi4n?apiSessionId=5f87698a1b3433.94064980": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://globalrecordings.net/en/program/15611": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://globalrecordings.net/en/program/61039": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://globalrecordings.net/en/program/82273": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://globalrecordings.net/en/program/1881": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://globalrecordings.net/en/program/15231": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it."
+ }
+}

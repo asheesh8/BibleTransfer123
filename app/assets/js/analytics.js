@@ -235,6 +235,50 @@
       disabled: "Tsy mandeha ny antontan'isa amin'izao fotoana izao.",
       signal: "Mandefa safidy momba ny tsiambaratelo ny navigateur-nao. Hijanona tsy mandeha ny antontan'isa."
     },
+    ny: {
+      title: "Ma cookie ndi zinsinsi zanu",
+      body: "Mukatilola, timagwiritsa ntchito malo osungira a msakatuli kuti tiwerenge maulendo, zinthu zomwe zagwiritsidwa ntchito, njira zogawana ndi maulendo ochokera ku maulalo ogawidwa. Malipoti angasonyeze dziko lanu ndi webusayiti imene yakutumizani kuno. Timasunga zochitika kwa masiku 90. Sitingathe kuona amene alandira, mauthenga achinsinsi kapena kumene maulalo okopedwa amaikidwa.",
+      accept: "Lolani kuwerengera",
+      reject: "Kanani kuwerengera",
+      settings: "Makonda a ma cookie",
+      details: "Werengani chidziwitso cha zinsinsi",
+      enabled: "Kuwerengera kwayatsidwa tsopano.",
+      disabled: "Kuwerengera kwazimitsidwa tsopano.",
+      signal: "Msakatuli wanu umatumiza zomwe mwasankha pa zinsinsi. Kuwerengera kudzakhalabe kozimitsidwa."
+    },
+    rw: {
+      title: "Cookies n’ibanga ryawe",
+      body: "Utubiherewe uburenganzira, dukoresha ububiko bwa mushakisha kugira ngo dupime gusurwa, ibikoreshwa, uburyo bwo gusangiza n’abasura binyuze kuri link zasangijwe. Raporo zishobora kugaragaza igihugu cyawe n’urubuga rwakuzanye hano. Tubika ibikorwa mu minsi 90. Ntidushobora kubona abakiriye, ubutumwa bwihariye cyangwa aho link zakoporowe zishyirwa.",
+      accept: "Emera ibarurishamibare",
+      reject: "Wange ibarurishamibare",
+      settings: "Igenamiterere rya cookies",
+      details: "Soma itangazo ry’ibanga",
+      enabled: "Ibarurishamibare ubu rirakora.",
+      disabled: "Ibarurishamibare ubu ntirikora.",
+      signal: "Mushakisha yawe yohereza icyifuzo cy’ibanga. Ibarurishamibare rizakomeza kuzimwa."
+    },
+    xh: {
+      title: "Iikhukhi nemfihlo yakho",
+      body: "Ngemvume yakho, sisebenzisa ugcino lwesikhangeli ukulinganisa ukutyelela, izixhobo ezisetyenzisiweyo, iindlela zokwabelana nokutyelela okuvela kumakhonkco ekwabelwana ngawo. Iingxelo zingabonisa ilizwe lakho newebhusayithi ekuthumele apha. Sigcina umsebenzi iintsuku ezingama-90. Asikwazi ukubona abafumanayo, imiyalezo yabucala okanye apho amakhonkco akhutshelweyo ancanyathiselwa khona.",
+      accept: "Vuma uhlalutyo",
+      reject: "Yala uhlalutyo",
+      settings: "Iisetingi zeekhukhi",
+      details: "Funda isaziso semfihlo",
+      enabled: "Uhlalutyo luvuliwe ngoku.",
+      disabled: "Uhlalutyo luvaliwe ngoku.",
+      signal: "Isikhangeli sakho sithumela ukhetho lwemfihlo. Uhlalutyo luya kuhlala luvaliwe."
+    },
+    sn: {
+      title: "Makuki nekuvanzika kwako",
+      body: "Kana watibvumira, tinoshandisa nzvimbo yekuchengetera yebhurawuza kuyera kushanyirwa, zvinhu zvashandiswa, nzira dzekugovana nekushanya kunobva pamalink akagoverwa. Mishumo inogona kuratidza nyika yako newebhusaiti yakuendesa pano. Tinochengeta zviitiko kwemazuva 90. Hatigoni kuona vanogamuchira, mameseji akavanzika kana kwakaiswa malink akakopwa.",
+      accept: "Bvuma kuongorora",
+      reject: "Ramba kuongorora",
+      settings: "Marongero emakuki",
+      details: "Verenga chiziviso chekuvanzika",
+      enabled: "Kuongorora kwakavhurwa izvozvi.",
+      disabled: "Kuongorora kwakadzimwa izvozvi.",
+      signal: "Bhurawuza yako inotumira sarudzo yekuvanzika. Kuongorora kucharamba kwakadzimwa."
+    },
     ha: {
       title: "Kukis da sirrinka",
       body: "Da izininka, muna amfani da ma'ajiyar burauza don auna ziyarori, kayan da aka yi amfani da su, hanyoyin rabawa da ziyarorin da suka fito daga hanyoyin haɗin da aka raba. Rahotanni na iya nuna ƙasarka da gidan yanar gizon da ya kawo ka nan. Muna adana bayanan ayyuka na tsawon kwanaki 90. Ba za mu iya ganin waɗanda suka karɓa ba, ko saƙonni na sirri, ko inda aka liƙa hanyoyin haɗin da aka kwafa.",

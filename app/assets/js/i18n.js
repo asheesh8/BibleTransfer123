@@ -30,6 +30,10 @@
     { code: 'ne', name: 'Nepali', native: 'नेपाली', dir: 'ltr' },
     { code: 'snd', name: 'Sindhi',  native: 'سنڌي',    dir: 'rtl' },
     { code: 'mg', name: 'Malagasy', native: 'Malagasy', dir: 'ltr', interfaceNote: 'Screenshot guide in English' },
+    { code: 'ny', name: 'Chichewa', native: 'Chichewa', dir: 'ltr', interfaceNote: 'Screenshot guide in English' },
+    { code: 'rw', name: 'Kinyarwanda', native: 'Ikinyarwanda', dir: 'ltr', interfaceNote: 'Screenshot guide in English' },
+    { code: 'xh', name: 'Xhosa', native: 'isiXhosa', dir: 'ltr', interfaceNote: 'Screenshot guide in English' },
+    { code: 'sn', name: 'Shona', native: 'chiShona', dir: 'ltr', interfaceNote: 'Screenshot guide in English' },
     { code: 'ha', name: 'Hausa', native: 'Hausa', dir: 'ltr', interfaceNote: 'Screenshot guide in English' },
     { code: 'ln', name: 'Lingala', native: 'Lingála', dir: 'ltr', interfaceNote: 'Screenshot guide in English' },
     { code: 'pcm', name: 'Nigerian Pidgin', native: 'Naija Pidgin', dir: 'ltr', interfaceNote: 'Screenshot guide in English' },
@@ -11951,7 +11955,7 @@
   "route.computer-card.4.p": "Ampidiro amin’ny finday izy, dia sokafy START-HERE.html. Alefaso sarimihetsika iray, ary sokafy PDF iray mba hahazoana antoka fa mandeha ilay karatra."
 };
 
-  // isiXhosa interface draft, added ahead of its DBS library.
+  // isiXhosa interface.
   STRINGS.xh = {
   "item.chapter.unavailable": "Asifumaneki",
   "item.chapter.unavailable.notice": "Isahluko {n} asifumaneki kolu shicilelo. Khetha olunye ushicilelo okanye esinye isahluko.",
@@ -12366,7 +12370,7 @@
   "route.computer-card.4.p": "Faka ikhadi kwifowuni uze uvule i-START-HERE.html. Dlala ifilimu uze uvule i-PDF ukuze uqinisekise ukuba ziyasebenza."
 };
 
-  // Chichewa interface draft, added ahead of its DBS library.
+  // Chichewa interface.
   STRINGS.ny = {
   "item.chapter.unavailable": "Sukupezeka",
   "item.chapter.unavailable.notice": "Mutu {n} supezeka m’kope ili. Sankhani kope lina kapena mutu wina.",
@@ -12781,7 +12785,7 @@
   "route.computer-card.4.p": "Lowetsani khadi mu foni ndipo tsegulani START-HERE.html. Onerani filimu imodzi ndi kutsegula PDF imodzi kuti muone ngati zikugwira ntchito."
 };
 
-  // Kinyarwanda interface draft, added ahead of its DBS library.
+  // Kinyarwanda interface.
   STRINGS.rw = {
   "item.chapter.unavailable": "Ntikiboneka",
   "item.chapter.unavailable.notice": "Igice cya {n} ntikiboneka muri iyi verisiyo. Hitamo indi verisiyo cyangwa ikindi gice.",
@@ -13196,7 +13200,7 @@
   "route.computer-card.4.p": "Shyira ikarita muri telefone, ufungure START-HERE.html. Kina filime imwe, ufungure PDF imwe, urebe ko bikora."
 };
 
-  // chiShona interface draft, added ahead of its DBS library.
+  // chiShona interface.
   STRINGS.sn = {
   "item.chapter.unavailable": "Hachiwanikwi",
   "item.chapter.unavailable.notice": "Chitsauko {n} hachiwanikwi mushanduro iyi. Sarudza imwe shanduro kana chimwe chitsauko.",

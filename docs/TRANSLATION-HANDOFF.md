@@ -810,3 +810,22 @@ The audit records 2,490 file probes. All 2,317 responses with file signatures we
 All 411 interface, saving, sharing, help and transfer-guide keys have Malagasy wording, with formatter variables preserved. File troubleshooting says “Raha tsy misokatra ilay rakitra” (if the file does not open). OS menu names remain recognizable, while authored regional programme names are retained. The separate screenshot saving guide remains in English and is disclosed in the language picker and page.
 
 Rebuild with `python3 packer/build_malagasy.py`, then `npm run dbs:import`. `packer/audit_malagasy_files.py` refreshes file checks. Source inventories, publisher captures and file evidence are in `catalog/source/dbs-*-malagasy-2026-10-04.json`.
+
+### Xhosa, Chichewa, Kinyarwanda and Shona — 2026-10-06
+
+Added four shelves with their own interfaces and pages: `/xhosa` (`xh`, content `xho`), `/chichewa` (`ny`, content `nya`, also `/nyanja`), `/kinyarwanda` (`rw`, content `kin`) and `/shona` (`sn`, content `sna`). Each interface covers all 411 interface, saving, sharing, help and transfer-guide keys, 66 Bible book names, and the privacy notice. The separate screenshot saving guide remains in English and is disclosed in the language picker.
+
+DBS's language pages were rendered in headless Chromium, along with every DBS page they link to. Every carried file passed a ranged browser request whose leading bytes matched its type, and each film's DBS record supplied its full-film and chapter files. Every audio Bible book picker was stepped through and all 5,300 chapter files were checked. Nothing on these shelves is hosted outside DBS.
+
+| Shelf | Resources | What is carried |
+|---|---|---|
+| Xhosa | 13 | JESUS (61 chapters), Magdalena, Story of Jesus for Children, Deaf Gospel; 5 GRN programmes (190 tracks); the 1850 Psalms and the 1865, 1886 and 1906 Bibles as PDFs |
+| Chichewa | 34 | Buku Lopatulika full audio Bible (listed first) and its Luke portion, two other full audio Bibles, the Contemporary Chichewa text (PDF, EPUB, HTML); 12 films including LUMO, King of Glory and iBible; 10 GRN programmes and a 53-story StoryRunners set; 6 historic PDFs including the 1922 Bible |
+| Kinyarwanda | 26 | 2004 full audio Bible and the Rukimbiri New Testament; 12 films including three JESUS dialects, Visual Bible Matthew and Acts and BibleProject overviews; 12 GRN programmes |
+| Shona | 32 | 1949 Union Bible (HTML, listed first), the Shona Bible PDF and the 1963 New Testament audio; 11 films; 13 GRN programmes, Story of Jesus and a 46-story StoryRunners set; 3 historic PDFs |
+
+The traditional editions (Chichewa Buku Lopatulika, Shona 1949 Union Bible) lead their shelves. No inclusive-language or LGBTQ-affirming edition appears on any of these DBS pages.
+
+Not carried: links to other sites (find.bible, GRN programme pages, arc.gt, YouTube, ROCK and pCloud), whose DBS-hosted media is carried where DBS has it; three audio Bible pages that DBS marks as moved (NYABSM04605, NYABSMW00333, KINBSR); and four Kinyarwanda GRN programmes with nothing showing they are Christian (a US resettlement welcome, "Helper", untitled "Filmstrip" messages and untitled "Songs"). DBS's Kinyarwanda, Kinyamulenge and Shona JESUS pages list another dialect's chapter files; those chapters stay only with Rufumbira and Karanga, and the other pages keep their own full film. Each shelf's `notCarried` map records every listed link that is left out and why.
+
+Rebuild with `python3 packer/build_dbs_audit.py`, then `python3 packer/easytransfer.py preview`. The audits are `catalog/source/dbs-audit-{xhosa,chichewa,kinyarwanda,shona}-2026-10-06.json`.
