@@ -1,4 +1,4 @@
-"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan and Tigrinya: complete, verified and DBS-hosted."""
+"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya and Arabic: complete, verified and DBS-hosted."""
 import json
 import pathlib
 import re
@@ -9,14 +9,17 @@ from packer.et.profiles import PROFILES
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATE = '2026-10-06'
+ARA_COUNT = 263
 SHELVES = {'xho': ('xhosa', 'xh', 13), 'nya': ('chichewa', 'ny', 34),
            'kin': ('kinyarwanda', 'rw', 26), 'sna': ('shona', 'sn', 32),
            'run': ('kirundi', 'rn', 27), 'aka': ('akan', 'ak', 47),
-           'tir': ('tigrinya', 'ti', 26)}
+           'tir': ('tigrinya', 'ti', 26), 'ara': ('arabic', 'ar', ARA_COUNT)}
+DATES = {'ara': '2026-10-07'}
 
 
 def urls(r):
-    return re.findall(r'https?://[^"\s]+', json.dumps({k: r.get(k) for k in ('play', 'read', 'downloads')}))
+    return re.findall(r'https?://[^"\s]+', json.dumps({k: r.get(k) for k in ('play', 'read', 'downloads')},
+                                                       ensure_ascii=False))
 
 
 class DbsAuditTest(unittest.TestCase):
@@ -24,7 +27,7 @@ class DbsAuditTest(unittest.TestCase):
     def setUpClass(cls):
         cls.lib = catalog.load(ROOT / 'catalog/resources.json')
         cls.cards = {r['id']: r for r in build.card_catalog(cls.lib, [], PROFILES['pocket'], {})['resources']}
-        cls.audit = {c: json.loads((ROOT / f'catalog/source/dbs-audit-{s}-{DATE}.json').read_text())
+        cls.audit = {c: json.loads((ROOT / f'catalog/source/dbs-audit-{s}-{DATES.get(c, DATE)}.json').read_text())
                      for c, (s, _, _) in SHELVES.items()}
         cls.built = {c: json.loads((ROOT / f'catalog/{s}.json').read_text()) for c, (s, _, _) in SHELVES.items()}
 
@@ -71,6 +74,9 @@ class DbsAuditTest(unittest.TestCase):
         self.assertEqual(totals['run'], 1189)
         # Two NTs, five full Bibles (one DBS picker omits eight chapters) and the Fante Old Testament.
         self.assertEqual(totals['aka'], 260 * 2 + 1189 * 4 + 1181 + 929)
+        # Five full Bibles, two full New Testaments, the Sudanese New Testament
+        # (DBS has 248 of its chapters) and four editions of a few books.
+        self.assertEqual(totals['ara'], 1189 * 5 + 260 * 2 + 248 + 16 + 43 + 16 + 204)
 
     def test_moved_audio_bibles_are_left_out(self):
         moved = {'https://dbs.org/bibles/audio/NYABSM04605_DAVR_FB_N',
@@ -151,6 +157,39 @@ class DbsAuditTest(unittest.TestCase):
         story = next(r for r in tir if r['id'] == 'tir-storyset')
         self.assertEqual(len(story['play']['items']), 24)
         self.assertIn('18 StoryRunners stories', self.built['tir']['notCarried']['https://dbs.org/audio/collections/srun/tir_storyset_tigrigna'])
+
+    def test_arabic_reads_right_to_left_and_names_each_variety(self):
+        ara = self.shelf('ara')
+        lang = self.built['ara']['languages']['ara']
+        self.assertEqual((lang['dir'], lang['script'], lang['font']), ('rtl', 'arab', 'naskh'))
+        self.assertEqual([r['id'] for r in ara[:2]], ['ara-text-arbvdv', 'ara-ab-arbvdv-isa-fb-n'])
+        for r in ara:
+            self.assertRegex(r['native'], '[\u0600-\u06FF]', r['id'])
+            if r.get('scope'):
+                self.assertTrue(r['langName'].startswith('العربية · '), r['id'])
+        egyptian = {r['id'] for r in ara if r.get('scope') == 'Egyptian Arabic'}
+        self.assertIn('ara-text-arzvdv', egyptian)
+        self.assertIn('ara-film-arz-arabic-egyptian-colloquial-jesus', egyptian)
+        juba = [r for r in ara if r.get('scope') == 'Juba Arabic']
+        self.assertEqual(len(juba), 12)
+        # JESUS pages that list the Visual Bible Acts chapters carry only JESUS's own.
+        for r in ara:
+            if '/video/jesus/' in r['source']:
+                for u in urls(r):
+                    self.assertNotIn('Acts73', u, r['id'])
+        sudanese = next(r for r in ara if r['id'] == 'ara-ab-apdsim-fcbh-nt-n')['play']
+        self.assertEqual(sudanese['missingChapters']['Luke'], [4, 15, 19])
+        davar = next(r for r in ara if r['id'] == 'ara-ab-arzpor-davr-fb-n')['play']
+        self.assertEqual(davar['dirs'], {'OT': '01 OT_ARZPOR', 'NT': '02 NT_ARZPOR'})
+        left_out = self.built['ara']['notCarried']
+        for u in ('https://dbs.org/video/ps/arb_ps_adamawa_fulfulde_of_nigeria_arabic',
+                  'https://dbs.org/bibles/historic/Tajiki-1992-Genesis-Portion',
+                  'https://dbs.org/bibles/audio/ARZBIB_DAVR_FB_N', 'https://dbs.org/bibles/audio/SHUBSC_DAVR_OT_N'):
+            self.assertIn(u, left_out)
+        ids = {r['id'] for r in ara}
+        for n in ('67597', '67202', '67633', '65954', '4141', '38024'):
+            self.assertNotIn('ara-grn-' + n, ids)
+            self.assertIn('https://globalrecordings.net/en/program/' + n, left_out)
 
     def test_pages_routes_worker_and_interface(self):
         sw = (ROOT / 'app/sw.js').read_text()

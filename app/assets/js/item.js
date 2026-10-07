@@ -28,7 +28,7 @@
   }
 
   // Keep translated titles consistent in the reader, save flow and share sheet.
-  if ((r.lang === 'mlg' && ET.i18n.current() === 'mg') || (r.lang === 'nya' && ET.i18n.current() === 'ny') || (r.lang === 'run' && ET.i18n.current() === 'rn') || (r.lang === 'aka' && ET.i18n.current() === 'ak') || (r.lang === 'tir' && ET.i18n.current() === 'ti') || (r.lang === 'kin' && ET.i18n.current() === 'rw') || (r.lang === 'xho' && ET.i18n.current() === 'xh') || (r.lang === 'sna' && ET.i18n.current() === 'sn') || (r.lang === 'lin' && ET.i18n.current() === 'ln') || (r.lang === 'yor' && ET.i18n.current() === 'yo') || (r.lang === 'pcm' && ET.i18n.current() === 'pcm')) {
+  if ((r.lang === 'mlg' && ET.i18n.current() === 'mg') || (r.lang === 'nya' && ET.i18n.current() === 'ny') || (r.lang === 'run' && ET.i18n.current() === 'rn') || (r.lang === 'aka' && ET.i18n.current() === 'ak') || (r.lang === 'tir' && ET.i18n.current() === 'ti') || (r.lang === 'ara' && ET.i18n.current() === 'ar') || (r.lang === 'kin' && ET.i18n.current() === 'rw') || (r.lang === 'xho' && ET.i18n.current() === 'xh') || (r.lang === 'sna' && ET.i18n.current() === 'sn') || (r.lang === 'lin' && ET.i18n.current() === 'ln') || (r.lang === 'yor' && ET.i18n.current() === 'yo') || (r.lang === 'pcm' && ET.i18n.current() === 'pcm')) {
     r = Object.assign({}, r, { title: ET.displayTitle(r) });
   }
   document.title = ET.displayTitle(r);
@@ -150,7 +150,7 @@
 
     // What language this is actually in, before anyone presses play.
     var tongue = '<span class="chip lang">' + ET.icon('globe') +
-      h(isText ? 'item.written' : 'item.spoken', { lang: (r.lang === 'ibo' && r.scope && r.scope !== 'Igbo') || r.lang === 'fra' || r.lang === 'amh' || r.lang === 'por' || r.lang === 'yor' || r.lang === 'pcm' || r.lang === 'lin' || r.lang === 'mlg' || r.lang === 'nya' || r.lang === 'run' || r.lang === 'aka' || r.lang === 'tir' || r.lang === 'kin' || r.lang === 'xho' || r.lang === 'sna'
+      h(isText ? 'item.written' : 'item.spoken', { lang: (r.lang === 'ibo' && r.scope && r.scope !== 'Igbo') || r.lang === 'fra' || r.lang === 'amh' || r.lang === 'por' || r.lang === 'yor' || r.lang === 'pcm' || r.lang === 'lin' || r.lang === 'mlg' || r.lang === 'nya' || r.lang === 'run' || r.lang === 'aka' || r.lang === 'tir' || r.lang === 'ara' || r.lang === 'kin' || r.lang === 'xho' || r.lang === 'sna'
         ? r.langName : L.native && L.native !== L.name
         ? L.native + ' · ' + L.name : (L.name || r.langName || '') }) + '</span>';
 
@@ -159,7 +159,7 @@
         '<div style="display:flex;gap:.4rem;flex-wrap:wrap">' + tongue + where +
           '<span class="chip">' + h('type.' + r.type) + '</span></div>' +
         '<h1 dir="auto" style="margin:.3rem 0 0">' + ET.esc(ET.displayTitle(r)) + '</h1>' +
-        (r.native && r.native !== r.title && !((r.lang === 'amh' && ET.i18n.current() === 'am') || (r.lang === 'por' && ET.i18n.current() === 'pt') || (r.lang === 'yor' && ET.i18n.current() === 'yo') || (r.lang === 'pcm' && ET.i18n.current() === 'pcm') || (r.lang === 'mlg' && ET.i18n.current() === 'mg') || (r.lang === 'nya' && ET.i18n.current() === 'ny') || (r.lang === 'run' && ET.i18n.current() === 'rn') || (r.lang === 'aka' && ET.i18n.current() === 'ak') || (r.lang === 'tir' && ET.i18n.current() === 'ti') || (r.lang === 'kin' && ET.i18n.current() === 'rw') || (r.lang === 'xho' && ET.i18n.current() === 'xh') || (r.lang === 'sna' && ET.i18n.current() === 'sn') || (r.lang === 'lin' && ET.i18n.current() === 'ln')) ? '<p class="latin" style="font-size:1rem;margin:0">' +
+        (r.native && r.native !== r.title && !((r.lang === 'amh' && ET.i18n.current() === 'am') || (r.lang === 'por' && ET.i18n.current() === 'pt') || (r.lang === 'yor' && ET.i18n.current() === 'yo') || (r.lang === 'pcm' && ET.i18n.current() === 'pcm') || (r.lang === 'mlg' && ET.i18n.current() === 'mg') || (r.lang === 'nya' && ET.i18n.current() === 'ny') || (r.lang === 'run' && ET.i18n.current() === 'rn') || (r.lang === 'aka' && ET.i18n.current() === 'ak') || (r.lang === 'tir' && ET.i18n.current() === 'ti') || (r.lang === 'ara' && ET.i18n.current() === 'ar') || (r.lang === 'kin' && ET.i18n.current() === 'rw') || (r.lang === 'xho' && ET.i18n.current() === 'xh') || (r.lang === 'sna' && ET.i18n.current() === 'sn') || (r.lang === 'lin' && ET.i18n.current() === 'ln')) ? '<p class="latin" style="font-size:1rem;margin:0">' +
           ET.esc(ET.displayTitle(r) === r.native ? r.title : r.native) + '</p>' : '') +
         '<p class="muted latin" style="margin:0">' + ET.esc([r.org, r.year, r.duration, r.stats]
           .filter(Boolean).join(' · ')) + '</p>' +
@@ -375,7 +375,7 @@
         var k = b.getAttribute('data-s');
         if (k === 'native') {
           var nativeIntent = ET.analytics.shareIntent(url, 'native_share', { resource: r.id, language: r.lang });
-          navigator.share({ title: r.title, text: r.title + ' — ' + ((r.lang === 'yor' || r.lang === 'pcm' || r.lang === 'lin' || r.lang === 'mlg' || r.lang === 'nya' || r.lang === 'run' || r.lang === 'aka' || r.lang === 'tir' || r.lang === 'kin' || r.lang === 'xho' || r.lang === 'sna') ? L.native || L.name : L.name || ''), url: nativeIntent.url })
+          navigator.share({ title: r.title, text: r.title + ' — ' + ((r.lang === 'yor' || r.lang === 'pcm' || r.lang === 'lin' || r.lang === 'mlg' || r.lang === 'nya' || r.lang === 'run' || r.lang === 'aka' || r.lang === 'tir' || r.lang === 'ara' || r.lang === 'kin' || r.lang === 'xho' || r.lang === 'sna') ? L.native || L.name : L.name || ''), url: nativeIntent.url })
             .then(function () {
               // The browser handed this to its share sheet; the recipient and
               // delivery result are not available to the page.

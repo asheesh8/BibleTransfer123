@@ -108,4 +108,5 @@ class HausaTest(unittest.TestCase):
    r={'lang':'hau','type':'audio','title':'Audio','source':u,'play':{'kind':'file','sd':u}}
    self.assertFalse(curate([r])[0],u)
   self.assertFalse(curate([{'lang':'hau','type':'film','title':'Film','play':{'kind':'file','sd':'https://stream.mux.com/unknown/720p.mp4'}}])[0])
-  self.assertNotIn('ara',self.lib['languages'])
+  # Arabic is its own audited DBS shelf; no Arabic item comes in through this language's exceptions.
+  self.assertTrue(all(r['source'].startswith('https://dbs.org/') for r in self.lib['resources'] if r['lang']=='ara'))

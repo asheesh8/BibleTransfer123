@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Build Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan and Tigrinya from their browser audits.
 
-    python3 packer/build_dbs_audit.py            # all seven
+    python3 packer/build_dbs_audit.py            # all seven, and Arabic
     python3 packer/build_dbs_audit.py sna        # one
+
+Arabic is built by build_dbs_arabic.py, which reuses this Shelf.
 
 Each language's DBS page, and every DBS page it links to, was rendered in a
 real browser on 2026-10-06 (catalog/source/dbs-audit-<language>-2026-10-06.json).
@@ -158,7 +160,7 @@ DIALECT = {'asante-twi': 'Asante Twi', 'akan-asante': 'Asante Twi', 'akan-akuape
 def local_books():
     src = (ROOT / 'app/assets/js/core.js').read_text()
     out = {}
-    for ui in ('xh', 'ny', 'rw', 'sn', 'rn', 'ak', 'ti'):
+    for ui in ('xh', 'ny', 'rw', 'sn', 'rn', 'ak', 'ti', 'ar'):
         block = re.search(r'\n    ' + ui + r': (\{.*?\n\})', src, re.S)[1]
         out[ui] = json.loads(block)
     return out
@@ -332,7 +334,8 @@ def secure(u):
 class Shelf:
     def __init__(self, code):
         self.code, self.L = code, LANGS[code]
-        self.audit = json.loads((ROOT / f"catalog/source/dbs-audit-{self.L['slug']}-{DATE}.json").read_text())
+        self.date = self.L.get('date', DATE)
+        self.audit = json.loads((ROOT / f"catalog/source/dbs-audit-{self.L['slug']}-{self.date}.json").read_text())
         self.files = self.audit['files']
         self.out = []
         self.missing = {}
@@ -686,6 +689,12 @@ class Shelf:
         if missing:
             self.missing[url] = f'DBS links {len(missing)} StoryRunners stories its server does not hold (404): ' + '; '.join(missing) + '.'
 
+    def finish(self):
+        pass
+
+    def other_site(self, url):
+        return 'Not hosted by DBS; its DBS-hosted media is carried where DBS has it.'
+
     # ------------------------------------------------------------ build
     def build(self):
         pages = self.audit['pages']
@@ -718,7 +727,7 @@ class Shelf:
             else:
                 raise ValueError(url)
         for u in self.audit['sections'].get('Links to Other Sites', []):
-            skipped[u['url']] = EXCLUDED.get(self.code, {}).get(u['url'], 'Not hosted by DBS; its DBS-hosted media is carried where DBS has it.')
+            skipped[u['url']] = EXCLUDED.get(self.code, {}).get(u['url'], self.other_site(u['url']))
         for u, why in EXCLUDED.get(self.code, {}).items():
             skipped[u] = why
         skipped.update(self.missing)
@@ -732,13 +741,14 @@ class Shelf:
                     n = r['id'].rsplit('-', 1)[1]
                     r['title'] += f' ({n})'
                     r['native'] += f' ({n})'
+        self.finish()
         ids = [r['id'] for r in self.out]
         assert len(ids) == len(set(ids)), ids
         L = self.L
         lang = {k: L[k] for k in ('name', 'native', 'region', 'speakers', 'blurb')}
-        lang.update(code=self.code, script=L.get('script', 'latn'), dir='ltr', font=L.get('font', 'latin'))
+        lang.update(code=self.code, script=L.get('script', 'latn'), dir=L.get('dir', 'ltr'), font=L.get('font', 'latin'))
         (ROOT / f"catalog/{L['slug']}.json").write_text(json.dumps({
-            'generated': f"DBS rendered {L['name']} inventory — {DATE}",
+            'generated': f"DBS rendered {L['name']} inventory — {self.date}",
             'languages': {self.code: lang}, 'resources': self.out,
             'notCarried': skipped}, ensure_ascii=False, indent=1) + '\n')
         kinds = {}
@@ -748,7 +758,11 @@ class Shelf:
 
 
 def main():
-    for code in (sys.argv[1:] or list(LANGS)):
+    for code in (sys.argv[1:] or list(LANGS) + ['ara']):
+        if code == 'ara':
+            import build_dbs_arabic      # Arabic has its own module: many varieties, one shelf
+            build_dbs_arabic.ArabicShelf().build()
+            continue
         Shelf(code).build()
 
 

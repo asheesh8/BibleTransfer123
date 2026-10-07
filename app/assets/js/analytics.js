@@ -312,6 +312,17 @@
       disabled: "ትንተና ሕጂ ጠፊኡ ኣሎ።",
       signal: "ብራውዘርኩም ድሌት ውልቃውነት ይሰድድ ኣሎ። ስለዚ ትንተና ጠፊኡ ክጸንሕ እዩ።"
     },
+    ar: {
+      title: "ملفات تعريف الارتباط وخصوصيتك",
+      body: "بموافقتك، نستخدم مساحة التخزين في المتصفح لقياس الزيارات، والمواد المستخدَمة، وطرق المشاركة، والزيارات القادمة من روابط تمت مشاركتها. قد تُظهر التقارير بلدك والموقع الذي جئت منه. نحتفظ بسجل النشاط مدة 90 يومًا. لا يمكننا أن نرى من استلم الروابط، ولا الرسائل الخاصة، ولا أين لُصقت الروابط المنسوخة.",
+      accept: "السماح بالإحصاءات",
+      reject: "رفض الإحصاءات",
+      settings: "إعدادات ملفات تعريف الارتباط",
+      details: "اقرأ إشعار الخصوصية",
+      enabled: "الإحصاءات مفعَّلة الآن.",
+      disabled: "الإحصاءات متوقفة الآن.",
+      signal: "يرسل متصفحك تفضيلًا للخصوصية، لذا ستبقى الإحصاءات متوقفة."
+    },
     ha: {
       title: "Kukis da sirrinka",
       body: "Da izininka, muna amfani da ma'ajiyar burauza don auna ziyarori, kayan da aka yi amfani da su, hanyoyin rabawa da ziyarorin da suka fito daga hanyoyin haɗin da aka raba. Rahotanni na iya nuna ƙasarka da gidan yanar gizon da ya kawo ka nan. Muna adana bayanan ayyuka na tsawon kwanaki 90. Ba za mu iya ganin waɗanda suka karɓa ba, ko saƙonni na sirri, ko inda aka liƙa hanyoyin haɗin da aka kwafa.",
@@ -568,7 +579,7 @@
     var c = copy(), panel = document.getElementById('et-consent'), button = document.getElementById('et-cookie-settings');
     if (button) { button.textContent = c.text.settings; button.lang = c.lang; }
     if (!panel) return;
-    panel.lang = c.lang; panel.dir = ['ur', 'snd', 'pnb', 'ps'].indexOf(c.lang) >= 0 ? 'rtl' : 'ltr';
+    panel.lang = c.lang; panel.dir = ['ur', 'snd', 'pnb', 'ps', 'ar'].indexOf(c.lang) >= 0 ? 'rtl' : 'ltr';
     panel.querySelector('h2').textContent = c.text.title;
     panel.querySelector('.consent-copy').textContent = c.text.body;
     panel.querySelector('.consent-state').textContent = navigator.globalPrivacyControl === true

@@ -910,3 +910,19 @@ Each film from one country names it (ኤርትራ / ኢትዮጵያ). TIRTBI was
 Not carried: links to other sites (GRN programme pages and ROCK), whose DBS-hosted media is carried; 18 of the 42 StoryRunners stories, which DBS links under file names its server returns 404 for. StoryRunners' own file names were UTF-8 read as code page 437; the titles are decoded, and a few in Amharic or cut short are given in Tigrinya.
 
 Rebuild with `python3 packer/build_dbs_audit.py tir`, then `npm run dbs:import`. The audit is `catalog/source/dbs-audit-tigrinya-2026-10-06.json`.
+
+### Arabic — 2026-10-07
+
+Added one shelf for Modern Standard Arabic and every spoken variety DBS lists, with its own interface and page: `/arabic` (`ar`, content `ara`, also `/ara`, `/ar`, `/arb`). The interface covers all 411 keys, the 66 Van Dyck book names and the privacy notice in Modern Standard Arabic, laid out right to left in Naskh. The screenshot saving guide remains in English and is disclosed in the language picker.
+
+The same browser audit as the shelves above, across DBS's 27 Arabic pages (arb, ara and 25 spoken varieties; abv, acx, ssh and adf return "not found"). video.dbs.org returned HTTP 500 for many film files on two passes; DBS's own pages serve those files through `dbs.org/cdn/video/`, which was checked file by file and is carried instead. Only files that returned real media are carried, so some films have fewer chapters than DBS lists.
+
+| Shelf | Resources | What is carried |
+|---|---|---|
+| Arabic | 263 | 7 text editions (Van Dyck first; New Arabic Version, Open NAV, Easy-to-Read, Egyptian, Hadrami, the North Mesopotamian Peshitta Gospel); 12 audio Bibles (Van Dyck, NAV, two Egyptian, Chadian, Tunisian, Hassaniya and Sudanese New Testaments, and Lebanese, Libyan, Ahwazi and Mosuli portions); 122 films (JESUS in 20 recordings, LUMO, Visual Bible, BibleProject, The HOPE, King of Glory, Prophets' Story, Magdalena, The Savior and more); 100 GRN programmes, five Story of Jesus recordings and two StoryRunners sets; 15 historic scans |
+
+Every item in a spoken variety names it (title "(Egyptian Arabic)", native "(اللهجة المصرية)", language line "العربية · اللهجة المصرية"). Book names in every audio Bible are the interface's Van Dyck names; chapters DBS does not have are shown as unavailable. No inclusive-language or LGBTQ-affirming edition appears on these pages.
+
+Not carried: links to other sites (find.bible, Create International, GRN programme pages, publisher sites, and DBS partner-library files outside the language catalogue); two moved audio Bibles; six GRN programmes that are resettlement welcomes or give no Christian subject; a "Prophets' Story - Arabic" that is in Fulfulde; the Nyssa manuscript (it also holds a letter attributed to Hermes) and a Tajik Genesis scan; two film pages with nothing DBS will serve; three StoryRunners stories whose files return a server error. Each is listed with its reason in `notCarried`.
+
+Rebuild with `python3 packer/build_dbs_arabic.py` (or `python3 packer/build_dbs_audit.py ara`), then `npm run dbs:import`. The audit is `catalog/source/dbs-audit-arabic-2026-10-07.json`.

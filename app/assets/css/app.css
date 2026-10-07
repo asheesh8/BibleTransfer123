@@ -896,7 +896,8 @@ html[dir="rtl"] body {
   line-height: 2.1;                 /* Nastaliq hangs far below the baseline */
 }
 html[lang="snd"] body,
-html[lang="ps"] body {
+html[lang="ps"] body,
+html[lang="ar"] body {
   font-family: "Noto Naskh Arabic", "Geeza Pro", "Traditional Arabic", serif;
   line-height: 1.95;                /* Naskh is shallower and sits tighter */
 }

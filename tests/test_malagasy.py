@@ -104,4 +104,5 @@ class MalagasyTest(unittest.TestCase):
   self.assertFalse(curate([{'lang':'mlg','type':'film','title':'Film','play':{'kind':'file','sd':'https://youtu.be/unknown'}}])[0])
   for u in MALAGASY_EXCLUDED:
    self.assertFalse(curate([{'lang':'mlg','type':'audio','title':'Words of Life','source':u,'links':[{'url':u}]}])[0])
-  self.assertNotIn('ara',self.lib['languages'])
+  # Arabic is its own audited DBS shelf; no Arabic item comes in through this language's exceptions.
+  self.assertTrue(all(r['source'].startswith('https://dbs.org/') for r in self.lib['resources'] if r['lang']=='ara'))

@@ -19,9 +19,9 @@ function harness(elements = {}, scope = null) {
 }
 const placeholders = value => [...value.matchAll(/\{(\w+)\}/g)].map(match => match[1]).sort();
 
-test('all thirty-five languages retain formatter variables and render escaped strings', () => {
+test('all thirty-six languages retain formatter variables and render escaped strings', () => {
   const { ET, dictionaries, attributes } = harness();
-  assert.equal(ET.i18n.langs.length, 35);
+  assert.equal(ET.i18n.langs.length, 36);
   for (const language of ET.i18n.langs) {
     ET.i18n.set(language.code);
     assert.equal(attributes.dir, language.dir);
@@ -128,7 +128,7 @@ test('untranslated copy is marked as English and changes back when translated', 
 });
 
  test('new shared libraries initialize in their native interface without a stored preference', () => {
-  for (const scope of [{lang: 'run', ui: 'rn'}, {lang: 'aka', ui: 'ak'}, {lang: 'tir', ui: 'ti'}, {lang: 'nya', ui: 'ny'}, {lang: 'kin', ui: 'rw'}, {lang: 'xho', ui: 'xh'}, {lang: 'sna', ui: 'sn'}, {lang: 'mlg', ui: 'mg'}, {lang: 'hau', ui: 'ha'}, {lang: 'lin', ui: 'ln'}, {lang: 'orm', ui: 'om'}, {lang: 'luo', ui: 'luo'}, {lang: 'ibo', ui: 'ig'}, {lang: 'fra', ui: 'fr'}, {lang: 'amh', ui: 'am'}, {lang: 'por', ui: 'pt'}, {lang: 'yor', ui: 'yo'}, {lang: 'pcm', ui: 'pcm'}]) {
+  for (const scope of [{lang: 'run', ui: 'rn'}, {lang: 'aka', ui: 'ak'}, {lang: 'tir', ui: 'ti'}, {lang: 'ara', ui: 'ar'}, {lang: 'nya', ui: 'ny'}, {lang: 'kin', ui: 'rw'}, {lang: 'xho', ui: 'xh'}, {lang: 'sna', ui: 'sn'}, {lang: 'mlg', ui: 'mg'}, {lang: 'hau', ui: 'ha'}, {lang: 'lin', ui: 'ln'}, {lang: 'orm', ui: 'om'}, {lang: 'luo', ui: 'luo'}, {lang: 'ibo', ui: 'ig'}, {lang: 'fra', ui: 'fr'}, {lang: 'amh', ui: 'am'}, {lang: 'por', ui: 'pt'}, {lang: 'yor', ui: 'yo'}, {lang: 'pcm', ui: 'pcm'}]) {
     const {ET, dictionaries, attributes} = harness({}, scope);
     assert.equal(ET.i18n.current(), scope.ui);
     ET.i18n.apply();
