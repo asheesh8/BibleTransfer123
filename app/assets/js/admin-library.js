@@ -139,7 +139,7 @@
         '<details data-open="' + k[0] + '"' + (openKinds[lang + k[0]] ? ' open' : '') + '><summary>Choose items one by one (' + itemsOn + ' of ' + list.length + ' on)</summary>' +
         '<ul class="items">' + list.map(function (x) {
           var r = x.r, bits = [r.native && r.native !== r.title ? r.native : '', r.year, r.org].filter(Boolean).join(' · ');
-          var pick = r.type === 'scripture' && x.itemDefault ? '<span class="tag">TOP 5</span>' : '';
+          var pick = r.type === 'scripture' && x.itemDefault ? '<span class="tag">DEFAULT</span>' : '';
           return '<li><span class="t">' + esc(r.title) + pick + (bits ? '<small>' + esc(bits) + '</small>' : '') + '</span>' +
             sw('data-item="' + esc(r.id) + '"', x.itemOn, r.title) + '</li>';
         }).join('') + '</ul></details></section>';
@@ -180,7 +180,7 @@
   });
   document.getElementById('reset-lang').addEventListener('click', function () {
     var lang = langSelect.value;
-    if (!confirm('Put ' + langName(lang) + ' back to the defaults: all films and audio Bibles, the top five Scripture texts, everything else off?')) return;
+    if (!confirm('Put ' + langName(lang) + ' back to the defaults: all films and audio Bibles, the default Scripture text (five in English), everything else off?')) return;
     delete state.types[lang];
     (byLang[lang] || []).forEach(function (r) { delete state.items[r.id]; });
     changed();

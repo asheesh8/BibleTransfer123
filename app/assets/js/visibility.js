@@ -4,7 +4,7 @@
    nothing is ever deleted and anything can be switched back on:
 
    1. Built-in defaults (below): films and audio Bibles all on; Scripture text
-      cut to the five best-known translations per language; old scans, audio
+      cut to five translations in English and one classic Bible elsewhere; old scans, audio
       collections, books and partner links off.
    2. The admin's switches (/admin/library), served by /api/visibility as
       window.ET_VISIBILITY_LIVE. A whole kind can be switched per language,
@@ -27,10 +27,11 @@
     'link': false
   };
 
-  var SCRIPTURE_LIMIT = 5;
+  // English keeps five translations; every other language keeps one, its
+  // classic Bible (the local equivalent of the King James Version). Where that
+  // classic only opens online, a full Bible the app can read is preferred.
+  var SCRIPTURE_LIMIT = 1;
 
-  // Languages with more than five Scripture texts. Chosen for how widely each
-  // translation is known and read; every other language keeps all of its own.
   var TOP_SCRIPTURE = {
     eng: [
       'eng-text-engkjv',                                        // King James Version
@@ -39,48 +40,35 @@
       'eng-scripture-dbs-new-english-translation-net-0838050dd', // NET
       'eng-text-engbsb'                                         // Berean Standard Bible
     ],
-    fra: [
-      'fra-text-fralsg',     // Louis Segond 1910
-      'fra-edition-frasg21', // Segond 21
-      'fra-edition-fraswr',  // Bible du Semeur
-      'fra-edition-frabcf',  // Bible en français courant
-      'fra-text-fradby'      // Darby
-    ],
-    por: [
-      'por-edition-porarc',  // Almeida Revista e Corrigida
-      'por-edition-porbar',  // Almeida Revista e Atualizada
-      'por-edition-porbnv',  // Nova Versão Internacional
-      'por-edition-porfie',  // Almeida Corrigida Fiel
-      'por-edition-pornvt'   // Nova Versão Transformadora
-    ],
-    cmn: [
-      'cmn-text-chinese-union-version-simplified-1919',
-      'cmn-text-chinese-union-version-traditional-1919',
-      'cmn-text-new-chinese-version-simplified-1992',
-      'cmn-text-new-chinese-version-traditional-1992',
-      'cmn-text-chinese-king-james-version-simplified-1992'
-    ],
-    ara: [
-      'ara-text-arbvdv',     // Van Dyck
-      'ara-text-arbnav',     // Ketab El Hayat (New Arabic Version)
-      'ara-text-arberv',     // Easy-to-Read Version
-      'ara-text-arbonav',    // Open New Arabic Version
-      'ara-text-arzvdv'      // Egyptian Arabic
-    ],
-    amh: [
-      'amh-text-amhubs',     // 1962 Bible (Bible Society of Ethiopia)
-      'amh-edition-amhniv',  // New Amharic Standard Version
-      'amh-edition-amhaclb', // Common Language Bible
-      'amh-edition-amhort',  // Orthodox Bible
-      'amh-edition-amhibs'   // IBS Version
-    ],
-    orm: [
-      'orm-text-gazbib',      // Oromo Contemporary Version
-      'orm-text-gazbibl',     // Oromo Contemporary Version, Latin script
-      'orm-text-haebse',      // Eastern Oromo 2005
-      'orm-publisher-gazgaz', // West Central Oromo New Testament
-      'orm-publisher-gaxbsk'  // Borana 1994
-    ]
+    aka: ['aka-text-akaocb'],                                    // Nkwa Asɛm
+    amh: ['amh-text-amhubs'],                                    // 1962 Bible Society of Ethiopia
+    ara: ['ara-text-arbvdv'],                                    // Van Dyck
+    cmn: ['cmn-text-chinese-union-version-simplified-1919'],     // Chinese Union Version
+    fra: ['fra-text-fralsg'],                                    // Louis Segond 1910
+    hau: ['hau-text-haudor'],                                    // Littafi Mai Tsarki
+    hin: ['hin-text-hinold'],                                    // Hindi Old Version
+    ibo: ['ibo-publisher-iboilb'],                               // Igbo Union Version
+    kik: ['kik-text-kikokhw'],
+    lin: ['lin-text-linocb'],
+    lug: ['lug-scripture-dbs-open-luganda-contemporary-bible-4747d668e'],
+    luo: ['luo-text-luoont'],
+    mar: ['mar-text-maromb'],                                    // Revised Marathi Bible
+    mlg: ['mlg-text-mlgdpv'],                                    // Malagasy Protestant 1965
+    npi: ['npi-scripture-dbs-nepali-bible-e1ad858a3'],           // Nepali Bible
+    nya: ['nya-text-nyaogw'],
+    orm: ['orm-text-gazbib'],                                    // Oromo Contemporary Version
+    pan: ['pan-text-panovv'],
+    pcm: ['pcm-text-pcmwbt'],
+    pnb: ['pnb-text-pnbpov'],                                    // Pavitra Bible 1945
+    por: ['por-edition-porarc'],                                 // Almeida Revista e Corrigida
+    run: ['run-text-runbsb'],
+    sna: ['sna-text-snaibs'],
+    swh: ['swh-text-swhulb'],
+    tir: ['tir-text-tirtbi'],
+    urd: ['urd-text-urdpnt'],                                    // Kitáb i Muqaddas
+    yor: ['yor-text-yorycb'],
+    yue: ['yue-text-studium-biblicum-version-1999'],
+    zul: ['zul-text-online']
   };
 
   var STORE_KEY = 'et.visibility';
@@ -121,7 +109,7 @@
     return !firstScripture || firstScripture[r.id] === true;
   }
 
-  // A language not in TOP_SCRIPTURE that grows past five keeps its first five.
+  // A language not in TOP_SCRIPTURE keeps its first Scripture text.
   function firstScriptureIds(resources) {
     var seen = {}, first = {};
     for (var i = 0; i < resources.length; i++) {

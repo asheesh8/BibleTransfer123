@@ -27,7 +27,7 @@ function load(catalog, live, storage) {
 
 const count = (list, f) => list.filter(f).length;
 
-test('defaults keep every film and audio Bible and at most five Scripture texts per language', () => {
+test('defaults keep every film and audio Bible and five Scripture texts in English and one elsewhere', () => {
   const { all, lib } = load('catalog.js');
   const shown = lib.resources;
   assert.equal(count(shown, r => r.type === 'film'), count(all, r => r.type === 'film'));
@@ -36,7 +36,7 @@ test('defaults keep every film and audio Bible and at most five Scripture texts 
   const langs = new Set(all.map(r => r.lang));
   for (const lang of langs) {
     const have = count(all, r => r.lang === lang && r.type === 'scripture');
-    assert.equal(count(shown, r => r.lang === lang && r.type === 'scripture'), Math.min(have, 5), lang);
+    assert.equal(count(shown, r => r.lang === lang && r.type === 'scripture'), Math.min(have, lang === 'eng' ? 5 : 1), lang);
   }
   const eng = shown.filter(r => r.lang === 'eng' && r.type === 'scripture').map(r => r.title);
   assert.ok(eng.includes('King James Version') && eng.includes('World English Bible'));
@@ -47,10 +47,10 @@ test('every chosen translation exists in the full and per-language catalogues', 
   const { all, V } = load('catalog.js');
   const ids = new Set(all.filter(r => r.type === 'scripture').map(r => r.id));
   for (const [lang, picks] of Object.entries(V.TOP_SCRIPTURE)) {
-    assert.equal(picks.length, 5, lang);
+    assert.equal(picks.length, lang === 'eng' ? 5 : 1, lang);
     for (const id of picks) assert.ok(ids.has(id), id);
     const own = load('catalog-' + lang + '.js');
-    assert.equal(count(own.lib.resources, r => r.type === 'scripture'), 5, lang);
+    assert.equal(count(own.lib.resources, r => r.type === 'scripture'), picks.length, lang);
   }
 });
 
