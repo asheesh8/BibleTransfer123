@@ -54,6 +54,7 @@
     { "source": "/yoruba", "destination": "/yoruba/index.html" },
     { "source": "/yor", "destination": "/yoruba/index.html" },
     { "source": "/admin", "destination": "/admin/index.html" },
+    { "source": "/admin/library", "destination": "/admin/library.html" },
     { "source": "/privacy", "destination": "/privacy.html" },
     { "source": "/english", "destination": "/english/index.html" },
     { "source": "/mandarin", "destination": "/mandarin/index.html" },

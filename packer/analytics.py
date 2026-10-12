@@ -29,6 +29,11 @@ MAX_RECENT_EVENTS = 500
 COOKIE_NAME = "et_admin"
 SESSION_SECONDS = 12 * 3600
 PREFIX = "easytransfer:analytics:v1:"
+VISIBILITY_KEY = "easytransfer:library:v1:visibility"
+MAX_VISIBILITY_BODY = 512 * 1024
+MAX_VISIBILITY_ITEMS = 10000
+CONTENT_TYPES = frozenset(("film", "audio-bible", "audio", "scripture", "historic", "link", "book"))
+LANGUAGE_CODE = re.compile(r"^[a-z]{3}$")
 EVENT_TYPES = frozenset((
     "page_view", "session_start", "share_intent", "share_complete", "share_cancel",
     "shared_visit", "resource_open", "play", "pause", "play_complete",
@@ -171,6 +176,7 @@ class SQLiteStore:
                 CREATE TABLE IF NOT EXISTS events (id TEXT PRIMARY KEY, at REAL NOT NULL, body TEXT NOT NULL);
                 CREATE INDEX IF NOT EXISTS event_time ON events(at);
                 CREATE TABLE IF NOT EXISTS limits (key TEXT PRIMARY KEY, hits INTEGER NOT NULL, expires REAL NOT NULL);
+                CREATE TABLE IF NOT EXISTS settings (key TEXT PRIMARY KEY, body TEXT NOT NULL);
             """)
         try:
             self.path.chmod(0o600)
@@ -208,6 +214,15 @@ class SQLiteStore:
             db.execute("DELETE FROM events WHERE at <= ?", (now - RETENTION_SECONDS,))
             rows = db.execute("SELECT body FROM events WHERE at >= ? AND at <= ? ORDER BY at DESC, id DESC LIMIT ?", (start, now + 300, MAX_ANALYSIS_EVENTS + 1)).fetchall()
             return [json.loads(row[0]) for row in rows[:MAX_ANALYSIS_EVENTS]], len(rows) > MAX_ANALYSIS_EVENTS
+
+    def get_setting(self, key):
+        with self.connect() as db:
+            row = db.execute("SELECT body FROM settings WHERE key = ?", (key,)).fetchone()
+            return row[0] if row else None
+
+    def set_setting(self, key, body):
+        with self.connect() as db:
+            db.execute("INSERT INTO settings VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET body = excluded.body", (key, body))
 
 
 class RedisStore:
@@ -281,6 +296,15 @@ class RedisStore:
         except (ValueError, TypeError):
             raise APIError(503, "Analytics storage is temporarily unavailable.") from None
         return events, truncated
+
+    def get_setting(self, key):
+        body = self.request(["GET", key])
+        if body is not None and not isinstance(body, str):
+            raise APIError(503, "Library settings storage is temporarily unavailable.")
+        return body
+
+    def set_setting(self, key, body):
+        self.request(["SET", key, body])
 
 
 def local_db_path(public_root=None):
@@ -450,6 +474,67 @@ def aggregate(events, days, now, truncated=False):
     return result
 
 
+def validate_visibility(payload, now):
+    """Admin switches: only overrides of the app's built-in defaults are kept."""
+    if not isinstance(payload, dict) or set(payload) - {"action", "types", "items"} or payload.get("action") != "save":
+        raise APIError(400, "Invalid library settings.")
+    types, items = payload.get("types", {}), payload.get("items", {})
+    if not isinstance(types, dict) or not isinstance(items, dict) or len(types) > 500 or len(items) > MAX_VISIBILITY_ITEMS:
+        raise APIError(400, "Invalid library settings.")
+    clean_types = {}
+    for language, switches in types.items():
+        if not isinstance(language, str) or not LANGUAGE_CODE.match(language) or not isinstance(switches, dict):
+            raise APIError(400, "Invalid library settings.")
+        if any(kind not in CONTENT_TYPES or type(value) is not bool for kind, value in switches.items()):
+            raise APIError(400, "Invalid library settings.")
+        if switches:
+            clean_types[language] = dict(sorted(switches.items()))
+    for resource, value in items.items():
+        if not isinstance(resource, str) or not 0 < len(resource) <= 200 or any(ord(c) < 32 for c in resource) or type(value) is not bool:
+            raise APIError(400, "Invalid library settings.")
+    return {"v": 1, "types": dict(sorted(clean_types.items())), "items": dict(sorted(items.items())), "updatedAt": iso_at(now)}
+
+
+def read_visibility(store):
+    body = store.get_setting(VISIBILITY_KEY)
+    if not body:
+        return None
+    try:
+        state = json.loads(body)
+    except ValueError:
+        return None
+    return state if isinstance(state, dict) and state.get("v") == 1 else None
+
+
+def visibility_script(state):
+    # A classic script, so file:// and offline pages simply fail to load it and
+    # keep the built-in defaults (or the copy they last saw).
+    return "window.ET_VISIBILITY_LIVE = " + json.dumps(state, separators=(",", ":")) + ";\n"
+
+
+def dispatch_visibility(route, method, headers, payload, production, public_root, now, output_headers):
+    if method == "GET":
+        query = urllib.parse.parse_qs(route.query)
+        if query.get("format") == ["json"]:
+            state = read_visibility(get_store(production, public_root))
+            return 200, {"state": state, "admin": authenticated(headers, now)}, output_headers
+        try:
+            state = read_visibility(get_store(production, public_root))
+        except (APIError, OSError, sqlite3.Error, ValueError, TypeError):
+            # Unconfigured or unavailable storage must never break the library.
+            state = None
+        output_headers = {**output_headers, "Content-Type": "application/javascript; charset=utf-8",
+                          "Cache-Control": "public, max-age=0, s-maxage=10, stale-while-revalidate=60"}
+        return 200, visibility_script(state), output_headers
+    if not os.environ.get("EASYTRANSFER_ADMIN_PASSWORD"):
+        raise APIError(503, "Admin access is not configured. Set EASYTRANSFER_ADMIN_PASSWORD.")
+    if not authenticated(headers, now):
+        raise APIError(401, "Admin sign-in is required.")
+    state = validate_visibility(payload, now)
+    get_store(production, public_root).set_setting(VISIBILITY_KEY, json.dumps(state, separators=(",", ":")))
+    return 200, {"ok": True, "state": state}, output_headers
+
+
 def dispatch(path, method, headers, raw=b"", client_ip="", production=False, public_root=None, now=None):
     """Return status, JSON object and response headers without leaking errors."""
     now = time.time() if now is None else now
@@ -457,21 +542,24 @@ def dispatch(path, method, headers, raw=b"", client_ip="", production=False, pub
     output_headers = {"Cache-Control": "no-store", "X-Content-Type-Options": "nosniff"}
     try:
         route = urllib.parse.urlsplit(path)
-        if route.path not in ("/api/analytics", "/api/admin"):
+        if route.path not in ("/api/analytics", "/api/admin", "/api/visibility"):
             raise APIError(404, "API not found.")
         if method not in (("POST",) if route.path == "/api/analytics" else ("GET", "POST")):
             raise APIError(405, "Method not allowed.")
+        limit = MAX_VISIBILITY_BODY if route.path == "/api/visibility" else MAX_BODY
         payload = None
         if method == "POST":
             require_same_origin(headers, production)
             if headers.get("content-type", "").split(";", 1)[0].strip().lower() != "application/json":
                 raise APIError(415, "Use application/json.")
-            if len(raw) > MAX_BODY:
+            if len(raw) > limit:
                 raise APIError(413, "Request body is too large.")
             try:
                 payload = json.loads(raw)
             except (ValueError, UnicodeError, RecursionError):
                 raise APIError(400, "Invalid JSON.") from None
+        if route.path == "/api/visibility":
+            return dispatch_visibility(route, method, headers, payload, production, public_root, now, output_headers)
         if route.path == "/api/analytics":
             country = headers.get("x-vercel-ip-country", "") if production else ""
             events = validate_events(payload, now, country)
@@ -523,7 +611,8 @@ def handle_http(handler, production=False, public_root=None):
     try:
         if handler.command == "POST":
             length = int(handler.headers.get("Content-Length", "0"))
-            if length < 0 or length > MAX_BODY:
+            limit = MAX_VISIBILITY_BODY if urllib.parse.urlsplit(handler.path).path == "/api/visibility" else MAX_BODY
+            if length < 0 or length > limit:
                 raise APIError(413, "Request body is too large.")
             raw = handler.rfile.read(length)
         address = handler.headers.get("x-real-ip", "") if production else handler.client_address[0]
@@ -531,9 +620,12 @@ def handle_http(handler, production=False, public_root=None):
     except (ValueError, APIError) as error:
         code, payload = (error.status, {"error": error.message}) if isinstance(error, APIError) else (400, {"error": "Invalid request length."})
         headers = {"Cache-Control": "no-store", "X-Content-Type-Options": "nosniff"}
-    body = json.dumps(payload, separators=(",", ":")).encode()
+    if isinstance(payload, str):
+        body = payload.encode()
+    else:
+        body = json.dumps(payload, separators=(",", ":")).encode()
+        headers = {"Content-Type": "application/json; charset=utf-8", **headers}
     handler.send_response(code)
-    handler.send_header("Content-Type", "application/json; charset=utf-8")
     handler.send_header("Content-Length", str(len(body)))
     for key, value in headers.items():
         handler.send_header(key, value)

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#4E1F64">
+  <title>Library switches · EasyTransfer Admin</title>
+  <link rel="icon" href="../assets/icon/favicon-32.png" sizes="32x32">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+  <style>
+    .lib-main { max-width: 980px; }
+    .lib-bar { position: sticky; top: 0; z-index: 5; background: var(--ground); padding: 12px 0; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; border-bottom: 1px solid var(--line); margin-bottom: 22px; }
+    .lib-bar select { min-height: 44px; border-radius: 10px; border: 1px solid #ded4e4; padding: 0 12px; font-size: 15px; background: white; max-width: 100%; }
+    .lib-save { font-size: 13px; color: var(--soft); margin-left: auto; }
+    .lib-save.ok { color: var(--green); }
+    .lib-save.err { color: #812b37; }
+    .kind { margin-bottom: 16px; padding: 18px 20px; }
+    .kind-head { display: flex; align-items: center; gap: 14px; }
+    .kind-head h2 { font-size: 18px; font-weight: 700; flex: 1; }
+    .kind-head .n { color: var(--soft); font-size: 13px; font-weight: 500; display: block; margin-top: 3px; }
+    .kind.off .items { opacity: .55; }
+    .kind-tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .kind-tools .button { min-height: 36px; padding: 6px 12px; font-size: 12px; }
+    .kind details { margin-top: 12px; }
+    .kind summary { cursor: pointer; font-size: 13px; font-weight: 650; color: var(--purple); padding: 6px 0; }
+    .items { list-style: none; padding: 0; margin: 8px 0 0; }
+    .items li { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); }
+    .items .t { flex: 1; min-width: 0; font-size: 14px; }
+    .items .t small { display: block; color: var(--soft); font-size: 12px; margin-top: 2px; overflow-wrap: anywhere; }
+    .tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: .04em; color: var(--purple); background: var(--purple-wash); border-radius: 6px; padding: 1px 6px; margin-left: 6px; vertical-align: 1px; }
+    .sw { position: relative; flex: none; width: 52px; height: 30px; }
+    .sw input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; z-index: 1; }
+    .sw span { position: absolute; inset: 0; border-radius: 30px; background: #cfc6d6; transition: background .15s; }
+    .sw span::after { content: ""; position: absolute; top: 3px; left: 3px; width: 24px; height: 24px; border-radius: 50%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,.25); transition: transform .15s; }
+    .sw input:checked + span { background: var(--green); }
+    .sw input:checked + span::after { transform: translateX(22px); }
+    .sw input:focus-visible + span { outline: 3px solid var(--purple); outline-offset: 2px; }
+    .everywhere { margin-bottom: 26px; }
+    .ev-row { display: flex; flex-wrap: wrap; gap: 8px 12px; justify-content: space-between; align-items: center; padding: 10px 0; border-top: 1px solid var(--line); font-size: 14px; }
+    .ev-row small { color: var(--soft); }
+    .ev-row div:last-child { display: flex; gap: 6px; }
+    .everywhere .button { min-height: 34px; padding: 5px 10px; font-size: 12px; }
+    @media (max-width: 640px) { .admin-main.lib-main { padding: 20px 16px; } .lib-save { margin-left: 0; width: 100%; } }
+  </style>
+  <script>window.ET_VISIBILITY_ADMIN = true;</script>
+  <script src="../data/catalog.js" defer></script>
+  <script src="../assets/js/visibility.js" defer></script>
+  <script src="../assets/js/admin-library.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="admin-header">
+    <div class="header-inner">
+      <a class="brand" href="../" aria-label="EasyTransfer library">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 5h6v14H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm8 0h6a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-6V5Z" stroke="currentColor" stroke-width="1.8"/><path d="M7 9h1m8 0h2M7 12h1m8 0h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <span>EasyTransfer <span class="brand-sub">Admin</span></span>
+      </a>
+      <div class="header-actions">
+        <a class="library-link" href="../admin">Analytics</a>
+        <a class="library-link" href="../">Open library <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="admin-main lib-main">
+    <div class="notice notice-error" id="message" role="alert" hidden></div>
+
+    <section class="login-card" id="login-panel" aria-labelledby="login-title" hidden>
+      <p class="eyebrow">Private workspace</p>
+      <h1 id="login-title">Library switches</h1>
+      <p class="login-intro">Sign in to choose what everyone sees in the library.</p>
+      <form id="login-form">
+        <label for="admin-password">Admin password</label>
+        <input id="admin-password" name="password" type="password" autocomplete="current-password" required>
+        <button class="button button-primary" id="login-button" type="submit">Sign in <span aria-hidden="true">→</span></button>
+      </form>
+    </section>
+
+    <div class="initial-loading" id="initial-loading" role="status"><span class="spinner" aria-hidden="true"></span> Loading…</div>
+
+    <div id="editor" hidden>
+      <div class="page-heading">
+        <div>
+          <p class="eyebrow">What the library shows</p>
+          <h1>Library switches</h1>
+          <p class="page-intro">Flick a kind or a single item on or off. Changes save by themselves and reach everyone using the online library within a few seconds. Nothing is deleted.</p>
+        </div>
+      </div>
+
+      <section class="panel everywhere" aria-labelledby="everywhere-title">
+        <div class="panel-heading"><div><p class="eyebrow">Quick switches</p><h2 id="everywhere-title">Every language at once</h2></div></div>
+        <div id="everywhere"></div>
+        <p class="panel-note">Sets a whole kind for every language. Individual item switches are kept.</p>
+      </section>
+
+      <div class="lib-bar">
+        <label class="sr-only" for="lang">Language</label>
+        <select id="lang"></select>
+        <button class="button button-quiet" id="reset-lang" type="button">Reset this language to defaults</button>
+        <span class="lib-save" id="save-status" role="status" aria-live="polite"></span>
+      </div>
+
+      <div id="kinds"></div>
+    </div>
+  </main>
+  <footer class="admin-footer"><span>EasyTransfer · Library switches</span><span>Nothing is deleted</span></footer>
+  <noscript><p class="noscript-note">Enable JavaScript to use the library switches.</p></noscript>
+</body>
+</html>
