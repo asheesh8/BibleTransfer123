@@ -22,6 +22,7 @@
     ['akan', 'aka', 'Akan', 'Twi (Akan)'],
     ['tigrinya', 'tir', 'Tigrinya', 'ትግርኛ'],
     ['arabic', 'ara', 'Arabic', 'العربية'],
+    ['haitian', 'hat', 'Haitian Creole', 'Kreyòl ayisyen'],
     ['chichewa', 'nya', 'Chichewa', 'Chichewa'],
     ['kinyarwanda', 'kin', 'Kinyarwanda', 'Ikinyarwanda'],
     ['xhosa', 'xho', 'Xhosa', 'isiXhosa'],

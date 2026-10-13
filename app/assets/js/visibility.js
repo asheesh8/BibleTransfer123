@@ -45,6 +45,7 @@
     ara: ['ara-text-arbvdv'],                                    // Van Dyck
     cmn: ['cmn-text-chinese-union-version-simplified-1919'],     // Chinese Union Version
     fra: ['fra-text-fralsg'],                                    // Louis Segond 1910
+    hat: ['hat-text-hatabs'],                                    // Sent Bib 1985, Haitian Bible Society
     hau: ['hau-text-haudor'],                                    // Littafi Mai Tsarki
     hin: ['hin-text-hinold'],                                    // Hindi Old Version
     ibo: ['ibo-publisher-iboilb'],                               // Igbo Union Version

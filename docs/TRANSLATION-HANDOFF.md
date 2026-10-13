@@ -926,3 +926,19 @@ Every item in a spoken variety names it (title "(Egyptian Arabic)", native "(ا�
 Not carried: links to other sites (find.bible, Create International, GRN programme pages, publisher sites, and DBS partner-library files outside the language catalogue); two moved audio Bibles; six GRN programmes that are resettlement welcomes or give no Christian subject; a "Prophets' Story - Arabic" that is in Fulfulde; the Nyssa manuscript (it also holds a letter attributed to Hermes) and a Tajik Genesis scan; two film pages with nothing DBS will serve; three StoryRunners stories whose files return a server error. Each is listed with its reason in `notCarried`.
 
 Rebuild with `python3 packer/build_dbs_arabic.py` (or `python3 packer/build_dbs_audit.py ara`), then `npm run dbs:import`. The audit is `catalog/source/dbs-audit-arabic-2026-10-07.json`.
+
+### Haitian Creole — 2026-10-13
+
+Added one shelf with its own interface and page: `/haitian` (`ht`, content `hat`, also `/haitian-creole`, `/kreyol`, `/creole`, `/hat`, `/ht`). The interface covers all 411 keys, the 66 Sent Bib book names and the privacy notice in Kreyòl ayisyen. Phone menu names (Files, Downloads, Settings) stay as the phone shows them in English, as in the other interfaces. The screenshot saving guide remains in English and is disclosed in the language picker.
+
+The same browser audit as the shelves above: DBS's Haitian page and every page it lists rendered in headless Chromium, every carried file checked by a ranged request and its leading bytes, and every chapter of the audio Bible checked (441, all valid).
+
+| Shelf | Resources | What is carried |
+|---|---|---|
+| Haitian Creole | 29 | Sent Bib (1985, Société Biblique Haïtienne; whole Bible, PDF and EPUB) first; the 2017 easy-to-read New Testament with Psalms and Proverbs in audio (FCBH); 9 films: JESUS (61 chapters), Magdalena, Story of Jesus for Children, King of Glory (2 parts), LUMO Luke and Mark, The HOPE, iBible: The Real Story of Jesus, Visual Bible Acts; 12 GRN programmes (Good News, Look, Listen & Live 1–8, Portrait of Jesus, Words of Life ×3), Story of Jesus and 30 StoryRunners stories; three historic scans (1998 Genesis, 2015 Bible print, John) |
+
+HATABS was opened to confirm it is the whole Bible (EPUB: 66 books, Jenèz to Revelasyon). DBS has no HTML download for it. LUMO's HD files on video2.dbs.org return 404, so LUMO carries the 360p chapters, which all check. StoryRunners' file names drop every accent; the titles are given with Haitian spelling. No inclusive-language or LGBTQ-affirming edition appears on the page.
+
+Not carried: links to other sites (find.bible, arc.gt, Mars Hill, GRN programme pages, pCloud and ROCK), whose DBS-hosted media is carried where DBS has it.
+
+Rebuild with `python3 packer/build_dbs_audit.py hat`, then `npm run dbs:import`. The audit is `catalog/source/dbs-audit-haitian-2026-10-13.json`.
