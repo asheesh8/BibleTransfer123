@@ -1,4 +1,4 @@
-"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya and Arabic: complete, verified and DBS-hosted."""
+"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Arabic and Haitian Creole: complete, verified and DBS-hosted."""
 import json
 import pathlib
 import re
@@ -13,8 +13,9 @@ ARA_COUNT = 263
 SHELVES = {'xho': ('xhosa', 'xh', 13), 'nya': ('chichewa', 'ny', 34),
            'kin': ('kinyarwanda', 'rw', 26), 'sna': ('shona', 'sn', 32),
            'run': ('kirundi', 'rn', 27), 'aka': ('akan', 'ak', 47),
-           'tir': ('tigrinya', 'ti', 26), 'ara': ('arabic', 'ar', ARA_COUNT)}
-DATES = {'ara': '2026-10-07'}
+           'tir': ('tigrinya', 'ti', 26), 'ara': ('arabic', 'ar', ARA_COUNT),
+           'hat': ('haitian', 'ht', 29)}
+DATES = {'ara': '2026-10-07', 'hat': '2026-10-13'}
 
 
 def urls(r):
@@ -77,6 +78,8 @@ class DbsAuditTest(unittest.TestCase):
         # Five full Bibles, two full New Testaments, the Sudanese New Testament
         # (DBS has 248 of its chapters) and four editions of a few books.
         self.assertEqual(totals['ara'], 1189 * 5 + 260 * 2 + 248 + 16 + 43 + 16 + 204)
+        # The easy-to-read New Testament with Psalms and Proverbs.
+        self.assertEqual(totals['hat'], 260 + 150 + 31)
 
     def test_moved_audio_bibles_are_left_out(self):
         moved = {'https://dbs.org/bibles/audio/NYABSM04605_DAVR_FB_N',
@@ -120,6 +123,10 @@ class DbsAuditTest(unittest.TestCase):
         aka = [r['id'] for r in self.shelf('aka') if r['type'] in ('scripture', 'audio-bible')]
         self.assertEqual(aka[:5], ['aka-ab-twibsg-00360-davr-fb-n', 'aka-ab-akabsg-fcbh-fb-n', 'aka-ab-akaubs-fcbh-nt-n',
                                    'aka-ab-twintp-davr-fb-n', 'aka-ab-fatbsg-davr-ot-n'])
+        hat = [r for r in self.shelf('hat') if r['type'] in ('scripture', 'audio-bible')]
+        self.assertEqual([r['id'] for r in hat], ['hat-text-hatabs', 'hat-ab-hatbli-fcbh-np-n'])
+        self.assertEqual(hat[0]['org'], 'Société Biblique Haïtienne')
+        self.assertEqual(hat[0]['read']['kind'], 'pdf')
         tir = [r for r in self.shelf('tir') if r['type'] in ('scripture', 'audio-bible')]
         self.assertEqual([r['id'] for r in tir], ['tir-text-tirtbi'])
         self.assertEqual(tir[0]['org'], 'Bible Society of Ethiopia')
@@ -209,6 +216,18 @@ class DbsAuditTest(unittest.TestCase):
             self.assertRegex(privacy, r'\n    ' + ui + r': \{\n      title: ')
             self.assertTrue((ROOT / f'app/data/catalog-{code}.js').exists())
             self.assertTrue(any(c['lang'] == code for c in self.cards.values()))
+
+    def test_haitian_creole_keeps_its_own_spelling(self):
+        hat = self.shelf('hat')
+        ab = next(r for r in hat if r['type'] == 'audio-bible')
+        self.assertEqual(ab['play']['books'][:3], ['Psalms', 'Proverbs', 'Matthew'])
+        self.assertEqual(ab['play']['bookNames']['Romans'], 'Ròm')
+        self.assertEqual(len([r for r in hat if r['type'] == 'film']), 9)
+        for r in hat:
+            self.assertNotIn('+', r['id'])
+        story = next(r for r in hat if r['id'] == 'hat-storyset')
+        self.assertEqual(story['play']['items'][5]['title'], '6. Jezi fèt')
+        self.assertEqual(self.built['hat']['languages']['hat']['native'], 'Kreyòl ayisyen')
 
 
 if __name__ == '__main__':

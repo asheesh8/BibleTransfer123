@@ -323,6 +323,17 @@
       disabled: "الإحصاءات متوقفة الآن.",
       signal: "يرسل متصفحك تفضيلًا للخصوصية، لذا ستبقى الإحصاءات متوقفة."
     },
+    ht: {
+      title: "Cookies ak vi prive ou",
+      body: "Si ou dakò, nou itilize memwa navigatè a pou n konte vizit, resous moun itilize, fason yo pataje, ak vizit ki soti nan lyen yo pataje. Rapò yo ka montre peyi ou ak sit ki voye w isit la. Nou kenbe aktivite yo pandan 90 jou. Nou pa ka wè kiyès ki resevwa lyen yo, ni mesaj prive, ni ki kote yo kole lyen ki kopye yo.",
+      accept: "Pèmèt estatistik",
+      reject: "Refize estatistik",
+      settings: "Paramèt cookies",
+      details: "Li avi sou vi prive a",
+      enabled: "Estatistik yo limen kounye a.",
+      disabled: "Estatistik yo etenn kounye a.",
+      signal: "Navigatè ou a voye yon preferans pou vi prive. Konsa estatistik yo ap rete etenn."
+    },
     ha: {
       title: "Kukis da sirrinka",
       body: "Da izininka, muna amfani da ma'ajiyar burauza don auna ziyarori, kayan da aka yi amfani da su, hanyoyin rabawa da ziyarorin da suka fito daga hanyoyin haɗin da aka raba. Rahotanni na iya nuna ƙasarka da gidan yanar gizon da ya kawo ka nan. Muna adana bayanan ayyuka na tsawon kwanaki 90. Ba za mu iya ganin waɗanda suka karɓa ba, ko saƙonni na sirri, ko inda aka liƙa hanyoyin haɗin da aka kwafa.",

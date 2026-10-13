@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Build Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan and Tigrinya from their browser audits.
+"""Build Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya and Haitian Creole from their browser audits.
 
-    python3 packer/build_dbs_audit.py            # all seven, and Arabic
+    python3 packer/build_dbs_audit.py            # all eight, and Arabic
     python3 packer/build_dbs_audit.py sna        # one
 
 Arabic is built by build_dbs_arabic.py, which reuses this Shelf.
@@ -20,6 +20,10 @@ its dialect.
 Tigrinya is one shelf for Eritrea and Ethiopia. DBS lists two dubs of JESUS
 (Eritrean and Ethiopian); each names its country. DBS lists no Tigrinya audio
 Bible, and its one text edition (TIRTBI) is the New Testament.
+
+Haitian Creole was rendered on 2026-10-13. Its Bible Society edition (Sent
+Bib, 1985) is the whole Bible as PDF and EPUB; the one audio Bible is the
+2017 easy-to-read New Testament with Psalms and Proverbs.
 
 Three DBS mistakes are handled rather than copied:
 
@@ -146,6 +150,19 @@ LANGS = {
                 grn_desc='ዛንታታት መጽሓፍ ቅዱስ፣ መዝሙራትን ናይ ክርስትና መልእኽትታትን፡ ብGlobal Recordings Network ዝተቐድሑ።',
                 plain=('tigrinya', 'tigrigna'), script='ethi', font='ethiopic',
                 ),
+    'hat': dict(slug='haitian', ui='ht', name='Haitian Creole', native='Kreyòl ayisyen', region='Haiti',
+                speakers='~12 million', date='2026-10-13',
+                blurb='Bib la, fim ak anrejistreman kretyen an kreyòl ayisyen.',
+                chapter='Chapit', part='Pati', view='Gade sou DBS',
+                full='Tout fim nan (MP4)', chapters_zip='Tout chapit yo (ZIP)',
+                tracks_zip='Tout anrejistreman yo (ZIP)', pdf='Liv (PDF)',
+                film_desc='Yon fim ki baze sou Bib la, an kreyòl ayisyen.',
+                film_desc_chapters='Yon fim ki baze sou Bib la, an kreyòl ayisyen. Chwazi chapit ou vle gade oswa sere.',
+                deaf_desc='',
+                historic_desc='Yon ansyen edisyon enprime, eskane an PDF. Gen mo ki ka ekri yon lòt jan pase jodi a.',
+                grn_desc='Istwa Bib la, chante ak mesaj kretyen Global Recordings Network anrejistre.',
+                plain=('kreyol ayisyen', 'haitian', 'haitian creole'),
+                ),
 }
 
 # Tigrinya films name the country of their dub: by the folder in the DBS address.
@@ -160,7 +177,7 @@ DIALECT = {'asante-twi': 'Asante Twi', 'akan-asante': 'Asante Twi', 'akan-akuape
 def local_books():
     src = (ROOT / 'app/assets/js/core.js').read_text()
     out = {}
-    for ui in ('xh', 'ny', 'rw', 'sn', 'rn', 'ak', 'ti', 'ar'):
+    for ui in ('xh', 'ny', 'rw', 'sn', 'rn', 'ak', 'ti', 'ar', 'ht'):
         block = re.search(r'\n    ' + ui + r': (\{.*?\n\})', src, re.S)[1]
         out[ui] = json.loads(block)
     return out
@@ -178,23 +195,26 @@ def film_native(code, series, meta):
         'run': lambda n: 'Ubutumwa Bwiza nk’uko bwanditswe na ' + n,
         'aka': lambda n: n + ' Asɛmpa',
         'tir': lambda n: 'ወንጌል ' + n,
+        'hat': lambda n: 'Levanjil dapre ' + n,
     }[code]
     words = {
         'jesus': {'xho': 'UYesu', 'nya': 'Yesu', 'kin': 'Yesu', 'sna': 'Jesu', 'run': 'Yesu', 'aka': 'Yesu',
-                  'tir': 'ኢየሱስ'},
+                  'tir': 'ኢየሱስ', 'hat': 'Jezi'},
         'savior': {'tir': 'መድሓኒ'},
         'magdalena': {'xho': 'Magdalena', 'nya': 'Magdalena', 'kin': 'Magdalena', 'sna': 'Magdalena',
-                      'run': 'Magdalena', 'aka': 'Magdalena', 'tir': 'መግደላዊት'},
+                      'run': 'Magdalena', 'aka': 'Magdalena', 'tir': 'መግደላዊት', 'hat': 'Magdalena'},
         'storyjesus': {'xho': 'Ibali likaYesu labantwana', 'nya': 'Nkhani ya Yesu ya Ana',
                        'kin': 'Inkuru ya Yesu y’Abana', 'sna': 'Nyaya yaJesu yeVana',
-                       'run': 'Inkuru ya Yesu y’abana', 'tir': 'ዛንታ ኢየሱስ ንቖልዑ'},
+                       'run': 'Inkuru ya Yesu y’abana', 'tir': 'ዛንታ ኢየሱስ ንቖልዑ',
+                       'hat': 'Istwa Jezi pou timoun'},
         'deafproject': {'xho': 'Ivangeli ngolwimi lwezandla', 'nya': 'Uthenga Wabwino m’chinenero cha manja',
                         'kin': 'Ubutumwa bwiza mu rurimi rw’amarenga', 'sna': 'Evhangeri nemutauro wezviratidzo',
                         'run': 'Ubutumwa Bwiza mu rurimi rw’ibimenyetso'},
         'lumo-covenant': {'xho': 'LUMO: UMnqophiso', 'nya': 'LUMO: Pangano', 'kin': 'LUMO: Isezerano',
                           'sna': 'LUMO: Sungano', 'aka': 'LUMO: Apam no'},
         'bp': {'kin': 'BibleProject: Incamake z’ibitabo bya Bibiliya'},
-        'rock': {'nya': 'Mfumu ya Ulemelero'},
+        'rock': {'nya': 'Mfumu ya Ulemelero', 'hat': 'Wa de Glwa'},
+        'hope': {'hat': 'Lespwa'},
     }
     if series in words:
         return words[series][code]
@@ -209,7 +229,7 @@ def film_native(code, series, meta):
         bible_film = {'xho': 'IBhayibhile ngefilimu', 'nya': 'Baibulo mu filimu',
                       'kin': 'Bibiliya mu mashusho', 'sna': 'Bhaibheri mufirimu',
                       'run': 'Bibiliya mu mashusho', 'aka': 'Twerɛ Kronkron a wɔayɛ no sini',
-                      'tir': 'መጽሓፍ ቅዱስ ብፊልም'}[code]
+                      'tir': 'መጽሓፍ ቅዱስ ብፊልም', 'hat': 'Bib la an fim'}[code]
         return bible_film + ': ' + b['Matthew' if series == 'matthew' else 'Acts']
     if series == 'ibible':
         return 'iBible: ' + meta['title_vernacular'].replace("'", '’')
@@ -231,6 +251,9 @@ GRN = {
 GRN['Good News'].update(run='Inkuru Nziza', aka='Asɛmpa')
 GRN['Words of Life'].update(run='Amajambo y’Ubuzima', aka='Nkwa Nsɛm', tir='ቃላት ሕይወት')
 GRN['Eta Mealtj Keriba Ala'] = {'tir': 'እታ መዓልቲ ቀሪባ ኣላ'}
+GRN['Good News']['hat'] = 'Bon Nouvèl'
+GRN['Words of Life']['hat'] = 'Pawòl Lavi'
+GRN['Portrait of Jesus']['hat'] = 'Pòtrè Jezi'
 # English titles for programmes GRN names only in the language.
 GRN_TITLE = {'Eta Mealtj Keriba Ala': 'The Day Is Coming'}
 LLL = {  # Look, Listen & Live 1-8
@@ -255,6 +278,9 @@ LLL = {  # Look, Listen & Live 1-8
     'tir': ('ርኣ፣ ስማዕ፣ ንበር', ['ምስ ኣምላኽ ምጅማር', 'ሓያላት ሰብኡት ኣምላኽ', 'ብኣምላኽ ዝመጽእ ዓወት',
             'ኣገልገልቲ ኣምላኽ', 'ምእንቲ ኣምላኽ ኣብ ፍርዲ', 'ኢየሱስ፡ መምህርን ፈዋስን',
             'ኢየሱስ፡ ጐይታን መድሓኒን', 'ግብሪ መንፈስ ቅዱስ']),
+    'hat': ('Gade, Koute, Viv', ['Kòmanse ak Bondye', 'Moun vanyan Bondye yo', 'Viktwa grasa Bondye',
+            'Sèvitè Bondye yo', 'Devan tribinal poutèt Bondye', 'Jezi, Mèt ak Gerisè',
+            'Jezi, Senyè ak Sovè', 'Travay Sentespri a']),
 }
 
 # Programmes DBS lists without anything that shows they are Christian.
@@ -285,6 +311,8 @@ TRADITIONAL = {
             'https://dbs.org/bibles/audio/FATBSG_DAVR_OT_N'],
     # The Bible Society of Ethiopia New Testament.
     'tir': ['https://dbs.org/bibles/TIRTBI'],
+    # The Haitian Bible Society's Sent Bib (1985), the whole Bible.
+    'hat': ['https://dbs.org/bibles/HATABS'],
 }
 
 # Akan editions, by DBS fileset or ID: the dialect, and a native title where
@@ -324,7 +352,24 @@ STORY_TITLES = {'tir': {
     20: 'ምምላስ እቲ ዝጠፍአ ወዲ', 28: 'እግዚኣብሄር መንፈሱ ይህብ',
     30: 'መራሕቲ ሃይማኖት ንሃዋርያት ጴጥሮስን ዮሃንስን ኣፈራርሕዎም', 32: 'ፊልጶስን እቲ ኢትዮጵያውን',
     33: 'ድሕነት ሃዋርያ ጳውሎስ', 39: 'ኢየሱስን ሳምራዊት ሰበይትን (መዝሙር)', 40: 'ኣምላኽ መንፈሱ ይህብ (መዝሙር)',
+}, 'hat': {
+    # The Haitian file names drop every accent ("Jezi Fet", "Pol te konveti").
+    1: 'Kreyasyon', 2: 'Yon gason ak yon fanm peche', 3: 'Inondasyon an nan tan Noe',
+    4: 'Bondye chwazi David pou wa', 5: 'Eli ak Akab', 6: 'Jezi fèt', 7: 'Jan batize Jezi',
+    8: 'Nonm paralize a geri', 9: 'Fanm ki te plen peche a', 10: 'Bon grenn ak move zèb',
+    11: 'Nonm ki te gen move lespri a', 12: 'Fanm ki t ap pèdi san an ak pitit fi Jayiris',
+    13: 'Kiyès mwen ye?', 14: 'Jezi moutre yo lapriyè', 15: 'Jezi antre Jerizalèm', 16: 'Dènye repa a',
+    17: 'Yo arete Jezi', 18: 'Yo kloure l sou kwa a', 19: 'Rezirèksyon an', 20: 'Ale nan tout nasyon',
+    21: 'Fèt Lapannkòt la', 22: 'Yo lapide Etyèn', 23: 'Etyopyen an resevwa batèm', 24: 'Pòl konvèti',
+    25: 'Kònèy resevwa Jezi', 26: 'Legliz la voye misyonè', 27: 'Lidi nan vil Filip',
+    28: 'Chèf prizon an konvèti', 29: 'Jezi vin pi popilè', 30: 'Nouvo syèl la ak nouvo tè a',
 }}
+# DBS's subtitles for the Haitian scans repeat the language name first.
+HAITIAN_SCANS = {
+    'Haitian-1998-Genesis-Portion': 'Jenèz (1998, pòsyon)',
+    'Haitian-Creole-2015-Bible-print': 'Bib la (2015, enprime)',
+    'Haitian-John-book': 'Levanjil Jan (liv)',
+}
 
 
 def secure(u):
@@ -383,15 +428,17 @@ class Shelf:
         org = {'NYAOGW': 'Biblica', 'SNAIBS': 'Bible Society of Zimbabwe',
                'SNAOLD': 'British and Foreign Bible Society', 'RUNBSB': 'Bible Society of Burundi',
                'AKAOCB': 'Biblica', 'TWIOCB': 'Biblica',
-               'TIRTBI': 'Bible Society of Ethiopia'}.get(abbr, 'Digital Bible Society')
+               'TIRTBI': 'Bible Society of Ethiopia',
+               'HATABS': 'Société Biblique Haïtienne'}.get(abbr, 'Digital Bible Society')
         bible = {'xho': 'IBhayibhile', 'nya': 'Baibulo', 'kin': 'Bibiliya', 'sna': 'Bhaibheri',
-                 'run': 'Isezerano Rishasha', 'aka': 'Twerɛ Kronkron', 'tir': 'ሓድሽ ኪዳን'}[self.code]
+                 'run': 'Isezerano Rishasha', 'aka': 'Twerɛ Kronkron', 'tir': 'ሓድሽ ኪዳን', 'hat': 'Bib la'}[self.code]
         desc = {
             'nya': 'Baibulo lonse m’Chichewa. Werengani mu pulogalamu kapena sungani PDF, EPUB kapena HTML.',
             'sna': 'Bhaibheri rose muchiShona. Rinogona kuverengwa pasina indaneti kana rachengetwa.',
             'run': 'Isezerano Rishasha ryose mu Kirundi. Risome muri porogaramu canke ubike PDF, EPUB canke HTML.',
             'aka': 'Twerɛ Kronkron no nyinaa wɔ ' + (dialect or 'Twi') + ' mu. Wobɛtumi akenkan wɔ app no mu anaa akora.',
             'tir': 'ምሉእ ሓድሽ ኪዳን ብትግርኛ። ኣብቲ ኣፕ ኣንብብዎ፡ ወይ PDF፣ EPUB ወይ HTML ዓቅቡ።',
+            'hat': 'Tout Bib la an kreyòl ayisyen, Ansyen ak Nouvo Testaman. Li l nan aplikasyon an, oswa sere PDF oswa EPUB la.',
         }[self.code]
         r = self.make('text-' + abbr.lower(), 'scripture', title, native, url, org, desc,
                       year={'NYAOGW': 2016, 'SNAOLD': 1949}.get(abbr) or self.year(url))
@@ -413,13 +460,14 @@ class Shelf:
                        'sna': 'Bhaibheri rinoverengwa pasina indaneti (HTML ZIP)',
                        'run': 'Isezerano Rishasha ryo gusoma ata interineti (HTML ZIP)',
                        'aka': 'Twerɛ Kronkron a wobɛkenkan bere a intanɛt nni hɔ (HTML ZIP)',
-                       'tir': 'ብዘይ ኢንተርነት ዝንበብ ሓድሽ ኪዳን (HTML ZIP)'}[self.code]
+                       'tir': 'ብዘይ ኢንተርነት ዝንበብ ሓድሽ ኪዳን (HTML ZIP)',
+                       'hat': 'Bib pou li san entènèt (HTML ZIP)'}[self.code]
             self.download(r, cand[2], offline)
         study = f'https://bibles.dbs.org/{abbr}/app-json-study/index.html'
         if any(l['url'] == study for l in page['links']):
             r['links'].append({'url': study, 'label': {'nya': 'Werengani pa intaneti', 'sna': 'Verenga paindaneti',
                                                      'run': 'Soma kuri interineti', 'aka': 'Kenkan wɔ intanɛt so',
-                                                     'tir': 'ብኢንተርነት ኣንብቡ'}[self.code]})
+                                                     'tir': 'ብኢንተርነት ኣንብቡ', 'hat': 'Li sou entènèt'}[self.code]})
 
     def audio_bible(self, url, page):
         info = self.audit['audio_bibles'].get(url) or {}
@@ -465,12 +513,15 @@ class Shelf:
             'sna': (None, 'Testamende Itsva', None),
             'run': ('Bibiliya yose', 'Isezerano Rishasha', None),
             'aka': ('Twerɛ Kronkron no nyinaa', 'Apam Foforɔ', None),
+            'hat': ('Tout Bib la', 'Nouvo Testaman', None),
         }[self.code]
         whole = 'OT' in testaments and len(keys) == 66
         what = scope_words[0] if whole else scope_words[2] if keys == ['Luke'] else scope_words[1]
         if self.code == 'aka' and testaments == ['OT']:
             what = 'Apam Dedaw'
-        listen = {'nya': 'Mvetserani', 'kin': 'Umva', 'sna': 'Teerera', 'run': 'Umviriza', 'aka': 'Tie'}[self.code]
+        if self.code == 'hat' and not whole and {'Psalms', 'Proverbs'} <= set(keys):
+            what = 'Nouvo Testaman, Sòm ak Pwovèb'
+        listen = {'nya': 'Mvetserani', 'kin': 'Umva', 'sna': 'Teerera', 'run': 'Umviriza', 'aka': 'Tie', 'hat': 'Koute'}[self.code]
         count = sum(counts.values())
         desc = {
             'nya': f'{what} momvetsera: mabuku {len(keys)}, mitu {count}. Sankhani buku ndi mutu woti mumvetsere kapena kusunga.',
@@ -478,6 +529,7 @@ class Shelf:
             'sna': f'{what} inonzwika: mabhuku {len(keys)}, zvitsauko {count}. Sarudza bhuku nechitsauko chaunoda kuteerera kana kuchengeta.',
             'run': f'{what} mu majwi: ibitabu {len(keys)}, ibice {count}. Hitamwo igitabu n’igice ushaka kwumviriza canke kubika.',
             'aka': f'{what} a wobɛtie: nwoma {len(keys)}, ati {count}. Yi nwoma ne ti a wopɛ sɛ wotie anaa wokora.',
+            'hat': f'{what} an odyo: {len(keys)} liv, {count} chapit. Chwazi liv ak chapit ou vle koute oswa sere.',
         }[self.code]
         dialect = None
         if self.code == 'aka':
@@ -487,7 +539,7 @@ class Shelf:
             native = f'{native} — {LOCAL[self.L["ui"]]["Luke"]}'
         # The DBS row gives 2001 for the edition it titles "2004 Kinyarwanda Bible".
         year = {'KINBIR_DAVR_FB_N': 2004}.get(fileset, self.year(url))
-        r = self.make('ab-' + fileset.lower().replace('.', '-').replace('_', '-'), 'audio-bible', title,
+        r = self.make('ab-' + fileset.lower().replace('.', '-').replace('_', '-').replace('+', 'p'), 'audio-bible', title,
                       native, url, org, desc, year=year)
         if dialect:
             r['scope'] = dialect
@@ -501,7 +553,7 @@ class Shelf:
         for l in page['links']:
             if l['url'].endswith('.zip') and self.ok(l['url']):
                 zipname = {'nya': 'Mitu yonse (ZIP)', 'kin': 'Ibice byose (ZIP)', 'sna': 'Zvitsauko zvose (ZIP)',
-                           'run': 'Ibice vyose (ZIP)', 'aka': 'Ati no nyinaa (ZIP)'}[self.code]
+                           'run': 'Ibice vyose (ZIP)', 'aka': 'Ati no nyinaa (ZIP)', 'hat': 'Tout chapit yo (ZIP)'}[self.code]
                 self.download(r, l['url'], zipname)
         return True
 
@@ -524,7 +576,7 @@ class Shelf:
         elif self.code == 'tir':
             country = next((v for k, v in COUNTRY.items() if ident[4:].startswith(k)), None)
             scope = country and country[0]
-        elif dialect and dialect[1] not in ('xhosa', 'chichewa', 'kinyarwanda', 'shona', 'kirundi'):
+        elif dialect and dialect[1] not in ('xhosa', 'chichewa', 'kinyarwanda', 'shona', 'kirundi', 'haitian'):
             scope = dialect[1].title()
         if scope:
             title += f' ({scope})'
@@ -594,6 +646,7 @@ class Shelf:
         native = re.sub(r'^(Shona|Nyanja|Chichewa|Xhosa) (- |\(\d{4}\) )', '', native)
         native = AKAN_SCANS.get(url.rsplit('/', 1)[1], native)
         native = TIGRINYA_SCANS.get(url.rsplit('/', 1)[1], native)
+        native = HAITIAN_SCANS.get(url.rsplit('/', 1)[1], native)
         r = self.make('scan-' + url.rsplit('/', 1)[1].lower(), 'historic', title, native, url,
                       'Digital Bible Society', self.L['historic_desc'], year=int(year[1]) if year else None)
         r['read'] = {'kind': 'pdf', 'url': pdf}
@@ -644,16 +697,17 @@ class Shelf:
     def story_of_jesus(self, url, page):
         L = self.L
         mp3 = list(dict.fromkeys(l['url'] for l in page['links'] if l['url'].endswith('.mp3')))
-        full = {'sna': 'Nyaya yose', 'run': 'Inkuru yose', 'aka': 'Asɛm no nyinaa', 'tir': 'ምሉእ ዛንታ'}[self.code]
+        full = {'sna': 'Nyaya yose', 'run': 'Inkuru yose', 'aka': 'Asɛm no nyinaa', 'tir': 'ምሉእ ዛንታ', 'hat': 'Tout istwa a'}[self.code]
         native = {'sna': 'Nyaya yaJesu inonzwika', 'run': 'Inkuru ya Yesu mu majwi', 'aka': 'Yesu ho asɛm a wobɛtie',
-                  'tir': 'ዛንታ ኢየሱስ ብድምጺ'}[self.code]
+                  'tir': 'ዛንታ ኢየሱስ ብድምጺ', 'hat': 'Istwa Jezi an odyo'}[self.code]
         entries = [(u, full if u.endswith('_full.mp3') else
                     f'{L["part"]} {int(re.search(r"(?:Part_|/)(\d+)\.mp3$", u)[1])}') for u in mp3]
         r = self.make('story-jesus', 'audio', 'Story of Jesus', native, page['resolved'], 'Story of Jesus',
                       {'sna': 'Nyaya yaJesu inonzwika: rekodhi rimwe rakazara nezvikamu zvisere. Teerera kana kuchengeta chaunoda.',
                        'run': 'Inkuru ya Yesu mu majwi, yose uko yakabaye canke mu bice umunani. Umviriza canke ubike ico ushaka.',
                        'aka': 'Yesu ho asɛm a wobɛtie: ne nyinaa bom, ne ne nkyekyɛmu awotwe. Tie anaa kora nea wopɛ.',
-                       'tir': 'ዛንታ ኢየሱስ ብድምጺ፡ ብሓደ ምሉእ ቅዳሕ ወይ ብሸውዓተ ክፋላት። ዝደለኹምዎ ስምዑ ወይ ዓቅቡ።'}[self.code])
+                       'tir': 'ዛንታ ኢየሱስ ብድምጺ፡ ብሓደ ምሉእ ቅዳሕ ወይ ብሸውዓተ ክፋላት። ዝደለኹምዎ ስምዑ ወይ ዓቅቡ።',
+                       'hat': 'Istwa Jezi an odyo: yon sèl anrejistreman konplè, oswa uit pati. Koute oswa sere sa ou vle.'}[self.code])
         r['dbsListedUrl'] = url
         self.tracks(r, entries)
         for l in page['links']:
@@ -678,9 +732,11 @@ class Shelf:
                 missing.append(f'{int(n)}. {story.rsplit("-", 1)[-1].replace("_", " ")}')
                 continue
             entries.append((u, f'{int(n)}. {local}'))
-        native = {'nya': 'Nkhani za m’Baibulo', 'sna': 'Nyaya dzeBhaibheri', 'tir': 'ዛንታታት መጽሓፍ ቅዱስ'}[self.code]
+        native = {'nya': 'Nkhani za m’Baibulo', 'sna': 'Nyaya dzeBhaibheri', 'tir': 'ዛንታታት መጽሓፍ ቅዱስ',
+                  'hat': 'Istwa Bib la'}[self.code]
         desc = {'nya': f'Nkhani {len(entries)} za m’Baibulo kuyambira pa chilengedwe, zojambulidwa ndi StoryRunners.',
                 'sna': f'Nyaya {len(entries)} dzeBhaibheri kubva pakusikwa kwezvinhu, dzakarekodhwa neStoryRunners.',
+                'hat': f'{len(entries)} istwa Bib la, depi kreyasyon an, StoryRunners anrejistre.',
                 'tir': f'{len(entries)} ዛንታታት መጽሓፍ ቅዱስ ካብ ፍጥረት ክሳብ ሓድሽ ሰማይን ሓድሽ ምድርን፡ ብStoryRunners ዝተቐድሑ።'}[self.code]
         r = self.make('storyset', 'audio', 'StoryRunners Bible story set', native, page['resolved'],
                       'StoryRunners', desc, stats=str(len(entries)))
