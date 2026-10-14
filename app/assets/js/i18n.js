@@ -118,6 +118,7 @@
       'type.scripture': 'Scripture',
       'type.historic': 'Old scans',
       'type.link': 'Needs internet',
+      'type.book': 'Books and guides',
 
       'item.play': 'Play',
       'item.read': 'Read',

@@ -5,7 +5,7 @@
 
    1. Built-in defaults (below): films and audio Bibles all on; Scripture text
       cut to five translations in English and one classic Bible elsewhere; old scans, audio
-      collections, books and partner links off.
+      collections, books and partner links off (books stay on in English).
    2. The admin's switches (/admin/library), served by /api/visibility as
       window.ET_VISIBILITY_LIVE. A whole kind can be switched per language,
       and any single item on or off.
@@ -25,6 +25,12 @@
     'historic': false,
     'book': false,
     'link': false
+  };
+
+  // Kinds switched on in one language only. English has no DBS books; its one
+  // book is the Bible Study Tool Box workbook the Library hosts itself.
+  var LANG_TYPE_DEFAULTS = {
+    eng: { 'book': true }
   };
 
   // English keeps five translations; every other language keeps one, its
@@ -97,10 +103,15 @@
     return validState(cached) ? cached : null;
   }
 
+  function typeDefault(lang, type) {
+    if (own(LANG_TYPE_DEFAULTS[lang], type)) return LANG_TYPE_DEFAULTS[lang][type];
+    return own(TYPE_DEFAULTS, type) ? TYPE_DEFAULTS[type] : true;
+  }
+
   function typeOn(lang, type, state) {
     var t = state && state.types && state.types[lang];
     if (own(t, type)) return t[type] === true;
-    return own(TYPE_DEFAULTS, type) ? TYPE_DEFAULTS[type] : true;
+    return typeDefault(lang, type);
   }
 
   /* Default for one item, before any per-item switch. */
@@ -145,6 +156,7 @@
   window.ET_VISIBILITY = {
     TYPE_DEFAULTS: TYPE_DEFAULTS,
     TOP_SCRIPTURE: TOP_SCRIPTURE,
+    typeDefault: typeDefault,
     typeOn: typeOn,
     resolve: resolve,
     current: current

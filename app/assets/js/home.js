@@ -7,7 +7,7 @@
   'use strict';
   var t = ET.i18n.t, h = ET.i18n.h;
 
-  var ORDER = ['film', 'scripture', 'audio-bible', 'audio', 'historic', 'link'];
+  var ORDER = ['film', 'scripture', 'book', 'audio-bible', 'audio', 'historic', 'link'];
 
   function lastOpened() {
     // Resume beats browse: the film someone stopped halfway through is almost

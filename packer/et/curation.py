@@ -344,6 +344,15 @@ def _dbs(url):
     return (host == "dbs.org" or host.endswith(".dbs.org")) and not _retired(url)
 
 
+# Files the VillageServer Initiative supplies itself are served from the
+# Library's own site (app/assets/library/), not re-hosted from anyone else.
+LIBRARY_HOST = "bible-transfer123.vercel.app"
+
+
+def _ours(url):
+    return urllib.parse.urlparse(url or "").netloc.lower() == LIBRARY_HOST
+
+
 def _has_url(v):
     return bool(re.search(r"https?://", json.dumps(v or {})))
 
@@ -353,7 +362,7 @@ def _dbs_only(r):
     if nothing DBS-hosted is left."""
     r = dict(r)
     def allowed(url):
-        return (_dbs(url) or (r.get("lang") == "luo" and url in LUO_PUBLISHERS)
+        return (_dbs(url) or _ours(url) or (r.get("lang") == "luo" and url in LUO_PUBLISHERS)
                 or (r.get("lang") == "orm" and url in OROMO_EXTERNAL)
                 or (r.get("lang") == "pcm" and url in PIDGIN_EXTERNAL)
                 or (r.get("lang") == "hau" and url in HAUSA_EXTERNAL)
@@ -365,7 +374,7 @@ def _dbs_only(r):
                 or (r.get("lang") == "fra" and url in FRENCH_EXTERNAL)
                 or (r.get("lang") == "ibo" and url in IGBO_EXTERNAL))
     def allowed_file(url):
-        return (_dbs(url) or (r.get("lang") == "orm" and url in OROMO_EXTERNAL)
+        return (_dbs(url) or _ours(url) or (r.get("lang") == "orm" and url in OROMO_EXTERNAL)
                 or (r.get("lang") == "pcm" and url in PIDGIN_EXTERNAL)
                 or (r.get("lang") == "hau" and url in HAUSA_EXTERNAL)
                 or (r.get("lang") == "mlg" and url in MALAGASY_EXTERNAL)
@@ -384,7 +393,7 @@ def _dbs_only(r):
     if r.get("source") and not allowed(r["source"]):
         r["source"] = None
     for k in ("cover", "coverOnline"):
-        if r.get(k) and r[k].startswith("http") and not _dbs(r[k]):
+        if r.get(k) and r[k].startswith("http") and not (_dbs(r[k]) or _ours(r[k])):
             r[k] = None
     online = r.get("online")
     if isinstance(online, dict) and _has_url(online) and not all(

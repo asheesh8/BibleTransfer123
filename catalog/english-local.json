@@ -1,0 +1,34 @@
+{
+ "generated": "Hosted by the Library itself (app/assets/library/) — files the VillageServer Initiative supplies directly, not from DBS",
+ "resources": [
+  {
+   "id": "eng-book-bible-study-toolbox",
+   "type": "book",
+   "title": "The Bible Study Tool Box",
+   "org": "Dr. Daniel S. Haifley",
+   "year": "2023",
+   "cover": "https://bible-transfer123.vercel.app/assets/library/bible-study-toolbox.jpg",
+   "desc": "A study manual on biblical hermeneutics: the principles for reading and understanding the Bible, one chapter each, with workbook questions. 152 pages.",
+   "stats": "Workbook · 152 pages",
+   "read": {
+    "kind": "pdf",
+    "url": "https://bible-transfer123.vercel.app/assets/library/bible-study-toolbox.pdf"
+   },
+   "downloads": [
+    {
+     "label": "PDF",
+     "url": "https://bible-transfer123.vercel.app/assets/library/bible-study-toolbox.pdf"
+    }
+   ],
+   "source": "https://bible-transfer123.vercel.app/assets/library/bible-study-toolbox.pdf",
+   "lang": "eng",
+   "langName": "English",
+   "play": null,
+   "native": null,
+   "duration": null,
+   "license": "© 2023 Daniel S. Haifley",
+   "scope": null,
+   "typeLabel": "Books and Guides"
+  }
+ ]
+}

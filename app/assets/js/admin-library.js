@@ -61,7 +61,7 @@
   // -------------------------------------------------------- state changes
   function setType(lang, type, on) {
     var t = state.types[lang] || (state.types[lang] = {});
-    var def = Object.prototype.hasOwnProperty.call(V.TYPE_DEFAULTS, type) ? V.TYPE_DEFAULTS[type] : true;
+    var def = V.typeDefault(lang, type);
     if (on === def) delete t[type]; else t[type] = on;
     if (!Object.keys(t).length) delete state.types[lang];
   }
