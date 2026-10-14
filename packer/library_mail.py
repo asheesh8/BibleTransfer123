@@ -141,7 +141,7 @@ def deliver(settings, message):
         raise APIError(502, "The outreach mailbox rejected its sign-in.") from None
     except (smtplib.SMTPException, OSError) as error:
         print("send-library: SMTP send failed:", type(error).__name__, file=sys.stderr)
-        raise APIError(502, "The email could not be sent right now.") from None
+        raise APIError(502, "The email could not be sent right now (" + type(error).__name__ + ").") from None
 
 
 def origin_for(headers, production):
