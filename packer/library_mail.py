@@ -13,6 +13,7 @@ import os
 import re
 import smtplib
 import ssl
+import sys
 import time
 import urllib.parse
 
@@ -134,7 +135,12 @@ def deliver(settings, message):
             server.send_message(message)
     except smtplib.SMTPRecipientsRefused:
         raise APIError(400, "That email address was refused.") from None
-    except (smtplib.SMTPException, OSError):
+    except smtplib.SMTPAuthenticationError:
+        # Says which setting to fix without echoing anything the server returned.
+        print("send-library: SMTP login was rejected; check OUTREACH_SMTP_USER and OUTREACH_SMTP_PASSWORD", file=sys.stderr)
+        raise APIError(502, "The outreach mailbox rejected its sign-in.") from None
+    except (smtplib.SMTPException, OSError) as error:
+        print("send-library: SMTP send failed:", type(error).__name__, file=sys.stderr)
         raise APIError(502, "The email could not be sent right now.") from None
 
 
