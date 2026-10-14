@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Build Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya and Haitian Creole from their browser audits.
+"""Build Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Haitian Creole and Kuria from their browser audits.
 
-    python3 packer/build_dbs_audit.py            # all eight, and Arabic
+    python3 packer/build_dbs_audit.py            # all nine, and Arabic
     python3 packer/build_dbs_audit.py sna        # one
 
 Arabic is built by build_dbs_arabic.py, which reuses this Shelf.
@@ -24,6 +24,13 @@ Bible, and its one text edition (TIRTBI) is the New Testament.
 Haitian Creole was rendered on 2026-10-13. Its Bible Society edition (Sent
 Bib, 1985) is the whole Bible as PDF and EPUB; the one audio Bible is the
 2017 easy-to-read New Testament with Psalms and Proverbs.
+
+Kuria was rendered on 2026-10-14. DBS has one current audio Bible (Davar's
+Endagano Ehea 1995, all 66 books), the JESUS film, nine GRN programmes and
+the StoryRunners set; its second audio Bible page has moved to the first.
+DBS names the books, the film chapters and the GRN pages in Swahili, which
+every Kuria reader in Tanzania and Kenya also reads, so the Kuria page uses
+the Swahili interface and its own words are in Swahili.
 
 Three DBS mistakes are handled rather than copied:
 
@@ -163,6 +170,20 @@ LANGS = {
                 grn_desc='Istwa Bib la, chante ak mesaj kretyen Global Recordings Network anrejistre.',
                 plain=('kreyol ayisyen', 'haitian', 'haitian creole'),
                 ),
+    # Swahili interface (see the module note); titles DBS gives in Kuria stay Kuria.
+    'kuj': dict(slug='kuria', ui='swh', name='Kuria', native='Igikuria', region='Tanzania & Kenya',
+                speakers='~1 million', date='2026-10-14',
+                blurb='Biblia, filamu na sauti za Kikristo kwa Kikuria (Igikuria).',
+                chapter='Sura', part='Sehemu', view='Tazama kwenye DBS',
+                full='Filamu nzima (MP4)', chapters_zip='Sura zote (ZIP)',
+                tracks_zip='Sauti zote (ZIP)', pdf='Kitabu (PDF)',
+                film_desc='Filamu inayotokana na Biblia, kwa Kikuria.',
+                film_desc_chapters='Filamu inayotokana na Biblia, kwa Kikuria. Chagua sura unayotaka kutazama au kuhifadhi.',
+                deaf_desc='',
+                historic_desc='',
+                grn_desc='Hadithi za Biblia na ujumbe wa Kikristo kwa Kikuria, zilizorekodiwa na Global Recordings Network.',
+                plain=('kuria', 'igikuria'),
+                ),
 }
 
 # Tigrinya films name the country of their dub: by the folder in the DBS address.
@@ -180,7 +201,21 @@ def local_books():
     for ui in ('xh', 'ny', 'rw', 'sn', 'rn', 'ak', 'ti', 'ar', 'ht'):
         block = re.search(r'\n    ' + ui + r': (\{.*?\n\})', src, re.S)[1]
         out[ui] = json.loads(block)
+    out['swh'] = dict(zip(BOOKS, SWAHILI_BOOKS))
     return out
+
+# The Swahili Union Version's book names, for the Kuria shelf. DBS's Kuria
+# picker uses these too, with a few long forms ("Marko Mtakatifu").
+SWAHILI_BOOKS = [
+    'Mwanzo', 'Kutoka', 'Mambo ya Walawi', 'Hesabu', 'Kumbukumbu la Torati', 'Yoshua', 'Waamuzi', 'Ruthu',
+    '1 Samweli', '2 Samweli', '1 Wafalme', '2 Wafalme', '1 Mambo ya Nyakati', '2 Mambo ya Nyakati', 'Ezra',
+    'Nehemia', 'Esta', 'Ayubu', 'Zaburi', 'Mithali', 'Mhubiri', 'Wimbo Ulio Bora', 'Isaya', 'Yeremia',
+    'Maombolezo', 'Ezekieli', 'Danieli', 'Hosea', 'Yoeli', 'Amosi', 'Obadia', 'Yona', 'Mika', 'Nahumu',
+    'Habakuki', 'Sefania', 'Hagai', 'Zekaria', 'Malaki',
+    'Mathayo', 'Marko', 'Luka', 'Yohana', 'Matendo', 'Warumi', '1 Wakorintho', '2 Wakorintho', 'Wagalatia',
+    'Waefeso', 'Wafilipi', 'Wakolosai', '1 Wathesalonike', '2 Wathesalonike', '1 Timotheo', '2 Timotheo',
+    'Tito', 'Filemoni', 'Waebrania', 'Yakobo', '1 Petro', '2 Petro', '1 Yohana', '2 Yohana', '3 Yohana',
+    'Yuda', 'Ufunuo']
 
 LOCAL = local_books()
 
@@ -196,10 +231,11 @@ def film_native(code, series, meta):
         'aka': lambda n: n + ' Asɛmpa',
         'tir': lambda n: 'ወንጌል ' + n,
         'hat': lambda n: 'Levanjil dapre ' + n,
+        'kuj': lambda n: 'Injili ya ' + n,
     }[code]
     words = {
         'jesus': {'xho': 'UYesu', 'nya': 'Yesu', 'kin': 'Yesu', 'sna': 'Jesu', 'run': 'Yesu', 'aka': 'Yesu',
-                  'tir': 'ኢየሱስ', 'hat': 'Jezi'},
+                  'tir': 'ኢየሱስ', 'hat': 'Jezi', 'kuj': 'Yesu'},
         'savior': {'tir': 'መድሓኒ'},
         'magdalena': {'xho': 'Magdalena', 'nya': 'Magdalena', 'kin': 'Magdalena', 'sna': 'Magdalena',
                       'run': 'Magdalena', 'aka': 'Magdalena', 'tir': 'መግደላዊት', 'hat': 'Magdalena'},
@@ -254,6 +290,7 @@ GRN['Eta Mealtj Keriba Ala'] = {'tir': 'እታ መዓልቲ ቀሪባ ኣላ'}
 GRN['Good News']['hat'] = 'Bon Nouvèl'
 GRN['Words of Life']['hat'] = 'Pawòl Lavi'
 GRN['Portrait of Jesus']['hat'] = 'Pòtrè Jezi'
+GRN['Good News']['kuj'] = 'Habari Njema'
 # English titles for programmes GRN names only in the language.
 GRN_TITLE = {'Eta Mealtj Keriba Ala': 'The Day Is Coming'}
 LLL = {  # Look, Listen & Live 1-8
@@ -281,6 +318,9 @@ LLL = {  # Look, Listen & Live 1-8
     'hat': ('Gade, Koute, Viv', ['Kòmanse ak Bondye', 'Moun vanyan Bondye yo', 'Viktwa grasa Bondye',
             'Sèvitè Bondye yo', 'Devan tribinal poutèt Bondye', 'Jezi, Mèt ak Gerisè',
             'Jezi, Senyè ak Sovè', 'Travay Sentespri a']),
+    'kuj': ('Tazama, Sikiliza, Uishi', ['Kuanza na Mungu', 'Watu hodari wa Mungu', 'Ushindi kupitia Mungu',
+            'Watumishi wa Mungu', 'Kushtakiwa kwa ajili ya Mungu', 'Yesu, Mwalimu na Mponyaji',
+            'Yesu, Bwana na Mwokozi', 'Matendo ya Roho Mtakatifu']),
 }
 
 # Programmes DBS lists without anything that shows they are Christian.
@@ -313,6 +353,8 @@ TRADITIONAL = {
     'tir': ['https://dbs.org/bibles/TIRTBI'],
     # The Haitian Bible Society's Sent Bib (1985), the whole Bible.
     'hat': ['https://dbs.org/bibles/HATABS'],
+    # Davar's Endagano Ehea 1995, the one current Kuria audio Bible.
+    'kuj': ['https://dbs.org/bibles/audio/KUJIFB_DAVR_FB_N'],
 }
 
 # Akan editions, by DBS fileset or ID: the dialect, and a native title where
@@ -363,6 +405,10 @@ STORY_TITLES = {'tir': {
     21: 'Fèt Lapannkòt la', 22: 'Yo lapide Etyèn', 23: 'Etyopyen an resevwa batèm', 24: 'Pòl konvèti',
     25: 'Kònèy resevwa Jezi', 26: 'Legliz la voye misyonè', 27: 'Lidi nan vil Filip',
     28: 'Chèf prizon an konvèti', 29: 'Jezi vin pi popilè', 30: 'Nouvo syèl la ak nouvo tè a',
+}, 'kuj': {
+    # The first file name is cut short; the two songs repeat stories 9 and 29.
+    1: 'Uumbaji', 39: 'Yeso na omoghaikoro omosamaria kughisima (wimbo)',
+    40: 'Peetero na Yoohana Bharahuenia Omoonto Irrigata Onoo Ataare Koogeenda (wimbo)',
 }}
 # DBS's subtitles for the Haitian scans repeat the language name first.
 HAITIAN_SCANS = {
@@ -494,6 +540,8 @@ class Shelf:
                 name = local if name.replace(' ', '').lower() == key.lower() else \
                     ' '.join(w if w[0].isdigit() else w[:2] + w[2:].lower() if w[0] == '(' else w[:1] + w[1:].lower()
                              for w in name.split(' '))
+            elif self.code == 'kuj':
+                name = local      # DBS mixes long forms ("Marko Mtakatifu", "Waraka Wa Yuda") with short ones
             elif name.lower() == local.lower():
                 name = local      # DBS capitalises every word ("Gusubira Mu Vyagezwe")
             # DBS writes a few names in capitals; use the interface's form.
@@ -514,6 +562,7 @@ class Shelf:
             'run': ('Bibiliya yose', 'Isezerano Rishasha', None),
             'aka': ('Twerɛ Kronkron no nyinaa', 'Apam Foforɔ', None),
             'hat': ('Tout Bib la', 'Nouvo Testaman', None),
+            'kuj': ('Biblia nzima', 'Agano Jipya', None),
         }[self.code]
         whole = 'OT' in testaments and len(keys) == 66
         what = scope_words[0] if whole else scope_words[2] if keys == ['Luke'] else scope_words[1]
@@ -521,7 +570,7 @@ class Shelf:
             what = 'Apam Dedaw'
         if self.code == 'hat' and not whole and {'Psalms', 'Proverbs'} <= set(keys):
             what = 'Nouvo Testaman, Sòm ak Pwovèb'
-        listen = {'nya': 'Mvetserani', 'kin': 'Umva', 'sna': 'Teerera', 'run': 'Umviriza', 'aka': 'Tie', 'hat': 'Koute'}[self.code]
+        listen = {'nya': 'Mvetserani', 'kin': 'Umva', 'sna': 'Teerera', 'run': 'Umviriza', 'aka': 'Tie', 'hat': 'Koute', 'kuj': 'Sikiliza'}[self.code]
         count = sum(counts.values())
         desc = {
             'nya': f'{what} momvetsera: mabuku {len(keys)}, mitu {count}. Sankhani buku ndi mutu woti mumvetsere kapena kusunga.',
@@ -530,6 +579,7 @@ class Shelf:
             'run': f'{what} mu majwi: ibitabu {len(keys)}, ibice {count}. Hitamwo igitabu n’igice ushaka kwumviriza canke kubika.',
             'aka': f'{what} a wobɛtie: nwoma {len(keys)}, ati {count}. Yi nwoma ne ti a wopɛ sɛ wotie anaa wokora.',
             'hat': f'{what} an odyo: {len(keys)} liv, {count} chapit. Chwazi liv ak chapit ou vle koute oswa sere.',
+            'kuj': f'{what} kwa sauti ya Kikuria: vitabu {len(keys)}, sura {count}. Chagua kitabu na sura unayotaka kusikiliza au kuhifadhi.',
         }[self.code]
         dialect = None
         if self.code == 'aka':
@@ -553,7 +603,8 @@ class Shelf:
         for l in page['links']:
             if l['url'].endswith('.zip') and self.ok(l['url']):
                 zipname = {'nya': 'Mitu yonse (ZIP)', 'kin': 'Ibice byose (ZIP)', 'sna': 'Zvitsauko zvose (ZIP)',
-                           'run': 'Ibice vyose (ZIP)', 'aka': 'Ati no nyinaa (ZIP)', 'hat': 'Tout chapit yo (ZIP)'}[self.code]
+                           'run': 'Ibice vyose (ZIP)', 'aka': 'Ati no nyinaa (ZIP)', 'hat': 'Tout chapit yo (ZIP)',
+                           'kuj': 'Sura zote (ZIP)'}[self.code]
                 self.download(r, l['url'], zipname)
         return True
 
@@ -576,7 +627,7 @@ class Shelf:
         elif self.code == 'tir':
             country = next((v for k, v in COUNTRY.items() if ident[4:].startswith(k)), None)
             scope = country and country[0]
-        elif dialect and dialect[1] not in ('xhosa', 'chichewa', 'kinyarwanda', 'shona', 'kirundi', 'haitian'):
+        elif dialect and dialect[1] not in ('xhosa', 'chichewa', 'kinyarwanda', 'shona', 'kirundi', 'haitian', 'kuria'):
             scope = dialect[1].title()
         if scope:
             title += f' ({scope})'
@@ -733,10 +784,11 @@ class Shelf:
                 continue
             entries.append((u, f'{int(n)}. {local}'))
         native = {'nya': 'Nkhani za m’Baibulo', 'sna': 'Nyaya dzeBhaibheri', 'tir': 'ዛንታታት መጽሓፍ ቅዱስ',
-                  'hat': 'Istwa Bib la'}[self.code]
+                  'hat': 'Istwa Bib la', 'kuj': 'Hadithi za Biblia'}[self.code]
         desc = {'nya': f'Nkhani {len(entries)} za m’Baibulo kuyambira pa chilengedwe, zojambulidwa ndi StoryRunners.',
                 'sna': f'Nyaya {len(entries)} dzeBhaibheri kubva pakusikwa kwezvinhu, dzakarekodhwa neStoryRunners.',
                 'hat': f'{len(entries)} istwa Bib la, depi kreyasyon an, StoryRunners anrejistre.',
+                'kuj': f'Hadithi {len(entries)} za Biblia kwa Kikuria, tangu uumbaji hadi mbingu mpya na nchi mpya, zilizorekodiwa na StoryRunners.',
                 'tir': f'{len(entries)} ዛንታታት መጽሓፍ ቅዱስ ካብ ፍጥረት ክሳብ ሓድሽ ሰማይን ሓድሽ ምድርን፡ ብStoryRunners ዝተቐድሑ።'}[self.code]
         r = self.make('storyset', 'audio', 'StoryRunners Bible story set', native, page['resolved'],
                       'StoryRunners', desc, stats=str(len(entries)))

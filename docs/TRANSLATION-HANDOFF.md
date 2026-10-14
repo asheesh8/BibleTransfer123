@@ -942,3 +942,19 @@ HATABS was opened to confirm it is the whole Bible (EPUB: 66 books, Jenèz to Re
 Not carried: links to other sites (find.bible, arc.gt, Mars Hill, GRN programme pages, pCloud and ROCK), whose DBS-hosted media is carried where DBS has it.
 
 Rebuild with `python3 packer/build_dbs_audit.py hat`, then `npm run dbs:import`. The audit is `catalog/source/dbs-audit-haitian-2026-10-13.json`.
+
+### Kuria — 2026-10-14
+
+Added one shelf and page: `/kuria` (content `kuj`, also `/igikuria`, `/kikuria`, `/kurya`, `/kuj`). It uses the existing Swahili interface (`swh`): DBS names the Kuria audio Bible's books, the JESUS chapters and the GRN pages in Swahili, every Kuria reader in Tanzania and Kenya reads Swahili, and no reviewed Igikuria wording exists to build a full interface from. Titles DBS gives in Kuria (Endagano Ehea, Yesu, the StoryRunners stories) stay in Kuria; descriptions and programme names are Swahili. A native Igikuria interface can be added later if a speaker can review it.
+
+The same browser audit as the shelves above: DBS's Kuria page and every page it lists rendered in headless Chromium, every carried file checked by a ranged request and its leading bytes (404 of 405 valid; the one failure is StoryRunners' S3 zip, which the browser cannot check), and every chapter of the audio Bible checked (1,189, all valid).
+
+| Shelf | Resources | What is carried |
+|---|---|---|
+| Kuria | 12 | Endagano Ehea 1995 (Davar), all 66 books in audio, listed first; JESUS (61 chapters, full film SD and HD); 9 GRN programmes (Good News, Look, Listen & Live 1–8; 234 tracks); 40 StoryRunners stories |
+
+DBS's second Kuria audio Bible page (KUJBSK) says it has moved and points to the first. DBS lists no Kuria text Bible, other films or historic scans. Book names follow the Swahili Union Version, since DBS's picker mixes long and short forms ("Marko Mtakatifu", "Waraka Wa Yuda").
+
+Not carried: links to other sites (two find.bible entries and ten GRN programme pages, including Words of Life, which DBS does not host).
+
+Rebuild with `python3 packer/build_dbs_audit.py kuj`, then `npm run dbs:import`. The audit is `catalog/source/dbs-audit-kuria-2026-10-14.json`.

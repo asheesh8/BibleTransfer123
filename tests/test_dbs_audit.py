@@ -1,4 +1,4 @@
-"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Arabic and Haitian Creole: complete, verified and DBS-hosted."""
+"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Arabic, Haitian Creole and Kuria: complete, verified and DBS-hosted."""
 import json
 import pathlib
 import re
@@ -14,8 +14,8 @@ SHELVES = {'xho': ('xhosa', 'xh', 13), 'nya': ('chichewa', 'ny', 34),
            'kin': ('kinyarwanda', 'rw', 26), 'sna': ('shona', 'sn', 32),
            'run': ('kirundi', 'rn', 27), 'aka': ('akan', 'ak', 47),
            'tir': ('tigrinya', 'ti', 26), 'ara': ('arabic', 'ar', ARA_COUNT),
-           'hat': ('haitian', 'ht', 29)}
-DATES = {'ara': '2026-10-07', 'hat': '2026-10-13'}
+           'hat': ('haitian', 'ht', 29), 'kuj': ('kuria', 'swh', 12)}
+DATES = {'ara': '2026-10-07', 'hat': '2026-10-13', 'kuj': '2026-10-14'}
 
 
 def urls(r):
@@ -80,6 +80,7 @@ class DbsAuditTest(unittest.TestCase):
         self.assertEqual(totals['ara'], 1189 * 5 + 260 * 2 + 248 + 16 + 43 + 16 + 204)
         # The easy-to-read New Testament with Psalms and Proverbs.
         self.assertEqual(totals['hat'], 260 + 150 + 31)
+        self.assertEqual(totals['kuj'], 1189)
 
     def test_moved_audio_bibles_are_left_out(self):
         moved = {'https://dbs.org/bibles/audio/NYABSM04605_DAVR_FB_N',
@@ -209,7 +210,8 @@ class DbsAuditTest(unittest.TestCase):
             self.assertIn(f'"lang":"{code}","ui":"{ui}","slug":"{slug}"', page)
             self.assertIn(f'data/catalog-{code}.js', page)
             self.assertIn(f"'{slug}/index.html', 'data/catalog-{code}.js'", sw)
-            for path in (slug, code, ui):
+            # Kuria uses the Swahili interface, whose own code is the Swahili page's route.
+            for path in (slug, code) + ((ui,) if ui != 'swh' else ()):
                 self.assertEqual(routes['/' + path], f'/{slug}/index.html')
             self.assertIn(f"{{ code: '{ui}',", i18n)
             self.assertIn(f'STRINGS.{ui} = {{', i18n)
@@ -228,6 +230,27 @@ class DbsAuditTest(unittest.TestCase):
         story = next(r for r in hat if r['id'] == 'hat-storyset')
         self.assertEqual(story['play']['items'][5]['title'], '6. Jezi fèt')
         self.assertEqual(self.built['hat']['languages']['hat']['native'], 'Kreyòl ayisyen')
+
+    def test_kuria_carries_everything_dbs_hosts(self):
+        kuj = self.shelf('kuj')
+        self.assertEqual([r['id'] for r in kuj][:2], ['kuj-ab-kujifb-davr-fb-n', 'kuj-film-kuj-kuria-jesus'])
+        ab = kuj[0]
+        self.assertEqual(self.audit['kuj']['audio_bibles'][ab['source']]['chapters_verified'], 1189)
+        self.assertEqual(ab['play']['testaments'], ['OT', 'NT'])
+        self.assertEqual(ab['play']['bookNames']['Mark'], 'Marko')
+        self.assertEqual(ab['play']['bookNames']['Jude'], 'Yuda')
+        film = kuj[1]
+        self.assertEqual(len(film['play']['items']), 61)
+        self.assertEqual(film['native'], 'Yesu')
+        self.assertEqual(len([r for r in kuj if r['id'].startswith('kuj-grn-')]), 9)
+        story = next(r for r in kuj if r['id'] == 'kuj-storyset')
+        self.assertEqual(len(story['play']['items']), 40)
+        self.assertEqual(story['play']['items'][0]['title'], '1. Uumbaji')
+        self.assertIn('https://dbs.org/bibles/audio/KUJBSK_DAVR_FB_N', self.built['kuj']['notCarried'])
+        page = (ROOT / 'app/kuria/index.html').read_text()
+        self.assertIn('"lang":"kuj","ui":"swh","slug":"kuria"', page)
+        for alias in ('igikuria', 'kikuria', 'kurya'):
+            self.assertIn('{ "source": "/' + alias + '", "destination": "/kuria/index.html" }', (ROOT / 'vercel.json').read_text())
 
 
 if __name__ == '__main__':

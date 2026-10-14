@@ -45,6 +45,7 @@ LIBRARIES = {
     "kikuyu": ("Kikuyu", "Gĩkũyũ"),
     "kinyarwanda": ("Kinyarwanda", "Ikinyarwanda"),
     "kirundi": ("Kirundi", "Ikirundi"),
+    "kuria": ("Kuria", "Igikuria"),
     "lingala": ("Lingala", "Lingála"),
     "luganda": ("Luganda", "Luganda"),
     "luo": ("Luo", "Dholuo"),
