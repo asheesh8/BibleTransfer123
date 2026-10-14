@@ -25,7 +25,7 @@ except ImportError:                  # direct `python3 packer/serve.py`
 MAX_BODY = 2048
 ADDRESS = re.compile(r"^[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]{1,64}@(?=.{4,253}$)(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\.)+[A-Za-z]{2,63}$")
 # Sends per visitor address per hour, per recipient per day, and site-wide per day.
-LIMITS = (("mail-ip", 8, 3600), ("mail-to", 3, 86400), ("mail-all", 300, 86400))
+LIMITS = (("mail-ip-v2", 20, 3600), ("mail-to-v2", 5, 86400), ("mail-all-v2", 300, 86400))
 
 # One entry per one-language page (app/<slug>/index.html); a test keeps them in step.
 LIBRARIES = {
@@ -202,7 +202,7 @@ def dispatch(path, method, headers, raw=b"", client_ip="", production=False, pub
         store = get_store(production, public_root)
         hashed_to = hmac.new(secret_key(), recipient.lower().encode(), hashlib.sha256).hexdigest()
         for kind, maximum, window in LIMITS:
-            subject = client_ip if kind == "mail-ip" else hashed_to if kind == "mail-to" else "site"
+            subject = client_ip if kind.startswith("mail-ip") else hashed_to if kind.startswith("mail-to") else "site"
             if not store.rate(rate_key(kind, subject, now), maximum, window, now):
                 raise APIError(429, "Too many emails right now. Try again later.", retry_after=window)
         link = library_link(origin_for(headers, production), slug, share_id)

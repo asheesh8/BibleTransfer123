@@ -71,11 +71,10 @@ class LibraryMailTest(unittest.TestCase):
             self.assertEqual(self.request({"to": "a@example.com", "library": "english"})[0], 503)
 
     def test_rate_limits_per_recipient_and_visitor(self):
-        codes = [self.request({"to": "same@example.com", "library": "english"})[0] for _ in range(4)]
-        self.assertEqual(codes, [200, 200, 200, 429])
-        codes = [self.request({"to": f"p{n}@example.com", "library": "english"}, ip="192.0.2.9")[0] for n in range(9)]
-        self.assertEqual(codes[-1], 429)
-        self.assertEqual(codes[:8], [200] * 8)
+        codes = [self.request({"to": "same@example.com", "library": "english"})[0] for _ in range(6)]
+        self.assertEqual(codes, [200] * 5 + [429])
+        codes = [self.request({"to": f"p{n}@example.com", "library": "english"}, ip="192.0.2.9")[0] for n in range(21)]
+        self.assertEqual(codes, [200] * 20 + [429])
 
     def test_wrong_port_falls_back_to_the_other_standard_port(self):
         tried = []
