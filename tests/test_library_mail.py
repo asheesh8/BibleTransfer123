@@ -77,6 +77,20 @@ class LibraryMailTest(unittest.TestCase):
         self.assertEqual(codes[-1], 429)
         self.assertEqual(codes[:8], [200] * 8)
 
+    def test_wrong_port_falls_back_to_the_other_standard_port(self):
+        tried = []
+        def attempt(settings, port, message, context):
+            tried.append(port)
+            if port == 465:
+                raise mail.smtplib.SMTPServerDisconnected()
+        with patch.object(mail, "_send_once", attempt):
+            mail.deliver({"port": 465}, None)
+        self.assertEqual(tried, [465, 587])
+
+    def test_app_password_spaces_are_removed(self):
+        with patch.dict(os.environ, {"OUTREACH_SMTP_PASSWORD": " abcd efgh ijkl mnop "}):
+            self.assertEqual(mail.smtp_settings()["password"], "abcdefghijklmnop")
+
     def test_every_language_page_is_known(self):
         pages = {}
         for path in glob.glob(str(ROOT / "app" / "*" / "index.html")):
