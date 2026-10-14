@@ -79,7 +79,7 @@ class LibraryMailTest(unittest.TestCase):
 
     def test_wrong_port_falls_back_to_the_other_standard_port(self):
         tried = []
-        def attempt(settings, port, message, context):
+        def attempt(settings, port, message, context, progress):
             tried.append(port)
             if port == 465:
                 raise mail.smtplib.SMTPServerDisconnected()

@@ -124,31 +124,31 @@ def compose(settings, recipient, slug, link):
     return message
 
 
-def _send_once(settings, port, message, context):
-    stage = "connect"
+def _send_once(settings, port, message, context, progress):
+    progress[0] = "connect"
     if port == 465:
         server = smtplib.SMTP_SSL(settings["host"], port, timeout=12, context=context)
     else:
         server = smtplib.SMTP(settings["host"], port, timeout=12)
     with server:
         if port != 465:
-            stage = "starttls"
+            progress[0] = "starttls"
             server.starttls(context=context)
-        stage = "login"
+        progress[0] = "login"
         server.login(settings["user"], settings["password"])
-        stage = "send"
+        progress[0] = "send"
         server.send_message(message)
-    return stage
 
 
 def deliver(settings, message):
     context = ssl.create_default_context()
     # A wrong port is the usual setup slip, so try the other standard one too.
     ports = [settings["port"]] + [port for port in (587, 465) if port != settings["port"]]
-    failure = None
+    failures = []
     for port in ports:
+        progress = ["connect"]
         try:
-            _send_once(settings, port, message, context)
+            _send_once(settings, port, message, context, progress)
             return
         except smtplib.SMTPRecipientsRefused:
             raise APIError(400, "That email address was refused.") from None
@@ -157,10 +157,11 @@ def deliver(settings, message):
             print("send-library: SMTP login was rejected; check OUTREACH_SMTP_USER and OUTREACH_SMTP_PASSWORD", file=sys.stderr)
             raise APIError(502, "The outreach mailbox rejected its sign-in.") from None
         except (smtplib.SMTPServerDisconnected, smtplib.SMTPConnectError, OSError) as error:
-            failure = f"{type(error).__name__} on port {port}"
+            failures.append(f"{type(error).__name__} at {progress[0]} on port {port}")
         except smtplib.SMTPException as error:
-            failure = f"{type(error).__name__} on port {port}"
+            failures.append(f"{type(error).__name__} at {progress[0]} on port {port}")
             break
+    failure = "; ".join(failures) + ("" if settings["host"] == "smtp.gmail.com" else "; host is not smtp.gmail.com")
     print("send-library: SMTP send failed:", failure, file=sys.stderr)
     raise APIError(502, "The email could not be sent right now (" + failure + ").")
 
