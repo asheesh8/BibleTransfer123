@@ -8,7 +8,7 @@
 
    VERSION must change whenever the shell changes, or an installed copy keeps
    serving the old one. `easytransfer build` rewrites it. */
-var VERSION = 'shell-v55';
+var VERSION = 'shell-v56';
 
 var SHELL = [
   'index.html', 'library.html', 'item.html', 'share.html', 'help.html', 'nearby.html',
@@ -62,7 +62,8 @@ var SHELL = [
   'assets/save-guide/windows/slide-05.webp', 'assets/save-guide/windows/slide-06.webp',
   'assets/save-guide/windows/slide-07.webp', 'assets/save-guide/windows/slide-08.webp',
   'assets/save-guide/windows/slide-09.webp', 'assets/save-guide/windows/slide-10.webp',
-  'assets/save-guide/windows/slide-11.webp', 'assets/save-guide/windows/slide-12.webp'
+  'assets/save-guide/windows/slide-11.webp', 'assets/save-guide/windows/slide-12.webp',
+  'assets/media/village-server-deployment.jpg'
 ];
 
 self.addEventListener('install', function (e) {

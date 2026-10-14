@@ -366,6 +366,10 @@ body.bulk-mode { padding-bottom: calc(var(--tabbar) + 92px + env(safe-area-inset
 .hero-card .kicker { font-size: .74rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; opacity: .9; }
 .hero-card h2 { font-size: 1.5rem; margin: 0; }
 .hero-card .sub { opacity: .85; font-size: .93rem; }
+/* The headline film: player on top, caption below, so nothing covers the controls. */
+.hero-card.headline { padding: 0; gap: 0; min-height: 0; align-content: start; }
+.hero-card.headline video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+.hero-card.headline .cap { display: grid; gap: .35rem; padding: 1rem 1.3rem 1.2rem; }
 
 /* ---------------------------------------------------------------- header */
 

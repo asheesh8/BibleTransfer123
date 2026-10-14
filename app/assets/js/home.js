@@ -42,6 +42,15 @@
       '<h1>' + ET.esc(L.native || L.name || '') + '</h1>' +
       '<p class="muted">' + line + '</p></header>';
 
+    // ---- headline: the VillageServer deployment film, the first thing on Home, in
+    // every language. It lives in the app folder, so a card plays it offline.
+    out += '<section class="hero-card headline" lang="en" dir="ltr">' +
+      '<video controls playsinline preload="none" poster="assets/media/village-server-deployment.jpg">' +
+      '<source src="assets/media/village-server-deployment.mp4" type="video/mp4"></video>' +
+      '<span class="cap"><span class="kicker">VillageServer Initiative</span>' +
+      '<h2>Village Server deployment</h2>' +
+      '<span class="sub">Film · 6 min</span></span></section>';
+
     out += '<a class="tile" href="' + ET.esc(ET.scopedUrl('save-guide.html')) + '" lang="en" dir="ltr">' +
       '<span class="ico">' + ET.icon('laptop') + '</span>' +
       '<span><span class="t">Save to your computer</span>' +
