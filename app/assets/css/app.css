@@ -308,6 +308,13 @@ body.bulk-mode { padding-bottom: calc(var(--tabbar) + 92px + env(safe-area-inset
 .shared-hero p { margin: .45rem 0 0; }
 .shared-actions { margin-top: 1rem; }
 .shared-actions .btn { flex-basis: 13rem; }
+.send-library { margin-top: 1rem; }
+.send-library[hidden] { display: none; }
+.send-library .flabel { display: block; margin: 0 0 .4rem; }
+.send-library-row { display: flex; flex-wrap: wrap; gap: .7rem; }
+.send-library-row input { flex: 1 1 14rem; width: auto; }
+.send-library-row .btn { flex: 0 1 9rem; }
+.send-library .send-library-status:empty { display: none; }
 
 .share-language-grid { display: grid; gap: .8rem; margin-top: 1.2rem; }
 .share-language-card {
@@ -676,7 +683,7 @@ html[dir="rtl"] .flabel { text-transform: none; font-size: .95rem; }
   transform: translateY(-50%); width: 22px; height: 22px;
   color: var(--ink-soft); pointer-events: none;
 }
-input[type="search"], input[type="text"], select {
+input[type="search"], input[type="text"], input[type="email"], select {
   width: 100%;
   min-height: var(--tap);
   /* Logical, not physical: in an RTL page the icon sits on the right and the
@@ -690,7 +697,7 @@ input[type="search"], input[type="text"], select {
   font: inherit; font-weight: 600;
   -webkit-appearance: none; appearance: none;
 }
-select { padding-inline-start: 1rem; }
+select, input[type="email"] { padding-inline-start: 1rem; }
 input[type="search"]::-webkit-search-cancel-button { margin-inline-start: .5rem; }
 input::placeholder { color: var(--ink-soft); font-weight: 500; }
 

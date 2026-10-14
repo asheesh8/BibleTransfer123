@@ -6,7 +6,7 @@
   "installCommand": null,
   "trailingSlash": false,
   "functions": {
-    "api/*.py": { "includeFiles": "packer/analytics.py" }
+    "api/*.py": { "includeFiles": "packer/*.py" }
   },
   "rewrites": [
     { "source": "/kirundi", "destination": "/kirundi/index.html" },

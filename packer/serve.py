@@ -17,8 +17,10 @@ import email.utils, functools, http.server, json, mimetypes, os, pathlib, re, so
 
 try:
     from .analytics import handle_http, purge_local
+    from . import library_mail
 except ImportError:                  # direct `python3 packer/serve.py`
     from analytics import handle_http, purge_local
+    import library_mail
 
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parent / "app"
@@ -134,6 +136,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         u, parts = self._route()
         if u.path in ("/api/analytics", "/api/admin", "/api/visibility"):
             return handle_http(self, public_root=self.directory)
+        if u.path == "/api/send-library":
+            return library_mail.handle_http(self, public_root=self.directory)
         if u.path.startswith("/signal/") and not _allowed(self.client_address[0]):
             return self._json(429, {"error": "slow down"})
         if len(parts) == 4 and parts[1] == "signal":

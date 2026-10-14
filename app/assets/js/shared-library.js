@@ -27,10 +27,61 @@
       '&body=' + encodeURIComponent(t('sharelib.body', { lang: mailLanguage, url: url }));
   }
   email.href = emailUrl(publicUrl);
-  email.addEventListener('click', function () {
+  var sendForm = /^https?:$/.test(location.protocol) && window.fetch && buildSendForm();
+  email.addEventListener('click', function (e) {
+    if (sendForm) {
+      e.preventDefault();
+      sendForm.hidden = !sendForm.hidden;
+      email.setAttribute('aria-expanded', String(!sendForm.hidden));
+      if (!sendForm.hidden) ET.$('#send-to').focus();
+      return;
+    }
     var intent = ET.analytics.shareIntent(publicUrl, 'email', { language: scope.lang });
     email.href = emailUrl(intent.url);
   });
+
+  /* Online, the outreach account sends a fixed message with this library's
+     link. If the server can't send (not set up, offline), the visitor's own
+     email app opens instead, addressed to the same person. */
+  function buildSendForm() {
+    var form = document.createElement('form');
+    form.className = 'send-library'; form.id = 'send-library'; form.hidden = true; form.noValidate = true;
+    form.innerHTML = '<label class="flabel" for="send-to">' + h('sharelib.send.label') + '</label>' +
+      '<div class="send-library-row"><input type="email" id="send-to" name="to" required maxlength="254" ' +
+      'autocomplete="email" inputmode="email" dir="ltr" placeholder="' + ET.esc(t('sharelib.send.placeholder')) + '">' +
+      '<button class="btn green" type="submit" id="send-button">' + h('sharelib.send.button') + '</button></div>' +
+      '<p class="muted send-library-status" id="send-status" role="status" aria-live="polite"></p>';
+    ET.$('.shared-hero').insertBefore(form, ET.$('#copy-status'));
+    email.setAttribute('aria-controls', 'send-library');
+    email.setAttribute('aria-expanded', 'false');
+    var input = form.querySelector('#send-to'), button = form.querySelector('#send-button'),
+      status = form.querySelector('#send-status');
+    function say(key, vars) { status.innerHTML = h(key, vars); }
+    function openMailApp(to, url) {
+      location.href = emailUrl(url).replace('mailto:?', 'mailto:' + encodeURIComponent(to) + '?');
+      say('sharelib.send.fallback');
+    }
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var to = input.value.trim();
+      if (!/^[^\s@<>,;"]+@[^\s@<>,;"]+\.[A-Za-z]{2,}$/.test(to)) { say('sharelib.send.invalid'); input.focus(); return; }
+      var intent = ET.analytics.shareIntent(publicUrl, 'email', { language: scope.lang });
+      button.disabled = true; say('sharelib.send.sending');
+      fetch('/api/send-library', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'same-origin',
+        body: JSON.stringify(intent.shareId ? { to: to, library: scope.slug, shareId: intent.shareId } : { to: to, library: scope.slug })
+      }).then(function (r) {
+        button.disabled = false;
+        if (r.ok) {
+          ET.analytics.track('share_complete', { language: scope.lang, channel: 'email', shareId: intent.shareId, status: 'sent' });
+          say('sharelib.send.sent', { to: to }); input.value = '';
+        } else if (r.status === 400) say('sharelib.send.invalid');
+        else if (r.status === 429) say('sharelib.send.limit');
+        else openMailApp(to, intent.url);
+      }, function () { button.disabled = false; openMailApp(to, intent.url); });
+    });
+    return form;
+  }
 
   function composerUrl(channel, url) {
     return channel === 'whatsapp'
