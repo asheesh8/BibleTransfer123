@@ -59,10 +59,20 @@ class AnalyticsTest(unittest.TestCase):
         self.assertEqual(self.collect([event(i) for i in range(41)])[0], 400)
         self.assertEqual(api.dispatch("/api/analytics", "POST", self.headers, b" " * (api.MAX_BODY + 1), now=NOW)[0], 413)
         self.assertEqual(api.dispatch("/api/analytics", "POST", self.headers, b"[" * 2000 + b"]" * 2000, now=NOW)[0], 400)
-        for at in (api.iso_at(NOW - api.RETENTION_SECONDS), api.iso_at(NOW + 301), "2026-09-30T12:00:00", "nonsense"):
+        for at in ("2026-09-30T12:00:00", "nonsense"):
             self.assertEqual(self.collect([event(at=at)])[0], 400)
+        # A phone with a wrong clock is still counted, at the time the event arrives.
+        for index, at in enumerate((api.iso_at(NOW - api.RETENTION_SECONDS), api.iso_at(NOW + 301)), 50):
+            code, payload, _ = self.collect([event(index, at=at)])
+            self.assertEqual((code, payload["accepted"]), (200, 1))
+        stored, _ = api.SQLiteStore(self.db).read(0, NOW + 1)
+        self.assertEqual({row["at"] for row in stored if row["id"] in ("event-00000050", "event-00000051")}, {api.iso_at(NOW)})
         for path in ("/admin", "/api/admin", "/../secret", "/english//private", "/person@example.test"):
             self.assertEqual(self.collect([event(path=path)])[0], 400)
+
+    def test_one_bad_event_does_not_drop_the_rest_of_the_batch(self):
+        code, payload, _ = self.collect([event(1), event(2, status="recipient@example.test"), event(3, "resource_open", resource="cmn-hist-1840-new-testament-vol.-1-4")])
+        self.assertEqual((code, payload["accepted"], payload["rejected"]), (200, 2, 1))
 
     def test_query_referrer_and_private_fields_are_not_persisted(self):
         code, payload, _ = self.collect([event(path="/english?email=person@example.test#private", referrer="https://person:password@referral.example.test/private?email=secret@example.test#frag")])
@@ -86,7 +96,7 @@ class AnalyticsTest(unittest.TestCase):
         self.assertEqual(api.SQLiteStore(self.db).read(0, NOW)[0][0]["country"], "US")
 
     def test_deduplication_retention_and_calendar_window(self):
-        self.assertEqual(self.collect([event(), event()])[1], {"ok": True, "accepted": 1, "duplicates": 1})
+        self.assertEqual(self.collect([event(), event()])[1], {"ok": True, "accepted": 1, "duplicates": 1, "rejected": 0})
         self.assertEqual(self.collect([event()])[1]["accepted"], 0)
         self.assertEqual(self.collect([event(2, at=api.iso_at(NOW - 7 * 86400))])[0], 200)
         self.assertEqual(self.admin()[1]["summary"]["pageViews"], 1)
@@ -182,7 +192,7 @@ class AnalyticsTest(unittest.TestCase):
         self.assertEqual(code, 200)
         self.assertEqual(data["summary"], {"visitors": 1, "sessions": 1, "pageViews": 1, "shareIntents": 1, "shareCompletions": 1, "sharedVisits": 1, "downloads": 1, "transfers": 1})
         self.assertEqual(len(data["daily"]), 7)
-        self.assertEqual(data["daily"][-1], {"date": "2026-09-30", "visits": 1, "shares": 1, "visitors": 1, "opens": 1, "saves": 2})
+        self.assertEqual(data["daily"][-1], {"date": "2026-09-30", "visits": 1, "shares": 1, "visitors": 1, "opens": 1, "saves": 3})
         self.assertEqual(data["resources"], [{"name": "eng-film-demo", "count": 1}])
         self.assertEqual(data["resourceTable"], [{"name": "eng-film-demo", "visitors": 1, "opens": 1, "plays": 0, "saves": 0, "shares": 0}])
         self.assertEqual(data["engagement"], {"openedVisitors": 1, "engagedVisitors": 1, "sharedVisitors": 1, "arrivedBySharedLink": 1, "returningVisitors": 0, "plays": 0, "playCompletes": 0})
