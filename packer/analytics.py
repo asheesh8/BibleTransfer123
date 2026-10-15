@@ -422,9 +422,50 @@ def require_same_origin(headers, production):
         raise APIError(403, "A same-origin request is required.") from None
 
 
+# Admin report filters. Country and language use the same placeholder names
+# the breakdowns show for events that carry no value.
+FILTERS = {
+    "country": re.compile(r"^(?:[A-Z]{2}|Unknown)$"),
+    "language": re.compile(r"^(?:[a-z]{3}|Unspecified)$"),
+    "resource": SLUG,
+    "visitor": IDENTIFIER,
+}
+FILTER_FIELDS = {"country": ("country", "Unknown"), "language": ("language", "Unspecified"), "resource": ("resource", None), "visitor": ("visitorId", None)}
+WEEKDAYS = ("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
+
+
+def apply_filters(events, filters):
+    for name, value in filters.items():
+        field, blank = FILTER_FIELDS[name]
+        events = [event for event in events if (event.get(field) or blank) == value]
+    return events
+
+
+def is_saved(event):
+    # Most phones can't confirm a save and hand the file to the browser's
+    # downloader instead, so a download counts once the browser has it.
+    kind, status = event["type"], event.get("status", "")
+    return (kind == "download_complete" and status in ("saved", "browser_handoff")) or (kind == "transfer_complete" and status == "received")
+
+
+def totals(events):
+    """Headline numbers for one period, used for period-over-period change."""
+    kinds = collections.Counter(event["type"] for event in events)
+    return {
+        "visitors": len({event["visitorId"] for event in events}),
+        "sessions": len({event["sessionId"] for event in events}),
+        "pageViews": kinds["page_view"],
+        "opens": kinds["resource_open"],
+        "plays": kinds["play"],
+        "saves": sum(1 for event in events if is_saved(event)),
+        "shares": kinds["share_intent"],
+        "sharedVisits": kinds["shared_visit"],
+    }
+
+
 def aggregate(events, days, now, truncated=False):
     today = dt.datetime.fromtimestamp(now, dt.timezone.utc).date()
-    daily = {str(today - dt.timedelta(days=offset)): {"date": str(today - dt.timedelta(days=offset)), "visits": 0, "shares": 0, "visitors": 0, "opens": 0, "saves": 0} for offset in reversed(range(days))}
+    daily = {str(today - dt.timedelta(days=offset)): {"date": str(today - dt.timedelta(days=offset)), "visits": 0, "shares": 0, "visitors": 0, "opens": 0, "plays": 0, "saves": 0} for offset in reversed(range(days))}
     day_visitors = collections.defaultdict(set)
     # Per-row tables for the CRM-style breakdowns: one row per resource,
     # language and country, each with its own unique-visitor count.
@@ -437,6 +478,8 @@ def aggregate(events, days, now, truncated=False):
     visitor_sessions = collections.defaultdict(set)
     stages = {name: set() for name in ("openedVisitors", "engagedVisitors", "sharedVisitors", "arrivedBySharedLink")}
     hours = [0] * 24
+    week_hours = [[0] * 24 for _ in WEEKDAYS]
+    people = {}
     plays = play_completes = 0
     summary = {"visitors": len({event["visitorId"] for event in events}), "sessions": len({event["sessionId"] for event in events}), "pageViews": 0, "shareIntents": 0, "shareCompletions": 0, "sharedVisits": 0, "downloads": 0, "transfers": 0}
     counts = {name: collections.Counter() for name in (
@@ -473,11 +516,21 @@ def aggregate(events, days, now, truncated=False):
                 row = tables[table].setdefault(key, dict({"name": key, "visitors": set()}, **{field: 0 for field in table_fields[table]}))
                 row["visitors"].add(visitor)
                 rows.append(row)
-        # Most phones can't confirm a save and hand the file to the browser's
-        # downloader instead, so a download counts once the browser has it.
-        saved = (kind == "download_complete" and status in ("saved", "browser_handoff")) or (kind == "transfer_complete" and status == "received")
+        saved = is_saved(event)
+        person = people.get(visitor)
+        if person is None:
+            # Events arrive newest first, so the first one seen is the latest.
+            person = people[visitor] = {"id": visitor, "firstSeen": event["at"], "lastSeen": event["at"], "sessions": set(), "events": 0, "pageViews": 0, "opens": 0, "plays": 0, "saves": 0, "shares": 0, "arrivedByShare": False, "country": event.get("country") or "", "language": event.get("language") or "", "lastResource": event.get("resource") or ""}
+        person["firstSeen"] = min(person["firstSeen"], event["at"])
+        person["lastSeen"] = max(person["lastSeen"], event["at"])
+        person["sessions"].add(event["sessionId"])
+        person["events"] += 1
+        person["country"] = person["country"] or event.get("country") or ""
+        person["language"] = person["language"] or event.get("language") or ""
+        person["lastResource"] = person["lastResource"] or event.get("resource") or ""
+        person["arrivedByShare"] = person["arrivedByShare"] or kind == "shared_visit"
         increments = {"pageViews": kind == "page_view", "opens": kind == "resource_open", "plays": kind == "play", "saves": saved, "shares": kind == "share_intent"}
-        for row in rows:
+        for row in rows + [person]:
             for field, hit in increments.items():
                 if field in row:
                     row[field] += int(hit)
@@ -494,9 +547,15 @@ def aggregate(events, days, now, truncated=False):
         if saved and day:
             day["saves"] += 1
         plays += int(kind == "play")
+        if kind == "play" and day:
+            day["plays"] += 1
         play_completes += int(kind == "play_complete")
         if kind == "page_view" and event["at"][11:13].isdigit() and int(event["at"][11:13]) < 24:
             hours[int(event["at"][11:13])] += 1
+            try:
+                week_hours[dt.date.fromisoformat(event["at"][:10]).weekday()][int(event["at"][11:13])] += 1
+            except ValueError:
+                pass
         if kind == "page_view":
             summary["pageViews"] += 1
             if day:
@@ -543,6 +602,13 @@ def aggregate(events, days, now, truncated=False):
                                 returningVisitors=sum(1 for sessions in visitor_sessions.values() if len(sessions) > 1),
                                 plays=plays, playCompletes=play_completes)
     result["hours"] = hours
+    result["weekHours"] = [{"day": name, "hours": row} for name, row in zip(WEEKDAYS, week_hours)]
+    for person in people.values():
+        person["sessions"] = len(person["sessions"])
+    ranked_people = sorted(people.values(), key=lambda person: (person["lastSeen"], person["id"]), reverse=True)
+    result["visitorTable"] = ranked_people[:200]
+    result["breakdownTruncated"]["visitorTable"] = len(ranked_people) > 200
+    result["totals"] = totals(events)
     return result
 
 
@@ -662,13 +728,27 @@ def dispatch(path, method, headers, raw=b"", client_ip="", production=False, pub
         if not authenticated(headers, now):
             raise APIError(401, "Admin sign-in is required.")
         query = urllib.parse.parse_qs(route.query, keep_blank_values=True)
-        if set(query) - {"days"} or len(query.get("days", ["30"])) != 1 or query.get("days", ["30"])[0] not in ("7", "30", "90"):
+        if set(query) - {"days"} - set(FILTERS) or any(len(values) != 1 for values in query.values()) or query.get("days", ["30"])[0] not in ("7", "30", "90"):
             raise APIError(400, "Choose a 7, 30 or 90 day period.")
         days = int(query.get("days", ["30"])[0])
+        filters = {name: query[name][0] for name in FILTERS if name in query}
+        if any(not FILTERS[name].match(value) for name, value in filters.items()):
+            raise APIError(400, "Invalid filter.")
         today = dt.datetime.fromtimestamp(now, dt.timezone.utc).date()
         start = dt.datetime.combine(today - dt.timedelta(days=days - 1), dt.time(), dt.timezone.utc).timestamp()
-        events, truncated = get_store(production, public_root).read(start, now)
-        return 200, aggregate(events, days, now, truncated), output_headers
+        # One read covers this period and the one before it. The store returns
+        # newest first, so a capped read always keeps the current period whole
+        # before it drops anything from the comparison period.
+        events, truncated = get_store(production, public_root).read(start - days * 86400, now)
+        current = [event for event in events if timestamp(event["at"]) >= start]
+        previous = [event for event in events if timestamp(event["at"]) < start]
+        current_truncated = truncated and not previous
+        comparable = not truncated and start - days * 86400 > now - RETENTION_SECONDS
+        current, previous = (apply_filters(group, filters) for group in (current, previous))
+        result = aggregate(current, days, now, current_truncated)
+        result["filters"] = filters
+        result["previous"] = totals(previous) if comparable else None
+        return 200, result, output_headers
     except APIError as error:
         if error.status == 429:
             output_headers["Retry-After"] = str(error.retry_after)
