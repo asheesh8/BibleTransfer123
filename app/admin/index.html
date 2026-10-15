@@ -46,116 +46,194 @@
 
     <div class="initial-loading" id="initial-loading" role="status"><span class="spinner" aria-hidden="true"></span> Checking your session…</div>
 
-    <div id="dashboard" hidden>
-      <div class="page-heading">
-        <div>
-          <p class="eyebrow">EasyTransfer analytics</p>
-          <h1>Library activity</h1>
-          <p class="page-intro">Understand the library’s online reach, what gets opened, and how sharing starts.</p>
+    <div id="dashboard" class="crm" hidden>
+      <nav class="crm-nav" aria-label="Dashboard sections">
+        <div class="view-tabs" role="tablist" aria-label="Dashboard view" aria-orientation="vertical">
+          <button id="overview-tab" type="button" role="tab" aria-selected="true" aria-controls="overview-panel" tabindex="0"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12h6V3H3v9Zm12 9h6V12h-6v9ZM3 21h6v-5H3v5ZM15 8h6V3h-6v5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>Overview</span></button>
+          <button id="audience-tab" type="button" role="tab" aria-selected="false" aria-controls="audience-panel" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.7"/><path d="M3 20v-2a6 6 0 0 1 12 0v2m2-16a3 3 0 0 1 0 6m4 10v-2a6 6 0 0 0-3-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>Audience</span></button>
+          <button id="content-tab" type="button" role="tab" aria-selected="false" aria-controls="content-panel" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 5h16v14H4zM10 9l5 3-5 3V9Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span>Content</span></button>
+          <button id="sharing-tab" type="button" role="tab" aria-selected="false" aria-controls="sharing-panel" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M5 12v8h14v-8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Sharing</span></button>
+          <button id="activity-tab" type="button" role="tab" aria-selected="false" aria-controls="activity-panel" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Activity log</span></button>
+          <button id="developer-tab" type="button" role="tab" aria-selected="false" aria-controls="developer-panel" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m7 7-5 5 5 5m10-10 5 5-5 5M14 4l-4 16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Developer</span></button>
         </div>
-        <div class="toolbar">
-          <label class="sr-only" for="period">Reporting period</label>
-          <select id="period"><option value="7">Last 7 days</option><option value="30" selected>Last 30 days</option><option value="90">Last 90 days</option></select>
-          <button class="button button-quiet" id="refresh" type="button"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M20 7v5h-5M4 17v-5h5m10.2-4.9A8 8 0 0 0 5.1 6M4.8 16.9A8 8 0 0 0 18.9 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Refresh</button>
+        <div class="nav-foot">
+          <span class="consent-tag"><span aria-hidden="true"></span> Consented analytics</span>
+          <span id="live-status" role="status">Live · updates every 4 seconds</span>
+          <span id="report-updated"></span>
         </div>
-      </div>
+      </nav>
 
-      <div class="report-meta"><span class="consent-tag"><span aria-hidden="true"></span> Consented analytics</span><span id="live-status" role="status">Live · updates every 4 seconds</span><span id="report-updated"></span></div>
-      <div class="notice notice-warning" id="report-warning" role="status" hidden></div>
-
-      <div class="empty-overview" id="empty-overview" hidden>
-        <div class="empty-symbol" aria-hidden="true">↗</div>
-        <div><h2>No recorded activity yet.</h2><p>No analytics have been recorded in this period. Activity will appear here after visitors accept analytics and use the online library.</p></div>
-      </div>
-
-      <div class="view-tabs" role="tablist" aria-label="Dashboard view">
-        <button id="overview-tab" type="button" role="tab" aria-selected="true" aria-controls="overview-panel" tabindex="0"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12h6V3H3v9Zm12 9h6V12h-6v9ZM3 21h6v-5H3v5ZM15 8h6V3h-6v5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg> Larry’s overview</button>
-        <button id="developer-tab" type="button" role="tab" aria-selected="false" aria-controls="developer-panel" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m7 7-5 5 5 5m10-10 5 5-5 5M14 4l-4 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Developer view</button>
-        <span class="tab-context">Two views of the same recorded activity</span>
-      </div>
-
-      <section id="overview-panel" role="tabpanel" aria-labelledby="overview-tab">
-        <section class="metrics" id="metrics" aria-label="Library reach and sharing summary"></section>
-        <div class="overview-grid">
-          <section class="panel activity-panel" aria-labelledby="activity-title">
-            <div class="panel-heading"><div><p class="eyebrow">The rhythm of the library</p><h2 id="activity-title">Visits &amp; sharing over time</h2></div><div class="chart-legend"><span><i class="legend-visits"></i> Page views</span><span><i class="legend-shares"></i> Share attempts</span></div></div>
-            <div id="daily-chart" class="daily-chart"></div>
-            <details class="chart-data"><summary>View daily numbers</summary><div class="compact-table" id="daily-data"></div></details>
-            <p class="panel-note">Daily page views and sharing activity. Dates use UTC.</p>
-          </section>
-          <section class="panel insights-panel" aria-labelledby="insights-title">
-            <div class="panel-heading"><div><p class="eyebrow">What this period shows</p><h2 id="insights-title">A few useful observations</h2></div><span class="panel-icon" aria-hidden="true">✧</span></div>
-            <div id="insights" class="insight-list"></div>
-            <p class="panel-note">Based on recorded activity in the selected period.</p>
-          </section>
-          <section class="panel donut-panel" aria-labelledby="channels-title">
-            <div class="panel-heading"><div><p class="eyebrow">Ways sharing starts</p><h2 id="channels-title">Sharing activity</h2><p class="panel-subtitle">Share attempts by selected method</p></div><span class="panel-icon" aria-hidden="true">↗</span></div>
-            <div id="channels" class="donut-chart"></div>
-            <p class="panel-note">Native share destinations aren’t reported. Selected app buttons show intent, not delivery.</p>
-          </section>
-          <section class="panel donut-panel" aria-labelledby="countries-title">
-            <div class="panel-heading"><div><p class="eyebrow">Approximate online reach</p><h2 id="countries-title">Where pages are opened</h2><p class="panel-subtitle">Share of recorded page views</p></div><span class="panel-icon" aria-hidden="true">◎</span></div>
-            <div id="countries" class="donut-chart"></div>
-            <p class="panel-note">Estimated country, when supplied by the host. Missing locations appear as Unknown.</p>
-          </section>
-          <section class="panel donut-panel" aria-labelledby="languages-title">
-            <div class="panel-heading"><div><p class="eyebrow">Library language choices</p><h2 id="languages-title">Languages being explored</h2><p class="panel-subtitle">Share of recorded page views</p></div><span class="panel-icon text-icon" aria-hidden="true">Aa</span></div>
-            <div id="languages" class="donut-chart"></div>
-            <p class="panel-note">Page views by selected library language.</p>
-          </section>
-          <section class="panel resource-panel" aria-labelledby="resources-title">
-            <div class="panel-heading"><div><p class="eyebrow">Content people explore</p><h2 id="resources-title">Most opened resources</h2><p class="panel-subtitle">Which resources are getting attention</p></div><span class="panel-icon" aria-hidden="true">▤</span></div>
-            <div class="rank-list resource-ranks" id="resources"></div>
-            <p class="panel-note">Openings include repeats and do not mean a resource was fully read or watched.</p>
-          </section>
-          <section class="panel" aria-labelledby="sharing-signals-title">
-            <div class="panel-heading"><div><p class="eyebrow">Separate pieces of evidence</p><h2 id="sharing-signals-title">Sharing &amp; keeping content</h2></div></div>
-            <div id="sharing-signals" class="signal-list"></div>
-            <p class="panel-note">Files saved and nearby batches received are separate activity counts.</p>
-          </section>
-        </div>
-        <section class="panel journey-panel" aria-labelledby="journeys-title"><div class="panel-heading"><div><p class="eyebrow">Follow the activity</p><h2 id="journeys-title">Visitor journeys by country</h2><p class="panel-subtitle">Expand a country, then a visitor browser to see its recorded actions.</p></div></div><div id="journeys"></div><p class="panel-note">Journeys use the recent events available to this report. A browser can be shared by several people; these are anonymous activity timelines.</p></section>
-      </section>
-
-      <section id="developer-panel" role="tabpanel" aria-labelledby="developer-tab" hidden>
-        <div class="developer-intro"><div><p class="eyebrow">Measurement details</p><h2>Inspect the evidence behind the report.</h2><p>Aggregates cover the analyzed period. The event explorer works with the recent events returned by the API.</p></div><span class="developer-badge">GET /api/admin</span></div>
-        <section class="metrics developer-metrics" id="developer-metrics" aria-label="Measurement coverage"></section>
-        <div class="developer-grid">
-          <section class="panel" aria-labelledby="event-types-title"><div class="panel-heading"><div><p class="eyebrow">Instrumentation</p><h2 id="event-types-title">Event types</h2><p class="panel-subtitle">All analyzed events, including repeated actions</p></div></div><div id="event-types" class="rank-list"></div></section>
-          <section class="panel" aria-labelledby="statuses-title"><div class="panel-heading"><div><p class="eyebrow">Reported state</p><h2 id="statuses-title">Event statuses</h2><p class="panel-subtitle">“Unspecified” includes events without a status</p></div></div><div id="statuses" class="rank-list"></div></section>
-        </div>
-        <div class="outcome-grid">
-          <section class="panel donut-panel" aria-labelledby="share-outcomes-title"><div class="panel-heading"><div><p class="eyebrow">Terminal sharing events</p><h2 id="share-outcomes-title">Share actions</h2></div></div><div id="share-outcomes" class="donut-chart"></div><p class="panel-note">Complete / cancel events by status. Copied links are confirmed locally; native handoffs are unverified. No recipient delivery rate is measured.</p></section>
-          <section class="panel donut-panel" aria-labelledby="download-outcomes-title"><div class="panel-heading"><div><p class="eyebrow">Terminal download events</p><h2 id="download-outcomes-title">File downloads</h2></div></div><div id="download-outcomes" class="donut-chart"></div><p class="panel-note">Complete / cancel / error events per file. A browser handoff does not verify a saved file. One resource may contain many downloadable files.</p></section>
-          <section class="panel donut-panel" aria-labelledby="transfer-outcomes-title"><div class="panel-heading"><div><p class="eyebrow">Terminal nearby events</p><h2 id="transfer-outcomes-title">Nearby transfers</h2></div></div><div id="transfer-outcomes" class="donut-chart"></div><p class="panel-note">Complete / error events per batch. “Received” confirms the receiver has the data in memory; it does not confirm a saved file.</p></section>
-        </div>
-        <div class="developer-grid">
-          <section class="panel" aria-labelledby="pages-title"><div class="panel-heading"><div><p class="eyebrow">Online navigation</p><h2 id="pages-title">Most viewed pages</h2></div></div><div id="pages" class="rank-list"></div><p class="panel-note">Page views across the full analyzed period.</p></section>
-          <section class="panel" aria-labelledby="referrers-title"><div class="panel-heading"><div><p class="eyebrow">Discovery sources</p><h2 id="referrers-title">Referring sites</h2></div></div><div id="referrers" class="rank-list"></div><p class="panel-note">Page views across the full analyzed period. Direct visits and browsers that hide referrals appear as “Direct / unknown”.</p></section>
-        </div>
-        <section class="panel events-panel" aria-labelledby="events-title">
-          <div class="panel-heading"><div><p class="eyebrow">Inspect recent records</p><h2 id="events-title">Event explorer</h2><p class="events-subtitle" id="event-count" aria-live="polite"></p></div><button class="button button-quiet" id="export" type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M12 3v12m-4-4 4 4 4-4M4 16v4h16v-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Export filtered CSV</button></div>
-          <div class="event-filters">
-            <div class="filter-field search-field"><label for="event-search">Search events</label><input id="event-search" type="search" placeholder="Resource, page, ID, or keyword" autocomplete="off"></div>
-            <div class="filter-field"><label for="event-filter-type">Event type</label><select id="event-filter-type"><option value="">All types</option></select></div>
-            <div class="filter-field"><label for="event-filter-channel">Channel</label><select id="event-filter-channel"><option value="">All channels</option></select></div>
-            <div class="filter-field"><label for="event-filter-status">Status</label><select id="event-filter-status"><option value="">All statuses</option></select></div>
-            <button class="button button-quiet" id="event-clear" type="button">Clear filters</button>
+      <div class="crm-body">
+        <div class="page-heading">
+          <div>
+            <p class="eyebrow">EasyTransfer analytics</p>
+            <h1>Library activity</h1>
           </div>
-          <div class="table-wrap" tabindex="0" role="region" aria-label="Recent analytics events; scroll horizontally on smaller screens">
-            <table><thead><tr><th scope="col">Activity</th><th scope="col">When</th><th scope="col">Page / resource</th><th scope="col">Channel / status</th><th scope="col">Library / country</th><th scope="col">Referrer</th><th scope="col"><span class="sr-only">Event details</span></th></tr></thead><tbody id="events"></tbody></table>
+          <div class="toolbar">
+            <label class="sr-only" for="period">Reporting period</label>
+            <select id="period"><option value="7">Last 7 days</option><option value="30" selected>Last 30 days</option><option value="90">Last 90 days</option></select>
+            <button class="button button-quiet" id="refresh" type="button"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M20 7v5h-5M4 17v-5h5m10.2-4.9A8 8 0 0 0 5.1 6M4.8 16.9A8 8 0 0 0 18.9 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Refresh</button>
           </div>
-          <div class="event-pagination"><div class="page-size-field"><label for="event-page-size">Rows per page</label><select id="event-page-size"><option value="10">10</option><option value="25" selected>25</option><option value="50">50</option></select></div><div class="page-controls"><span id="event-page-label" aria-live="polite"></span><button class="button button-quiet" id="event-prev" type="button" aria-label="Previous event page">←</button><button class="button button-quiet" id="event-next" type="button" aria-label="Next event page">→</button></div></div>
-          <p class="panel-note event-note" id="event-note"></p>
+        </div>
+
+        <div class="notice notice-warning" id="report-warning" role="status" hidden></div>
+
+        <div class="empty-overview" id="empty-overview" hidden>
+          <div class="empty-symbol" aria-hidden="true">↗</div>
+          <div><h2>No recorded activity in this period.</h2><p>Charts fill in as visitors accept analytics and use the online library. Every number here is a real recorded event; nothing is estimated or sampled.</p></div>
+        </div>
+
+        <!-- Overview -->
+        <section id="overview-panel" role="tabpanel" aria-labelledby="overview-tab">
+          <div class="section-intro"><h2>Larry’s overview</h2><p>The whole period at a glance: how many people came, what they opened and how sharing is going.</p></div>
+          <section class="kpis" id="metrics" aria-label="Headline numbers"></section>
+          <div class="grid grid-3">
+            <section class="panel span-2" aria-labelledby="trend-title">
+              <div class="panel-heading">
+                <div><h2 id="trend-title">Daily activity</h2><p class="panel-subtitle" id="trend-subtitle">Visitor browsers per day</p></div>
+                <div class="segmented" id="trend-metric" role="group" aria-label="Metric shown in the daily chart"></div>
+              </div>
+              <div id="daily-chart" class="daily-chart"></div>
+              <details class="chart-data"><summary>Show the daily numbers as a table</summary><div class="compact-table" id="daily-data"></div></details>
+            </section>
+            <section class="panel insights-panel" aria-labelledby="insights-title">
+              <div class="panel-heading"><div><h2 id="insights-title">Highlights</h2><p class="panel-subtitle">Plain-language notes from this period</p></div></div>
+              <div id="insights" class="insight-list"></div>
+            </section>
+          </div>
+          <div class="grid grid-3">
+            <section class="panel" aria-labelledby="funnel-title">
+              <div class="panel-heading"><div><h2 id="funnel-title">From visit to share</h2><p class="panel-subtitle">How many visitor browsers reached each step</p></div></div>
+              <div id="funnel" class="funnel"></div>
+            </section>
+            <section class="panel" aria-labelledby="languages-title">
+              <div class="panel-heading"><div><h2 id="languages-title">Top languages</h2><p class="panel-subtitle">Visitor browsers per library language</p></div><button class="link-button" type="button" data-goto="audience">See all</button></div>
+              <div id="languages" class="bars"></div>
+            </section>
+            <section class="panel" aria-labelledby="countries-title">
+              <div class="panel-heading"><div><h2 id="countries-title">Top countries</h2><p class="panel-subtitle">Visitor browsers per country</p></div><button class="link-button" type="button" data-goto="audience">See all</button></div>
+              <div id="countries" class="bars"></div>
+            </section>
+          </div>
+          <div class="grid grid-3">
+            <section class="panel span-2" aria-labelledby="resources-title">
+              <div class="panel-heading"><div><h2 id="resources-title">Most opened content</h2><p class="panel-subtitle">Openings include repeat visits</p></div><button class="link-button" type="button" data-goto="content">See all</button></div>
+              <div id="resources" class="bars"></div>
+            </section>
+            <section class="panel" aria-labelledby="hours-title">
+              <div class="panel-heading"><div><h2 id="hours-title">When people visit</h2><p class="panel-subtitle">Page views by hour of day (UTC)</p></div></div>
+              <div id="hours" class="hours-chart"></div>
+            </section>
+          </div>
         </section>
-        <section class="panel report-details" aria-labelledby="report-details-title"><div class="panel-heading"><div><p class="eyebrow">API &amp; completeness</p><h2 id="report-details-title">Report details</h2></div></div><dl id="report-metadata" class="metadata-grid"></dl><p class="panel-note">Identifiers describe consented browsers and sessions, not named people. Playback events can include resumes; a chapter ending is not evidence that an entire resource was watched. No device demographics or total watch-time metric is collected.</p></section>
-      </section>
 
-      <aside class="coverage-note" aria-label="Analytics coverage">
-        <div class="coverage-mark" aria-hidden="true">i</div>
-        <div><h2>A clear view of what we can measure.</h2><p>These counts cover online activity from people who accepted analytics. Visitors who decline are not counted. Share attempts, confirmed copy actions and visits from shared links are different signals; none identifies a recipient. The native share sheet does not confirm external delivery. Offline card copies, file transfers outside the library and private app conversations cannot be centrally tracked.</p><p id="retention-note"></p></div>
-      </aside>
+        <!-- Audience -->
+        <section id="audience-panel" role="tabpanel" aria-labelledby="audience-tab" hidden>
+          <div class="section-intro"><h2>Audience</h2><p>Who is visiting, from where, and in which language. A “visitor browser” is an anonymous browser ID, not a named person.</p></div>
+          <section class="kpis" id="audience-metrics" aria-label="Audience summary"></section>
+          <section class="panel table-panel" aria-labelledby="country-table-title">
+            <div class="panel-heading"><div><h2 id="country-table-title">Countries</h2><p class="panel-subtitle">Select a column heading to sort</p></div></div>
+            <div id="country-table" class="data-table"></div>
+          </section>
+          <section class="panel table-panel" aria-labelledby="language-table-title">
+            <div class="panel-heading"><div><h2 id="language-table-title">Languages</h2><p class="panel-subtitle">Library language in use when the activity happened</p></div></div>
+            <div id="language-table" class="data-table"></div>
+          </section>
+          <section class="panel" aria-labelledby="referrers-title">
+            <div class="panel-heading"><div><h2 id="referrers-title">Where visits come from</h2><p class="panel-subtitle">Referring sites for page views. Direct visits and browsers that hide referrals show as “Direct / unknown”.</p></div></div>
+            <div id="referrers" class="bars"></div>
+          </section>
+        </section>
+
+        <!-- Content -->
+        <section id="content-panel" role="tabpanel" aria-labelledby="content-tab" hidden>
+          <div class="section-intro"><h2>Content</h2><p>Every item people opened, played, saved or shared in this period.</p></div>
+          <div class="grid grid-3">
+            <section class="panel" aria-labelledby="content-types-title">
+              <div class="panel-heading"><div><h2 id="content-types-title">Openings by kind</h2><p class="panel-subtitle">Films, audio, Scripture and more</p></div></div>
+              <div id="content-types" class="bars"></div>
+            </section>
+            <section class="panel span-2" aria-labelledby="content-languages-title">
+              <div class="panel-heading"><div><h2 id="content-languages-title">Openings by language</h2><p class="panel-subtitle">Which libraries people are opening items in</p></div></div>
+              <div id="content-languages" class="bars"></div>
+            </section>
+          </div>
+          <section class="panel table-panel" aria-labelledby="resource-table-title">
+            <div class="panel-heading"><div><h2 id="resource-table-title">All content</h2><p class="panel-subtitle" id="resource-table-count"></p></div>
+              <div class="filter-field table-search"><label class="sr-only" for="resource-search">Search content</label><input id="resource-search" type="search" placeholder="Search by title, language or ID" autocomplete="off"></div></div>
+            <div id="resource-table" class="data-table"></div>
+            <p class="panel-note">Plays include resumes. A save counts a file confirmed saved or a nearby batch received.</p>
+          </section>
+        </section>
+
+        <!-- Sharing -->
+        <section id="sharing-panel" role="tabpanel" aria-labelledby="sharing-tab" hidden>
+          <div class="section-intro"><h2>Sharing</h2><p>How the library spreads. Share attempts, confirmed actions and visits from shared links are separate signals; none identifies a recipient.</p></div>
+          <section class="kpis" id="sharing-signals" aria-label="Sharing summary"></section>
+          <div class="grid grid-2">
+            <section class="panel" aria-labelledby="channels-title">
+              <div class="panel-heading"><div><h2 id="channels-title">How people share</h2><p class="panel-subtitle">Share attempts by method</p></div></div>
+              <div id="channels" class="bars"></div>
+              <p class="panel-note">The phone’s own share sheet doesn’t report which app was picked.</p>
+            </section>
+            <section class="panel" aria-labelledby="share-outcomes-title">
+              <div class="panel-heading"><div><h2 id="share-outcomes-title">What happened next</h2><p class="panel-subtitle">Results of finished share actions</p></div></div>
+              <div id="share-outcomes" class="bars"></div>
+              <p class="panel-note">Copied links are confirmed on the device. Native share handoffs can’t be verified.</p>
+            </section>
+            <section class="panel" aria-labelledby="shared-content-title">
+              <div class="panel-heading"><div><h2 id="shared-content-title">Most shared content</h2><p class="panel-subtitle">Share attempts per item</p></div></div>
+              <div id="shared-content" class="bars"></div>
+            </section>
+            <section class="panel" aria-labelledby="shared-languages-title">
+              <div class="panel-heading"><div><h2 id="shared-languages-title">Sharing by language</h2><p class="panel-subtitle">Share attempts per library language</p></div></div>
+              <div id="shared-languages" class="bars"></div>
+            </section>
+          </div>
+        </section>
+
+        <!-- Activity log -->
+        <section id="activity-panel" role="tabpanel" aria-labelledby="activity-tab" hidden>
+          <div class="section-intro"><h2>Activity log</h2><p>Recent recorded actions, one row each, plus visitor journeys grouped by country.</p></div>
+          <section class="panel events-panel" aria-labelledby="events-title">
+            <div class="panel-heading"><div><h2 id="events-title">Recent events</h2><p class="events-subtitle" id="event-count" aria-live="polite"></p></div><button class="button button-quiet" id="export" type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M12 3v12m-4-4 4 4 4-4M4 16v4h16v-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Export filtered CSV</button></div>
+            <div class="event-filters">
+              <div class="filter-field search-field"><label for="event-search">Search events</label><input id="event-search" type="search" placeholder="Resource, page, ID, or keyword" autocomplete="off"></div>
+              <div class="filter-field"><label for="event-filter-type">Event type</label><select id="event-filter-type"><option value="">All types</option></select></div>
+              <div class="filter-field"><label for="event-filter-channel">Channel</label><select id="event-filter-channel"><option value="">All channels</option></select></div>
+              <div class="filter-field"><label for="event-filter-status">Status</label><select id="event-filter-status"><option value="">All statuses</option></select></div>
+              <button class="button button-quiet" id="event-clear" type="button">Clear filters</button>
+            </div>
+            <div class="table-wrap" tabindex="0" role="region" aria-label="Recent analytics events; scroll horizontally on smaller screens">
+              <table class="events-table"><thead><tr><th scope="col">Activity</th><th scope="col">When</th><th scope="col">Page / resource</th><th scope="col">Channel / status</th><th scope="col">Library / country</th><th scope="col">Referrer</th><th scope="col"><span class="sr-only">Event details</span></th></tr></thead><tbody id="events"></tbody></table>
+            </div>
+            <div class="event-pagination"><div class="page-size-field"><label for="event-page-size">Rows per page</label><select id="event-page-size"><option value="10">10</option><option value="25" selected>25</option><option value="50">50</option></select></div><div class="page-controls"><span id="event-page-label" aria-live="polite"></span><button class="button button-quiet" id="event-prev" type="button" aria-label="Previous event page">←</button><button class="button button-quiet" id="event-next" type="button" aria-label="Next event page">→</button></div></div>
+            <p class="panel-note event-note" id="event-note"></p>
+          </section>
+          <section class="panel journey-panel" aria-labelledby="journeys-title"><div class="panel-heading"><div><h2 id="journeys-title">Visitor journeys by country</h2><p class="panel-subtitle">Expand a country, then a visitor browser to see its recorded actions.</p></div></div><div id="journeys"></div><p class="panel-note">Journeys use the recent events available to this report. A browser can be shared by several people; these are anonymous activity timelines.</p></section>
+        </section>
+
+        <!-- Developer -->
+        <section id="developer-panel" role="tabpanel" aria-labelledby="developer-tab" hidden>
+          <div class="section-intro"><h2>Developer</h2><p>Measurement details behind the report, from <code>GET /api/admin</code>.</p></div>
+          <section class="kpis" id="developer-metrics" aria-label="Measurement coverage"></section>
+          <div class="grid grid-2">
+            <section class="panel" aria-labelledby="event-types-title"><div class="panel-heading"><div><h2 id="event-types-title">Event types</h2><p class="panel-subtitle">All analyzed events, including repeated actions</p></div></div><div id="event-types" class="bars"></div></section>
+            <section class="panel" aria-labelledby="statuses-title"><div class="panel-heading"><div><h2 id="statuses-title">Event statuses</h2><p class="panel-subtitle">“Unspecified” includes events without a status</p></div></div><div id="statuses" class="bars"></div></section>
+            <section class="panel" aria-labelledby="download-outcomes-title"><div class="panel-heading"><div><h2 id="download-outcomes-title">File downloads</h2><p class="panel-subtitle">Complete, cancel and error events per file</p></div></div><div id="download-outcomes" class="bars"></div><p class="panel-note">A browser handoff does not verify a saved file. One item may contain many files.</p></section>
+            <section class="panel" aria-labelledby="transfer-outcomes-title"><div class="panel-heading"><div><h2 id="transfer-outcomes-title">Nearby transfers</h2><p class="panel-subtitle">Complete and error events per batch</p></div></div><div id="transfer-outcomes" class="bars"></div><p class="panel-note">“Received” confirms the receiver has the data in memory, not a saved file.</p></section>
+            <section class="panel span-all" aria-labelledby="pages-title"><div class="panel-heading"><div><h2 id="pages-title">Most viewed pages</h2></div></div><div id="pages" class="bars"></div></section>
+          </div>
+          <section class="panel report-details" aria-labelledby="report-details-title"><div class="panel-heading"><div><h2 id="report-details-title">Report details</h2></div></div><dl id="report-metadata" class="metadata-grid"></dl><p class="panel-note">Identifiers describe consented browsers and sessions, not named people. Playback events can include resumes; a chapter ending is not evidence that an entire resource was watched. No device demographics or total watch-time metric is collected.</p></section>
+        </section>
+
+        <aside class="coverage-note" aria-label="Analytics coverage">
+          <div class="coverage-mark" aria-hidden="true">i</div>
+          <div><h2>What these numbers cover</h2><p>Online activity from people who accepted analytics. Visitors who decline are not counted. Offline card copies, file transfers outside the library and private app conversations can’t be tracked centrally.</p><p id="retention-note"></p></div>
+        </aside>
+      </div>
     </div>
+    <div class="chart-tip" id="chart-tip" role="presentation" hidden></div>
   </main>
   <footer class="admin-footer"><span>EasyTransfer · Library analytics</span><span>Privacy-aware by design</span></footer>
   <noscript><p class="noscript-note">Enable JavaScript to sign in and view the admin dashboard.</p></noscript>

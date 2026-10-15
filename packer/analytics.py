@@ -411,7 +411,20 @@ def require_same_origin(headers, production):
 
 def aggregate(events, days, now, truncated=False):
     today = dt.datetime.fromtimestamp(now, dt.timezone.utc).date()
-    daily = {str(today - dt.timedelta(days=offset)): {"date": str(today - dt.timedelta(days=offset)), "visits": 0, "shares": 0} for offset in reversed(range(days))}
+    daily = {str(today - dt.timedelta(days=offset)): {"date": str(today - dt.timedelta(days=offset)), "visits": 0, "shares": 0, "visitors": 0, "opens": 0, "saves": 0} for offset in reversed(range(days))}
+    day_visitors = collections.defaultdict(set)
+    # Per-row tables for the CRM-style breakdowns: one row per resource,
+    # language and country, each with its own unique-visitor count.
+    tables = {name: {} for name in ("resourceTable", "languageTable", "countryTable")}
+    table_fields = {
+        "resourceTable": ("opens", "plays", "saves", "shares"),
+        "languageTable": ("pageViews", "opens", "shares", "saves"),
+        "countryTable": ("pageViews", "opens", "shares"),
+    }
+    visitor_sessions = collections.defaultdict(set)
+    stages = {name: set() for name in ("openedVisitors", "engagedVisitors", "sharedVisitors", "arrivedBySharedLink")}
+    hours = [0] * 24
+    plays = play_completes = 0
     summary = {"visitors": len({event["visitorId"] for event in events}), "sessions": len({event["sessionId"] for event in events}), "pageViews": 0, "shareIntents": 0, "shareCompletions": 0, "sharedVisits": 0, "downloads": 0, "transfers": 0}
     counts = {name: collections.Counter() for name in (
         "channels", "countries", "languages", "resources", "referrers", "pages",
@@ -437,6 +450,38 @@ def aggregate(events, days, now, truncated=False):
         if kind in ("transfer_complete", "transfer_error"):
             counts["transferOutcomes"][status or "unspecified"] += 1
         day = daily.get(event["at"][:10])
+        visitor = event["visitorId"]
+        visitor_sessions[visitor].add(event["sessionId"])
+        if day:
+            day_visitors[day["date"]].add(visitor)
+        rows = []
+        for table, key in (("resourceTable", event.get("resource")), ("languageTable", event.get("language") or "Unspecified"), ("countryTable", event.get("country") or "Unknown")):
+            if key:
+                row = tables[table].setdefault(key, dict({"name": key, "visitors": set()}, **{field: 0 for field in table_fields[table]}))
+                row["visitors"].add(visitor)
+                rows.append(row)
+        saved = (kind == "download_complete" and status == "saved") or (kind == "transfer_complete" and status == "received")
+        increments = {"pageViews": kind == "page_view", "opens": kind == "resource_open", "plays": kind == "play", "saves": saved, "shares": kind == "share_intent"}
+        for row in rows:
+            for field, hit in increments.items():
+                if field in row:
+                    row[field] += int(hit)
+        if kind == "resource_open":
+            stages["openedVisitors"].add(visitor)
+            if day:
+                day["opens"] += 1
+        if kind in ("play", "download_start", "download_complete", "transfer_complete"):
+            stages["engagedVisitors"].add(visitor)
+        if kind == "share_intent":
+            stages["sharedVisitors"].add(visitor)
+        if kind == "shared_visit":
+            stages["arrivedBySharedLink"].add(visitor)
+        if saved and day:
+            day["saves"] += 1
+        plays += int(kind == "play")
+        play_completes += int(kind == "play_complete")
+        if kind == "page_view" and event["at"][11:13].isdigit() and int(event["at"][11:13]) < 24:
+            hours[int(event["at"][11:13])] += 1
         if kind == "page_view":
             summary["pageViews"] += 1
             if day:
@@ -471,6 +516,18 @@ def aggregate(events, days, now, truncated=False):
     # analyzed window. A truncated report still covers only analyzed events.
     result["breakdownTotals"] = {name: sum(counter.values()) for name, counter in counts.items()}
     result["breakdownTruncated"] = {name: len(counter) > 100 for name, counter in counts.items()}
+    for date, visitors in day_visitors.items():
+        daily[date]["visitors"] = len(visitors)
+    for table, rows in tables.items():
+        for row in rows.values():
+            row["visitors"] = len(row["visitors"])
+        ranked = sorted(rows.values(), key=lambda row: (-sum(value for key, value in row.items() if key != "name"), row["name"]))
+        result[table] = ranked[:100]
+        result["breakdownTruncated"][table] = len(ranked) > 100
+    result["engagement"] = dict({name: len(members) for name, members in stages.items()},
+                                returningVisitors=sum(1 for sessions in visitor_sessions.values() if len(sessions) > 1),
+                                plays=plays, playCompletes=play_completes)
+    result["hours"] = hours
     return result
 
 
