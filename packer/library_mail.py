@@ -60,6 +60,7 @@ LIBRARIES = {
     "portuguese": ("Portuguese", "Português"),
     "shona": ("Shona", "chiShona"),
     "sindhi": ("Sindhi", "سنڌي"),
+    "spanish": ("Spanish", "Español"),
     "swahili": ("Swahili", "Kiswahili"),
     "tigrinya": ("Tigrinya", "ትግርኛ"),
     "urdu": ("Urdu", "اردو"),

@@ -1,4 +1,4 @@
-"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Arabic, Haitian Creole and Kuria: complete, verified and DBS-hosted."""
+"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Arabic, Haitian Creole, Kuria and Spanish: complete, verified and DBS-hosted."""
 import json
 import pathlib
 import re
@@ -10,12 +10,14 @@ from packer.et.profiles import PROFILES
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATE = '2026-10-06'
 ARA_COUNT = 263
+SPA_COUNT = 84
 SHELVES = {'xho': ('xhosa', 'xh', 13), 'nya': ('chichewa', 'ny', 34),
            'kin': ('kinyarwanda', 'rw', 26), 'sna': ('shona', 'sn', 32),
            'run': ('kirundi', 'rn', 27), 'aka': ('akan', 'ak', 47),
            'tir': ('tigrinya', 'ti', 26), 'ara': ('arabic', 'ar', ARA_COUNT),
-           'hat': ('haitian', 'ht', 29), 'kuj': ('kuria', 'swh', 12)}
-DATES = {'ara': '2026-10-07', 'hat': '2026-10-13', 'kuj': '2026-10-14'}
+           'hat': ('haitian', 'ht', 29), 'kuj': ('kuria', 'swh', 12),
+           'spa': ('spanish', 'es', SPA_COUNT)}
+DATES = {'ara': '2026-10-07', 'hat': '2026-10-13', 'kuj': '2026-10-14', 'spa': '2026-10-15'}
 
 
 def urls(r):
@@ -81,6 +83,8 @@ class DbsAuditTest(unittest.TestCase):
         # The easy-to-read New Testament with Psalms and Proverbs.
         self.assertEqual(totals['hat'], 260 + 150 + 31)
         self.assertEqual(totals['kuj'], 1189)
+        # Three full Bibles, the Reina-Valera 1960 Old Testament and three New Testaments.
+        self.assertEqual(totals['spa'], 1189 * 3 + 929 + 260 * 3)
 
     def test_moved_audio_bibles_are_left_out(self):
         moved = {'https://dbs.org/bibles/audio/NYABSM04605_DAVR_FB_N',
@@ -251,6 +255,35 @@ class DbsAuditTest(unittest.TestCase):
         self.assertIn('"lang":"kuj","ui":"swh","slug":"kuria"', page)
         for alias in ('igikuria', 'kikuria', 'kurya'):
             self.assertIn('{ "source": "/' + alias + '", "destination": "/kuria/index.html" }', (ROOT / 'vercel.json').read_text())
+
+    def test_spanish_leads_with_reina_valera_and_names_each_variety(self):
+        spa = self.shelf('spa')
+        bibles = [r['id'] for r in spa if r['type'] in ('scripture', 'audio-bible')]
+        self.assertEqual(bibles[:3], ['spa-text-sparv09', 'spa-ab-sparv09-isa-fb-n', 'spa-ab-sparv00-asm-fb-n'])
+        self.assertEqual(len(bibles), 12)
+        rv = spa[0]
+        self.assertEqual(rv['read']['kind'], 'pdf')
+        ab = spa[1]
+        self.assertEqual(ab['play']['bookNames']['Revelation'], 'Apocalipsis')
+        self.assertEqual(ab['dbsListedUrl'], 'https://dbs.org/bibles/SPARV09')
+        films = {r['id']: r for r in spa if r['type'] == 'film'}
+        self.assertEqual(len(films), 28)
+        cast = films['spa-film-spa-spanish-castilian-jesus']
+        self.assertEqual(cast['native'], 'JESÚS (castellano)')
+        self.assertEqual(cast['play']['items'][0]['title'], '1. El comienzo')
+        self.assertEqual(len(cast['play']['items']), 61)
+        latin = films['spa-film-spa-spanish-latin-american-jesus']
+        self.assertEqual(latin['langName'], 'Español · Latinoamérica')
+        for u in urls(latin):
+            self.assertNotIn('book-of-acts', u)
+        lumo = films['spa-film-spa-spanish-john']
+        self.assertTrue(all('Reina-Valera-Contemporanea' in i['file'] for i in lumo['play']['items']))
+        left_out = self.built['spa']['notCarried']
+        for n in ('66810', '66811', '38331', '66862'):
+            self.assertIn('https://globalrecordings.net/en/program/' + n, left_out)
+        self.assertEqual(self.built['spa']['languages']['spa']['native'], 'Español')
+        visibility = (ROOT / 'app/assets/js/visibility.js').read_text()
+        self.assertIn("spa: ['spa-text-sparv09']", visibility)
 
 
 if __name__ == '__main__':

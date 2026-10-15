@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Build Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Haitian Creole and Kuria from their browser audits.
 
-    python3 packer/build_dbs_audit.py            # all nine, and Arabic
+    python3 packer/build_dbs_audit.py            # all nine, Arabic and Spanish
     python3 packer/build_dbs_audit.py sna        # one
 
-Arabic is built by build_dbs_arabic.py, which reuses this Shelf.
+Arabic and Spanish are built by build_dbs_arabic.py and build_dbs_spanish.py, which reuse this Shelf.
 
 Each language's DBS page, and every DBS page it links to, was rendered in a
 real browser on 2026-10-06 (catalog/source/dbs-audit-<language>-2026-10-06.json).
@@ -198,7 +198,7 @@ DIALECT = {'asante-twi': 'Asante Twi', 'akan-asante': 'Asante Twi', 'akan-akuape
 def local_books():
     src = (ROOT / 'app/assets/js/core.js').read_text()
     out = {}
-    for ui in ('xh', 'ny', 'rw', 'sn', 'rn', 'ak', 'ti', 'ar', 'ht'):
+    for ui in ('xh', 'ny', 'rw', 'sn', 'rn', 'ak', 'ti', 'ar', 'ht', 'es'):
         block = re.search(r'\n    ' + ui + r': (\{.*?\n\})', src, re.S)[1]
         out[ui] = json.loads(block)
     out['swh'] = dict(zip(BOOKS, SWAHILI_BOOKS))
@@ -866,7 +866,11 @@ class Shelf:
 
 
 def main():
-    for code in (sys.argv[1:] or list(LANGS) + ['ara']):
+    for code in (sys.argv[1:] or list(LANGS) + ['ara', 'spa']):
+        if code == 'spa':
+            import build_dbs_spanish     # Spanish has its own module: Spain and Latin America, one shelf
+            build_dbs_spanish.main()
+            continue
         if code == 'ara':
             import build_dbs_arabic      # Arabic has its own module: many varieties, one shelf
             build_dbs_arabic.ArabicShelf().build()

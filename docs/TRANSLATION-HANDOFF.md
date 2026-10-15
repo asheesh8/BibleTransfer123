@@ -958,3 +958,17 @@ DBS's second Kuria audio Bible page (KUJBSK) says it has moved and points to the
 Not carried: links to other sites (two find.bible entries and ten GRN programme pages, including Words of Life, which DBS does not host).
 
 Rebuild with `python3 packer/build_dbs_audit.py kuj`, then `npm run dbs:import`. The audit is `catalog/source/dbs-audit-kuria-2026-10-14.json`.
+
+### Spanish — 2026-10-15
+
+Added one shelf and page: `/spanish` (content `spa`, also `/espanol`, `/castellano`, `/es`, `/spa`) with a full Spanish interface (`es`, 419 strings, usted register in Latin American wording; the screenshot guide stays in English). Browsers set to `es-*` open it in Spanish. Book names follow Reina-Valera ("Santiago", "Cantares", "Apocalipsis"), and Reina-Valera 1909 is the top-five Scripture text.
+
+The same browser audit as the shelves above: DBS's Spanish page and every page it lists rendered in headless Chromium, and every carried file checked by a ranged request and its leading bytes, including every chapter of all seven audio Bibles. One finding: the full PDT audio Bible (`SPAWTC_ASM-FCBH_FB_N`) keeps its Old Testament under `SPAWTC_ASM_OT_N` and its New Testament under `SPAWTC_FCBH_NT_N`, so its record carries `play.filesets` per testament (all 1,189 chapters valid there). Files that failed the check were dropped: LUMO's `films_high` copies on video2.dbs.org (404; the standard copies are carried), BibleProject videos that return 500 on both hosts, and PDT/BES PDF, EPUB or HTML zips that do not exist.
+
+| Shelf | Resources | What is carried |
+|---|---|---|
+| Spanish | 84 | 5 text Bibles (Reina-Valera 1909 first, PDT, Biblia en Español Sencillo, Versión Biblia Libre, Palabra de Dios para ti); 7 audio Bibles, every chapter (RV1909, RV2000, RV1960 OT, RV1995 NT dramatized, PDT, TLA NT dramatized, La Palabra NT Castilian); 28 films (JESUS Castilian with 61 chapters and Latin American, Magdalena, Story of Jesus for Children, LUMO Gospels and Covenant, The Savior, The Hope incl. Afro-Ecuadorian, Genesis, Creation, Book of Acts, BibleProject overviews and themes, and others); 31 GRN programmes; 13 historic scans from 1560 to 2012 |
+
+No inclusive-language or LGBTQ edition is listed for Spanish on DBS; the About text of each text Bible was read. Not carried: links to other sites (137), three GRN dialect "Diagnostic" test recordings, and GRN's resettlement welcome "Bienvenidos a los Estados Unidos". The Deaf Rescue Project and Story of Jesus audio pages DBS lists return 404.
+
+Rebuild with `python3 packer/build_dbs_audit.py spa`, then `npm run dbs:import`. The audit is `catalog/source/dbs-audit-spanish-2026-10-15.json`.

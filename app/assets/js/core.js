@@ -456,7 +456,7 @@ window.ET = (function () {
      English title and heard Sindhi. Choosing a language picks both: English
      shows English films, اردو shows Urdu, سنڌي shows Sindhi. The library can
      still browse the others on purpose. */
-  var CONTENT = { mg: 'mlg', rn: 'run', ak: 'aka', ti: 'tir', ar: 'ara', ht: 'hat', ny: 'nya', rw: 'kin', xh: 'xho', sn: 'sna', ha: 'hau', ln: 'lin', pcm: 'pcm', yo: 'yor', pt: 'por', am: 'amh', fr: 'fra', en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', zul: 'zul', mas: 'mas', kik: 'kik', hi: 'hin', mr: 'mar', lg: 'lug', luo: 'luo', om: 'orm', ig: 'ibo', pa: 'pan', pnb: 'pnb', ne: 'npi' };
+  var CONTENT = { mg: 'mlg', rn: 'run', ak: 'aka', ti: 'tir', ar: 'ara', ht: 'hat', es: 'spa', ny: 'nya', rw: 'kin', xh: 'xho', sn: 'sna', ha: 'hau', ln: 'lin', pcm: 'pcm', yo: 'yor', pt: 'por', am: 'amh', fr: 'fra', en: 'eng', ur: 'urd', snd: 'snd', ps: 'pus', cmn: 'cmn', yue: 'yue', guz: 'guz', swh: 'swh', zul: 'zul', mas: 'mas', kik: 'kik', hi: 'hin', mr: 'mar', lg: 'lug', luo: 'luo', om: 'orm', ig: 'ibo', pa: 'pan', pnb: 'pnb', ne: 'npi' };
   function contentCode(ui) { return CONTENT[ui] || 'eng'; }
   function contentLang() {
     var scope = libraryScope();
@@ -960,6 +960,74 @@ window.ET = (function () {
   "3John": "3 ዮሓንስ",
   "Jude": "ይሁዳ",
   "Revelation": "ራእይ ዮሓንስ"
+},
+    es: {
+  "Genesis": "Génesis",
+  "Exodus": "Éxodo",
+  "Leviticus": "Levítico",
+  "Numbers": "Números",
+  "Deuteronomy": "Deuteronomio",
+  "Joshua": "Josué",
+  "Judges": "Jueces",
+  "Ruth": "Rut",
+  "1Samuel": "1 Samuel",
+  "2Samuel": "2 Samuel",
+  "1Kings": "1 Reyes",
+  "2Kings": "2 Reyes",
+  "1Chronicles": "1 Crónicas",
+  "2Chronicles": "2 Crónicas",
+  "Ezra": "Esdras",
+  "Nehemiah": "Nehemías",
+  "Esther": "Ester",
+  "Job": "Job",
+  "Psalms": "Salmos",
+  "Proverbs": "Proverbios",
+  "Ecclesiastes": "Eclesiastés",
+  "SongofSongs": "Cantares",
+  "Isaiah": "Isaías",
+  "Jeremiah": "Jeremías",
+  "Lamentations": "Lamentaciones",
+  "Ezekiel": "Ezequiel",
+  "Daniel": "Daniel",
+  "Hosea": "Oseas",
+  "Joel": "Joel",
+  "Amos": "Amós",
+  "Obadiah": "Abdías",
+  "Jonah": "Jonás",
+  "Micah": "Miqueas",
+  "Nahum": "Nahúm",
+  "Habakkuk": "Habacuc",
+  "Zephaniah": "Sofonías",
+  "Haggai": "Hageo",
+  "Zechariah": "Zacarías",
+  "Malachi": "Malaquías",
+  "Matthew": "Mateo",
+  "Mark": "Marcos",
+  "Luke": "Lucas",
+  "John": "Juan",
+  "Acts": "Hechos",
+  "Romans": "Romanos",
+  "1Corinthians": "1 Corintios",
+  "2Corinthians": "2 Corintios",
+  "Galatians": "Gálatas",
+  "Ephesians": "Efesios",
+  "Philippians": "Filipenses",
+  "Colossians": "Colosenses",
+  "1Thessalonians": "1 Tesalonicenses",
+  "2Thessalonians": "2 Tesalonicenses",
+  "1Timothy": "1 Timoteo",
+  "2Timothy": "2 Timoteo",
+  "Titus": "Tito",
+  "Philemon": "Filemón",
+  "Hebrews": "Hebreos",
+  "James": "Santiago",
+  "1Peter": "1 Pedro",
+  "2Peter": "2 Pedro",
+  "1John": "1 Juan",
+  "2John": "2 Juan",
+  "3John": "3 Juan",
+  "Jude": "Judas",
+  "Revelation": "Apocalipsis"
 },
     ht: {
   "Genesis": "Jenèz",
@@ -1905,9 +1973,11 @@ window.ET = (function () {
       b.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/^(\d)/, '$1 ');
   }
   function audioBibleUrl(play, testament, num, name, ch) {
-    // A few filesets keep each testament in a numbered folder ("01 OT_NPIB08").
+    // A few filesets keep each testament in a numbered folder ("01 OT_NPIB08"),
+    // and a few keep each testament under its own fileset (Spanish PDT).
     var dir = (play.dirs && play.dirs[testament]) || testament + '_' + play.version;
-    return 'https://dbs.org/cdn/audio/' + play.fileset + '/' + encodeURIComponent(dir) +
+    var fileset = (play.filesets && play.filesets[testament]) || play.fileset;
+    return 'https://dbs.org/cdn/audio/' + fileset + '/' + encodeURIComponent(dir) +
       '/' + pad(num) + '_' + name + '/' + pad(num) + '_' + name + '_' + pad(ch, 3) + '.mp3';
   }
 

@@ -70,6 +70,7 @@
     por: ['por-edition-porarc'],                                 // Almeida Revista e Corrigida
     run: ['run-text-runbsb'],
     sna: ['sna-text-snaibs'],
+    spa: ['spa-text-sparv09'],                                   // Reina-Valera 1909
     swh: ['swh-text-swhulb'],
     tir: ['tir-text-tirtbi'],
     urd: ['urd-text-urdpnt'],                                    // Kitáb i Muqaddas

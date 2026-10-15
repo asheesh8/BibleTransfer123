@@ -334,6 +334,17 @@
       disabled: "Estatistik yo etenn kounye a.",
       signal: "Navigatè ou a voye yon preferans pou vi prive. Konsa estatistik yo ap rete etenn."
     },
+    es: {
+      title: "Cookies y su privacidad",
+      body: "Si usted lo permite, usamos el almacenamiento del navegador para contar visitas, recursos usados, formas de compartir y visitas que llegan desde enlaces compartidos. Los informes pueden mostrar su país y el sitio que lo trajo aquí. Guardamos la actividad durante 90 días. No podemos ver quién recibe los enlaces, ni mensajes privados, ni dónde se pegan los enlaces copiados.",
+      accept: "Permitir estadísticas",
+      reject: "Rechazar estadísticas",
+      settings: "Configuración de cookies",
+      details: "Leer el aviso de privacidad",
+      enabled: "Las estadísticas están activadas.",
+      disabled: "Las estadísticas están desactivadas.",
+      signal: "Su navegador envía una preferencia de privacidad, así que las estadísticas seguirán desactivadas."
+    },
     ha: {
       title: "Kukis da sirrinka",
       body: "Da izininka, muna amfani da ma'ajiyar burauza don auna ziyarori, kayan da aka yi amfani da su, hanyoyin rabawa da ziyarorin da suka fito daga hanyoyin haɗin da aka raba. Rahotanni na iya nuna ƙasarka da gidan yanar gizon da ya kawo ka nan. Muna adana bayanan ayyuka na tsawon kwanaki 90. Ba za mu iya ganin waɗanda suka karɓa ba, ko saƙonni na sirri, ko inda aka liƙa hanyoyin haɗin da aka kwafa.",

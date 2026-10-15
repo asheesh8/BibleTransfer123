@@ -23,6 +23,7 @@
     ['tigrinya', 'tir', 'Tigrinya', 'ትግርኛ'],
     ['arabic', 'ara', 'Arabic', 'العربية'],
     ['haitian', 'hat', 'Haitian Creole', 'Kreyòl ayisyen'],
+    ['spanish', 'spa', 'Spanish', 'Español'],
     ['kuria', 'kuj', 'Kuria', 'Igikuria'],
     ['chichewa', 'nya', 'Chichewa', 'Chichewa'],
     ['kinyarwanda', 'kin', 'Kinyarwanda', 'Ikinyarwanda'],
