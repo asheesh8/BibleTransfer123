@@ -59,10 +59,20 @@ class AnalyticsTest(unittest.TestCase):
         self.assertEqual(self.collect([event(i) for i in range(41)])[0], 400)
         self.assertEqual(api.dispatch("/api/analytics", "POST", self.headers, b" " * (api.MAX_BODY + 1), now=NOW)[0], 413)
         self.assertEqual(api.dispatch("/api/analytics", "POST", self.headers, b"[" * 2000 + b"]" * 2000, now=NOW)[0], 400)
-        for at in (api.iso_at(NOW - api.RETENTION_SECONDS), api.iso_at(NOW + 301), "2026-09-30T12:00:00", "nonsense"):
+        for at in ("2026-09-30T12:00:00", "nonsense"):
             self.assertEqual(self.collect([event(at=at)])[0], 400)
+        # A phone with a wrong clock is still counted, at the time the event arrives.
+        for index, at in enumerate((api.iso_at(NOW - api.RETENTION_SECONDS), api.iso_at(NOW + 301)), 50):
+            code, payload, _ = self.collect([event(index, at=at)])
+            self.assertEqual((code, payload["accepted"]), (200, 1))
+        stored, _ = api.SQLiteStore(self.db).read(0, NOW + 1)
+        self.assertEqual({row["at"] for row in stored if row["id"] in ("event-00000050", "event-00000051")}, {api.iso_at(NOW)})
         for path in ("/admin", "/api/admin", "/../secret", "/english//private", "/person@example.test"):
             self.assertEqual(self.collect([event(path=path)])[0], 400)
+
+    def test_one_bad_event_does_not_drop_the_rest_of_the_batch(self):
+        code, payload, _ = self.collect([event(1), event(2, status="recipient@example.test"), event(3, "resource_open", resource="cmn-hist-1840-new-testament-vol.-1-4")])
+        self.assertEqual((code, payload["accepted"], payload["rejected"]), (200, 2, 1))
 
     def test_query_referrer_and_private_fields_are_not_persisted(self):
         code, payload, _ = self.collect([event(path="/english?email=person@example.test#private", referrer="https://person:password@referral.example.test/private?email=secret@example.test#frag")])
@@ -86,7 +96,7 @@ class AnalyticsTest(unittest.TestCase):
         self.assertEqual(api.SQLiteStore(self.db).read(0, NOW)[0][0]["country"], "US")
 
     def test_deduplication_retention_and_calendar_window(self):
-        self.assertEqual(self.collect([event(), event()])[1], {"ok": True, "accepted": 1, "duplicates": 1})
+        self.assertEqual(self.collect([event(), event()])[1], {"ok": True, "accepted": 1, "duplicates": 1, "rejected": 0})
         self.assertEqual(self.collect([event()])[1]["accepted"], 0)
         self.assertEqual(self.collect([event(2, at=api.iso_at(NOW - 7 * 86400))])[0], 200)
         self.assertEqual(self.admin()[1]["summary"]["pageViews"], 1)
@@ -94,6 +104,42 @@ class AnalyticsTest(unittest.TestCase):
         store = api.SQLiteStore(self.db)
         store.append([event(3, at=api.iso_at(NOW - api.RETENTION_SECONDS - 1))], NOW)
         self.assertEqual(len(store.read(0, NOW)[0]), 2)
+
+    def test_filters_comparison_heatmap_and_people(self):
+        cookie = self.login()
+        # Country only ever comes from the platform header, so store directly.
+        api.SQLiteStore(self.db).append([
+            event(1, country="KE"),
+            event(2, "resource_open", resource="jesus-film", country="KE"),
+            event(3, "play", resource="jesus-film", country="KE"),
+            event(4, visitorId="visitor-00000002", sessionId="session-00000002", language="spa"),
+            event(5, "shared_visit", visitorId="visitor-00000002", sessionId="session-00000002", language="spa", channel="copy_link"),
+            event(6, at=api.iso_at(NOW - 9 * 86400)),
+        ], NOW)
+        get = lambda query: self.request("/api/admin?" + query, "GET", headers={**self.headers, "Cookie": cookie})
+        code, body = get("days=7")[:2]
+        self.assertEqual(code, 200)
+        self.assertEqual(body["totals"]["visitors"], 2)
+        self.assertEqual(body["totals"]["plays"], 1)
+        self.assertEqual(body["previous"]["pageViews"], 1)
+        self.assertEqual(body["filters"], {})
+        wednesday = [row for row in body["weekHours"] if row["day"] == "Wed"][0]
+        self.assertEqual(wednesday["hours"][12], 2)
+        people = {row["id"]: row for row in body["visitorTable"]}
+        self.assertEqual(people["visitor-00000001"]["opens"], 1)
+        self.assertEqual(people["visitor-00000001"]["plays"], 1)
+        self.assertEqual(people["visitor-00000001"]["lastResource"], "jesus-film")
+        self.assertTrue(people["visitor-00000002"]["arrivedByShare"])
+        self.assertEqual(people["visitor-00000002"]["language"], "spa")
+        filtered = get("days=7&language=spa")[1]
+        self.assertEqual((filtered["totals"]["visitors"], filtered["filters"]), (1, {"language": "spa"}))
+        self.assertEqual(filtered["previous"]["pageViews"], 0)
+        self.assertEqual(get("days=7&country=Unknown")[1]["totals"]["pageViews"], 1)
+        self.assertEqual(get("days=7&resource=jesus-film")[1]["totals"]["opens"], 1)
+        self.assertEqual(len(get("days=7&visitor=visitor-00000002")[1]["events"]), 2)
+        self.assertIsNone(get("days=90")[1]["previous"])
+        for query in ("days=7&country=kenya", "days=7&language=eng&language=spa", "days=7&color=red", "days=7&visitor=x"):
+            self.assertEqual(get(query)[0], 400)
 
     def test_same_origin_on_both_post_endpoints(self):
         for path, payload in (("/api/analytics", {"consent": {"version": 1, "analytics": True}, "events": [event()]}), ("/api/admin", {"action": "login", "password": "guess"}), ("/api/admin", {"action": "logout"})):
@@ -182,7 +228,7 @@ class AnalyticsTest(unittest.TestCase):
         self.assertEqual(code, 200)
         self.assertEqual(data["summary"], {"visitors": 1, "sessions": 1, "pageViews": 1, "shareIntents": 1, "shareCompletions": 1, "sharedVisits": 1, "downloads": 1, "transfers": 1})
         self.assertEqual(len(data["daily"]), 7)
-        self.assertEqual(data["daily"][-1], {"date": "2026-09-30", "visits": 1, "shares": 1, "visitors": 1, "opens": 1, "saves": 2})
+        self.assertEqual(data["daily"][-1], {"date": "2026-09-30", "visits": 1, "shares": 1, "visitors": 1, "opens": 1, "plays": 0, "saves": 3})
         self.assertEqual(data["resources"], [{"name": "eng-film-demo", "count": 1}])
         self.assertEqual(data["resourceTable"], [{"name": "eng-film-demo", "visitors": 1, "opens": 1, "plays": 0, "saves": 0, "shares": 0}])
         self.assertEqual(data["engagement"], {"openedVisitors": 1, "engagedVisitors": 1, "sharedVisitors": 1, "arrivedBySharedLink": 1, "returningVisitors": 0, "plays": 0, "playCompletes": 0})

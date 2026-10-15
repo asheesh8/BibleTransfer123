@@ -463,7 +463,7 @@
     return Array.prototype.map.call(b, function (x) { return ('0' + x.toString(16)).slice(-2); }).join('');
   }
   function code(value) { return /^[a-z]{3}$/.test(value || '') ? value : ''; }
-  function slug(value) { return /^[A-Za-z0-9_-]{1,100}$/.test(value || '') ? value : ''; }
+  function slug(value) { return /^[A-Za-z0-9][A-Za-z0-9_.-]{0,199}$/.test(value || '') ? value : ''; }
   function id(value) { return /^[A-Za-z0-9_-]{8,80}$/.test(value || '') ? value : ''; }
   function language() {
     try { return code(ET.contentLang()); } catch (e) { return ''; }
@@ -558,13 +558,28 @@
       body: JSON.stringify({ consent: { version: VERSION, analytics: true }, events: batch }),
       signal: controller ? controller.signal : undefined
     }).then(function (response) {
-      if (!response.ok) throw new Error('analytics unavailable');
+      // A rejected batch would fail the same way forever and hold back every
+      // later event, so only outages and rate limits are worth a retry.
+      if (!response.ok && (response.status >= 500 || response.status === 429 || response.status === 408)) throw new Error('analytics unavailable');
     }).catch(function () {
       if (allowed() && currentGeneration === generation) queue = batch.concat(queue).slice(-100);
     }).then(function () {
       clearTimeout(timeout); sending = false; controller = null;
       if (allowed() && queue.length && !timer) timer = setTimeout(flush, 30000);
     });
+  }
+  // Leaving the page while a batch is still in flight must not strand the
+  // rest of the queue, so send it on its own keepalive request.
+  function flushFinal() {
+    if (!sending) { flush(); return; }
+    if (!allowed() || !queue.length) return;
+    var batch = queue.splice(0, 20);
+    try {
+      fetch('/api/analytics', { method: 'POST', credentials: 'omit', cache: 'no-store', keepalive: true,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ consent: { version: VERSION, analytics: true }, events: batch })
+      }).catch(function () {});
+    } catch (e) {}
   }
   function shareUrl(url, channel, fields) {
     if (!allowed()) return url;
@@ -656,8 +671,14 @@
       observer.observe(document.body, { childList: true });
     }
     if (!allowed()) stop();
+    // onChange also fires while a page sets up its language, which is not a
+    // visitor choosing a new one, so only a real switch is recorded.
+    var shownLanguage = ET.i18n ? ET.i18n.current() : '';
     if (ET.i18n) ET.i18n.onChange(function () {
-      render(); track('language_change', { language: language() });
+      render();
+      if (ET.i18n.current() === shownLanguage) return;
+      shownLanguage = ET.i18n.current();
+      track('language_change', { language: language() });
     });
     ['play', 'pause', 'ended'].forEach(function (name) {
       document.addEventListener(name, function (e) {
@@ -686,8 +707,8 @@
     if (!consent() && !document.getElementById('et-welcome')) show();
   });
   window.addEventListener('online', flush);
-  window.addEventListener('pagehide', flush);
-  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'hidden') flush(); });
+  window.addEventListener('pagehide', flushFinal);
+  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'hidden') flushFinal(); });
   window.addEventListener('appinstalled', function () { track('install'); });
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount);
   else mount();

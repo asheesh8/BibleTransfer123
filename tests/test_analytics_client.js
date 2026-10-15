@@ -118,9 +118,18 @@ test('expired, outdated, privacy-signalled, and file copies collect nothing', as
   }
 });
 
+test('a batch the server rejects is dropped so it cannot block later events', async () => {
+  const c = client({ consent: accepted() });
+  c.context.fetch = async (url, config) => { c.requests.push(JSON.parse(config.body)); return { ok: false, status: 400 }; };
+  c.analytics.track('page_view'); c.analytics.flush(); await settle();
+  c.analytics.track('install'); c.analytics.flush(); await settle();
+  assert.equal(c.requests.length, 2);
+  assert.deepEqual(c.requests[1].events.map(e => e.type), ['install']);
+});
+
 test('failed requests retry with the same event IDs; revocation discards retry', async () => {
   const c = client({ consent: accepted() });
-  c.context.fetch = async (url, config) => { c.requests.push(JSON.parse(config.body)); return { ok: false }; };
+  c.context.fetch = async (url, config) => { c.requests.push(JSON.parse(config.body)); return { ok: false, status: 503 }; };
   c.analytics.track('page_view'); c.analytics.flush(); await settle();
   c.analytics.flush(); await settle();
   assert.deepEqual(c.requests[0].events.map(e => e.id), c.requests[1].events.map(e => e.id));
@@ -128,4 +137,17 @@ test('failed requests retry with the same event IDs; revocation discards retry',
   c.listeners.storage({ key: 'et.consent' });
   c.analytics.flush(); await settle();
   assert.equal(c.requests.length, 2);
+});
+
+test('leaving the page while a batch is in flight still sends the rest of the queue', async () => {
+  const c = client({ consent: accepted() });
+  let release;
+  c.context.fetch = (url, config) => { c.requests.push({ body: JSON.parse(config.body), keepalive: config.keepalive }); return c.requests.length === 1 ? new Promise(resolve => { release = resolve; }) : Promise.resolve({ ok: true }); };
+  c.analytics.track('page_view'); c.analytics.flush();
+  c.analytics.track('share_intent', { channel: 'copy_link' });
+  c.listeners.pagehide();
+  assert.equal(c.requests.length, 2);
+  assert.deepEqual(c.requests[1].body.events.map(e => e.type), ['share_intent']);
+  assert.equal(c.requests[1].keepalive, true);
+  release({ ok: true }); await settle();
 });
