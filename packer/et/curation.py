@@ -346,7 +346,13 @@ def _dbs(url):
 
 # Files the VillageServer Initiative supplies itself are served from the
 # Library's own site (app/assets/library/), not re-hosted from anyone else.
-LIBRARY_HOST = "bible-transfer123.vercel.app"
+# bible-transfer123.vercel.app was detached on 2026-10-15; the custom domain
+# is the live one.
+LIBRARY_HOST = "www.bibletransfer123.org"
+
+# Partners who gave their work to the Library directly and asked to be
+# credited with a link to their own site.
+PARTNER_CREDITS = {"https://wakingword.org"}   # Waking Word Inc., Craft Stick Bible Stories
 
 
 def _ours(url):
@@ -362,7 +368,8 @@ def _dbs_only(r):
     if nothing DBS-hosted is left."""
     r = dict(r)
     def allowed(url):
-        return (_dbs(url) or _ours(url) or (r.get("lang") == "luo" and url in LUO_PUBLISHERS)
+        return (_dbs(url) or _ours(url) or url in PARTNER_CREDITS
+                or (r.get("lang") == "luo" and url in LUO_PUBLISHERS)
                 or (r.get("lang") == "orm" and url in OROMO_EXTERNAL)
                 or (r.get("lang") == "pcm" and url in PIDGIN_EXTERNAL)
                 or (r.get("lang") == "hau" and url in HAUSA_EXTERNAL)

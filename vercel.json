@@ -6,7 +6,10 @@
   "installCommand": null,
   "trailingSlash": false,
   "functions": {
-    "api/*.py": { "includeFiles": "packer/*.py" }
+    "api/*.py": {
+      "includeFiles": "packer/*.py",
+      "excludeFiles": "{app/**,catalog/**,art/**,docs/**,output/**,tests/**}"
+    }
   },
   "rewrites": [
     { "source": "/kirundi", "destination": "/kirundi/index.html" },
