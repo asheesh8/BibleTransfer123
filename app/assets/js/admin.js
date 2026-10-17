@@ -66,7 +66,7 @@
   var cardTabs = {
     'top-content': [['opens', 'Opened'], ['plays', 'Played'], ['saves', 'Saved'], ['shares', 'Shared']],
     'top-places': [['countries', 'Countries'], ['languages', 'Languages']],
-    'top-sources': [['referrers', 'Referrers'], ['channels', 'Share methods']]
+    'top-sources': [['referrers', 'Referrers'], ['channels', 'Share methods'], ['qr', 'QR scans']]
   };
   var cardSelected = { 'top-content': 'opens', 'top-places': 'countries', 'top-sources': 'referrers' };
 
@@ -421,6 +421,7 @@
     if (cardSelected['top-places'] === 'countries') renderBars('top-places', tableRows(data.countryTable, 'visitors') || data.countries, { label: countryLabel, total: totals.visitors, unit: 'visitor browsers', filter: 'country', sub: function (row) { return row.extra ? plural(row.extra.pageViews, 'page view', 'page views') : ''; }, empty: 'Countries appear after the first recorded visit.' });
     else renderBars('top-places', tableRows(data.languageTable, 'visitors') || data.languages, { label: languageName, total: totals.visitors, unit: 'visitor browsers', filter: 'language', sub: function (row) { return row.extra ? plural(row.extra.opens, 'item opened', 'items opened') : ''; }, empty: 'Languages appear after the first recorded visit.' });
     if (cardSelected['top-sources'] === 'referrers') renderBars('top-sources', data.referrers, { label: referrerName, total: totalFor(data, 'referrers', totals.pageViews), unit: 'page views', empty: 'Referring sites appear after the first recorded visit.' });
+    else if (cardSelected['top-sources'] === 'qr') renderBars('top-sources', qrScans(data) && qrScans(data).languages, { label: languageName, total: qrScans(data) && qrScans(data).total, unit: 'scans', filter: 'language', empty: 'Languages appear after the first printed QR code is scanned.' });
     else renderBars('top-sources', data.channels, { label: channelName, total: totalFor(data, 'channels', totals.shares), unit: 'share attempts', empty: 'Share methods appear after the first share attempt.' });
   }
 
@@ -584,8 +585,14 @@
     document.getElementById('resource-table-count').textContent = Array.isArray(data.resourceTable) ? (search ? plural(shown, 'matching item', 'matching items') : plural(shown, 'item with activity', 'items with activity')) + ' · select a title to filter the report' : '';
   }
 
+  // Printed QR scans are counted apart from consented events (older servers send none).
+  function qrScans(data) {
+    return data.qrScans && typeof data.qrScans === 'object' && Array.isArray(data.qrScans.languages) ? data.qrScans : null;
+  }
+
   function renderSharing(data) {
     var totals = totalsOf(data);
+    var qr = qrScans(data);
     var summary = data.summary;
     var engagement = data.engagement || {};
     document.getElementById('sharing-signals').innerHTML = [
@@ -593,8 +600,10 @@
       kpiHTML('Confirmed share actions', formatNumber(summary.shareCompletions), 'Includes copied links confirmed on the device'),
       kpiHTML('Visits from shared links', formatNumber(totals.sharedVisits), data.engagement ? plural(engagement.arrivedBySharedLink, 'visitor browser', 'visitor browsers') + ' arrived this way' : 'Openings of attributed links', deltaHTML('sharedVisits', data)),
       kpiHTML('Saved', formatNumber(totals.saves), 'Files saved or downloaded, plus nearby batches', deltaHTML('saves', data)),
-      kpiHTML('Nearby batches received', formatNumber(summary.transfers), 'Receiver confirmed the data arrived')
+      kpiHTML('Nearby batches received', formatNumber(summary.transfers), 'Receiver confirmed the data arrived'),
+      kpiHTML('QR code scans', qr ? formatNumber(qr.total) : '—', 'Printed library codes, every scan counted', qr ? deltaHTML('qr', { totals: { qr: qr.total }, previous: data.previous ? { qr: qr.previous } : null, periodDays: data.periodDays }) : '')
     ].join('');
+    renderBars('qr-languages', qr && qr.languages, { label: languageName, total: qr && qr.total, unit: 'scans', filter: 'language', empty: 'Languages appear after the first printed QR code is scanned.' });
     renderBars('channels', data.channels, { label: channelName, total: totalFor(data, 'channels', totals.shares), unit: 'attempts', empty: 'Share methods appear after the first share attempt.' });
     renderBars('share-outcomes', data.shareOutcomes, { label: statusName, total: totalFor(data, 'shareOutcomes'), unit: 'events', empty: 'Results appear after a share action finishes.' });
     renderBars('shared-content', tableRows(data.resourceTable, 'shares'), { label: resourceTitle, tooltip: resourceTooltip, total: totals.shares, unit: 'share attempts', filter: 'resource', sub: function (row) { return resourceMeta(row.name); }, empty: 'Items appear here once someone shares one.' });

@@ -430,5 +430,60 @@ class AnalyticsTest(unittest.TestCase):
                 self.assertEqual(failure.exception.status, 503)
 
 
+    def test_qr_scans_redirect_count_without_identifiers_and_report_by_language(self):
+        code, body, headers = self.request("/api/qr?l=swahili&src=qr", "GET", headers={"X-Vercel-IP-Country": "KE"}, production=False)
+        self.assertEqual((code, body, headers["Location"]), (302, "", "/swahili"))
+        self.request("/api/qr?l=swahili&src=qr", "GET", headers={})
+        self.request("/api/qr?l=english&src=qr", "GET", headers={})
+        self.request("/api/qr?l=english&src=qr", "GET", headers={}, now=NOW - 8 * 86400)
+        for path in ("/api/qr?l=../admin", "/api/qr", "/api/qr?l=item.html"):
+            with self.subTest(path=path):
+                code, _, headers = self.request(path, "GET", headers={})
+                self.assertEqual((code, headers["Location"]), (302, "/"))
+        self.assertEqual(self.request("/api/qr?l=english", "POST", payload={})[0], 405)
+        cookie = self.login()
+        report = self.admin(7, cookie)[1]["qrScans"]
+        self.assertEqual(report["total"], 3)
+        self.assertEqual(report["previous"], 1)
+        self.assertEqual(report["languages"], [{"name": "swh", "count": 2}, {"name": "eng", "count": 1}])
+        self.assertEqual(report["daily"][-1], {"date": "2026-09-30", "count": 3})
+        # Nothing about the scanner reaches the event store.
+        self.assertEqual(self.admin(7, cookie)[1]["summary"]["visitors"], 0)
+        filtered = self.request("/api/admin?days=7&language=eng", "GET", headers={**self.headers, "Cookie": cookie})[1]["qrScans"]
+        self.assertEqual(filtered["total"], 1)
+        filtered = self.request("/api/admin?days=7&resource=some-item", "GET", headers={**self.headers, "Cookie": cookie})[1]["qrScans"]
+        self.assertEqual(filtered["total"], 0)
+
+    def test_qr_scans_are_rate_limited_and_never_block_the_redirect(self):
+        for _ in range(35):
+            code, _, headers = self.request("/api/qr?l=hausa", "GET", headers={})
+            self.assertEqual((code, headers["Location"]), (302, "/hausa"))
+        self.assertEqual(self.admin(7)[1]["qrScans"]["total"], 30)
+        with patch.object(api, "local_db_path", side_effect=api.APIError(503, "down")):
+            code, _, headers = self.request("/api/qr?l=hausa", "GET", headers={})
+        self.assertEqual((code, headers["Location"]), (302, "/hausa"))
+
+    def test_qr_libraries_match_the_public_library_list_and_vercel_rewrite(self):
+        import re
+        root = pathlib.Path(__file__).resolve().parent.parent
+        routes = dict(re.findall(r"\['([a-z-]+)', '([a-z]{3})'", (root / "app/assets/js/share-libraries.js").read_text()))
+        self.assertEqual(api.QR_LIBRARIES, routes)
+        config = json.loads((root / "vercel.json").read_text())
+        rule = [r for r in config["rewrites"] if r.get("destination") == "/api/qr?l=:slug"]
+        self.assertEqual(len(rule), 1)
+        self.assertIs(config["rewrites"][0], rule[0])
+        self.assertEqual(rule[0]["has"], [{"type": "query", "key": "src", "value": "qr"}])
+        self.assertEqual(set(re.fullmatch(r"/:slug\((.*)\)", rule[0]["source"]).group(1).split("|")), set(routes))
+
+    def test_production_redis_qr_counters(self):
+        import io
+        store = api.RedisStore("https://storage.example.test", "test-only-token")
+        with patch("urllib.request.urlopen", return_value=io.BytesIO(json.dumps([{"result": 1}, {"result": 1}]).encode())) as network:
+            store.count_qr("2026-09-30", "swahili", "KE", NOW)
+        self.assertEqual(json.loads(network.call_args[0][0].data), [["HINCRBY", api.PREFIX + "qr:2026-09-30", "swahili|KE", 1], ["EXPIRE", api.PREFIX + "qr:2026-09-30", api.RETENTION_SECONDS + 86400]])
+        with patch("urllib.request.urlopen", return_value=io.BytesIO(json.dumps([{"result": ["swahili|KE", "4", "english|", "1"]}, {"result": []}]).encode())):
+            self.assertEqual(store.read_qr(["2026-09-30", "2026-09-29"]), [("2026-09-30", "swahili", "KE", 4), ("2026-09-30", "english", "", 1)])
+
+
 if __name__ == "__main__":
     unittest.main()

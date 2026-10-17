@@ -111,7 +111,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         u, parts = self._route()
         if u.path == "/privacy":
             self.path = "/privacy.html" + ("?" + u.query if u.query else "")
-        if u.path in ("/api/analytics", "/api/admin", "/api/visibility"):
+        if u.path in ("/api/analytics", "/api/admin", "/api/visibility", "/api/qr"):
             return handle_http(self, public_root=self.directory)
         if u.path.startswith("/signal/") and not _allowed(self.client_address[0]):
             return self._json(429, {"error": "slow down"})
