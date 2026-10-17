@@ -192,7 +192,10 @@
     var links = (r.links || []).filter(function (link) {
       return !/^Read .+\(PDF\)$/i.test(link.label || '');
     });
-    if (r.source && !links.some(function (l) { return l.url === r.source; })) {
+    // The Library's own files are not on dbs.org; their makers are credited
+    // through r.links instead.
+    if (r.source && !/^https?:\/\/(www\.)?bibletransfer123\.org\//i.test(r.source) &&
+        !links.some(function (l) { return l.url === r.source; })) {
       links.push({ label: 'dbs.org', url: r.source });
     }
     if (links.length) {

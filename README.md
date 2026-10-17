@@ -8,7 +8,7 @@ Built for the **VillageServer Initiative**, whose distribution unit is a verifie
 applicant receiving a microSD card in the post, with every other piece of
 hardware sourced locally.
 
-**Live (web edition):** https://bible-transfer123.vercel.app
+**Live (web edition):** https://www.bibletransfer123.org
 
 ## At a glance
 
