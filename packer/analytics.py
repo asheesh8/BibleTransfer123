@@ -55,6 +55,51 @@ FIELDS = frozenset((
     "id", "type", "at", "path", "language", "resource", "channel", "status",
     "referrer", "shareId", "visitorId", "sessionId", "bytes", "duration",
 ))
+# Printed QR codes open https://bibletransfer123.org/<slug>?src=qr. Vercel
+# rewrites those to /api/qr, which adds one to a per-day count and redirects to
+# the library. The count has no visitor ID, cookie or address, so it covers
+# every scan, not only visitors who accept analytics. Mirrors share-libraries.js.
+QR_LIBRARIES = {
+    "english": "eng",
+    "mandarin": "cmn",
+    "hindi": "hin",
+    "marathi": "mar",
+    "urdu": "urd",
+    "swahili": "swh",
+    "zulu": "zul",
+    "western-punjabi": "pnb",
+    "cantonese": "yue",
+    "pashto": "pus",
+    "eastern-punjabi": "pan",
+    "nepali": "npi",
+    "sindhi": "snd",
+    "luganda": "lug",
+    "luo": "luo",
+    "malagasy": "mlg",
+    "kirundi": "run",
+    "akan": "aka",
+    "tigrinya": "tir",
+    "arabic": "ara",
+    "haitian": "hat",
+    "spanish": "spa",
+    "kuria": "kuj",
+    "chichewa": "nya",
+    "kinyarwanda": "kin",
+    "xhosa": "xho",
+    "shona": "sna",
+    "hausa": "hau",
+    "lingala": "lin",
+    "nigerian-pidgin": "pcm",
+    "yoruba": "yor",
+    "portuguese": "por",
+    "amharic": "amh",
+    "french": "fra",
+    "igbo": "ibo",
+    "oromo": "orm",
+    "kikuyu": "kik",
+    "gusii": "guz",
+    "maasai": "mas"
+}
 IDENTIFIER = re.compile(r"^[A-Za-z0-9_-]{8,80}$")
 SLUG = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.-]{0,199}$")
 PATH = re.compile(r"^/[A-Za-z0-9/_.-]{0,199}$")
@@ -190,6 +235,7 @@ class SQLiteStore:
                 CREATE INDEX IF NOT EXISTS event_time ON events(at);
                 CREATE TABLE IF NOT EXISTS limits (key TEXT PRIMARY KEY, hits INTEGER NOT NULL, expires REAL NOT NULL);
                 CREATE TABLE IF NOT EXISTS settings (key TEXT PRIMARY KEY, body TEXT NOT NULL);
+                CREATE TABLE IF NOT EXISTS qr_scans (day TEXT NOT NULL, slug TEXT NOT NULL, country TEXT NOT NULL, hits INTEGER NOT NULL, PRIMARY KEY (day, slug, country));
             """)
         try:
             self.path.chmod(0o600)
@@ -206,6 +252,7 @@ class SQLiteStore:
         with self.connect() as db:
             db.execute("DELETE FROM events WHERE at <= ?", (now - RETENTION_SECONDS,))
             db.execute("DELETE FROM limits WHERE expires <= ?", (now,))
+            db.execute("DELETE FROM qr_scans WHERE day < ?", (qr_cutoff(now),))
 
     def rate(self, key, maximum, window, now):
         with self.connect() as db:
@@ -227,6 +274,15 @@ class SQLiteStore:
             db.execute("DELETE FROM events WHERE at <= ?", (now - RETENTION_SECONDS,))
             rows = db.execute("SELECT body FROM events WHERE at >= ? AND at <= ? ORDER BY at DESC, id DESC LIMIT ?", (start, now + 300, MAX_ANALYSIS_EVENTS + 1)).fetchall()
             return [json.loads(row[0]) for row in rows[:MAX_ANALYSIS_EVENTS]], len(rows) > MAX_ANALYSIS_EVENTS
+
+    def count_qr(self, day, slug, country, now):
+        with self.connect() as db:
+            db.execute("DELETE FROM qr_scans WHERE day < ?", (qr_cutoff(now),))
+            db.execute("INSERT INTO qr_scans VALUES (?, ?, ?, 1) ON CONFLICT(day, slug, country) DO UPDATE SET hits = hits + 1", (day, slug, country))
+
+    def read_qr(self, days):
+        with self.connect() as db:
+            return db.execute("SELECT day, slug, country, hits FROM qr_scans WHERE day >= ? AND day <= ?", (min(days), max(days))).fetchall() if days else []
 
     def get_setting(self, key):
         with self.connect() as db:
@@ -310,6 +366,22 @@ class RedisStore:
             raise APIError(503, "Analytics storage is temporarily unavailable.") from None
         return events, truncated
 
+    def count_qr(self, day, slug, country, now):
+        key = PREFIX + "qr:" + day
+        self.request([["HINCRBY", key, slug + "|" + country, 1], ["EXPIRE", key, RETENTION_SECONDS + 86400]], pipeline=True)
+
+    def read_qr(self, days):
+        groups = self.request([["HGETALL", PREFIX + "qr:" + day] for day in days], pipeline=True) if days else []
+        rows = []
+        try:
+            for day, flat in zip(days, groups):
+                for field, hits in zip(flat[::2], flat[1::2]):
+                    slug, _, country = field.partition("|")
+                    rows.append((day, slug, country, int(hits)))
+        except (TypeError, ValueError, AttributeError):
+            raise APIError(503, "Analytics storage is temporarily unavailable.") from None
+        return rows
+
     def get_setting(self, key):
         body = self.request(["GET", key])
         if body is not None and not isinstance(body, str):
@@ -318,6 +390,64 @@ class RedisStore:
 
     def set_setting(self, key, body):
         self.request(["SET", key, body])
+
+
+def qr_cutoff(now):
+    return str(dt.datetime.fromtimestamp(now - RETENTION_SECONDS, dt.timezone.utc).date())
+
+
+def dispatch_qr(route, headers, client_ip, production, public_root, now):
+    """Count one printed-QR scan and send the phone on to its library.
+
+    The redirect never depends on storage: a scan always reaches the library."""
+    query = urllib.parse.parse_qs(route.query)
+    slug = (query.get("l") or [""])[0]
+    output_headers = {"Cache-Control": "no-store", "X-Robots-Tag": "noindex", "Referrer-Policy": "no-referrer"}
+    if slug not in QR_LIBRARIES:
+        output_headers["Location"] = "/"
+        return 302, "", output_headers
+    output_headers["Location"] = "/" + slug
+    country = headers.get("x-vercel-ip-country", "") if production else ""
+    country = country if re.fullmatch(r"[A-Z]{2}", country) else ""
+    try:
+        store = get_store(production, public_root)
+        if store.rate(rate_key("qr", client_ip, now), 30, 600, now):
+            store.count_qr(str(dt.datetime.fromtimestamp(now, dt.timezone.utc).date()), slug, country, now)
+    except (APIError, OSError, sqlite3.Error, ValueError, TypeError):
+        pass
+    return 302, "", output_headers
+
+
+def qr_report(store, days, filters, now):
+    """QR scans for the admin report: this period by language and day, and the
+    previous period's total. Scans carry no item or visitor, so those filters
+    leave nothing to count."""
+    today = dt.datetime.fromtimestamp(now, dt.timezone.utc).date()
+    current_days = [str(today - dt.timedelta(days=offset)) for offset in reversed(range(days))]
+    previous_days = [str(today - dt.timedelta(days=offset)) for offset in reversed(range(days, 2 * days))]
+    rows = store.read_qr(previous_days + current_days)
+    if "resource" in filters or "visitor" in filters:
+        rows = []
+    if "country" in filters:
+        rows = [row for row in rows if (row[2] or "Unknown") == filters["country"]]
+    if "language" in filters:
+        rows = [row for row in rows if QR_LIBRARIES.get(row[1]) == filters["language"]]
+    current = set(current_days)
+    daily, languages, previous = collections.Counter(), collections.Counter(), 0
+    for day, slug, _country, hits in rows:
+        if slug not in QR_LIBRARIES:
+            continue
+        if day in current:
+            daily[day] += hits
+            languages[QR_LIBRARIES[slug]] += hits
+        else:
+            previous += hits
+    return {
+        "total": sum(languages.values()),
+        "languages": [{"name": name, "count": count} for name, count in sorted(languages.items(), key=lambda entry: (-entry[1], entry[0]))],
+        "daily": [{"date": day, "count": daily[day]} for day in current_days],
+        "previous": previous,
+    }
 
 
 def local_db_path(public_root=None):
@@ -689,8 +819,12 @@ def dispatch(path, method, headers, raw=b"", client_ip="", production=False, pub
     output_headers = {"Cache-Control": "no-store", "X-Content-Type-Options": "nosniff"}
     try:
         route = urllib.parse.urlsplit(path)
-        if route.path not in ("/api/analytics", "/api/admin", "/api/visibility"):
+        if route.path not in ("/api/analytics", "/api/admin", "/api/visibility", "/api/qr"):
             raise APIError(404, "API not found.")
+        if route.path == "/api/qr":
+            if method != "GET":
+                raise APIError(405, "Method not allowed.")
+            return dispatch_qr(route, headers, client_ip, production, public_root, now)
         if method not in (("POST",) if route.path == "/api/analytics" else ("GET", "POST")):
             raise APIError(405, "Method not allowed.")
         limit = MAX_VISIBILITY_BODY if route.path == "/api/visibility" else MAX_BODY
@@ -748,7 +882,8 @@ def dispatch(path, method, headers, raw=b"", client_ip="", production=False, pub
         # One read covers this period and the one before it. The store returns
         # newest first, so a capped read always keeps the current period whole
         # before it drops anything from the comparison period.
-        events, truncated = get_store(production, public_root).read(start - days * 86400, now)
+        store = get_store(production, public_root)
+        events, truncated = store.read(start - days * 86400, now)
         current = [event for event in events if timestamp(event["at"]) >= start]
         previous = [event for event in events if timestamp(event["at"]) < start]
         current_truncated = truncated and not previous
@@ -757,6 +892,7 @@ def dispatch(path, method, headers, raw=b"", client_ip="", production=False, pub
         result = aggregate(current, days, now, current_truncated)
         result["filters"] = filters
         result["previous"] = totals(previous) if comparable else None
+        result["qrScans"] = qr_report(store, days, filters, now)
         return 200, result, output_headers
     except APIError as error:
         if error.status == 429:
