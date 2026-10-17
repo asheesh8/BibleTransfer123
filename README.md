@@ -8,6 +8,51 @@ Built for the **VillageServer Initiative**, whose distribution unit is a verifie
 applicant receiving a microSD card in the post, with every other piece of
 hardware sourced locally.
 
+**Live (web edition):** https://bible-transfer123.vercel.app
+
+## At a glance
+
+| | |
+|---|---|
+| **Front end** | Plain HTML, CSS and classic `<script>` files in `app/` — no framework, no bundler, no CDN. Installable PWA with a service worker (`app/sw.js`). |
+| **Packer / CLI** | Python 3 standard library only (`packer/`) — sizes, downloads and assembles a card. |
+| **Server** | `packer/serve.py` locally or on a Raspberry Pi; four Python serverless functions in `api/` on Vercel. |
+| **Storage** | Upstash Redis (REST) in production; SQLite under `.cache/` locally. Analytics only — the library itself is static. |
+| **Peer-to-peer** | WebRTC via a vendored PeerJS client (`app/assets/vendor/`). |
+| **Tests** | `npm test` — Python `unittest` plus `node --test`. |
+
+### Setup in one minute
+
+Needs Python 3 (and Node only if you want `npm run …` aliases or the JS tests). Nothing to install.
+
+```bash
+cp .env.example .env.local   # only needed for /admin and the email button
+npm run dev                  # = python3 packer/serve.py 8095
+```
+
+Open <http://localhost:8095>. `npm run preview` regenerates the catalogue first.
+
+### Environment variables
+
+Names only — values live in `.env.local` (git-ignored) or in Vercel's settings. `.env.example` explains each one.
+
+| Variable | Needed for |
+|---|---|
+| `EASYTRANSFER_ADMIN_PASSWORD` | Signing in at `/admin` (required for admin) |
+| `EASYTRANSFER_ADMIN_SECRET` | Optional separate session-signing secret |
+| `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN` | Durable analytics storage on Vercel |
+| `KV_REST_API_URL`, `KV_REST_API_TOKEN` | Same, as named by Vercel's Upstash integration |
+| `EASYTRANSFER_PUBLIC_ORIGIN` | Optional canonical origin for same-origin checks |
+| `EASYTRANSFER_ANALYTICS_DB` | Optional local SQLite path |
+| `OUTREACH_SMTP_HOST`, `OUTREACH_SMTP_PORT`, `OUTREACH_SMTP_USER`, `OUTREACH_SMTP_PASSWORD` | "Email this library" (falls back to the visitor's mail app) |
+| `OUTREACH_FROM_EMAIL`, `OUTREACH_FROM_NAME`, `OUTREACH_REPLY_TO` | Optional sender details for those emails |
+
+### Deploying
+
+Vercel serves `app/` as-is (`vercel.json` sets no build or install command) and runs `api/*.py` as functions. Push to `main` to deploy; see [Deploying the web version](#deploying-the-web-version) for refreshing the catalogue.
+
+The rest of this README explains how the card is built and why the app is shaped the way it is.
+
 ---
 
 ## Where this sits
@@ -214,24 +259,10 @@ Larry's sharing screen is `/share-libraries`. It lists every collection with
 its resource count and gives him two large choices: **Open library** or **Email
 link**. The email is prefilled with the public address and a short explanation.
 
-The public language addresses are:
-
-- `/english`
-- `/mandarin`
-- `/hindi`
-- `/marathi`
-- `/urdu`
-- `/swahili`
-- `/kikuyu`
-- `/zulu`
-- `/maasai` (also `/masai`)
-- `/western-punjabi` (also `/shahmukhi`)
-- `/cantonese`
-- `/pashto` (also `/northern-pashto`)
-- `/eastern-punjabi` (also `/punjabi`)
-- `/nepali`
-- `/sindhi`
-- `/gusii` (also `/ekegusii` and `/kisii`)
+Each language has a public address such as `/english`, `/urdu`, `/swahili` or
+`/gusii`, usually with a few aliases (`/ekegusii`, `/kisii`). The complete,
+current list is the `rewrites` block in `vercel.json`; each one points at
+`app/<language>/index.html`.
 
 Anyone arriving anywhere else sees a full-screen language chooser first, with
 their phone's own language suggested at the top and each library's size shown.
@@ -389,8 +420,10 @@ interface language, with English as the fallback.
 ## Deploying the web version
 
 `vercel.json` serves `app/` as the site root. The library has no build step or
-runtime dependencies — `app/data/catalog.js` is committed. The two Python
-functions in `api/` handle consented analytics and private admin reports.
+runtime dependencies — `app/data/catalog.js` is committed. The Python
+functions in `api/` are thin wrappers around `packer/`: `analytics.py`
+(consented events), `admin.py` (private reports), `visibility.py` (which
+libraries are shown) and `send-library.py` (emailing a library link).
 
 The deployed version is the **preview** catalogue: nothing is packed, so every
 resource streams from `dbs.org` and the partner CDNs exactly as GawahiiTV does.
@@ -545,18 +578,28 @@ Nothing on a card should ever be sold.
 
 ```
 catalog/resources.json    the source catalogue (copied from GawahiiTV)
+catalog/source/           captured DBS inventories and probe results
 packer/
   easytransfer.py         the CLI — plan, build, verify, preview, list
-  serve.py                local server for reviewing the app
+  serve.py                local server: byte ranges, Nearby signalling, the API
+  analytics.py            consent-gated analytics + admin auth (shared with api/)
+  library_mail.py         "Email this library" over SMTP
+  build_*.py, audit_*.py  per-language catalogue builders and file audits
+  import_dbs_rendered.py, enrich_local_online.py   the `npm run dbs:import` pipeline
   et/
     catalog.py            catalogue -> flat asset list
     fetch.py              size probing and resumable downloads
     profiles.py           card profiles and the selection rule
     build.py              assembles the card
-    util.py               filename sanitising, sizes
+    curation.py, covers.py, slugs.py, util.py   selection rules, artwork, naming
+api/                      Vercel function entry points (wrap packer/)
 app/                      the app, copied onto every card
-docs/                     field notes
+  <language>/index.html   one locked page per language library
+  data/catalog*.js        generated catalogues (committed)
+tests/                    Python and Node regression tests
+docs/                     field guide, translation hand-off, how-it-works page
 art/                      artwork manifest
+output/client-guide/      slide decks handed to the client
 ```
 
 To pack a different library, replace `catalog/resources.json` and adjust

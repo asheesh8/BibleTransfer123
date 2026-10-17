@@ -353,6 +353,9 @@ def purge_local(public_root=None):
 
 
 def secret_key():
+    # Falls through to whichever server-side secret exists, so a deployment with
+    # only a password set still signs sessions. With none set, an in-process
+    # random key is used and every restart signs everyone out.
     configured = os.environ.get("EASYTRANSFER_ADMIN_SECRET") or os.environ.get("EASYTRANSFER_ADMIN_PASSWORD") or os.environ.get("UPSTASH_REDIS_REST_TOKEN") or os.environ.get("KV_REST_API_TOKEN")
     return hashlib.sha256(("EasyTransfer authentication v1:" + configured).encode()).digest() if configured else _EPHEMERAL_KEY
 
@@ -368,6 +371,9 @@ def _encode(value):
 
 
 def issue_session(now):
+    # Stateless signed cookie: serverless functions share no memory, so there is
+    # no session table. The payload carries an HMAC of the current password, so
+    # changing EASYTRANSFER_ADMIN_PASSWORD invalidates every existing session.
     password_tag = _encode(hmac.new(secret_key(), os.environ.get("EASYTRANSFER_ADMIN_PASSWORD", "").encode(), hashlib.sha256).digest())
     payload = _encode(json.dumps({"v": 1, "exp": int(now + SESSION_SECONDS), "nonce": secrets.token_urlsafe(16), "auth": password_tag}, separators=(",", ":")).encode())
     signature = _encode(hmac.new(secret_key(), payload.encode(), hashlib.sha256).digest())
@@ -399,6 +405,9 @@ def cookie_header(value, production, expires=False):
 
 
 def require_same_origin(headers, production):
+    # CSRF guard for state-changing requests (admin actions, library emails): any
+    # request whose Origin is not exactly this site is refused, so another page
+    # cannot drive these endpoints from a visitor's browser.
     origin = headers.get("origin", "")
     configured = os.environ.get("EASYTRANSFER_PUBLIC_ORIGIN", "")
     scheme = "https" if production else "http"
