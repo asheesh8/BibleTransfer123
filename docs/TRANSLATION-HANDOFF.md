@@ -972,3 +972,21 @@ The same browser audit as the shelves above: DBS's Spanish page and every page i
 No inclusive-language or LGBTQ edition is listed for Spanish on DBS; the About text of each text Bible was read. Not carried: links to other sites (137), three GRN dialect "Diagnostic" test recordings, and GRN's resettlement welcome "Bienvenidos a los Estados Unidos". The Deaf Rescue Project and Story of Jesus audio pages DBS lists return 404.
 
 Rebuild with `python3 packer/build_dbs_audit.py spa`, then `npm run dbs:import`. The audit is `catalog/source/dbs-audit-spanish-2026-10-15.json`.
+
+### Saamia, Luhya and Bukusu — 2026-10-20
+
+Added three shelves and pages, each with the existing Swahili interface (`swh`) as Kuria has: `/saamia` (content `lsm`, also `/samia`, `/olusaamia`, `/lusamia`, `/lsm`), `/luhya` (content `luy`, also `/oluluhya`, `/luyia`, `/oluluyia`, `/luy`) and `/bukusu` (content `bxk`, also `/lubukusu`, `/babukusu`, `/bxk`). DBS names the Saamia audio Bible's books in Swahili and gives the Bukusu ones only as abbreviations, Swahili is what Luhya readers in Kenya and Uganda read besides their own variety, and no reviewed wording exists to build an interface in any of the three. Titles DBS or GRN give in the language (Ebbaibbo Emboosi ya Nasaae…, Ebibilia Endakatifu, the Luhya Look, Listen & Live and Good News titles) stay as given; descriptions and programme names are Swahili.
+
+The same browser audit as the shelves above: each DBS language page and every page it lists rendered in headless Chromium, every carried file checked by a ranged request and its leading bytes, and every chapter of the three audio Bibles checked (Saamia 1,189, Bukusu 1,189 + 24, all valid). The LUMO films' 1080p files return 404 on DBS, so their 360p chapters are carried, as for Haitian Creole.
+
+| Shelf | Resources | What is carried |
+|---|---|---|
+| Saamia | 16 | Bible Society of Uganda's Saamia Bible (2010, PDF/EPUB/HTML), listed first, and its Davar audio (66 books); JESUS (61 chapters); LUMO Mark; Visual Bible Matthew and Acts; 10 GRN programmes |
+| Luhya | 83 | LUMO Luke (24 chapters); 80 GRN programmes in ten Luhya varieties (Bunyala, Kabras, Marachi, Wanga, Tachoni, Logooli, Idakho, Isukha, Samia, Bukusu), each tagged with its variety; two historic Genesis scans (1954, 1975) |
+| Bukusu | 33 | Davar's Ebibilia Endakatifu, all 66 books in audio, listed first; FCBH's Luke; JESUS (61 chapters); LUMO Mark; 28 GRN programmes (Bukusu, Tachoni and Kabras, the latter two tagged); the 1968 John scan |
+
+DBS lists no Luhya Bible beyond the historic scans, and its Saamia audio Bible is linked from the Bible's own page rather than the language page, so the audit lists it with the Bibles.
+
+Not carried: links to other sites (find.bible entries and GRN programme pages), whose DBS-hosted media is carried where DBS has it.
+
+Rebuild with `python3 packer/build_dbs_audit.py lsm luy bxk`, then `npm run dbs:import`. The audits are `catalog/source/dbs-audit-{saamia,luhya,bukusu}-2026-10-20.json`.

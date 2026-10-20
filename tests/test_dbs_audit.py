@@ -1,4 +1,4 @@
-"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Arabic, Haitian Creole, Kuria and Spanish: complete, verified and DBS-hosted."""
+"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Arabic, Haitian Creole, Kuria, Spanish, Saamia, Luhya and Bukusu: complete, verified and DBS-hosted."""
 import json
 import pathlib
 import re
@@ -16,8 +16,10 @@ SHELVES = {'xho': ('xhosa', 'xh', 13), 'nya': ('chichewa', 'ny', 34),
            'run': ('kirundi', 'rn', 27), 'aka': ('akan', 'ak', 47),
            'tir': ('tigrinya', 'ti', 26), 'ara': ('arabic', 'ar', ARA_COUNT),
            'hat': ('haitian', 'ht', 29), 'kuj': ('kuria', 'swh', 12),
-           'spa': ('spanish', 'es', SPA_COUNT)}
-DATES = {'ara': '2026-10-07', 'hat': '2026-10-13', 'kuj': '2026-10-14', 'spa': '2026-10-15'}
+           'spa': ('spanish', 'es', SPA_COUNT), 'lsm': ('saamia', 'swh', 16),
+           'luy': ('luhya', 'swh', 83), 'bxk': ('bukusu', 'swh', 33)}
+DATES = {'ara': '2026-10-07', 'hat': '2026-10-13', 'kuj': '2026-10-14', 'spa': '2026-10-15',
+         'lsm': '2026-10-20', 'luy': '2026-10-20', 'bxk': '2026-10-20'}
 
 
 def urls(r):
@@ -83,6 +85,9 @@ class DbsAuditTest(unittest.TestCase):
         # The easy-to-read New Testament with Psalms and Proverbs.
         self.assertEqual(totals['hat'], 260 + 150 + 31)
         self.assertEqual(totals['kuj'], 1189)
+        self.assertEqual(totals['lsm'], 1189)
+        # Davar's whole Bible and FCBH's Luke.
+        self.assertEqual(totals['bxk'], 1189 + 24)
         # Three full Bibles, the Reina-Valera 1960 Old Testament and three New Testaments.
         self.assertEqual(totals['spa'], 1189 * 3 + 929 + 260 * 3)
 
@@ -284,6 +289,38 @@ class DbsAuditTest(unittest.TestCase):
         self.assertEqual(self.built['spa']['languages']['spa']['native'], 'Español')
         visibility = (ROOT / 'app/assets/js/visibility.js').read_text()
         self.assertIn("spa: ['spa-text-sparv09']", visibility)
+
+    def test_luhya_shelves_carry_everything_dbs_hosts(self):
+        lsm = self.shelf('lsm')
+        self.assertEqual([r['id'] for r in lsm][:3],
+                         ['lsm-text-lsmbsu', 'lsm-ab-lsmbsu-davr-fb-n', 'lsm-film-lsm-samia-jesus'])
+        self.assertEqual(lsm[0]['read']['kind'], 'pdf')
+        self.assertEqual(lsm[0]['org'], 'Bible Society of Uganda')
+        self.assertEqual(lsm[1]['play']['bookNames']['Mark'], 'Marko')
+        self.assertEqual(len([r for r in lsm if r['id'].startswith('lsm-grn-')]), 10)
+        bxk = self.shelf('bxk')
+        self.assertEqual(bxk[0]['id'], 'bxk-ab-bxkbsk-davr-fb-n')
+        self.assertEqual(bxk[0]['native'], 'Ebibilia Endakatifu')
+        # The Bukusu picker shows only abbreviations; the Swahili names stand in.
+        self.assertEqual(bxk[0]['play']['bookNames']['Genesis'], 'Mwanzo')
+        luke = next(r for r in bxk if r['id'] == 'bxk-ab-bxkbxk-fcbh-np-n')
+        self.assertEqual(luke['play']['books'], ['Luke'])
+        luy = self.shelf('luy')
+        self.assertEqual(luy[0]['id'], 'luy-film-luy-oluluyia-luke')
+        varieties = {r.get('scope') for r in luy if r['id'].startswith('luy-grn-')}
+        self.assertEqual(varieties, {'Bukusu', 'Logooli', 'Idakho', 'Tachoni', 'Bunyala', 'Kabras', 'Isukha',
+                                     'Marachi', 'Wanga', 'Samia'})
+        samia = next(r for r in luy if r['id'] == 'luy-grn-65483')
+        self.assertEqual(samia['title'], 'LLL 1 Beginning with GOD — Samia')
+        self.assertEqual(samia['native'], 'Tazama, Sikiliza, Uishi 1: Ohuchaka nende Nyasaye')
+        for r in lsm + bxk + luy:
+            if r['type'] == 'film':
+                self.assertIsInstance(r['org'], str)
+        vercel = (ROOT / 'vercel.json').read_text()
+        for slug, aliases in (('saamia', ('samia', 'olusaamia', 'lusamia')), ('luhya', ('oluluhya', 'luyia', 'oluluyia')),
+                              ('bukusu', ('lubukusu', 'babukusu'))):
+            for alias in aliases:
+                self.assertIn('{ "source": "/' + alias + '", "destination": "/' + slug + '/index.html" }', vercel)
 
 
 if __name__ == '__main__':
