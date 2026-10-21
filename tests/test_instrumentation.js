@@ -38,6 +38,11 @@ class Element {
   scrollIntoView() {}
   remove() {}
   appendChild(child) { this.children.push(child); return child; }
+  insertBefore(child, ref) {
+    const at = this.children.indexOf(ref);
+    if (at < 0) this.children.push(child); else this.children.splice(at, 0, child);
+    return child;
+  }
   querySelectorAll(selector) {
     const matches = node => {
       if (selector[0] === '#') return node.attributes.id === selector.slice(1);
@@ -52,7 +57,7 @@ class Element {
 }
 
 function fixture(options = {}) {
-  const events = [], sheets = [], downloads = [], peers = [];
+  const events = [], sheets = [], downloads = [], peers = [], posts = [];
   const body = new Element('body');
   body.appendChild(new Element('div', { class: 'shared-actions' }));
   ['item', 'wizard', 'nearby', 'back', 'back-ico', 'shared-badge', 'shared-title', 'shared-lead',
@@ -73,6 +78,8 @@ function fixture(options = {}) {
     scopedUrl: (page, params = {}) => page + '?' + new URLSearchParams(params),
     scopeEntryUrl: () => '/english', safeUrl: x => x, safeType: () => 'video/mp4', openable: () => false,
     displayTitle: r => r.title, thumb: () => '', header() {}, tabbar() {}, stepper: () => '',
+    facebookUrl: url => 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url),
+    facebookShare(a, url, words) { a.href = this.facebookUrl(url); posts.push(words); },
     art: { share: () => '' }, store: { get: (key, value) => value, set() {} },
     i18n: { t: (key, params) => key === 'sharelib.body' ? params.url : key, h: key => key, tOr: (key, value) => value,
       tOrHTML: (key, value) => value, apply() {}, onChange() {} },
@@ -119,7 +126,7 @@ function fixture(options = {}) {
     Blob, File: class extends Blob { constructor(parts, name, options) { super(parts, options); this.name = name; } },
     AbortController, Uint8Array, Uint32Array, RTCPeerConnection: window.RTCPeerConnection,
     fetch, setTimeout: () => 1, clearTimeout() {}, console });
-  return { events, sheets, downloads, peers, body, item, document, navigator, context,
+  return { events, sheets, downloads, peers, posts, body, item, document, navigator, context,
     load(name) { vm.runInContext(fs.readFileSync(path.join(__dirname, '../app/assets/js/', name + '.js'), 'utf8'), context); },
     query(selector) { return body.querySelector(selector); },
     allow(value) { allowed = value; }, Emitter };
@@ -264,6 +271,31 @@ async function composers() {
     assert.equal(offline.query('[data-shared-channel="whatsapp"]') || offline.query('[data-s="whatsapp"]'), null);
     assert.equal(offline.query('[data-shared-channel="telegram"]') || offline.query('[data-s="telegram"]'), null);
   }
+}
+
+async function facebook() {
+  const f = fixture({ allowed: false });
+  f.load('shared-library');
+  const fb = f.query('[data-shared-channel="facebook"]');
+  assert.ok(fb, 'language pages offer Share on Facebook online');
+  const start = new URL(fb.href);
+  assert.equal(start.origin + start.pathname, 'https://www.facebook.com/sharer/sharer.php');
+  assert.equal(start.searchParams.get('u'), 'https://example.test/english');
+  fb.click(); assert.equal(f.events.length, 0, 'no-consent Facebook click records no event');
+  assert.equal(f.posts[0], 'fbshare.post', 'the suggested post words go to the clipboard');
+  f.allow(true); fb.click();
+  assert.match(new URL(fb.href).searchParams.get('u'), /^https:\/\/example\.test\/english\?et_share=/);
+  assert.deepEqual(count(f, 'share_intent').map(e => [e.channel, e.status, e.language]), [['facebook', 'opened', 'eng']]);
+  const offline = fixture({ file: true, allowed: false });
+  offline.load('shared-library');
+  assert.equal(offline.query('[data-shared-channel="facebook"]'), null, 'a card copy has no Facebook link');
+  const launcher = fixture({ scope: null });
+  launcher.load('share-libraries');
+  const row = launcher.query('[data-share-facebook="english"]');
+  assert.ok(row, 'the sharing launcher offers Facebook for each language');
+  row.click();
+  assert.match(new URL(row.href).searchParams.get('u'), /^https:\/\/example\.test\/english\?et_share=/);
+  assert.equal(count(launcher, 'share_intent')[0].channel, 'facebook');
 }
 
 async function saving() {
@@ -412,6 +444,6 @@ async function missingBibleChapter() {
 }
 
 (async () => {
-  await missingBibleChapter(); await sharing(); await languageLibraries(); await composers(); await saving(); await nearby(); await guides();
+  await missingBibleChapter(); await sharing(); await languageLibraries(); await composers(); await facebook(); await saving(); await nearby(); await guides();
   console.log('Sharing, WhatsApp/Telegram composers, clipboard, native handoff, save, cancellation, Nearby receipts and guide instrumentation passed.');
 })().catch(err => { console.error(err); process.exitCode = 1; });

@@ -62,7 +62,8 @@ window.ET = (function () {
     sun:     '<circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/>',
     moon:    '<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>',
     warn:    '<path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17.2v.1"/>',
-    home:    '<path d="M4 11l8-7 8 7"/><path d="M6 10v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-9"/>'
+    home:    '<path d="M4 11l8-7 8 7"/><path d="M6 10v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-9"/>',
+    facebook: '<path d="M15.5 3.5H14a4 4 0 0 0-4 4V10H7.5v3.5H10v7h3.5v-7H16l.5-3.5h-3V8a1 1 0 0 1 1-1h2V3.5z"/>'
   };
 
   function icon(name, cls) {
@@ -2097,7 +2098,47 @@ window.ET = (function () {
     else window.addEventListener('load', scheduleSW, { once: true });
   }
 
+  // ------------------------------------------------------- facebook share
+  /* Facebook's share dialog takes only a link and reads the title, words and
+     picture from that page's og: tags (each language page has its own card).
+     It won't accept ready-made post words, so those go on the clipboard and a
+     short note says to paste them. Call from the click, before the link opens. */
+  function facebookUrl(url) {
+    return 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url);
+  }
+  function copyText(text, done) {
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      try { if (document.execCommand('copy')) done(); } catch (e) {}
+      ta.remove();
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, fallback);
+    } else fallback();
+  }
+  var toastTimer;
+  function toast(html) {
+    var el = document.getElementById('et-toast');
+    if (!el) {
+      el = document.createElement('p');
+      el.id = 'et-toast'; el.className = 'et-toast'; el.setAttribute('role', 'status');
+      document.body.appendChild(el);
+    }
+    el.innerHTML = icon('check') + '<span>' + html + '</span>';
+    el.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { el.classList.remove('show'); }, 9000);
+  }
+  function facebookShare(a, url, words) {
+    a.href = facebookUrl(url);
+    copyText(words, function () { toast(window.ET.i18n.h('fbshare.copied')); });
+  }
+
   return {
+    facebookUrl: facebookUrl, facebookShare: facebookShare, copyText: copyText, toast: toast,
     store: store, icon: icon, lantern: lantern, esc: esc, qs: qs, human: human,
     canInstall: canInstall, onInstallable: onInstallable,
     promptInstall: promptInstall, standalone: standalone,
