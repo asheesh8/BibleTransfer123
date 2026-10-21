@@ -221,6 +221,32 @@ class AnalyticsTest(unittest.TestCase):
         self.assertEqual(self.collect([event()])[0], 429)
         self.assertEqual(self.request(payload={"consent": {"version": 1, "analytics": True}, "events": [event(2)]}, now=NOW + 61)[0], 200)
 
+    def test_sharing_chain_follows_passed_on_links_back_to_the_first_share(self):
+        visitor = lambda n: {"visitorId": f"visitor-{n:08d}", "sessionId": f"session-{n:08d}"}
+        events = [
+            event(1, "share_intent", channel="whatsapp", resource="eng-film-jesus", shareId="share-00000001", depth=1, **visitor(1)),
+            event(2, "shared_visit", shareId="share-00000001", **visitor(2)),
+            event(3, "share_intent", channel="email", resource="eng-film-jesus", shareId="share-00000002", parentShareId="share-00000001", depth=2, **visitor(2)),
+            event(4, "shared_visit", shareId="share-00000002", **visitor(3)),
+            event(5, "share_intent", channel="whatsapp", resource="eng-film-jesus", shareId="share-00000003", parentShareId="share-00000002", depth=3, **visitor(3)),
+            # Someone in between declined analytics: the link still says step 4.
+            event(6, "share_intent", channel="copy_link", resource="eng-film-jesus", shareId="share-00000004", parentShareId="share-00000099", depth=4, **visitor(4)),
+            event(7, "share_intent", channel="copy_link", resource="eng-book-x", shareId="share-00000005", **visitor(5)),
+        ]
+        self.assertEqual(self.collect(events)[0], 200)
+        chains = self.admin()[1]["shareChains"]
+        self.assertEqual((chains["shares"], chains["passedOn"], chains["longest"], chains["chains"]), (5, 3, 4, 2))
+        self.assertEqual(chains["byDepth"], [{"name": "1", "count": 2}, {"name": "2", "count": 1}, {"name": "3", "count": 1}, {"name": "4", "count": 1}])
+        top = chains["top"][0]
+        self.assertEqual((top["root"], top["resource"], top["shares"], top["depth"], top["sharers"], top["visits"]), ("share-00000001", "eng-film-jesus", 3, 3, 3, 2))
+
+    def test_chain_fields_are_validated(self):
+        for metadata in ({"depth": 0}, {"depth": 1000}, {"depth": "2"}, {"depth": True}, {"parentShareId": "<bad>"},
+                         {"shareId": "share-00000001", "parentShareId": "share-00000001"}):
+            with self.assertRaises(api.APIError, msg=metadata):
+                api.clean_event(event(1, "share_intent", **metadata), NOW, "")
+        self.assertEqual(api.clean_event(event(1, "share_intent", depth=3, parentShareId="share-00000001"), NOW, "")["depth"], 3)
+
     def test_summary_does_not_claim_external_handoffs_or_sender_receipts(self):
         events = [event(1), event(2, "session_start"), event(3, "share_intent", channel="copy_link"), event(4, "share_complete", channel="copy_link", status="copied"), event(5, "share_complete", channel="native_share", status="handed_off"), event(6, "download_complete", status="saved"), event(7, "download_complete", status="browser_handoff"), event(8, "transfer_complete", status="sent"), event(9, "transfer_complete", status="received"), event(10, "resource_open", resource="eng-film-demo"), event(11, "shared_visit", shareId="share-00000001")]
         self.assertEqual(self.collect(events)[0], 200)

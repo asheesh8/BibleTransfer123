@@ -159,7 +159,7 @@
   }
 
   function statusName(value) {
-    var names = { browser_handoff: 'Browser download · unverified', handed_off: 'Native share · unverified', guide_opened: 'Guide opened', unspecified: 'Unspecified', '_unspecified': 'No status' };
+    var names = { browser_handoff: 'Browser download · unverified', handed_off: 'Native share · unverified', guide_opened: 'Guide opened', sent: 'Sent',  unspecified: 'Unspecified', '_unspecified': 'No status' };
     return names[value] || readable(value);
   }
 
@@ -608,6 +608,28 @@
     renderBars('share-outcomes', data.shareOutcomes, { label: statusName, total: totalFor(data, 'shareOutcomes'), unit: 'events', empty: 'Results appear after a share action finishes.' });
     renderBars('shared-content', tableRows(data.resourceTable, 'shares'), { label: resourceTitle, tooltip: resourceTooltip, total: totals.shares, unit: 'share attempts', filter: 'resource', sub: function (row) { return resourceMeta(row.name); }, empty: 'Items appear here once someone shares one.' });
     renderBars('shared-languages', tableRows(data.languageTable, 'shares'), { label: languageName, total: totals.shares, unit: 'share attempts', filter: 'language', empty: 'Languages appear here after the first share attempt.' });
+    renderChains(data.shareChains);
+  }
+
+  function renderChains(chains) {
+    var signals = document.getElementById('chain-signals');
+    if (!chains || typeof chains !== 'object') {
+      signals.innerHTML = '';
+      unavailable('chain-depth'); unavailable('chain-top');
+      return;
+    }
+    signals.innerHTML = [
+      kpiHTML('Passed on', formatNumber(chains.passedOn), 'Shares of a link someone was sent'),
+      kpiHTML('Longest chain', chains.longest ? plural(chains.longest, 'step', 'steps') : '—', 'Furthest a link has been passed along'),
+      kpiHTML('Chains', formatNumber(chains.chains), 'First shares that were passed on at least once')
+    ].join('');
+    renderBars('chain-depth', chains.byDepth, { label: function (step) { return 'Step ' + step; }, total: count(chains.shares), unit: 'share attempts', limit: 10, empty: 'Steps appear after the first share attempt.' });
+    renderBars('chain-top', (chains.top || []).map(function (chain) {
+      return { name: chain.resource, count: chain.shares, extra: chain };
+    }), { label: resourceTitle, tooltip: resourceTooltip, unit: 'shares', limit: 8, sub: function (row) {
+      var chain = row.extra || {};
+      return plural(chain.depth, 'step', 'steps') + ' · ' + plural(chain.sharers, 'sharer', 'sharers') + ' · ' + plural(chain.visits, 'visit', 'visits');
+    }, empty: 'Chains appear once a shared link is passed on.' });
   }
 
   function renderDeveloper(data) {

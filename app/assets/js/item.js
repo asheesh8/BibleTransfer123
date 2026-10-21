@@ -28,7 +28,7 @@
   }
 
   // Keep translated titles consistent in the reader, save flow and share sheet.
-  if ((r.lang === 'mlg' && ET.i18n.current() === 'mg') || (r.lang === 'nya' && ET.i18n.current() === 'ny') || (r.lang === 'run' && ET.i18n.current() === 'rn') || (r.lang === 'aka' && ET.i18n.current() === 'ak') || (r.lang === 'tir' && ET.i18n.current() === 'ti') || (r.lang === 'hat' && ET.i18n.current() === 'ht') || (r.lang === 'spa' && ET.i18n.current() === 'es') || (r.lang === 'kuj' && ET.i18n.current() === 'swh') || (r.lang === 'ara' && ET.i18n.current() === 'ar') || (r.lang === 'kin' && ET.i18n.current() === 'rw') || (r.lang === 'xho' && ET.i18n.current() === 'xh') || (r.lang === 'sna' && ET.i18n.current() === 'sn') || (r.lang === 'lin' && ET.i18n.current() === 'ln') || (r.lang === 'yor' && ET.i18n.current() === 'yo') || (r.lang === 'pcm' && ET.i18n.current() === 'pcm')) {
+  if ((r.lang === 'mlg' && ET.i18n.current() === 'mg') || (r.lang === 'nya' && ET.i18n.current() === 'ny') || (r.lang === 'run' && ET.i18n.current() === 'rn') || (r.lang === 'aka' && ET.i18n.current() === 'ak') || (r.lang === 'tir' && ET.i18n.current() === 'ti') || (r.lang === 'hat' && ET.i18n.current() === 'ht') || (r.lang === 'spa' && ET.i18n.current() === 'es') || (r.lang === 'kuj' && ET.i18n.current() === 'swh') || (r.lang === 'lsm' && ET.i18n.current() === 'swh') || (r.lang === 'luy' && ET.i18n.current() === 'swh') || (r.lang === 'bxk' && ET.i18n.current() === 'swh') || (r.lang === 'rag' && ET.i18n.current() === 'swh') || (r.lang === 'ida' && ET.i18n.current() === 'swh') || (r.lang === 'ara' && ET.i18n.current() === 'ar') || (r.lang === 'kin' && ET.i18n.current() === 'rw') || (r.lang === 'xho' && ET.i18n.current() === 'xh') || (r.lang === 'sna' && ET.i18n.current() === 'sn') || (r.lang === 'lin' && ET.i18n.current() === 'ln') || (r.lang === 'yor' && ET.i18n.current() === 'yo') || (r.lang === 'pcm' && ET.i18n.current() === 'pcm')) {
     r = Object.assign({}, r, { title: ET.displayTitle(r) });
   }
   document.title = ET.displayTitle(r);
@@ -45,6 +45,60 @@
   // Remembered per resource, so the chapter someone stopped at is where they
   // pick up — a two-hour film is rarely watched in one sitting.
   var KEY = 'et.pos.' + r.id;
+
+  // ---------------------------------------------------------- sharing chain
+  // A passed-on link says who sent it (et_from) and how many times it has
+  // been passed on (et_hop). The chain lives only in links and this tab's
+  // session, so it works with analytics declined; with analytics accepted,
+  // each new share also records the share it grew from.
+  var web = /^https?:$/.test(location.protocol);
+  var NAME_JUNK = (function () {
+    try { return new RegExp("[^\\p{L}\\p{M} '’-]", 'gu'); }
+    catch (e) { return /[0-9_.,:;\/\\@<>"(){}\[\]#%&*+=?!|~^$`\u0000-\u001f]/g; }
+  })();
+  function cleanName(value) {
+    var name = String(value || '').replace(NAME_JUNK, '').replace(/\s+/g, ' ').trim().slice(0, 40).trim();
+    return /[^\s'’-]/.test(name) ? name : '';
+  }
+  var chain = (function () {
+    var from = cleanName(ET.qs('et_from')), hop = parseInt(ET.qs('et_hop'), 10), parent = ET.qs('et_share'), c;
+    if (from || hop > 0) {
+      c = { from: from, hop: Math.max(1, Math.min(hop || 1, 999)),
+            parent: /^[A-Za-z0-9_-]{8,80}$/.test(parent) ? parent : '' };
+      try { sessionStorage.setItem('et.chain', JSON.stringify(c)); } catch (e) {}
+      c.arrived = true;
+      return c;
+    }
+    try { c = JSON.parse(sessionStorage.getItem('et.chain') || 'null'); } catch (e) { c = null; }
+    return c && c.hop > 0 ? c : { from: '', hop: 0, parent: '' };
+  })();
+  var nextHop = Math.min(chain.hop + 1, 999);
+  var pass = { to: '', email: '' };     // kept across re-renders on a language switch
+
+  function senderName() { return cleanName(ET.store.get('et.share.from', '')); }
+  function chainFields(fields) {
+    fields.depth = nextHop;
+    if (chain.parent) fields.parentShareId = chain.parent;
+    return fields;
+  }
+  // This page's address, carrying the sender and the next step of the chain.
+  function passUrl(name) {
+    try {
+      var u = new URL(location.href);
+      u.hash = '';
+      ['et_from', 'et_hop', 'et_share', 'et_channel'].forEach(function (k) { u.searchParams.delete(k); });
+      if (name) u.searchParams.set('et_from', name);
+      u.searchParams.set('et_hop', String(nextHop));
+      return u.href;
+    } catch (e) { return location.href.split('#')[0]; }
+  }
+  function passMessage(name, to, url) {
+    var v = { from: name, to: to, title: ET.displayTitle(r) };
+    return [t(to ? 'itemshare.mail.hello' : 'itemshare.mail.hello.anon', v),
+      name ? t('itemshare.mail.line', v) : v.title,
+      name ? t(to ? 'itemshare.mail.fromto' : 'itemshare.mail.from', v) : '',
+      url, t('itemshare.mail.pass')].filter(Boolean).join('\n');
+  }
 
   // ---------------------------------------------------------------- player
   function player() {
@@ -150,16 +204,24 @@
 
     // What language this is actually in, before anyone presses play.
     var tongue = '<span class="chip lang">' + ET.icon('globe') +
-      h(isText ? 'item.written' : 'item.spoken', { lang: (r.lang === 'ibo' && r.scope && r.scope !== 'Igbo') || r.lang === 'fra' || r.lang === 'amh' || r.lang === 'por' || r.lang === 'yor' || r.lang === 'pcm' || r.lang === 'lin' || r.lang === 'mlg' || r.lang === 'nya' || r.lang === 'run' || r.lang === 'aka' || r.lang === 'tir' || r.lang === 'hat' || r.lang === 'spa' || r.lang === 'kuj' || r.lang === 'ara' || r.lang === 'kin' || r.lang === 'xho' || r.lang === 'sna'
+      h(isText ? 'item.written' : 'item.spoken', { lang: (r.lang === 'ibo' && r.scope && r.scope !== 'Igbo') || r.lang === 'fra' || r.lang === 'amh' || r.lang === 'por' || r.lang === 'yor' || r.lang === 'pcm' || r.lang === 'lin' || r.lang === 'mlg' || r.lang === 'nya' || r.lang === 'run' || r.lang === 'aka' || r.lang === 'tir' || r.lang === 'hat' || r.lang === 'spa' || r.lang === 'kuj' || r.lang === 'lsm' || r.lang === 'luy' || r.lang === 'bxk' || r.lang === 'rag' || r.lang === 'ida' || r.lang === 'ara' || r.lang === 'kin' || r.lang === 'xho' || r.lang === 'sna'
         ? r.langName : L.native && L.native !== L.name
         ? L.native + ' · ' + L.name : (L.name || r.langName || '') }) + '</span>';
 
-    var html = hero() + '<div id="media">' + player() + '</div>' +
+    var banner = chain.arrived && chain.from
+      ? '<section class="card chain-banner" aria-labelledby="chain-h">' +
+          '<span class="ico">' + ET.icon('share') + '</span><div>' +
+          '<h2 id="chain-h" dir="auto">' + h('chain.title', { from: chain.from }) + '</h2>' +
+          '<p>' + h('chain.sub', { n: chain.hop + 1 }) + '</p>' +
+          (web ? '<button class="btn green" id="chain-pass" type="button">' + ET.icon('share') + h('chain.pass') + '</button>' : '') +
+        '</div></section>'
+      : '';
+    var html = banner + hero() + '<div id="media">' + player() + '</div>' +
       '<div class="stack" style="margin-top:1rem">' +
         '<div style="display:flex;gap:.4rem;flex-wrap:wrap">' + tongue + where +
           '<span class="chip">' + h('type.' + r.type) + '</span></div>' +
         '<h1 dir="auto" style="margin:.3rem 0 0">' + ET.esc(ET.displayTitle(r)) + '</h1>' +
-        (r.native && r.native !== r.title && !((r.lang === 'amh' && ET.i18n.current() === 'am') || (r.lang === 'por' && ET.i18n.current() === 'pt') || (r.lang === 'yor' && ET.i18n.current() === 'yo') || (r.lang === 'pcm' && ET.i18n.current() === 'pcm') || (r.lang === 'mlg' && ET.i18n.current() === 'mg') || (r.lang === 'nya' && ET.i18n.current() === 'ny') || (r.lang === 'run' && ET.i18n.current() === 'rn') || (r.lang === 'aka' && ET.i18n.current() === 'ak') || (r.lang === 'tir' && ET.i18n.current() === 'ti') || (r.lang === 'hat' && ET.i18n.current() === 'ht') || (r.lang === 'spa' && ET.i18n.current() === 'es') || (r.lang === 'kuj' && ET.i18n.current() === 'swh') || (r.lang === 'ara' && ET.i18n.current() === 'ar') || (r.lang === 'kin' && ET.i18n.current() === 'rw') || (r.lang === 'xho' && ET.i18n.current() === 'xh') || (r.lang === 'sna' && ET.i18n.current() === 'sn') || (r.lang === 'lin' && ET.i18n.current() === 'ln')) ? '<p class="latin" style="font-size:1rem;margin:0">' +
+        (r.native && r.native !== r.title && !((r.lang === 'amh' && ET.i18n.current() === 'am') || (r.lang === 'por' && ET.i18n.current() === 'pt') || (r.lang === 'yor' && ET.i18n.current() === 'yo') || (r.lang === 'pcm' && ET.i18n.current() === 'pcm') || (r.lang === 'mlg' && ET.i18n.current() === 'mg') || (r.lang === 'nya' && ET.i18n.current() === 'ny') || (r.lang === 'run' && ET.i18n.current() === 'rn') || (r.lang === 'aka' && ET.i18n.current() === 'ak') || (r.lang === 'tir' && ET.i18n.current() === 'ti') || (r.lang === 'hat' && ET.i18n.current() === 'ht') || (r.lang === 'spa' && ET.i18n.current() === 'es') || (r.lang === 'kuj' && ET.i18n.current() === 'swh') || (r.lang === 'lsm' && ET.i18n.current() === 'swh') || (r.lang === 'luy' && ET.i18n.current() === 'swh') || (r.lang === 'bxk' && ET.i18n.current() === 'swh') || (r.lang === 'rag' && ET.i18n.current() === 'swh') || (r.lang === 'ida' && ET.i18n.current() === 'swh') || (r.lang === 'ara' && ET.i18n.current() === 'ar') || (r.lang === 'kin' && ET.i18n.current() === 'rw') || (r.lang === 'xho' && ET.i18n.current() === 'xh') || (r.lang === 'sna' && ET.i18n.current() === 'sn') || (r.lang === 'lin' && ET.i18n.current() === 'ln')) ? '<p class="latin" style="font-size:1rem;margin:0">' +
           ET.esc(ET.displayTitle(r) === r.native ? r.title : r.native) + '</p>' : '') +
         '<p class="muted latin" style="margin:0">' + ET.esc([r.org, r.year, r.duration, r.stats]
           .filter(Boolean).join(' · ')) + '</p>' +
@@ -182,6 +244,8 @@
     html += '<div class="btn-row" style="margin-top:1.3rem">' +
       (canSave ? '<button class="btn green" id="save">' + ET.icon('save') + h('item.save') + '</button>' : '') +
       '<button class="btn sky" id="share">' + ET.icon('share') + h('item.share') + '</button></div>';
+
+    if (web) html += passCard();
 
     if (canSave) {
       html += '<a class="save-guide-entry" href="' + ET.esc(ET.scopedUrl('save-guide.html', { id: r.id })) +
@@ -217,6 +281,97 @@
       ET.save.open(Object.assign({}, r, { title: ET.displayTitle(r), files: [currentFile].concat(r.files || []) }));
     });
     ET.$('#share').addEventListener('click', shareSheet);
+    if (web) wirePassCard();
+  }
+
+  // ------------------------------------------------- pass it on (inline)
+  // Always on the page, never a pop-up: whoever just chose this is the
+  // person most likely to know who else needs it.
+  function passCard() {
+    return '<section class="card pass-on" id="pass-on" aria-labelledby="pass-on-h">' +
+      '<h2 id="pass-on-h">' + ET.icon('share') + h(chain.hop ? 'itemshare.title.chain' : 'itemshare.title') + '</h2>' +
+      '<p class="muted">' + h('itemshare.sub') + '</p>' +
+      '<div class="pass-names">' +
+        '<div><label class="flabel" for="ps-from">' + h('itemshare.from') + '</label>' +
+        '<input type="text" id="ps-from" maxlength="40" autocomplete="given-name" dir="auto" value="' + ET.esc(senderName()) + '"></div>' +
+        '<div><label class="flabel" for="ps-to">' + h('itemshare.to') + '</label>' +
+        '<input type="text" id="ps-to" maxlength="40" autocomplete="off" dir="auto" value="' + ET.esc(pass.to) + '"></div>' +
+      '</div>' +
+      '<a class="btn green block" id="ps-wa" target="_blank" rel="noopener noreferrer" href="#">' +
+        ET.icon('share') + h('itemshare.whatsapp') + '</a>' +
+      '<label class="flabel" for="ps-email">' + h('itemshare.email') + '</label>' +
+      '<div class="send-library-row"><input type="email" id="ps-email" maxlength="254" autocomplete="email" ' +
+        'inputmode="email" dir="ltr" placeholder="name@example.com" value="' + ET.esc(pass.email) + '">' +
+        '<button class="btn sky" type="button" id="ps-send">' + ET.icon('mail') + h('itemshare.send') + '</button></div>' +
+      '<p class="send-library-status" id="ps-status" role="status" aria-live="polite"></p>' +
+      '<p class="muted pass-privacy">' + h('itemshare.privacy') + '</p>' +
+    '</section>';
+  }
+
+  function wirePassCard() {
+    var from = ET.$('#ps-from'), to = ET.$('#ps-to'), mail = ET.$('#ps-email'),
+      wa = ET.$('#ps-wa'), send = ET.$('#ps-send'), status = ET.$('#ps-status');
+    function say(key, vars) { status.innerHTML = key ? h(key, vars) : ''; }
+    function names() {
+      var name = cleanName(from.value);
+      ET.store.set('et.share.from', name);
+      pass.to = cleanName(to.value);
+      return name;
+    }
+    function waHref(url) {
+      return 'https://wa.me/?text=' + encodeURIComponent(passMessage(cleanName(from.value), cleanName(to.value), url));
+    }
+    function refresh() { wa.href = waHref(passUrl(cleanName(from.value))); }
+    refresh();
+    [from, to].forEach(function (input) { input.addEventListener('input', refresh); });
+    from.addEventListener('change', names);
+    mail.addEventListener('input', function () { pass.email = mail.value; });
+    var jump = ET.$('#chain-pass');
+    if (jump) jump.addEventListener('click', function () {
+      ET.$('#pass-on').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      (from.value ? to : from).focus({ preventScroll: true });
+    });
+
+    wa.addEventListener('click', function () {
+      var name = names();
+      var intent = ET.analytics.shareIntent(passUrl(name), 'whatsapp',
+        chainFields({ resource: r.id, language: r.lang, status: 'opened' }));
+      wa.href = waHref(intent.url);
+      say('');
+    });
+
+    send.addEventListener('click', function () {
+      var name = names(), address = mail.value.trim();
+      if (!name) { say('itemshare.needname'); from.focus(); return; }
+      if (!/^[^\s@<>,;"]+@[^\s@<>,;"]+\.[A-Za-z]{2,}$/.test(address)) { say('itemshare.invalid'); mail.focus(); return; }
+      var intent = ET.analytics.shareIntent(passUrl(name), 'email', chainFields({ resource: r.id, language: r.lang }));
+      var scope = ET.libraryScope();
+      var body = { to: address, item: r.id, from: name, lang: ET.i18n.current(), hop: nextHop };
+      if (pass.to) body.toName = pass.to;
+      if (scope && scope.slug) body.library = scope.slug;
+      if (intent.shareId) body.shareId = intent.shareId;
+      function openMailApp() {
+        var v = { from: name, to: pass.to, title: ET.displayTitle(r) };
+        location.href = 'mailto:' + encodeURIComponent(address) + '?subject=' +
+          encodeURIComponent(t('itemshare.mail.subject', v)) + '&body=' +
+          encodeURIComponent(passMessage(name, pass.to, intent.url));
+        say('itemshare.fallback');
+      }
+      send.disabled = true; say('itemshare.sending');
+      fetch('/api/send-item', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'same-origin',
+        body: JSON.stringify(body)
+      }).then(function (res) {
+        send.disabled = false;
+        if (res.ok) {
+          ET.analytics.track('share_complete', { resource: r.id, language: r.lang, channel: 'email', shareId: intent.shareId, status: 'sent' });
+          say('itemshare.sent', { to: pass.to || address });
+          mail.value = pass.email = '';
+        } else if (res.status === 400) say('itemshare.invalid');
+        else if (res.status === 429) say('itemshare.limit');
+        else openMailApp();
+      }, function () { send.disabled = false; openMailApp(); });
+    });
   }
 
   // -------------------------------------------------------- player wiring
@@ -339,8 +494,7 @@
   }
 
   function shareSheet() {
-    var url = location.href.split('#')[0];
-    var web = /^https?:$/.test(location.protocol);
+    var url = passUrl(senderName());
     var canNative = web && typeof navigator.share === 'function';
 
     var rows = [];
@@ -374,8 +528,8 @@
       b.addEventListener('click', function () {
         var k = b.getAttribute('data-s');
         if (k === 'native') {
-          var nativeIntent = ET.analytics.shareIntent(url, 'native_share', { resource: r.id, language: r.lang });
-          navigator.share({ title: r.title, text: r.title + ' — ' + ((r.lang === 'yor' || r.lang === 'pcm' || r.lang === 'lin' || r.lang === 'mlg' || r.lang === 'nya' || r.lang === 'run' || r.lang === 'aka' || r.lang === 'tir' || r.lang === 'hat' || r.lang === 'spa' || r.lang === 'kuj' || r.lang === 'ara' || r.lang === 'kin' || r.lang === 'xho' || r.lang === 'sna') ? L.native || L.name : L.name || ''), url: nativeIntent.url })
+          var nativeIntent = ET.analytics.shareIntent(url, 'native_share', chainFields({ resource: r.id, language: r.lang }));
+          navigator.share({ title: r.title, text: r.title + ' — ' + ((r.lang === 'yor' || r.lang === 'pcm' || r.lang === 'lin' || r.lang === 'mlg' || r.lang === 'nya' || r.lang === 'run' || r.lang === 'aka' || r.lang === 'tir' || r.lang === 'hat' || r.lang === 'spa' || r.lang === 'kuj' || r.lang === 'lsm' || r.lang === 'luy' || r.lang === 'bxk' || r.lang === 'rag' || r.lang === 'ida' || r.lang === 'ara' || r.lang === 'kin' || r.lang === 'xho' || r.lang === 'sna') ? L.native || L.name : L.name || ''), url: nativeIntent.url })
             .then(function () {
               // The browser handed this to its share sheet; the recipient and
               // delivery result are not available to the page.
@@ -390,10 +544,10 @@
               });
             });
         } else if (k === 'copy') {
-          var copyIntent = ET.analytics.shareIntent(url, 'copy_link', { resource: r.id, language: r.lang });
+          var copyIntent = ET.analytics.shareIntent(url, 'copy_link', chainFields({ resource: r.id, language: r.lang }));
           copy(copyIntent.url, b, copyIntent.shareId);
         } else if (k === 'whatsapp' || k === 'telegram') {
-          var composerIntent = ET.analytics.shareIntent(url, k, { resource: r.id, language: r.lang, status: 'opened' });
+          var composerIntent = ET.analytics.shareIntent(url, k, chainFields({ resource: r.id, language: r.lang, status: 'opened' }));
           b.href = composerUrl(k, composerIntent.url);
         } else if (k === 'nearby') {
           ET.analytics.track('share_intent', { resource: r.id, language: r.lang, channel: 'nearby', status: 'started' });

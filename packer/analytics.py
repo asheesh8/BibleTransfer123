@@ -54,6 +54,7 @@ STATUSES = frozenset((
 FIELDS = frozenset((
     "id", "type", "at", "path", "language", "resource", "channel", "status",
     "referrer", "shareId", "visitorId", "sessionId", "bytes", "duration",
+    "depth", "parentShareId",
 ))
 # Printed QR codes open https://bibletransfer123.org/<slug>?src=qr. Vercel
 # rewrites those to /api/qr, which adds one to a per-day count and redirects to
@@ -83,6 +84,12 @@ QR_LIBRARIES = {
     "haitian": "hat",
     "spanish": "spa",
     "kuria": "kuj",
+    "luhya": "luy",
+    "bukusu": "bxk",
+    "saamia": "lsm",
+    "maragoli": "rag",
+    "idakho": "ida",
+    "tiriki": "ida",
     "chichewa": "nya",
     "kinyarwanda": "kin",
     "xhosa": "xho",
@@ -213,6 +220,16 @@ def clean_event(event, now, country):
         result[field] = value
     result["referrer"] = clean_referrer(event.get("referrer", ""))
     result["country"] = country if re.fullmatch(r"[A-Z]{2}", country) else ""
+    # Sharing chain: the step a share is at, and the share it was passed on from.
+    if "depth" in event:
+        if type(event["depth"]) is not int or not 1 <= event["depth"] <= 999:
+            raise APIError(400, "Invalid share depth.")
+        result["depth"] = event["depth"]
+    if "parentShareId" in event:
+        value = event["parentShareId"]
+        if not isinstance(value, str) or not IDENTIFIER.fullmatch(value) or value == result["shareId"]:
+            raise APIError(400, "Invalid event identifier.")
+        result["parentShareId"] = value
     if "bytes" in event:
         if type(event["bytes"]) is not int or not 0 <= event["bytes"] <= 1024 ** 4:
             raise APIError(400, "Invalid byte count.")
@@ -602,6 +619,48 @@ def totals(events):
     }
 
 
+def share_chains(events):
+    """Follow passed-on links back to the first share, to show how far sharing spreads.
+
+    A share's depth is the step it is at: 1 for someone sharing what they found
+    themselves, 2 for passing on a link they were sent, and so on. Links carry
+    the step, so depth survives a person in the middle who declined analytics;
+    the parent links only join chains whose every step was counted.
+    """
+    shares = {}
+    for event in events:
+        if event["type"] == "share_intent" and event.get("shareId"):
+            shares.setdefault(event["shareId"], event)
+    visits = collections.Counter(event["shareId"] for event in events if event["type"] == "shared_visit" and event.get("shareId"))
+    chains, by_depth = {}, collections.Counter()
+    for share_id, event in shares.items():
+        root, steps, seen = share_id, 1, {share_id}
+        while True:
+            parent = shares[root].get("parentShareId")
+            if not parent or parent not in shares or parent in seen:
+                break
+            seen.add(parent)
+            root, steps = parent, steps + 1
+        depth = max(event.get("depth") or 1, steps)
+        by_depth[depth] += 1
+        chain = chains.setdefault(root, {"root": root, "resource": shares[root].get("resource") or "", "started": shares[root]["at"], "shares": 0, "sharers": set(), "visits": 0, "depth": 0})
+        chain["shares"] += 1
+        chain["sharers"].add(event["visitorId"])
+        chain["visits"] += visits[share_id]
+        chain["depth"] = max(chain["depth"], depth)
+    for chain in chains.values():
+        chain["sharers"] = len(chain["sharers"])
+    ranked = sorted(chains.values(), key=lambda chain: (-chain["shares"], -chain["depth"], -chain["visits"], chain["started"]))
+    return {
+        "shares": len(shares),
+        "passedOn": sum(count for depth, count in by_depth.items() if depth >= 2),
+        "longest": max(by_depth, default=0),
+        "chains": sum(1 for chain in chains.values() if chain["shares"] > 1 or chain["depth"] > 1),
+        "byDepth": [{"name": str(depth), "count": by_depth[depth]} for depth in sorted(by_depth)],
+        "top": ranked[:20],
+    }
+
+
 def aggregate(events, days, now, truncated=False):
     today = dt.datetime.fromtimestamp(now, dt.timezone.utc).date()
     daily = {str(today - dt.timedelta(days=offset)): {"date": str(today - dt.timedelta(days=offset)), "visits": 0, "shares": 0, "visitors": 0, "opens": 0, "plays": 0, "saves": 0} for offset in reversed(range(days))}
@@ -710,7 +769,7 @@ def aggregate(events, days, now, truncated=False):
             channels[event.get("channel") or "unknown"] += 1
             if day:
                 day["shares"] += 1
-        if kind == "share_complete" and status in ("copied", "completed", "success"):
+        if kind == "share_complete" and status in ("copied", "completed", "success", "sent"):
             summary["shareCompletions"] += 1
         if kind == "shared_visit":
             summary["sharedVisits"] += 1
@@ -748,6 +807,7 @@ def aggregate(events, days, now, truncated=False):
     result["visitorTable"] = ranked_people[:200]
     result["breakdownTruncated"]["visitorTable"] = len(ranked_people) > 200
     result["totals"] = totals(events)
+    result["shareChains"] = share_chains(events)
     return result
 
 
