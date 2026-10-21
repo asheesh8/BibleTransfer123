@@ -42,5 +42,14 @@ class OpenGraphTags(unittest.TestCase):
         self.assertTrue(os.path.isfile(os.path.join(APP, "assets/og/home.jpg")))
 
 
+class ShareVideos(unittest.TestCase):
+    def test_guide_videos_and_posters_exist(self):
+        help_js = open(os.path.join(APP, "assets/js/help.js"), encoding="utf-8").read()
+        for name in ("share-on-facebook", "share-by-email", "share-on-whatsapp"):
+            self.assertIn(name, help_js)
+            for ext in (".mp4", ".jpg"):
+                self.assertTrue(os.path.isfile(os.path.join(APP, "assets/media/share", name + ext)), name + ext)
+
+
 if __name__ == "__main__":
     unittest.main()

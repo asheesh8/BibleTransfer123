@@ -121,6 +121,13 @@
       '<span><span class="t">Save to your computer</span>' +
       '<span class="s">Screenshot guide · English · Mac + Windows</span></span>' +
       '<span class="chev">' + ET.icon('chev') + '</span></a>';
+    // Three short walkthroughs: sharing on Facebook, by email and on WhatsApp.
+    out += '<section class="card share-videos" aria-labelledby="share-videos-title"><h2 id="share-videos-title">' +
+      h('sharevid.title') + '</h2><p class="muted">' + h('sharevid.sub') + '</p><div class="share-video-row">' +
+      [['facebook', 'share-on-facebook'], ['email', 'share-by-email'], ['whatsapp', 'share-on-whatsapp']].map(function (v) {
+        return '<figure><video controls playsinline preload="none" lang="en" poster="assets/media/share/' + v[1] + '.jpg">' +
+          '<source src="assets/media/share/' + v[1] + '.mp4" type="video/mp4"></video><figcaption>' + h('sharevid.' + v[0]) + '</figcaption></figure>';
+      }).join('') + '</div></section>';
     out += SECTIONS.map(function (s) {
       var start = s.device ? '<section class="card help-device" id="' + s.id + '" aria-labelledby="' + s.id + '-title">' +
         '<div class="help-device-heading"><div class="help-device-phone">' + phonePicture(s.device) + '</div>' +
