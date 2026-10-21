@@ -641,6 +641,8 @@ html[dir="rtl"] .flabel { text-transform: none; font-size: .95rem; }
 }
 .library-language[open] summary::after { transform: rotate(225deg); margin: .25rem .2rem 0 0; }
 .library-language .filters { padding: .8rem 0 .25rem; }
+.library-source[hidden] { display: none; }
+.fchip .fcount { font-weight: 500; opacity: .7; }
 .library-search { margin-bottom: .9rem; }
 .library-actions { margin-top: 1rem; }
 .library-actions .bulk-start { margin-top: 1rem; }

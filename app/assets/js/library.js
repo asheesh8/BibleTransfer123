@@ -17,11 +17,45 @@
     q: ET.qs('q') || '',
     type: ET.qs('type') || '',
     lang: lockedLang || (urlLang === 'all' ? '' : (urlLang || ET.contentLang())),
+    from: ET.qs('from') || '',
     bulk: false
   };
   var selected = {};
 
   var TYPES = ['film', 'scripture', 'audio-bible', 'audio', 'historic', 'book', 'link'];
+
+  /* Where an item comes from: the partner library or publisher in its credit.
+     DBS pages spell some partners more than one way, so those share one chip,
+     and the Digital Bible Society's archive scans sit with the rest of DBS. */
+  var SOURCE_ALIASES = {
+    'Digital Bible Society Archive': 'Digital Bible Society',
+    'Visual Bible Int.': 'Visual Bible International',
+    'Davar Partners': 'Davar Partners International',
+    'Story Runners': 'StoryRunners',
+    "Prophets' Story": "Prophet's Story",
+    'The Story of Jesus': 'Story of Jesus',
+    'Creation to Christ Stories': 'Creation to Christ'
+  };
+
+  // A joint credit ("Audio Scripture Ministries · Faith Comes By Hearing")
+  // belongs under both partners.
+  function sources(r) {
+    return String(r.org || '').split(' · ').map(function (s) {
+      s = s.trim();
+      return SOURCE_ALIASES[s] || s;
+    }).filter(Boolean);
+  }
+
+  // Every source in the language being browsed, the biggest shelves first.
+  function presentSources(list) {
+    var n = {};
+    list.forEach(function (r) {
+      sources(r).forEach(function (s) { n[s] = (n[s] || 0) + 1; });
+    });
+    return Object.keys(n).sort(function (a, b) {
+      return n[b] - n[a] || a.localeCompare(b);
+    }).map(function (s) { return { name: s, n: n[s] }; });
+  }
 
   function present(list) {
     var seen = {};
@@ -33,6 +67,7 @@
     if (lockedLang && r.lang !== lockedLang) return false;
     if (state.type && r.type !== state.type) return false;
     if (state.lang && r.lang !== state.lang) return false;
+    if (state.from && sources(r).indexOf(state.from) < 0) return false;
     if (state.q) {
       var hay = [r.title, r.native, r.org, r.desc, r.langName, r.typeLabel]
         .join(' ').toLowerCase();
@@ -93,6 +128,7 @@
     }
     if (state.q) p.push('q=' + encodeURIComponent(state.q));
     if (state.type) p.push('type=' + state.type);
+    if (state.from) p.push('from=' + encodeURIComponent(state.from));
     if (!lockedLang) p.push('lang=' + (state.lang || 'all'));
     var url = location.pathname + (p.length ? '?' + p.join('&') : '');
     // Some browsers refuse replaceState on a file:// origin. Keeping the URL in
@@ -124,6 +160,8 @@
         state.type = b.getAttribute('data-type'); render();
       });
     });
+
+    sourceChips();
 
     var langFilters = ET.$('#lang-filters');
     if (!langFilters || lockedLang) return;
@@ -161,6 +199,39 @@
         state.lang = b.getAttribute('data-lang');
         state.bulk = false; selected = {};
         ET.$('#lang-disclosure').open = false;
+        render();
+      });
+    });
+  }
+
+  function sourceChips() {
+    var box = ET.$('#source-disclosure');
+    var scopeLang = lockedLang || state.lang;
+    var avail = presentSources(lib.resources.filter(function (r) {
+      return !scopeLang || r.lang === scopeLang;
+    }));
+    // A source missing from this language (after switching language, or from
+    // an old link) would leave an empty shelf with no chip to undo it.
+    var known = avail.some(function (s) { return s.name === state.from; });
+    if (state.from && !known) state.from = '';
+    // One source is nothing to choose between.
+    box.hidden = avail.length < 2;
+    if (box.hidden) return;
+
+    ET.$('#source-filter-current').innerHTML = state.from ? ET.esc(state.from) : h('lib.all');
+    var list = ET.$('#source-filters');
+    list.innerHTML =
+      ['<button class="fchip" data-from="" aria-pressed="' + (!state.from) + '">' +
+        h('lib.all') + '</button>'].concat(
+        avail.map(function (s) {
+          return '<button class="fchip" data-from="' + ET.esc(s.name) + '" aria-pressed="' +
+            (state.from === s.name) + '"><span dir="auto">' + ET.esc(s.name) +
+            '</span> <span class="fcount">' + s.n + '</span></button>';
+        })).join('');
+    ET.$$('#source-filters [data-from]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        state.from = b.getAttribute('data-from');
+        box.open = false;
         render();
       });
     });
@@ -259,6 +330,14 @@
   var saveGuideIcon = ET.$('#save-guide-ico');
   if (saveGuideIcon) saveGuideIcon.innerHTML = ET.icon('laptop');
   ET.$('#empty-art').innerHTML = ET.art.empty();
+  // Language landing pages share this script with a smaller HTML shell.
+  if (!ET.$('#source-disclosure')) {
+    ET.$('#type-filters').insertAdjacentHTML('afterend',
+      '<details class="library-language library-source" id="source-disclosure" hidden>' +
+      '<summary><span data-i18n="lib.source">From</span><strong id="source-filter-current" dir="auto"></strong></summary>' +
+      '<div class="filters" id="source-filters" role="group" data-i18n-aria="lib.source" aria-label="From"></div>' +
+      '</details>');
+  }
 
   var q = ET.$('#q');
   q.value = state.q;
@@ -268,7 +347,7 @@
     timer = setTimeout(function () { state.q = q.value.trim(); render(); }, 140);
   });
   ET.$('#reset').addEventListener('click', function () {
-    state.q = ''; state.type = ''; state.lang = lockedLang || ''; q.value = ''; render();
+    state.q = ''; state.type = ''; state.from = ''; state.lang = lockedLang || ''; q.value = ''; render();
   });
 
   render();
