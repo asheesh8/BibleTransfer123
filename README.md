@@ -423,7 +423,14 @@ interface language, with English as the fallback.
 runtime dependencies — `app/data/catalog.js` is committed. The Python
 functions in `api/` are thin wrappers around `packer/`: `analytics.py`
 (consented events), `admin.py` (private reports), `visibility.py` (which
-libraries are shown) and `send-library.py` (emailing a library link).
+libraries are shown), `send-library.py` (emailing a library link) and
+`send-item.py` (emailing one item to a friend, from the item page's "Share
+this with a friend" card). Item emails read the title from `catalog.js`,
+which `vercel.json` bundles with the functions, and use the
+`itemshare.mail.*` strings from `i18n.js`; after changing those, run
+`python3 packer/write_item_mail_copy.py`. Shared item links carry the
+sender's name and a chain step (`et_from`, `et_hop`); the Sharing tab of
+`/admin` shows how far shares travel.
 
 The deployed version is the **preview** catalogue: nothing is packed, so every
 resource streams from `dbs.org` and the partner CDNs exactly as GawahiiTV does.
