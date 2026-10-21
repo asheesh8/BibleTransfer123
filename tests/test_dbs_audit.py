@@ -1,4 +1,4 @@
-"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Arabic, Haitian Creole, Kuria, Spanish, Saamia, Luhya and Bukusu: complete, verified and DBS-hosted."""
+"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Arabic, Haitian Creole, Kuria, Spanish, Saamia, Luhya, Bukusu, Maragoli and Idakho-Isukha-Tiriki: complete, verified and DBS-hosted."""
 import json
 import pathlib
 import re
@@ -17,9 +17,11 @@ SHELVES = {'xho': ('xhosa', 'xh', 13), 'nya': ('chichewa', 'ny', 34),
            'tir': ('tigrinya', 'ti', 26), 'ara': ('arabic', 'ar', ARA_COUNT),
            'hat': ('haitian', 'ht', 29), 'kuj': ('kuria', 'swh', 12),
            'spa': ('spanish', 'es', SPA_COUNT), 'lsm': ('saamia', 'swh', 16),
-           'luy': ('luhya', 'swh', 83), 'bxk': ('bukusu', 'swh', 33)}
+           'luy': ('luhya', 'swh', 83), 'bxk': ('bukusu', 'swh', 33),
+           'rag': ('maragoli', 'swh', 13), 'ida': ('idakho', 'swh', 4)}
 DATES = {'ara': '2026-10-07', 'hat': '2026-10-13', 'kuj': '2026-10-14', 'spa': '2026-10-15',
-         'lsm': '2026-10-20', 'luy': '2026-10-20', 'bxk': '2026-10-20'}
+         'lsm': '2026-10-20', 'luy': '2026-10-20', 'bxk': '2026-10-20',
+         'rag': '2026-10-21', 'ida': '2026-10-21'}
 
 
 def urls(r):
@@ -88,6 +90,8 @@ class DbsAuditTest(unittest.TestCase):
         self.assertEqual(totals['lsm'], 1189)
         # Davar's whole Bible and FCBH's Luke.
         self.assertEqual(totals['bxk'], 1189 + 24)
+        # The Lulogooli Bible (2019): DBS has its Old Testament in audio.
+        self.assertEqual(totals['rag'], 929)
         # Three full Bibles, the Reina-Valera 1960 Old Testament and three New Testaments.
         self.assertEqual(totals['spa'], 1189 * 3 + 929 + 260 * 3)
 
@@ -321,6 +325,36 @@ class DbsAuditTest(unittest.TestCase):
                               ('bukusu', ('lubukusu', 'babukusu'))):
             for alias in aliases:
                 self.assertIn('{ "source": "/' + alias + '", "destination": "/' + slug + '/index.html" }', vercel)
+
+
+    def test_maragoli_idakho_and_tiriki(self):
+        rag = self.shelf('rag')
+        self.assertEqual(rag[0]['id'], 'rag-ab-ragbsk19-davr-ot-n')
+        # DBS's Lulogooli book names are kept, not replaced by the Swahili ones.
+        self.assertEqual(rag[0]['play']['bookNames']['Genesis'], 'Litanga')
+        self.assertEqual(rag[0]['play']['bookNames']['1Chronicles'], "1 Zing'inga")
+        self.assertEqual(len([r for r in rag if r['id'].startswith('rag-grn-')]), 8)
+        self.assertFalse(any(r.get('scope') for r in rag))
+        self.assertIn('moved', self.built['rag']['notCarried']['https://dbs.org/bibles/audio/RAGBSK_DAVR_OT_N'])
+        ida = {r['id']: r for r in self.shelf('ida')}
+        self.assertEqual(ida['ida-film-ida-tiriki-jesus']['scope'], 'Tiriki')
+        self.assertNotIn('scope', ida['ida-film-ida-lukakamega-mark'])
+        self.assertEqual(ida['ida-grn-18971']['scope'], 'Idakho')
+        self.assertEqual(ida['ida-grn-23261']['scope'], 'Isukha')
+        # One shelf, two pages: /tiriki names itself and loads the same catalogue.
+        tiriki = (ROOT / 'app/tiriki/index.html').read_text()
+        self.assertIn('"lang":"ida","ui":"swh","slug":"tiriki","name":"Tiriki","native":"Lutirichi"', tiriki)
+        self.assertIn('data/catalog-ida.js', tiriki)
+        self.assertIn("'tiriki/index.html'", (ROOT / 'app/sw.js').read_text())
+        vercel = (ROOT / 'vercel.json').read_text()
+        for slug, aliases in (('maragoli', ('lulogooli', 'logooli', 'luragoli', 'maragooli')),
+                              ('idakho', ('luidakho', 'lwidakho', 'isukha', 'lwisukha')),
+                              ('tiriki', ('tiriki', 'lutirichi', 'lutiriki'))):
+            for alias in aliases:
+                self.assertIn('{ "source": "/' + alias + '", "destination": "/' + slug + '/index.html" }', vercel)
+        mail = (ROOT / 'packer/library_mail.py').read_text()
+        for slug in ('maragoli', 'idakho', 'tiriki'):
+            self.assertIn(f'"{slug}": (', mail)
 
 
 if __name__ == '__main__':
