@@ -256,11 +256,13 @@
     var links = (r.links || []).filter(function (link) {
       return !/^Read .+\(PDF\)$/i.test(link.label || '');
     });
-    // The Library's own files are not on dbs.org; their makers are credited
-    // through r.links instead.
-    if (r.source && !/^https?:\/\/(www\.)?bibletransfer123\.org\//i.test(r.source) &&
+    // The source page is named by its own site, so a partner's page never
+    // reads as dbs.org. The Library's own files (Craft Stick Bible Stories,
+    // the workbook) credit their makers through r.links instead.
+    var srcHost = ((r.source || '').match(/^https?:\/\/(?:www\.)?([^\/:?#]+)/i) || [])[1];
+    if (srcHost && srcHost.toLowerCase() !== 'bibletransfer123.org' &&
         !links.some(function (l) { return l.url === r.source; })) {
-      links.push({ label: 'dbs.org', url: r.source });
+      links.push({ label: srcHost, url: r.source });
     }
     if (links.length) {
       html += '<p class="flabel" style="margin-top:1.6rem">' + h('item.more') + '</p>' +
