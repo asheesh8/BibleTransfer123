@@ -523,6 +523,9 @@
     if (id(fields.shareId)) e.shareId = fields.shareId;
     else if (session.source && id(session.source.shareId)) e.shareId = session.source.shareId;
     if (type === 'page_view' || type === 'shared_visit') { var ref = referrer(); if (ref) e.referrer = ref; }
+    // Sharing chain: which step this share is, and the share it grew from.
+    if (Number.isInteger(fields.depth) && fields.depth >= 1 && fields.depth <= 999) e.depth = fields.depth;
+    if (id(fields.parentShareId) && fields.parentShareId !== e.shareId) e.parentShareId = fields.parentShareId;
     if (Number.isFinite(fields.bytes) && fields.bytes >= 0) e.bytes = Math.min(Math.floor(fields.bytes), 1099511627776);
     if (Number.isFinite(fields.duration) && fields.duration >= 0) e.duration = Math.min(Math.round(fields.duration), 86400);
     queue = queue.filter(function (pending) { return Date.now() - Date.parse(pending.at) < QUEUE_AGE; });

@@ -211,7 +211,7 @@ test('Nigerian Pidgin covers all controls and guides with clear file wording', (
 test('Lingala covers every control and guide with clear file instructions', () => {
   const { ET, dictionaries } = harness();
   ET.i18n.set('ln');
-  assert.equal(Object.keys(dictionaries.ln).length, 419);
+  assert.equal(Object.keys(dictionaries.ln).length, 446);
   for (const key of Object.keys(dictionaries.pt)) assert.ok(dictionaries.ln[key], 'Lingala fallback: ' + key);
   assert.equal(ET.i18n.t('help.android.4.h'), 'Soki fichier efungwami te');
   assert.match(ET.i18n.t('help.ios.openfile.p'), /Soki fichier efungwami te/);
@@ -227,7 +227,7 @@ test('Lingala covers every control and guide with clear file instructions', () =
 test('Hausa covers all controls and guides with clear file wording', () => {
   const { ET, dictionaries } = harness();
   ET.i18n.set('ha');
-  assert.equal(Object.keys(dictionaries.ha).length, 419);
+  assert.equal(Object.keys(dictionaries.ha).length, 446);
   for (const key of Object.keys(dictionaries.pt)) assert.ok(dictionaries.ha[key], 'Hausa fallback: ' + key);
   assert.equal(ET.i18n.t('help.android.4.h'), 'Idan fayil ɗin bai buɗe ba');
   assert.match(ET.i18n.t('help.ios.openfile.p'), /Idan fayil ɗin bai buɗe ba/);
@@ -254,11 +254,25 @@ test('Hausa refreshes an older installed shell that falls back to English', () =
 
  test('Malagasy covers all controls and guides with precise file instructions', () => {
   const { ET, dictionaries } = harness({}, {lang: 'mlg', ui: 'mg'});
-  assert.equal(Object.keys(dictionaries.mg).length, 419);
+  assert.equal(Object.keys(dictionaries.mg).length, 446);
   for (const key of Object.keys(dictionaries.pt)) assert.ok(dictionaries.mg[key], 'Malagasy fallback: ' + key);
   assert.equal(ET.i18n.t('help.android.4.h'), 'Raha tsy misokatra ilay rakitra');
   assert.match(ET.i18n.t('help.ios.openfile.p'), /Raha tsy misokatra ilay rakitra/);
   assert.equal(ET.i18n.t('item.chapter', {n: 3}), 'Toko 3');
   assert.equal(ET.i18n.meta('mg').native, 'Malagasy');
   assert.match(ET.i18n.t('route.computer-android.2.p'), /File Transfer/);
+});
+
+test('sharing an item and the sharing chain are translated in every language', () => {
+  const { ET, dictionaries } = harness();
+  const keys = Object.keys(dictionaries.en).filter(key => /^(itemshare|chain)\./.test(key));
+  assert.equal(keys.length, 27);
+  for (const language of ET.i18n.langs) {
+    for (const key of keys) {
+      assert.ok(dictionaries[language.code][key], `${language.code}.${key} falls back to English`);
+      if (language.code !== 'en' && !/^itemshare\.(mail\.)?(from|to)$|^itemshare\.mail\.(fromto|from)$/.test(key)) {
+        assert.notEqual(dictionaries[language.code][key], dictionaries.en[key], `${language.code}.${key} is still English`);
+      }
+    }
+  }
 });
