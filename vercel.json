@@ -6,7 +6,7 @@
   "installCommand": null,
   "trailingSlash": false,
   "functions": {
-    "api/*.py": { "includeFiles": "packer/*.py" }
+    "api/*.py": { "includeFiles": "{packer/*.py,app/data/catalog.js}" }
   },
   "rewrites": [
     { "source": "/kirundi", "destination": "/kirundi/index.html" },
@@ -87,6 +87,21 @@
     { "source": "/lubukusu", "destination": "/bukusu/index.html" },
     { "source": "/babukusu", "destination": "/bukusu/index.html" },
     { "source": "/bxk", "destination": "/bukusu/index.html" },
+    { "source": "/maragoli", "destination": "/maragoli/index.html" },
+    { "source": "/lulogooli", "destination": "/maragoli/index.html" },
+    { "source": "/logooli", "destination": "/maragoli/index.html" },
+    { "source": "/luragoli", "destination": "/maragoli/index.html" },
+    { "source": "/maragooli", "destination": "/maragoli/index.html" },
+    { "source": "/rag", "destination": "/maragoli/index.html" },
+    { "source": "/idakho", "destination": "/idakho/index.html" },
+    { "source": "/luidakho", "destination": "/idakho/index.html" },
+    { "source": "/lwidakho", "destination": "/idakho/index.html" },
+    { "source": "/isukha", "destination": "/idakho/index.html" },
+    { "source": "/lwisukha", "destination": "/idakho/index.html" },
+    { "source": "/ida", "destination": "/idakho/index.html" },
+    { "source": "/tiriki", "destination": "/tiriki/index.html" },
+    { "source": "/lutirichi", "destination": "/tiriki/index.html" },
+    { "source": "/lutiriki", "destination": "/tiriki/index.html" },
     { "source": "/saamia", "destination": "/saamia/index.html" },
     { "source": "/samia", "destination": "/saamia/index.html" },
     { "source": "/olusaamia", "destination": "/saamia/index.html" },

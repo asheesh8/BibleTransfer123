@@ -991,6 +991,23 @@ Not carried: links to other sites (find.bible entries and GRN programme pages), 
 
 Rebuild with `python3 packer/build_dbs_audit.py lsm luy bxk`, then `npm run dbs:import`. The audits are `catalog/source/dbs-audit-{saamia,luhya,bukusu}-2026-10-20.json`.
 
+### Maragoli, Idakho and Tiriki — 2026-10-21
+
+Added two shelves and three pages, each with the Swahili interface (`swh`) as Kuria and the other Luhya shelves have: `/maragoli` (content `rag`, also `/lulogooli`, `/logooli`, `/luragoli`, `/maragooli`, `/rag`), and one Idakho-Isukha-Tiriki shelf (content `ida`, as DBS lists it) served by two pages, `/idakho` (also `/luidakho`, `/lwidakho`, `/isukha`, `/lwisukha`, `/ida`) and `/tiriki` (also `/lutirichi`, `/lutiriki`). ISO `lri`, sometimes given for Maragoli, is Marachi on DBS; Maragoli is `rag` ("Logooli").
+
+No machine translation service covers Lulogooli, Lwidakho or Lutirichi, and no reviewed interface wording exists, so the menus stay Swahili. What DBS gives in the language is kept: the Lulogooli Bible's 39 Old Testament book names in the audio Bible picker ("Litanga", "Kutura", "1 Zing'inga"…), the historic scans' own titles ("Litanga (1967)", "Mariko (1914)"), and each page's own language name (Lulogooli, Luidakho, Lutirichi). A native-speaker draft of the interface can be added later as its own `STRINGS` block.
+
+The same browser audit as the shelves above: each DBS language page and every page it lists rendered in headless Chromium, every carried file checked by a ranged request and its leading bytes, and every chapter of the Lulogooli audio Old Testament checked (929, all valid). The LUMO films' 1080p files return 404 on DBS, so their 360p chapters are carried.
+
+| Shelf | Resources | What is carried |
+|---|---|---|
+| Maragoli | 13 | Bible Society of Kenya's Lulogooli Bible (2019), Old Testament audio by Davar (39 books), listed first; JESUS (Luragoli, 61 chapters); LUMO Mark; 8 GRN programmes; scans of Genesis (1967) and Mark (1914) |
+| Idakho-Isukha-Tiriki | 4 | JESUS (the Tiriki dub, tagged); LUMO Mark (Lukakamega); GRN Good News (Idakho) and Words of Life (Isukha), each tagged |
+
+Not carried: DBS's older Logooli audio Old Testament page, which says it has moved to the 2019 edition; links to other sites (find.bible and GRN programme pages), whose DBS-hosted media is carried. DBS hosts no Lulogooli or Luidakho text Bible.
+
+Rebuild with `python3 packer/build_dbs_audit.py rag ida`, then `npm run dbs:import`. The audits are `catalog/source/dbs-audit-{maragoli,idakho}-2026-10-21.json`.
+
 ## Cross-language check — 2026-10-20
 
 Every interface string in every language except Gĩkũyũ, Ekegusii, Maa and Nigerian Pidgin (which machine translators do not cover) was machine back-translated to English with Google Translate and compared with the English reference, looking for wrong meaning, dropped information and wording that differs from what the same key says in the other languages. Pidgin was read directly. DeepL was not used: it needs an API key and covers few of these languages. Back-translation is noisy for Luo, Lingala, Kirundi and Akan in particular, so for those it only catches gross errors.
