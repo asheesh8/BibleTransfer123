@@ -17498,6 +17498,50 @@
   };
   Object.keys(ITEM_SHARE).forEach(function (code) { Object.assign(STRINGS[code], ITEM_SHARE[code]); });
 
+  /* The library's "From" filter: which partner library an item comes from
+     (library.js). The chips themselves are partner names and stay as credited. */
+  var LIB_SOURCE = {
+    "en": "From",
+    "cmn": "来源",
+    "hi": "स्रोत",
+    "mr": "स्रोत",
+    "ur": "ماخذ",
+    "swh": "Chanzo",
+    "zul": "Umthombo",
+    "pnb": "ماخذ",
+    "yue": "來源",
+    "ps": "سرچینه",
+    "pa": "ਸਰੋਤ",
+    "ne": "स्रोत",
+    "snd": "ذريعو",
+    "mg": "Loharano",
+    "rn": "Aho bivuye",
+    "ak": "Efi",
+    "ti": "ምንጪ",
+    "ar": "المصدر",
+    "ht": "Sous",
+    "es": "Fuente",
+    "ny": "Kochokera",
+    "rw": "Inkomoko",
+    "xh": "Umthombo",
+    "sn": "Kwazvinobva",
+    "ha": "Daga",
+    "ln": "Euti na",
+    "pcm": "Where e from",
+    "yo": "Orísun",
+    "pt": "Fonte",
+    "am": "ምንጭ",
+    "fr": "Source",
+    "ig": "Ebe o si",
+    "om": "Madda",
+    "luo": "Koa kuom",
+    "lg": "Ensibuko",
+    "kik": "Kuuma kũrĩ",
+    "guz": "Koma ase",
+    "mas": "Te"
+  };
+  Object.keys(LIB_SOURCE).forEach(function (code) { STRINGS[code]['lib.source'] = LIB_SOURCE[code]; });
+
   var shared = ET.libraryScope();
   var current = (shared && shared.ui) || ET.store.get('et.lang', '') || '';
   var listeners = [];
