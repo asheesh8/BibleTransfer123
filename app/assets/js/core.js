@@ -2104,7 +2104,9 @@ window.ET = (function () {
      It won't accept ready-made post words, so those go on the clipboard and a
      short note says to paste them. Call from the click, before the link opens. */
   function facebookUrl(url) {
-    return 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url);
+    // hashtag is the only extra Facebook still pre-fills (the person can remove
+    // it); prefilled post words and quote= are against Facebook's platform policy.
+    return 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url) + '&hashtag=' + encodeURIComponent('#Bible');
   }
   function copyText(text, done) {
     function fallback() {
