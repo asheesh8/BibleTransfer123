@@ -189,6 +189,19 @@
             <div id="shared-languages" class="bars"></div>
           </section>
         </div>
+        <section class="kpi-row" id="chain-signals" aria-label="Sharing chain summary"></section>
+        <div class="grid grid-2">
+          <section class="card" aria-labelledby="chain-depth-title">
+            <div class="card-heading"><div><h2 id="chain-depth-title">How far shares travel</h2><p class="muted">Share attempts by step in the chain</p></div></div>
+            <div id="chain-depth" class="bars"></div>
+            <p class="card-note">Step 1 is someone sharing what they found. Step 2 is passing on a link they were sent, and so on. Steps come from the link, so they still count when someone in between declined analytics.</p>
+          </section>
+          <section class="card" aria-labelledby="chain-top-title">
+            <div class="card-heading"><div><h2 id="chain-top-title">Biggest sharing chains</h2><p class="muted">Shares that grew from one first share</p></div></div>
+            <div id="chain-top" class="bars"></div>
+            <p class="card-note">Chains join only where each person accepted analytics. Names typed into share messages are never sent to this dashboard.</p>
+          </section>
+        </div>
       </section>
 
       <!-- Activity log -->
