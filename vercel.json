@@ -6,7 +6,10 @@
   "installCommand": null,
   "trailingSlash": false,
   "functions": {
-    "api/*.py": { "includeFiles": "{packer/*.py,app/data/catalog.js}" }
+    "api/*.py": {
+      "includeFiles": "{packer/*.py,app/data/catalog.js}",
+      "excludeFiles": "{app/assets/**,catalog/**,art/**,docs/**,output/**,tests/**}"
+    }
   },
   "rewrites": [
     { "source": "/:slug(english|mandarin|hindi|marathi|urdu|swahili|zulu|western-punjabi|cantonese|pashto|eastern-punjabi|nepali|sindhi|luganda|luo|malagasy|kirundi|akan|tigrinya|arabic|haitian|spanish|kuria|luhya|bukusu|saamia|maragoli|idakho|tiriki|chichewa|kinyarwanda|xhosa|shona|hausa|lingala|nigerian-pidgin|yoruba|portuguese|amharic|french|igbo|oromo|kikuyu|gusii|maasai)", "has": [{ "type": "query", "key": "src", "value": "qr" }], "destination": "/api/qr?l=:slug" },

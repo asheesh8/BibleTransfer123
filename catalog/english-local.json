@@ -7,20 +7,20 @@
    "title": "The Bible Study Tool Box",
    "org": "Dr. Daniel S. Haifley",
    "year": "2023",
-   "cover": "https://bible-transfer123.vercel.app/assets/library/bible-study-toolbox.jpg",
+   "cover": "https://www.bibletransfer123.org/assets/library/bible-study-toolbox.jpg",
    "desc": "A study manual on biblical hermeneutics: the principles for reading and understanding the Bible, one chapter each, with workbook questions. 152 pages.",
    "stats": "Workbook · 152 pages",
    "read": {
     "kind": "pdf",
-    "url": "https://bible-transfer123.vercel.app/assets/library/bible-study-toolbox.pdf"
+    "url": "https://www.bibletransfer123.org/assets/library/bible-study-toolbox.pdf"
    },
    "downloads": [
     {
      "label": "PDF",
-     "url": "https://bible-transfer123.vercel.app/assets/library/bible-study-toolbox.pdf"
+     "url": "https://www.bibletransfer123.org/assets/library/bible-study-toolbox.pdf"
     }
    ],
-   "source": "https://bible-transfer123.vercel.app/assets/library/bible-study-toolbox.pdf",
+   "source": "https://www.bibletransfer123.org/assets/library/bible-study-toolbox.pdf",
    "lang": "eng",
    "langName": "English",
    "play": null,
@@ -29,6 +29,70 @@
    "license": "© 2023 Daniel S. Haifley",
    "scope": null,
    "typeLabel": "Books and Guides"
+  },
+  {
+   "id": "eng-film-csbs-doubting-thomas",
+   "type": "film",
+   "title": "Doubting Thomas — Craft Stick Bible Stories",
+   "org": "Waking Word Inc.",
+   "year": null,
+   "duration": "4:29",
+   "cover": "https://www.bibletransfer123.org/assets/library/csbs/doubting-thomas.jpg",
+   "desc": "Jesus appeared to some of his followers after his death. They told Thomas they saw the Lord, but Thomas wouldn't believe until he saw Jesus alive with his own eyes. (John 20:19-29) Episode 1 of Craft Stick Bible Stories, a children's series told with craft-stick puppets.",
+   "play": {
+    "kind": "file",
+    "sd": "https://www.bibletransfer123.org/assets/library/csbs/doubting-thomas.mp4"
+   },
+   "links": [
+    {
+     "label": "Waking Word Inc. · wakingword.org",
+     "url": "https://wakingword.org"
+    }
+   ],
+   "source": "https://www.bibletransfer123.org/assets/library/csbs/doubting-thomas.mp4",
+   "lang": "eng",
+   "langName": "English",
+   "downloads": [],
+   "read": null,
+   "native": null,
+   "stats": "Episode 1",
+   "license": "© Waking Word Inc. Shared with the VillageServer Initiative by permission.",
+   "scope": "John 20:19-29",
+   "typeLabel": "Films",
+   "series": "Craft Stick Bible Stories",
+   "episode": 1
+  },
+  {
+   "id": "eng-film-csbs-jesus-calms-the-storm",
+   "type": "film",
+   "title": "Jesus Calms the Storm — Craft Stick Bible Stories",
+   "org": "Waking Word Inc.",
+   "year": null,
+   "duration": "4:48",
+   "cover": "https://www.bibletransfer123.org/assets/library/csbs/jesus-calms-the-storm.jpg",
+   "desc": "Jesus and his followers were crossing the sea. A violent storm arrived and the disciples became afraid. Just when everything felt hopeless, Jesus silenced the storm. (Mark 4, Luke 8 and Matthew 8) Episode 4 of Craft Stick Bible Stories, a children's series told with craft-stick puppets.",
+   "play": {
+    "kind": "file",
+    "sd": "https://www.bibletransfer123.org/assets/library/csbs/jesus-calms-the-storm.mp4"
+   },
+   "links": [
+    {
+     "label": "Waking Word Inc. · wakingword.org",
+     "url": "https://wakingword.org"
+    }
+   ],
+   "source": "https://www.bibletransfer123.org/assets/library/csbs/jesus-calms-the-storm.mp4",
+   "lang": "eng",
+   "langName": "English",
+   "downloads": [],
+   "read": null,
+   "native": null,
+   "stats": "Episode 4",
+   "license": "© Waking Word Inc. Shared with the VillageServer Initiative by permission.",
+   "scope": "Mark 4, Luke 8 and Matthew 8",
+   "typeLabel": "Films",
+   "series": "Craft Stick Bible Stories",
+   "episode": 4
   }
  ]
 }
