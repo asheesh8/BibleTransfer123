@@ -17671,11 +17671,17 @@
 
   function chosen() { return !!ET.store.get('et.lang', ''); }
 
+  // Pickers list languages A to Z by English name; LANGS keeps English first
+  // because it is the fallback.
+  function byName() {
+    return LANGS.slice().sort(function (a, b) { return a.name.localeCompare(b.name, 'en'); });
+  }
+
   /* The language picker doubles as the first-run screen. Someone who cannot
      read the interface cannot navigate to a settings page to fix that, so the
      options are always shown in their own script, never translated. */
   function picker(force) {
-    var rows = LANGS.map(function (l) {
+    var rows = byName().map(function (l) {
       var on = l.code === (current || 'en');
       return '<button class="tile" data-lang="' + l.code + '" data-find="' +
              ET.esc((l.name + ' ' + l.native + ' ' + l.code).toLowerCase()) + '" ' +
@@ -17754,7 +17760,7 @@
     try {
       ET.library().resources.forEach(function (r) { counts[r.lang] = (counts[r.lang] || 0) + 1; });
     } catch (e) {}
-    var order = LANGS.slice();
+    var order = byName();
     if (guess) order.sort(function (a, b) { return (b.code === guess) - (a.code === guess); });
 
     var el = document.createElement('div');

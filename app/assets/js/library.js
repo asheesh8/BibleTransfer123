@@ -169,16 +169,10 @@
     var currentLabel = state.lang && lib.languages[state.lang];
     currentLang.innerHTML = currentLabel ? ET.esc(currentLabel.native || currentLabel.name) : h('lib.all');
 
-    // Keep the catalogue filters in the same worldwide-speaker order as the
-    // interface language picker. Append future catalogue-only languages so a
-    // missing interface translation never hides their resources.
-    var langs = ET.i18n.langs.map(function (lang) {
-      return ET.contentCode(lang.code);
-    }).filter(function (code, at, all) {
-      return lib.languages[code] && all.indexOf(code) === at;
-    });
-    Object.keys(lib.languages).forEach(function (code) {
-      if (langs.indexOf(code) < 0) langs.push(code);
+    // A to Z by English name, like the interface language picker, so a
+    // reader can find their language without knowing how the list was built.
+    var langs = Object.keys(lib.languages).sort(function (a, b) {
+      return lib.languages[a].name.localeCompare(lib.languages[b].name, 'en');
     });
     langFilters.innerHTML =
       ['<button class="fchip" data-lang="" aria-pressed="' + (!state.lang) + '">' +

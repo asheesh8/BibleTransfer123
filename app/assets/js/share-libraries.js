@@ -47,7 +47,7 @@
     ['kikuyu', 'kik', 'Kikuyu', 'Gĩkũyũ'],
     ['gusii', 'guz', 'Gusii / Ekegusii / Kisii', 'Ekegusii / Kisii'],
     ['maasai', 'mas', 'Maasai', 'ɔl Maa']
-  ];
+  ].sort(function (a, b) { return a[2].localeCompare(b[2], 'en'); });
   var resources = ET.library().resources;
   var web = location.protocol === 'http:' || location.protocol === 'https:';
   var t = ET.i18n.t, h = ET.i18n.h;
