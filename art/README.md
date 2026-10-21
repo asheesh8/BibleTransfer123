@@ -51,3 +51,14 @@ purple deep `#4E1F64`, cream `#FFFBF2`, ink `#2A1B33`.
 on the card — nothing may load from a network at runtime. And keep each file
 under about 150 KB; a card's space belongs to Scripture and film before it
 belongs to decoration.
+
+## Link-preview cards (`art/og/`)
+
+When someone shares a library on Facebook, WhatsApp or anywhere else, the
+picture under the link is `app/assets/og/<slug>.jpg` (1200×630): the language's
+own name, its page title, and a phone showing that library. `card.html` is the
+layout; `node art/og/render.js` screenshots every language page and saves the
+pictures plus `cards.json` (each page's title and description in its own
+language). `python3 packer/write_og_tags.py` then writes the og: tags into the
+pages. A new language needs one run of both; bump `VERSION` in the Python
+script whenever the pictures change so Facebook fetches them again.

@@ -70,6 +70,8 @@
         '<a class="btn sky" href="' + ET.esc(url) + '">' + ET.icon('book') + h('sharelib.launch.open') + '</a>' +
         '<a class="btn green" data-share-email="' + x[0] + '" href="mailto:?subject=' + encodeURIComponent(subject) + '&body=' +
           encodeURIComponent(body) + '">' + ET.icon('share') + h('sharelib.email') + '</a>' +
+        (web ? '<a class="btn fb" data-share-facebook="' + x[0] + '" target="_blank" rel="noopener noreferrer" href="' +
+          ET.esc(ET.facebookUrl(url)) + '">' + ET.icon('facebook') + h('fbshare.button') + '</a>' : '') +
         '</div></article>';
     }).join('');
     ET.$$('[data-share-email]').forEach(function (a) {
@@ -80,6 +82,15 @@
         var intent = ET.analytics.shareIntent(urlFor(slug), 'email', { language: language[1] });
         a.href = 'mailto:?subject=' + encodeURIComponent(t('sharelib.subject', { lang: language[2] })) +
           '&body=' + encodeURIComponent(t('sharelib.body', { lang: language[2], url: intent.url }));
+      });
+    });
+    ET.$$('[data-share-facebook]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        var slug = a.getAttribute('data-share-facebook');
+        var language = routes.filter(function (x) { return x[0] === slug; })[0];
+        if (!language) return;
+        var intent = ET.analytics.shareIntent(urlFor(slug), 'facebook', { language: language[1], status: 'opened' });
+        ET.facebookShare(a, intent.url, t('fbshare.post', { lang: language[2] }));
       });
     });
   }

@@ -1,0 +1,186 @@
+{
+ "akan": {
+  "title": "Twi (Akan) Twerɛ Kronkron Nwomakorabea",
+  "description": "Bible sinima, Bible a wotie ne Kyerɛwnsɛm a ɛyɛ kwa (Twi (Akan)). Hwɛ, tie na kenkan wɔ fon biara so, na fa kɔma afoforo!"
+ },
+ "amharic": {
+  "title": "የአማርኛ መጽሐፍ ቅዱስ ቤተ መጻሕፍት",
+  "description": "በነጻ የመጽሐፍ ቅዱስ ፊልሞች፣ የድምፅ መጽሐፍ ቅዱስና ቅዱሳት መጻሕፍት በአማርኛ። በማንኛውም ስልክ ይመልከቱ፣ ያዳምጡ፣ ያንብቡ፤ ከዚያም ለሌሎች ያካፍሉ!"
+ },
+ "arabic": {
+  "title": "مكتبة الكتاب المقدس: العربية",
+  "description": "أفلام وتسجيلات صوتية ونصوص من الكتاب المقدس مجاناً باللغة العربية. شاهد واستمع واقرأ على أي هاتف، ثم شاركه مع غيرك!"
+ },
+ "bukusu": {
+  "title": "Maktaba ya Biblia ya Lubukusu",
+  "description": "Filamu za Biblia, sauti na Maandiko bure kwa Lubukusu. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
+ },
+ "cantonese": {
+  "title": "廣東話聖經資料庫",
+  "description": "免費嘅廣東話聖經電影、有聲聖經同經文。喺任何手機都可以睇、聽同讀，之後再分享出去！"
+ },
+ "chichewa": {
+  "title": "Laibulale ya Baibulo mu Chichewa",
+  "description": "Mafilimu a Baibulo, Baibulo lomvetsera ndi Malemba aulere (Chichewa). Onerani, mverani ndi kuwerenga pa foni iliyonse, kenako gawirani ena!"
+ },
+ "eastern-punjabi": {
+  "title": "ਪੰਜਾਬੀ ਬਾਈਬਲ ਲਾਇਬ੍ਰੇਰੀ",
+  "description": "ਪੰਜਾਬੀ ਵਿੱਚ ਮੁਫ਼ਤ ਬਾਈਬਲ ਫ਼ਿਲਮਾਂ, ਆਡੀਓ ਅਤੇ ਪਵਿੱਤਰ ਸ਼ਾਸਤਰ। ਕਿਸੇ ਵੀ ਫ਼ੋਨ ’ਤੇ ਵੇਖੋ, ਸੁਣੋ ਅਤੇ ਪੜ੍ਹੋ, ਫਿਰ ਅੱਗੇ ਭੇਜੋ!"
+ },
+ "english": {
+  "title": "English Bible Library",
+  "description": "Free Bible films, audio and Scripture in English. Watch, listen and read on any phone, then pass it on!"
+ },
+ "french": {
+  "title": "Bibliothèque biblique · Français",
+  "description": "Films bibliques, Bible audio et Écritures gratuits en Français. Regardez, écoutez et lisez sur n’importe quel téléphone, puis faites passer !"
+ },
+ "gusii": {
+  "title": "Laiburari ya Ebibilia ase Ekegusii / Kisii",
+  "description": "Filamu chia Bibilia, Bibilia y'okoigwa na Amaandiko buya (Ekegusii / Kisii). Rora, igwa na osome ase esimu yonde, korende kiyie abande!"
+ },
+ "haitian": {
+  "title": "Bibliyotèk Bib an Kreyòl ayisyen",
+  "description": "Fim Bib, Bib odyo ak Ekriti gratis an Kreyòl ayisyen. Gade, koute epi li sou nenpòt telefòn, epi pataje l ak lòt moun!"
+ },
+ "hausa": {
+  "title": "Ɗakin karatu na Littafi Mai Tsarki a Hausa",
+  "description": "Fina-finan Littafi Mai Tsarki, sauti da Nassi kyauta a Hausa. Kalla, saurara kuma karanta a kowace waya, sannan ka raba wa wasu!"
+ },
+ "hindi": {
+  "title": "हिन्दी बाइबल पुस्तकालय",
+  "description": "हिन्दी में मुफ़्त बाइबल फ़िल्में, ऑडियो और पवित्र शास्त्र। किसी भी फ़ोन पर देखें, सुनें और पढ़ें, फिर दूसरों तक पहुँचाएँ!"
+ },
+ "home": {
+  "title": "The Library: free Bible films, audio and Scripture",
+  "description": "Films, audio Bibles and Scripture in 40+ languages. Watch, listen and read on any phone, then pass it on."
+ },
+ "idakho": {
+  "title": "Maktaba ya Biblia ya Luidakho",
+  "description": "Filamu za Biblia, sauti na Maandiko bure kwa Luidakho. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
+ },
+ "igbo": {
+  "title": "Ọba Akwụkwọ Baịbụl — Asụsụ Igbo",
+  "description": "Ihe nkiri Baịbụl, Baịbụl a na-ege ntị na Akwụkwọ Nsọ n'efu (Asụsụ Igbo). Lee, gee ntị ma gụọ na ekwentị ọ bụla, wee kesaara ndị ọzọ!"
+ },
+ "kikuyu": {
+  "title": "Maktaba ya Bibilia ya Gĩkũyũ",
+  "description": "Mbica cia Bibilia, Bibilia ya kũigua na Maandĩko ma tũhũ (Gĩkũyũ). Rora, igua na ũthome thimũ-inĩ o yothe, ũcoke ũtũmĩre angĩ!"
+ },
+ "kinyarwanda": {
+  "title": "Isomero rya Bibiliya — Ikinyarwanda",
+  "description": "Filime za Bibiliya, Bibiliya yumvwa n'Ibyanditswe Byera ku buntu (Ikinyarwanda). Reba, umva kandi usome kuri telefone iyo ari yo yose, hanyuma ubisangize abandi!"
+ },
+ "kirundi": {
+  "title": "Isomero rya Bibiliya — Ikirundi",
+  "description": "Amafilime ya Bibiliya, Bibiliya yumvikana n'Ivyanditswe Vyeranda ku buntu (Ikirundi). Raba, umviriza kandi usome kuri telefone iyo ari yo yose, hanyuma ubisangize abandi!"
+ },
+ "kuria": {
+  "title": "Maktaba ya Biblia ya Igikuria",
+  "description": "Filamu za Biblia, sauti na Maandiko bure kwa Igikuria. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
+ },
+ "lingala": {
+  "title": "Bibliotɛkɛ ya Biblia na Lingála",
+  "description": "Bafilime ya Biblia, Biblia ya koyoka mpe Makomi ya ofele na Lingála. Talá, yoká mpe tángá na telefone nyonso, sima kabolá yango na basusu!"
+ },
+ "luganda": {
+  "title": "Layibulale ya Bayibuli mu Luganda",
+  "description": "Firimu za Bayibuli, Bayibuli ey'okuwuliriza n'Ebyawandiikibwa eby'obwereere (Luganda). Laba, wuliriza era osome ku ssimu yonna, oluvannyuma okiweereze abalala!"
+ },
+ "luhya": {
+  "title": "Maktaba ya Biblia ya Oluluhya",
+  "description": "Filamu za Biblia, sauti na Maandiko bure kwa Oluluhya. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
+ },
+ "luo": {
+  "title": "Laibrari mar Muma e Dholuo",
+  "description": "Filmbe mag Muma, Muma mawinjo kod Ndiko Maler nono (Dholuo). Ne, winj kendo som e simu moro amora, eka imi jomamoko!"
+ },
+ "maasai": {
+  "title": "Enkaji e Biblia te ɔl Maa",
+  "description": "Ifilamu e Biblia, Biblia naaning'ito o Ingolon e Nkai pee ebaiki (ɔl Maa). Dol, ining' o isom te esimu nabo, neiyiaa lukunya!"
+ },
+ "malagasy": {
+  "title": "Trano famakiam-boky ara-baiboly amin’ny teny Malagasy",
+  "description": "Sarimihetsika, Baiboly henoina ary Soratra Masina maimaim-poana amin'ny teny Malagasy. Jereo, henoy ary vakio amin'ny finday rehetra, dia zarao amin'ny hafa!"
+ },
+ "mandarin": {
+  "title": "普通话圣经资料库",
+  "description": "免费的普通话圣经电影、有声圣经和经文。在任何手机上观看、聆听和阅读，然后分享给别人！"
+ },
+ "maragoli": {
+  "title": "Maktaba ya Biblia ya Lulogooli",
+  "description": "Filamu za Biblia, sauti na Maandiko bure kwa Lulogooli. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
+ },
+ "marathi": {
+  "title": "मराठी बायबल ग्रंथालय",
+  "description": "मराठी मध्ये मोफत बायबल चित्रपट, ऑडिओ आणि पवित्र शास्त्र. कोणत्याही फोनवर पाहा, ऐका आणि वाचा, मग इतरांना पाठवा!"
+ },
+ "nepali": {
+  "title": "नेपाली बाइबल पुस्तकालय",
+  "description": "नेपाली मा निःशुल्क बाइबल चलचित्र, अडियो र धर्मशास्त्र। जुनसुकै फोनमा हेर्नुहोस्, सुन्नुहोस् र पढ्नुहोस्, अनि अरूलाई पनि पठाउनुहोस्!"
+ },
+ "nigerian-pidgin": {
+  "title": "Bible Library for Naija Pidgin",
+  "description": "Free Bible film, audio and Scripture for Naija Pidgin. Watch, listen and read for any phone, then share am give oda people!"
+ },
+ "oromo": {
+  "title": "Laayibrarii Kitaaba Qulqulluu — Afaan Oromoo",
+  "description": "Fiilmii Macaafa Qulqulluu, sagalee fi Katabbii Qulqulluu bilisaan (Afaan Oromoo). Bilbila kamiinuu ilaalaa, dhaggeeffadhaa fi dubbisaa, achiis warra kaaniif dabarsaa!"
+ },
+ "pashto": {
+  "title": "د پښتو بایبل کتابتون",
+  "description": "په پښتو کې وړیا د انجیل فلمونه، غږیز انجیل او سپېڅلی کتاب. په هر تلیفون یې وګورئ، واورئ او ولولئ، بیا یې نورو ته ورسوئ!"
+ },
+ "portuguese": {
+  "title": "Biblioteca bíblica — Português",
+  "description": "Filmes bíblicos, áudio e Escrituras grátis em Português. Assista, ouça e leia em qualquer telefone, depois passe adiante!"
+ },
+ "saamia": {
+  "title": "Maktaba ya Biblia ya Olusaamia",
+  "description": "Filamu za Biblia, sauti na Maandiko bure kwa Olusaamia. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
+ },
+ "shona": {
+  "title": "Raibhurari yeBhaibheri — chiShona",
+  "description": "Mafirimu eBhaibheri, Bhaibheri rinoteererwa neMagwaro emahara (chiShona). Tarisa, teerera uye uverenge pafoni ipi neipi, wozogovera vamwe!"
+ },
+ "sindhi": {
+  "title": "سنڌي بائيبل لائبريري",
+  "description": "سنڌي ۾ مفت بائبل فلمون، آڊيو ۽ پاڪ ڪلام. ڪنهن به فون تي ڏسو، ٻڌو ۽ پڙهو، پوءِ ٻين تائين پهچايو!"
+ },
+ "spanish": {
+  "title": "Biblioteca bíblica · Español",
+  "description": "Películas bíblicas, audio y Escrituras gratis en Español. Mire, escuche y lea en cualquier teléfono, ¡y compártalo con otros!"
+ },
+ "swahili": {
+  "title": "Maktaba ya Biblia ya Kiswahili",
+  "description": "Filamu za Biblia, sauti na Maandiko bure kwa Kiswahili. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
+ },
+ "tigrinya": {
+  "title": "ቤተ መጻሕፍቲ መጽሓፍ ቅዱስ ብትግርኛ",
+  "description": "ብነጻ ናይ መጽሓፍ ቅዱስ ፊልምታት፣ ድምጺን ቅዱሳት መጻሕፍትን ብትግርኛ። ኣብ ዝኾነ ተሌፎን ርኣዩ፣ ስምዑን ኣንብቡን፡ ድሕሪኡ ንኻልኦት ኣካፍሉ!"
+ },
+ "tiriki": {
+  "title": "Maktaba ya Biblia ya Lutirichi",
+  "description": "Filamu za Biblia, sauti na Maandiko bure kwa Lutirichi. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
+ },
+ "urdu": {
+  "title": "اردو بائبل لائبریری",
+  "description": "اردو میں مفت بائبل فلمیں، آڈیو اور کلامِ مقدس۔ کسی بھی فون پر دیکھیں، سنیں اور پڑھیں، پھر دوسروں تک پہنچائیں!"
+ },
+ "western-punjabi": {
+  "title": "پنجابی بائبل لائبریری",
+  "description": "پنجابی وچ مفت بائبل فلماں، آڈیو تے پاک کلام۔ کسے وی فون تے ویکھو، سنو تے پڑھو، فیر اگے گھلو!"
+ },
+ "xhosa": {
+  "title": "Ithala leBhayibhile — isiXhosa",
+  "description": "Iifilimu zeBhayibhile, isandi neZibhalo simahla (isiXhosa). Bukela, mamela ufunde kuyo nayiphi na ifowuni, uze wabelane nabanye!"
+ },
+ "yoruba": {
+  "title": "Ilé ìkàwé Bíbélì — Èdè Yorùbá",
+  "description": "Àwọn fíìmù Bíbélì, Bíbélì olóhùn àti Ìwé Mímọ́ lọ́fẹ̀ẹ́ ní Èdè Yorùbá. Wò ó, gbọ́ ọ, kí o sì kà á lórí fóònù èyíkéyìí, lẹ́yìn náà pín in fún àwọn mìíràn!"
+ },
+ "zulu": {
+  "title": "Umtapo weBhayibheli (isiZulu)",
+  "description": "Amafilimu eBhayibheli, umsindo nemiBhalo mahhala (isiZulu). Buka, lalela futhi ufunde kunoma iyiphi ifoni, bese wabelana nabanye!"
+ }
+}

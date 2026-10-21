@@ -316,6 +316,18 @@ body.bulk-mode { padding-bottom: calc(var(--tabbar) + 92px + env(safe-area-inset
 .send-library-row .btn { flex: 0 1 9rem; }
 .send-library .send-library-status:empty { display: none; }
 
+/* Short confirmation pinned above the bottom edge (e.g. "post words copied"). */
+.et-toast {
+  position: fixed; left: 50%; bottom: calc(6rem + env(safe-area-inset-bottom)); z-index: 60;
+  display: flex; gap: .6rem; align-items: flex-start; width: min(32rem, calc(100% - 2rem));
+  margin: 0; padding: .85rem 1rem; border-radius: var(--r-lg);
+  background: #12233D; color: #fff; font-weight: 700; box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  transform: translate(-50%, 140%); opacity: 0; transition: transform .25s ease, opacity .25s ease;
+  pointer-events: none;
+}
+.et-toast.show { transform: translate(-50%, 0); opacity: 1; }
+.et-toast svg { width: 22px; height: 22px; flex: none; color: #6EE7A0; }
+
 /* Pass it on: the inline share card on every item, and the note a recipient
    sees saying who sent it. Prominent, but part of the page, never a pop-up. */
 .pass-on { margin-top: 1.3rem; border-color: var(--green); display: grid; gap: .7rem; }
@@ -486,6 +498,7 @@ body.bulk-mode { padding-bottom: calc(var(--tabbar) + 92px + env(safe-area-inset
 .btn.green { --face: var(--green); --edge: var(--green-deep); }
 .btn.gold  { --face: var(--gold);  --edge: var(--gold-deep); color: #3A2A05; }
 .btn.sky   { --face: var(--sky);   --edge: var(--sky-deep); }
+.btn.fb    { --face: #1877F2; --edge: #0B5BC4; color: #fff; }
 
 .btn.ghost {
   --face: var(--surface); --edge: var(--line-strong);

@@ -91,6 +91,16 @@
   }
   var actions = ET.$('.shared-actions');
   if (/^https?:$/.test(location.protocol) && actions) {
+    var fb = document.createElement('a');
+    fb.className = 'btn fb'; fb.setAttribute('data-shared-channel', 'facebook');
+    fb.innerHTML = ET.icon('facebook') + h('fbshare.button');
+    fb.target = '_blank'; fb.rel = 'noopener noreferrer';
+    fb.href = ET.facebookUrl(publicUrl);
+    fb.addEventListener('click', function () {
+      var intent = ET.analytics.shareIntent(publicUrl, 'facebook', { language: scope.lang, status: 'opened' });
+      ET.facebookShare(fb, intent.url, t('fbshare.post', { lang: language }));
+    });
+    actions.insertBefore(fb, email.nextSibling);
     [['whatsapp', 'WhatsApp'], ['telegram', 'Telegram']].forEach(function (method) {
       var a = document.createElement('a');
       a.className = 'btn ghost'; a.textContent = method[1];
