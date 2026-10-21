@@ -57,8 +57,8 @@ FIELDS = frozenset((
     "depth", "parentShareId",
 ))
 # Printed QR codes open https://bibletransfer123.org/<slug>?src=qr. Vercel
-# rewrites those to /api/qr, which adds one to a per-day count and redirects to
-# the library. The count has no visitor ID, cookie or address, so it covers
+# redirects those to /api/qr (a rewrite would lose to the <slug>/ folder),
+# which adds one to a per-day count and redirects to the library. The count has no visitor ID, cookie or address, so it covers
 # every scan, not only visitors who accept analytics. Mirrors share-libraries.js.
 QR_LIBRARIES = {
     "english": "eng",

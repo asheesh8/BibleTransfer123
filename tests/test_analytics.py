@@ -495,9 +495,12 @@ class AnalyticsTest(unittest.TestCase):
         routes = dict(re.findall(r"\['([a-z-]+)', '([a-z]{3})'", (root / "app/assets/js/share-libraries.js").read_text()))
         self.assertEqual(api.QR_LIBRARIES, routes)
         config = json.loads((root / "vercel.json").read_text())
-        rule = [r for r in config["rewrites"] if r.get("destination") == "/api/qr?l=:slug"]
+        # A redirect, because Vercel serves the <slug>/ folder before any rewrite.
+        self.assertFalse([r for r in config["rewrites"] if "/api/qr" in r.get("destination", "")])
+        rule = [r for r in config["redirects"] if r.get("destination") == "/api/qr?l=:slug"]
         self.assertEqual(len(rule), 1)
-        self.assertIs(config["rewrites"][0], rule[0])
+        self.assertIs(config["redirects"][0], rule[0])
+        self.assertIs(rule[0]["permanent"], False)
         self.assertEqual(rule[0]["has"], [{"type": "query", "key": "src", "value": "qr"}])
         self.assertEqual(set(re.fullmatch(r"/:slug\((.*)\)", rule[0]["source"]).group(1).split("|")), set(routes))
 
