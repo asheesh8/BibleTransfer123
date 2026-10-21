@@ -1007,3 +1007,18 @@ The same browser audit as the shelves above: each DBS language page and every pa
 Not carried: DBS's older Logooli audio Old Testament page, which says it has moved to the 2019 edition; links to other sites (find.bible and GRN programme pages), whose DBS-hosted media is carried. DBS hosts no Lulogooli or Luidakho text Bible.
 
 Rebuild with `python3 packer/build_dbs_audit.py rag ida`, then `npm run dbs:import`. The audits are `catalog/source/dbs-audit-{maragoli,idakho}-2026-10-21.json`.
+
+## Cross-language check — 2026-10-20
+
+Every interface string in every language except Gĩkũyũ, Ekegusii, Maa and Nigerian Pidgin (which machine translators do not cover) was machine back-translated to English with Google Translate and compared with the English reference, looking for wrong meaning, dropped information and wording that differs from what the same key says in the other languages. Pidgin was read directly. DeepL was not used: it needs an API key and covers few of these languages. Back-translation is noisy for Luo, Lingala, Kirundi and Akan in particular, so for those it only catches gross errors.
+
+Most differences were good paraphrases ("resource" for "item", "Bible texts" for "Scripture"). Fixed:
+
+- The "Email this library" form (recipient label, button, sending, sent, invalid address, rate limit and email-app fallback) was English in 28 languages. It is now translated in all of them except Gĩkũyũ, Ekegusii and Maa, which still show English there because their wording could not be checked.
+- Share wizard: Luganda's "sharing TO" question used *okudda* ("return"); it now reads *Oweereza KU kyuma ki?*. Hindi's *किससे* could be read as "from whom", so both questions now name the device (*किस उपकरण से/पर*). Haitian Creole's pair (*ou ap pataje SOTI/ALE*) was rewritten as natural Kreyòl (*W ap voye l SOTI/ALE nan ki aparèy?*).
+- Haitian Creole used the same word for a button and its finished state (Send/Sent *Voye*, Receive/Received *Resevwa*, Connect/Connected *Konekte*, Save/Saved *Sere*); the states now read *Li ale*, *Li rive*, *Yo konekte*, *Li sere*.
+- Nigerian Pidgin: "Show me how to share am" (was "how I go take share am"); "{n} chapter" no longer reads like a chapter number.
+
+Also checked across all languages: the Nearby code instruction names the language's own Receive button, and the "nothing found" hint names its own All filter.
+
+Left as is, for a native reader to judge: Igbo and Luo shorten several long guide steps (LocalSend fallback, AirDrop "Contacts Only" warning, which app opens which file type) while keeping the instruction itself; Mandarin and Cantonese call the library 资料库/資料庫, which can also read as "database".
