@@ -1022,3 +1022,20 @@ Most differences were good paraphrases ("resource" for "item", "Bible texts" for
 Also checked across all languages: the Nearby code instruction names the language's own Receive button, and the "nothing found" hint names its own All filter.
 
 Left as is, for a native reader to judge: Igbo and Luo shorten several long guide steps (LocalSend fallback, AirDrop "Contacts Only" warning, which app opens which file type) while keeping the instruction itself; Mandarin and Cantonese call the library 资料库/資料庫, which can also read as "database".
+
+### Kabras, Tachoni, Banyala and Marachi — 2026-10-24
+
+Added four shelves and pages, each with the Swahili interface (`swh`) like the other Luhya shelves: `/kabras` (content `lkb`, also `/lukabaras`, `/kabarasi`, `/lkb`), `/tachoni` (`lts`, also `/lutachoni`, `/olutachoni`), `/banyala` (`nle`, DBS's "East Nyala"; also `/olunyala`, `/lunyala`, `/bunyala`, `/nyala`) and `/marachi` (`lri`, also `/olumarachi`). No machine translation service covers these languages, so the menus stay Swahili; titles GRN gives in the language (for example Tachoni "Okhwanja Nende Wele Mulayi") are kept.
+
+DBS's own pages for these languages hold little, so each shelf also takes its own variety's Global Recordings programmes from DBS's Luyia collection (the audit's `extra` page, with only that variety's folder). Same browser audit as above: every carried file checked by a ranged request and its leading bytes, and every chapter of the Nyala New Testament (260, all valid).
+
+| Shelf | Resources | What is carried |
+|---|---|---|
+| Kabras | 11 | JESUS (Lukabaras, 61 chapters); 10 GRN programmes (Good News, Look Listen & Live 1–8, Words of Life) |
+| Tachoni | 11 | JESUS (Olutachoni, 61 chapters); 10 GRN programmes |
+| Banyala | 12 | Faith Comes By Hearing's Nyala New Testament (2025) audio, listed first; JESUS (Nyala, 61 chapters); 10 GRN programmes (folder "Luyia Bunyala") |
+| Marachi | 14 | 14 GRN programmes from DBS's Marachi and Luyia collections (each carried once) |
+
+Marachi has no film, Bible or audio Bible on DBS, so its recordings are switched on by default (`LANG_TYPE_DEFAULTS` in `visibility.js`); every other language keeps recordings off. Not carried: Marachi's five globalrecordings.net links, whose DBS-hosted media is carried. DBS hosts no text Bible in any of the four.
+
+Rebuild with `python3 packer/build_dbs_audit.py lkb lts nle lri`, then `npm run dbs:import`. The audits are `catalog/source/dbs-audit-{kabras,tachoni,banyala,marachi}-2026-10-24.json`.

@@ -32,7 +32,11 @@ test('defaults keep every film and audio Bible and five Scripture texts in Engli
   const shown = lib.resources;
   assert.equal(count(shown, r => r.type === 'film'), count(all, r => r.type === 'film'));
   assert.equal(count(shown, r => r.type === 'audio-bible'), count(all, r => r.type === 'audio-bible'));
-  for (const type of ['historic', 'audio', 'link']) assert.equal(count(shown, r => r.type === type), 0, type);
+  for (const type of ['historic', 'link']) assert.equal(count(shown, r => r.type === type), 0, type);
+  // Recordings are off except in Marachi, which has nothing else.
+  assert.equal(count(shown, r => r.type === 'audio' && r.lang !== 'lri'), 0, 'audio');
+  assert.equal(count(shown, r => r.type === 'audio' && r.lang === 'lri'), count(all, r => r.type === 'audio' && r.lang === 'lri'));
+  assert.ok(count(all, r => r.lang === 'lri') > 0, 'Marachi shelf exists');
   // Books are off except in English, where the Bible Study Tool Box shows.
   assert.equal(count(shown, r => r.type === 'book' && r.lang !== 'eng'), 0, 'book');
   assert.ok(shown.some(r => r.id === 'eng-book-bible-study-toolbox'), 'English workbook shows');
