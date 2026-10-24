@@ -147,6 +147,10 @@
   "title": "मराठी बायबल ग्रंथालय",
   "description": "मराठी मध्ये मोफत बायबल चित्रपट, ऑडिओ आणि पवित्र शास्त्र. कोणत्याही फोनवर पाहा, ऐका आणि वाचा, मग इतरांना पाठवा!"
  },
+ "meru": {
+  "title": "Maktaba ya Biblia ya Kimeru",
+  "description": "Filamu za Biblia, sauti na Maandiko bure kwa Kimeru. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
+ },
  "nepali": {
   "title": "नेपाली बाइबल पुस्तकालय",
   "description": "नेपाली मा निःशुल्क बाइबल चलचित्र, अडियो र धर्मशास्त्र। जुनसुकै फोनमा हेर्नुहोस्, सुन्नुहोस् र पढ्नुहोस्, अनि अरूलाई पनि पठाउनुहोस्!"
@@ -191,6 +195,10 @@
   "title": "Maktaba ya Biblia ya Lutachoni",
   "description": "Filamu za Biblia, sauti na Maandiko bure kwa Lutachoni. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
  },
+ "teso": {
+  "title": "Maktaba ya Biblia ya Ateso",
+  "description": "Filamu za Biblia, sauti na Maandiko bure kwa Ateso. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
+ },
  "tigrinya": {
   "title": "ቤተ መጻሕፍቲ መጽሓፍ ቅዱስ ብትግርኛ",
   "description": "ብነጻ ናይ መጽሓፍ ቅዱስ ፊልምታት፣ ድምጺን ቅዱሳት መጻሕፍትን ብትግርኛ። ኣብ ዝኾነ ተሌፎን ርኣዩ፣ ስምዑን ኣንብቡን፡ ድሕሪኡ ንኻልኦት ኣካፍሉ!"
@@ -198,6 +206,10 @@
  "tiriki": {
   "title": "Maktaba ya Biblia ya Lutirichi",
   "description": "Filamu za Biblia, sauti na Maandiko bure kwa Lutirichi. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
+ },
+ "turkana": {
+  "title": "Maktaba ya Biblia ya Ng'aturkana",
+  "description": "Filamu za Biblia, sauti na Maandiko bure kwa Ng'aturkana. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
  },
  "urdu": {
   "title": "اردو بائبل لائبریری",

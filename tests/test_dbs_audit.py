@@ -1,4 +1,4 @@
-"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Arabic, Haitian Creole, Kuria, Spanish, Saamia, Luhya, Bukusu, Maragoli, Idakho-Isukha-Tiriki, Kabras, Tachoni, Banyala, Marachi, Kamba, Kalenjin, Giryama, Digo and Duruma: complete, verified and DBS-hosted."""
+"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Arabic, Haitian Creole, Kuria, Spanish, Saamia, Luhya, Bukusu, Maragoli, Idakho-Isukha-Tiriki, Kabras, Tachoni, Banyala, Marachi, Kamba, Kalenjin, Giryama, Digo, Duruma, Meru, Turkana and Teso: complete, verified and DBS-hosted."""
 import json
 import pathlib
 import re
@@ -22,13 +22,15 @@ SHELVES = {'xho': ('xhosa', 'xh', 13), 'nya': ('chichewa', 'ny', 34),
            'lkb': ('kabras', 'swh', 11), 'lts': ('tachoni', 'swh', 11),
            'nle': ('banyala', 'swh', 12), 'lri': ('marachi', 'swh', 14),
            'kam': ('kamba', 'swh', 22), 'kln': ('kalenjin', 'swh', 97),
-           'nyf': ('giryama', 'swh', 26), 'dig': ('digo', 'swh', 21), 'dug': ('duruma', 'swh', 16)}
+           'nyf': ('giryama', 'swh', 26), 'dig': ('digo', 'swh', 21), 'dug': ('duruma', 'swh', 16),
+           'mer': ('meru', 'swh', 14), 'tuv': ('turkana', 'swh', 20), 'teo': ('teso', 'swh', 23)}
 DATES = {'ara': '2026-10-07', 'hat': '2026-10-13', 'kuj': '2026-10-14', 'spa': '2026-10-15',
          'lsm': '2026-10-20', 'luy': '2026-10-20', 'bxk': '2026-10-20',
          'rag': '2026-10-21', 'ida': '2026-10-21',
          'lkb': '2026-10-24', 'lts': '2026-10-24', 'nle': '2026-10-24', 'lri': '2026-10-24',
          'kam': '2026-10-24', 'kln': '2026-10-24',
-         'nyf': '2026-10-24', 'dig': '2026-10-24', 'dug': '2026-10-24'}
+         'nyf': '2026-10-24', 'dig': '2026-10-24', 'dug': '2026-10-24',
+         'mer': '2026-10-24', 'tuv': '2026-10-24', 'teo': '2026-10-24'}
 
 
 def urls(r):
@@ -106,6 +108,9 @@ class DbsAuditTest(unittest.TestCase):
         self.assertEqual(totals['kln'], 1189 + 260)
         # Davar's whole Bibles; the Giryama picker lists 1,175 of its chapters.
         self.assertEqual((totals['nyf'], totals['dig'], totals['dug']), (1175, 1189, 1189))
+        # Meru's Old Testament (Daniel has 14 chapters, with Susanna and Bel); Turkana's whole
+        # Bible; Teso's whole Bible, New Testament, and Mark and Luke.
+        self.assertEqual((totals['mer'], totals['tuv'], totals['teo']), (929 + 2, 1189, 1189 + 260 + 40))
         # Three full Bibles, the Reina-Valera 1960 Old Testament and three New Testaments.
         self.assertEqual(totals['spa'], 1189 * 3 + 929 + 260 * 3)
 
@@ -440,6 +445,26 @@ class DbsAuditTest(unittest.TestCase):
         vercel = (ROOT / 'vercel.json').read_text()
         for slug, aliases in (('giryama', ('giryama', 'giriama', 'nyf')), ('digo', ('digo', 'chidigo', 'dig')),
                               ('duruma', ('duruma', 'chiduruma', 'dug'))):
+            for alias in aliases:
+                self.assertIn('{ "source": "/' + alias + '", "destination": "/' + slug + '/index.html" }', vercel)
+
+    def test_meru_turkana_and_teso(self):
+        mer, tuv, teo = self.shelf('mer'), self.shelf('tuv'), self.shelf('teo')
+        self.assertEqual(mer[0]['play']['bookNames']['Genesis'], 'Mwanzo')        # DBS gives only "KÎAM"
+        self.assertEqual(mer[0]['play']['testaments'], ['OT'])
+        # DBS titles this "Bible in Tuvalu"; its books are named in Turkana.
+        self.assertEqual(tuv[0]['title'], 'Turkana Bible')
+        self.assertEqual(tuv[0]['play']['bookNames']['Genesis'], 'Akisiakinet')
+        self.assertEqual([r['id'] for r in teo[:2]], ['teo-text-teobsu', 'teo-ab-teobsu-davr-fb-n'])
+        self.assertEqual({r['id']: r.get('scope') for r in teo if r['id'].endswith('-jesus')},
+                         {'teo-film-teo-ateso-jesus': 'Uganda', 'teo-film-teo-teso-kenyan-jesus': 'Kenya'})
+        for code, slug in (('mer', 'meru'), ('tuv', 'turkana'), ('teo', 'teso')):
+            page = (ROOT / f'app/{slug}/index.html').read_text()
+            self.assertIn(f'"lang":"{code}","ui":"swh","slug":"{slug}"', page)
+            self.assertIn(f"'{slug}/index.html', 'data/catalog-{code}.js'", (ROOT / 'app/sw.js').read_text())
+            self.assertIn(f'"{slug}": (', (ROOT / 'packer/library_mail.py').read_text())
+        vercel = (ROOT / 'vercel.json').read_text()
+        for slug, aliases in (('meru', ('meru', 'kimeru', 'mer')), ('turkana', ('turkana', 'tuv')), ('teso', ('teso', 'ateso', 'teo'))):
             for alias in aliases:
                 self.assertIn('{ "source": "/' + alias + '", "destination": "/' + slug + '/index.html" }', vercel)
 
