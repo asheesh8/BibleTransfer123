@@ -46,6 +46,8 @@ LIBRARIES = {
     "idakho": ("Idakho", "Luidakho"),
     "igbo": ("Igbo", "Asụsụ Igbo"),
     "kabras": ("Kabras", "Lukabaras"),
+    "kalenjin": ("Kalenjin", "Kalenjin"),
+    "kamba": ("Kamba", "Kikamba"),
     "kikuyu": ("Kikuyu", "Gĩkũyũ"),
     "kinyarwanda": ("Kinyarwanda", "Ikinyarwanda"),
     "kirundi": ("Kirundi", "Ikirundi"),

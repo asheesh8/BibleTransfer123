@@ -1,4 +1,4 @@
-"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Arabic, Haitian Creole, Kuria, Spanish, Saamia, Luhya, Bukusu, Maragoli, Idakho-Isukha-Tiriki, Kabras, Tachoni, Banyala and Marachi: complete, verified and DBS-hosted."""
+"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Arabic, Haitian Creole, Kuria, Spanish, Saamia, Luhya, Bukusu, Maragoli, Idakho-Isukha-Tiriki, Kabras, Tachoni, Banyala, Marachi, Kamba and Kalenjin: complete, verified and DBS-hosted."""
 import json
 import pathlib
 import re
@@ -20,11 +20,13 @@ SHELVES = {'xho': ('xhosa', 'xh', 13), 'nya': ('chichewa', 'ny', 34),
            'luy': ('luhya', 'swh', 83), 'bxk': ('bukusu', 'swh', 33),
            'rag': ('maragoli', 'swh', 13), 'ida': ('idakho', 'swh', 4),
            'lkb': ('kabras', 'swh', 11), 'lts': ('tachoni', 'swh', 11),
-           'nle': ('banyala', 'swh', 12), 'lri': ('marachi', 'swh', 14)}
+           'nle': ('banyala', 'swh', 12), 'lri': ('marachi', 'swh', 14),
+           'kam': ('kamba', 'swh', 22), 'kln': ('kalenjin', 'swh', 97)}
 DATES = {'ara': '2026-10-07', 'hat': '2026-10-13', 'kuj': '2026-10-14', 'spa': '2026-10-15',
          'lsm': '2026-10-20', 'luy': '2026-10-20', 'bxk': '2026-10-20',
          'rag': '2026-10-21', 'ida': '2026-10-21',
-         'lkb': '2026-10-24', 'lts': '2026-10-24', 'nle': '2026-10-24', 'lri': '2026-10-24'}
+         'lkb': '2026-10-24', 'lts': '2026-10-24', 'nle': '2026-10-24', 'lri': '2026-10-24',
+         'kam': '2026-10-24', 'kln': '2026-10-24'}
 
 
 def urls(r):
@@ -97,6 +99,9 @@ class DbsAuditTest(unittest.TestCase):
         self.assertEqual(totals['rag'], 929)
         # Faith Comes By Hearing's Nyala New Testament.
         self.assertEqual(totals['nle'], 260)
+        # Davar's Mbivilia Ũvoo Mũseo; the Bible Society of Kenya's Kalenjin Bible and FCBH's New Testament.
+        self.assertEqual(totals['kam'], 1189)
+        self.assertEqual(totals['kln'], 1189 + 260)
         # Three full Bibles, the Reina-Valera 1960 Old Testament and three New Testaments.
         self.assertEqual(totals['spa'], 1189 * 3 + 929 + 260 * 3)
 
@@ -386,6 +391,31 @@ class DbsAuditTest(unittest.TestCase):
             for alias in aliases:
                 self.assertIn('{ "source": "/' + alias + '", "destination": "/' + slug + '/index.html" }', vercel)
             self.assertIn(f'"{slug}": (', (ROOT / 'packer/library_mail.py').read_text())
+
+    def test_kamba_and_kalenjin(self):
+        kam, kln = self.shelf('kam'), self.shelf('kln')
+        self.assertEqual(kam[0]['id'], 'kam-ab-kamkkb-davr-fb-n')
+        self.assertEqual(kam[0]['play']['bookNames']['Genesis'], 'Mwanzo')      # DBS gives only "Mwa"
+        self.assertEqual(kln[0]['id'], 'kln-ab-klnbsc-davr-fb-n')
+        self.assertEqual(kln[0]['play']['bookNames']['Genesis'], 'Taunet')      # Kalenjin names stay
+        self.assertEqual(kln[0]['play']['bookNames']['Exodus'], "Komong'u")
+        # The JESUS dubs come from the Kipsigis and Nandi pages and name their dialect.
+        films = {r['id']: r.get('scope') for r in kln if r['type'] == 'film'}
+        self.assertEqual(films, {'kln-film-kln-kalenjin-mark': None, 'kln-film-sgc-kalenjin-kipsigis-jesus': 'Kipsigis',
+                                 'kln-film-niq-nandi-jesus': 'Nandi'})
+        self.assertEqual([r.get('scope') for r in kam if r['type'] == 'film'], [None])
+        # Every Kalenjin GRN programme names its dialect; each is carried once.
+        self.assertTrue(all(r.get('scope') for r in kln if r['type'] == 'audio'))
+        for code, slug in (('kam', 'kamba'), ('kln', 'kalenjin')):
+            page = (ROOT / f'app/{slug}/index.html').read_text()
+            self.assertIn(f'"lang":"{code}","ui":"swh","slug":"{slug}"', page)
+            self.assertIn(f'data/catalog-{code}.js', page)
+            self.assertIn(f"'{slug}/index.html', 'data/catalog-{code}.js'", (ROOT / 'app/sw.js').read_text())
+            self.assertIn(f'"{slug}": (', (ROOT / 'packer/library_mail.py').read_text())
+        vercel = (ROOT / 'vercel.json').read_text()
+        for slug, aliases in (('kamba', ('kamba', 'kikamba', 'akamba', 'kam')), ('kalenjin', ('kalenjin', 'kln', 'kipsigis', 'nandi'))):
+            for alias in aliases:
+                self.assertIn('{ "source": "/' + alias + '", "destination": "/' + slug + '/index.html" }', vercel)
 
 
 if __name__ == '__main__':

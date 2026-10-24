@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Build Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Haitian Creole, Kuria,
-Saamia, Luhya, Bukusu, Maragoli, Idakho-Isukha-Tiriki, Kabras, Tachoni, Banyala and Marachi
-from their browser audits.
+Saamia, Luhya, Bukusu, Maragoli, Idakho-Isukha-Tiriki, Kabras, Tachoni, Banyala, Marachi,
+Kamba and Kalenjin from their browser audits.
 
-    python3 packer/build_dbs_audit.py            # all eighteen, Arabic and Spanish
+    python3 packer/build_dbs_audit.py            # all twenty, Arabic and Spanish
     python3 packer/build_dbs_audit.py sna        # one
 
 Arabic and Spanish are built by build_dbs_arabic.py and build_dbs_spanish.py, which reuse this Shelf.
@@ -62,6 +62,15 @@ DBS's Luyia collection, so each audit carries that page too (under `extra`,
 with only that variety's folder) and the shelf takes the programmes of its
 own variety from it (`variety`). Programmes on both of Marachi's pages are
 carried once.
+
+Kamba (kam) and Kalenjin (kln) were rendered on 2026-10-24, one shelf and
+page each with the Swahili interface: DBS names Kamba's books in abbreviations
+("Mwa", "Kuma"), so its picker uses the Swahili names; the Kalenjin audio
+Bibles name theirs in Kalenjin ("Taunet", "Matayo"), which stay. DBS's
+Kalenjin page is the umbrella for the Kalenjin dialects and has no JESUS film;
+the Kipsigis (sgc) and Nandi (niq) pages hold one each, so the Kalenjin audit
+carries those two pages too, as Akan's does, and each of their films and GRN
+programmes names its dialect.
 
 Three DBS mistakes are handled rather than copied:
 
@@ -335,10 +344,40 @@ LANGS = {
                 grn_desc='Hadithi za Biblia na ujumbe wa Kikristo kwa Kimarachi, zilizorekodiwa na Global Recordings Network.',
                 plain=('marachi', 'olumarachi'),
                 ),
+    # Kamba and Kalenjin: the Swahili interface too (see the module note).
+    'kam': dict(slug='kamba', ui='swh', name='Kamba', native='Kikamba', region='Kenya',
+                speakers='~4.7 million', date='2026-10-24',
+                blurb='Biblia, filamu na sauti za Kikristo kwa Kikamba.',
+                chapter='Sura', part='Sehemu', view='Tazama kwenye DBS',
+                full='Filamu nzima (MP4)', chapters_zip='Sura zote (ZIP)',
+                tracks_zip='Sauti zote (ZIP)', pdf='Kitabu (PDF)',
+                film_desc='Filamu inayotokana na Biblia, kwa Kikamba.',
+                film_desc_chapters='Filamu inayotokana na Biblia, kwa Kikamba. Chagua sura unayotaka kutazama au kuhifadhi.',
+                deaf_desc='',
+                historic_desc='Chapa ya zamani ya Maandiko iliyonakiliwa kama PDF. Maandishi yanaweza kutofautiana na ya leo.',
+                grn_desc='Hadithi za Biblia na ujumbe wa Kikristo kwa Kikamba, zilizorekodiwa na Global Recordings Network.',
+                plain=('kamba', 'kikamba', 'kamba (kenya)'),
+                ),
+    'kln': dict(slug='kalenjin', ui='swh', name='Kalenjin', native='Kalenjin', region='Kenya',
+                speakers='~4.6 million', date='2026-10-24',
+                blurb='Biblia, filamu na sauti za Kikristo kwa Kikalenjin.',
+                chapter='Sura', part='Sehemu', view='Tazama kwenye DBS',
+                full='Filamu nzima (MP4)', chapters_zip='Sura zote (ZIP)',
+                tracks_zip='Sauti zote (ZIP)', pdf='Kitabu (PDF)',
+                film_desc='Filamu inayotokana na Biblia, kwa Kikalenjin.',
+                film_desc_chapters='Filamu inayotokana na Biblia, kwa Kikalenjin. Chagua sura unayotaka kutazama au kuhifadhi.',
+                deaf_desc='',
+                historic_desc='Chapa ya zamani ya Maandiko iliyonakiliwa kama PDF. Maandishi yanaweza kutofautiana na ya leo.',
+                grn_desc='Hadithi za Biblia na ujumbe wa Kikristo kwa Kikalenjin, zilizorekodiwa na Global Recordings Network.',
+                plain=('kalenjin',),
+                ),
 }
 
 # Tigrinya films name the country of their dub: by the folder in the DBS address.
 COUNTRY = {'tigrinya-eritrea': ('Eritrea', 'ኤርትራ'), 'tigrinya-ethiopia': ('Ethiopia', 'ኢትዮጵያ')}
+
+# Kalenjin dialects, by the DBS page (ISO code) a film comes from.
+KALENJIN_DIALECT = {'sgc': 'Kipsigis', 'niq': 'Nandi'}
 
 # Akan dialects, by the name in each DBS page or file address.
 DIALECT = {'asante-twi': 'Asante Twi', 'akan-asante': 'Asante Twi', 'akan-akuapem-twi': 'Akuapem Twi',
@@ -391,11 +430,13 @@ def film_native(code, series, meta):
         'lkb': lambda n: 'Injili ya ' + n,
         'lts': lambda n: 'Injili ya ' + n,
         'nle': lambda n: 'Injili ya ' + n,
+        'kam': lambda n: 'Injili ya ' + n,
+        'kln': lambda n: 'Injili ya ' + n,
     }[code]
     words = {
         'jesus': {'xho': 'UYesu', 'nya': 'Yesu', 'kin': 'Yesu', 'sna': 'Jesu', 'run': 'Yesu', 'aka': 'Yesu',
                   'tir': 'ኢየሱስ', 'hat': 'Jezi', 'kuj': 'Yesu', 'lsm': 'Yesu', 'bxk': 'Yesu', 'rag': 'Yesu', 'ida': 'Yesu',
-                  'lkb': 'Yesu', 'lts': 'Yesu', 'nle': 'Yesu'},
+                  'lkb': 'Yesu', 'lts': 'Yesu', 'nle': 'Yesu', 'kam': 'Yesu', 'kln': 'Yesu'},
         'savior': {'tir': 'መድሓኒ'},
         'magdalena': {'xho': 'Magdalena', 'nya': 'Magdalena', 'kin': 'Magdalena', 'sna': 'Magdalena',
                       'run': 'Magdalena', 'aka': 'Magdalena', 'tir': 'መግደላዊት', 'hat': 'Magdalena'},
@@ -452,7 +493,7 @@ GRN['Words of Life']['hat'] = 'Pawòl Lavi'
 GRN['Portrait of Jesus']['hat'] = 'Pòtrè Jezi'
 GRN['Good News']['kuj'] = 'Habari Njema'
 LUHYA = ('lsm', 'luy', 'bxk', 'rag', 'ida', 'lkb', 'lts', 'nle', 'lri')
-for c in LUHYA:
+for c in LUHYA + ('kam', 'kln'):
     GRN['Good News'][c] = 'Habari Njema'
     GRN['Words of Life'][c] = 'Maneno ya Uzima'
 GRN['Short Messages'] = {'luy': 'Jumbe fupi'}
@@ -487,7 +528,7 @@ LLL = {  # Look, Listen & Live 1-8
             'Watumishi wa Mungu', 'Kushtakiwa kwa ajili ya Mungu', 'Yesu, Mwalimu na Mponyaji',
             'Yesu, Bwana na Mwokozi', 'Matendo ya Roho Mtakatifu']),
 }
-for c in LUHYA:
+for c in LUHYA + ('kam', 'kln'):
     LLL[c] = LLL['kuj']
 # GRN's English Look, Listen & Live titles, for programmes whose folder gives
 # only the Luhya title.
@@ -541,6 +582,10 @@ TRADITIONAL = {
     'rag': ['https://dbs.org/bibles/audio/RAGBSK19_DAVR_OT_N'],
     # Faith Comes By Hearing's Nyala New Testament (2025).
     'nle': ['https://dbs.org/bibles/audio/NLEUFW_FCBH_NT_N'],
+    # Davar's Mbivilia Ũvoo Mũseo (1974), all 66 books.
+    'kam': ['https://dbs.org/bibles/audio/KAMKKB_DAVR_FB_N'],
+    # The Bible Society of Kenya's Bukuit ne Tiliil (2015), all 66 books, then FCBH's New Testament.
+    'kln': ['https://dbs.org/bibles/audio/KLNBSC_DAVR_FB_N'],
 }
 
 # Akan editions, by DBS fileset or ID: the dialect, and a native title where
@@ -605,6 +650,11 @@ LUHYA_SCANS = {
     # Maragoli: "Litanga" is Genesis in Lulogooli, as the 2019 audio Bible names it.
     'Logooli-1967-Genesis-Portion-Litanga-Luragooli': 'Litanga (1967)',
     'Luragoli-1914-Mark': 'Mariko (1914)',
+}
+# DBS's subtitles for the Kalenjin scans end in "(Cetak)", Indonesian for "print".
+KALENJIN_SCANS = {
+    'Kalenjin-New-Testament-print': 'Kitaptaab Konyonetab (2016)',
+    'Kipsigis-Genesis-print': 'Toron, Kipsigis (1958)',
 }
 HAITIAN_SCANS = {
     'Haitian-1998-Genesis-Portion': 'Jenèz (1998, pòsyon)',
@@ -744,7 +794,9 @@ class Shelf:
                              for w in name.split(' '))
             elif self.code == 'rag':
                 name = name.replace("'I", "'i").replace("'A", "'a")   # DBS writes "Zing'Inga"
-            elif self.code in ('kuj', 'lsm', 'luy', 'bxk', 'nle'):
+            elif self.code == 'kln':
+                name = re.sub(r"'([A-Z])", lambda m: "'" + m[1].lower(), name)   # DBS writes "Komong'U"
+            elif self.code in ('kuj', 'lsm', 'luy', 'bxk', 'nle', 'kam'):
                 name = local      # Bukusu's picker has only abbreviations ("Lir.", "Khur."); DBS mixes long forms ("Marko Mtakatifu", "Waraka Wa Yuda") with short ones
             elif name.lower() == local.lower():
                 name = local      # DBS capitalises every word ("Gusubira Mu Vyagezwe")
@@ -771,6 +823,8 @@ class Shelf:
             'bxk': ('Biblia nzima', 'Agano Jipya', 'Sehemu za Agano Jipya'),
             'rag': ('Biblia nzima', 'Agano Jipya', None),
             'nle': ('Biblia nzima', 'Agano Jipya', None),
+            'kam': ('Biblia nzima', 'Agano Jipya', None),
+            'kln': ('Biblia nzima', 'Agano Jipya', None),
         }[self.code]
         whole = 'OT' in testaments and len(keys) == 66
         what = scope_words[0] if whole else scope_words[2] if keys == ['Luke'] else scope_words[1]
@@ -781,7 +835,8 @@ class Shelf:
         if self.code == 'hat' and not whole and {'Psalms', 'Proverbs'} <= set(keys):
             what = 'Nouvo Testaman, Sòm ak Pwovèb'
         listen = {'nya': 'Mvetserani', 'kin': 'Umva', 'sna': 'Teerera', 'run': 'Umviriza', 'aka': 'Tie', 'hat': 'Koute', 'kuj': 'Sikiliza',
-                  'lsm': 'Sikiliza', 'bxk': 'Sikiliza', 'rag': 'Sikiliza', 'nle': 'Sikiliza'}[self.code]
+                  'lsm': 'Sikiliza', 'bxk': 'Sikiliza', 'rag': 'Sikiliza', 'nle': 'Sikiliza',
+                  'kam': 'Sikiliza', 'kln': 'Sikiliza'}[self.code]
         count = sum(counts.values())
         desc = {
             'nya': f'{what} momvetsera: mabuku {len(keys)}, mitu {count}. Sankhani buku ndi mutu woti mumvetsere kapena kusunga.',
@@ -795,11 +850,15 @@ class Shelf:
             'bxk': f'{what} kwa sauti ya Kibukusu: vitabu {len(keys)}, sura {count}. Chagua kitabu na sura unayotaka kusikiliza au kuhifadhi.',
             'rag': f'{what} kwa sauti ya Kimaragoli: vitabu {len(keys)}, sura {count}. Majina ya vitabu ni ya Kimaragoli. Chagua kitabu na sura unayotaka kusikiliza au kuhifadhi.',
             'nle': f'{what} kwa sauti ya Kinyala: vitabu {len(keys)}, sura {count}. Chagua kitabu na sura unayotaka kusikiliza au kuhifadhi.',
+            'kam': f'{what} kwa sauti ya Kikamba: vitabu {len(keys)}, sura {count}. Chagua kitabu na sura unayotaka kusikiliza au kuhifadhi.',
+            'kln': f'{what} kwa sauti ya Kikalenjin: vitabu {len(keys)}, sura {count}. Majina ya vitabu ni ya Kikalenjin. Chagua kitabu na sura unayotaka kusikiliza au kuhifadhi.',
         }[self.code]
         dialect = None
         if self.code == 'aka':
             dialect, native = AKAN_EDITIONS[abbr]
         native = native or what
+        if fileset == 'KLNBSC_DAVR_FB_N':
+            native = 'Bukuit ne Tiliil: Sireet ne Dutero Kanon'   # DBS writes the first half in capitals
         if native.isupper():
             native = native.title()   # Bukusu's "EBIBILIA ENDAKATIFU"
         if keys == ['Luke']:
@@ -822,7 +881,8 @@ class Shelf:
                 zipname = {'nya': 'Mitu yonse (ZIP)', 'kin': 'Ibice byose (ZIP)', 'sna': 'Zvitsauko zvose (ZIP)',
                            'run': 'Ibice vyose (ZIP)', 'aka': 'Ati no nyinaa (ZIP)', 'hat': 'Tout chapit yo (ZIP)',
                            'kuj': 'Sura zote (ZIP)', 'lsm': 'Sura zote (ZIP)', 'bxk': 'Sura zote (ZIP)',
-                           'rag': 'Sura zote (ZIP)', 'nle': 'Sura zote (ZIP)'}[self.code]
+                           'rag': 'Sura zote (ZIP)', 'nle': 'Sura zote (ZIP)',
+                           'kam': 'Sura zote (ZIP)', 'kln': 'Sura zote (ZIP)'}[self.code]
                 self.download(r, l['url'], zipname)
         return True
 
@@ -845,10 +905,13 @@ class Shelf:
         elif self.code == 'tir':
             country = next((v for k, v in COUNTRY.items() if ident[4:].startswith(k)), None)
             scope = country and country[0]
+        elif self.code == 'kln':
+            scope = KALENJIN_DIALECT.get(ident[:3])   # the Kipsigis and Nandi pages' dubs ("sgc_kalenjin-kipsigis")
         elif dialect and dialect[1] not in ('xhosa', 'chichewa', 'kinyarwanda', 'shona', 'kirundi', 'haitian', 'kuria',
                                                       'samia', 'bukusu', 'lubukusu', 'oluluyia',
                                                       'luragoli', 'logooli', 'lukakamega',
-                                                      'lukabaras', 'olutachoni', 'nyala'):
+                                                      'lukabaras', 'olutachoni', 'nyala',
+                                                      'kikamba', 'kalenjin'):
             scope = dialect[1].title()
         if scope:
             title += f' ({scope})'
@@ -916,10 +979,13 @@ class Shelf:
         native = (sub[1].strip() if sub else None) or title
         native = re.sub(r'^texts(?=[A-Z])', '', native)
         native = re.sub(r'^(Shona|Nyanja|Chichewa|Xhosa) (- |\(\d{4}\) )', '', native)
+        if self.code == 'kam':
+            native = native.removeprefix('Kikamba ')   # DBS writes "Kikamba Maliko (1850)"
         native = AKAN_SCANS.get(url.rsplit('/', 1)[1], native)
         native = TIGRINYA_SCANS.get(url.rsplit('/', 1)[1], native)
         native = HAITIAN_SCANS.get(url.rsplit('/', 1)[1], native)
         native = LUHYA_SCANS.get(url.rsplit('/', 1)[1], native)
+        native = KALENJIN_SCANS.get(url.rsplit('/', 1)[1], native)
         # The Bukusu John scan's page gives no date; its language-page row says 1968.
         year = int(year[1]) if year else {'Luyia-John-book': 1968}.get(url.rsplit('/', 1)[1])
         r = self.make('scan-' + url.rsplit('/', 1)[1].lower(), 'historic', title, native, url,
