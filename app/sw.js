@@ -8,7 +8,7 @@
 
    VERSION must change whenever the shell changes, or an installed copy keeps
    serving the old one. `easytransfer build` rewrites it. */
-var VERSION = 'shell-v68';
+var VERSION = 'shell-v69';
 
 var SHELL = [
   'index.html', 'library.html', 'item.html', 'share.html', 'help.html', 'nearby.html',
@@ -55,6 +55,9 @@ var SHELL = [
   'giryama/index.html', 'data/catalog-nyf.js',
   'digo/index.html', 'data/catalog-dig.js',
   'duruma/index.html', 'data/catalog-dug.js',
+  'meru/index.html', 'data/catalog-mer.js',
+  'turkana/index.html', 'data/catalog-tuv.js',
+  'teso/index.html', 'data/catalog-teo.js',
   'chichewa/index.html', 'data/catalog-nya.js',
   'kinyarwanda/index.html', 'data/catalog-kin.js',
   'xhosa/index.html', 'data/catalog-xho.js',

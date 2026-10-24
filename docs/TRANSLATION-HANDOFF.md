@@ -1068,3 +1068,17 @@ Each shelf leads with Bible Translation & Literacy's text (PDF to read, plus EPU
 | Duruma | 16 | Lagano Iphya (NT text), audio Bible, JESUS, LUMO Mark and Covenant, Visual Bible Matthew and Acts |
 
 Rebuild with `python3 packer/build_dbs_audit.py nyf dig dug`, then `npm run dbs:import`.
+
+### Meru, Turkana and Teso — 2026-10-24
+
+Added three shelves and pages with the Swahili interface (`swh`): `/meru` (content `mer`, also `/kimeru`), `/turkana` (`tuv`, also `/ngaturkana`) and `/teso` (`teo`, also `/ateso`, `/iteso`). No machine translation service covers them, so the menus stay Swahili. Meru's picker gives abbreviations ("KÎAM"), so it uses the Swahili book names; the Turkana and Teso audio Bibles name their books in their own language, which stay.
+
+| Shelf | Resources | Shown by default |
+|---|---|---|
+| Meru | 14 | Davar's Meru Bible (1964) Old Testament audio (39 books; Daniel has 14 chapters); JESUS; LUMO Mark |
+| Turkana | 20 | Davar's Turkana Bible audio (66 books); JESUS; LUMO Luke |
+| Teso | 23 | Bible Society of Uganda's Ebaibuli (1961) text and Davar audio; FCBH's New Testament and Mark and Luke; JESUS (Uganda) and JESUS (Kenya); LUMO Luke, Mark (1961 text) and Mark (FCBH); Visual Bible Matthew and Acts |
+
+DBS titles the Turkana audio Bible "Bible in Tuvalu BSSP" with a Tuvaluan subtitle, an ISO mix-up (Turkana is tuv, Tuvaluan tvl), but its books are named in Turkana ("Akisiakinet", "Ngilawi"), so it is carried as the Turkana Bible. A Turkana speaker should confirm the recording when one is available. Meru and Turkana have no text Bible on DBS. Every audio Bible chapter was checked (Meru 931, Turkana 1,189, Teso 1,489), all valid.
+
+Rebuild with `python3 packer/build_dbs_audit.py mer tuv teo`, then `npm run dbs:import`.
