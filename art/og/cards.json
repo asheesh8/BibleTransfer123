@@ -27,6 +27,14 @@
   "title": "Laibulale ya Baibulo mu Chichewa",
   "description": "Mafilimu a Baibulo, Baibulo lomvetsera ndi Malemba aulere (Chichewa). Onerani, mverani ndi kuwerenga pa foni iliyonse, kenako gawirani ena!"
  },
+ "digo": {
+  "title": "Maktaba ya Biblia ya Chidigo",
+  "description": "Filamu za Biblia, sauti na Maandiko bure kwa Chidigo. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
+ },
+ "duruma": {
+  "title": "Maktaba ya Biblia ya Chiduruma",
+  "description": "Filamu za Biblia, sauti na Maandiko bure kwa Chiduruma. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
+ },
  "eastern-punjabi": {
   "title": "ਪੰਜਾਬੀ ਬਾਈਬਲ ਲਾਇਬ੍ਰੇਰੀ",
   "description": "ਪੰਜਾਬੀ ਵਿੱਚ ਮੁਫ਼ਤ ਬਾਈਬਲ ਫ਼ਿਲਮਾਂ, ਆਡੀਓ ਅਤੇ ਪਵਿੱਤਰ ਸ਼ਾਸਤਰ। ਕਿਸੇ ਵੀ ਫ਼ੋਨ ’ਤੇ ਵੇਖੋ, ਸੁਣੋ ਅਤੇ ਪੜ੍ਹੋ, ਫਿਰ ਅੱਗੇ ਭੇਜੋ!"
@@ -38,6 +46,10 @@
  "french": {
   "title": "Bibliothèque biblique · Français",
   "description": "Films bibliques, Bible audio et Écritures gratuits en Français. Regardez, écoutez et lisez sur n’importe quel téléphone, puis faites passer !"
+ },
+ "giryama": {
+  "title": "Maktaba ya Biblia ya Kigiryama",
+  "description": "Filamu za Biblia, sauti na Maandiko bure kwa Kigiryama. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
  },
  "gusii": {
   "title": "Laiburari ya Ebibilia ase Ekegusii / Kisii",
