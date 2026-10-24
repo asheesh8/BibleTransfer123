@@ -94,6 +94,8 @@ QR_LIBRARIES = {
     "tachoni": "lts",
     "banyala": "nle",
     "marachi": "lri",
+    "kamba": "kam",
+    "kalenjin": "kln",
     "chichewa": "nya",
     "kinyarwanda": "kin",
     "xhosa": "xho",

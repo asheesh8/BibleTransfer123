@@ -1039,3 +1039,18 @@ DBS's own pages for these languages hold little, so each shelf also takes its ow
 Marachi has no film, Bible or audio Bible on DBS, so its recordings are switched on by default (`LANG_TYPE_DEFAULTS` in `visibility.js`); every other language keeps recordings off. Not carried: Marachi's five globalrecordings.net links, whose DBS-hosted media is carried. DBS hosts no text Bible in any of the four.
 
 Rebuild with `python3 packer/build_dbs_audit.py lkb lts nle lri`, then `npm run dbs:import`. The audits are `catalog/source/dbs-audit-{kabras,tachoni,banyala,marachi}-2026-10-24.json`.
+
+### Kamba and Kalenjin — 2026-10-24
+
+Added two shelves and pages with the Swahili interface (`swh`), like the Kuria and Luhya shelves: `/kamba` (content `kam`, also `/kikamba`, `/akamba`, `/kam`) and `/kalenjin` (`kln`, also `/kipsigis`, `/nandi`, `/kln`). No machine translation service covers either language, so the menus stay Swahili. Kamba's audio Bible picker gives only abbreviations ("Mwa", "Kuma"), so it uses the Swahili book names; the Kalenjin audio Bibles name their books in Kalenjin ("Taunet", "Matayo"), which are kept.
+
+Kalenjin is one shelf from three DBS pages (Kalenjin, Kipsigis and Nandi), since the JESUS film is only on the Kipsigis and Nandi pages. DBS's Kalenjin GRN collection holds programmes in nine Kalenjin dialects; each names its dialect, as Akan's do. Same browser audit as above: every carried file checked by a ranged request and its leading bytes, and every audio Bible chapter (Kamba 1,189; Kalenjin 1,189 + 260), all valid.
+
+| Shelf | Resources | Shown by default |
+|---|---|---|
+| Kamba | 22 | Davar's Mbivilia Ũvoo Mũseo (1974, all 66 books) audio; JESUS (Kikamba, 61 chapters). Also 16 GRN programmes and 4 historic scans, switched off by default |
+| Kalenjin | 97 | Bible Society of Kenya's Bukuit ne Tiliil (2015, 66 books) audio; FCBH's New Testament (2016) audio; LUMO Mark; JESUS in Kipsigis and in Nandi. Also 90 GRN programmes and 2 scans, switched off by default |
+
+Not carried: DBS's moved audio Bible pages (KAMBSK, KLNBSK), which point to the carried editions, and the globalrecordings.net links whose DBS-hosted media is carried.
+
+Rebuild with `python3 packer/build_dbs_audit.py kam kln`, then `npm run dbs:import`. The audits are `catalog/source/dbs-audit-{kamba,kalenjin}-2026-10-24.json`.

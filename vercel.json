@@ -12,7 +12,7 @@
     }
   },
   "redirects": [
-    { "source": "/:slug(english|mandarin|hindi|marathi|urdu|swahili|zulu|western-punjabi|cantonese|pashto|eastern-punjabi|nepali|sindhi|luganda|luo|malagasy|kirundi|akan|tigrinya|arabic|haitian|spanish|kuria|luhya|bukusu|saamia|maragoli|idakho|tiriki|kabras|tachoni|banyala|marachi|chichewa|kinyarwanda|xhosa|shona|hausa|lingala|nigerian-pidgin|yoruba|portuguese|amharic|french|igbo|oromo|kikuyu|gusii|maasai)", "has": [{ "type": "query", "key": "src", "value": "qr" }], "destination": "/api/qr?l=:slug", "permanent": false }
+    { "source": "/:slug(english|mandarin|hindi|marathi|urdu|swahili|zulu|western-punjabi|cantonese|pashto|eastern-punjabi|nepali|sindhi|luganda|luo|malagasy|kirundi|akan|tigrinya|arabic|haitian|spanish|kuria|luhya|bukusu|saamia|maragoli|idakho|tiriki|kabras|tachoni|banyala|marachi|kamba|kalenjin|chichewa|kinyarwanda|xhosa|shona|hausa|lingala|nigerian-pidgin|yoruba|portuguese|amharic|french|igbo|oromo|kikuyu|gusii|maasai)", "has": [{ "type": "query", "key": "src", "value": "qr" }], "destination": "/api/qr?l=:slug", "permanent": false }
   ],
   "rewrites": [
     { "source": "/kirundi", "destination": "/kirundi/index.html" },
@@ -125,6 +125,14 @@
     { "source": "/marachi", "destination": "/marachi/index.html" },
     { "source": "/olumarachi", "destination": "/marachi/index.html" },
     { "source": "/lri", "destination": "/marachi/index.html" },
+    { "source": "/kamba", "destination": "/kamba/index.html" },
+    { "source": "/kikamba", "destination": "/kamba/index.html" },
+    { "source": "/akamba", "destination": "/kamba/index.html" },
+    { "source": "/kam", "destination": "/kamba/index.html" },
+    { "source": "/kalenjin", "destination": "/kalenjin/index.html" },
+    { "source": "/kln", "destination": "/kalenjin/index.html" },
+    { "source": "/kipsigis", "destination": "/kalenjin/index.html" },
+    { "source": "/nandi", "destination": "/kalenjin/index.html" },
     { "source": "/saamia", "destination": "/saamia/index.html" },
     { "source": "/samia", "destination": "/saamia/index.html" },
     { "source": "/olusaamia", "destination": "/saamia/index.html" },

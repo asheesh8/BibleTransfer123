@@ -35,6 +35,8 @@
     ['tachoni', 'lts', 'Tachoni', 'Lutachoni'],
     ['banyala', 'nle', 'Banyala', 'Olunyala'],
     ['marachi', 'lri', 'Marachi', 'Olumarachi'],
+    ['kamba', 'kam', 'Kamba', 'Kikamba'],
+    ['kalenjin', 'kln', 'Kalenjin', 'Kalenjin'],
     ['chichewa', 'nya', 'Chichewa', 'Chichewa'],
     ['kinyarwanda', 'kin', 'Kinyarwanda', 'Ikinyarwanda'],
     ['xhosa', 'xho', 'Xhosa', 'isiXhosa'],
