@@ -1,4 +1,4 @@
-"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Arabic, Haitian Creole, Kuria, Spanish, Saamia, Luhya, Bukusu, Maragoli, Idakho-Isukha-Tiriki, Kabras, Tachoni, Banyala, Marachi, Kamba and Kalenjin: complete, verified and DBS-hosted."""
+"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Arabic, Haitian Creole, Kuria, Spanish, Saamia, Luhya, Bukusu, Maragoli, Idakho-Isukha-Tiriki, Kabras, Tachoni, Banyala, Marachi, Kamba, Kalenjin, Giryama, Digo and Duruma: complete, verified and DBS-hosted."""
 import json
 import pathlib
 import re
@@ -21,12 +21,14 @@ SHELVES = {'xho': ('xhosa', 'xh', 13), 'nya': ('chichewa', 'ny', 34),
            'rag': ('maragoli', 'swh', 13), 'ida': ('idakho', 'swh', 4),
            'lkb': ('kabras', 'swh', 11), 'lts': ('tachoni', 'swh', 11),
            'nle': ('banyala', 'swh', 12), 'lri': ('marachi', 'swh', 14),
-           'kam': ('kamba', 'swh', 22), 'kln': ('kalenjin', 'swh', 97)}
+           'kam': ('kamba', 'swh', 22), 'kln': ('kalenjin', 'swh', 97),
+           'nyf': ('giryama', 'swh', 26), 'dig': ('digo', 'swh', 21), 'dug': ('duruma', 'swh', 16)}
 DATES = {'ara': '2026-10-07', 'hat': '2026-10-13', 'kuj': '2026-10-14', 'spa': '2026-10-15',
          'lsm': '2026-10-20', 'luy': '2026-10-20', 'bxk': '2026-10-20',
          'rag': '2026-10-21', 'ida': '2026-10-21',
          'lkb': '2026-10-24', 'lts': '2026-10-24', 'nle': '2026-10-24', 'lri': '2026-10-24',
-         'kam': '2026-10-24', 'kln': '2026-10-24'}
+         'kam': '2026-10-24', 'kln': '2026-10-24',
+         'nyf': '2026-10-24', 'dig': '2026-10-24', 'dug': '2026-10-24'}
 
 
 def urls(r):
@@ -102,6 +104,8 @@ class DbsAuditTest(unittest.TestCase):
         # Davar's Mbivilia Ũvoo Mũseo; the Bible Society of Kenya's Kalenjin Bible and FCBH's New Testament.
         self.assertEqual(totals['kam'], 1189)
         self.assertEqual(totals['kln'], 1189 + 260)
+        # Davar's whole Bibles; the Giryama picker lists 1,175 of its chapters.
+        self.assertEqual((totals['nyf'], totals['dig'], totals['dug']), (1175, 1189, 1189))
         # Three full Bibles, the Reina-Valera 1960 Old Testament and three New Testaments.
         self.assertEqual(totals['spa'], 1189 * 3 + 929 + 260 * 3)
 
@@ -414,6 +418,28 @@ class DbsAuditTest(unittest.TestCase):
             self.assertIn(f'"{slug}": (', (ROOT / 'packer/library_mail.py').read_text())
         vercel = (ROOT / 'vercel.json').read_text()
         for slug, aliases in (('kamba', ('kamba', 'kikamba', 'akamba', 'kam')), ('kalenjin', ('kalenjin', 'kln', 'kipsigis', 'nandi'))):
+            for alias in aliases:
+                self.assertIn('{ "source": "/' + alias + '", "destination": "/' + slug + '/index.html" }', vercel)
+
+    def test_giryama_digo_and_duruma(self):
+        for code, slug, films in (('nyf', 'giryama', 5), ('dig', 'digo', 4), ('dug', 'duruma', 5)):
+            shelf = self.shelf(code)
+            # A text Bible (PDF to read), a whole audio Bible and the films, all in the language.
+            self.assertEqual([r['type'] for r in shelf[:2]], ['scripture', 'audio-bible'], code)
+            self.assertEqual(shelf[0]['read']['kind'], 'pdf', code)
+            self.assertEqual(len([r for r in shelf if r['type'] == 'film']), films, code)
+            self.assertFalse(any(r.get('scope') for r in shelf if r['type'] == 'film'), code)
+            page = (ROOT / f'app/{slug}/index.html').read_text()
+            self.assertIn(f'"lang":"{code}","ui":"swh","slug":"{slug}"', page)
+            self.assertIn(f"'{slug}/index.html', 'data/catalog-{code}.js'", (ROOT / 'app/sw.js').read_text())
+            self.assertIn(f'"{slug}": (', (ROOT / 'packer/library_mail.py').read_text())
+        # Digo's picker names its books in Digo; Giryama's and Duruma's give English, so they take Swahili.
+        self.assertEqual(self.shelf('dig')[1]['play']['bookNames']['Genesis'], 'Mwandzo')
+        self.assertEqual(self.shelf('nyf')[1]['play']['bookNames']['Genesis'], 'Mwanzo')
+        self.assertEqual(self.shelf('dug')[1]['play']['bookNames']['Genesis'], 'Mwanzo')
+        vercel = (ROOT / 'vercel.json').read_text()
+        for slug, aliases in (('giryama', ('giryama', 'giriama', 'nyf')), ('digo', ('digo', 'chidigo', 'dig')),
+                              ('duruma', ('duruma', 'chiduruma', 'dug'))):
             for alias in aliases:
                 self.assertIn('{ "source": "/' + alias + '", "destination": "/' + slug + '/index.html" }', vercel)
 

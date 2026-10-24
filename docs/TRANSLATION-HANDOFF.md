@@ -1054,3 +1054,17 @@ Kalenjin is one shelf from three DBS pages (Kalenjin, Kipsigis and Nandi), since
 Not carried: DBS's moved audio Bible pages (KAMBSK, KLNBSK), which point to the carried editions, and the globalrecordings.net links whose DBS-hosted media is carried.
 
 Rebuild with `python3 packer/build_dbs_audit.py kam kln`, then `npm run dbs:import`. The audits are `catalog/source/dbs-audit-{kamba,kalenjin}-2026-10-24.json`.
+
+### Giryama, Digo and Duruma — 2026-10-24
+
+Added three Mijikenda shelves and pages with the Swahili interface (`swh`): `/giryama` (content `nyf`, also `/kigiryama`, `/agiryama`, `/giriama`, `/nyf`), `/digo` (`dig`, also `/chidigo`, `/kidigo`) and `/duruma` (`dug`, also `/chiduruma`, `/kiduruma`). No machine translation service covers them, so the menus stay Swahili. Digo's audio Bible names its books in Digo ("Mwandzo", "Kutsama"), which stay; the Giryama and Duruma pickers give English names, so they use the Swahili ones. GRN titles DBS gives in the language (Rabai "Lola Sikiza Na Uishi", Digo "Anza Na Mlungu") are kept.
+
+Each shelf leads with Bible Translation & Literacy's text (PDF to read, plus EPUB where DBS has one and the HTML download), then Davar's whole audio Bible, JESUS, LUMO (Mark, the Covenant) and the Visual Bible. The Digo and Duruma audio Bibles are linked from their text pages, not the language page, so the audits list them with the Bibles (as Saamia's). Same browser audit as above; every audio Bible chapter checked (Giryama 1,175 listed by its picker, Digo 1,189, Duruma 1,189), all valid. DBS has no EPUB of the Digo Bible (404).
+
+| Shelf | Resources | Shown by default |
+|---|---|---|
+| Giryama | 26 | Kilagane Kisha (NT text), audio Bible, JESUS, LUMO Mark and Covenant, Visual Bible Matthew and Acts |
+| Digo | 21 | Maandiko Matakatifu (text), audio Bible, JESUS, LUMO Mark and Covenant, Visual Bible Acts |
+| Duruma | 16 | Lagano Iphya (NT text), audio Bible, JESUS, LUMO Mark and Covenant, Visual Bible Matthew and Acts |
+
+Rebuild with `python3 packer/build_dbs_audit.py nyf dig dug`, then `npm run dbs:import`.

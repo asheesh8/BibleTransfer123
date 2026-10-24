@@ -12,7 +12,7 @@
     }
   },
   "redirects": [
-    { "source": "/:slug(english|mandarin|hindi|marathi|urdu|swahili|zulu|western-punjabi|cantonese|pashto|eastern-punjabi|nepali|sindhi|luganda|luo|malagasy|kirundi|akan|tigrinya|arabic|haitian|spanish|kuria|luhya|bukusu|saamia|maragoli|idakho|tiriki|kabras|tachoni|banyala|marachi|kamba|kalenjin|chichewa|kinyarwanda|xhosa|shona|hausa|lingala|nigerian-pidgin|yoruba|portuguese|amharic|french|igbo|oromo|kikuyu|gusii|maasai)", "has": [{ "type": "query", "key": "src", "value": "qr" }], "destination": "/api/qr?l=:slug", "permanent": false }
+    { "source": "/:slug(english|mandarin|hindi|marathi|urdu|swahili|zulu|western-punjabi|cantonese|pashto|eastern-punjabi|nepali|sindhi|luganda|luo|malagasy|kirundi|akan|tigrinya|arabic|haitian|spanish|kuria|luhya|bukusu|saamia|maragoli|idakho|tiriki|kabras|tachoni|banyala|marachi|kamba|kalenjin|giryama|digo|duruma|chichewa|kinyarwanda|xhosa|shona|hausa|lingala|nigerian-pidgin|yoruba|portuguese|amharic|french|igbo|oromo|kikuyu|gusii|maasai)", "has": [{ "type": "query", "key": "src", "value": "qr" }], "destination": "/api/qr?l=:slug", "permanent": false }
   ],
   "rewrites": [
     { "source": "/kirundi", "destination": "/kirundi/index.html" },
@@ -133,6 +133,19 @@
     { "source": "/kln", "destination": "/kalenjin/index.html" },
     { "source": "/kipsigis", "destination": "/kalenjin/index.html" },
     { "source": "/nandi", "destination": "/kalenjin/index.html" },
+    { "source": "/giryama", "destination": "/giryama/index.html" },
+    { "source": "/kigiryama", "destination": "/giryama/index.html" },
+    { "source": "/agiryama", "destination": "/giryama/index.html" },
+    { "source": "/giriama", "destination": "/giryama/index.html" },
+    { "source": "/nyf", "destination": "/giryama/index.html" },
+    { "source": "/digo", "destination": "/digo/index.html" },
+    { "source": "/chidigo", "destination": "/digo/index.html" },
+    { "source": "/kidigo", "destination": "/digo/index.html" },
+    { "source": "/dig", "destination": "/digo/index.html" },
+    { "source": "/duruma", "destination": "/duruma/index.html" },
+    { "source": "/chiduruma", "destination": "/duruma/index.html" },
+    { "source": "/kiduruma", "destination": "/duruma/index.html" },
+    { "source": "/dug", "destination": "/duruma/index.html" },
     { "source": "/saamia", "destination": "/saamia/index.html" },
     { "source": "/samia", "destination": "/saamia/index.html" },
     { "source": "/olusaamia", "destination": "/saamia/index.html" },
