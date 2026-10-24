@@ -12,7 +12,7 @@
     }
   },
   "redirects": [
-    { "source": "/:slug(english|mandarin|hindi|marathi|urdu|swahili|zulu|western-punjabi|cantonese|pashto|eastern-punjabi|nepali|sindhi|luganda|luo|malagasy|kirundi|akan|tigrinya|arabic|haitian|spanish|kuria|luhya|bukusu|saamia|maragoli|idakho|tiriki|chichewa|kinyarwanda|xhosa|shona|hausa|lingala|nigerian-pidgin|yoruba|portuguese|amharic|french|igbo|oromo|kikuyu|gusii|maasai)", "has": [{ "type": "query", "key": "src", "value": "qr" }], "destination": "/api/qr?l=:slug", "permanent": false }
+    { "source": "/:slug(english|mandarin|hindi|marathi|urdu|swahili|zulu|western-punjabi|cantonese|pashto|eastern-punjabi|nepali|sindhi|luganda|luo|malagasy|kirundi|akan|tigrinya|arabic|haitian|spanish|kuria|luhya|bukusu|saamia|maragoli|idakho|tiriki|kabras|tachoni|banyala|marachi|chichewa|kinyarwanda|xhosa|shona|hausa|lingala|nigerian-pidgin|yoruba|portuguese|amharic|french|igbo|oromo|kikuyu|gusii|maasai)", "has": [{ "type": "query", "key": "src", "value": "qr" }], "destination": "/api/qr?l=:slug", "permanent": false }
   ],
   "rewrites": [
     { "source": "/kirundi", "destination": "/kirundi/index.html" },
@@ -108,6 +108,23 @@
     { "source": "/tiriki", "destination": "/tiriki/index.html" },
     { "source": "/lutirichi", "destination": "/tiriki/index.html" },
     { "source": "/lutiriki", "destination": "/tiriki/index.html" },
+    { "source": "/kabras", "destination": "/kabras/index.html" },
+    { "source": "/lukabaras", "destination": "/kabras/index.html" },
+    { "source": "/kabarasi", "destination": "/kabras/index.html" },
+    { "source": "/lkb", "destination": "/kabras/index.html" },
+    { "source": "/tachoni", "destination": "/tachoni/index.html" },
+    { "source": "/lutachoni", "destination": "/tachoni/index.html" },
+    { "source": "/olutachoni", "destination": "/tachoni/index.html" },
+    { "source": "/lts", "destination": "/tachoni/index.html" },
+    { "source": "/banyala", "destination": "/banyala/index.html" },
+    { "source": "/olunyala", "destination": "/banyala/index.html" },
+    { "source": "/lunyala", "destination": "/banyala/index.html" },
+    { "source": "/bunyala", "destination": "/banyala/index.html" },
+    { "source": "/nyala", "destination": "/banyala/index.html" },
+    { "source": "/nle", "destination": "/banyala/index.html" },
+    { "source": "/marachi", "destination": "/marachi/index.html" },
+    { "source": "/olumarachi", "destination": "/marachi/index.html" },
+    { "source": "/lri", "destination": "/marachi/index.html" },
     { "source": "/saamia", "destination": "/saamia/index.html" },
     { "source": "/samia", "destination": "/saamia/index.html" },
     { "source": "/olusaamia", "destination": "/saamia/index.html" },

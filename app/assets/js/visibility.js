@@ -29,8 +29,10 @@
 
   // Kinds switched on in one language only. English has no DBS books; its one
   // book is the Bible Study Tool Box workbook the Library hosts itself.
+  // Marachi has nothing but its Global Recordings programmes, so they show.
   var LANG_TYPE_DEFAULTS = {
-    eng: { 'book': true }
+    eng: { 'book': true },
+    lri: { 'audio': true }
   };
 
   // English keeps five translations; every other language keeps one, its

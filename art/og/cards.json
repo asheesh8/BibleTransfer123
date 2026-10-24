@@ -11,6 +11,10 @@
   "title": "مكتبة الكتاب المقدس: العربية",
   "description": "أفلام وتسجيلات صوتية ونصوص من الكتاب المقدس مجاناً باللغة العربية. شاهد واستمع واقرأ على أي هاتف، ثم شاركه مع غيرك!"
  },
+ "banyala": {
+  "title": "Maktaba ya Biblia ya Olunyala",
+  "description": "Filamu za Biblia, sauti na Maandiko bure kwa Olunyala. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
+ },
  "bukusu": {
   "title": "Maktaba ya Biblia ya Lubukusu",
   "description": "Filamu za Biblia, sauti na Maandiko bure kwa Lubukusu. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
@@ -63,6 +67,10 @@
   "title": "Ọba Akwụkwọ Baịbụl — Asụsụ Igbo",
   "description": "Ihe nkiri Baịbụl, Baịbụl a na-ege ntị na Akwụkwọ Nsọ n'efu (Asụsụ Igbo). Lee, gee ntị ma gụọ na ekwentị ọ bụla, wee kesaara ndị ọzọ!"
  },
+ "kabras": {
+  "title": "Maktaba ya Biblia ya Lukabaras",
+  "description": "Filamu za Biblia, sauti na Maandiko bure kwa Lukabaras. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
+ },
  "kikuyu": {
   "title": "Maktaba ya Bibilia ya Gĩkũyũ",
   "description": "Mbica cia Bibilia, Bibilia ya kũigua na Maandĩko ma tũhũ (Gĩkũyũ). Rora, igua na ũthome thimũ-inĩ o yothe, ũcoke ũtũmĩre angĩ!"
@@ -106,6 +114,10 @@
  "mandarin": {
   "title": "普通话圣经资料库",
   "description": "免费的普通话圣经电影、有声圣经和经文。在任何手机上观看、聆听和阅读，然后分享给别人！"
+ },
+ "marachi": {
+  "title": "Maktaba ya Biblia ya Olumarachi",
+  "description": "Filamu za Biblia, sauti na Maandiko bure kwa Olumarachi. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
  },
  "maragoli": {
   "title": "Maktaba ya Biblia ya Lulogooli",
@@ -154,6 +166,10 @@
  "swahili": {
   "title": "Maktaba ya Biblia ya Kiswahili",
   "description": "Filamu za Biblia, sauti na Maandiko bure kwa Kiswahili. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
+ },
+ "tachoni": {
+  "title": "Maktaba ya Biblia ya Lutachoni",
+  "description": "Filamu za Biblia, sauti na Maandiko bure kwa Lutachoni. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
  },
  "tigrinya": {
   "title": "ቤተ መጻሕፍቲ መጽሓፍ ቅዱስ ብትግርኛ",

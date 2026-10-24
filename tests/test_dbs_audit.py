@@ -1,4 +1,4 @@
-"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Arabic, Haitian Creole, Kuria, Spanish, Saamia, Luhya, Bukusu, Maragoli and Idakho-Isukha-Tiriki: complete, verified and DBS-hosted."""
+"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Arabic, Haitian Creole, Kuria, Spanish, Saamia, Luhya, Bukusu, Maragoli, Idakho-Isukha-Tiriki, Kabras, Tachoni, Banyala and Marachi: complete, verified and DBS-hosted."""
 import json
 import pathlib
 import re
@@ -18,10 +18,13 @@ SHELVES = {'xho': ('xhosa', 'xh', 13), 'nya': ('chichewa', 'ny', 34),
            'hat': ('haitian', 'ht', 29), 'kuj': ('kuria', 'swh', 12),
            'spa': ('spanish', 'es', SPA_COUNT), 'lsm': ('saamia', 'swh', 16),
            'luy': ('luhya', 'swh', 83), 'bxk': ('bukusu', 'swh', 33),
-           'rag': ('maragoli', 'swh', 13), 'ida': ('idakho', 'swh', 4)}
+           'rag': ('maragoli', 'swh', 13), 'ida': ('idakho', 'swh', 4),
+           'lkb': ('kabras', 'swh', 11), 'lts': ('tachoni', 'swh', 11),
+           'nle': ('banyala', 'swh', 12), 'lri': ('marachi', 'swh', 14)}
 DATES = {'ara': '2026-10-07', 'hat': '2026-10-13', 'kuj': '2026-10-14', 'spa': '2026-10-15',
          'lsm': '2026-10-20', 'luy': '2026-10-20', 'bxk': '2026-10-20',
-         'rag': '2026-10-21', 'ida': '2026-10-21'}
+         'rag': '2026-10-21', 'ida': '2026-10-21',
+         'lkb': '2026-10-24', 'lts': '2026-10-24', 'nle': '2026-10-24', 'lri': '2026-10-24'}
 
 
 def urls(r):
@@ -92,6 +95,8 @@ class DbsAuditTest(unittest.TestCase):
         self.assertEqual(totals['bxk'], 1189 + 24)
         # The Lulogooli Bible (2019): DBS has its Old Testament in audio.
         self.assertEqual(totals['rag'], 929)
+        # Faith Comes By Hearing's Nyala New Testament.
+        self.assertEqual(totals['nle'], 260)
         # Three full Bibles, the Reina-Valera 1960 Old Testament and three New Testaments.
         self.assertEqual(totals['spa'], 1189 * 3 + 929 + 260 * 3)
 
@@ -355,6 +360,32 @@ class DbsAuditTest(unittest.TestCase):
         mail = (ROOT / 'packer/library_mail.py').read_text()
         for slug in ('maragoli', 'idakho', 'tiriki'):
             self.assertIn(f'"{slug}": (', mail)
+
+    def test_kabras_tachoni_banyala_and_marachi(self):
+        luy = self.shelf('luy')
+        for code, slug, variety, films in (('lkb', 'kabras', 'Kabras', 1), ('lts', 'tachoni', 'Tachoni', 1),
+                                           ('nle', 'banyala', 'Bunyala', 1), ('lri', 'marachi', 'Marachi', 0)):
+            shelf = self.shelf(code)
+            self.assertEqual(len([r for r in shelf if r['type'] == 'film']), films, code)
+            self.assertFalse(any(r.get('scope') for r in shelf), code)
+            # Every one of the variety's programmes in DBS's Luyia collection, and no other variety's.
+            grn = {r['id'].rsplit('-', 1)[1] for r in shelf if r['id'].startswith(code + '-grn-')}
+            self.assertEqual(grn, {r['id'].rsplit('-', 1)[1] for r in luy if r.get('scope') == variety}, code)
+            page = (ROOT / f'app/{slug}/index.html').read_text()
+            self.assertIn(f'"lang":"{code}","ui":"swh","slug":"{slug}"', page)
+            self.assertIn(f'data/catalog-{code}.js', page)
+            self.assertIn(f"'{slug}/index.html', 'data/catalog-{code}.js'", (ROOT / 'app/sw.js').read_text())
+        nle = self.shelf('nle')
+        self.assertEqual(nle[0]['id'], 'nle-ab-nleufw-fcbh-nt-n')
+        self.assertEqual(nle[0]['play']['bookNames']['Matthew'], 'Mathayo')
+        self.assertEqual(self.shelf('lkb')[0]['id'], 'lkb-film-lkb-lukabaras-jesus')
+        self.assertEqual(self.shelf('lts')[0]['id'], 'lts-film-lts-olutachoni-jesus')
+        vercel = (ROOT / 'vercel.json').read_text()
+        for slug, aliases in (('kabras', ('kabras', 'lukabaras', 'lkb')), ('tachoni', ('tachoni', 'lutachoni', 'lts')),
+                              ('banyala', ('banyala', 'olunyala', 'bunyala', 'nle')), ('marachi', ('marachi', 'olumarachi', 'lri'))):
+            for alias in aliases:
+                self.assertIn('{ "source": "/' + alias + '", "destination": "/' + slug + '/index.html" }', vercel)
+            self.assertIn(f'"{slug}": (', (ROOT / 'packer/library_mail.py').read_text())
 
 
 if __name__ == '__main__':
