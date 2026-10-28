@@ -21,7 +21,7 @@
   background: var(--surface); color: var(--ink); font: inherit; font-size: .8rem;
   box-shadow: 0 3px 15px #0003; cursor: pointer;
 }
-.consent-panel button:focus-visible, .cookie-settings:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.consent-panel button:focus-visible, .cookie-settings:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 /* Pages with <main id="main"> always get the tab bar, often a moment after the
    panel appears; sit above it from the start so the panel does not jump. */
 body:not(.has-tabs):not(:has(> main#main)) .consent-panel { bottom: calc(1rem + env(safe-area-inset-bottom)); }

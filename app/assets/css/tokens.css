@@ -11,8 +11,9 @@
                  Light and dark redefine only this layer.
    3. Scales     type, space, radius, elevation, motion, layers.
 
-   Theme: follows the phone unless the page sets data-theme="light|dark" on
-   <html>. Motion: follows the phone's "reduce motion" unless the page sets
+   Theme: "Sunrise" light is the default on every phone, because the brief
+   is bright and warm. Dark (Lantern Night) applies when the page sets
+   data-theme="dark", or data-theme="system" on a phone set to dark. Motion: follows the phone's "reduce motion" unless the page sets
    data-motion="reduce|full".
 
    Everything is prefixed --et- so these can load beside the old app.css
@@ -23,37 +24,37 @@
   /* ---------------------------------------------------------- 1. palette
      The brand palette from the Kandili brief, plus the deeper and lighter
      steps each one needs to pass contrast on both grounds. */
-  --et-p-purple-900: #2A1B33;
-  --et-p-purple-800: #4E1F64;
-  --et-p-purple-700: #6B2E86;
+  --et-p-purple-900: #25163A;
+  --et-p-purple-800: #4F2696;
+  --et-p-purple-700: #6A35C2;
   --et-p-purple-500: #8A55A6;
   --et-p-purple-300: #C79AD9;
-  --et-p-purple-100: #F3EAF7;
+  --et-p-purple-100: #F2EBFF;
 
-  --et-p-gold-700: #B87D06;
-  --et-p-gold-500: #E8A317;
+  --et-p-gold-700: #D99A00;
+  --et-p-gold-500: #FFC21A;
   --et-p-gold-400: #F0B942;
-  --et-p-gold-100: #FDF3DC;
+  --et-p-gold-100: #FFF4D1;
 
-  --et-p-green-800: #1F5A31;
-  --et-p-green-700: #2E7D45;
+  --et-p-green-800: #0F6436;
+  --et-p-green-700: #18874A;
   --et-p-green-500: #3FA65C;
   --et-p-green-400: #4FBE72;
-  --et-p-green-100: #E9F6ED;
+  --et-p-green-100: #E3F7EA;
 
-  --et-p-sky-800: #154A64;
-  --et-p-sky-700: #1F6182;
+  --et-p-sky-800: #0F528A;
+  --et-p-sky-700: #1670B5;
   --et-p-sky-500: #2E86AB;
   --et-p-sky-400: #5BAFD0;
-  --et-p-sky-100: #E7F2F8;
+  --et-p-sky-100: #E6F3FD;
 
   --et-p-red-800: #8A2727;
   --et-p-red-600: #B83A3A;
   --et-p-red-300: #F28B82;
   --et-p-red-100: #FBEAEA;
 
-  --et-p-cream:  #FFFBF2;
-  --et-p-sand:   #F6EEE1;
+  --et-p-cream:  #FFFDF8;
+  --et-p-sand:   #F7F1FF;
   --et-p-white:  #FFFFFF;
   --et-p-ink:    #1A1020;   /* words on a pale dark-theme button face */
   --et-p-night:  #120A1C;   /* the rebrand's night sky */
@@ -86,15 +87,15 @@
   --et-scrim:       rgba(26, 14, 34, .55);
 
   --et-text:        var(--et-p-purple-900);   /* 15.6:1 on bg */
-  --et-text-soft:   #6B5A75;                  /* 6.1:1 on bg  */
+  --et-text-soft:   #5F4E75;                  /* 7.3:1 on bg  */
   --et-text-brand:  var(--et-p-purple-700);
   --et-text-go:     var(--et-p-green-700);
   --et-text-info:   var(--et-p-sky-700);
   --et-text-danger: var(--et-p-red-600);
 
-  --et-line:        #EADFD0;
-  --et-line-strong: #D9C8B2;
-  --et-focus:       var(--et-p-gold-500);
+  --et-line:        #ECE4F3;
+  --et-line-strong: #D9CCE8;
+  --et-focus:       var(--et-p-purple-700);
 
   --et-wash-brand:  var(--et-p-purple-100);
   --et-wash-gold:   var(--et-p-gold-100);
@@ -108,7 +109,7 @@
   --et-fill-gold:   var(--et-p-gold-500);    --et-on-gold:   var(--et-p-purple-900); --et-lip-gold:   var(--et-p-gold-700);
   --et-fill-info:   var(--et-p-sky-700);     --et-on-info:   var(--et-p-white);      --et-lip-info:   var(--et-p-sky-800);
   --et-fill-danger: var(--et-p-red-600);     --et-on-danger: var(--et-p-white);      --et-lip-danger: var(--et-p-red-800);
-  --et-fill-quiet:  var(--et-p-white);       --et-on-quiet:  var(--et-p-purple-900); --et-lip-quiet:  #D9C8B2;
+  --et-fill-quiet:  var(--et-p-white);       --et-on-quiet:  var(--et-p-purple-900); --et-lip-quiet:  #D9CCE8;
 
   /* QR codes are always dark on white whatever the theme: phone cameras read
      inverted codes badly. */
@@ -214,10 +215,10 @@
    Dark is a different set of grounds with lighter accent text. Filled
    controls get pale faces with near-black words, the same rule app.css
    follows (--on-face, --green-face …), so old and new screens match. The block appears
-   twice because CSS has no way to say "the system is dark OR the page asked
-   for dark" in one selector. Keep them identical. */
+   twice because CSS has no way to say "the page follows a dark phone OR the
+   page asked for dark" in one selector. Keep them identical. */
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
+  :root[data-theme="system"] {
     --et-bg:          var(--et-p-night);
     --et-surface:     var(--et-p-night-2);
     --et-sunk:        var(--et-p-night-3);

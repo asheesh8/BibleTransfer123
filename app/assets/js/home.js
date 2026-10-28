@@ -46,10 +46,26 @@
       : (ready === 0 && onlyCard)
         ? h('home.oncard', { n: R.length })
         : h('home.ready', { n: ready, lang: L.native || L.name || '' });
+    // Kandili says hello beside the question, the way a friendly app opens.
     out += '<header class="greet">' +
-      '<p class="eyebrow">' + h('home.greet') + '</p>' +
+      (ET.lantern ? '<span class="greet-mascot" aria-hidden="true">' + ET.lantern(72, 'hello') + '</span>' : '') +
+      '<span class="greet-text"><p class="eyebrow">' + h('home.greet') + '</p>' +
       '<h1>' + ET.esc(L.native || L.name || '') + '</h1>' +
-      '<p class="muted">' + line + '</p></header>';
+      '<p class="muted">' + line + '</p></span></header>';
+
+    // ---- quick picks: one big bright button per kind of thing, so the first
+    // tap answers "what would you like today?" without reading a shelf.
+    var picks = [['film', 'film', 'purple'], ['scripture', 'book', 'sky'], ['audio-bible', 'wave', 'green'], ['audio', 'wave', 'gold']];
+    var quick = picks.filter(function (p) {
+      return R.some(function (r) { return r.type === p[0]; });
+    }).slice(0, 3);
+    if (quick.length > 1) {
+      out += '<nav class="quick" aria-label="' + ET.esc(t('home.greet')) + '">' + quick.map(function (p) {
+        return '<a class="quick-pick ' + p[2] + '" href="library.html?type=' + p[0] + '&lang=' + mine + '">' +
+          '<span class="quick-ico">' + ET.icon(p[1]) + '</span>' +
+          '<span class="quick-t">' + h('type.' + p[0]) + '</span></a>';
+      }).join('') + '</nav>';
+    }
 
     // ---- headline: the VillageServer deployment film, the first thing on Home, in
     // every language. It lives in the app folder, so a card plays it offline.
@@ -109,6 +125,7 @@
     });
 
     ET.$('#home').innerHTML = out;
+    if (ET.loadMascot) ET.loadMascot();
   }
 
   ET.header();
