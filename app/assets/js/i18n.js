@@ -17837,6 +17837,53 @@
     return '';
   }
 
+  /* The rest of the front door, below the language list: how sharing works,
+     the offer to content partners, and what is coming. English only and
+     marked so; the reader-facing library is fully translated. */
+  function landing() {
+    function step(n, cls, icon, title, text) {
+      return '<li class="lp-step ' + cls + '"><span class="lp-ico">' + ET.icon(icon) + '</span>' +
+        '<span class="lp-n">' + n + ' · ' + title + '</span><span>' + text + '</span></li>';
+    }
+    function phase(cls, tag, title, text) {
+      return '<li class="lp-phase ' + cls + '"><span class="lp-tag">' + tag + '</span>' +
+        '<strong>' + title + '</strong><span>' + text + '</span></li>';
+    }
+    return '<section class="lp-band lp-how" id="et-how" lang="en" dir="ltr"><div class="lp-in">' +
+        '<h2 class="display">One phone lights the next</h2>' +
+        '<p class="lp-lead">Most people we serve have little or no data. So the library is built to be ' +
+          'saved once and shared the rest of the way, from one phone to another, with no internet at all.</p>' +
+        '<ol class="lp-steps">' +
+          step(1, 'purple', 'globe', 'Choose', 'Pick your language. Everything, buttons included, switches to it.') +
+          step(2, 'sky', 'save', 'Save', 'Save a film or Bible to your phone once, wherever there is Wi‑Fi or a VillageServer.') +
+          step(3, 'gold', 'share', 'Pass it on', 'Show a code. Your friend scans it and it copies across, phone to phone.') +
+        '</ol>' +
+      '</div></section>' +
+      '<section class="lp-band lp-partners" lang="en" dir="ltr"><div class="lp-in">' +
+        '<p class="lp-eyebrow">For ministries and content partners</p>' +
+        '<h2 class="display">Bring your library. We carry it the last mile.</h2>' +
+        '<p class="lp-lead">You have the films, Bibles and teaching. We put them in people\'s hands ' +
+          'where the internet stops, and show you where they travel.</p>' +
+        '<ul class="lp-points">' +
+          '<li><strong>Your content, every language.</strong> One upload reaches every library that speaks it.</li>' +
+          '<li><strong>Offline by design.</strong> Phones, memory cards and VillageServer hubs, with no data cost to the viewer.</li>' +
+          '<li><strong>Reach you can measure.</strong> Plays and shares by language and country, with privacy built in.</li>' +
+        '</ul>' +
+        '<a class="btn big lp-partner-btn" href="https://villageservers.org" target="_blank" rel="noopener">Partner with us</a>' +
+      '</div></section>' +
+      '<section class="lp-band lp-next" lang="en" dir="ltr"><div class="lp-in">' +
+        '<h2 class="display">What\'s coming</h2>' +
+        '<ol class="lp-phases">' +
+          phase('now', 'Live now', 'The web library', 'Films, Bibles and audio in 50+ languages, saved to the phone and shared by link or nearby code.') +
+          phase('next', 'Next', 'iPhone and Android apps', 'Share by QR code between any two phones, with Kandili the lantern and full offline playback.') +
+          phase('then', 'Then', 'VillageServer hubs', 'One small server lights a whole village: 20 to 40 phones at once.') +
+        '</ol>' +
+      '</div></section>' +
+      '<footer class="lp-foot" lang="en" dir="ltr"><div class="lp-in">' +
+        'A VillageServer Initiative. Content from the Digital Bible Society and partners. Always free.' +
+      '</div></footer>';
+  }
+
   /* First run: a whole screen, not a sheet. It cannot be dismissed — there is
      no sensible default for someone who has not said what they read — and it
      says how much is waiting in each language, so choosing one is choosing a
@@ -17859,9 +17906,33 @@
     el.setAttribute('aria-labelledby', 'et-welcome-h');
     var hello = ['en', 'hi', 'ur', 'swh', 'cmn'].filter(function (c) { return c !== guess; }).slice(0, 4);
     if (guess) hello.unshift(guess);
+    // The first screen anyone sees, so it doubles as the front door: what this
+    // is and why it matters (in English, for partners and first-time visitors),
+    // then straight into the language list, which is the only thing a reader
+    // has to do. The hero's own button speaks the reader's language.
+    var pick = say('welcome.title', guess || 'en');
     el.innerHTML =
-      '<div class="welcome-in">' +
-        '<div class="welcome-mark">' + (ET.lantern ? ET.lantern(44) : '') + '</div>' +
+      '<section class="lp-hero" lang="en" dir="ltr">' +
+        '<div class="lp-in lp-hero-in">' +
+          '<div class="lp-copy">' +
+            '<p class="lp-chip">Free · Works offline · 50+ languages</p>' +
+            '<p class="lp-h display">Light that travels <span>phone to phone.</span></p>' +
+            '<p class="lp-sub">Films, Bibles and audio Scripture in your own language. ' +
+              'Save them once, then pass them to anyone nearby. No internet needed.</p>' +
+            '<div class="lp-ctas">' +
+              '<a class="btn gold big" href="#et-welcome-pick">' + ET.icon('globe') +
+                '<span dir="auto" lang="' + (guess || 'en') + '">' + ET.esc(pick) + '</span></a>' +
+              '<a class="btn ghost lp-ghost" href="#et-how">How sharing works</a>' +
+            '</div>' +
+          '</div>' +
+          '<div class="lp-art" aria-hidden="true">' +
+            '<span class="lp-star s1"></span><span class="lp-star s2"></span><span class="lp-star s3"></span>' +
+            '<span class="lp-float">' + (ET.lantern ? ET.lantern(168) : '') + '</span>' +
+            '<span class="lp-chain"><i></i><b></b><i></i><b></b><i></i><b></b><i></i></span>' +
+          '</div>' +
+        '</div>' +
+      '</section>' +
+      '<div class="welcome-in" id="et-welcome-pick">' +
         '<h1 id="et-welcome-h" dir="auto">' + ET.esc(say('welcome.title', guess || 'en')) + '</h1>' +
         '<p class="welcome-also">' + hello.slice(1).map(function (c) {
           return '<span dir="' + meta(c).dir + '">' + ET.esc(say('welcome.title', c)) + '</span>';
@@ -17885,7 +17956,8 @@
             '<span class="wl-go" aria-hidden="true">' + ET.icon('chev') + '</span>' +
           '</button>';
         }).join('') + '</div>' +
-      '</div>';
+      '</div>' +
+      landing();
     document.body.appendChild(el);
     document.documentElement.classList.add('welcoming');
 
@@ -17904,8 +17976,20 @@
         b.hidden = !!v && b.getAttribute('data-find').indexOf(v) < 0;
       });
     });
+    // In-page links scroll the welcome screen itself, not the page behind it.
+    ET.$$('a[href^="#et-"]', el).forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        var to = ET.$(a.getAttribute('href'), el);
+        if (!to) return;
+        e.preventDefault();
+        var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+        to.scrollIntoView({ behavior: still ? 'auto' : 'smooth', block: 'start' });
+      });
+    });
+    // Focus the likeliest language for keyboard and screen-reader users, but
+    // leave the hero in view.
     var first = ET.$('.welcome-lang', el);
-    if (first) first.focus();
+    if (first) { try { first.focus({ preventScroll: true }); } catch (e) { first.focus(); } }
   }
 
   ET.i18n = { t: t, h: h, say: say, welcome: welcome, suggested: suggested, tOr: tOr, tOrHTML: tOrHTML, set: set, apply: apply, onChange: onChange, picker: picker,

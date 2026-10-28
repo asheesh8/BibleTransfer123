@@ -75,18 +75,25 @@ window.ET = (function () {
 
   // The lantern is the app's mascot — نور, "light". Drawn rather than
   // generated so it is identical on every card and costs nothing to ship.
-  function lantern(size) {
+  function lantern(size, glow) {
+    // Kandili: the flame on top is its mood, the face sits on the glass.
+    // `glow` adds the soft halo used where it is the hero of a screen.
     var s = size || 32;
-    return '<svg viewBox="0 0 48 48" width="' + s + '" height="' + s + '" aria-hidden="true">' +
+    return '<svg class="kandili" viewBox="-3 -9 54 54" width="' + s + '" height="' + s + '" aria-hidden="true">' +
+      (glow ? '<circle class="k-glow" cx="24" cy="22" r="26" fill="#FFE7A3" opacity=".16"/>' : '') +
+      '<path d="M17 7c0-8 14-8 14 0" stroke="#B87D06" stroke-width="2.2" fill="none" stroke-linecap="round"/>' +
+      '<path class="k-flame" d="M24-8c3.4 3.2 3.8 6.8 0 10c-3.8-3.2-3.4-6.8 0-10z" fill="#F5B52E"/>' +
+      '<path d="M24-2.4c1.7 1.6 1.9 3.4 0 5c-1.9-1.6-1.7-3.4 0-5z" fill="#FFE7A3"/>' +
       '<path d="M18 6h12a2 2 0 0 1 0 4H18a2 2 0 0 1 0-4z" fill="#B87D06"/>' +
       '<path d="M14 12h20l3 22a5 5 0 0 1-5 5.6H16A5 5 0 0 1 11 34z" fill="#E8A317"/>' +
       '<path d="M17 15h14l2.2 17a3 3 0 0 1-3 3.4H17.8a3 3 0 0 1-3-3.4z" fill="#FDF3DC"/>' +
-      '<ellipse cx="24" cy="27" rx="5" ry="6.5" fill="#E8A317"/>' +
-      '<circle cx="21.6" cy="25" r="1.4" fill="#4E1F64"/>' +
-      '<circle cx="26.4" cy="25" r="1.4" fill="#4E1F64"/>' +
-      '<path d="M21.8 29.4a3 3 0 0 0 4.4 0" stroke="#4E1F64" stroke-width="1.5" ' +
+      '<g class="k-eyes"><ellipse cx="20.6" cy="23.6" rx="1.9" ry="2.4" fill="#4E1F64"/>' +
+      '<ellipse cx="27.4" cy="23.6" rx="1.9" ry="2.4" fill="#4E1F64"/>' +
+      '<circle cx="21.1" cy="22.8" r=".6" fill="#fff"/><circle cx="27.9" cy="22.8" r=".6" fill="#fff"/></g>' +
+      '<circle cx="18.2" cy="28" r="1.3" fill="#F4A38C"/><circle cx="29.8" cy="28" r="1.3" fill="#F4A38C"/>' +
+      '<path d="M21.8 28.4a3 3 0 0 0 4.4 0" stroke="#4E1F64" stroke-width="1.4" ' +
       'stroke-linecap="round" fill="none"/>' +
-      '<path d="M12 41h24" stroke="#B87D06" stroke-width="3.2" stroke-linecap="round"/>' +
+      '<path d="M12 41h24" stroke="#B87D06" stroke-width="3.4" stroke-linecap="round"/>' +
       '</svg>';
   }
 
