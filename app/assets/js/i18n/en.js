@@ -28,7 +28,6 @@
   "lib.kind": "Type",
   "lib.partner": "Libraries",
   "lib.partner.main": "Where most of this library comes from",
-  "lib.partner.other": "Other libraries",
   "lib.partner.all": "See all {n}",
   "lib.lang": "Language",
   "lib.clear": "Clear",

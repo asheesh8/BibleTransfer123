@@ -28,7 +28,6 @@
   "lib.kind": "Kind of thing",
   "lib.partner": "Libraries",
   "lib.partner.main": "Na here most of dis library come from",
-  "lib.partner.other": "Oda libraries",
   "lib.partner.all": "See all {n}",
   "lib.lang": "Language",
   "lib.clear": "Clear am",
