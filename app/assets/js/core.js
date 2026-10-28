@@ -86,6 +86,9 @@ window.ET = (function () {
     moon:    '<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>',
     warn:    '<path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17.2v.1"/>',
     home:    '<path d="M4 11l8-7 8 7"/><path d="M6 10v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-9"/>',
+    grid:    '<rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/><rect x="13" y="13" width="7" height="7" rx="2"/>',
+    ears:    '<path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="5" height="6" rx="2"/><rect x="16" y="14" width="5" height="6" rx="2"/>',
+    clock:   '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
     facebook: '<path d="M15.5 3.5H14a4 4 0 0 0-4 4V10H7.5v3.5H10v7h3.5v-7H16l.5-3.5h-3V8a1 1 0 0 1 1-1h2V3.5z"/>'
   };
 
@@ -415,7 +418,7 @@ window.ET = (function () {
         '<span class="name" dir="auto">' + esc(displayTitle(r)) + '</span>' +
         '<span class="sub latin">' + esc(action.sub) + '</span>' +
       '</span>' +
-      '<span class="go">' + esc(action.verb) + '</span></a>';
+      '<span class="go' + (action.tone ? ' go--' + action.tone : '') + '">' + esc(action.verb) + '</span></a>';
   }
 
   function poster(r, sub) {

@@ -18,7 +18,12 @@ const sha256 = buffer => crypto.createHash('sha256').update(buffer).digest('hex'
 async function phone(name, baseURL, browsers) {
   const { engine, device } = PHONES[name];
   const use = process.env.E2E_ENGINES === 'chromium' ? 'chromium' : engine;
-  browsers[use] = browsers[use] || await (use === 'webkit' ? webkit : chromium).launch();
+  // Browsers hide their local address behind a random name.local, which real phones on the
+  // same Wi-Fi resolve over multicast DNS but a test machine cannot, so WebKit and Chromium
+  // never find each other. Letting the Android browser show its address, as a phone that
+  // granted camera access does, lets the iPhone reach it; the Pi path is otherwise unchanged.
+  const args = use === 'chromium' ? ['--disable-features=WebRtcHideLocalIpsWithMdns'] : [];
+  browsers[use] = browsers[use] || await (use === 'webkit' ? webkit : chromium).launch({ args });
   const { defaultBrowserType, ...options } = device;
   const context = await browsers[use].newContext({ ...options, baseURL, acceptDownloads: true });
   const page = await context.newPage();

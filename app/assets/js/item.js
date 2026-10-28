@@ -216,17 +216,19 @@
           (web ? '<button class="btn green" id="chain-pass" type="button">' + ET.icon('share') + h('chain.pass') + '</button>' : '') +
         '</div></section>'
       : '';
-    var html = banner + hero() + '<div id="media">' + player() + '</div>' +
-      '<div class="stack" style="margin-top:1rem">' +
-        '<div style="display:flex;gap:.4rem;flex-wrap:wrap">' + tongue + where +
+    // Title first, then the thing itself, then the three verbs: the order a
+    // film app, YouVersion and WhatsApp all teach.
+    var html = banner +
+      '<header class="stack item-head">' +
+        '<div class="item-chips">' + tongue + where +
           '<span class="chip">' + h('type.' + r.type) + '</span></div>' +
-        '<h1 dir="auto" style="margin:.3rem 0 0">' + ET.esc(ET.displayTitle(r)) + '</h1>' +
+        '<h1 dir="auto">' + ET.esc(ET.displayTitle(r)) + '</h1>' +
         (r.native && r.native !== r.title && !((r.lang === 'amh' && ET.i18n.current() === 'am') || (r.lang === 'por' && ET.i18n.current() === 'pt') || (r.lang === 'yor' && ET.i18n.current() === 'yo') || (r.lang === 'pcm' && ET.i18n.current() === 'pcm') || (r.lang === 'mlg' && ET.i18n.current() === 'mg') || (r.lang === 'nya' && ET.i18n.current() === 'ny') || (r.lang === 'run' && ET.i18n.current() === 'rn') || (r.lang === 'aka' && ET.i18n.current() === 'ak') || (r.lang === 'tir' && ET.i18n.current() === 'ti') || (r.lang === 'hat' && ET.i18n.current() === 'ht') || (r.lang === 'spa' && ET.i18n.current() === 'es') || (r.lang === 'kuj' && ET.i18n.current() === 'swh') || (r.lang === 'lsm' && ET.i18n.current() === 'swh') || (r.lang === 'luy' && ET.i18n.current() === 'swh') || (r.lang === 'bxk' && ET.i18n.current() === 'swh') || (r.lang === 'rag' && ET.i18n.current() === 'swh') || (r.lang === 'ida' && ET.i18n.current() === 'swh') || (r.lang === 'lkb' && ET.i18n.current() === 'swh') || (r.lang === 'lts' && ET.i18n.current() === 'swh') || (r.lang === 'nle' && ET.i18n.current() === 'swh') || (r.lang === 'lri' && ET.i18n.current() === 'swh') || (r.lang === 'kam' && ET.i18n.current() === 'swh') || (r.lang === 'kln' && ET.i18n.current() === 'swh') || (r.lang === 'nyf' && ET.i18n.current() === 'swh') || (r.lang === 'dig' && ET.i18n.current() === 'swh') || (r.lang === 'dug' && ET.i18n.current() === 'swh') || (r.lang === 'mer' && ET.i18n.current() === 'swh') || (r.lang === 'tuv' && ET.i18n.current() === 'swh') || (r.lang === 'teo' && ET.i18n.current() === 'swh') || (r.lang === 'ara' && ET.i18n.current() === 'ar') || (r.lang === 'kin' && ET.i18n.current() === 'rw') || (r.lang === 'xho' && ET.i18n.current() === 'xh') || (r.lang === 'sna' && ET.i18n.current() === 'sn') || (r.lang === 'lin' && ET.i18n.current() === 'ln')) ? '<p class="latin" style="font-size:1rem;margin:0">' +
           ET.esc(ET.displayTitle(r) === r.native ? r.title : r.native) + '</p>' : '') +
-        '<p class="muted latin" style="margin:0">' + ET.esc([r.org, r.year, r.duration, r.stats]
+        '<p class="muted latin item-meta">' + ET.icon('clock') + ET.esc([r.org, r.year, r.duration, r.stats]
           .filter(Boolean).join(' · ')) + '</p>' +
-        (r.desc ? '<p class="latin">' + ET.esc(r.desc) + '</p>' : '') +
-      '</div>';
+      '</header>';
+    html += hero() + '<div id="media">' + player() + '</div>';
 
     if (!r.offline && !r.play && !r.read) {
       // A file that only exists on a card is not waiting for a connection.
@@ -241,9 +243,14 @@
     // The verbs.
     var canSaveChapter = r.play && r.play.kind === 'audio-bible' && r.play.saveChapter;
     var canSave = canSaveChapter || (r.files || []).some(function (f) { return f.file || f.chapters; });
-    html += '<div class="btn-row" style="margin-top:1.3rem">' +
-      (canSave ? '<button class="btn green" id="save">' + ET.icon('save') + h('item.save') + '</button>' : '') +
-      '<button class="btn sky" id="share">' + ET.icon('share') + h('item.share') + '</button></div>';
+    // One colour per verb everywhere: green plays, blue saves, gold shares.
+    var listen = r.type === 'audio' || r.type === 'audio-bible';
+    html += '<div class="btn-row item-actions">' +
+      (r.play ? '<button class="btn green" id="play-now" type="button">' + ET.icon('play') +
+        h(listen ? 'act.listen' : 'act.watch') + '</button>' : '') +
+      (canSave ? '<button class="btn sky" id="save">' + ET.icon('save') + h('item.save') + '</button>' : '') +
+      '<button class="btn gold" id="share">' + ET.icon('share') + h('item.share') + '</button></div>';
+    if (r.desc) html += '<p class="latin item-desc">' + ET.esc(r.desc) + '</p>';
 
     if (web) html += passCard();
 
@@ -277,6 +284,14 @@
     ET.$('#item').innerHTML = html;
     wirePlayer();
     var sv = ET.$('#save');
+    var playNow = ET.$('#play-now');
+    if (playNow) playNow.addEventListener('click', function () {
+      var m = ET.$('#media video, #media audio');
+      if (!m) return;
+      m.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      var started = m.play();
+      if (started && started.catch) started.catch(function () {});
+    });
     if (sv) sv.addEventListener('click', function () {
       if (!canSaveChapter) return ET.save.open(r);
       var book = ET.$('#bk'), chapter = ET.$('#bc');
