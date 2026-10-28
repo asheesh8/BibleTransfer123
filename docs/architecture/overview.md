@@ -29,7 +29,7 @@ in someone's hands.
 | No runtime dependencies, nothing from a CDN | Offline, and nothing can disappear upstream | Third-party code is vendored (`app/assets/vendor/peerjs.min.js`). |
 | No bundler or compile step | What is in the repo is what runs; anyone can fix a card with a text editor | Source files are the shipped files. See [decision 0002](../decisions/0002-no-bundler.md). |
 | Same app on web, Pi, card and PWA | One codebase to test | Feature-detect (`location.protocol`, service worker support), never fork the code. |
-| Service worker caches the shell, never media | A card holds tens of GB | Any shell change bumps `VERSION` in `app/sw.js`, or installed copies keep the old page. |
+| Service worker caches the shell, never media | A card holds tens of GB | `VERSION` in `app/sw.js` is a hash of the shell, set by `npm run build`; without a new one installed copies keep the old page. |
 | Built for a shared, cracked phone outdoors | Our users | 56 px touch targets, icon plus word, Play / Save / Share verbs, RTL-aware, no pinch zoom. |
 | Every public URL keeps working | 57 language links and printed QR codes are in circulation | Slugs and aliases in `vercel.json` are never removed, only added. |
 
@@ -57,9 +57,11 @@ Four layers, each allowed to call only the layers below it:
    service worker. Knows nothing about Bibles or screens.
 
 Data (catalogues, interface strings, book names) sits beside the layers as
-one file per language. One registry, `registry/languages.json`, becomes the
+one file per language. One registry, `registry/languages.json`, is the
 single list that language pages, `sw.js`, rewrites and the QR list are
-generated from. [modules.md](modules.md) lists every module and what it
+generated from (`npm run build`; see the
+[adding a language guide](../guides/adding-a-language.md)).
+[modules.md](modules.md) lists every module and what it
 needs. The full plan, with workstreams, is in the rebuild plan doc
 linked from [decision 0001](../decisions/0001-rebuild-scope.md).
 

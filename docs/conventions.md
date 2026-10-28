@@ -37,8 +37,10 @@ code disagree, fix one of them in the same pull request.
 ## Shipping a change
 
 1. `npm test` passes.
-2. Any change to a file the service worker caches bumps `VERSION` in
-   `app/sw.js`.
+2. Run `npm run build` after changing a file the service worker caches or
+   `registry/languages.json`. It sets `VERSION` in `app/sw.js` from the
+   shell's contents and rewrites the generated language files;
+   `tests/test_generate.py` fails if you forget.
 3. Docs that describe the changed behaviour are updated in the same pull
    request.
 4. Merge to `main` once tests pass, then check the live site.
