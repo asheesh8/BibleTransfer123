@@ -246,7 +246,7 @@ class DbsAuditTest(unittest.TestCase):
             for path in (slug, code) + ((ui,) if ui != 'swh' else ()):
                 self.assertEqual(routes['/' + path], f'/{slug}/index.html')
             self.assertIn(f"{{ code: '{ui}',", i18n)
-            self.assertIn(f'STRINGS.{ui} = {{', i18n)
+            self.assertTrue((ROOT / f'app/assets/js/i18n/{ui}.js').exists(), ui)
             self.assertRegex(privacy, r'\n    ' + ui + r': \{\n      title: ')
             self.assertTrue((ROOT / f'app/data/catalog-{code}.js').exists())
             self.assertTrue(any(c['lang'] == code for c in self.cards.values()))
