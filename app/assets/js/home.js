@@ -3,7 +3,7 @@
    Shaped after the reference recording: pick up where you left off, then
    shelves you can swipe along. No grid of identical tiles, and no second copy
    of what the tab bar already offers. */
-(function (ET) {
+window.ET.module('home', ['core', 'ui/shell', 'ui/covers', 'i18n'], function (ET) {
   'use strict';
   var t = ET.i18n.t, h = ET.i18n.h;
 
@@ -76,11 +76,11 @@
       '<h2>Village Server deployment</h2>' +
       '<span class="sub">Film · 6 min</span></span></section>';
 
-    out += '<a class="tile" href="' + ET.esc(ET.scopedUrl('save-guide.html')) + '" lang="en" dir="ltr">' +
-      '<span class="ico">' + ET.icon('laptop') + '</span>' +
-      '<span><span class="t">Save to your computer</span>' +
-      '<span class="s">Screenshot guide · English · Mac + Windows</span></span>' +
-      '<span class="chev">' + ET.icon('chev') + '</span></a>';
+    out += '<a class="et-tile" href="' + ET.esc(ET.scopedUrl('save-guide.html')) + '" lang="en" dir="ltr">' +
+      '<span class="et-tile__icon">' + ET.icon('laptop') + '</span>' +
+      '<span class="et-tile__text"><span class="et-tile__title">Save to your computer</span>' +
+      '<span class="et-tile__sub">Screenshot guide · English · Mac + Windows</span></span>' +
+      '<span class="et-tile__end">' + ET.icon('chev') + '</span></a>';
 
     // ---- carry on
     var last = lastOpened();
@@ -135,4 +135,4 @@
   ET.i18n.apply();
   // apply() runs every listener, so a listener must never call it back.
   ET.i18n.onChange(render);
-})(window.ET);
+});

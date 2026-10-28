@@ -123,6 +123,35 @@
   text-align: center;
 }
 
+/* Full screen, for ET.scan (assets/js/features/scan.js): the scanner over
+   the whole screen with Close below it. */
+
+.et-scan {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  background: var(--et-p-night);
+  color: var(--et-p-white);
+}
+.et-scan .et-scanner {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  aspect-ratio: auto;
+  border-radius: 0;
+}
+.et-scan .et-scanner__hint { bottom: var(--et-space-5); }
+.et-scan.is-blocked .et-scanner__frame { display: none; }
+.et-scan.is-blocked .et-scanner__hint { position: static; margin: var(--et-space-4); border-radius: var(--et-radius-lg); }
+.et-scan.is-found .et-scanner__frame { --c: var(--et-p-green-400); }
+.et-scan__bar {
+  padding: var(--et-space-4);
+  padding-bottom: max(var(--et-space-4), env(safe-area-inset-bottom));
+}
+body.is-scanning { overflow: hidden; }
+
 @media (prefers-reduced-motion: reduce) {
   :root:not([data-motion="full"]) .et-scanner__frame::after,
   :root:not([data-motion="full"]) .et-qr.is-live .et-qr__code { animation: none; }

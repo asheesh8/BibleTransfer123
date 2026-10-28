@@ -32,9 +32,13 @@
    drawing. Only the named parts: the plain groups that place the art carry
    transform attributes that must keep the drawing's own origin. */
 .et-kandili :is(.k-fly, .k-float, .k-glowwrap, .k-tilt, .k-body, .k-flame, .k-face,
-                .k-eyes, .k-mouth, .k-prop, .k-spark, .k-bubble, .k-ember) { transform-box: fill-box; }
+                .k-eyes, .k-mouth, .k-prop, .k-spark, .k-bubble, .k-ember, .k-handle,
+                .k-look, .k-fire, .k-fire-mid, .k-fire-in) { transform-box: fill-box; }
 .et-kandili .k-body   { transform-origin: 50% 100%; }   /* squash on the base   */
 .et-kandili .k-flame  { transform-origin: 50% 100%; }   /* sways from the wick  */
+.et-kandili :is(.k-fire, .k-fire-mid, .k-fire-in) { transform-origin: 50% 100%; }
+.et-kandili .k-handle { transform-origin: 50% 100%; }   /* swings from its neck */
+.et-kandili .k-look   { transform-origin: 50% 50%; }
 .et-kandili .k-eyes   { transform-origin: 50% 50%; }    /* blink to a line      */
 .et-kandili .k-glowwrap { transform-origin: 50% 50%; }
 .et-kandili .k-shadow { transform-box: fill-box; transform-origin: 50% 50%; }
@@ -50,25 +54,35 @@
 [dir="rtl"] .et-kandili .k-mirror { transform: scaleX(-1); transform-box: view-box; transform-origin: 0 0; }
 
 /* ---------------------------------------------------------------- idle */
-.et-kandili[data-mood="idle"] .k-float  { animation: k-float 2.4s var(--et-ease-inout) infinite; }
-.et-kandili[data-mood="idle"] .k-shadow { animation: k-shadow 2.4s var(--et-ease-inout) infinite; }
-.et-kandili[data-mood="idle"] .k-body   { animation: k-breathe 3s var(--et-ease-inout) infinite; }
-.et-kandili[data-mood="idle"] .k-flame  { animation: k-flicker 1.2s var(--et-ease-inout) infinite; }
+/* Layers on different beats (3.2 s float, 4 s breath, prime-ish flame
+   beats) so the whole never repeats exactly. The handle and arms follow the
+   float a beat late: follow-through, the thing that makes it feel alive. */
+.et-kandili[data-mood="idle"] .k-float   { animation: k-float 3.2s var(--et-ease-inout) infinite; }
+.et-kandili[data-mood="idle"] .k-shadow  { animation: k-shadow 3.2s var(--et-ease-inout) infinite; }
+.et-kandili[data-mood="idle"] .k-body    { animation: k-breathe 4s var(--et-ease-inout) infinite; }
+.et-kandili[data-mood="idle"] .k-handle  { animation: k-swing 3.2s var(--et-ease-inout) -.5s infinite; }
+.et-kandili[data-mood="idle"] .k-arm--l  { animation: k-arm-l 3.2s var(--et-ease-inout) -.4s infinite; }
+.et-kandili[data-mood="idle"] .k-arm--r  { animation: k-arm-r 3.2s var(--et-ease-inout) -.4s infinite; }
+.et-kandili:is([data-mood="idle"], [data-mood="doze"], [data-mood="dim"], [data-mood="think"]) .k-fire     { animation: k-flicker 1.3s var(--et-ease-inout) infinite; }
+.et-kandili:is([data-mood="idle"], [data-mood="doze"], [data-mood="dim"], [data-mood="think"]) .k-fire-mid { animation: k-flicker2 .9s var(--et-ease-inout) -.3s infinite; }
+.et-kandili:is([data-mood="idle"], [data-mood="doze"], [data-mood="dim"], [data-mood="think"]) .k-fire-in  { animation: k-flicker3 .7s var(--et-ease-inout) -.2s infinite; }
+.et-kandili[data-mood="idle"] .k-glowwrap { animation: k-pulse 2.6s var(--et-ease-inout) infinite; }
 
 /* ---------------------------------------------------------------- doze */
 .et-kandili[data-mood="doze"] .k-tilt   { animation: k-doze 2s var(--et-ease-inout) infinite; }
 .et-kandili[data-mood="doze"] .k-body   { animation: k-breathe 4s var(--et-ease-inout) infinite; }
-.et-kandili[data-mood="doze"] .k-flame  { animation: k-flicker 2.4s var(--et-ease-inout) infinite; }
+.et-kandili[data-mood="doze"] .k-handle { animation: k-swing 2s var(--et-ease-inout) -.3s infinite; }
+.et-kandili[data-mood="doze"] :is(.k-fire, .k-fire-mid, .k-fire-in) { animation-duration: 2.2s; }
 .et-kandili[data-mood="doze"] .k-bubble { animation: k-bubble 2.4s var(--et-ease-out) infinite; }
 .et-kandili[data-mood="doze"] .k-bubble:nth-child(2) { animation-delay: .8s; }
 .et-kandili[data-mood="doze"] .k-bubble:nth-child(3) { animation-delay: 1.6s; }
 
 /* ----------------------------------------------------------------- dim */
-.et-kandili[data-mood="dim"] .k-flame { animation: k-flicker 2.8s var(--et-ease-inout) infinite; }
+.et-kandili[data-mood="dim"] :is(.k-fire, .k-fire-mid, .k-fire-in) { animation-duration: 2.6s; }
 .et-kandili[data-mood="dim"] .k-glowwrap { opacity: .4; transition: opacity .4s var(--et-ease-out); }
 
 /* --------------------------------------------------------------- think */
-.et-kandili[data-mood="think"] .k-flame { animation: k-flicker .6s var(--et-ease-inout) infinite; }
+.et-kandili[data-mood="think"] :is(.k-fire, .k-fire-mid, .k-fire-in) { animation-duration: .5s; }
 .et-kandili[data-mood="think"] .k-tilt  { animation: k-sway 2.6s var(--et-ease-inout) infinite; }
 
 /* The glow is pale cream on a light ground. On a dark ground pale cream at
@@ -88,14 +102,27 @@
 .et-kandili.is-paused *,
 .et-kandili.is-paused { animation-play-state: paused !important; }
 
-@keyframes k-float   { 0%, 100% { transform: translateY(0); }      50% { transform: translateY(-6px); } }
+@keyframes k-float   { 0%, 100% { transform: translateY(0); }      50% { transform: translateY(-7px); } }
 @keyframes k-shadow  { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(.86); opacity: .7; } }
-@keyframes k-breathe { 0%, 100% { transform: scale(1, 1); }        50% { transform: scale(1.02, 1.02); } }
+@keyframes k-breathe { 0%, 100% { transform: scale(1, 1); }        45% { transform: scale(1.012, 1.025); } }
+@keyframes k-swing   { 0%, 100% { transform: rotate(-3deg); }      50% { transform: rotate(3deg); } }
+@keyframes k-arm-l   { 0%, 100% { transform: rotate(3deg); }       50% { transform: rotate(-4deg); } }
+@keyframes k-arm-r   { 0%, 100% { transform: rotate(-3deg); }      50% { transform: rotate(4deg); } }
+@keyframes k-pulse   { 0%, 100% { opacity: 1; }                    50% { opacity: .78; } }
 @keyframes k-flicker {
   0%, 100% { transform: rotate(0) scale(1, 1); }
-  25%      { transform: rotate(-5deg) scale(.96, 1.05); }
-  50%      { transform: rotate(2deg) scale(1.02, .97); }
-  75%      { transform: rotate(4deg) scale(.98, 1.04); }
+  21%      { transform: rotate(-4deg) scale(.95, 1.06); }
+  47%      { transform: rotate(3deg) scale(1.03, .96); }
+  73%      { transform: rotate(-1deg) scale(.97, 1.05); }
+}
+@keyframes k-flicker2 {
+  0%, 100% { transform: rotate(0) scale(1, 1); }
+  33%      { transform: rotate(5deg) scale(.93, 1.08); }
+  66%      { transform: rotate(-4deg) scale(1.05, .95); }
+}
+@keyframes k-flicker3 {
+  0%, 100% { transform: scale(1, 1); }
+  50%      { transform: scale(.85, 1.12); }
 }
 @keyframes k-doze  { 0%, 100% { transform: rotate(-4deg); } 50% { transform: rotate(4deg); } }
 @keyframes k-sway  { 0%, 100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } }

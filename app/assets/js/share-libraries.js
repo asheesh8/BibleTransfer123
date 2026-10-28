@@ -1,5 +1,5 @@
 /* Larry's one-screen launcher for the public, one-language libraries. */
-(function (ET) {
+window.ET.module('share-libraries', ['core', 'ui/shell', 'i18n'], function (ET) {
   'use strict';
   var routes = [
     ['english', 'eng', 'English', 'English'],
@@ -112,4 +112,4 @@
   render();
   ET.i18n.apply();
   ET.i18n.onChange(render);
-})(window.ET);
+});

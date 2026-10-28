@@ -13,7 +13,13 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Library">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/components/button.css">
+<link rel="stylesheet" href="assets/css/components/card.css">
+<link rel="stylesheet" href="assets/css/components/chip.css">
 <link rel="stylesheet" href="assets/css/app.css">
+<link rel="stylesheet" href="assets/css/components/sheet.css">
+<link rel="stylesheet" href="assets/css/components/toast.css">
 <link rel="stylesheet" href="assets/css/consent.css">
 <link rel="stylesheet" href="assets/css/pages/screens.css">
 <link rel="stylesheet" href="assets/css/help-device.css?v=1">
@@ -32,7 +38,7 @@
 <body class="screen-help">
 <main class="wrap" id="main">
   <p style="margin:1rem 0 .4rem">
-    <a class="btn ghost" href="index.html" id="back" style="min-height:46px;padding:.5rem 1rem">
+    <a class="et-btn et-btn--quiet et-btn--sm" href="index.html" id="back">
       <span id="back-ico"></span><span data-i18n="help.back">Back to the library</span></a>
   </p>
 
@@ -50,6 +56,9 @@
 <script defer src="api/visibility"></script>
 <script defer src="assets/js/visibility.js"></script>
 <script defer src="assets/js/core.js"></script>
+<script defer src="assets/js/ui/icons.js"></script>
+<script defer src="assets/js/ui/sheet.js"></script>
+<script defer src="assets/js/ui/toast.js"></script>
 <script defer src="assets/js/ui/shell.js"></script>
 <script src="assets/js/i18n-load.js"></script>
 <script defer src="assets/js/i18n.js"></script>

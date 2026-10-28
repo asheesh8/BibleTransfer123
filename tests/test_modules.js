@@ -67,7 +67,7 @@ test('core.js stays code: no book tables creep back in', () => {
 });
 
 test('the shell and covers keep the names screens already call', () => {
-  const ET = boot('assets/js/core.js', 'assets/js/ui/shell.js', 'assets/js/ui/covers.js');
+  const ET = boot('assets/js/core.js', 'assets/js/ui/icons.js', 'assets/js/ui/sheet.js', 'assets/js/ui/toast.js', 'assets/js/ui/shell.js', 'assets/js/ui/covers.js');
   for (const name of ['icon', 'lantern', 'loadMascot', 'header', 'tabbar', 'sheet', 'stepper', 'toast', 'copyText', 'facebookShare'])
     assert.equal(ET[name], ET.use('ui/shell')[name], 'ET.' + name);
   for (const name of ['row', 'poster', 'thumb', 'typeIcon'])
@@ -95,8 +95,83 @@ test('each page loads the modules its scripts call, after core', () => {
       .filter(s => s !== 'core' && s !== 'i18n-load' && !s.startsWith('i18n/'));
     const code = scripts.map(s => read('assets/js/' + s + '.js')).join('\n');
     if (SHELL.test(code)) assert.ok(at('ui/shell.js') > at('core.js'), page + ' needs ui/shell.js after core.js');
+    if (at('ui/shell.js') > -1) {
+      for (const kit of ['ui/icons.js', 'ui/sheet.js', 'ui/toast.js'])
+        assert.ok(at(kit) > at('core.js') && at(kit) < at('ui/shell.js'), page + ' needs ' + kit + ' between core.js and ui/shell.js');
+      for (const css of ['tokens.css', 'components/sheet.css', 'components/toast.css'])
+        assert.ok(html.includes('href="assets/css/' + css + '"'), page + ' needs ' + css + ' for the kit sheet and toast');
+    }
     if (COVERS.test(code)) assert.ok(at('ui/covers.js') > at('core.js'), page + ' needs ui/covers.js after core.js');
     checked++;
   }
   assert.ok(checked > 50, 'only ' + checked + ' pages checked');
+});
+
+/* A screen that draws kit pieces (et-btn, et-card …) must link their CSS,
+   before app.css so a screen's own rules (.pass-on, .chain-banner) can still
+   adjust a kit card. Unstyled kit markup is easy to miss on a fast laptop. */
+test('each page links the kit CSS for the pieces it draws, before app.css', () => {
+  const KIT = { 'et-btn': 'button', 'et-card': 'card', 'et-tile': 'card', 'et-chip': 'chip', 'et-badge': 'chip' };
+  const pages = fs.readdirSync(APP).filter(f => f.endsWith('.html'))
+    .concat(fs.readdirSync(APP).filter(d => fs.existsSync(path.join(APP, d, 'index.html')) && d !== 'admin').map(d => d + '/index.html'));
+  let used = 0;
+  for (const page of pages) {
+    const html = read(page);
+    const scripts = [...html.matchAll(/<script[^>]*\ssrc="assets\/js\/([\w/-]+)\.js"/g)].map(m => m[1])
+      .filter(s => fs.existsSync(path.join(APP, 'assets/js', s + '.js')));
+    const code = html.replace(/<pre[\s\S]*?<\/pre>/g, '') + scripts.map(s => read('assets/js/' + s + '.js')).join('\n');
+    for (const [cls, css] of Object.entries(KIT)) {
+      if (!new RegExp('class="[^"]*\\b' + cls + '\\b').test(code)) continue;
+      used++;
+      const at = html.indexOf('href="assets/css/components/' + css + '.css"');
+      assert.ok(at > -1, page + ' draws ' + cls + ' but does not link components/' + css + '.css');
+      const app = html.indexOf('href="assets/css/app.css"');
+      if (app > -1) assert.ok(at < app, page + ' links components/' + css + '.css after app.css');
+    }
+  }
+  assert.ok(used > 50, 'only ' + used + ' kit uses found');
+});
+
+/* Every app script registers with ET.module, except the few that must run
+   before the registry exists or outside the app. And on every page, each
+   module's dependencies are loaded by an earlier <script> tag, so a
+   misordered page fails here instead of on a phone. */
+const NOT_MODULES = ['core', 'i18n-load', 'visibility', 'admin', 'admin-journeys', 'admin-library'];
+function moduleOf(file) {
+  const m = read('assets/js/' + file + '.js').match(/window\.ET\.module\('([\w/-]+)',\s*\[([^\]]*)\]/);
+  return m && { name: m[1], deps: [...m[2].matchAll(/'([\w/-]+)'/g)].map(d => d[1]) };
+}
+
+test('every app script registers as a module named after its file', () => {
+  const files = [];
+  (function walk(dir) {
+    for (const f of fs.readdirSync(path.join(APP, 'assets/js', dir))) {
+      const rel = dir ? dir + '/' + f : f;
+      if (fs.statSync(path.join(APP, 'assets/js', rel)).isDirectory()) { if (f !== 'i18n') walk(rel); }
+      else if (f.endsWith('.js')) files.push(rel.slice(0, -3));
+    }
+  })('');
+  for (const f of files) {
+    if (NOT_MODULES.includes(f)) continue;
+    const m = moduleOf(f);
+    assert.ok(m, f + '.js does not register with ET.module');
+    assert.equal(m.name, f, f + '.js registers as "' + m.name + '"');
+  }
+});
+
+test('each page loads a module after everything it needs', () => {
+  const pages = fs.readdirSync(APP).filter(f => f.endsWith('.html'))
+    .concat(fs.readdirSync(APP).filter(d => fs.existsSync(path.join(APP, d, 'index.html')) && d !== 'admin').map(d => d + '/index.html'));
+  for (const page of pages) {
+    const order = [...read(page).matchAll(/<script[^>]*\ssrc="assets\/js\/([\w/-]+)\.js"/g)].map(m => m[1]);
+    order.forEach((f, i) => {
+      if (NOT_MODULES.includes(f) || f.startsWith('i18n/') || !fs.existsSync(path.join(APP, 'assets/js', f + '.js'))) return;
+      const m = moduleOf(f);
+      if (!m) return;
+      for (const d of m.deps) {
+        const at = order.indexOf(d);
+        assert.ok(at > -1 && at < i, page + ' loads ' + f + '.js before ' + d + '.js, which it needs');
+      }
+    });
+  }
 });

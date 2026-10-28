@@ -3,7 +3,7 @@
    Filter state lives in the URL, so a chosen shelf can be linked to from home,
    survives a reload, and comes back with the browser's own Back button — which
    on a phone is the button people actually use. */
-(function (ET) {
+window.ET.module('library', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save'], function (ET) {
   'use strict';
   var t = ET.i18n.t, h = ET.i18n.h;
   var lib = ET.library();
@@ -216,13 +216,13 @@
       return lib.languages[a].name.localeCompare(lib.languages[b].name, 'en');
     });
     langFilters.innerHTML =
-      ['<button class="fchip" data-lang="" aria-pressed="' + (!state.lang) + '">' +
+      ['<button class="et-chip" data-lang="" aria-pressed="' + (!state.lang) + '">' +
         h('lib.all') + '</button>'].concat(
         langs.map(function (code) {
           var L = lib.languages[code];
           // English's "native" name is just English — printing both said it twice.
           var same = (L.native || '') === L.name;
-          return '<button class="fchip" data-lang="' + code + '" aria-pressed="' +
+          return '<button class="et-chip" data-lang="' + code + '" aria-pressed="' +
             (state.lang === code) + '">' +
             (same ? '<span class="latin">' + ET.esc(L.name) + '</span>'
                   : '<span dir="auto">' + ET.esc(L.native) + '</span> <span class="latin">' +
@@ -256,10 +256,10 @@
     ET.$('#source-filter-current').innerHTML = state.from ? ET.esc(state.from) : h('lib.all');
     var list = ET.$('#source-filters');
     list.innerHTML =
-      ['<button class="fchip" data-from="" aria-pressed="' + (!state.from) + '">' +
+      ['<button class="et-chip" data-from="" aria-pressed="' + (!state.from) + '">' +
         h('lib.all') + '</button>'].concat(
         avail.map(function (s) {
-          return '<button class="fchip" data-from="' + ET.esc(s.name) + '" aria-pressed="' +
+          return '<button class="et-chip" data-from="' + ET.esc(s.name) + '" aria-pressed="' +
             (state.from === s.name) + '"><span dir="auto">' + ET.esc(s.name) +
             '</span> <span class="fcount">' + s.n + '</span></button>';
         })).join('');
@@ -284,7 +284,7 @@
       document.body.classList.remove('bulk-mode');
       dock.hidden = true;
       controls.innerHTML = state.lang && downloadable.length
-        ? '<button class="btn green block bulk-start" id="bulk-start">' + ET.icon('save') +
+        ? '<button class="et-btn et-btn--go et-btn--block bulk-start" id="bulk-start">' + ET.icon('save') +
           ET.i18n.h('lib.bulk.start') + '</button>' : '';
       var start = ET.$('#bulk-start');
       if (actions) actions.classList.toggle('has-bulk', !!start);
@@ -298,11 +298,11 @@
     if (actions) actions.classList.remove('has-bulk');
     controls.innerHTML = '<div class="bulk-tools"><strong>' +
       ET.i18n.h('lib.bulk.selected', { n: n }) + '</strong><div class="btn-row">' +
-      '<button class="btn ghost" id="bulk-all">' + ET.i18n.h('lib.bulk.selectall') + '</button>' +
-      '<button class="btn ghost" id="bulk-cancel">' + ET.i18n.h('lib.bulk.cancel') +
+      '<button class="et-btn et-btn--quiet" id="bulk-all">' + ET.i18n.h('lib.bulk.selectall') + '</button>' +
+      '<button class="et-btn et-btn--quiet" id="bulk-cancel">' + ET.i18n.h('lib.bulk.cancel') +
       '</button></div></div>';
     dock.hidden = false;
-    dock.innerHTML = '<button class="btn green big block" id="bulk-download"' +
+    dock.innerHTML = '<button class="et-btn et-btn--go et-btn--lg et-btn--block" id="bulk-download"' +
       (n ? '' : ' disabled') + '>' + ET.icon('save') +
       ET.i18n.h('lib.bulk.download', { n: n }) + '</button>';
     document.body.classList.add('bulk-mode');
@@ -396,4 +396,4 @@
     selected = {};
     render();
   });
-})(window.ET);
+});

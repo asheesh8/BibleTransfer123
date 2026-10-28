@@ -55,7 +55,8 @@
 }
 .et-btn:focus-visible { outline-offset: calc(var(--et-lip) + 2px); }
 
-.et-btn .et-icon { width: 1.4em; height: 1.4em; flex: none; }
+.et-btn .et-icon,
+.et-btn svg { width: 1.4em; height: 1.4em; flex: none; }
 
 /* ------------------------------------------------------------- tones */
 .et-btn--go     { --face: var(--et-fill-go);     --on: var(--et-on-go);     --edge: var(--et-lip-go); }

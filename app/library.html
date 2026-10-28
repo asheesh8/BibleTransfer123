@@ -13,7 +13,13 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Library">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/components/button.css">
+<link rel="stylesheet" href="assets/css/components/card.css">
+<link rel="stylesheet" href="assets/css/components/chip.css">
 <link rel="stylesheet" href="assets/css/app.css">
+<link rel="stylesheet" href="assets/css/components/sheet.css">
+<link rel="stylesheet" href="assets/css/components/toast.css">
 <link rel="stylesheet" href="assets/css/consent.css">
 <link rel="stylesheet" href="assets/css/pages/screens.css">
 <script>
@@ -52,7 +58,7 @@
   </details>
 
   <div class="library-actions" id="library-actions">
-    <a class="btn sky block" href="share-libraries/">
+    <a class="et-btn et-btn--info et-btn--block" href="share-libraries/">
       <span id="share-language-ico"></span><span data-i18n="sharelib.manage">Share a language library</span>
     </a>
     <div id="bulk-controls"></div>
@@ -65,11 +71,11 @@
   <p class="muted library-count" id="count"></p>
 
   <div class="row-list" id="results"></div>
-  <div id="empty" hidden class="card center" style="padding:2rem 1.2rem">
+  <div id="empty" hidden class="et-card center" style="padding:2rem 1.2rem">
     <div id="empty-art"></div>
     <h3 data-i18n="lib.none">Nothing matches that</h3>
     <p class="muted" data-i18n="lib.none.sub">Try a shorter word, or tap All.</p>
-    <button class="btn ghost" id="reset" data-i18n="lib.clear">Clear</button>
+    <button class="et-btn et-btn--quiet" id="reset" data-i18n="lib.clear">Clear</button>
   </div>
 
   <div class="foot-nav"></div>
@@ -81,6 +87,9 @@
 <script defer src="api/visibility"></script>
 <script defer src="assets/js/visibility.js"></script>
 <script defer src="assets/js/core.js"></script>
+<script defer src="assets/js/ui/icons.js"></script>
+<script defer src="assets/js/ui/sheet.js"></script>
+<script defer src="assets/js/ui/toast.js"></script>
 <script defer src="assets/js/ui/shell.js"></script>
 <script defer src="assets/js/ui/covers.js"></script>
 <script defer src="assets/js/art.js"></script>

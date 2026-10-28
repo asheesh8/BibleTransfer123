@@ -1,5 +1,5 @@
 /* Local screenshot guide: classic script so it also works from a card. */
-(function (ET) {
+window.ET.module('save-guide', ['core', 'i18n'], function (ET) {
   'use strict';
   var SLIDES = [
   {
@@ -340,4 +340,4 @@
   var initialSource = sourceFromHash();
   var initialPlatform = platformFromUrl() || platformForSource(initialSource);
   if (initialPlatform) choosePlatform(initialPlatform, initialSource, false);
-})(window.ET);
+});

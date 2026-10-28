@@ -68,6 +68,7 @@ function fixture(options = {}) {
   const scope = options.scope === undefined ? { lang: 'eng', slug: 'english', name: 'English' } : options.scope;
   let allowed = options.allowed !== false, serial = 0;
   const ET = {
+    module(name, deps, factory) { return factory(this); }, 
     $: (selector, root = body) => root.querySelector(selector),
     $$: (selector, root = body) => root.querySelectorAll(selector),
     esc: String, icon: () => '', human: String, pad: n => String(n).padStart(2, '0'),
@@ -201,7 +202,7 @@ async function languageLibraries() {
     f.document.querySelectorAll = selector => f.body.querySelectorAll(selector);
     f.load('core');
     f.context.ET = f.context.window.ET;
-    f.load('ui/shell');
+    for (const m of ['ui/icons', 'ui/sheet', 'ui/toast', 'ui/shell']) f.load(m);
     f.load('data/bible-books');
     f.load('i18n/en');
     if (ui !== 'en') f.load('i18n/' + ui);

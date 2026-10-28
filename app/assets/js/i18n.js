@@ -21,7 +21,7 @@
    Arabic-script rules off them.
    ========================================================================= */
 
-(function (ET) {
+window.ET.module('i18n', ['core'], function (ET) {
   'use strict';
 
   var LANGS = [
@@ -287,28 +287,24 @@
   function picker(force) {
     var rows = byName().map(function (l) {
       var on = l.code === (current || 'en');
-      return '<button class="tile" data-lang="' + l.code + '" data-find="' +
+      return '<button class="et-tile" data-lang="' + l.code + '" data-find="' +
              ET.esc((l.name + ' ' + l.native + ' ' + l.code).toLowerCase()) + '" ' +
-             'style="width:100%;text-align:start' +
-             (on ? ';border-color:var(--purple);background:var(--purple-wash)' : '') + '">' +
-             '<span class="ico">' + ET.icon('globe') + '</span>' +
-             '<span><span class="t" dir="' + l.dir + '" lang="' + l.code + '">' + ET.esc(l.native) + '</span>' +
-             '<span class="s latin" lang="en">' + ET.esc(l.name) + '</span>' +
-             (l.interfaceNote ? '<span class="s latin" lang="en">' + ET.esc(l.interfaceNote) + '</span>' : '') + '</span>' +
-             (on ? '<span class="chev">' + ET.icon('check') + '</span>' : '') +
+             'aria-pressed="' + on + '">' +
+             '<span class="et-tile__icon">' + ET.icon('globe') + '</span>' +
+             '<span class="et-tile__text"><span class="et-tile__title" dir="' + l.dir + '" lang="' + l.code + '">' + ET.esc(l.native) + '</span>' +
+             '<span class="et-tile__sub latin" lang="en">' + ET.esc(l.name) + '</span>' +
+             (l.interfaceNote ? '<span class="et-tile__sub latin" lang="en">' + ET.esc(l.interfaceNote) + '</span>' : '') + '</span>' +
+             (on ? '<span class="et-tile__end">' + ET.icon('check') + '</span>' : '') +
              '</button>';
     }).join('');
 
     var s = ET.sheet(
-      '<h2 data-i18n="home.pick">' + ET.esc(t('home.pick')) + '</h2>' +
       '<p class="muted" data-i18n="home.pick.sub">' + ET.esc(t('home.pick.sub')) + '</p>' +
       '<div class="search" style="margin-bottom:.8rem">' + ET.icon('search') +
         '<input type="search" id="et-picker-q" autocomplete="off" enterkeyhint="search" ' +
         'placeholder="' + ET.esc(t('welcome.search')) + '" aria-label="' +
         ET.esc(t('welcome.search')) + '"></div>' +
-      '<div class="stack">' + rows + '</div>' +
-      (force ? '' : '<div style="margin-top:1rem"><button class="btn ghost block" id="et-lang-x">' +
-                    ET.esc(t('ui.close')) + '</button></div>'));
+      '<div class="stack">' + rows + '</div>', { title: t('home.pick') });
 
     ET.$$('[data-lang]', s.el).forEach(function (b) {
       b.addEventListener('click', function () { set(b.getAttribute('data-lang')); s.close(); });
@@ -319,8 +315,6 @@
         b.hidden = !!query && b.getAttribute('data-find').indexOf(query) < 0;
       });
     });
-    var x = ET.$('#et-lang-x', s.el);
-    if (x) x.addEventListener('click', s.close);
     return s;
   }
 
@@ -569,4 +563,5 @@
 
   ET.i18n = { t: t, h: h, say: say, welcome: welcome, suggested: suggested, tOr: tOr, tOrHTML: tOrHTML, set: set, extend: extend, apply: apply, onChange: onChange, picker: picker,
               chosen: chosen, langs: LANGS, meta: meta, current: function () { return current || 'en'; } };
-})(window.ET);
+  return ET.i18n;
+});

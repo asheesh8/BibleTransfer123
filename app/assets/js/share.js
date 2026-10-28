@@ -8,7 +8,7 @@
 
    TRANSLATION: every string below goes through tOr(key, english). Add the key
    to STRINGS in i18n.js and it is translated; until then the English shows. */
-(function (ET) {
+window.ET.module('share', ['core', 'ui/shell', 'i18n'], function (ET) {
   'use strict';
   var h = ET.i18n.h, tOrHTML = ET.i18n.tOrHTML;
 
@@ -157,15 +157,14 @@
   }
 
   function pick(which, titleKey) {
-    return '<div class="card"><h2 style="margin-bottom:.8rem">' + h(titleKey) + '</h2>' +
+    return '<div class="et-card et-card--tight"><h2 style="margin-bottom:.8rem">' + h(titleKey) + '</h2>' +
       '<div class="stack">' + DEVICES.map(function (d) {
         var on = state[which] === d.id;
-        return '<button class="tile" data-pick="' + which + '" data-id="' + d.id + '" ' +
-          'style="width:100%;text-align:start' +
-          (on ? ';border-color:var(--purple);background:var(--purple-wash)' : '') + '">' +
-          '<span class="ico">' + ET.icon(d.icon) + '</span>' +
-          '<span><span class="t">' + h(d.key) + '</span></span>' +
-          (on ? '<span class="chev">' + ET.icon('check') + '</span>' : '') +
+        return '<button class="et-tile" data-pick="' + which + '" data-id="' + d.id + '" ' +
+          'aria-pressed="' + on + '">' +
+          '<span class="et-tile__icon">' + ET.icon(d.icon) + '</span>' +
+          '<span class="et-tile__text"><span class="et-tile__title">' + h(d.key) + '</span></span>' +
+          (on ? '<span class="et-tile__end">' + ET.icon('check') + '</span>' : '') +
           '</button>';
       }).join('') + '</div></div>';
   }
@@ -187,8 +186,8 @@
     var R = route();
     if (state.from && state.to && R) {
       var routeKey = 'route.' + routeId().replace('>', '-');
-      out += '<div class="card">' +
-        '<span class="chip lang">' + h('share.result') + '</span>' +
+      out += '<div class="et-card">' +
+        '<span class="et-badge">' + h('share.result') + '</span>' +
         '<h2 style="margin:.6rem 0 1.2rem">' + tOrHTML(routeKey + '.name', R.name) + '</h2>' +
         '<ol class="steps">' + R.steps.map(function (s, i) {
           var key = routeKey + '.' + (i + 1);
@@ -202,7 +201,7 @@
       out += '<div class="note good"><strong>' + h('share.teach') + '</strong>' +
         '<p style="margin:.2rem 0 0">' + h('share.teach.body') + '</p></div>';
 
-      out += '<button class="btn ghost block" id="again">' +
+      out += '<button class="et-btn et-btn--quiet et-btn--block" id="again">' +
         h('share.again') + '</button>';
     }
 
@@ -235,4 +234,4 @@
   render();
   ET.i18n.apply();
   ET.i18n.onChange(render);
-})(window.ET);
+});
