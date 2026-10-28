@@ -7,7 +7,7 @@ minute; this folder holds everything else, grouped by who reads it.
 |---|---|---|
 | [architecture/](architecture/) | Developers | How the app, the packer and the servers fit together, and the rules every change keeps |
 | [decisions/](decisions/) | Developers, future maintainers | One short record per architectural decision, with the reason and the status |
-| [guides/](guides/) | Whoever does the task | Step-by-step recipes: adding a language, testing, the release checklist, and more as the rebuild lands |
+| [guides/](guides/) | Whoever does the task | Step-by-step recipes: adding a language, adding a screen, testing, the release checklist, and more as the rebuild lands |
 | [design/](design/) | Designers, developers | Tokens, components, motion and Kandili the mascot; the live style guide is `/styleguide.html` |
 | [conventions.md](conventions.md) | Anyone writing code | Naming, file headers, size limits, the release checklist |
 | [FIELD-GUIDE.md](FIELD-GUIDE.md) | VillageServer volunteers | Handing a card to someone, in person |
