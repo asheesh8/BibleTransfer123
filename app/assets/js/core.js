@@ -98,12 +98,44 @@ window.ET = (function () {
 
   // The lantern is the app's mascot — نور, "light". Drawn rather than
   // generated so it is identical on every card and costs nothing to ship.
-  function lantern(size, glow) {
-    // Kandili: the flame on top is its mood, the face sits on the glass.
-    // `glow` adds the soft halo used where it is the hero of a screen.
+  // Where kandili.js lives: next to this file, wherever the page is.
+  var KANDILI_SRC = ((document.currentScript && document.currentScript.src) || '')
+    .replace(/core\.js(\?.*)?$/, 'kandili.js');
+
+  /* With a pose, the animated Kandili (assets/js/kandili.js, fetched after the
+     page has painted): a slot of held size showing the still drawing until
+     the script arrives, then mascots() brings it to life. Without one, the
+     still drawing on its own, as the header logo, which should never bob. */
+  function lantern(size, pose) {
     var s = size || 32;
-    return '<svg class="kandili" viewBox="-3 -9 54 54" width="' + s + '" height="' + s + '" aria-hidden="true">' +
-      (glow ? '<circle class="k-glow" cx="24" cy="22" r="26" fill="#FFE7A3" opacity=".16"/>' : '') +
+    if (typeof pose === 'string') {
+      return '<span class="et-kandili" data-pose="' + esc(pose) + '" style="width:' + s +
+        'px;height:' + Math.round(s * 1.25) + 'px">' + lanternSvg(s) + '</span>';
+    }
+    return lanternSvg(s);
+  }
+
+  function mascots(root) {
+    if (!window.Kandili) return;
+    $$('.et-kandili:not([data-k])', root || document).forEach(function (el) {
+      el.setAttribute('data-k', '1');
+      window.Kandili.mount(el, el.getAttribute('data-pose') || 'neutral');
+    });
+  }
+
+  function loadMascot() {
+    if (window.Kandili) { mascots(); return; }
+    if (!KANDILI_SRC || $('#et-kandili-js')) return;
+    var sc = document.createElement('script');
+    sc.id = 'et-kandili-js';
+    sc.src = KANDILI_SRC;
+    sc.onload = function () { mascots(); };
+    document.head.appendChild(sc);
+  }
+
+  function lanternSvg(s) {
+    // Kandili: the flame on top is its mood, the face sits on the glass.
+    return '<svg class="et-lantern" viewBox="-3 -9 54 54" width="' + s + '" height="' + s + '" aria-hidden="true">' +
       '<path d="M17 7c0-8 14-8 14 0" stroke="#B87D06" stroke-width="2.2" fill="none" stroke-linecap="round"/>' +
       '<path class="k-flame" d="M24-8c3.4 3.2 3.8 6.8 0 10c-3.8-3.2-3.4-6.8 0-10z" fill="#F5B52E"/>' +
       '<path d="M24-2.4c1.7 1.6 1.9 3.4 0 5c-1.9-1.6-1.7-3.4 0-5z" fill="#FFE7A3"/>' +
@@ -659,7 +691,7 @@ window.ET = (function () {
 
   var api = {
     facebookUrl: facebookUrl, facebookShare: facebookShare, copyText: copyText, toast: toast,
-    store: store, icon: icon, lantern: lantern, esc: esc, qs: qs, human: human,
+    store: store, icon: icon, lantern: lantern, mascots: mascots, loadMascot: loadMascot, esc: esc, qs: qs, human: human,
     canInstall: canInstall, onInstallable: onInstallable,
     promptInstall: promptInstall, standalone: standalone,
     $: $, $$: $$, theme: theme, library: library, byId: byId, header: header,

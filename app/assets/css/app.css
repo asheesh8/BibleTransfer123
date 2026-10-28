@@ -1036,7 +1036,10 @@ html.welcoming #et-hint { display: none; }
   overflow-y: auto; -webkit-overflow-scrolling: touch;
   padding: 0 0 env(safe-area-inset-bottom);
 }
-.welcome-in { max-width: 34rem; margin: 0 auto; padding: 2.5rem 16px 3rem; scroll-margin-top: 0; }
+.welcome-in { max-width: 34rem; margin: 0 auto; padding: 2rem 16px 3rem; scroll-margin-top: 0; }
+.welcome-mascot { display: flex; justify-content: center; margin-bottom: .4rem; }
+.et-kandili { display: inline-block; flex: none; }
+.et-kandili > .et-lantern { width: 100%; height: auto; }
 .welcome h1 { text-align: center; font-size: clamp(1.6rem, 6vw, 2.1rem); margin: 0 0 .35rem; }
 .welcome-also {
   text-align: center; color: var(--ink-soft); font-size: .92rem; line-height: 1.8;
@@ -1129,38 +1132,17 @@ html[lang="am"] .kicker, html[lang="am"] .flabel, html[lang="am"] .eyebrow {
   --face: transparent; --edge: transparent;
   color: #F8F2FB; border: 2px solid #4A3860; border-radius: var(--r-pill);
 }
-.lp-art {
-  position: relative; flex: 1 1 16rem; min-height: 13rem;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
+.lp-art { flex: 1 1 30rem; min-width: 0; }
+.lp-art img {
+  width: 100%; height: auto; aspect-ratio: 971 / 465; object-fit: cover;
+  border-radius: var(--r-lg);
+  box-shadow: 0 0 0 1px #33244A, 0 24px 60px rgba(240, 185, 66, .14);
 }
-.lp-art::before {
-  content: ""; position: absolute; width: 17rem; height: 17rem; border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 231, 163, .22), rgba(255, 231, 163, 0) 68%);
-}
-.lp-float { position: relative; animation: lp-float 2.4s ease-in-out infinite; }
-.lp-float .kandili { width: clamp(8.5rem, 26vw, 11rem); height: auto; }
-.lp-float .k-flame { transform-origin: 24px 2px; animation: lp-flicker 1.2s ease-in-out infinite alternate; }
-.lp-float .k-eyes { transform-origin: 24px 23.6px; animation: lp-blink 5s infinite; }
-.lp-star {
-  position: absolute; width: 6px; height: 6px; border-radius: 50%;
-  background: #FFE7A3; opacity: .55;
-}
-.lp-star.s1 { top: 8%; left: 14%; }
-.lp-star.s2 { top: 22%; right: 12%; width: 4px; height: 4px; }
-.lp-star.s3 { bottom: 26%; left: 6%; width: 4px; height: 4px; opacity: .35; }
-/* Light passing from phone to phone: each dot a little dimmer than the last. */
-.lp-chain { position: relative; display: flex; align-items: center; gap: 6px; margin-top: 1.4rem; }
-.lp-chain i { width: 18px; height: 18px; border-radius: 50%; background: #F5B52E; }
-.lp-chain i:nth-of-type(2) { opacity: .8; width: 15px; height: 15px; }
-.lp-chain i:nth-of-type(3) { opacity: .6; width: 12px; height: 12px; }
-.lp-chain i:nth-of-type(4) { opacity: .42; width: 10px; height: 10px; }
-.lp-chain b { width: 28px; height: 3px; border-radius: 3px; background: #4A3860; }
-
-@keyframes lp-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-@keyframes lp-flicker { from { transform: scale(1, 1); } to { transform: scale(.9, 1.12); } }
-@keyframes lp-blink { 0%, 95%, 100% { transform: scaleY(1); } 97% { transform: scaleY(.1); } }
-@media (prefers-reduced-motion: reduce) {
-  .lp-float, .lp-float .k-flame, .lp-float .k-eyes { animation: none; }
+@media (max-width: 40rem) {
+  .lp-hero { padding-top: env(safe-area-inset-top); }
+  .lp-hero .lp-in.lp-hero-in { padding: 0; }
+  .lp-copy { padding: 0 16px; }
+  .lp-art img { border-radius: 0; box-shadow: none; aspect-ratio: 4 / 3; object-position: 62% 50%; }
 }
 
 .lp-band { padding: 3.5rem 0; }
