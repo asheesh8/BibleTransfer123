@@ -3,7 +3,7 @@
    Filter state lives in the URL, so a chosen shelf can be linked to from home,
    survives a reload, and comes back with the browser's own Back button — which
    on a phone is the button people actually use. */
-(function (ET) {
+window.ET.module('library', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save'], function (ET) {
   'use strict';
   var t = ET.i18n.t, h = ET.i18n.h;
   var lib = ET.library();
@@ -396,4 +396,4 @@
     selected = {};
     render();
   });
-})(window.ET);
+});

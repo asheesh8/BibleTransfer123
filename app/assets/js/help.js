@@ -3,7 +3,7 @@
    This page exists because that is the question that actually stops people. A
    file that was downloaded successfully and cannot be found again has failed
    just as completely as one that never downloaded. */
-(function (ET) {
+window.ET.module('help', ['core', 'ui/shell', 'i18n'], function (ET) {
   'use strict';
   var t = ET.i18n.t, h = ET.i18n.h, tOr = ET.i18n.tOr, tOrHTML = ET.i18n.tOrHTML;
 
@@ -190,4 +190,4 @@
   ET.i18n.apply();
   ET.i18n.onChange(render);
   window.addEventListener('hashchange', scrollToPhone);
-})(window.ET);
+});

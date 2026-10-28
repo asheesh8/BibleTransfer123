@@ -28,6 +28,7 @@ function boot(native) {
     }
   };
   const ET = {
+    module(name, deps, factory) { return factory(this); }, 
     native, i18n: { t: k => k, h: k => k },
     store: { get: (k, d) => k in mem ? mem[k] : d, set: (k, v) => { mem[k] = v; } },
     analytics: { track() {} }

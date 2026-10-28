@@ -18,7 +18,7 @@
    exception: holding 2 GB in a phone's memory to hand it over as a blob would
    crash the tab, so those go to the browser's own download manager instead.
    ========================================================================= */
-(function (ET) {
+window.ET.module('save', ['core', 'ui/shell', 'i18n'], function (ET) {
   'use strict';
   var t = ET.i18n.t, h = ET.i18n.h;
 
@@ -646,4 +646,5 @@
 
   ET.save = { open: open, openMany: openMany, canPickFolder: CAN_DIR, clean: clean, extOf: extOf,
              inApp: IN_APP, local: local, keep: keepInApp };
-})(window.ET);
+  return ET.save;
+});
