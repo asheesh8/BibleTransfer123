@@ -8,7 +8,7 @@
   "functions": {
     "api/*.py": {
       "includeFiles": "{packer/*.py,app/data/catalog.js}",
-      "excludeFiles": "{app/assets/**,catalog/**,art/**,docs/**,output/**,tests/**}"
+      "excludeFiles": "{app/assets/**,catalog/**,art/**,docs/**,output/**,tests/**,node_modules/**}"
     }
   },
   "redirects": [

@@ -19,11 +19,11 @@ hardware sourced locally.
 | **Server** | `packer/serve.py` locally or on a Raspberry Pi; four Python serverless functions in `api/` on Vercel. |
 | **Storage** | Upstash Redis (REST) in production; SQLite under `.cache/` locally. Analytics only — the library itself is static. |
 | **Peer-to-peer** | WebRTC via a vendored PeerJS client (`app/assets/vendor/`). |
-| **Tests** | `npm test` — Python `unittest` plus `node --test`. |
+| **Tests** | `npm test` — Python `unittest` plus `node --test`. `npm run test:e2e` — Playwright browser tests on iPhone and Android screens, including phone-to-phone Nearby. See [docs/guides/testing.md](docs/guides/testing.md). |
 
 ### Setup in one minute
 
-Needs Python 3 (and Node only if you want `npm run …` aliases or the JS tests). Nothing to install.
+Needs Python 3 (and Node only if you want `npm run …` aliases or the JS tests). Nothing to install to run the app; the browser tests need `npm install` once (dev only).
 
 ```bash
 cp .env.example .env.local   # only needed for /admin and the email button

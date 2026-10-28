@@ -11,3 +11,8 @@ __pycache__/
 # never in git and never in a Vercel deploy.
 card/
 *.card/
+
+# Browser-test tooling and results (dev only; never deployed or put on a card).
+node_modules/
+test-results/
+playwright-report/
