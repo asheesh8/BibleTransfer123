@@ -20,11 +20,11 @@ hardware sourced locally.
 | **Storage** | Upstash Redis (REST) in production; SQLite under `.cache/` locally. Analytics only — the library itself is static. |
 | **Peer-to-peer** | WebRTC via a vendored PeerJS client (`app/assets/vendor/`). |
 | **Phone apps** | iPhone and Android apps built from the same `app/` with Capacitor — see [`mobile/README.md`](mobile/README.md). |
-| **Tests** | `npm test` — Python `unittest` plus `node --test`. |
+| **Tests** | `npm test` — Python `unittest` plus `node --test`. `npm run test:e2e` — Playwright browser tests on iPhone and Android screens, including phone-to-phone Nearby. See [docs/guides/testing.md](docs/guides/testing.md). |
 
 ### Setup in one minute
 
-Needs Python 3 (and Node only if you want `npm run …` aliases or the JS tests). Nothing to install.
+Needs Python 3 (and Node only if you want `npm run …` aliases or the JS tests). Nothing to install to run the app; the browser tests need `npm install` once (dev only).
 
 ```bash
 cp .env.example .env.local   # only needed for /admin and the email button
@@ -406,8 +406,8 @@ way. They are not stylistic preferences.
 
 ### Translations
 
-English is the reference wording. Every interface language in
-`app/assets/js/i18n.js` covers the controls, the help page and the sharing
+English is the reference wording. Every interface language has its own file,
+`app/assets/js/i18n/<code>.js`, and covers the controls, the help page and the sharing
 guides, and each one has had a native-reader polish pass for natural wording,
 register and traditional church vocabulary. The help page and share wizard call
 `tOr(key, english)`, so a key missing from a language falls back to English
@@ -428,7 +428,7 @@ libraries are shown), `send-library.py` (emailing a library link) and
 `send-item.py` (emailing one item to a friend, from the item page's "Share
 this with a friend" card). Item emails read the title from `catalog.js`,
 which `vercel.json` bundles with the functions, and use the
-`itemshare.mail.*` strings from `i18n.js`; after changing those, run
+`itemshare.mail.*` strings from `i18n/<code>.js`; after changing those, run
 `python3 packer/write_item_mail_copy.py`. Shared item links carry the
 sender's name and a chain step (`et_from`, `et_hop`); the Sharing tab of
 `/admin` shows how far shares travel.
@@ -605,7 +605,7 @@ app/                      the app, copied onto every card
   <language>/index.html   one locked page per language library
   data/catalog*.js        generated catalogues (committed)
 tests/                    Python and Node regression tests
-docs/                     field guide, translation hand-off, how-it-works page
+docs/                     start at docs/README.md: architecture, decisions, guides, conventions
 art/                      artwork manifest
 output/client-guide/      slide decks handed to the client
 ```

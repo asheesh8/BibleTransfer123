@@ -1,0 +1,161 @@
+/* ============================================================================
+   Base: reset, page type, layout helpers and the per-script rules.
+
+   Reads tokens.css. Loaded once per page, before any component. Ported from
+   the rules in app.css that every screen depends on, so a page built on the
+   new kit behaves like the old one on a shared phone: one-axis scrolling, no
+   pinch-zoom surprises, a 17 px floor and correct Arabic, Ethiopic,
+   Devanagari and Chinese setting.
+   ========================================================================= */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+/* One axis only. Half the stray gestures on a phone held one-handed are
+   pinches, and a layout that slides sideways and stays there reads as broken.
+   Paired with user-scalable=no in the viewport tag; the 17 px base, 56 px
+   targets and 4.5:1 floor are what pay for that. */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  touch-action: pan-y;
+  overscroll-behavior: none;
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--et-bg);
+  color: var(--et-text);
+  font: var(--et-weight-body) var(--et-text-md) / var(--et-leading-body) var(--et-font);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  overflow-wrap: break-word;
+  overflow-x: clip;
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 var(--et-space-2);
+  font-weight: var(--et-weight-heavy);
+  line-height: var(--et-leading-tight);
+  letter-spacing: var(--et-tracking-tight);
+}
+h1 { font-size: var(--et-text-2xl); }
+h2 { font-size: var(--et-text-xl); }
+h3 { font-size: var(--et-text-lg); }
+h4 { font-size: var(--et-text-md); }
+p  { margin: 0 0 var(--et-space-4); }
+a  { color: var(--et-text-brand); }
+
+img, svg, video { max-width: 100%; display: block; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button, a, input, select, [role="button"] { touch-action: manipulation; }
+
+:focus-visible {
+  outline: 3px solid var(--et-focus);
+  outline-offset: 3px;
+}
+
+[hidden] { display: none !important; }
+
+/* ------------------------------------------------------------ helpers */
+.et-wrap  { max-width: var(--et-wrap); margin: 0 auto; padding: 0 var(--et-gutter); }
+.et-stack { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--et-space-4); align-content: start; }
+.et-cluster { display: flex; flex-wrap: wrap; gap: var(--et-space-3); align-items: center; }
+.et-soft  { color: var(--et-text-soft); }
+.et-kicker {
+  display: block;
+  font-size: var(--et-text-xs);
+  font-weight: var(--et-weight-heavy);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--et-text-soft);
+}
+.et-sr {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+/* Skip link: hidden until a keyboard user tabs to it. */
+.et-skip {
+  position: absolute; z-index: calc(var(--et-z-toast) + 1);
+  inset-inline-start: var(--et-space-2); top: var(--et-space-2);
+  padding: var(--et-space-3) var(--et-space-4);
+  border-radius: var(--et-radius-md);
+  background: var(--et-fill-gold); color: var(--et-on-gold);
+  font-weight: var(--et-weight-heavy);
+  transform: translateY(-200%);
+}
+.et-skip:focus { transform: none; }
+
+/* An element that holds nothing but a number: keeps "200+" from rendering
+   as "+200" in a right-to-left page. */
+.et-num { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+/* Chevrons and arrows point the other way in a right-to-left page. */
+[dir="rtl"] .et-flip { transform: scaleX(-1); }
+
+/* Catalogue titles stay in English inside every interface language. Inside
+   an RTL page they need their own face and direction or they zig-zag. */
+.et-latin {
+  font-family: var(--et-font);
+  direction: ltr;
+  unicode-bidi: isolate;
+  letter-spacing: normal !important;
+}
+
+/* ----------------------------------------------------------- scripts
+   Each rule is keyed off lang or dir on <html> or on any element, so the
+   style guide can show several scripts on one page. */
+
+/* Chinese: system faces, more leading, no tracking on labels. */
+:lang(cmn), :lang(zh) {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+               "Noto Sans CJK SC", system-ui, sans-serif;
+  line-height: 1.75;
+}
+:lang(yue) {
+  font-family: "PingFang HK", "PingFang TC", "Microsoft JhengHei",
+               "Noto Sans CJK TC", system-ui, sans-serif;
+  line-height: 1.75;
+}
+/* Devanagari and Gurmukhi want the full conjunct repertoire. */
+:lang(hi), :lang(mr), :lang(ne) {
+  font-family: "Noto Sans Devanagari", "Kohinoor Devanagari", Mangal,
+               "Nirmala UI", system-ui, sans-serif;
+  line-height: 1.75;
+}
+:lang(pa) {
+  font-family: "Noto Sans Gurmukhi", "Gurmukhi MN", Raavi, "Nirmala UI",
+               system-ui, sans-serif;
+  line-height: 1.75;
+}
+/* Ethiopic faces come from the device, so nothing is downloaded. */
+:lang(am), :lang(ti) {
+  font-family: "Noto Sans Ethiopic", Nyala, Kefa, "Abyssinica SIL",
+               system-ui, sans-serif;
+  line-height: 1.75;
+}
+/* No letter case and no word spaces: uppercase tracking just pulls these
+   scripts apart. */
+:lang(cmn) .et-kicker, :lang(yue) .et-kicker, :lang(zh) .et-kicker,
+:lang(hi) .et-kicker, :lang(mr) .et-kicker, :lang(ne) .et-kicker,
+:lang(pa) .et-kicker, :lang(am) .et-kicker, :lang(ti) .et-kicker {
+  text-transform: none; letter-spacing: 0;
+}
+
+/* Arabic script joins its letters. Tracking pulls the joins apart and
+   break-word severs a word between two joined letters, so both are off. */
+[dir="rtl"] {
+  font-family: "Noto Naskh Arabic", "Geeza Pro", "Traditional Arabic", serif;
+  line-height: 1.95;
+  overflow-wrap: normal;
+}
+:lang(ur)[dir="rtl"], :lang(pnb)[dir="rtl"] {
+  font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", "Geeza Pro",
+               "Urdu Typesetting", serif;
+  line-height: 2.1;               /* Nastaliq hangs far below the baseline */
+}
+[dir="rtl"] * { letter-spacing: 0 !important; }
+[dir="rtl"] .et-kicker { text-transform: none; }
+[dir="rtl"] h1 { line-height: 1.45; }
+[dir="rtl"] h2 { line-height: 1.55; }
+[dir="rtl"] h3 { line-height: 1.7; }

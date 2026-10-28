@@ -245,10 +245,23 @@ Everyday loanwords Eritrean and Ethiopian speakers use are kept: ስልኪ, ፋ�
 
 ## Source files
 
-Interface translations live in `app/assets/js/i18n.js`. Longer English help and
+Interface translations live in one file per language, `app/assets/js/i18n/<code>.js`
+(`en.js` is the reference). Each is a flat list of `"key": "wording"` lines, so a
+translator edits one file without touching code. The welcome screen and the
+header's "tap to change language" hint show a few lines in every language at
+once; those are copied into the `SAY` table in `app/assets/js/i18n.js`, and
+`tests/test_i18n_files.js` fails if the two drift. Longer English help and
 sharing instructions also live in `app/assets/js/help.js` and `share.js`, where
 `tOrHTML(key, english)` supplies a fallback. Update the corresponding translation
 when changing an instruction's meaning.
+
+Kandili's first-run questions (`ob.*` keys) live with their feature in
+`app/assets/js/data/onboarding-strings.js`, one row per language in the order
+of `KEYS`, merged in with `ET.i18n.extend()`. They were written in October 2026
+for all interface languages; Maa has only the greeting and the first question,
+and the rest shows in English until a Maa speaker fills the row in.
+`tests/test_onboarding.js` checks every other language has every line and keeps
+its `{n}` placeholders.
 
 Help route keys use `help.<device>.<step>.h` / `.p`. Sharing route keys use
 `route.<from>-<to>.<step>.h` / `.p`. The current iOS guide uses

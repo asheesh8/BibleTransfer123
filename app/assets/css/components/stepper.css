@@ -1,0 +1,85 @@
+/* ============================================================================
+   et-steps: a numbered how-to (save guide, "share with a friend" walk-through).
+   Each step is big, numbered, and marks done / current / next, with a line
+   joining them so the reader can see how far they have come.
+
+     <ol class="et-steps">
+       <li class="is-done"><strong>Tap Save</strong><span>The green button under the film.</span></li>
+       <li class="is-current" aria-current="step"><strong>Choose Files</strong><span>…</span></li>
+       <li><strong>Open it later</strong><span>…</span></li>
+     </ol>
+
+   And the compact dots version for paged flows:
+     <div class="et-dots" role="tablist"><span aria-current="true"></span><span></span></div>
+   ========================================================================= */
+
+.et-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: et-step;
+  display: grid;
+  gap: var(--et-space-1);
+}
+.et-steps > li {
+  position: relative;
+  display: grid;
+  gap: 2px;
+  min-height: var(--et-tap);
+  padding: var(--et-space-2) 0 var(--et-space-5);
+  padding-inline-start: calc(2.75rem + var(--et-space-4));
+  counter-increment: et-step;
+  color: var(--et-text-soft);
+}
+.et-steps > li strong { color: var(--et-text); font-size: var(--et-text-lg); font-weight: var(--et-weight-heavy); line-height: var(--et-leading-snug); }
+/* The number disc. */
+.et-steps > li::before {
+  content: counter(et-step);
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0;
+  display: grid; place-items: center;
+  width: 2.75rem; height: 2.75rem;
+  border-radius: 50%;
+  background: var(--et-sunk);
+  color: var(--et-text-soft);
+  border: 3px solid var(--et-line-strong);
+  font-weight: var(--et-weight-black);
+  font-size: var(--et-text-lg);
+}
+/* The joining line. */
+.et-steps > li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  inset-inline-start: calc(1.375rem - 2px);
+  top: 2.9rem;
+  bottom: 0;
+  width: 4px;
+  border-radius: var(--et-radius-pill);
+  background: var(--et-line);
+}
+.et-steps > li.is-current::before {
+  background: var(--et-fill-brand);
+  border-color: var(--et-lip-brand);
+  color: var(--et-on-brand);
+  box-shadow: 0 0 0 5px var(--et-wash-brand);
+}
+.et-steps > li.is-done::before {
+  content: "";
+  background: var(--et-fill-go)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E")
+    center / 1.4rem no-repeat;
+  border-color: var(--et-lip-go);
+}
+.et-steps > li.is-done:not(:last-child)::after { background: var(--et-fill-go); }
+.et-steps > li.is-done strong { color: var(--et-text-soft); }
+
+/* ----------------------------------------------------------------- dots */
+.et-dots { display: flex; justify-content: center; gap: var(--et-space-2); }
+.et-dots > * {
+  width: .625rem; height: .625rem;
+  border-radius: var(--et-radius-pill);
+  background: var(--et-line-strong);
+  transition: width var(--et-dur-base) var(--et-ease-spring), background var(--et-dur-fast);
+}
+.et-dots > [aria-current="true"] { width: 1.75rem; background: var(--et-fill-brand); }

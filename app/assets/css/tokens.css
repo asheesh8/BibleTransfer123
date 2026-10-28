@@ -1,0 +1,309 @@
+/* ============================================================================
+   Design tokens: the one place a colour, size, curve or duration is decided.
+
+   Every component under css/components/ reads these and nothing else. A
+   component that writes a raw hex value or a bare millisecond is a bug, and
+   tests/test_design_system.js fails on it.
+
+   Three layers, in this order:
+   1. Palette    raw brand colours (--et-p-*). Components never read these.
+   2. Semantic   what a colour is FOR (--et-bg, --et-text, --et-fill-go …).
+                 Light and dark redefine only this layer.
+   3. Scales     type, space, radius, elevation, motion, layers.
+
+   Theme: follows the phone unless the page sets data-theme="light|dark" on
+   <html>. Motion: follows the phone's "reduce motion" unless the page sets
+   data-motion="reduce|full".
+
+   Everything is prefixed --et- so these can load beside the old app.css
+   during the migration without either one overriding the other.
+   ========================================================================= */
+
+:root {
+  /* ---------------------------------------------------------- 1. palette
+     The brand palette from the Kandili brief, plus the deeper and lighter
+     steps each one needs to pass contrast on both grounds. */
+  --et-p-purple-900: #2A1B33;
+  --et-p-purple-800: #4E1F64;
+  --et-p-purple-700: #6B2E86;
+  --et-p-purple-500: #8A55A6;
+  --et-p-purple-300: #C79AD9;
+  --et-p-purple-100: #F3EAF7;
+
+  --et-p-gold-700: #B87D06;
+  --et-p-gold-500: #E8A317;
+  --et-p-gold-400: #F0B942;
+  --et-p-gold-100: #FDF3DC;
+
+  --et-p-green-800: #1F5A31;
+  --et-p-green-700: #2E7D45;
+  --et-p-green-500: #3FA65C;
+  --et-p-green-400: #4FBE72;
+  --et-p-green-100: #E9F6ED;
+
+  --et-p-sky-800: #154A64;
+  --et-p-sky-700: #1F6182;
+  --et-p-sky-500: #2E86AB;
+  --et-p-sky-400: #5BAFD0;
+  --et-p-sky-100: #E7F2F8;
+
+  --et-p-red-800: #8A2727;
+  --et-p-red-600: #B83A3A;
+  --et-p-red-300: #F28B82;
+  --et-p-red-100: #FBEAEA;
+
+  --et-p-cream:  #FFFBF2;
+  --et-p-sand:   #F6EEE1;
+  --et-p-white:  #FFFFFF;
+  --et-p-ink:    #1A1020;   /* words on a pale dark-theme button face */
+  --et-p-night:  #120A1C;   /* the rebrand's night sky */
+  --et-p-night-2: #1C1328;
+  --et-p-night-3: #251A33;
+  --et-p-night-4: #2F223F;
+
+  /* Kandili never changes with the theme: the lantern is the same lantern in
+     the dark. Only mascot.css reads these. */
+  --et-k-brass:  #E8A317;
+  --et-k-mid:    #D4920F;
+  --et-k-shade:  #B87D06;
+  --et-k-glass:  #FDF3DC;
+  --et-k-shine:  #FFFBF2;
+  --et-k-face:   #3A1650;
+  --et-k-glow:   #FFE7A3;
+  --et-k-blush:  #F4A38C;
+  --et-k-tongue: #E8664F;
+  --et-k-go:     #3FA65C;
+  --et-k-sky:    #2E86AB;
+  --et-k-card:   #6B2E86;
+
+  /* --------------------------------------------------------- 2. semantic
+     Light theme. Every text/ground pair here is at least 4.5:1; fills carry
+     their own "on" colour so a button label is never guessed. */
+  --et-bg:          var(--et-p-cream);
+  --et-surface:     var(--et-p-white);
+  --et-sunk:        var(--et-p-sand);
+  --et-raised:      var(--et-p-white);
+  --et-scrim:       rgba(26, 14, 34, .55);
+
+  --et-text:        var(--et-p-purple-900);   /* 15.6:1 on bg */
+  --et-text-soft:   #6B5A75;                  /* 6.1:1 on bg  */
+  --et-text-brand:  var(--et-p-purple-700);
+  --et-text-go:     var(--et-p-green-700);
+  --et-text-info:   var(--et-p-sky-700);
+  --et-text-danger: var(--et-p-red-600);
+
+  --et-line:        #EADFD0;
+  --et-line-strong: #D9C8B2;
+  --et-focus:       var(--et-p-gold-500);
+
+  --et-wash-brand:  var(--et-p-purple-100);
+  --et-wash-gold:   var(--et-p-gold-100);
+  --et-wash-go:     var(--et-p-green-100);
+  --et-wash-info:   var(--et-p-sky-100);
+  --et-wash-danger: var(--et-p-red-100);
+
+  /* Filled controls: face, label, and the lip under it that makes it press. */
+  --et-fill-brand:  var(--et-p-purple-700);  --et-on-brand:  var(--et-p-white);      --et-lip-brand:  var(--et-p-purple-800);
+  --et-fill-go:     var(--et-p-green-700);   --et-on-go:     var(--et-p-white);      --et-lip-go:     var(--et-p-green-800);
+  --et-fill-gold:   var(--et-p-gold-500);    --et-on-gold:   var(--et-p-purple-900); --et-lip-gold:   var(--et-p-gold-700);
+  --et-fill-info:   var(--et-p-sky-700);     --et-on-info:   var(--et-p-white);      --et-lip-info:   var(--et-p-sky-800);
+  --et-fill-danger: var(--et-p-red-600);     --et-on-danger: var(--et-p-white);      --et-lip-danger: var(--et-p-red-800);
+  --et-fill-quiet:  var(--et-p-white);       --et-on-quiet:  var(--et-p-purple-900); --et-lip-quiet:  #D9C8B2;
+
+  /* QR codes are always dark on white whatever the theme: phone cameras read
+     inverted codes badly. */
+  --et-qr-ink:      #000000;
+  --et-qr-paper:    #FFFFFF;
+
+  /* -------------------------------------------------------------- 3. type
+     System faces only: nothing to download, works off a card. ui-rounded is
+     SF Pro Rounded on iPhone and Mac, the friendliest face we can get for
+     free; everything else falls back to the platform sans. */
+  --et-font:         ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont,
+                     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --et-font-reading: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia,
+                     "Noto Serif", serif;
+  --et-font-mono:    ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* 17 px body: read outdoors on a cracked screen without zooming. Steps are
+     a 1.2 ratio, rounded to whole pixels. */
+  --et-text-2xs: .75rem;      /* 12  badges only            */
+  --et-text-xs:  .8125rem;    /* 13  meta under a title     */
+  --et-text-sm:  .9375rem;    /* 15  secondary              */
+  --et-text-md:  1.0625rem;   /* 17  body, buttons          */
+  --et-text-lg:  1.25rem;     /* 20  row titles             */
+  --et-text-xl:  1.5rem;      /* 24  section titles         */
+  --et-text-2xl: 1.875rem;    /* 30  screen titles          */
+  --et-text-3xl: 2.375rem;    /* 38  hero                   */
+  --et-text-display: clamp(2.25rem, 7vw, 3.5rem);
+
+  --et-weight-body:  500;
+  --et-weight-bold:  700;
+  --et-weight-heavy: 800;
+  --et-weight-black: 900;
+
+  --et-leading-tight: 1.2;
+  --et-leading-snug:  1.35;
+  --et-leading-body:  1.6;
+  --et-tracking-tight: -.015em;
+
+  /* ------------------------------------------------------------- space
+     A 4 px grid. Use the step, never a number. */
+  --et-space-1: .25rem;   /*  4 */
+  --et-space-2: .5rem;    /*  8 */
+  --et-space-3: .75rem;   /* 12 */
+  --et-space-4: 1rem;     /* 16 */
+  --et-space-5: 1.5rem;   /* 24 */
+  --et-space-6: 2rem;     /* 32 */
+  --et-space-7: 3rem;     /* 48 */
+  --et-space-8: 4rem;     /* 64 */
+
+  --et-gutter: 1rem;      /* page side padding at phone width */
+  --et-wrap:   62rem;     /* widest content column            */
+  --et-tabbar-h: 0px;     /* a page with a tab bar sets 4.875rem on <body>, so toasts and the last row clear it */
+
+  /* ------------------------------------------------------- touch sizes
+     56 px for anything a thumb aims at; 48 px is the floor for dense rows. */
+  --et-tap:     3.5rem;
+  --et-tap-min: 3rem;
+  --et-tap-lg:  4rem;
+  --et-lip:     4px;      /* the ledge under a pressable control */
+
+  /* ----------------------------------------------------------- radius */
+  --et-radius-xs:   6px;
+  --et-radius-sm:   10px;
+  --et-radius-md:   16px;
+  --et-radius-lg:   24px;
+  --et-radius-xl:   32px;
+  --et-radius-pill: 999px;
+
+  /* -------------------------------------------------------- elevation
+     Shadows are tinted with the brand purple, not grey, so a card on cream
+     looks warm rather than dirty. */
+  --et-shadow-1: 0 1px 2px rgba(42, 27, 51, .06), 0 2px 8px rgba(42, 27, 51, .06);
+  --et-shadow-2: 0 2px 6px rgba(42, 27, 51, .08), 0 10px 24px -6px rgba(42, 27, 51, .14);
+  --et-shadow-3: 0 6px 16px rgba(42, 27, 51, .12), 0 24px 48px -12px rgba(42, 27, 51, .28);
+
+  /* ----------------------------------------------------------- motion
+     Durations are named by job, not by number. Curves:
+     · out     things arriving (sheets, toasts): fast start, soft landing
+     · in      things leaving: soft start, fast exit
+     · inout   things moving across the screen
+     · spring  a playful overshoot for pressed buttons and the mascot */
+  --et-dur-instant: 90ms;    /* press feedback      */
+  --et-dur-fast:    160ms;   /* hover, colour       */
+  --et-dur-base:    240ms;   /* toast, chip         */
+  --et-dur-slow:    360ms;   /* sheet, page         */
+  --et-dur-story:   700ms;   /* mascot one-shots    */
+
+  --et-ease-out:    cubic-bezier(.2, .8, .2, 1);
+  --et-ease-in:     cubic-bezier(.5, 0, .75, 0);
+  --et-ease-inout:  cubic-bezier(.65, 0, .35, 1);
+  --et-ease-spring: cubic-bezier(.34, 1.56, .64, 1);
+
+  /* ----------------------------------------------------------- layers */
+  --et-z-sticky: 40;
+  --et-z-nav:    50;
+  --et-z-sheet:  80;
+  --et-z-toast:  90;
+
+  color-scheme: light;
+}
+
+/* ---------------------------------------------------------------- dark
+   Dark is a different set of grounds with lighter accent text. Filled
+   controls get pale faces with near-black words, the same rule app.css
+   follows (--on-face, --green-face …), so old and new screens match. The block appears
+   twice because CSS has no way to say "the system is dark OR the page asked
+   for dark" in one selector. Keep them identical. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --et-bg:          var(--et-p-night);
+    --et-surface:     var(--et-p-night-2);
+    --et-sunk:        var(--et-p-night-3);
+    --et-raised:      var(--et-p-night-4);
+    --et-scrim:       rgba(0, 0, 0, .66);
+
+    --et-text:        #F7F3FA;
+    --et-text-soft:   #A99EB6;
+    --et-text-brand:  var(--et-p-purple-300);
+    --et-text-go:     var(--et-p-green-400);
+    --et-text-info:   var(--et-p-sky-400);
+    --et-text-danger: var(--et-p-red-300);
+
+    --et-line:        #2E2739;
+    --et-line-strong: #43394F;
+    --et-focus:       var(--et-p-gold-400);
+
+    --et-wash-brand:  #2C2038;
+    --et-wash-gold:   #33281A;
+    --et-wash-go:     #16281D;
+    --et-wash-info:   #17262E;
+    --et-wash-danger: #331A1A;
+
+    --et-fill-brand:  var(--et-p-purple-300);  --et-on-brand:  var(--et-p-ink);        --et-lip-brand:  var(--et-p-purple-500);
+    --et-fill-go:     var(--et-p-green-400);   --et-on-go:     var(--et-p-ink);        --et-lip-go:     #379053;
+    --et-fill-gold:   var(--et-p-gold-400);    --et-on-gold:   var(--et-p-ink);        --et-lip-gold:   var(--et-p-gold-700);
+    --et-fill-info:   var(--et-p-sky-400);     --et-on-info:   var(--et-p-ink);        --et-lip-info:   #3A88A8;
+    --et-fill-danger: var(--et-p-red-300);     --et-on-danger: var(--et-p-ink);        --et-lip-danger: var(--et-p-red-600);
+    --et-fill-quiet:  var(--et-p-night-4);     --et-on-quiet:  #F7F3FA;                --et-lip-quiet:  #43394F;
+
+    --et-shadow-1: 0 1px 2px rgba(0, 0, 0, .4);
+    --et-shadow-2: 0 2px 6px rgba(0, 0, 0, .4), 0 10px 24px -6px rgba(0, 0, 0, .6);
+    --et-shadow-3: 0 6px 16px rgba(0, 0, 0, .5), 0 24px 48px -12px rgba(0, 0, 0, .8);
+
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --et-bg:          var(--et-p-night);
+  --et-surface:     var(--et-p-night-2);
+  --et-sunk:        var(--et-p-night-3);
+  --et-raised:      var(--et-p-night-4);
+  --et-scrim:       rgba(0, 0, 0, .66);
+
+  --et-text:        #F7F3FA;
+  --et-text-soft:   #A99EB6;
+  --et-text-brand:  var(--et-p-purple-300);
+  --et-text-go:     var(--et-p-green-400);
+  --et-text-info:   var(--et-p-sky-400);
+  --et-text-danger: var(--et-p-red-300);
+
+  --et-line:        #2E2739;
+  --et-line-strong: #43394F;
+  --et-focus:       var(--et-p-gold-400);
+
+  --et-wash-brand:  #2C2038;
+  --et-wash-gold:   #33281A;
+  --et-wash-go:     #16281D;
+  --et-wash-info:   #17262E;
+  --et-wash-danger: #331A1A;
+
+  --et-fill-brand:  var(--et-p-purple-300);  --et-on-brand:  var(--et-p-ink);        --et-lip-brand:  var(--et-p-purple-500);
+  --et-fill-go:     var(--et-p-green-400);   --et-on-go:     var(--et-p-ink);        --et-lip-go:     #379053;
+  --et-fill-gold:   var(--et-p-gold-400);    --et-on-gold:   var(--et-p-ink);        --et-lip-gold:   var(--et-p-gold-700);
+  --et-fill-info:   var(--et-p-sky-400);     --et-on-info:   var(--et-p-ink);        --et-lip-info:   #3A88A8;
+  --et-fill-danger: var(--et-p-red-300);     --et-on-danger: var(--et-p-ink);        --et-lip-danger: var(--et-p-red-600);
+  --et-fill-quiet:  var(--et-p-night-4);     --et-on-quiet:  #F7F3FA;                --et-lip-quiet:  #43394F;
+
+  --et-shadow-1: 0 1px 2px rgba(0, 0, 0, .4);
+  --et-shadow-2: 0 2px 6px rgba(0, 0, 0, .4), 0 10px 24px -6px rgba(0, 0, 0, .6);
+  --et-shadow-3: 0 6px 16px rgba(0, 0, 0, .5), 0 24px 48px -12px rgba(0, 0, 0, .8);
+
+  color-scheme: dark;
+}
+
+/* --------------------------------------------------------- reduced motion
+   Durations collapse to almost nothing rather than zero, so transitionend
+   and animationend still fire and no code waits forever. The mascot reads
+   the same switch in JS (ET.motion.reduced()). */
+@media (prefers-reduced-motion: reduce) {
+  :root:not([data-motion="full"]) {
+    --et-dur-instant: 1ms; --et-dur-fast: 1ms; --et-dur-base: 1ms;
+    --et-dur-slow: 1ms;    --et-dur-story: 1ms;
+  }
+}
+:root[data-motion="reduce"] {
+  --et-dur-instant: 1ms; --et-dur-fast: 1ms; --et-dur-base: 1ms;
+  --et-dur-slow: 1ms;    --et-dur-story: 1ms;
+}

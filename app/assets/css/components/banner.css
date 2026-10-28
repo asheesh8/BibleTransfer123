@@ -1,0 +1,59 @@
+/* ============================================================================
+   et-banner and et-empty: telling the reader about a situation.
+
+   Banner: an inline note at the top of a screen ("No signal. Your saved
+   items still work."). Calm, never alarming; always says what still works.
+
+     <div class="et-banner et-banner--info" role="status">
+       <span class="et-banner__art">(small Kandili, pose offline)</span>
+       <div class="et-banner__text"><strong>No signal</strong> Your saved items still work.</div>
+       <button class="et-btn et-btn--sm et-btn--quiet">Try again</button>
+     </div>
+
+   Tones: (default brand) --go --info --gold --danger
+
+   Empty: a whole-area state when a list has nothing in it. Kandili, one line
+   saying what happened, one saying what to do, and at most one action.
+
+     <div class="et-empty">
+       <div class="et-empty__art">(Kandili, pose sleeping or thinking)</div>
+       <h3>Nothing matches that</h3>
+       <p>Try a shorter word, or tap All.</p>
+       <button class="et-btn">…</button>
+     </div>
+   ========================================================================= */
+
+.et-banner {
+  --tone: var(--et-text-brand);
+  --wash: var(--et-wash-brand);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--et-space-3);
+  padding: var(--et-space-3) var(--et-space-4);
+  border-radius: var(--et-radius-lg);
+  background: var(--wash);
+  color: var(--et-text);
+}
+.et-banner--go     { --tone: var(--et-text-go);     --wash: var(--et-wash-go); }
+.et-banner--info   { --tone: var(--et-text-info);   --wash: var(--et-wash-info); }
+.et-banner--gold   { --tone: var(--et-text);        --wash: var(--et-wash-gold); }
+.et-banner--danger { --tone: var(--et-text-danger); --wash: var(--et-wash-danger); }
+
+.et-banner__art { flex: none; display: grid; place-items: center; width: 3.5rem; height: 3.5rem; color: var(--tone); }
+.et-banner__art .et-icon { width: 1.75rem; height: 1.75rem; }
+.et-banner__text { flex: 1 1 12rem; line-height: var(--et-leading-snug); }
+.et-banner__text strong { display: block; color: var(--tone); font-weight: var(--et-weight-black); }
+.et-banner .et-btn { margin-inline-start: auto; }
+
+/* ---------------------------------------------------------------- empty */
+.et-empty {
+  display: grid;
+  justify-items: center;
+  gap: var(--et-space-2);
+  padding: var(--et-space-6) var(--et-space-4);
+  text-align: center;
+}
+.et-empty__art { margin-bottom: var(--et-space-2); }
+.et-empty h3 { margin: 0; font-size: var(--et-text-xl); }
+.et-empty p  { margin: 0 0 var(--et-space-3); color: var(--et-text-soft); max-width: 26rem; }

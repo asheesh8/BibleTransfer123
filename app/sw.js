@@ -7,31 +7,42 @@
    would duplicate it into the phone's own storage and fill the device.
 
    VERSION must change whenever the shell changes, or an installed copy keeps
-   serving the old one. `easytransfer build` rewrites it. */
-var VERSION = 'shell-v70';
+   serving the old one. packer/et/generate.py (`npm run generate`) sets it from a
+   hash of every SHELL file, and `easytransfer build` stamps card copies. */
+var VERSION = 'shell-430d25133c9a';
 
 var SHELL = [
   'index.html', 'library.html', 'item.html', 'share.html', 'help.html', 'nearby.html',
   'manifest.webmanifest', 'privacy.html', 'save-guide.html',
   'assets/css/app.css', 'assets/css/consent.css', 'assets/css/save-guide.css',
-  'assets/css/help-device.css',
-  'assets/js/core.js', 'assets/js/i18n.js', 'assets/js/art.js', 'assets/js/analytics.js',
-  'assets/js/home.js', 'assets/js/library.js', 'assets/js/item.js',
+  'assets/css/help-device.css', 'assets/css/tokens.css', 'assets/css/components/mascot.css',
+  'assets/art/kandili-village.webp', 'assets/art/kandili-village.jpg',
+  'assets/js/core.js', 'assets/js/brand/mascot.js', 'assets/js/i18n.js', 'assets/js/i18n-load.js', 'assets/js/i18n/en.js', 'assets/js/art.js', 'assets/js/analytics.js',
+  'assets/js/home.js', 'assets/js/library.js', 'assets/js/item.js', 'assets/js/data/bible-books.js',
+  'assets/css/pages/onboarding.css', 'assets/js/data/onboarding-strings.js', 'assets/js/features/onboarding.js',
   'assets/js/share.js', 'assets/js/help.js', 'assets/js/save.js', 'assets/js/nearby.js', 'assets/js/save-guide.js',
   'assets/js/shared-library.js', 'assets/js/share-libraries.js', 'assets/js/visibility.js', 'assets/vendor/peerjs.min.js',
-  'english/index.html', 'mandarin/index.html', 'hindi/index.html', 'urdu/index.html',
-  'swahili/index.html', 'cantonese/index.html', 'pashto/index.html', 'sindhi/index.html',
-  'zulu/index.html', 'maasai/index.html',
-  'luganda/index.html', 'luo/index.html', 'oromo/index.html', 'igbo/index.html', 'kikuyu/index.html', 'marathi/index.html',
-  'gusii/index.html', 'ekegusii/index.html', 'kisii/index.html', 'northern-pashto/index.html',
-  'eastern-punjabi/index.html', 'western-punjabi/index.html', 'nepali/index.html',
   'share-libraries/index.html',
   'assets/icon/icon-192.png', 'assets/icon/icon-512.png',
   'data/catalog.js', 'data/catalog-home.js',
-  'data/catalog-eng.js', 'data/catalog-cmn.js', 'data/catalog-hin.js',
-  'data/catalog-mar.js', 'data/catalog-urd.js', 'data/catalog-swh.js',
-  'data/catalog-zul.js', 'data/catalog-pnb.js', 'data/catalog-yue.js',
-  'data/catalog-pus.js', 'data/catalog-pan.js', 'data/catalog-npi.js',
+  // Language pages and catalogues come from registry/languages.json; run
+  // `npm run generate` (packer/et/generate.py) instead of editing between markers.
+  // generated:languages:start
+  'english/index.html', 'data/catalog-eng.js',
+  'mandarin/index.html', 'data/catalog-cmn.js',
+  'hindi/index.html', 'data/catalog-hin.js',
+  'marathi/index.html', 'data/catalog-mar.js',
+  'urdu/index.html', 'data/catalog-urd.js',
+  'swahili/index.html', 'data/catalog-swh.js',
+  'zulu/index.html', 'data/catalog-zul.js',
+  'western-punjabi/index.html', 'data/catalog-pnb.js',
+  'cantonese/index.html', 'data/catalog-yue.js',
+  'pashto/index.html', 'northern-pashto/index.html', 'data/catalog-pus.js',
+  'eastern-punjabi/index.html', 'data/catalog-pan.js',
+  'nepali/index.html', 'data/catalog-npi.js',
+  'sindhi/index.html', 'data/catalog-snd.js',
+  'luganda/index.html', 'data/catalog-lug.js',
+  'luo/index.html', 'data/catalog-luo.js',
   'malagasy/index.html', 'data/catalog-mlg.js',
   'kirundi/index.html', 'data/catalog-run.js',
   'akan/index.html', 'data/catalog-aka.js',
@@ -69,8 +80,12 @@ var SHELL = [
   'portuguese/index.html', 'data/catalog-por.js',
   'amharic/index.html', 'data/catalog-amh.js',
   'french/index.html', 'data/catalog-fra.js',
-  'data/catalog-luo.js', 'data/catalog-orm.js', 'data/catalog-ibo.js', 'data/catalog-snd.js', 'data/catalog-lug.js', 'data/catalog-kik.js',
-  'data/catalog-guz.js', 'data/catalog-mas.js',
+  'igbo/index.html', 'data/catalog-ibo.js',
+  'oromo/index.html', 'data/catalog-orm.js',
+  'kikuyu/index.html', 'data/catalog-kik.js',
+  'gusii/index.html', 'ekegusii/index.html', 'kisii/index.html', 'data/catalog-guz.js',
+  'maasai/index.html', 'data/catalog-mas.js',
+  // generated:languages:end
   'assets/save-guide/macos/slide-01.webp', 'assets/save-guide/macos/slide-02.webp',
   'assets/save-guide/macos/slide-03.webp', 'assets/save-guide/macos/slide-04.webp',
   'assets/save-guide/macos/slide-05.webp', 'assets/save-guide/macos/slide-06.webp',
@@ -128,8 +143,14 @@ self.addEventListener('activate', function (e) {
 var SCOPE = new URL(self.registration.scope).pathname;
 var SHELL_PATHS = SHELL.map(function (p) { return SCOPE + p; });
 
+/* Interface strings, one small static file per language. Only English is
+   installed up front; another language is kept once the reader has used it,
+   so switching to it later works offline without installing all 38. */
+var STRINGS_PATH = new RegExp('^' + SCOPE.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + 'assets/js/i18n/[a-z]{2,3}\\.js$');
+
 function shellPath(url) {
   var path = url.pathname === SCOPE ? SCOPE + 'index.html' : url.pathname;
+  if (STRINGS_PATH.test(path)) return path;
   return SHELL_PATHS.indexOf(path) === -1 ? null : path;
 }
 

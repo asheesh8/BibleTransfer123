@@ -1,0 +1,131 @@
+/* ============================================================================
+   QR patterns for phone-to-phone sharing: et-qr (show a code) and
+   et-scanner (point the camera at one).
+
+   The QR image itself comes from the sharing feature (it owns the encoder);
+   this component only frames it. The code always sits on white with a quiet
+   zone, whatever the theme, because cameras misread inverted codes.
+
+     <figure class="et-qr">
+       <div class="et-qr__code"><svg|img|canvas …></div>
+       <figcaption class="et-qr__caption">
+         <strong>Swahili Bible Library</strong>
+         <span class="et-qr__hint">Point their camera here</span>
+         <span class="et-qr__url et-latin">bibletransfer123.org/swahili</span>
+       </figcaption>
+     </figure>
+
+     <div class="et-scanner">
+       <video class="et-scanner__video" playsinline muted></video>
+       <span class="et-scanner__frame" aria-hidden="true"></span>
+       <p class="et-scanner__hint">Hold the code inside the square</p>
+     </div>
+
+   States: .et-qr.is-live adds a gentle glow pulse (sharing is active);
+           .et-scanner.is-found flashes the frame green before moving on.
+   ========================================================================= */
+
+.et-qr {
+  display: grid;
+  justify-items: center;
+  gap: var(--et-space-4);
+  margin: 0;
+  padding: var(--et-space-5);
+  border-radius: var(--et-radius-xl);
+  background: var(--et-surface);
+  border: 1px solid var(--et-line);
+  box-shadow: var(--et-shadow-2);
+  text-align: center;
+}
+.et-qr__code {
+  position: relative;
+  width: min(16rem, 72vw);
+  aspect-ratio: 1;
+  padding: var(--et-space-4);       /* the quiet zone */
+  border-radius: var(--et-radius-lg);
+  background: var(--et-qr-paper);
+  color: var(--et-qr-ink);
+  box-shadow: 0 0 0 6px var(--et-wash-gold);
+}
+.et-qr__code > * { width: 100%; height: 100%; display: block; image-rendering: pixelated; }
+.et-qr.is-live .et-qr__code { animation: et-qr-live calc(var(--et-dur-story) * 3) var(--et-ease-inout) infinite; }
+@keyframes et-qr-live {
+  0%, 100% { box-shadow: 0 0 0 6px var(--et-wash-gold); }
+  50%      { box-shadow: 0 0 0 12px var(--et-wash-gold); }
+}
+.et-qr__caption { display: grid; gap: var(--et-space-1); }
+.et-qr__caption strong { font-size: var(--et-text-lg); font-weight: var(--et-weight-black); }
+.et-qr__hint { color: var(--et-text-soft); font-weight: var(--et-weight-bold); }
+.et-qr__url {
+  font-size: var(--et-text-sm);
+  font-weight: var(--et-weight-heavy);
+  color: var(--et-text-brand);
+}
+
+/* -------------------------------------------------------------- scanner */
+.et-scanner {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 3 / 4;
+  max-width: 24rem;
+  overflow: hidden;
+  border-radius: var(--et-radius-xl);
+  background: var(--et-p-night);
+  color: var(--et-p-white);
+}
+.et-scanner__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.et-scanner__frame {
+  --c: var(--et-p-gold-400);
+  position: relative;
+  width: 62%;
+  aspect-ratio: 1;
+  border-radius: var(--et-radius-lg);
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .45);
+  /* Four corner brackets drawn with gradients: no extra elements. */
+  background:
+    linear-gradient(var(--c), var(--c)) top left    / 2.25rem 5px,
+    linear-gradient(var(--c), var(--c)) top left    / 5px 2.25rem,
+    linear-gradient(var(--c), var(--c)) top right   / 2.25rem 5px,
+    linear-gradient(var(--c), var(--c)) top right   / 5px 2.25rem,
+    linear-gradient(var(--c), var(--c)) bottom left / 2.25rem 5px,
+    linear-gradient(var(--c), var(--c)) bottom left / 5px 2.25rem,
+    linear-gradient(var(--c), var(--c)) bottom right/ 2.25rem 5px,
+    linear-gradient(var(--c), var(--c)) bottom right/ 5px 2.25rem;
+  background-repeat: no-repeat;
+}
+/* The sweeping line says "looking" without words. */
+.et-scanner__frame::after {
+  content: "";
+  position: absolute;
+  inset-inline: 8%;
+  top: 8%;
+  height: 3px;
+  border-radius: var(--et-radius-pill);
+  background: var(--c);
+  box-shadow: 0 0 12px 2px var(--c);
+  animation: et-scan calc(var(--et-dur-story) * 3) var(--et-ease-inout) infinite alternate;
+}
+/* top, not transform: a translate percentage is of the 3 px line itself.
+   One small element, so the layout cost is nothing. */
+@keyframes et-scan { to { top: 90%; } }
+.et-scanner.is-found .et-scanner__frame { --c: var(--et-p-green-400); }
+.et-scanner.is-found .et-scanner__frame::after { animation: none; opacity: 0; }
+.et-scanner__hint {
+  position: absolute;
+  inset-inline: var(--et-space-4);
+  bottom: var(--et-space-4);
+  margin: 0;
+  padding: var(--et-space-2) var(--et-space-4);
+  border-radius: var(--et-radius-pill);
+  background: rgba(0, 0, 0, .6);
+  font-weight: var(--et-weight-heavy);
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root:not([data-motion="full"]) .et-scanner__frame::after,
+  :root:not([data-motion="full"]) .et-qr.is-live .et-qr__code { animation: none; }
+}
+:root[data-motion="reduce"] .et-scanner__frame::after,
+:root[data-motion="reduce"] .et-qr.is-live .et-qr__code { animation: none; }

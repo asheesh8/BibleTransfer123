@@ -9,6 +9,15 @@
 
   var ORDER = ['film', 'scripture', 'book', 'audio-bible', 'audio', 'historic', 'link'];
 
+  // What Kandili's first-run questions said this person came for
+  // (features/onboarding.js), shelved first. Reading brings its books along.
+  function order() {
+    var want = ET.store.get('et.want', '');
+    if (ORDER.indexOf(want) < 0) return ORDER;
+    var first = want === 'scripture' ? ['scripture', 'book'] : [want];
+    return first.concat(ORDER.filter(function (ty) { return first.indexOf(ty) < 0; }));
+  }
+
   function lastOpened() {
     // Resume beats browse: the film someone stopped halfway through is almost
     // always the thing they came back for.
@@ -73,7 +82,7 @@
     var byType = {};
     R.forEach(function (r) { (byType[r.type] = byType[r.type] || []).push(r); });
 
-    ORDER.forEach(function (ty) {
+    order().forEach(function (ty) {
       var list = byType[ty];
       if (!list || !list.length) return;
       // Things that play come before things that only link out.

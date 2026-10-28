@@ -1,0 +1,81 @@
+/* ============================================================================
+   et-toast: a short message that confirms something just happened ("Saved.
+   It's on your phone now."). Rises from the bottom, above the tab bar, and
+   leaves on its own. Never the only place important news appears.
+
+   Written by ET.ui.toast (js/ui/toast.js) into one polite live region, so a
+   screen reader announces it without moving focus.
+
+     <div class="et-toasts" aria-live="polite">
+       <div class="et-toast et-toast--go">
+         <span class="et-toast__art">(mini Kandili or an icon)</span>
+         <span class="et-toast__text">Saved. It's on your phone now.</span>
+         <button class="et-toast__action">Undo</button>
+       </div>
+     </div>
+
+   Tones: (default) --go --info --danger
+   ========================================================================= */
+
+.et-toasts {
+  position: fixed;
+  inset-inline: 0;
+  bottom: calc(var(--et-tabbar-h, 0px) + env(safe-area-inset-bottom) + var(--et-space-4));
+  z-index: var(--et-z-toast);
+  display: grid;
+  justify-items: center;
+  gap: var(--et-space-2);
+  padding: 0 var(--et-gutter);
+  pointer-events: none;
+}
+
+.et-toast {
+  --accent: var(--et-fill-brand);
+  display: flex;
+  align-items: center;
+  gap: var(--et-space-3);
+  width: 100%;
+  max-width: 30rem;
+  min-height: var(--et-tap);
+  padding: var(--et-space-2) var(--et-space-2) var(--et-space-2) var(--et-space-3);
+  border-radius: var(--et-radius-lg);
+  background: var(--et-raised);
+  color: var(--et-text);
+  border: 1px solid var(--et-line);
+  border-inline-start: 0;
+  box-shadow: var(--et-shadow-3), inset 6px 0 0 var(--accent);
+  font-weight: var(--et-weight-bold);
+  pointer-events: auto;
+  transform: translateY(calc(100% + var(--et-space-6)));
+  opacity: 0;
+  transition:
+    transform var(--et-dur-slow) var(--et-ease-spring),
+    opacity   var(--et-dur-base) var(--et-ease-out);
+}
+[dir="rtl"] .et-toast { box-shadow: var(--et-shadow-3), inset -6px 0 0 var(--accent); }
+.et-toast.is-in { transform: none; opacity: 1; }
+.et-toast.is-out {
+  transform: translateY(var(--et-space-4));
+  opacity: 0;
+  transition-timing-function: var(--et-ease-in);
+  transition-duration: var(--et-dur-base);
+}
+
+.et-toast--go     { --accent: var(--et-fill-go); }
+.et-toast--info   { --accent: var(--et-fill-info); }
+.et-toast--danger { --accent: var(--et-fill-danger); }
+
+.et-toast__art { flex: none; display: grid; place-items: center; width: 2.75rem; height: 2.75rem; }
+.et-toast__art .et-icon { width: 1.6rem; height: 1.6rem; color: var(--accent); }
+.et-toast__text { flex: 1; line-height: var(--et-leading-snug); }
+.et-toast__action {
+  flex: none;
+  min-height: var(--et-tap-min);
+  padding: 0 var(--et-space-4);
+  border: 0;
+  border-radius: var(--et-radius-md);
+  background: var(--et-sunk);
+  color: var(--et-text-brand);
+  font-weight: var(--et-weight-heavy);
+  cursor: pointer;
+}

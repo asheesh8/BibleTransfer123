@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, ">
+<title>Kandili design system</title>
+<meta name="description" content="Every colour, component, motion and mascot pose in the BibleTransfer123 library app, live.">
+<meta name="theme-color" content="#120A1C">
+<link rel="icon" href="assets/icon/favicon-32.png">
+<!-- The kit: tokens first, then base, then one file per component. -->
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components/button.css">
+<link rel="stylesheet" href="assets/css/components/chip.css">
+<link rel="stylesheet" href="assets/css/components/card.css">
+<link rel="stylesheet" href="assets/css/components/row.css">
+<link rel="stylesheet" href="assets/css/components/field.css">
+<link rel="stylesheet" href="assets/css/components/progress.css">
+<link rel="stylesheet" href="assets/css/components/banner.css">
+<link rel="stylesheet" href="assets/css/components/stepper.css">
+<link rel="stylesheet" href="assets/css/components/sheet.css">
+<link rel="stylesheet" href="assets/css/components/toast.css">
+<link rel="stylesheet" href="assets/css/components/nav.css">
+<link rel="stylesheet" href="assets/css/components/qr.css">
+<link rel="stylesheet" href="assets/css/components/mascot.css">
+<link rel="stylesheet" href="assets/css/pages/styleguide.css">
+</head>
+<body>
+
+<a class="et-skip" href="#main">Skip to the style guide</a>
+
+<header class="sg-bar">
+  <span class="sg-bar__brand"><span data-kandili data-pose="neutral" data-mood="still"></span>Kandili design system</span>
+  <span class="sg-bar__group">Theme
+    <span class="et-segmented" role="radiogroup" aria-label="Theme">
+      <label><input type="radio" name="sg-theme" value="" checked><span>Auto</span></label>
+      <label><input type="radio" name="sg-theme" value="light"><span>Light</span></label>
+      <label><input type="radio" name="sg-theme" value="dark"><span>Dark</span></label>
+    </span>
+  </span>
+  <span class="sg-bar__group">Direction
+    <span class="et-segmented" role="radiogroup" aria-label="Text direction">
+      <label><input type="radio" name="sg-dir" value="ltr" checked><span>LTR</span></label>
+      <label><input type="radio" name="sg-dir" value="rtl"><span>RTL</span></label>
+    </span>
+  </span>
+  <span class="sg-bar__group">Motion
+    <span class="et-segmented" role="radiogroup" aria-label="Motion">
+      <label><input type="radio" name="sg-motion" value="" checked><span>Auto</span></label>
+      <label><input type="radio" name="sg-motion" value="reduce"><span>Reduced</span></label>
+    </span>
+  </span>
+</header>
+
+<main id="main">
+
+<section class="sg-hero et-on-dark">
+  <div class="et-wrap">
+    <div>
+      <span class="et-kicker">BibleTransfer123 · living style guide</span>
+      <h1>A light you can pass on.</h1>
+      <p>Every colour, component, motion and mascot pose in the library app, on one page. It runs off a microSD card with no internet, exactly like the app.</p>
+      <div class="et-btn-row">
+        <a class="et-btn et-btn--gold et-btn--lg" href="#kandili"><i data-icon="heart"></i><span>Meet Kandili</span></a>
+        <a class="et-btn et-btn--quiet et-btn--lg" href="#buttons"><i data-icon="library"></i><span>See the parts</span></a>
+      </div>
+      <div class="sg-stats">
+        <div><strong class="et-num">13</strong><span>components</span></div>
+        <div><strong class="et-num">10</strong><span>mascot poses</span></div>
+        <div><strong class="et-num">0 KB</strong><span>to download</span></div>
+        <div><strong class="et-num">57</strong><span>languages</span></div>
+      </div>
+    </div>
+    <div class="sg-hero__art"><span id="sg-hero-kandili" data-kandili data-pose="hello" data-mood="idle" data-moment="welcome" data-tappable data-label="Kandili the lantern, waving hello"></span></div>
+  </div>
+</section>
+
+<nav class="et-wrap sg-toc" aria-label="Sections">
+  <div class="et-chips">
+    <a class="et-chip" href="#principles">Principles</a>
+    <a class="et-chip" href="#color">Colour</a>
+    <a class="et-chip" href="#type">Type</a>
+    <a class="et-chip" href="#space">Space &amp; shape</a>
+    <a class="et-chip" href="#motion">Motion</a>
+    <a class="et-chip" href="#icons">Icons</a>
+    <a class="et-chip" href="#buttons">Buttons</a>
+    <a class="et-chip" href="#chips">Chips</a>
+    <a class="et-chip" href="#cards">Cards</a>
+    <a class="et-chip" href="#rows">Rows</a>
+    <a class="et-chip" href="#fields">Fields</a>
+    <a class="et-chip" href="#progress">Progress</a>
+    <a class="et-chip" href="#feedback">Feedback</a>
+    <a class="et-chip" href="#steps">Steps</a>
+    <a class="et-chip" href="#share">QR sharing</a>
+    <a class="et-chip" href="#kandili">Kandili</a>
+    <a class="et-chip" href="#screen">A whole screen</a>
+  </div>
+</nav>
+
+<!-- ============================================================ principles -->
+<section class="sg-sec" id="principles"><div class="et-wrap">
+  <h2>Principles</h2>
+  <p class="sg-lead">Who we design for: someone on a shared, cracked Android phone, outdoors, reading slowly, maybe in their second language, maybe with no signal. Every rule below comes from them.</p>
+  <div class="sg-grid">
+    <div class="sg-box sg-principle"><i data-icon="phone"></i><h3>Thumbs first</h3><p>Anything a thumb aims at is at least 56 px. The four main places sit at the bottom.</p></div>
+    <div class="sg-box sg-principle"><i data-icon="play"></i><h3>Icon plus word</h3><p>Every action shows both. The icon helps a reader who cannot read the word, the word helps one who cannot read the icon.</p></div>
+    <div class="sg-box sg-principle"><i data-icon="save"></i><h3>Play, Save, Share</h3><p>Three verbs carry the whole app. Plain words, the same words on every screen.</p></div>
+    <div class="sg-box sg-principle"><i data-icon="sun"></i><h3>Readable in sunlight</h3><p>17 px body text, and every text colour at least 4.5:1 on its ground, in light and dark.</p></div>
+    <div class="sg-box sg-principle"><i data-icon="globe"></i><h3>Every script</h3><p>Arabic joins, Ethiopic and Devanagari get their own faces and line height, right-to-left mirrors.</p></div>
+    <div class="sg-box sg-principle"><i data-icon="heart"></i><h3>Calm, kind motion</h3><p>Short, never in the way, transform and opacity only, and none at all when the phone asks for less.</p></div>
+  </div>
+</div></section>
+
+<!-- ================================================================= color -->
+<section class="sg-sec" id="color"><div class="et-wrap">
+  <h2>Colour</h2>
+  <p class="sg-lead">Purple for the brand, gold for light, green for Play and success, sky for information. Components never use a colour directly: they ask for its job (text, fill-go, wash-info), and light and dark answer differently.</p>
+  <h3 class="sg-sub">Brand palette</h3>
+  <div class="sg-grid sg-grid--tight" id="sg-palette"></div>
+  <h3 class="sg-sub">Text and fills, checked live</h3>
+  <p class="et-soft">Each pair shows its contrast ratio, worked out in your browser from the current theme. Switch the theme at the top to check dark.</p>
+  <div class="sg-grid" id="sg-pairs"></div>
+</div></section>
+
+<!-- ================================================================== type -->
+<section class="sg-sec" id="type"><div class="et-wrap">
+  <h2>Type</h2>
+  <p class="sg-lead">System faces only, so nothing downloads. On iPhone and Mac the rounded face (SF Pro Rounded) gives the friendly, chunky look; everywhere else falls back to the phone's own sans.</p>
+  <div class="sg-box sg-type">
+    <div class="sg-type__row"><span class="sg-label">display</span><span style="font-size:var(--et-text-display);font-weight:900;line-height:1.1">Watch. Read. Share.</span></div>
+    <div class="sg-type__row"><span class="sg-label">3xl · 38</span><span style="font-size:var(--et-text-3xl);font-weight:900">The Library</span></div>
+    <div class="sg-type__row"><span class="sg-label">2xl · 30</span><span style="font-size:var(--et-text-2xl);font-weight:800">Browse the library</span></div>
+    <div class="sg-type__row"><span class="sg-label">xl · 24</span><span style="font-size:var(--et-text-xl);font-weight:800">What would you like today?</span></div>
+    <div class="sg-type__row"><span class="sg-label">lg · 20</span><span style="font-size:var(--et-text-lg);font-weight:800">Gospel of John</span></div>
+    <div class="sg-type__row"><span class="sg-label">md · 17</span><span>Films, Scripture and audio to watch, read, and save.</span></div>
+    <div class="sg-type__row"><span class="sg-label">sm · 15</span><span style="font-size:var(--et-text-sm)">You can change this any time</span></div>
+    <div class="sg-type__row"><span class="sg-label">xs · 13</span><span style="font-size:var(--et-text-xs);font-weight:700" class="et-soft">Audio · 2 h 10 min</span></div>
+    <div class="sg-type__row"><span class="sg-label">reading</span><span style="font-family:var(--et-font-reading);font-size:var(--et-text-lg);line-height:1.7">Your word is a lamp to my feet and a light to my path.</span></div>
+  </div>
+  <h3 class="sg-sub">Scripts we must get right</h3>
+  <p class="et-soft">Real interface strings from the app's translations: "What would you like today?" and the tagline.</p>
+  <div class="sg-grid sg-grid--wide">
+    <div class="sg-box sg-script" lang="swh"><span class="et-kicker">Swahili · Latin</span><strong>Ungependa nini leo?</strong><span>Filamu, Maandiko na sauti za kutazama, kusoma na kuhifadhi.</span></div>
+    <div class="sg-box sg-script" lang="am"><span class="et-kicker">Amharic · Ethiopic</span><strong>ዛሬ ምን ማድረግ ይፈልጋሉ?</strong><span>ለመመልከት፣ ለማንበብ፣ ለማዳመጥና ለማስቀመጥ ፊልሞች፣ መጽሐፍ ቅዱስና የድምፅ ቅጂዎች።</span></div>
+    <div class="sg-box sg-script" lang="ar" dir="rtl"><span class="et-kicker">Arabic · right to left</span><strong>ماذا تودّ أن تفعل اليوم؟</strong><span>أفلام ونصوص من الكتاب المقدس وتسجيلات صوتية، للمشاهدة والقراءة والاستماع والحفظ.</span></div>
+    <div class="sg-box sg-script" lang="ur" dir="rtl"><span class="et-kicker">Urdu · Nastaliq</span><strong>آج آپ کیا دیکھنا یا سننا چاہیں گے؟</strong><span>فلمیں، کلامِ مقدّس اور آڈیو — دیکھیں، پڑھیں، سنیں اور محفوظ کریں۔</span></div>
+    <div class="sg-box sg-script" lang="hi"><span class="et-kicker">Hindi · Devanagari</span><strong>आज आप क्या करना चाहेंगे?</strong><span>देखने, पढ़ने और सेव करने के लिए फ़िल्में, पवित्रशास्त्र और ऑडियो।</span></div>
+    <div class="sg-box sg-script" lang="cmn"><span class="et-kicker">Mandarin · Chinese</span><strong>今天想看、读或听些什么？</strong><span>影片、圣经经文和录音，供你观看、阅读、收听和保存。</span></div>
+  </div>
+</div></section>
+
+<!-- ======================================================= space and shape -->
+<section class="sg-sec" id="space"><div class="et-wrap">
+  <h2>Space, shape and depth</h2>
+  <p class="sg-lead">A 4 px grid, soft round corners (round reads as safe and friendly), and shadows tinted purple so cards look warm on cream instead of grey.</p>
+  <div class="sg-grid sg-grid--wide">
+    <div class="sg-box sg-space" id="sg-space"></div>
+    <div class="sg-grid sg-grid--tight" id="sg-radius"></div>
+  </div>
+  <h3 class="sg-sub">Elevation</h3>
+  <div class="sg-grid sg-grid--tight">
+    <div><div class="sg-depth" style="box-shadow:var(--et-shadow-1)"></div><span class="sg-label">--et-shadow-1 · cards</span></div>
+    <div><div class="sg-depth" style="box-shadow:var(--et-shadow-2)"></div><span class="sg-label">--et-shadow-2 · posters</span></div>
+    <div><div class="sg-depth" style="box-shadow:var(--et-shadow-3)"></div><span class="sg-label">--et-shadow-3 · sheets</span></div>
+  </div>
+</div></section>
+
+<!-- ================================================================ motion -->
+<section class="sg-sec" id="motion"><div class="et-wrap">
+  <h2>Motion</h2>
+  <p class="sg-lead">Durations are named by their job. Four curves cover everything. Under "reduce motion" every duration collapses to nothing, so the app still works and simply stops moving. Try it with the Motion switch at the top.</p>
+  <div class="sg-box">
+    <div class="sg-ease" id="sg-ease"></div>
+    <div class="et-btn-row" style="margin-top:var(--et-space-4)">
+      <button class="et-btn et-btn--gold" id="sg-ease-go" type="button"><i data-icon="play"></i><span>Run the curves</span></button>
+    </div>
+  </div>
+  <div class="sg-grid sg-grid--tight" id="sg-durations" style="margin-top:var(--et-space-4)"></div>
+</div></section>
+
+<!-- ================================================================= icons -->
+<section class="sg-sec" id="icons"><div class="et-wrap">
+  <h2>Icons</h2>
+  <p class="sg-lead">One 24 px grid, 2 px round strokes, drawn in the text colour. Always beside a word, never alone, except on a round icon button that has a spoken label.</p>
+  <div class="sg-grid sg-grid--tight" id="sg-icons"></div>
+</div></section>
+
+<!-- =============================================================== buttons -->
+<section class="sg-sec" id="buttons"><div class="et-wrap">
+  <h2>Buttons <span class="et-badge">et-btn</span></h2>
+  <p class="sg-lead">A chunky face on a darker lip, so it looks like something to press even to someone new to touchscreens. Press one: the face drops onto the lip.</p>
+  <div class="sg-box">
+    <div class="et-btn-row">
+      <button class="et-btn et-btn--go" type="button"><i data-icon="play"></i><span>Play</span></button>
+      <button class="et-btn" type="button"><i data-icon="save"></i><span>Save to my phone</span></button>
+      <button class="et-btn et-btn--gold" type="button"><i data-icon="share"></i><span>Share</span></button>
+      <button class="et-btn et-btn--info" type="button"><i data-icon="help"></i><span>How do I?</span></button>
+      <button class="et-btn et-btn--danger" type="button"><i data-icon="close"></i><span>Remove</span></button>
+      <button class="et-btn et-btn--quiet" type="button"><i data-icon="copy"></i><span>Copy link</span></button>
+      <button class="et-btn et-btn--ghost" type="button"><i data-icon="back" class="et-flip"></i><span>Back</span></button>
+    </div>
+    <span class="sg-label">--go  (default brand)  --gold  --info  --danger  --quiet  --ghost</span>
+  </div>
+  <div class="sg-grid sg-grid--wide" style="margin-top:var(--et-space-4)">
+    <div class="sg-box">
+      <div class="et-btn-row" style="align-items:center">
+        <button class="et-btn et-btn--go et-btn--sm" type="button"><i data-icon="play"></i><span>Small</span></button>
+        <button class="et-btn et-btn--go" type="button"><i data-icon="play"></i><span>Default</span></button>
+        <button class="et-btn et-btn--go et-btn--lg" type="button"><i data-icon="play"></i><span>Large</span></button>
+      </div>
+      <span class="sg-label">--sm 48 px · default 56 px · --lg 64 px</span>
+    </div>
+    <div class="sg-box">
+      <div class="et-btn-row" style="align-items:center">
+        <button class="et-btn et-btn--icon" type="button" aria-label="Share"><i data-icon="share"></i></button>
+        <button class="et-btn et-btn--icon et-btn--quiet" type="button" aria-label="Show QR code"><i data-icon="qr"></i></button>
+        <button class="et-btn et-btn--icon et-btn--go et-btn--lg" type="button" aria-label="Play"><i data-icon="play"></i></button>
+        <button class="et-btn" type="button" disabled><i data-icon="save"></i><span>Disabled</span></button>
+      </div>
+      <span class="sg-label">--icon (needs aria-label) · :disabled</span>
+    </div>
+    <div class="sg-box">
+      <button class="et-btn et-btn--block et-btn--go" type="button" id="sg-save-demo">
+        <span class="et-btn__icon"><i data-icon="save"></i></span><span class="et-btn__done"><i data-icon="check"></i></span>
+        <span class="sg-save-label">Save to my phone</span>
+      </button>
+      <span class="sg-label">aria-busy="true" → .is-done · press it</span>
+    </div>
+  </div>
+</div></section>
+
+<!-- ================================================================= chips -->
+<section class="sg-sec" id="chips"><div class="et-wrap">
+  <h2>Chips and badges <span class="et-badge">et-chip · et-badge</span></h2>
+  <p class="sg-lead">Chips filter what you see; a chosen chip shows a check as well as its colour. Badges label things and are never pressable.</p>
+  <div class="sg-box">
+    <div class="et-chips" role="group" aria-label="Type" id="sg-chips">
+      <button class="et-chip" type="button" aria-pressed="true">All <span class="et-chip__count et-num">212</span></button>
+      <button class="et-chip" type="button" aria-pressed="false"><i data-icon="film"></i>Films <span class="et-chip__count et-num">38</span></button>
+      <button class="et-chip" type="button" aria-pressed="false"><i data-icon="audio"></i>Audio <span class="et-chip__count et-num">64</span></button>
+      <button class="et-chip" type="button" aria-pressed="false"><i data-icon="book"></i>Scripture <span class="et-chip__count et-num">110</span></button>
+    </div>
+    <div class="et-cluster" style="margin-top:var(--et-space-4)">
+      <span class="et-badge">New</span>
+      <span class="et-badge et-badge--go"><i data-icon="check"></i>Saved</span>
+      <span class="et-badge et-badge--gold">Top 5</span>
+      <span class="et-badge et-badge--info"><i data-icon="wifi"></i>Works offline</span>
+      <span class="et-badge et-badge--danger">Unavailable</span>
+      <span class="et-badge et-badge--soft">2 h 10 min</span>
+    </div>
+  </div>
+</div></section>
+
+<!-- ================================================================= cards -->
+<section class="sg-sec" id="cards"><div class="et-wrap">
+  <h2>Cards and posters <span class="et-badge">et-card · et-poster · et-shelf</span></h2>
+  <p class="sg-lead">Posters fill shelves that scroll sideways. A missing cover still looks designed: six flat brand tones with a lamp-glow circle, picked by position so a shelf never repeats.</p>
+  <div class="et-shelf" id="sg-shelf"></div>
+  <div class="sg-grid sg-grid--wide" style="margin-top:var(--et-space-4)">
+    <section class="et-card"><h3 class="et-card__title">Works with no internet</h3><p class="et-card__text">212 of 230 items play straight off this card.</p></section>
+    <a class="et-card et-card--link" href="#cards"><h3 class="et-card__title">Show me how to share</h3><p class="et-card__text">Pass anything here to another phone.</p></a>
+    <section class="et-card et-card--brand"><h3 class="et-card__title">Swahili Bible Library</h3><p class="et-card__text" style="color:inherit;opacity:.9">The resources in this library are in Swahili.</p></section>
+  </div>
+</div></section>
+
+<!-- ================================================================== rows -->
+<section class="sg-sec" id="rows"><div class="et-wrap">
+  <h2>Rows <span class="et-badge">et-row</span></h2>
+  <p class="sg-lead">The whole row is one big link. A Save button sits beside it, never inside it, so a thumb cannot hit the wrong one.</p>
+  <ul class="et-list">
+    <li class="et-row is-current"><a class="et-row__main" href="#rows"><span class="et-row__thumb" data-tone="2"><i data-icon="audio"></i></span><span class="et-row__text"><span class="et-row__title">Gospel of John</span><span class="et-row__meta">Now playing · Audio · 2 h 10 min</span></span></a><button class="et-btn et-btn--quiet et-btn--icon et-btn--sm" type="button" aria-label="Pause"><i data-icon="pause"></i></button></li>
+    <li class="et-row is-saved"><a class="et-row__main" href="#rows"><span class="et-row__thumb"><i data-icon="film"></i></span><span class="et-row__text"><span class="et-row__title">Jesus</span><span class="et-row__meta">Film · Saved on this phone</span></span></a><span class="et-row__end"><i data-icon="next" class="et-flip"></i></span></li>
+    <li class="et-row"><a class="et-row__main" href="#rows"><span class="et-row__thumb" data-tone="3"><i data-icon="book"></i></span><span class="et-row__text"><span class="et-row__title">Biblia Takatifu</span><span class="et-row__meta">Scripture · Swahili Union Version</span></span></a><button class="et-btn et-btn--quiet et-btn--icon et-btn--sm" type="button" aria-label="Save"><i data-icon="save"></i></button></li>
+    <li class="et-row"><a class="et-row__main" href="#rows"><span class="et-row__thumb" data-tone="4"><i data-icon="film"></i></span><span class="et-row__text"><span class="et-row__title">The Story of Jesus for Children</span><span class="et-row__meta">Saving · 40%</span></span></a><span class="et-row__end"><span class="et-spinner" role="img" aria-label="Saving"></span></span><span class="et-row__bar" style="--value:40%"></span></li>
+  </ul>
+</div></section>
+
+<!-- ================================================================ fields -->
+<section class="sg-sec" id="fields"><div class="et-wrap">
+  <h2>Fields <span class="et-badge">et-search · et-field · et-switch · et-segmented</span></h2>
+  <p class="sg-lead">Text at 17 px so iPhone never zooms in when you tap a field. Labels always visible above, never only a placeholder.</p>
+  <div class="sg-grid sg-grid--wide">
+    <div class="sg-box et-stack">
+      <label class="et-search"><i data-icon="search"></i><input type="search" placeholder="Search by name" aria-label="Search by name"><button type="button" class="et-search__clear" aria-label="Clear"><i data-icon="close"></i></button></label>
+      <label class="et-field"><span class="et-field__label">Their email address</span><input class="et-field__input" type="email" placeholder="name@example.com"><span class="et-field__hint">We only use it to send this link.</span></label>
+      <label class="et-field is-invalid"><span class="et-field__label">Their phone number</span><input class="et-field__input" type="tel" value="07"><span class="et-field__hint">That number looks too short.</span></label>
+    </div>
+    <div class="sg-box et-stack">
+      <label class="et-switch"><input type="checkbox" role="switch" checked><span class="et-switch__track" aria-hidden="true"></span><span>Save over Wi-Fi only</span></label>
+      <label class="et-switch"><input type="checkbox" role="switch"><span class="et-switch__track" aria-hidden="true"></span><span>Show films</span></label>
+      <div class="et-segmented" role="radiogroup" aria-label="Quality">
+        <label><input type="radio" name="sg-q" checked><span>Small</span></label>
+        <label><input type="radio" name="sg-q"><span>Medium</span></label>
+        <label><input type="radio" name="sg-q"><span>Best</span></label>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============================================================== progress -->
+<section class="sg-sec" id="progress"><div class="et-wrap">
+  <h2>Progress and loading <span class="et-badge">et-progress · et-ring · et-skeleton</span></h2>
+  <p class="sg-lead">Show how far, not just "busy". The ring is one element with no SVG, cheap enough for a long list.</p>
+  <div class="sg-grid sg-grid--wide">
+    <div class="sg-box et-stack">
+      <div class="et-progress" role="progressbar" aria-label="Saving" aria-valuemin="0" aria-valuemax="100" aria-valuenow="64" id="sg-bar" style="--value:64%"><span class="et-progress__fill"></span></div>
+      <div class="et-progress et-progress--brand et-progress--sm" role="progressbar" aria-label="Chapter" aria-valuenow="30" style="--value:30%"><span class="et-progress__fill"></span></div>
+      <div class="et-progress et-progress--gold is-indeterminate" role="progressbar" aria-label="Looking for nearby phones"><span class="et-progress__fill"></span></div>
+      <span class="sg-label">determinate · --sm --brand · is-indeterminate --gold</span>
+    </div>
+    <div class="sg-box et-cluster" style="justify-content:space-around">
+      <div class="et-ring et-ring--lg" role="progressbar" aria-label="Saving" aria-valuenow="0" id="sg-ring" style="--value:0"><span class="et-ring__num et-num">0%</span></div>
+      <div class="et-ring" role="progressbar" aria-valuenow="100" aria-label="Saved" style="--value:100"><span class="et-ring__num et-num">100%</span></div>
+      <span class="et-spinner" role="img" aria-label="Loading"></span>
+    </div>
+    <div class="sg-box" style="display:grid;grid-template-columns:5rem 1fr;gap:var(--et-space-3);align-items:center" aria-hidden="true">
+      <span class="et-skeleton et-skeleton--poster"></span>
+      <div><span class="et-skeleton et-skeleton--title"></span><span class="et-skeleton et-skeleton--text"></span><span class="et-skeleton et-skeleton--text" style="width:40%"></span></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============================================================== feedback -->
+<section class="sg-sec" id="feedback"><div class="et-wrap">
+  <h2>Feedback <span class="et-badge">et-banner · et-empty · et-toast · et-sheet</span></h2>
+  <p class="sg-lead">Calm, never alarming, and always says what still works. Kandili shows up here, beside the words, never instead of them.</p>
+  <div class="et-stack">
+    <div class="et-banner et-banner--info" role="status"><span class="et-banner__art" data-kandili data-pose="offline" data-mood="dim" data-size="3.5rem"></span><div class="et-banner__text"><strong>No signal</strong>Your saved items still work.</div><button class="et-btn et-btn--sm et-btn--quiet" type="button"><i data-icon="wifi"></i><span>Try again</span></button></div>
+    <div class="et-banner et-banner--go" role="status"><span class="et-banner__art"><i data-icon="check"></i></span><div class="et-banner__text"><strong>Ready for offline</strong>This library now opens with no internet.</div></div>
+    <div class="et-banner et-banner--gold" role="status"><span class="et-banner__art"><i data-icon="phone"></i></span><div class="et-banner__text"><strong>Put this on my home screen</strong>Opens like an app, with one tap.</div><button class="et-btn et-btn--sm et-btn--gold" type="button"><span>Show me</span></button></div>
+  </div>
+  <div class="sg-grid sg-grid--wide" style="margin-top:var(--et-space-4)">
+    <div class="sg-box"><div class="et-empty"><div class="et-empty__art" data-kandili data-pose="thinking" data-mood="think" data-size="7rem"></div><h3>Nothing matches that</h3><p>Try a shorter word, or tap All.</p><button class="et-btn et-btn--quiet" type="button"><i data-icon="close"></i><span>Clear search</span></button></div></div>
+    <div class="sg-box"><div class="et-empty"><div class="et-empty__art" data-kandili data-pose="sleeping" data-mood="doze" data-size="7rem"></div><h3>Nothing saved yet</h3><p>Tap Save on anything and it stays on this phone.</p><a class="et-btn" href="#cards"><i data-icon="library"></i><span>Browse the library</span></a></div></div>
+    <div class="sg-box et-stack" style="align-content:center">
+      <button class="et-btn et-btn--go et-btn--block" type="button" data-toast="saved"><i data-icon="save"></i><span>Show a "saved" toast</span></button>
+      <button class="et-btn et-btn--info et-btn--block" type="button" data-toast="offline"><i data-icon="offline"></i><span>Show an offline toast</span></button>
+      <button class="et-btn et-btn--block" type="button" id="sg-sheet"><i data-icon="share"></i><span>Open a bottom sheet</span></button>
+    </div>
+  </div>
+</div></section>
+
+<!-- ================================================================= steps -->
+<section class="sg-sec" id="steps"><div class="et-wrap">
+  <h2>Steps <span class="et-badge">et-steps · et-dots</span></h2>
+  <p class="sg-lead">For guided flows like the save guide. Big numbers, a line that fills as you go, and a check on what is done.</p>
+  <div class="sg-grid sg-grid--wide">
+    <div class="sg-box">
+      <ol class="et-steps">
+        <li class="is-done"><strong>Tap Save</strong><span>The green button under the film.</span></li>
+        <li class="is-current" aria-current="step"><strong>Choose Files</strong><span>Your phone asks where to put it.</span></li>
+        <li><strong>Open it any time</strong><span>Even with no internet.</span></li>
+      </ol>
+    </div>
+    <div class="sg-box et-stack" style="align-content:center;justify-items:center">
+      <div class="et-dots" role="img" aria-label="Step 2 of 4"><span></span><span aria-current="true"></span><span></span><span></span></div>
+      <span class="sg-label">et-dots for paged flows</span>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============================================================ QR sharing -->
+<section class="sg-sec" id="share"><div class="et-wrap">
+  <h2>QR sharing <span class="et-badge">et-qr · et-scanner</span></h2>
+  <p class="sg-lead">Phone to phone, any brand: one phone shows a code, the other points its camera. The code is always black on white whatever the theme, because cameras misread inverted codes.</p>
+  <div class="sg-grid sg-grid--wide">
+    <figure class="et-qr is-live">
+      <div class="et-qr__code"><svg viewBox="0 0 33 33" shape-rendering="crispEdges" role="img" aria-label="QR code for the Swahili library"><path fill="currentColor" d="M0 0h7v1h-7zM11 0h1v1h-1zM14 0h1v1h-1zM16 0h1v1h-1zM19 0h1v1h-1zM21 0h3v1h-3zM26 0h7v1h-7zM0 1h1v1h-1zM6 1h1v1h-1zM10 1h2v1h-2zM15 1h2v1h-2zM18 1h1v1h-1zM21 1h1v1h-1zM26 1h1v1h-1zM32 1h1v1h-1zM0 2h1v1h-1zM2 2h3v1h-3zM6 2h1v1h-1zM8 2h4v1h-4zM14 2h1v1h-1zM16 2h1v1h-1zM19 2h1v1h-1zM21 2h2v1h-2zM26 2h1v1h-1zM28 2h3v1h-3zM32 2h1v1h-1zM0 3h1v1h-1zM2 3h3v1h-3zM6 3h1v1h-1zM8 3h1v1h-1zM10 3h2v1h-2zM18 3h1v1h-1zM21 3h1v1h-1zM24 3h1v1h-1zM26 3h1v1h-1zM28 3h3v1h-3zM32 3h1v1h-1zM0 4h1v1h-1zM2 4h3v1h-3zM6 4h1v1h-1zM8 4h2v1h-2zM11 4h1v1h-1zM14 4h3v1h-3zM20 4h3v1h-3zM26 4h1v1h-1zM28 4h3v1h-3zM32 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM8 5h2v1h-2zM11 5h3v1h-3zM18 5h2v1h-2zM21 5h4v1h-4zM26 5h1v1h-1zM32 5h1v1h-1zM0 6h7v1h-7zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h1v1h-1zM24 6h1v1h-1zM26 6h7v1h-7zM8 7h2v1h-2zM11 7h2v1h-2zM14 7h1v1h-1zM16 7h1v1h-1zM19 7h3v1h-3zM23 7h1v1h-1zM0 8h1v1h-1zM2 8h5v1h-5zM10 8h1v1h-1zM13 8h2v1h-2zM17 8h4v1h-4zM22 8h3v1h-3zM26 8h5v1h-5zM0 9h1v1h-1zM3 9h1v1h-1zM7 9h2v1h-2zM11 9h1v1h-1zM13 9h2v1h-2zM17 9h1v1h-1zM19 9h2v1h-2zM22 9h2v1h-2zM26 9h2v1h-2zM29 9h2v1h-2zM32 9h1v1h-1zM0 10h2v1h-2zM6 10h1v1h-1zM9 10h1v1h-1zM11 10h7v1h-7zM20 10h1v1h-1zM22 10h1v1h-1zM24 10h1v1h-1zM28 10h1v1h-1zM30 10h2v1h-2zM1 11h2v1h-2zM5 11h1v1h-1zM7 11h3v1h-3zM11 11h1v1h-1zM13 11h1v1h-1zM16 11h3v1h-3zM20 11h1v1h-1zM26 11h1v1h-1zM28 11h3v1h-3zM0 12h3v1h-3zM4 12h1v1h-1zM6 12h2v1h-2zM9 12h2v1h-2zM14 12h3v1h-3zM20 12h6v1h-6zM28 12h2v1h-2zM32 12h1v1h-1zM0 13h1v1h-1zM2 13h4v1h-4zM7 13h1v1h-1zM10 13h1v1h-1zM13 13h1v1h-1zM15 13h1v1h-1zM18 13h1v1h-1zM21 13h1v1h-1zM24 13h1v1h-1zM26 13h1v1h-1zM31 13h2v1h-2zM0 14h5v1h-5zM6 14h1v1h-1zM9 14h1v1h-1zM11 14h3v1h-3zM15 14h4v1h-4zM20 14h1v1h-1zM24 14h3v1h-3zM28 14h4v1h-4zM0 15h1v1h-1zM2 15h4v1h-4zM8 15h1v1h-1zM10 15h1v1h-1zM14 15h2v1h-2zM18 15h1v1h-1zM21 15h1v1h-1zM23 15h5v1h-5zM29 15h2v1h-2zM0 16h1v1h-1zM2 16h1v1h-1zM4 16h3v1h-3zM9 16h1v1h-1zM11 16h1v1h-1zM13 16h1v1h-1zM15 16h1v1h-1zM17 16h2v1h-2zM22 16h1v1h-1zM24 16h2v1h-2zM27 16h2v1h-2zM32 16h1v1h-1zM2 17h1v1h-1zM7 17h1v1h-1zM9 17h1v1h-1zM11 17h1v1h-1zM13 17h2v1h-2zM16 17h1v1h-1zM19 17h3v1h-3zM23 17h1v1h-1zM26 17h2v1h-2zM29 17h2v1h-2zM32 17h1v1h-1zM4 18h3v1h-3zM8 18h1v1h-1zM13 18h3v1h-3zM18 18h1v1h-1zM21 18h1v1h-1zM24 18h1v1h-1zM27 18h2v1h-2zM30 18h2v1h-2zM1 19h5v1h-5zM8 19h2v1h-2zM11 19h1v1h-1zM19 19h13v1h-13zM1 20h1v1h-1zM4 20h3v1h-3zM8 20h1v1h-1zM12 20h4v1h-4zM18 20h1v1h-1zM21 20h1v1h-1zM28 20h2v1h-2zM0 21h1v1h-1zM7 21h1v1h-1zM13 21h4v1h-4zM20 21h4v1h-4zM25 21h2v1h-2zM29 21h1v1h-1zM32 21h1v1h-1zM0 22h1v1h-1zM2 22h2v1h-2zM6 22h4v1h-4zM11 22h1v1h-1zM13 22h2v1h-2zM17 22h3v1h-3zM21 22h1v1h-1zM28 22h1v1h-1zM30 22h2v1h-2zM0 23h1v1h-1zM4 23h2v1h-2zM7 23h2v1h-2zM10 23h1v1h-1zM12 23h2v1h-2zM16 23h1v1h-1zM19 23h4v1h-4zM24 23h1v1h-1zM26 23h1v1h-1zM28 23h5v1h-5zM0 24h1v1h-1zM2 24h3v1h-3zM6 24h1v1h-1zM10 24h3v1h-3zM16 24h4v1h-4zM22 24h1v1h-1zM24 24h5v1h-5zM32 24h1v1h-1zM8 25h1v1h-1zM11 25h1v1h-1zM13 25h2v1h-2zM16 25h5v1h-5zM24 25h1v1h-1zM28 25h1v1h-1zM30 25h1v1h-1zM32 25h1v1h-1zM0 26h7v1h-7zM9 26h1v1h-1zM11 26h7v1h-7zM20 26h1v1h-1zM22 26h3v1h-3zM26 26h1v1h-1zM28 26h1v1h-1zM30 26h2v1h-2zM0 27h1v1h-1zM6 27h1v1h-1zM8 27h3v1h-3zM12 27h1v1h-1zM14 27h1v1h-1zM16 27h4v1h-4zM23 27h2v1h-2zM28 27h5v1h-5zM0 28h1v1h-1zM2 28h3v1h-3zM6 28h1v1h-1zM8 28h3v1h-3zM14 28h1v1h-1zM16 28h1v1h-1zM20 28h3v1h-3zM24 28h6v1h-6zM31 28h1v1h-1zM0 29h1v1h-1zM2 29h3v1h-3zM6 29h1v1h-1zM8 29h1v1h-1zM10 29h1v1h-1zM12 29h1v1h-1zM14 29h2v1h-2zM17 29h2v1h-2zM23 29h3v1h-3zM28 29h1v1h-1zM32 29h1v1h-1zM0 30h1v1h-1zM2 30h3v1h-3zM6 30h1v1h-1zM8 30h2v1h-2zM11 30h1v1h-1zM13 30h5v1h-5zM20 30h1v1h-1zM22 30h1v1h-1zM26 30h2v1h-2zM29 30h2v1h-2zM0 31h1v1h-1zM6 31h1v1h-1zM10 31h2v1h-2zM13 31h1v1h-1zM15 31h1v1h-1zM18 31h1v1h-1zM21 31h1v1h-1zM23 31h1v1h-1zM25 31h2v1h-2zM28 31h1v1h-1zM30 31h1v1h-1zM0 32h7v1h-7zM8 32h1v1h-1zM12 32h2v1h-2zM15 32h1v1h-1zM17 32h1v1h-1zM20 32h1v1h-1zM22 32h4v1h-4zM27 32h1v1h-1zM29 32h1v1h-1zM31 32h1v1h-1z"/></svg></div>
+      <figcaption class="et-qr__caption">
+        <strong>Swahili Bible Library</strong>
+        <span class="et-qr__hint">Point their camera here</span>
+        <span class="et-qr__url et-latin">bibletransfer123.org/swahili</span>
+      </figcaption>
+      <div class="et-btn-row" style="justify-content:center">
+        <button class="et-btn et-btn--gold" type="button"><i data-icon="share"></i><span>Send link</span></button>
+        <button class="et-btn et-btn--quiet" type="button"><i data-icon="save"></i><span>Save image</span></button>
+      </div>
+    </figure>
+    <div class="et-stack" style="justify-items:center">
+      <div class="et-scanner" id="sg-scanner" style="width:100%">
+        <span class="et-scanner__frame" aria-hidden="true"></span>
+        <p class="et-scanner__hint">Hold the code inside the square</p>
+      </div>
+      <button class="et-btn et-btn--go" type="button" id="sg-scan-found"><i data-icon="check"></i><span>Simulate "found it"</span></button>
+    </div>
+  </div>
+</div></section>
+
+<!-- =============================================================== kandili -->
+<section class="sg-sec" id="kandili"><div class="et-wrap">
+  <h2>Kandili, the lantern <span class="et-badge et-badge--gold">ET.mascot</span></h2>
+  <p class="sg-lead">Swahili for "lamp". Flat art cut into parts (body, flame, eyes, mouth, arms) and moved by code, the way Duolingo's owl works, with nothing to download. The flame is the emotion meter: tall when happy, low when waiting. These shapes follow the concept sheet; when the final ChatGPT art is traced, only the drawing changes.</p>
+  <div class="sg-stage et-on-dark">
+    <div class="sg-stage__art"><span id="sg-stage" data-kandili data-pose="neutral" data-mood="idle" data-tappable data-label="Kandili the lantern"></span></div>
+    <div>
+      <h3>Moments: what the app asks for</h3>
+      <div class="et-btn-row" id="sg-moments"></div>
+      <h3>Moves: one-shot, all under 1.2 s</h3>
+      <div class="et-btn-row" id="sg-moves"></div>
+      <h3>Moods: the loop underneath</h3>
+      <div class="et-btn-row" id="sg-moods"></div>
+      <p class="sg-stage__now" id="sg-now">k.moment('welcome')</p>
+    </div>
+  </div>
+  <h3 class="sg-sub">Ten poses, one per moment in the app</h3>
+  <div class="sg-grid sg-grid--tight" id="sg-poses" style="grid-template-columns:repeat(auto-fill,minmax(9.5rem,1fr))"></div>
+  <h3 class="sg-sub">Using it</h3>
+<pre class="sg-code" tabindex="0"><code>&lt;script src="assets/js/brand/mascot.js"&gt;&lt;/script&gt;
+
+var k = ET.mascot.create(el, { pose: 'hello', size: '8rem' });
+k.moment('saved');                 // pose + move + mood, in one call
+k.play('hop').then(next);          // one move; resolves when it ends
+ET.mascot.markup('share', { size: 48 });   // a still SVG string
+
+&lt;div data-kandili data-moment="welcome"&gt;&lt;/div&gt;   // no script needed per page</code></pre>
+</div></section>
+
+<!-- ======================================================== a whole screen -->
+<section class="sg-sec" id="screen"><div class="et-wrap">
+  <h2>A whole screen</h2>
+  <p class="sg-lead">The parts put together into the item page: a phone-sized frame you can tap through. Play, Save and Share each get Kandili's reaction.</p>
+  <div class="sg-phone">
+    <header class="et-appbar">
+      <a class="et-appbar__back" href="#screen" aria-label="Back"><i data-icon="back" class="et-flip"></i></a>
+      <span class="et-appbar__brand"><span data-kandili data-pose="neutral" data-mood="still" data-size="2rem"></span>The Library</span>
+      <button class="et-appbar__action" type="button" aria-label="Language"><i data-icon="globe"></i></button>
+    </header>
+    <div class="sg-phone__screen">
+      <div class="et-wrap et-stack" style="padding-top:var(--et-space-4);padding-bottom:var(--et-space-6)">
+        <span class="et-poster__art et-poster--wide" data-tone="1" style="aspect-ratio:16/9"><span class="et-poster__gen">Jesus</span><span class="et-poster__badge"><span class="et-badge et-badge--gold">Top 5</span></span></span>
+        <div>
+          <h1 style="font-size:var(--et-text-2xl);margin:0">Jesus</h1>
+          <div class="et-cluster" style="gap:var(--et-space-2);margin-top:var(--et-space-2)"><span class="et-badge et-badge--soft">Film</span><span class="et-badge et-badge--soft et-num">2 h 7 min</span><span class="et-badge et-badge--info"><i data-icon="wifi"></i>Works offline</span></div>
+        </div>
+        <div class="et-btn-row" style="display:grid;grid-template-columns:1fr">
+          <button class="et-btn et-btn--go et-btn--lg et-btn--block" type="button" data-react="play"><i data-icon="play"></i><span>Play</span></button>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--et-space-3)">
+            <button class="et-btn et-btn--block" type="button" data-react="saved"><i data-icon="save"></i><span>Save</span></button>
+            <button class="et-btn et-btn--gold et-btn--block" type="button" data-react="shared"><i data-icon="share"></i><span>Share</span></button>
+          </div>
+        </div>
+        <div class="et-card et-card--tight" style="display:flex;gap:var(--et-space-3);align-items:center">
+          <span id="sg-phone-kandili" data-kandili data-pose="neutral" data-mood="idle" data-size="5.5rem"></span>
+          <p class="et-soft" style="margin:0" id="sg-phone-line">The story of Jesus from the Gospel of Luke, in your language.</p>
+        </div>
+      </div>
+    </div>
+    <nav class="et-tabbar" aria-label="Main">
+      <a href="#screen" aria-current="page"><span class="et-tabbar__pill"><i data-icon="home"></i></span>Home</a>
+      <a href="#screen"><span class="et-tabbar__pill"><i data-icon="library"></i></span>Library</a>
+      <a href="#screen"><span class="et-tabbar__pill"><i data-icon="nearby"></i></span>Share</a>
+      <a href="#screen"><span class="et-tabbar__pill"><i data-icon="help"></i></span>Help</a>
+    </nav>
+  </div>
+</div></section>
+
+</main>
+
+<footer class="sg-foot"><div class="et-wrap">
+  <p>Source: <code>app/assets/css/tokens.css</code>, <code>css/components/</code>, <code>js/ui/</code>, <code>js/brand/mascot.js</code>. Rules and how to add a component: <code>docs/design/README.md</code>.</p>
+</div></footer>
+
+<script src="assets/js/core.js"></script>
+<script src="assets/js/ui/icons.js"></script>
+<script src="assets/js/brand/mascot.js"></script>
+<script src="assets/js/ui/sheet.js"></script>
+<script src="assets/js/ui/toast.js"></script>
+<script src="assets/js/features/styleguide.js"></script>
+</body>
+</html>
