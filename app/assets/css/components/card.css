@@ -22,6 +22,20 @@
        <span class="et-poster__meta">Film · 2 h</span>
      </a>
 
+   Tile: a card that is one big button, with a ledge under it like et-btn.
+   A picture tile on the left, a title and a line under it, an arrow at the
+   end. The whole card is the target.
+
+     <a class="et-tile" href="…">
+       <span class="et-tile__icon"><svg class="et-icon">…</svg></span>
+       <span class="et-tile__text"><span class="et-tile__title">Save to your
+         computer</span><span class="et-tile__sub">Mac + Windows</span></span>
+       <span class="et-tile__end"><svg class="et-icon">…</svg></span>
+     </a>
+
+   As a choice: <button class="et-tile" aria-pressed="true">, with a check
+   icon in .et-tile__end.
+
    Shelf: a sideways-scrolling row of posters.
      <div class="et-shelf">…posters…</div>
    ========================================================================= */
@@ -51,6 +65,51 @@
 
 .et-card__title { margin: 0 0 var(--et-space-1); font-size: var(--et-text-lg); font-weight: var(--et-weight-heavy); }
 .et-card__text  { margin: 0; color: var(--et-text-soft); }
+
+/* ----------------------------------------------------------------- tile */
+.et-tile {
+  display: flex;
+  align-items: center;
+  gap: var(--et-space-4);
+  min-height: 5.25rem;
+  padding: var(--et-space-4);
+  border: 2px solid var(--et-line);
+  border-bottom-width: calc(var(--et-lip) + 1px);
+  border-radius: var(--et-radius-lg);
+  background: var(--et-surface);
+  color: inherit;
+  text-decoration: none;
+  transition:
+    transform    var(--et-dur-instant) var(--et-ease-out),
+    border-color var(--et-dur-fast) var(--et-ease-out),
+    background   var(--et-dur-fast) var(--et-ease-out);
+}
+.et-tile:hover  { border-color: var(--et-text-brand); background: var(--et-wash-brand); }
+button.et-tile { width: 100%; font: inherit; text-align: start; cursor: pointer; }
+/* A tile used as a choice (which phone?) shows the choice with the wash and
+   a check at the end, not colour alone. */
+.et-tile[aria-pressed="true"] { border-color: var(--et-text-brand); background: var(--et-wash-brand); }
+.et-tile[aria-pressed="true"] .et-tile__end { color: var(--et-text-go); }
+/* The face drops onto the ledge, and the margin keeps the page from jumping. */
+.et-tile:active {
+  transform: translateY(var(--et-lip));
+  border-bottom-width: 2px;
+  margin-bottom: calc(var(--et-lip) - 1px);
+}
+.et-tile__icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 3.375rem; height: 3.375rem;
+  border-radius: var(--et-radius-md);
+  background: var(--et-wash-brand);
+  color: var(--et-text-brand);
+}
+.et-tile__icon svg { width: 1.875rem; height: 1.875rem; }
+.et-tile__text  { min-width: 0; }
+.et-tile__title { display: block; font-weight: var(--et-weight-heavy); font-size: 1.08rem; }
+.et-tile__sub   { display: block; color: var(--et-text-soft); font-size: var(--et-text-sm); }
+.et-tile__end   { margin-inline-start: auto; flex: none; color: var(--et-line-strong); }
 
 /* ---------------------------------------------------------------- shelf */
 .et-shelf {

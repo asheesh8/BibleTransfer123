@@ -167,6 +167,8 @@ p, li, h1, h2, h3, code, input { -webkit-user-select: text; user-select: text; }
 
 .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 1.1rem; }
 .stack > * + * { margin-top: var(--gap); }
+/* Kit buttons reset their own margin for the ledge; keep the stack's gap. */
+.stack > * + .et-btn { margin-top: var(--gap); }
 .muted { color: var(--ink-soft); }
 .center { text-align: center; }
 [hidden] { display: none !important; }

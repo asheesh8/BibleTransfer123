@@ -148,25 +148,25 @@ html[dir="rtl"] .screen-item .item-head h1 { letter-spacing: 0; line-height: 1.5
 
 /* ------------------------------------------------------------------- send */
 /* The device questions become a two-up grid of big picture buttons. */
-.screen-share #wizard .card > .stack {
+.screen-share #wizard .et-card > .stack {
   display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem;
 }
-.screen-share #wizard .tile {
+.screen-share #wizard .et-tile {
+  position: relative; margin: 0;
   flex-direction: column; justify-content: center; text-align: center;
   min-height: 8.5rem; gap: .55rem; padding: 1rem .6rem;
-  border-radius: var(--r-lg);
 }
-.screen-share #wizard .tile .ico { width: 3.5rem; height: 3.5rem; border-radius: 1.1rem; }
-.screen-share #wizard .tile .chev {
+.screen-share #wizard .et-tile__icon { width: 3.5rem; height: 3.5rem; border-radius: 1.1rem; }
+.screen-share #wizard .et-tile__end {
   position: absolute; top: .6rem; inset-inline-end: .6rem; margin: 0;
-  color: var(--green-text);
 }
-.screen-share #wizard .tile { position: relative; margin: 0; }
-.screen-share #wizard .tile[aria-pressed="true"] { border-color: var(--purple); background: var(--purple-wash); }
 
 /* ------------------------------------------------------------------- guide */
 .screen-help .steps > li::before {
   width: 2.6rem; height: 2.6rem; font-size: 1.15rem;
   box-shadow: 0 3px 0 var(--purple-deep);
 }
-.screen-help .card { border-radius: var(--r-lg); }
+.screen-help .help-heading { display: flex; align-items: center; gap: .7rem; margin-bottom: .8rem; }
+.screen-help .help-heading h2 { margin: 0; }
+.screen-help .help-heading .et-tile__icon { width: 44px; height: 44px; }
+.screen-help .help-heading .et-tile__icon svg { width: 24px; height: 24px; }
