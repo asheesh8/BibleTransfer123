@@ -107,6 +107,31 @@ test('each page loads the modules its scripts call, after core', () => {
   assert.ok(checked > 50, 'only ' + checked + ' pages checked');
 });
 
+/* A screen that draws kit pieces (et-btn, et-card …) must link their CSS,
+   before app.css so a screen's own rules (.pass-on, .chain-banner) can still
+   adjust a kit card. Unstyled kit markup is easy to miss on a fast laptop. */
+test('each page links the kit CSS for the pieces it draws, before app.css', () => {
+  const KIT = { 'et-btn': 'button', 'et-card': 'card', 'et-tile': 'card', 'et-chip': 'chip', 'et-badge': 'chip' };
+  const pages = fs.readdirSync(APP).filter(f => f.endsWith('.html'))
+    .concat(fs.readdirSync(APP).filter(d => fs.existsSync(path.join(APP, d, 'index.html')) && d !== 'admin').map(d => d + '/index.html'));
+  let used = 0;
+  for (const page of pages) {
+    const html = read(page);
+    const scripts = [...html.matchAll(/<script[^>]*\ssrc="assets\/js\/([\w/-]+)\.js"/g)].map(m => m[1])
+      .filter(s => fs.existsSync(path.join(APP, 'assets/js', s + '.js')));
+    const code = html.replace(/<pre[\s\S]*?<\/pre>/g, '') + scripts.map(s => read('assets/js/' + s + '.js')).join('\n');
+    for (const [cls, css] of Object.entries(KIT)) {
+      if (!new RegExp('class="[^"]*\\b' + cls + '\\b').test(code)) continue;
+      used++;
+      const at = html.indexOf('href="assets/css/components/' + css + '.css"');
+      assert.ok(at > -1, page + ' draws ' + cls + ' but does not link components/' + css + '.css');
+      const app = html.indexOf('href="assets/css/app.css"');
+      if (app > -1) assert.ok(at < app, page + ' links components/' + css + '.css after app.css');
+    }
+  }
+  assert.ok(used > 50, 'only ' + used + ' kit uses found');
+});
+
 /* Every app script registers with ET.module, except the few that must run
    before the registry exists or outside the app. And on every page, each
    module's dependencies are loaded by an earlier <script> tag, so a

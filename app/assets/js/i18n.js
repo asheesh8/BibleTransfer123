@@ -287,15 +287,14 @@ window.ET.module('i18n', ['core'], function (ET) {
   function picker(force) {
     var rows = byName().map(function (l) {
       var on = l.code === (current || 'en');
-      return '<button class="tile" data-lang="' + l.code + '" data-find="' +
+      return '<button class="et-tile" data-lang="' + l.code + '" data-find="' +
              ET.esc((l.name + ' ' + l.native + ' ' + l.code).toLowerCase()) + '" ' +
-             'style="width:100%;text-align:start' +
-             (on ? ';border-color:var(--purple);background:var(--purple-wash)' : '') + '">' +
-             '<span class="ico">' + ET.icon('globe') + '</span>' +
-             '<span><span class="t" dir="' + l.dir + '" lang="' + l.code + '">' + ET.esc(l.native) + '</span>' +
-             '<span class="s latin" lang="en">' + ET.esc(l.name) + '</span>' +
-             (l.interfaceNote ? '<span class="s latin" lang="en">' + ET.esc(l.interfaceNote) + '</span>' : '') + '</span>' +
-             (on ? '<span class="chev">' + ET.icon('check') + '</span>' : '') +
+             'aria-pressed="' + on + '">' +
+             '<span class="et-tile__icon">' + ET.icon('globe') + '</span>' +
+             '<span class="et-tile__text"><span class="et-tile__title" dir="' + l.dir + '" lang="' + l.code + '">' + ET.esc(l.native) + '</span>' +
+             '<span class="et-tile__sub latin" lang="en">' + ET.esc(l.name) + '</span>' +
+             (l.interfaceNote ? '<span class="et-tile__sub latin" lang="en">' + ET.esc(l.interfaceNote) + '</span>' : '') + '</span>' +
+             (on ? '<span class="et-tile__end">' + ET.icon('check') + '</span>' : '') +
              '</button>';
     }).join('');
 
