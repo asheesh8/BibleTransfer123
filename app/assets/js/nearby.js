@@ -29,6 +29,11 @@
 window.ET.module('nearby', ['core', 'ui/shell', 'i18n', 'save'], function (ET) {
   'use strict';
   var t = ET.i18n.t, h = ET.i18n.h;
+  var ASSETS = ((document.currentScript && document.currentScript.src) || '')
+    .replace(/js\/nearby\.js(\?.*)?$/, '');
+  // The Android app can open its own Wi-Fi and share with no internet
+  // (features/hotspot.js, fetched when chosen).
+  var HOTSPOT = !!(ET.native && window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.Hotspot);
 
   var scope = ET.libraryScope();
   var item = ET.qs('id') ? ET.byId(ET.qs('id')) : null;
@@ -366,9 +371,26 @@ window.ET.module('nearby', ['core', 'ui/shell', 'i18n', 'save'], function (ET) {
           '<span class="ico" style="background:var(--sky-wash);color:var(--sky-deep)">' + ET.icon('save') + '</span>' +
           '<span><span class="t">' + h('nearby.receive') + '</span><span class="s">' + h('nearby.receive.sub') + '</span></span>' +
           '<span class="chev flip">' + ET.icon('chev') + '</span></button>' +
+        (HOTSPOT ? '<button class="tile" id="r-hotspot" style="width:100%;text-align:start">' +
+          '<span class="ico" style="background:var(--green-wash);color:var(--green-deep)">' + ET.icon('wifi') + '</span>' +
+          '<span><span class="t">' + h('hotspot.tile') + '</span><span class="s">' + h('hotspot.tile.sub') + '</span></span>' +
+          '<span class="chev flip">' + ET.icon('chev') + '</span></button>' : '') +
       '</div>');
+    on('r-hotspot', hotspot);
     on('r-send', function () { host(); });
     on('r-recv', function () { guestAsk(); });
+  }
+
+  // ---- 2c. sender, with no internet: the phone's own Wi-Fi
+  function hotspot() {
+    reset();
+    S.step = -1;     // off the Nearby steps: a language change must not reset it
+    function go() { ET.hotspot.open(root, role); }
+    if (ET.hotspot) return go();
+    var sc = document.createElement('script');
+    sc.src = ASSETS + 'js/features/hotspot.js';
+    sc.onload = go;
+    document.head.appendChild(sc);
   }
 
   // ---- 2a. sender: show a code and wait
@@ -398,8 +420,12 @@ window.ET.module('nearby', ['core', 'ui/shell', 'i18n', 'save'], function (ET) {
   // ---- 2b. receiver: type the code
   function guestAsk(msg) {
     S.role = 'guest';
+    // In the phone app the camera app would open the browser, so the app
+    // reads the code itself (features/scan.js).
+    var scan = ET.native && ET.canScan && ET.canScan();
     paint(1,
-      '<div class="nearby-tip">' + ET.icon('phone') + '<p>' + h('nearby.qr.tip') + '</p></div>' +
+      (scan ? '<div class="stack" style="margin-bottom:1rem">' + btn('scan', '', 'scan', h('nearby.scan')) + '</div>'
+        : '<div class="nearby-tip">' + ET.icon('phone') + '<p>' + h('nearby.qr.tip') + '</p></div>') +
       '<label class="flabel" for="code-in">' + h('nearby.enter') + '</label>' +
       '<input id="code-in" class="code-input" type="text" inputmode="numeric" pattern="[0-9]*" ' +
       'maxlength="7" autocomplete="one-time-code" placeholder="000 000">' +
@@ -407,7 +433,16 @@ window.ET.module('nearby', ['core', 'ui/shell', 'i18n', 'save'], function (ET) {
       '<div class="stack" style="margin-top:1rem">' + btn('go', '', 'wifi', h('nearby.join')) +
       btn('x', 'ghost', 'back', h('save.back')) + '</div>');
     var input = ET.$('#code-in', root);
-    input.focus();
+    if (scan) on('scan', function () {
+      ET.scanCode().then(function (text) {
+        var c = '';
+        try { c = new URL(text).searchParams.get('join') || ''; } catch (e) { c = text; }
+        c = String(c).replace(/\D/g, '');
+        if (c.length === 6) join(c);
+        else guestAsk(h('scan.other'));
+      }, function () {});
+    });
+    else input.focus();
     function tryJoin() {
       var c = input.value.replace(/\D/g, '');
       if (c.length !== 6) { input.focus(); return; }

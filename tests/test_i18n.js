@@ -214,7 +214,7 @@ test('Nigerian Pidgin covers all controls and guides with clear file wording', (
 test('Lingala covers every control and guide with clear file instructions', () => {
   const { ET, dictionaries } = harness();
   ET.i18n.set('ln');
-  assert.equal(Object.keys(dictionaries.ln).length, 461);
+  assert.equal(Object.keys(dictionaries.ln).length, 490);
   for (const key of Object.keys(dictionaries.pt)) assert.ok(dictionaries.ln[key], 'Lingala fallback: ' + key);
   assert.equal(ET.i18n.t('help.android.4.h'), 'Soki fichier efungwami te');
   assert.match(ET.i18n.t('help.ios.openfile.p'), /Soki fichier efungwami te/);
@@ -230,7 +230,7 @@ test('Lingala covers every control and guide with clear file instructions', () =
 test('Hausa covers all controls and guides with clear file wording', () => {
   const { ET, dictionaries } = harness();
   ET.i18n.set('ha');
-  assert.equal(Object.keys(dictionaries.ha).length, 461);
+  assert.equal(Object.keys(dictionaries.ha).length, 490);
   for (const key of Object.keys(dictionaries.pt)) assert.ok(dictionaries.ha[key], 'Hausa fallback: ' + key);
   assert.equal(ET.i18n.t('help.android.4.h'), 'Idan fayil ɗin bai buɗe ba');
   assert.match(ET.i18n.t('help.ios.openfile.p'), /Idan fayil ɗin bai buɗe ba/);
@@ -257,7 +257,7 @@ test('Hausa refreshes an older installed shell that falls back to English', () =
 
  test('Malagasy covers all controls and guides with precise file instructions', () => {
   const { ET, dictionaries } = harness({}, {lang: 'mlg', ui: 'mg'});
-  assert.equal(Object.keys(dictionaries.mg).length, 461);
+  assert.equal(Object.keys(dictionaries.mg).length, 490);
   for (const key of Object.keys(dictionaries.pt)) assert.ok(dictionaries.mg[key], 'Malagasy fallback: ' + key);
   assert.equal(ET.i18n.t('help.android.4.h'), 'Raha tsy misokatra ilay rakitra');
   assert.match(ET.i18n.t('help.ios.openfile.p'), /Raha tsy misokatra ilay rakitra/);

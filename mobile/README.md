@@ -44,9 +44,14 @@ never in git.
 If Gradle gets `429 Too Many Requests` from Maven Central, point it at Google's mirror with an
 init script in `~/.gradle/init.d/` (`https://maven-central.storage-download.googleapis.com/maven2/`).
 
+## Reading QR codes and sharing with no internet
+
+- **Scan** (header, and Nearby → Receive): `app/assets/js/features/scan.js` reads codes with the camera inside the app and opens our links among the app's files (`www/routes.json` holds the website's short links).
+- **Share with no internet** (Android, Nearby): `HotspotPlugin.java` opens the phone's own Wi-Fi (LocalOnlyHotspot) and `HotspotServer.java` serves only the chosen kept files on port 8080. The page shows two QR codes: join the Wi-Fi, then open the list. The other phone needs no app or internet. iPhone apps cannot open a network like this, so in a mixed pair the Android phone shares.
+
 ## Not done yet (Phase 1 and 2)
 
 - A "Saved on this phone" shelf, deleting kept files, and downloads that continue with the screen locked
-- QR scanner, and the hotspot + QR phone-to-phone sharing
+- Receiving into the app over the hotspot (today the other phone saves into its browser's downloads), and joining the Wi-Fi from the in-app scanner
 - Native share sheet (Android WebView has no `navigator.share`)
 - Store listings, signing, TestFlight and Play internal testing
