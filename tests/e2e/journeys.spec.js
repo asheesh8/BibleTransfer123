@@ -62,7 +62,8 @@ test('save: the recording downloads intact', async ({ page, browserName }) => {
   const file = await download;
   expect(file.suggestedFilename()).toMatch(/\.(mp3|zip)$/);
   expect(fs.readFileSync(await file.path()).equals(TONE), 'saved file matches the recording').toBe(true);
-  await expect(flow.locator('.done-mark')).toBeVisible();
+  // Kandili's celebration, or the green tick where the mascot can't draw.
+  await expect(flow.locator('.cheer, .done-mark').first()).toBeVisible();
   expect(problems).toEqual([]);
 });
 
