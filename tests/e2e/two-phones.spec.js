@@ -64,6 +64,47 @@ for (const [from, to] of PAIRS) {
   });
 }
 
+// The camera route: the receiver never taps Receive or types. Its camera opens the
+// link inside the sender's QR code, and the page joins by itself.
+for (const [from, to] of [['iPhone', 'Android'], ['Android', 'iPhone']]) {
+  test(`${from} sends a file to ${to} that scanned its QR code`, async ({ baseURL }, info) => {
+    const browsers = {};
+    try {
+      const sender = await phone(from, baseURL, browsers);
+      const receiver = await phone(to, baseURL, browsers);
+      const problems = [...[sender, receiver].map(p => watchForProblems(p))];
+      await sender.goto('/nearby.html?signal=local');
+      await answerCookieBanner(sender);
+      await sender.locator('#r-send').click();
+      await expect(sender.locator('.et-qr svg path')).toHaveCount(1);
+      const link = await sender.locator('.et-qr').getAttribute('data-join');
+      expect(link).toMatch(/\/nearby\.html\?signal=local&join=\d{6}$/);
+
+      await receiver.goto(link);
+      await answerCookieBanner(receiver);
+      // The code is forgotten as soon as it is used, so a reload cannot reuse it.
+      await expect(receiver).not.toHaveURL(/join=/);
+
+      const file = path.join(info.outputDir, 'john-3.mp3');
+      const sent = crypto.randomBytes(256 * 1024);
+      fs.mkdirSync(info.outputDir, { recursive: true });
+      fs.writeFileSync(file, sent);
+      await sender.locator('#pick-file').setInputFiles(file, { timeout: 30000 });
+      await receiver.locator('#acc').click({ timeout: 30000 });
+
+      const download = receiver.waitForEvent('download', { timeout: 60000 });
+      await receiver.locator('[data-download="0"]').click({ timeout: 60000 });
+      const got = await download;
+      const saved = path.join(info.outputDir, 'received.mp3');
+      await got.saveAs(saved);
+      expect(sha256(fs.readFileSync(saved)), 'received file matches what was sent').toBe(sha256(sent));
+      expect(problems.flat()).toEqual([]);
+    } finally {
+      await Promise.all(Object.values(browsers).map(b => b.close()));
+    }
+  });
+}
+
 test('a wrong code tells the receiver, instead of waiting forever', async ({ baseURL }) => {
   test.setTimeout(60000);
   const browsers = {};

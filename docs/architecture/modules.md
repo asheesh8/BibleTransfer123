@@ -49,7 +49,7 @@ window.ET.module('data/bible-books', ['core'], function (ET) {
 | `item.js` | legacy | `core`, `i18n`, `save.js`, `data/bible-books` | `item.html` |
 | `save.js` | `ET.save` (legacy) | `core`, `i18n` | library, item, nearby pages |
 | `share.js` | legacy | `core`, `i18n` | `share.html` |
-| `nearby.js` | legacy | `core`, `i18n`, `save.js`, `vendor/peerjs.min.js` | `nearby.html` |
+| `nearby.js` | legacy | `core`, `i18n`, `save.js`, `vendor/peerjs.min.js`, `vendor/qrcode.js` | `nearby.html` |
 | `help.js` | legacy | `core`, `i18n` | `help.html` |
 | `save-guide.js` | legacy | `core`, `i18n` | `save-guide.html` |
 | `share-libraries.js` | legacy | `core`, `i18n` | `share-libraries/` |

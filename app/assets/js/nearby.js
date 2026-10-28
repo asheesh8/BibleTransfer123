@@ -2,7 +2,8 @@
    Nearby — send a file from one phone to another, straight from this page.
 
      1  Which phone is this?   Send, or Receive
-     2  Connect                the sender shows a 6-digit code; the receiver types it
+     2  Connect                the sender shows a QR code; the receiver scans it with
+                               the phone's own camera (or types the 6-digit code under it)
      3  Choose                 the sender picks; the receiver accepts (and a folder)
      4  Sending                progress on both phones
      5  Done                   open it, save it, or pass it on to the next person
@@ -15,6 +16,12 @@
      carries them itself, so Nearby works on a network with no internet at all;
    · anywhere else (the Vercel web edition), a free public broker does it —
      PeerJS's, through its official client (assets/vendor/peerjs.min.js).
+
+   THE QR CODE is a link back to this page with the code in it (?join=482915).
+   iPhone and Android cameras both open links from QR codes natively, so the
+   receiver needs no app and types nothing: the page opens and joins. The
+   encoder is vendored (assets/vendor/qrcode.js, MIT) so it works offline on a
+   VillageServer, where the link points at the server itself.
 
    Off a card (file://) there is nothing to carry them, and the page says so and
    points at the step-by-step guide instead of failing silently.
@@ -50,6 +57,30 @@
     return String(100000 + (a[0] % 900000));
   }
   function token() { return Math.random().toString(36).slice(2, 12); }
+
+  // This page, joining `code`. Keeps the library scope and the signalling
+  // choice; drops the item, which is the sender's business.
+  function joinUrl(code) {
+    var u = new URL(location.href);
+    u.hash = '';
+    u.searchParams.delete('id');
+    u.searchParams.set('join', code);
+    return u.href;
+  }
+
+  // One SVG path, black on white (cameras misread inverted codes), sized by
+  // its box. Null if the encoder failed to load: the 6 digits still work.
+  function qrSvg(text) {
+    if (typeof window.qrcode !== 'function') return null;
+    var q = window.qrcode(0, 'M');
+    q.addData(text);
+    q.make();
+    var n = q.getModuleCount(), d = '';
+    for (var r = 0; r < n; r++) for (var c = 0; c < n; c++) if (q.isDark(r, c)) d += 'M' + c + ' ' + r + 'h1v1h-1z';
+    return '<svg viewBox="0 0 ' + n + ' ' + n + '" shape-rendering="crispEdges" role="img" aria-label="' +
+      ET.esc(t('nearby.qr.scan')) + '"><rect width="' + n + '" height="' + n + '" fill="#fff"/>' +
+      '<path fill="#000" d="' + d + '"/></svg>';
+  }
 
   // -------------------------------------------------------------- transports
   /* Both transports expose the same four things: ready (a promise), send(msg),
@@ -310,6 +341,7 @@
   function paint(step, html) {
     S.step = step;
     root.innerHTML = ET.stepper(STEPS.length, step) + '<h2>' + h(STEPS[step]) + '</h2>' + html;
+    if (ET.mascots) ET.mascots(root);     // brings any Kandili on this step to life
   }
   function btn(id, cls, icon, label) {
     return '<button class="btn ' + cls + ' block" id="' + id + '">' + (icon ? ET.icon(icon) : '') + label + '</button>';
@@ -320,6 +352,7 @@
   function role() {
     reset();
     paint(0,
+      '<div class="nearby-wait nearby-wait--big">' + ET.lantern(84, 'share') + '</div>' +
       '<p class="muted">' + h('nearby.lead') + '</p>' +
       (item ? '<div class="note info" style="margin-bottom:1rem"><strong class="latin">' +
         ET.esc(item.title) + '</strong></div>' : '') +
@@ -341,11 +374,17 @@
   function host(tries) {
     S.role = 'host';
     S.code = code6();
+    var qr = qrSvg(joinUrl(S.code));
     paint(1,
-      '<p class="flabel">' + h('nearby.code') + '</p>' +
-      '<div class="code" aria-live="polite">' + S.code.slice(0, 3) + ' ' + S.code.slice(3) + '</div>' +
-      '<p style="margin:.8rem 0 0">' + h('nearby.code.tell') + '</p>' +
-      '<p class="muted" style="margin:.8rem 0 0"><span class="spin"></span>' + h('nearby.waiting') + '</p>' +
+      (qr ? '<figure class="et-qr is-live nearby-qr" data-join="' + ET.esc(joinUrl(S.code)) + '">' +
+        '<div class="et-qr__code">' + qr + '</div>' +
+        '<figcaption class="et-qr__caption"><strong>' + h('nearby.qr.scan') + '</strong>' +
+        '<span class="et-qr__hint">' + h('nearby.qr.sub') + '</span></figcaption></figure>' : '') +
+      '<div class="nearby-backup">' +
+        '<p class="flabel">' + h('nearby.code') + '</p>' +
+        '<div class="code" aria-live="polite">' + S.code.slice(0, 3) + ' ' + S.code.slice(3) + '</div>' +
+        '<p>' + h('nearby.code.tell') + '</p></div>' +
+      '<div class="nearby-wait">' + ET.lantern(44, 'waiting') + '<span>' + h('nearby.waiting') + '</span></div>' +
       btn('x', 'ghost', 'back', h('save.back')));
     on('x', role);
     start('host', 'h', 'g', function (err) {
@@ -359,6 +398,7 @@
   function guestAsk(msg) {
     S.role = 'guest';
     paint(1,
+      '<div class="nearby-tip">' + ET.icon('phone') + '<p>' + h('nearby.qr.tip') + '</p></div>' +
       '<label class="flabel" for="code-in">' + h('nearby.enter') + '</label>' +
       '<input id="code-in" class="code-input" type="text" inputmode="numeric" pattern="[0-9]*" ' +
       'maxlength="7" autocomplete="one-time-code" placeholder="000 000">' +
@@ -370,22 +410,29 @@
     function tryJoin() {
       var c = input.value.replace(/\D/g, '');
       if (c.length !== 6) { input.focus(); return; }
-      S.code = c;
-      paint(1, '<div class="code">' + c.slice(0, 3) + ' ' + c.slice(3) + '</div>' +
-        '<p class="muted" style="margin-top:.8rem"><span class="spin"></span>' + h('nearby.connecting') + '</p>' +
-        btn('x', 'ghost', 'back', h('save.back')));
-      on('x', role);
-      start('guest', 'g', 'h', fail);
-      // Local signalling cannot say "nobody has that code"; a timeout can.
-      S.joinTimer = setTimeout(function () {
-        if (!S.dc) { reset(); guestAsk(h('nearby.bad')); }
-      }, 20000);
+      join(c);
     }
     input.addEventListener('input', function () {
       if (input.value.replace(/\D/g, '').length === 6) tryJoin();
     });
     on('go', tryJoin);
     on('x', role);
+  }
+
+  // The receiver, with a code typed or scanned.
+  function join(c) {
+    S.role = 'guest';
+    S.code = c;
+    paint(1, '<div class="nearby-wait nearby-wait--big">' + ET.lantern(72, 'waiting') + '</div>' +
+      '<div class="code">' + c.slice(0, 3) + ' ' + c.slice(3) + '</div>' +
+      '<p class="muted center" style="margin-top:.8rem"><span class="spin"></span>' + h('nearby.connecting') + '</p>' +
+      btn('x', 'ghost', 'back', h('save.back')));
+    on('x', role);
+    start('guest', 'g', 'h', fail);
+    // Local signalling cannot say "nobody has that code"; a timeout can.
+    S.joinTimer = setTimeout(function () {
+      if (!S.dc) { reset(); guestAsk(h('nearby.bad')); }
+    }, 20000);
   }
 
   function start(r, me, peer, onFail) {
@@ -612,20 +659,26 @@
   // ---- 4. moving
   function moving(title) {
     paint(3,
-      '<p style="font-weight:800;margin:0 0 .3rem">' + title + ' · <span class="latin">' + ET.esc(S.peer) + '</span></p>' +
-      '<p class="latin muted" id="mv-name" style="margin:0 0 .6rem"></p>' +
-      '<div class="meter"><span id="mv-bar"></span></div>' +
-      '<p class="muted" id="mv-count" style="margin:.6rem 0 0"></p>');
+      '<p class="center" style="font-weight:800;margin:0 0 .3rem">' + title + ' · <span class="latin">' + ET.esc(S.peer) + '</span></p>' +
+      '<div class="nearby-ring"><div class="et-ring et-ring--lg" id="mv-ring" role="progressbar" ' +
+        'aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" style="--value: 0">' +
+        '<span class="et-ring__num et-num" id="mv-pct">0%</span></div></div>' +
+      '<p class="latin muted center" id="mv-name" style="margin:0 0 .6rem"></p>' +
+      '<p class="muted center" id="mv-count" style="margin:.6rem 0 0"></p>');
   }
   function label(name, i, n) {
     var el = ET.$('#mv-name', root);
     if (el) el.textContent = (n > 1 ? (i + 1) + '/' + n + ' · ' : '') + name;
   }
   function meter(got, total) {
-    var bar = ET.$('#mv-bar', root), count = ET.$('#mv-count', root);
-    if (!bar) return;
-    if (total) bar.style.width = Math.min(100, 100 * got / total).toFixed(1) + '%';
-    else bar.classList.add('busy');
+    var ring = ET.$('#mv-ring', root), count = ET.$('#mv-count', root);
+    if (!ring) return;
+    if (total) {
+      var pct = Math.min(100, 100 * got / total);
+      ring.setAttribute('style', '--value: ' + pct.toFixed(1));
+      ring.setAttribute('aria-valuenow', Math.floor(pct));
+      ET.$('#mv-pct', root).textContent = Math.floor(pct) + '%';
+    } else ring.classList.add('is-busy');
     count.innerHTML = '<span class="num">' + ET.human(got) + (total ? ' / ' + ET.human(total) : '') + '</span>';
   }
 
@@ -634,7 +687,7 @@
     if (S.transferActive) trackTransfer('transfer_complete', 'sent', S.sentBytes);
     S.transferActive = false;
     paint(4,
-      '<div class="done-mark">' + ET.icon('check') + '</div>' +
+      '<div class="nearby-wait nearby-wait--big">' + ET.lantern(96, 'share') + '</div>' +
       '<h3 class="center">' + h('nearby.sent') + ' → <span class="latin">' + ET.esc(S.peer) + '</span></h3>' +
       '<div class="note good" style="margin-top:1rem"><p style="margin:0">' + h('nearby.teach') + '</p></div>' +
       '<div class="stack" style="margin-top:1rem">' + btn('again', '', 'share', h('nearby.again')) +
@@ -662,7 +715,7 @@
         ET.esc(g.name) + '</p><div class="btn-row">' + open + '</div></div>';
     }).join('');
     paint(4,
-      '<div class="done-mark">' + ET.icon('check') + '</div>' +
+      '<div class="nearby-wait nearby-wait--big">' + ET.lantern(96, 'hooray') + '</div>' +
       '<h3 class="center">' + h('nearby.got') + ' ← <span class="latin">' + ET.esc(S.peer) + '</span></h3>' +
       (S.dir ? '<p class="center muted">' + h('save.done.where', { place: S.dir.name }) + '</p>' : '') +
       '<div class="stack" style="margin-top:1rem">' + rows + '</div>' +
@@ -732,6 +785,7 @@
 
   // ------------------------------------------------------------------- start
   ET.header('nearby');
+  if (ET.loadMascot) ET.loadMascot();
   ET.tabbar('nearby.html');
   root = ET.$('#nearby');
   window.addEventListener('beforeunload', reset);
@@ -740,7 +794,17 @@
   else {
     detect().then(function (kind) {
       S.kind = kind;
-      if (kind === 'none') offline(); else role();
+      var scanned = (ET.qs('join') || '').replace(/\D/g, '');
+      if (kind === 'none') offline();
+      else if (scanned.length === 6) {
+        // Opened by a camera from the sender's QR code. Forget the code at
+        // once, so a reload or a shared link does not try a stale one.
+        try {
+          var u = new URL(location.href); u.searchParams.delete('join');
+          history.replaceState(null, '', u.href);
+        } catch (e) {}
+        join(scanned);
+      } else role();
     });
   }
   ET.i18n.apply();

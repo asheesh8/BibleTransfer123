@@ -1,0 +1,61 @@
+/* ============================================================================
+   Send to a phone nearby (js/nearby.js): the QR code, its backup number,
+   Kandili's waiting and done moments, and the progress ring.
+
+   Builds on app.css and the kit's et-qr and et-ring (components/qr.css,
+   components/progress.css). Uses app.css colour tokens, so it follows the
+   light and dark themes. The QR itself stays black on white in both.
+   ========================================================================= */
+
+/* The code sits straight on the card: no second card around it. */
+.nearby-qr {
+  padding: .4rem 0 0;
+  background: none; border: 0; box-shadow: none;
+}
+.nearby-qr .et-qr__code {
+  width: min(15.5rem, 70vw);
+  padding: .9rem;
+  box-shadow: 0 0 0 7px var(--gold-wash), 0 0 46px color-mix(in srgb, var(--glow) 28%, transparent);
+}
+.nearby-qr .et-qr__caption strong {
+  font-family: var(--display); font-size: 1.35rem; font-weight: 800; color: var(--ink);
+}
+.nearby-qr .et-qr__hint { color: var(--ink-soft); font-weight: 600; max-width: 22rem; }
+
+/* The 6 digits, smaller, for a camera that will not scan. */
+.nearby-backup {
+  margin-top: 1.1rem; padding-top: 1rem;
+  border-top: 1px dashed var(--line-strong);
+  text-align: center;
+}
+.nearby-backup .code { font-size: clamp(1.7rem, 8vw, 2.2rem); padding: .6rem .4rem; }
+.nearby-backup p:last-child { margin: .6rem 0 0; color: var(--ink-soft); font-size: .95rem; }
+
+.nearby-wait {
+  display: flex; align-items: center; gap: .7rem;
+  margin: 1rem 0; padding: .6rem .9rem;
+  border-radius: var(--r); background: var(--sunk);
+  color: var(--ink-soft); font-weight: 600;
+}
+.nearby-wait--big {
+  justify-content: center; margin: .2rem 0 .8rem; padding: 0; background: none;
+}
+
+.nearby-tip {
+  display: flex; align-items: center; gap: .7rem;
+  margin: 0 0 1rem; padding: .8rem .9rem;
+  border-radius: var(--r); background: var(--gold-wash); color: var(--ink);
+}
+.nearby-tip svg { width: 28px; height: 28px; flex: none; color: var(--gold); }
+.nearby-tip p { margin: 0; font-weight: 600; }
+
+.nearby-ring { display: grid; place-items: center; margin: .8rem 0 1rem; }
+.nearby-ring .et-ring { --tone: var(--gold); --size: 9rem; transition: background var(--et-dur-slow, .36s); }
+.nearby-ring .et-ring::before { background: var(--surface); }
+.nearby-ring .et-ring.is-busy { --value: 30; animation: turn 1.4s linear infinite; }
+.nearby-ring .et-ring.is-busy .et-ring__num { visibility: hidden; }
+.nearby-ring .et-ring__num { font-family: var(--display); color: var(--ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  .nearby-ring .et-ring.is-busy { animation: none; }
+}
