@@ -177,7 +177,16 @@
   <p class="guide-footer"><span id="guide-platform-disclosure"></span> <a href="privacy.html">Privacy and cookie choices</a></p>
   <noscript><p class="note">The slideshow needs JavaScript to move between slides. The download tips above are still available.</p></noscript>
 </main>
-<script src="data/catalog.js"></script>
+<script>
+/* A page opened from one language's library (?only=xxx) needs only that
+   language's records: tens of kilobytes instead of the 21 MB catalogue, which on 3G is the
+   difference between a few seconds and twenty. Written here, during parsing,
+   so it keeps its place ahead of the scripts below — off a card too. */
+(function () {
+  var m = /[?&]only=([a-z]{3})(?:[&#]|$)/.exec(location.search);
+  document.write('<script src="data/catalog' + (m ? '-' + m[1] : '') + '.js"><\/script>');
+})();
+</script>
 <script src="api/visibility"></script>
 <script src="assets/js/visibility.js"></script>
 <script src="assets/js/core.js"></script>
