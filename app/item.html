@@ -37,7 +37,16 @@
   <div class="foot-nav"></div>
 </main>
 
-<script defer src="data/catalog.js"></script>
+<script>
+/* A page opened from one language's library (?only=xxx) needs only that
+   language's records: tens of kilobytes instead of the 21 MB catalogue, which on 3G is the
+   difference between a few seconds and twenty. Written here, during parsing,
+   so it keeps its place ahead of the scripts below — off a card too. */
+(function () {
+  var m = /[?&]only=([a-z]{3})(?:[&#]|$)/.exec(location.search);
+  document.write('<script defer src="data/catalog' + (m ? '-' + m[1] : '') + '.js"><\/script>');
+})();
+</script>
 <script defer src="api/visibility"></script>
 <script defer src="assets/js/visibility.js"></script>
 <script defer src="assets/js/core.js"></script>

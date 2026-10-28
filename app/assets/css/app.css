@@ -43,6 +43,14 @@
   --sky-deep:    #3A88A8;
   --sky-wash:    #17262E;
 
+  /* Words sitting on a coloured button face. The dark theme's faces are pale,
+     so they take dark words; every pair here clears 4.5:1. */
+  --on-face:     #1A1020;
+  --green-face:  #4FBE72;  --green-edge: #379053;
+  --sky-face:    #5BAFD0;  --sky-edge:   #3A88A8;
+  /* Small coloured words on a wash: the deep shade in light, the bright one in dark. */
+  --green-text:  #4FBE72;  --sky-text:   #5BAFD0;
+
   --line:        #2E2739;
   --line-strong: #43394F;
 
@@ -68,6 +76,10 @@
     --green: #3FA65C;   --green-deep: #2E7D45;  --green-wash: #E9F6ED;
     --sky: #2E86AB;     --sky-deep: #1F6182;    --sky-wash: #E7F2F8;
     --line: #EADFD0;    --line-strong: #D9C8B2;
+    --on-face: #FFFFFF;
+    --green-face: #2E7D45; --green-edge: #1F5A31;
+    --sky-face: #1F6182;   --sky-edge: #164A63;
+    --green-text: #2E7D45; --sky-text: #1F6182;
   }
 }
 :root[data-theme="light"] {
@@ -78,6 +90,10 @@
   --green: #3FA65C;   --green-deep: #2E7D45;  --green-wash: #E9F6ED;
   --sky: #2E86AB;     --sky-deep: #1F6182;    --sky-wash: #E7F2F8;
   --line: #EADFD0;    --line-strong: #D9C8B2;
+  --on-face: #FFFFFF;
+  --green-face: #2E7D45; --green-edge: #1F5A31;
+  --sky-face: #1F6182;   --sky-edge: #164A63;
+  --green-text: #2E7D45; --sky-text: #1F6182;
 }
 
 /* ------------------------------------------------------------------ base */
@@ -253,7 +269,7 @@ html[dir="rtl"] .rowi .kicker { text-transform: none; letter-spacing: 0; font-si
   display: inline-flex; align-items: center; gap: .4rem;
 }
 .rowi .go svg { width: 16px; height: 16px; }
-.rowi:hover .go { background: var(--purple); border-color: var(--purple); color: #fff; }
+.rowi:hover .go { background: var(--purple); border-color: var(--purple); color: var(--on-face); }
 
 /* ------------------------------------------------------ batch downloads */
 
@@ -301,7 +317,7 @@ body.bulk-mode { padding-bottom: calc(var(--tabbar) + 92px + env(safe-area-inset
 }
 .shared-hero .eyebrow {
   display: inline-flex; padding: .25rem .65rem; margin: 0 0 .65rem;
-  border-radius: var(--r-pill); background: var(--purple); color: #fff;
+  border-radius: var(--r-pill); background: var(--purple); color: var(--on-face);
   font-size: .8rem; font-weight: 800;
 }
 .shared-hero h1 { margin: 0; }
@@ -373,7 +389,11 @@ body.bulk-mode { padding-bottom: calc(var(--tabbar) + 92px + env(safe-area-inset
 .shelf { display: grid; gap: .6rem; margin-top: 1.7rem; }
 .shelf-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
 .shelf-head h2 { font-size: 1.32rem; margin: 0; }
-.shelf-head a { font-size: .92rem; font-weight: 700; text-decoration: none; color: var(--purple); }
+.shelf-head a {
+  font-size: .92rem; font-weight: 700; text-decoration: none; color: var(--purple);
+  /* A word-sized link is still a thumb-sized target. */
+  display: inline-flex; align-items: center; min-height: 48px; padding: 0 .4rem; margin: -.6rem -.4rem;
+}
 .rail-x {
   display: grid; grid-auto-flow: column; grid-auto-columns: 46%;
   gap: .7rem; overflow-x: auto; scroll-snap-type: x mandatory;
@@ -431,6 +451,11 @@ body.bulk-mode { padding-bottom: calc(var(--tabbar) + 92px + env(safe-area-inset
   display: flex; align-items: center; gap: .6rem;
   min-height: 64px;
 }
+/* The header is written by script, above <main>. Until it arrives, hold its
+   64px + 2px border open so the page does not jump down when it lands — on a
+   slow phone that jump moves the button someone is reaching for. Once the
+   header is in, <main> is no longer the first child and this lets go. */
+body > main#main:first-child { padding-top: 66px; }
 .brand {
   display: flex; align-items: center; gap: .55rem;
   font-weight: 800; font-size: 1.05rem; color: var(--ink);
@@ -490,7 +515,7 @@ body.bulk-mode { padding-bottom: calc(var(--tabbar) + 92px + env(safe-area-inset
   border-radius: var(--r);
   background: var(--face);
   box-shadow: 0 var(--press) 0 var(--edge);
-  color: #fff;
+  color: var(--on-face);
   font: inherit; font-weight: 800; font-size: 1.02rem;
   text-decoration: none; text-align: center;
   cursor: pointer;
@@ -504,10 +529,11 @@ body.bulk-mode { padding-bottom: calc(var(--tabbar) + 92px + env(safe-area-inset
 }
 .btn[disabled] { opacity: .45; pointer-events: none; }
 
-.btn.green { --face: var(--green); --edge: var(--green-deep); }
+.btn.green { --face: var(--green-face); --edge: var(--green-edge); }
 .btn.gold  { --face: var(--gold);  --edge: var(--gold-deep); color: #3A2A05; }
-.btn.sky   { --face: var(--sky);   --edge: var(--sky-deep); }
-.btn.fb    { --face: #1877F2; --edge: #0B5BC4; color: #fff; }
+.btn.sky   { --face: var(--sky-face); --edge: var(--sky-edge); }
+/* Facebook's own blue is 4.2:1 under white; its pressed shade clears 4.5. */
+.btn.fb    { --face: #166FE5; --edge: #0B5BC4; color: #fff; }
 
 .btn.ghost {
   --face: var(--surface); --edge: var(--line-strong);
@@ -607,10 +633,10 @@ body.bulk-mode { padding-bottom: calc(var(--tabbar) + 92px + env(safe-area-inset
   white-space: nowrap;
 }
 .chip svg { width: 15px; height: 15px; }
-.chip.offline { background: var(--green-wash); color: var(--green-deep); }
+.chip.offline { background: var(--green-wash); color: var(--green-text); }
 .chip.online  { background: var(--gold-wash);  color: var(--gold-deep); }
 .chip.lang    { background: var(--purple-wash); color: var(--purple); }
-.chip.stream  { background: var(--sky-wash); color: var(--sky-deep); }
+.chip.stream  { background: var(--sky-wash); color: var(--sky-text); }
 
 .player {
   width: 100%; aspect-ratio: 16 / 9;
@@ -716,7 +742,7 @@ html[dir="rtl"] .flabel { text-transform: none; font-size: .95rem; }
 }
 .fchip svg { width: 20px; height: 20px; flex: none; }
 .fchip[aria-pressed="true"] {
-  background: var(--purple); border-color: var(--purple-deep); color: #fff;
+  background: var(--purple); border-color: var(--purple-deep); color: var(--on-face);
 }
 
 /* ----------------------------------------------------------------- input */
@@ -768,7 +794,7 @@ input::placeholder { color: var(--ink-soft); font-weight: 500; }
   width: 2.9rem; height: 2.9rem;
   display: grid; place-items: center;
   border-radius: 50%;
-  background: var(--purple); color: #fff;
+  background: var(--purple); color: var(--on-face);
   font-weight: 800; font-size: 1.1rem;
   box-shadow: 0 0 0 5px var(--ground);
 }
@@ -833,8 +859,8 @@ input::placeholder { color: var(--ink-soft); font-weight: 500; }
   font-weight: 800; font-size: .95rem;
 }
 .stepper .dot svg { width: 18px; height: 18px; }
-.stepper .dot.on   { border-color: var(--purple); background: var(--purple); color: #fff; }
-.stepper .dot.done { border-color: var(--green-deep); background: var(--green); color: #fff; }
+.stepper .dot.on   { border-color: var(--purple); background: var(--purple); color: var(--on-face); }
+.stepper .dot.done { border-color: var(--green-deep); background: var(--green-face); color: var(--on-face); }
 .stepper .bar { flex: 1; height: 3px; background: var(--line); margin: 0 .3rem; border-radius: 2px; }
 .step-of { margin: 0 0 .2rem; color: var(--ink-soft); font-size: .85rem; font-weight: 700; }
 
