@@ -1038,8 +1038,8 @@ html.welcoming #et-hint { display: none; }
 }
 .welcome-in { max-width: 34rem; margin: 0 auto; padding: 2rem 16px 3rem; scroll-margin-top: 0; }
 .welcome-mascot { display: flex; justify-content: center; margin-bottom: .4rem; }
-.et-kandili { display: inline-block; flex: none; }
-.et-kandili > .et-lantern { width: 100%; height: auto; }
+.et-kandili-slot { display: inline-block; flex: none; }
+.et-kandili-slot > .et-lantern { width: 100%; height: auto; }
 .welcome h1 { text-align: center; font-size: clamp(1.6rem, 6vw, 2.1rem); margin: 0 0 .35rem; }
 .welcome-also {
   text-align: center; color: var(--ink-soft); font-size: .92rem; line-height: 1.8;

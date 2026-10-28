@@ -35,7 +35,7 @@ window.ET.module('data/bible-books', ['core'], function (ET) {
 | `ui/icons.js` | `ui/icons` (also `ET.ui.icon`) | `core` | `styleguide.html` |
 | `ui/sheet.js` | `ui/sheet` (also `ET.ui.sheet`) | `core`, `ui/icons` | `styleguide.html` |
 | `ui/toast.js` | `ui/toast` (also `ET.ui.toast`) | `core`, `ui/icons` | `styleguide.html` |
-| `brand/mascot.js` | `brand/mascot` (also `ET.mascot`) | `core` | `styleguide.html` |
+| `brand/mascot.js` | `brand/mascot` (also `ET.mascot`) | `core` | `styleguide.html`; fetched by `ET.loadMascot()` on app pages |
 | `features/styleguide.js` | `features/styleguide` | `core`, the four above | `styleguide.html` |
 | `i18n.js` | `ET.i18n` (legacy) | `core` | every page |
 | `analytics.js` | `ET.analytics` (legacy) | `core`, `i18n` | every page |

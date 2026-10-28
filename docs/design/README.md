@@ -186,12 +186,20 @@ Rules built in:
 - Colours are fixed (`--et-k-*` in tokens.css, mirrored in `mascot.js`; a
   test keeps them equal).
 
-**When the final art arrives** (ChatGPT model sheet, traced to SVG): only the
-part strings at the top of `mascot.js` change (`FLAME`, `EYES`, `MOUTH`,
-`ARMS`, `PROP`, the body paths in `inner()`). Keep each part's group class and
-roughly the same coordinate frame (lantern standing on y = 110, glass centred
-near the origin) and every pose, move and mood keeps working. Budget: under
-30 KB for the whole script.
+**The art** is traced from Ashish's final ChatGPT drawings (`mascot/png/poses`
+in the project files): ring handle, cap with three vents, trapezoid glass
+between frame bars, banded base on two feet, mitten arms in front. The body
+parts (`HANDLE`, `FLAME`, `CAP`, `GLASS`, `BASE`, `EYES`, `MOUTH`, `arm()`,
+`PROP`) are drawn in the art's own 200 x 250 frame and `ART` scales them onto
+the stage, where the lantern stands on y = 120 with the glass at the origin.
+Redrawn art changes only those strings; keep each part's group class and
+every pose, move and mood keeps working. Budget: under 30 KB for the script.
+
+**On the live pages**, `ET.lantern(size, pose)` in `core.js` writes a slot
+holding the still header drawing, and `ET.loadMascot()` fetches `tokens.css`,
+`mascot.css` and `brand/mascot.js` after the page paints, then brings every
+slot to life with the moment that pose belongs to (hello waves). There is one
+Kandili module; the earlier `kandili.js` is gone.
 
 ## Adding or changing a component
 

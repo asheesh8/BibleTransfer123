@@ -98,37 +98,50 @@ window.ET = (function () {
 
   // The lantern is the app's mascot — نور, "light". Drawn rather than
   // generated so it is identical on every card and costs nothing to ship.
-  // Where kandili.js lives: next to this file, wherever the page is.
-  var KANDILI_SRC = ((document.currentScript && document.currentScript.src) || '')
-    .replace(/core\.js(\?.*)?$/, 'kandili.js');
+  // Where the design kit lives: beside this file, wherever the page is.
+  var ASSETS = ((document.currentScript && document.currentScript.src) || '')
+    .replace(/js\/core\.js(\?.*)?$/, '');
 
-  /* With a pose, the animated Kandili (assets/js/kandili.js, fetched after the
-     page has painted): a slot of held size showing the still drawing until
-     the script arrives, then mascots() brings it to life. Without one, the
-     still drawing on its own, as the header logo, which should never bob. */
+  /* With a pose, the animated Kandili (ET.mascot, assets/js/brand/mascot.js,
+     fetched after the page has painted): a slot of held size showing the
+     still drawing until the script arrives, then mascots() brings it to
+     life. Without one, the still drawing on its own, as the header logo,
+     which should never bob. */
   function lantern(size, pose) {
     var s = size || 32;
     if (typeof pose === 'string') {
-      return '<span class="et-kandili" data-pose="' + esc(pose) + '" style="width:' + s +
-        'px;height:' + Math.round(s * 1.25) + 'px">' + lanternSvg(s) + '</span>';
+      return '<span class="et-kandili-slot" data-pose="' + esc(pose) + '" style="width:' + s +
+        'px;height:' + Math.round(s * 340 / 320) + 'px">' + lanternSvg(s) + '</span>';
     }
     return lanternSvg(s);
   }
 
+  // A pose on the page plays the moment it belongs to (hello waves, and so on).
+  var MOMENT_OF = { hello: 'welcome', play: 'play', saved: 'saved', share: 'shared', hooray: 'milestone',
+                    waiting: 'loading', offline: 'offline', thinking: 'notfound', sleeping: 'empty' };
+
   function mascots(root) {
-    if (!window.Kandili) return;
-    $$('.et-kandili:not([data-k])', root || document).forEach(function (el) {
+    if (!ET.mascot) return;
+    $$('.et-kandili-slot:not([data-k])', root || document).forEach(function (el) {
       el.setAttribute('data-k', '1');
-      window.Kandili.mount(el, el.getAttribute('data-pose') || 'neutral');
+      var pose = el.getAttribute('data-pose') || 'neutral';
+      var k = ET.mascot.create(el, { pose: pose, size: el.style.width, tappable: true });
+      if (MOMENT_OF[pose]) k.moment(MOMENT_OF[pose]);
     });
   }
 
   function loadMascot() {
-    if (window.Kandili) { mascots(); return; }
-    if (!KANDILI_SRC || $('#et-kandili-js')) return;
+    if (ET.mascot) { mascots(); return; }
+    if (!ASSETS || $('#et-mascot-js')) return;
+    ['css/tokens.css', 'css/components/mascot.css'].forEach(function (href) {
+      var l = document.createElement('link');
+      l.rel = 'stylesheet';
+      l.href = ASSETS + href;
+      document.head.appendChild(l);
+    });
     var sc = document.createElement('script');
-    sc.id = 'et-kandili-js';
-    sc.src = KANDILI_SRC;
+    sc.id = 'et-mascot-js';
+    sc.src = ASSETS + 'js/brand/mascot.js';
     sc.onload = function () { mascots(); };
     document.head.appendChild(sc);
   }
