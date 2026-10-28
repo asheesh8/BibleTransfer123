@@ -300,15 +300,12 @@
     }).join('');
 
     var s = ET.sheet(
-      '<h2 data-i18n="home.pick">' + ET.esc(t('home.pick')) + '</h2>' +
       '<p class="muted" data-i18n="home.pick.sub">' + ET.esc(t('home.pick.sub')) + '</p>' +
       '<div class="search" style="margin-bottom:.8rem">' + ET.icon('search') +
         '<input type="search" id="et-picker-q" autocomplete="off" enterkeyhint="search" ' +
         'placeholder="' + ET.esc(t('welcome.search')) + '" aria-label="' +
         ET.esc(t('welcome.search')) + '"></div>' +
-      '<div class="stack">' + rows + '</div>' +
-      (force ? '' : '<div style="margin-top:1rem"><button class="btn ghost block" id="et-lang-x">' +
-                    ET.esc(t('ui.close')) + '</button></div>'));
+      '<div class="stack">' + rows + '</div>', { title: t('home.pick') });
 
     ET.$$('[data-lang]', s.el).forEach(function (b) {
       b.addEventListener('click', function () { set(b.getAttribute('data-lang')); s.close(); });
@@ -319,8 +316,6 @@
         b.hidden = !!query && b.getAttribute('data-find').indexOf(query) < 0;
       });
     });
-    var x = ET.$('#et-lang-x', s.el);
-    if (x) x.addEventListener('click', s.close);
     return s;
   }
 

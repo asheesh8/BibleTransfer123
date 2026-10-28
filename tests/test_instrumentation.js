@@ -201,7 +201,7 @@ async function languageLibraries() {
     f.document.querySelectorAll = selector => f.body.querySelectorAll(selector);
     f.load('core');
     f.context.ET = f.context.window.ET;
-    f.load('ui/shell');
+    for (const m of ['ui/icons', 'ui/sheet', 'ui/toast', 'ui/shell']) f.load(m);
     f.load('data/bible-books');
     f.load('i18n/en');
     if (ui !== 'en') f.load('i18n/' + ui);

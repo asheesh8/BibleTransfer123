@@ -532,7 +532,6 @@
     rows.push(['nearby', 'wifi', 'share.nearby', 'share.nearby.sub']);
 
     var s = ET.sheet(
-      '<h2>' + h('share.sheet') + '</h2>' +
       '<p class="latin muted" style="margin-top:-.3rem">' + ET.esc(r.title) + '</p>' +
       '<div class="stack">' + rows.map(function (x) {
         var tag = x[4] ? 'a' : 'button';
@@ -542,10 +541,8 @@
           '<span><span class="t">' + (x[4] ? ET.esc(x[2]) : h(x[2])) + '</span>' +
           (x[3] ? '<span class="s">' + h(x[3]) + '</span>' : '') + '</span>' +
           '<span class="chev flip">' + ET.icon('chev') + '</span></' + tag + '>';
-      }).join('') + '</div>' +
-      '<button class="btn ghost block" id="sh-x" style="margin-top:1rem">' + h('ui.close') + '</button>');
+      }).join('') + '</div>', { title: t('share.sheet') });
 
-    ET.$('#sh-x', s.el).addEventListener('click', s.close);
     ET.$$('[data-s]', s.el).forEach(function (b) {
       b.addEventListener('click', function () {
         var k = b.getAttribute('data-s');
