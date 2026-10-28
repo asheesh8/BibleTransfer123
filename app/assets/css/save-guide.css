@@ -59,7 +59,7 @@ html, .save-guide-page { touch-action: auto; }
 #guide-body { white-space: pre-line; }
 .guide-hint { border-inline-start: 4px solid var(--gold); padding-inline-start: .8rem; }
 .guide-small { font-size: .82rem; }
-.guide-image-error { margin-top: 1rem; color: var(--gold); }
+.guide-image-error { margin-top: 1rem; color: var(--gold-text); }
 .guide-controls { display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: .7rem; padding: 0 1rem 1rem; }
 .guide-controls .btn { min-width: 0; min-height: 58px; font-size: 1.05rem; }
 .guide-step-label { grid-column: 1 / -1; grid-row: 1; font-size: .86rem; font-weight: 700; }
@@ -76,7 +76,7 @@ html, .save-guide-page { touch-action: auto; }
 .guide-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 .guide-skip { position: absolute; top: -100px; left: 1rem; background: var(--surface); padding: 1rem; z-index: 20; }
 .guide-skip:focus { top: .5rem; }
-.save-guide-page a:focus-visible, .save-guide-page button:focus-visible, .save-guide-page select:focus-visible, .guide-notes summary:focus-visible, .guide-viewer:focus-visible, .guide-choice:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+.save-guide-page a:focus-visible, .save-guide-page button:focus-visible, .save-guide-page select:focus-visible, .guide-notes summary:focus-visible, .guide-viewer:focus-visible, .guide-choice:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
 .guide-viewer:fullscreen { width: 100%; height: 100%; overflow-y: auto; border: 0; border-radius: 0; padding-inline: max(0px, calc((100vw - 90rem) / 2)); background: var(--ground); }
 .guide-viewer:fullscreen .guide-picture img { max-height: 70vh; }
 @media (min-width: 44rem) {
