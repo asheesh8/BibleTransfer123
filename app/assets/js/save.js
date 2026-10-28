@@ -310,7 +310,7 @@
       }
       var place = S.target.kind === 'downloads' ? t('save.done.downloads') : S.target.name;
       paint((S.target.kind === 'downloads' ? ET.stepper(STEPS.length, 3) : header(3)) +
-        '<div class="done-mark">' + ET.icon('check') + '</div>' +
+        cheer() +
         '<h3 class="center" style="margin:.2rem 0">' + h(S.target.kind === 'downloads' ? 'save.done.browser.title' : 'save.done.title') + '</h3>' +
         '<p class="center muted">' + (S.target.kind === 'downloads' ? h('save.done.browser.where') : h('save.done.where', { place: place })) + '</p>' +
         (S.target.kind === 'downloads' ? '<p class="center muted" style="font-size:.9rem">' +
@@ -325,6 +325,7 @@
         last.handle.getFile().then(function (file) { window.open(URL.createObjectURL(file), '_blank'); });
       });
       ET.$('#sv-more', root).addEventListener('click', function () { preselect = null; what(); });
+      if (ET.loadMascot) ET.loadMascot();
     }
 
     function failed(err) {
@@ -506,12 +507,13 @@
     function finished() {
       S.ctrl = null;
       var place = S.target.kind === 'downloads' ? t('save.done.downloads') : S.target.name;
-      paint((S.target.kind === 'downloads' ? ET.stepper(3, 2) : batchHeader(2)) + '<div class="done-mark">' + ET.icon('check') + '</div>' +
+      paint((S.target.kind === 'downloads' ? ET.stepper(3, 2) : batchHeader(2)) + cheer() +
         '<h3 class="center" style="margin:.2rem 0">' + h(S.target.kind === 'downloads' ? 'bulk.done.browser.title' : 'bulk.done.title', { n: resources.length }) + '</h3>' +
         '<p class="center muted">' + (S.target.kind === 'downloads' ? h('save.done.browser.where') : h('save.done.where', { place: place })) + '</p>' +
         '<button class="btn green block" id="bsv-done" style="margin-top:1rem">' +
         h('bulk.close') + '</button>');
       ET.$('#bsv-done', root).addEventListener('click', sheet.close);
+      if (ET.loadMascot) ET.loadMascot();
     }
 
     function failed(err) {
@@ -526,6 +528,15 @@
 
     where();
     return sheet;
+  }
+
+  /* The done moment: Kandili twirls with a burst of sparks behind it, the way
+     a lesson ends in a friendly app. The green tick stays as the fallback
+     where the mascot cannot draw. */
+  function cheer() {
+    return ET.lantern
+      ? '<div class="cheer" aria-hidden="true">' + ET.lantern(96, 'hooray') + '</div>'
+      : '<div class="done-mark">' + ET.icon('check') + '</div>';
   }
 
   // ------------------------------------------------------------ one file

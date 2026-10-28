@@ -15,6 +15,16 @@
 
   document.title = t('sharelib.title', { lang: (scope.lang === 'fra' || scope.lang === 'amh' || scope.lang === 'por' || scope.lang === 'yor' || scope.lang === 'pcm' || scope.lang === 'lin' || scope.lang === 'hau' || scope.lang === 'mlg' || scope.lang === 'nya' || scope.lang === 'run' || scope.lang === 'aka' || scope.lang === 'tir' || scope.lang === 'hat' || scope.lang === 'spa' || scope.lang === 'kuj' || scope.lang === 'lsm' || scope.lang === 'luy' || scope.lang === 'bxk' || scope.lang === 'rag' || scope.lang === 'ida' || scope.lang === 'lkb' || scope.lang === 'lts' || scope.lang === 'nle' || scope.lang === 'lri' || scope.lang === 'kam' || scope.lang === 'kln' || scope.lang === 'nyf' || scope.lang === 'dig' || scope.lang === 'dug' || scope.lang === 'mer' || scope.lang === 'tuv' || scope.lang === 'teo' || scope.lang === 'ara' || scope.lang === 'kin' || scope.lang === 'xho' || scope.lang === 'sna') ? language : L.name || scope.name || language });
   ET.$('#shared-badge').innerHTML = h('sharelib.only', { lang: language });
+  // Kandili waves from the corner of every language page, like the front door.
+  var hero = ET.$('.shared-hero');
+  if (hero && ET.lantern && !ET.$('.shared-mascot', hero)) {
+    var k = document.createElement('span');
+    k.className = 'shared-mascot';
+    k.setAttribute('aria-hidden', 'true');
+    k.innerHTML = ET.lantern(64, 'hello');
+    hero.appendChild(k);
+    if (ET.loadMascot) ET.loadMascot();
+  }
   ET.$('#shared-title').innerHTML = h('sharelib.title', { lang: language });
   var languageNote = ET.i18n.meta && ET.i18n.meta(scope.ui || 'en').interfaceNote;
   ET.$('#shared-lead').innerHTML = h('sharelib.lead', { lang: language }) +
