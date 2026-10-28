@@ -30,14 +30,12 @@ window.ET.module('shared-library', ['core', 'ui/shell', 'i18n'], function (ET) {
   ET.$('#shared-lead').innerHTML = h('sharelib.lead', { lang: language }) +
     (languageNote ? '<br><span class="latin" lang="en" dir="ltr">' + ET.esc(languageNote) + '</span>' : '');
 
-  /* Each share target is a round icon with one short word under it; the
-     full sentence stays as its spoken name. */
-  function dress(el, iconName, label, spoken) {
+  // Each share target is a round icon with one short word under it.
+  function dress(el, iconName, label) {
     el.innerHTML = '<span class="sa-ico">' + ET.icon(iconName) + '</span><span class="sa-label">' + label + '</span>';
-    if (spoken) el.setAttribute('aria-label', spoken);
   }
   var email = ET.$('#email-library');
-  dress(email, 'mail', h('sharelib.send.button'), t('sharelib.email'));
+  dress(email, 'mail', h('sharelib.send.button'));
   function emailUrl(url) {
     var mailLanguage = (scope.lang === 'fra' || scope.lang === 'amh' || scope.lang === 'por' || scope.lang === 'yor' || scope.lang === 'pcm' || scope.lang === 'lin' || scope.lang === 'hau' || scope.lang === 'mlg' || scope.lang === 'nya' || scope.lang === 'run' || scope.lang === 'aka' || scope.lang === 'tir' || scope.lang === 'hat' || scope.lang === 'spa' || scope.lang === 'kuj' || scope.lang === 'lsm' || scope.lang === 'luy' || scope.lang === 'bxk' || scope.lang === 'rag' || scope.lang === 'ida' || scope.lang === 'lkb' || scope.lang === 'lts' || scope.lang === 'nle' || scope.lang === 'lri' || scope.lang === 'kam' || scope.lang === 'kln' || scope.lang === 'nyf' || scope.lang === 'dig' || scope.lang === 'dug' || scope.lang === 'mer' || scope.lang === 'tuv' || scope.lang === 'teo' || scope.lang === 'ara' || scope.lang === 'kin' || scope.lang === 'xho' || scope.lang === 'sna') ? language : L.name || language;
     return 'mailto:?subject=' + encodeURIComponent(t('sharelib.subject', { lang: mailLanguage })) +
@@ -124,7 +122,7 @@ window.ET.module('shared-library', ['core', 'ui/shell', 'i18n'], function (ET) {
   }
   var fb = channel('facebook', 'btn fb', '');
   if (fb) {
-    dress(fb, 'facebook', 'Facebook', t('fbshare.button'));
+    dress(fb, 'facebook', 'Facebook');
     fb.href = ET.facebookUrl(publicUrl);
     fb.addEventListener('click', function () {
       var intent = ET.analytics.shareIntent(publicUrl, 'facebook', { language: scope.lang, status: 'opened' });

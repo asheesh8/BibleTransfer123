@@ -200,7 +200,7 @@
   --et-dur-slow:    360ms;   /* sheet, page         */
   --et-dur-story:   700ms;   /* mascot one-shots    */
 
-  --et-ease-out:    cubic-bezier(.2, .8, .2, 1);
+  --et-ease-out:    cubic-bezier(.32, .72, 0, 1);   /* the curve iOS sheets ride */
   --et-ease-in:     cubic-bezier(.5, 0, .75, 0);
   --et-ease-inout:  cubic-bezier(.65, 0, .35, 1);
   --et-ease-spring: cubic-bezier(.34, 1.56, .64, 1);
