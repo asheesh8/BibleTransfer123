@@ -1,7 +1,7 @@
 /* First-party, opt-in activity analytics. Classic script for the offline card.
    No requests, visitor IDs, queues or attribution storage before consent.
    A file:// copy never collects or transmits analytics. */
-(function (ET) {
+window.ET.module('analytics', ['core', 'i18n'], function (ET) {
   'use strict';
   var VERSION = 1, CONSENT_AGE = 180 * 86400000, VISITOR_AGE = 90 * 86400000;
   var SESSION_AGE = 30 * 60000, QUEUE_AGE = 10 * 60000;
@@ -715,4 +715,5 @@
   window.addEventListener('appinstalled', function () { track('install'); });
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount);
   else mount();
-})(window.ET);
+  return ET.analytics;
+});

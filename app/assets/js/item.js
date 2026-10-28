@@ -4,7 +4,7 @@
    kind of resource, because the person using this may be reading slowly and
    recognising shapes before words. Everything happens on this page — saving
    and sharing open as guided sheets rather than sending anyone elsewhere. */
-(function (ET) {
+window.ET.module('item', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save', 'data/bible-books'], function (ET) {
   'use strict';
   var t = ET.i18n.t, h = ET.i18n.h;
   var scope = ET.libraryScope();
@@ -604,4 +604,4 @@
   render();
   ET.i18n.apply();
   ET.i18n.onChange(render);
-})(window.ET);
+});

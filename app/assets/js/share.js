@@ -8,7 +8,7 @@
 
    TRANSLATION: every string below goes through tOr(key, english). Add the key
    to STRINGS in i18n.js and it is translated; until then the English shows. */
-(function (ET) {
+window.ET.module('share', ['core', 'ui/shell', 'i18n'], function (ET) {
   'use strict';
   var h = ET.i18n.h, tOrHTML = ET.i18n.tOrHTML;
 
@@ -235,4 +235,4 @@
   render();
   ET.i18n.apply();
   ET.i18n.onChange(render);
-})(window.ET);
+});

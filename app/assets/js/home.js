@@ -3,7 +3,7 @@
    Shaped after the reference recording: pick up where you left off, then
    shelves you can swipe along. No grid of identical tiles, and no second copy
    of what the tab bar already offers. */
-(function (ET) {
+window.ET.module('home', ['core', 'ui/shell', 'ui/covers', 'i18n'], function (ET) {
   'use strict';
   var t = ET.i18n.t, h = ET.i18n.h;
 
@@ -134,4 +134,4 @@
   ET.i18n.apply();
   // apply() runs every listener, so a listener must never call it back.
   ET.i18n.onChange(render);
-})(window.ET);
+});

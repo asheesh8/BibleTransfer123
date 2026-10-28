@@ -11,7 +11,7 @@ const loader = fs.readFileSync(path.join(js, 'i18n-load.js'), 'utf8');
 const files = fs.readdirSync(path.join(js, 'i18n')).filter(f => f.endsWith('.js'));
 
 function boot(withTables) {
-  const ET = { libraryScope: () => null, store: { get: (_, d) => d, set() {} }, $$: () => [], $: () => null, esc: v => v };
+  const ET = { module(name, deps, factory) { return factory(this); }, libraryScope: () => null, store: { get: (_, d) => d, set() {} }, $$: () => [], $: () => null, esc: v => v };
   const window = { ET };
   const context = vm.createContext({ window, document: { documentElement: { setAttribute() {} } }, navigator: { languages: [] } });
   if (withTables) for (const f of files) vm.runInContext(fs.readFileSync(path.join(js, 'i18n', f), 'utf8'), context);

@@ -1,7 +1,7 @@
 /* The small sharing panel at the top of every one-language library. The URL is
    built from the origin that served the page, so custom domains and Vercel
    preview domains both produce a link that opens the same deployment. */
-(function (ET) {
+window.ET.module('shared-library', ['core', 'ui/shell', 'i18n'], function (ET) {
   'use strict';
   var scope = ET.libraryScope();
   if (!scope) return;
@@ -158,4 +158,4 @@
       navigator.clipboard.writeText(intent.url).then(done, fallback);
     } else fallback();
   });
-})(window.ET);
+});

@@ -11,7 +11,7 @@ const tables = fs.readdirSync(path.join(app, 'assets/js/i18n')).filter(f => f.en
   .map(f => fs.readFileSync(path.join(app, 'assets/js/i18n', f), 'utf8'));
 function harness(elements = {}, scope = null) {
   const attributes = {};
-  const ET = { libraryScope: () => scope, store: { get: (_, fallback) => fallback, set() {} },
+  const ET = { module(name, deps, factory) { return factory(this); }, libraryScope: () => scope, store: { get: (_, fallback) => fallback, set() {} },
     $$: selector => elements[selector] || [], $: () => null, esc: value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') };
   const window = { ET };
   const document = { documentElement: { setAttribute: (key, value) => { attributes[key] = value; } } };

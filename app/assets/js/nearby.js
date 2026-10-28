@@ -26,7 +26,7 @@
    Off a card (file://) there is nothing to carry them, and the page says so and
    points at the step-by-step guide instead of failing silently.
    ========================================================================= */
-(function (ET) {
+window.ET.module('nearby', ['core', 'ui/shell', 'i18n', 'save'], function (ET) {
   'use strict';
   var t = ET.i18n.t, h = ET.i18n.h;
   var ASSETS = ((document.currentScript && document.currentScript.src) || '')
@@ -848,4 +848,5 @@
 
   // Exposed for testing two phones in one browser.
   ET.nearby = { state: S };
-})(window.ET);
+  return ET.nearby;
+});
