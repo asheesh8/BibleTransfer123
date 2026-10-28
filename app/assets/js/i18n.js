@@ -17925,14 +17925,17 @@
               '<a class="btn ghost lp-ghost" href="#et-how">How sharing works</a>' +
             '</div>' +
           '</div>' +
-          '<div class="lp-art" aria-hidden="true">' +
-            '<span class="lp-star s1"></span><span class="lp-star s2"></span><span class="lp-star s3"></span>' +
-            '<span class="lp-float">' + (ET.lantern ? ET.lantern(168) : '') + '</span>' +
-            '<span class="lp-chain"><i></i><b></b><i></i><b></b><i></i><b></b><i></i></span>' +
+          // Kandili over a village at dusk, flames drifting down to phones:
+          // the whole idea in one picture. 23 KB, size held so nothing jumps.
+          '<div class="lp-art">' +
+            '<picture><source srcset="assets/art/kandili-village.webp" type="image/webp">' +
+            '<img src="assets/art/kandili-village.jpg" width="971" height="465" decoding="async" ' +
+              'alt="Kandili the lantern floats over a village at night, sending small flames down to the phones people hold up."></picture>' +
           '</div>' +
         '</div>' +
       '</section>' +
       '<div class="welcome-in" id="et-welcome-pick">' +
+        (ET.lantern ? '<div class="welcome-mascot">' + ET.lantern(88, 'hello') + '</div>' : '') +
         '<h1 id="et-welcome-h" dir="auto">' + ET.esc(say('welcome.title', guess || 'en')) + '</h1>' +
         '<p class="welcome-also">' + hello.slice(1).map(function (c) {
           return '<span dir="' + meta(c).dir + '">' + ET.esc(say('welcome.title', c)) + '</span>';
@@ -17960,6 +17963,7 @@
       landing();
     document.body.appendChild(el);
     document.documentElement.classList.add('welcoming');
+    if (ET.loadMascot) ET.loadMascot();
 
     ET.$$('[data-lang]', el).forEach(function (b) {
       b.addEventListener('click', function () {
