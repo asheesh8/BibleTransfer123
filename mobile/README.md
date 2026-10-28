@@ -19,6 +19,10 @@ There is one codebase: a change to `app/` reaches the website, the microSD card,
   (`ET.publicOrigin`, `ET.publicHref`); `/api/...` calls go to the live site through Capacitor's
   native HTTP; Nearby uses the PeerJS broker; no service worker is installed.
   `tests/test_native.js` covers this.
+- Saving inside the app: `save.js` offers "Keep it in this app", which streams the file to the
+  app's own storage (`LIBRARY_NO_CLOUD/library/`) with the native FileTransfer plugin, and records
+  it under `et.kept`. `ET.save.local(url)` turns a kept address into its on-phone copy, so
+  `item.js` plays films and audio from the phone with no internet. `tests/test_keep_in_app.js`.
 - `scripts/make_icons.py` redraws the launcher icons and splash screens from
   `app/assets/icon/icon-512.png`.
 
@@ -42,7 +46,7 @@ init script in `~/.gradle/init.d/` (`https://maven-central.storage-download.goog
 
 ## Not done yet (Phase 1 and 2)
 
-- Saving films and audio inside the app so they play offline (Filesystem plugin + background download)
+- A "Saved on this phone" shelf, deleting kept files, and downloads that continue with the screen locked
 - QR scanner, and the hotspot + QR phone-to-phone sharing
 - Native share sheet (Android WebView has no `navigator.share`)
 - Store listings, signing, TestFlight and Play internal testing

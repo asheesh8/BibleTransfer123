@@ -159,7 +159,10 @@ window.ET_SHARED_LIBRARY = {shared};
     <p class="muted" id="shared-lead">{lead}</p>
     <div class="btn-row shared-actions">
       <a class="btn green" id="email-library" href="#">{email}</a>
+      <a class="btn fb" data-shared-channel="facebook" href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
       <button class="btn ghost" id="copy-library" type="button">{copy}</button>
+      <a class="btn ghost" data-shared-channel="whatsapp" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <a class="btn ghost" data-shared-channel="telegram" href="#" target="_blank" rel="noopener noreferrer">Telegram</a>
     </div>
     <p class="sr" id="copy-status" aria-live="polite"></p>
   </section>

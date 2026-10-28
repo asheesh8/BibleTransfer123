@@ -26,6 +26,58 @@
   var CAN_FILE = typeof window.showSaveFilePicker === 'function';
   var BIG = 400 * 1024 * 1024;
 
+  // ------------------------------------------------------ kept in the app
+  /* Inside the iPhone and Android apps (mobile/) a save goes into the app's own
+     storage, where it stays until the app is removed and plays with no
+     internet. The native FileTransfer plugin streams it to disk, so even a
+     2 GB film never passes through the page's memory. Which files are kept is
+     remembered by their address; local() swaps a kept address for its copy. */
+  var CAP = ET.native && window.Capacitor.Plugins || {};
+  var IN_APP = !!(CAP.FileTransfer && CAP.Filesystem);
+  var KEPT = 'et.kept', DIR = 'LIBRARY_NO_CLOUD';
+  function kept() {
+    try { return JSON.parse(ET.store.get(KEPT, '{}')) || {}; } catch (e) { return {}; }
+  }
+  function local(url) {
+    if (!IN_APP || !url) return url;
+    var k = kept()[new URL(url, location.href).href];
+    return k ? window.Capacitor.convertFileSrc(k.uri) : url;
+  }
+  function keepInApp(job, url, signal, onProgress) {
+    // Two films can share a title, so the address picks the folder.
+    var id = 0;
+    for (var i = 0; i < url.length; i++) id = (id * 31 + url.charCodeAt(i)) >>> 0;
+    var path = 'library/' + id.toString(36) + '/' + job.name, handle = null, uri;
+    var stopped = new Promise(function (_, no) {
+      if (signal) signal.addEventListener('abort', function () {
+        var e = new Error('Stopped'); e.name = 'AbortError'; no(e);
+      });
+    });
+    var done = CAP.Filesystem.mkdir({ path: path.replace(/\/[^\/]*$/, ''), directory: DIR, recursive: true })
+      .catch(function () { /* already there */ })
+      .then(function () { return CAP.Filesystem.getUri({ path: path, directory: DIR }); })
+      .then(function (r) {
+        uri = r.uri;
+        return CAP.FileTransfer.addListener('progress', function (e) {
+          if (e.url === url) onProgress(e.bytes, e.lengthComputable ? e.contentLength : job.bytes || 0);
+        });
+      })
+      .then(function (h) { handle = h; return CAP.FileTransfer.downloadFile({ url: url, path: uri, progress: true }); })
+      .then(function () {
+        if (handle) handle.remove();
+        // Stopped part-way: the plugin cannot be interrupted, so the copy it
+        // finished is thrown away rather than kept behind the reader's back.
+        if (signal && signal.aborted) {
+          return CAP.Filesystem.deleteFile({ path: path, directory: DIR }).catch(function () {});
+        }
+        var k = kept();
+        k[url] = { uri: uri, name: job.name, bytes: job.bytes || 0, at: Date.now() };
+        ET.store.set(KEPT, JSON.stringify(k));
+        return { kept: uri, bytes: job.bytes || 0 };
+      }, function (err) { if (handle) handle.remove(); throw err; });
+    return Promise.race([done, stopped]);
+  }
+
   // ---------------------------------------------------- remembered folder
   // A FileSystemDirectoryHandle can be stored in IndexedDB and reused, so the
   // second save is one tap. Anything failing here just means "no memory".
@@ -140,7 +192,8 @@
         if (saved) opts.push(['again', 'folder', h('save.folder.again', { name: saved.name }), '']);
         if (CAN_DIR) opts.push(['dir', 'folder', h('save.folder'), h('save.folder.sub')]);
         if (CAN_FILE && !many) opts.push(['file', 'save', h('save.as'), h('save.as.sub')]);
-        opts.push(['downloads', 'save', h('save.default'), h('save.default.sub')]);
+        if (IN_APP) opts.push(['app', 'phone', h('save.app'), h('save.app.sub')]);
+        else opts.push(['downloads', 'save', h('save.default'), h('save.default.sub')]);
 
         var total = S.jobs.reduce(function (a, j) { return a + (j.bytes || 0); }, 0) || S.file.bytes;
         paint(header(1) +
@@ -185,6 +238,9 @@
         window.showSaveFilePicker({ suggestedName: S.jobs[0].name, startIn: 'downloads' })
           .then(function (fh) { S.target = { kind: 'file', handle: fh, name: fh.name }; go(); },
                 function () {});
+      } else if (kind === 'app') {
+        S.target = { kind: 'app', name: t('save.app.place') };
+        go();
       } else {
         S.target = { kind: 'downloads', name: t('save.done.downloads') };
         go();
@@ -363,7 +419,8 @@
         var opts = [];
         if (saved) opts.push(['again', 'folder', h('save.folder.again', { name: saved.name }), '']);
         if (CAN_DIR) opts.push(['dir', 'folder', h('save.folder'), h('save.folder.sub')]);
-        opts.push(['downloads', 'save', h('save.default'), h('save.default.sub')]);
+        if (IN_APP) opts.push(['app', 'phone', h('save.app'), h('save.app.sub')]);
+        else opts.push(['downloads', 'save', h('save.default'), h('save.default.sub')]);
         paint(batchHeader(0) +
           '<div class="note info" style="margin-bottom:1rem"><strong>' +
           h('bulk.title', { n: resources.length }) + '</strong><p class="muted" style="margin:.2rem 0 0">' +
@@ -397,6 +454,9 @@
           S.target = { kind: 'dir', handle: d, name: d.name };
           go();
         }, function () {});
+      } else if (kind === 'app') {
+        S.target = { kind: 'app', name: t('save.app.place') };
+        go();
       } else {
         S.target = { kind: 'downloads', name: t('save.done.downloads') };
         go();
@@ -481,7 +541,7 @@
       // file to the browser's download manager, whose outcome is unavailable.
       ET.analytics.track('download_complete', {
         resource: job.resource, language: job.language, bytes: result.bytes || 0,
-        status: result.handle ? 'saved' : 'browser_handoff'
+        status: result.handle || result.kept ? 'saved' : 'browser_handoff'
       });
       return result;
     }, function (err) {
@@ -495,6 +555,7 @@
 
   function saveFile(job, target, signal, onProgress) {
     var url = new URL(job.url, location.href).href;
+    if (target.kind === 'app') return keepInApp(job, url, signal, onProgress);
 
     // Big file, no file-system access: don't try to hold it in memory.
     if (target.kind === 'downloads' && job.bytes > BIG) {
@@ -572,5 +633,6 @@
     document.body.appendChild(a); a.click(); a.remove();
   }
 
-  ET.save = { open: open, openMany: openMany, canPickFolder: CAN_DIR, clean: clean, extOf: extOf };
+  ET.save = { open: open, openMany: openMany, canPickFolder: CAN_DIR, clean: clean, extOf: extOf,
+             inApp: IN_APP, local: local, keep: keepInApp };
 })(window.ET);
