@@ -4,6 +4,12 @@
   "framework": null,
   "buildCommand": null,
   "installCommand": null,
+  "git": {
+    "deploymentEnabled": {
+      "main": true,
+      "claude/**": false
+    }
+  },
   "trailingSlash": false,
   "functions": {
     "api/*.py": {
