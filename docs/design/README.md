@@ -132,10 +132,19 @@ effects. Three layers of behaviour sit on top:
 
 - **Pose**: which parts are drawn. `neutral, hello, play, saved, share,
   waiting, offline, hooray, thinking, sleeping`.
-- **Move**: a one-shot Web Animation, all under 1.2 s. `hop, twirl, fly, wave,
+- **Move**: a one-shot Web Animation, all under 1.4 s. `hop, twirl, fly, wave,
   glow, nod, dim`.
-- **Mood**: the CSS loop underneath. `idle` (float, breathe, flicker, blink),
-  `doze`, `dim`, `think`, `still`.
+- **Mood**: the CSS loop underneath. `idle` (float, breathe, a three-layer
+  flame, handle and arms swinging a beat behind, blinks and glances), `doze`,
+  `dim`, `think`, `still`.
+
+The parts nest like a puppet rig (the handle, flame and arms hang off the
+body on their own pivots), and every move follows the animation principles:
+a crouch before each jump (anticipation), squash and stretch that keeps the
+volume, parts that lag and settle after the body (follow-through), and
+overshoot on landing. Keep new moves to the same rules, with linear overall
+timing so the parts of one move stay in step; shape the motion with the
+keyframes.
 
 Features ask for **moments**, never parts:
 
