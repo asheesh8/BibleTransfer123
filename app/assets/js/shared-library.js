@@ -30,8 +30,14 @@ window.ET.module('shared-library', ['core', 'ui/shell', 'i18n'], function (ET) {
   ET.$('#shared-lead').innerHTML = h('sharelib.lead', { lang: language }) +
     (languageNote ? '<br><span class="latin" lang="en" dir="ltr">' + ET.esc(languageNote) + '</span>' : '');
 
+  /* Each share target is a round icon with one short word under it; the
+     full sentence stays as its spoken name. */
+  function dress(el, iconName, label, spoken) {
+    el.innerHTML = '<span class="sa-ico">' + ET.icon(iconName) + '</span><span class="sa-label">' + label + '</span>';
+    if (spoken) el.setAttribute('aria-label', spoken);
+  }
   var email = ET.$('#email-library');
-  email.innerHTML = ET.icon('share') + h('sharelib.email');
+  dress(email, 'mail', h('sharelib.send.button'), t('sharelib.email'));
   function emailUrl(url) {
     var mailLanguage = (scope.lang === 'fra' || scope.lang === 'amh' || scope.lang === 'por' || scope.lang === 'yor' || scope.lang === 'pcm' || scope.lang === 'lin' || scope.lang === 'hau' || scope.lang === 'mlg' || scope.lang === 'nya' || scope.lang === 'run' || scope.lang === 'aka' || scope.lang === 'tir' || scope.lang === 'hat' || scope.lang === 'spa' || scope.lang === 'kuj' || scope.lang === 'lsm' || scope.lang === 'luy' || scope.lang === 'bxk' || scope.lang === 'rag' || scope.lang === 'ida' || scope.lang === 'lkb' || scope.lang === 'lts' || scope.lang === 'nle' || scope.lang === 'lri' || scope.lang === 'kam' || scope.lang === 'kln' || scope.lang === 'nyf' || scope.lang === 'dig' || scope.lang === 'dug' || scope.lang === 'mer' || scope.lang === 'tuv' || scope.lang === 'teo' || scope.lang === 'ara' || scope.lang === 'kin' || scope.lang === 'xho' || scope.lang === 'sna') ? language : L.name || language;
     return 'mailto:?subject=' + encodeURIComponent(t('sharelib.subject', { lang: mailLanguage })) +
@@ -118,16 +124,17 @@ window.ET.module('shared-library', ['core', 'ui/shell', 'i18n'], function (ET) {
   }
   var fb = channel('facebook', 'btn fb', '');
   if (fb) {
-    fb.innerHTML = ET.icon('facebook') + h('fbshare.button');
+    dress(fb, 'facebook', 'Facebook', t('fbshare.button'));
     fb.href = ET.facebookUrl(publicUrl);
     fb.addEventListener('click', function () {
       var intent = ET.analytics.shareIntent(publicUrl, 'facebook', { language: scope.lang, status: 'opened' });
       ET.facebookShare(fb, intent.url, t('fbshare.post', { lang: language }));
     });
   }
-  [['whatsapp', 'WhatsApp'], ['telegram', 'Telegram']].forEach(function (method) {
+  [['whatsapp', 'WhatsApp', 'chat'], ['telegram', 'Telegram', 'send']].forEach(function (method) {
     var a = channel(method[0], 'btn ghost', method[1]);
     if (!a) return;
+    dress(a, method[2], method[1]);
     a.href = composerUrl(method[0], publicUrl);
     a.addEventListener('click', function () {
       var intent = ET.analytics.shareIntent(publicUrl, method[0], { language: scope.lang, status: 'opened' });
@@ -136,14 +143,14 @@ window.ET.module('shared-library', ['core', 'ui/shell', 'i18n'], function (ET) {
   });
 
   var copy = ET.$('#copy-library');
-  copy.innerHTML = ET.icon('link') + h('sharelib.copy');
+  dress(copy, 'link', h('sharelib.copy'));
   copy.addEventListener('click', function () {
     var intent = ET.analytics.shareIntent(publicUrl, 'copy_link', { language: scope.lang });
     function done() {
       ET.analytics.track('share_complete', {
         language: scope.lang, channel: 'copy_link', shareId: intent.shareId, status: 'copied'
       });
-      copy.innerHTML = ET.icon('check') + h('sharelib.copied');
+      dress(copy, 'check', h('sharelib.copied'));
       ET.$('#copy-status').innerHTML = h('sharelib.copied');
     }
     function fallback() {

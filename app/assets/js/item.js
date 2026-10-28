@@ -229,6 +229,7 @@ window.ET.module('item', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save', 'data
           .filter(Boolean).join(' · ')) + '</p>' +
       '</header>';
     html += hero() + '<div id="media">' + player() + '</div>';
+    var actionsAt = html.length;   // the verbs go here, right under the player
 
     if (!r.offline && !r.play && !r.read) {
       // A file that only exists on a card is not waiting for a connection.
@@ -239,17 +240,18 @@ window.ET.module('item', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save', 'data
     }
 
     html += reader();
+    if (!r.play) actionsAt = html.length;   // nothing to play: the reader's Open comes first
 
     // The verbs.
     var canSaveChapter = r.play && r.play.kind === 'audio-bible' && r.play.saveChapter;
     var canSave = canSaveChapter || (r.files || []).some(function (f) { return f.file || f.chapters; });
-    // One colour per verb everywhere: green plays, blue saves, gold shares.
-    var listen = r.type === 'audio' || r.type === 'audio-bible';
-    html += '<div class="btn-row item-actions">' +
-      (r.play ? '<button class="et-btn et-btn--go" id="play-now" type="button">' + ET.icon('play') +
-        h(listen ? 'act.listen' : 'act.watch') + '</button>' : '') +
+    // One colour per verb everywhere: blue saves, gold shares. The player on
+    // screen is the Watch or Listen button; a second one only made people
+    // wonder which to press.
+    var actions = '<div class="btn-row item-actions">' +
       (canSave ? '<button class="et-btn et-btn--info" id="save">' + ET.icon('save') + h('item.save') + '</button>' : '') +
       '<button class="et-btn et-btn--gold" id="share">' + ET.icon('share') + h('item.share') + '</button></div>';
+    html = html.slice(0, actionsAt) + actions + html.slice(actionsAt);
     if (r.desc) html += '<p class="latin item-desc">' + ET.esc(r.desc) + '</p>';
 
     if (web) html += passCard();
@@ -284,14 +286,6 @@ window.ET.module('item', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save', 'data
     ET.$('#item').innerHTML = html;
     wirePlayer();
     var sv = ET.$('#save');
-    var playNow = ET.$('#play-now');
-    if (playNow) playNow.addEventListener('click', function () {
-      var m = ET.$('#media video, #media audio');
-      if (!m) return;
-      m.scrollIntoView({ block: 'center', behavior: 'smooth' });
-      var started = m.play();
-      if (started && started.catch) started.catch(function () {});
-    });
     if (sv) sv.addEventListener('click', function () {
       if (!canSaveChapter) return ET.save.open(r);
       var book = ET.$('#bk'), chapter = ET.$('#bc');

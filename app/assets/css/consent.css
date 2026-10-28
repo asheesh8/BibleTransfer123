@@ -21,6 +21,12 @@
   background: var(--surface); color: var(--ink); font: inherit; font-size: .8rem;
   box-shadow: 0 3px 15px #0003; cursor: pointer;
 }
+/* In the page's footer: a plain text link, centred, still a full tap target. */
+.cookie-settings.in-flow {
+  position: static; display: block; margin: 1.5rem auto 0;
+  border: 0; background: none; box-shadow: none;
+  color: var(--ink-soft); text-decoration: underline; text-underline-offset: .2rem;
+}
 .consent-panel button:focus-visible, .cookie-settings:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 /* Pages with <main id="main"> always get the tab bar, often a moment after the
    panel appears; sit above it from the start so the panel does not jump. */

@@ -147,7 +147,7 @@ window.ET.module('home', ['core', 'ui/shell', 'ui/covers', 'i18n'], function (ET
       '<h2>Village Server deployment</h2>' +
       '<span class="sub">Film · 6 min</span></span></section>';
 
-    out += '<a class="et-tile" href="' + ET.esc(ET.scopedUrl('save-guide.html')) + '" lang="en" dir="ltr">' +
+    out += '<a class="et-tile desk-only" href="' + ET.esc(ET.scopedUrl('save-guide.html')) + '" lang="en" dir="ltr">' +
       '<span class="et-tile__icon">' + ET.icon('laptop') + '</span>' +
       '<span class="et-tile__text"><span class="et-tile__title">Save to your computer</span>' +
       '<span class="et-tile__sub">Screenshot guide · English · Mac + Windows</span></span>' +
