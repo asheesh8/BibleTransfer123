@@ -269,6 +269,8 @@ def service_worker(registry, generated):
     """SHELL's language block from the registry, and VERSION from a hash of
     every file the shell caches, so any shell change renames the cache."""
     sw = (APP / "sw.js").read_text(encoding="utf-8")
+    if "\n<<<<<<< " in sw or "\n>>>>>>> " in sw:
+        raise SystemExit("app/sw.js has merge conflict markers; keep either side, then run npm run generate")
     pattern = re.compile(re.escape(SW_START) + r"\n(?:.*?\n)?" + re.escape(SW_END), re.S)
     if not pattern.search(sw):
         raise SystemExit("app/sw.js has lost its %s / %s markers" % (SW_START.strip(), SW_END.strip()))
