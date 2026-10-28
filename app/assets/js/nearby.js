@@ -130,6 +130,7 @@
 
   function detect() {
     var forced = ET.qs('signal');
+    if (ET.native) return Promise.resolve('broker');   // no Pi inside the app
     if (!/^https?:$/.test(location.protocol)) return Promise.resolve('none');
     if (forced === 'broker' || forced === 'local') return Promise.resolve(forced);
     return fetch('/signal/ping', { cache: 'no-store' })
