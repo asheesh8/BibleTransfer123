@@ -28,7 +28,6 @@
   "lib.kind": "የይዘት ዓይነት",
   "lib.partner": "ቤተ መጻሕፍት",
   "lib.partner.main": "አብዛኛው የዚህ ቤተ መጻሕፍት ይዘት የሚመጣው ከዚህ ነው",
-  "lib.partner.other": "ሌሎች ቤተ መጻሕፍት",
   "lib.partner.all": "ሁሉንም ይመልከቱ ({n})",
   "lib.lang": "ቋንቋ",
   "lib.clear": "ማጣሪያዎችን ያጽዱ",

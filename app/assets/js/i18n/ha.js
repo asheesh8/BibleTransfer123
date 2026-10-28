@@ -28,7 +28,6 @@
   "lib.kind": "Nau'i",
   "lib.partner": "Ɗakunan karatu",
   "lib.partner.main": "Daga nan ne yawancin abubuwan wannan ɗakin karatu suka fito",
-  "lib.partner.other": "Sauran ɗakunan karatu",
   "lib.partner.all": "Duba duka ({n})",
   "lib.lang": "Harshe",
   "lib.clear": "Goge zaɓi",

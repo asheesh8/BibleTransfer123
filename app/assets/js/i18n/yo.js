@@ -28,7 +28,6 @@
   "lib.kind": "Irú ohun",
   "lib.partner": "Àwọn ilé ìkàwé",
   "lib.partner.main": "Ibí ni ọ̀pọ̀ jù lọ ohun inú ilé ìkàwé yìí ti wá",
-  "lib.partner.other": "Àwọn ilé ìkàwé mìíràn",
   "lib.partner.all": "Wo gbogbo rẹ̀ ({n})",
   "lib.lang": "Èdè",
   "lib.clear": "Pa àwọn àṣàyàn rẹ́",

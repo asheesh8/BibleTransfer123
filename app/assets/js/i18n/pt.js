@@ -28,7 +28,6 @@
   "lib.kind": "Tipo de recurso",
   "lib.partner": "Bibliotecas",
   "lib.partner.main": "De onde vem a maior parte desta biblioteca",
-  "lib.partner.other": "Outras bibliotecas",
   "lib.partner.all": "Ver tudo ({n})",
   "lib.lang": "Idioma",
   "lib.clear": "Limpar filtros",

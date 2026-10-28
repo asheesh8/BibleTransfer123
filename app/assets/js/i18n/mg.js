@@ -28,7 +28,6 @@
   "lib.kind": "Karazana",
   "lib.partner": "Tranomboky",
   "lib.partner.main": "Avy eto ny ankamaroan'ity tranomboky ity",
-  "lib.partner.other": "Tranomboky hafa",
   "lib.partner.all": "Jereo daholo ({n})",
   "lib.lang": "Fiteny",
   "lib.clear": "Fafao ny safidy",
