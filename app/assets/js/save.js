@@ -172,13 +172,13 @@ window.ET.module('save', ['core', 'ui/shell', 'i18n'], function (ET) {
       if (files.length === 1) { S.file = files[0]; return where(); }
       paint(header(0) + '<div class="stack">' + files.map(function (f, i) {
         var label = f.chapters ? h('save.allchapters', { n: r.play.items.length }) : ET.esc(f.label);
-        return '<button class="tile" data-i="' + i + '" style="width:100%;text-align:start">' +
-          '<span class="ico">' + ET.icon(f.chapters ? 'folder' : 'save') + '</span>' +
-          '<span><span class="t" dir="auto">' + label + '</span>' +
-          '<span class="s">' + sizeOf(f) + '</span></span>' +
-          '<span class="chev flip">' + ET.icon('chev') + '</span></button>';
+        return '<button class="et-tile" data-i="' + i + '">' +
+          '<span class="et-tile__icon">' + ET.icon(f.chapters ? 'folder' : 'save') + '</span>' +
+          '<span class="et-tile__text"><span class="et-tile__title" dir="auto">' + label + '</span>' +
+          '<span class="et-tile__sub">' + sizeOf(f) + '</span></span>' +
+          '<span class="et-tile__end flip">' + ET.icon('chev') + '</span></button>';
       }).join('') + '</div>' +
-        '<button class="btn ghost block" id="sv-x" style="margin-top:1rem">' + h('ui.cancel') + '</button>');
+        '<button class="et-btn et-btn--quiet et-btn--block" id="sv-x" style="margin-top:1rem">' + h('ui.cancel') + '</button>');
       ET.$$('[data-i]', root).forEach(function (b) {
         b.addEventListener('click', function () { S.file = files[+b.getAttribute('data-i')]; where(); });
       });
@@ -203,13 +203,13 @@ window.ET.module('save', ['core', 'ui/shell', 'i18n'], function (ET) {
           ET.esc(r.title) + ' — ' + ET.esc(S.file.label) + '</strong>' +
           (total ? '<span class="num">' + ET.human(total) + '</span>' : '') + '</div>' +
           '<div class="stack">' + opts.map(function (o) {
-            return '<button class="tile" data-w="' + o[0] + '" style="width:100%;text-align:start">' +
-              '<span class="ico">' + ET.icon(o[1]) + '</span>' +
-              '<span><span class="t">' + o[2] + '</span>' +
-              (o[3] ? '<span class="s">' + o[3] + '</span>' : '') + '</span>' +
-              '<span class="chev flip">' + ET.icon('chev') + '</span></button>';
+            return '<button class="et-tile" data-w="' + o[0] + '">' +
+              '<span class="et-tile__icon">' + ET.icon(o[1]) + '</span>' +
+              '<span class="et-tile__text"><span class="et-tile__title">' + o[2] + '</span>' +
+              (o[3] ? '<span class="et-tile__sub">' + o[3] + '</span>' : '') + '</span>' +
+              '<span class="et-tile__end flip">' + ET.icon('chev') + '</span></button>';
           }).join('') + '</div>' +
-          '<button class="btn ghost block" id="sv-back" style="margin-top:1rem">' +
+          '<button class="et-btn et-btn--quiet et-btn--block" id="sv-back" style="margin-top:1rem">' +
           ET.icon('back', 'flip') + h('save.back') + '</button>');
 
         ET.$$('[data-w]', root).forEach(function (b) {
@@ -258,7 +258,7 @@ window.ET.module('save', ['core', 'ui/shell', 'i18n'], function (ET) {
         '<div class="meter"><span id="sv-bar"></span></div>' +
         '<p class="muted" id="sv-count" style="margin:.6rem 0 0"></p>' +
         '<p class="muted" id="sv-files" style="margin:.2rem 0 0"></p>' +
-        '<button class="btn ghost block" id="sv-stop" style="margin-top:1.2rem">' +
+        '<button class="et-btn et-btn--quiet et-btn--block" id="sv-stop" style="margin-top:1.2rem">' +
         h('save.stop') + '</button>');
       ET.$('#sv-stop', root).addEventListener('click', function () { S.ctrl.abort(); where(); });
 
@@ -302,12 +302,12 @@ window.ET.module('save', ['core', 'ui/shell', 'i18n'], function (ET) {
       var openBtn = '';
       if (last.blob && ET.openable(S.jobs[S.jobs.length - 1].name)) {
         S.blobUrl = URL.createObjectURL(last.blob);
-        openBtn = '<a class="btn green block" target="_blank" rel="noopener" href="' + S.blobUrl + '">' +
+        openBtn = '<a class="et-btn et-btn--go et-btn--block" target="_blank" rel="noopener" href="' + S.blobUrl + '">' +
           ET.icon('play') + h('save.open') + '</a>';
       } else if (last.handle && last.handle.getFile) {
-        openBtn = '<button class="btn green block" id="sv-open">' + ET.icon('play') + h('save.open') + '</button>';
+        openBtn = '<button class="et-btn et-btn--go et-btn--block" id="sv-open">' + ET.icon('play') + h('save.open') + '</button>';
       } else if (last.url) {
-        openBtn = '<a class="btn green block" target="_blank" rel="noopener" href="' + ET.esc(last.url) + '">' +
+        openBtn = '<a class="et-btn et-btn--go et-btn--block" target="_blank" rel="noopener" href="' + ET.esc(last.url) + '">' +
           ET.icon('play') + h('save.open') + '</a>';
       }
       var place = S.target.kind === 'downloads' ? t('save.done.downloads') : S.target.name;
@@ -318,9 +318,9 @@ window.ET.module('save', ['core', 'ui/shell', 'i18n'], function (ET) {
         (S.target.kind === 'downloads' ? '<p class="center muted" style="font-size:.9rem">' +
           h('save.android') + '<br>' + h('save.ios') + '</p>' : '') +
         '<div class="stack" style="margin-top:1rem">' + openBtn +
-        '<a class="btn sky block" href="' + ET.esc(ET.scopedUrl('nearby.html', { id: r.id })) + '">' +
+        '<a class="et-btn et-btn--info et-btn--block" href="' + ET.esc(ET.scopedUrl('nearby.html', { id: r.id })) + '">' +
         ET.icon('wifi') + h('save.next') + '</a>' +
-        '<button class="btn ghost block" id="sv-more">' + h('save.another') + '</button></div>');
+        '<button class="et-btn et-btn--quiet et-btn--block" id="sv-more">' + h('save.another') + '</button></div>');
 
       var ob = ET.$('#sv-open', root);
       if (ob) ob.addEventListener('click', function () {
@@ -334,8 +334,8 @@ window.ET.module('save', ['core', 'ui/shell', 'i18n'], function (ET) {
       paint(header(2) + '<div class="note"><strong>' + h('save.fail') + '</strong>' +
         '<p class="latin" style="margin:.3rem 0 0">' + ET.esc((err && err.message) || '') + '</p></div>' +
         '<div class="stack" style="margin-top:1rem">' +
-        '<button class="btn block" id="sv-retry">' + h('save.retry') + '</button>' +
-        '<button class="btn ghost block" id="sv-back">' + ET.icon('back', 'flip') + h('save.back') +
+        '<button class="et-btn et-btn--block" id="sv-retry">' + h('save.retry') + '</button>' +
+        '<button class="et-btn et-btn--quiet et-btn--block" id="sv-back">' + ET.icon('back', 'flip') + h('save.back') +
         '</button></div>');
       ET.$('#sv-retry', root).addEventListener('click', go);
       ET.$('#sv-back', root).addEventListener('click', where);
@@ -428,12 +428,12 @@ window.ET.module('save', ['core', 'ui/shell', 'i18n'], function (ET) {
           '<div class="note info" style="margin-bottom:1rem"><strong>' +
           h('bulk.title', { n: resources.length }) + '</strong><p class="muted" style="margin:.2rem 0 0">' +
           summary() + '</p></div><div class="stack">' + opts.map(function (o) {
-            return '<button class="tile" data-bw="' + o[0] + '" style="width:100%;text-align:start">' +
-              '<span class="ico">' + ET.icon(o[1]) + '</span><span><span class="t">' + o[2] +
-              '</span>' + (o[3] ? '<span class="s">' + o[3] + '</span>' : '') + '</span>' +
-              '<span class="chev flip">' + ET.icon('chev') + '</span></button>';
+            return '<button class="et-tile" data-bw="' + o[0] + '">' +
+              '<span class="et-tile__icon">' + ET.icon(o[1]) + '</span><span><span class="et-tile__title">' + o[2] +
+              '</span>' + (o[3] ? '<span class="et-tile__sub">' + o[3] + '</span>' : '') + '</span>' +
+              '<span class="et-tile__end flip">' + ET.icon('chev') + '</span></button>';
           }).join('') + '</div><p class="muted" style="font-size:.9rem;margin:1rem 0 0">' +
-          h('bulk.multiple') + '</p><button class="btn ghost block" id="bsv-x" style="margin-top:1rem">' +
+          h('bulk.multiple') + '</p><button class="et-btn et-btn--quiet et-btn--block" id="bsv-x" style="margin-top:1rem">' +
           h('ui.cancel') + '</button>');
         ET.$$('[data-bw]', root).forEach(function (b) {
           b.addEventListener('click', function () { choose(b.getAttribute('data-bw'), saved); });
@@ -474,7 +474,7 @@ window.ET.module('save', ['core', 'ui/shell', 'i18n'], function (ET) {
         '<div class="meter"><span id="bsv-bar"></span></div>' +
         '<p class="muted" id="bsv-count" style="margin:.6rem 0 0"></p>' +
         '<p class="muted" id="bsv-files" style="margin:.2rem 0 0"></p>' +
-        '<button class="btn ghost block" id="bsv-stop" style="margin-top:1.2rem">' +
+        '<button class="et-btn et-btn--quiet et-btn--block" id="bsv-stop" style="margin-top:1.2rem">' +
         h('save.stop') + '</button>');
       ET.$('#bsv-stop', root).addEventListener('click', function () { S.ctrl.abort(); where(); });
       var i = 0;
@@ -512,7 +512,7 @@ window.ET.module('save', ['core', 'ui/shell', 'i18n'], function (ET) {
       paint((S.target.kind === 'downloads' ? ET.stepper(3, 2) : batchHeader(2)) + cheer() +
         '<h3 class="center" style="margin:.2rem 0">' + h(S.target.kind === 'downloads' ? 'bulk.done.browser.title' : 'bulk.done.title', { n: resources.length }) + '</h3>' +
         '<p class="center muted">' + (S.target.kind === 'downloads' ? h('save.done.browser.where') : h('save.done.where', { place: place })) + '</p>' +
-        '<button class="btn green block" id="bsv-done" style="margin-top:1rem">' +
+        '<button class="et-btn et-btn--go et-btn--block" id="bsv-done" style="margin-top:1rem">' +
         h('bulk.close') + '</button>');
       ET.$('#bsv-done', root).addEventListener('click', sheet.close);
       if (ET.loadMascot) ET.loadMascot();
@@ -521,8 +521,8 @@ window.ET.module('save', ['core', 'ui/shell', 'i18n'], function (ET) {
     function failed(err) {
       paint(batchHeader(1) + '<div class="note"><strong>' + h('save.fail') + '</strong>' +
         '<p class="latin" style="margin:.3rem 0 0">' + ET.esc((err && err.message) || '') + '</p></div>' +
-        '<div class="stack" style="margin-top:1rem"><button class="btn block" id="bsv-retry">' +
-        h('save.retry') + '</button><button class="btn ghost block" id="bsv-back">' +
+        '<div class="stack" style="margin-top:1rem"><button class="et-btn et-btn--block" id="bsv-retry">' +
+        h('save.retry') + '</button><button class="et-btn et-btn--quiet et-btn--block" id="bsv-back">' +
         ET.icon('back', 'flip') + h('save.back') + '</button></div>');
       ET.$('#bsv-retry', root).addEventListener('click', go);
       ET.$('#bsv-back', root).addEventListener('click', where);

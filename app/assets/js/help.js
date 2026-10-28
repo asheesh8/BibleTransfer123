@@ -116,30 +116,27 @@ window.ET.module('help', ['core', 'ui/shell', 'i18n'], function (ET) {
   ];
 
   function render() {
-    var out = '<a class="tile" href="' + ET.esc(ET.scopedUrl('save-guide.html')) + '" lang="en" dir="ltr">' +
-      '<span class="ico">' + ET.icon('laptop') + '</span>' +
-      '<span><span class="t">Save to your computer</span>' +
-      '<span class="s">Screenshot guide · English · Mac + Windows</span></span>' +
-      '<span class="chev">' + ET.icon('chev') + '</span></a>';
+    var out = '<a class="et-tile" href="' + ET.esc(ET.scopedUrl('save-guide.html')) + '" lang="en" dir="ltr">' +
+      '<span class="et-tile__icon">' + ET.icon('laptop') + '</span>' +
+      '<span class="et-tile__text"><span class="et-tile__title">Save to your computer</span>' +
+      '<span class="et-tile__sub">Screenshot guide · English · Mac + Windows</span></span>' +
+      '<span class="et-tile__end">' + ET.icon('chev') + '</span></a>';
     // Three short walkthroughs: sharing on Facebook, by email and on WhatsApp.
-    out += '<section class="card share-videos" aria-labelledby="share-videos-title"><h2 id="share-videos-title">' +
+    out += '<section class="et-card share-videos" aria-labelledby="share-videos-title"><h2 id="share-videos-title">' +
       h('sharevid.title') + '</h2><p class="muted">' + h('sharevid.sub') + '</p><div class="share-video-row">' +
       [['facebook', 'share-on-facebook'], ['email', 'share-by-email'], ['whatsapp', 'share-on-whatsapp']].map(function (v) {
         return '<figure><video controls playsinline preload="none" lang="en" poster="assets/media/share/' + v[1] + '.jpg">' +
           '<source src="assets/media/share/' + v[1] + '.mp4" type="video/mp4"></video><figcaption>' + h('sharevid.' + v[0]) + '</figcaption></figure>';
       }).join('') + '</div></section>';
     out += SECTIONS.map(function (s) {
-      var start = s.device ? '<section class="card help-device" id="' + s.id + '" aria-labelledby="' + s.id + '-title">' +
+      var start = s.device ? '<section class="et-card help-device" id="' + s.id + '" aria-labelledby="' + s.id + '-title">' +
         '<div class="help-device-heading"><div class="help-device-phone">' + phonePicture(s.device) + '</div>' +
         '<div><h2 id="' + s.id + '-title">' + tOrHTML(s.key + '.h', s.title) + '</h2>' +
         '<p class="help-device-caption">' + tOrHTML('help.phone.follow', 'Follow the numbered steps below.') + '</p>' +
         '<div class="help-app-example"><span class="help-app-picture">' + appPicture(s.device) + '</span><span><strong lang="en" dir="ltr">' +
         (s.device === 'samsung' ? 'My Files' : 'Files') + '</strong><span>' + tOrHTML('help.phone.look', 'Look for this folder icon') + '</span></span></div></div></div>' :
-        '<div class="card"><div style="display:flex;align-items:center;gap:.7rem;' +
-        'margin-bottom:.8rem"><span class="ico" style="width:44px;height:44px;' +
-        'display:grid;place-items:center;border-radius:var(--r);' +
-        'background:var(--purple-wash);color:var(--purple)">' + ET.icon(s.icon) +
-        '</span><h2 style="margin:0">' + tOrHTML(s.key + '.h', s.title) + '</h2></div>';
+        '<div class="et-card"><div class="help-heading"><span class="et-tile__icon">' + ET.icon(s.icon) +
+        '</span><h2>' + tOrHTML(s.key + '.h', s.title) + '</h2></div>';
       return start + '<ol class="steps">' + s.steps.map(function (st, i) {
           var k = s.stepKeys && s.stepKeys[i + 1] || s.key + '.' + (i + 1);
           return '<li>' + (s.device ? '<span class="help-step-picture">' + stepPicture(s.device, i) + '</span>' : '') +
@@ -149,7 +146,7 @@ window.ET.module('help', ['core', 'ui/shell', 'i18n'], function (ET) {
           tOrHTML(s.key + '.support', s.supportLabel) + '</a></p>' : '') + (s.device ? '</section>' : '</div>');
     }).join('');
 
-    out += '<div class="card"><h2>' +
+    out += '<div class="et-card"><h2>' +
       tOrHTML('help.trouble', 'When something does not work') + '</h2>' +
       TROUBLE.map(function (x, i) {
         return '<div class="note" style="margin-top:.7rem"><strong>' +
@@ -164,11 +161,11 @@ window.ET.module('help', ['core', 'ui/shell', 'i18n'], function (ET) {
       tOrHTML('help.golden.p', 'Open the file now, while you can still copy or download it again if something is wrong.') + '</p></div>';
 
     // The only route into the device-by-device guides from here.
-    out += '<a class="tile" href="' + ET.esc(ET.scopedUrl('share.html')) + '" style="margin-top:1rem">' +
-      '<span class="ico">' + ET.icon('phone') + '</span>' +
-      '<span><span class="t">' + h('share.howto') + '</span>' +
-      '<span class="s">' + h('share.howto.sub') + '</span></span>' +
-      '<span class="chev flip">' + ET.icon('chev') + '</span></a>';
+    out += '<a class="et-tile" href="' + ET.esc(ET.scopedUrl('share.html')) + '" style="margin-top:1rem">' +
+      '<span class="et-tile__icon">' + ET.icon('phone') + '</span>' +
+      '<span class="et-tile__text"><span class="et-tile__title">' + h('share.howto') + '</span>' +
+      '<span class="et-tile__sub">' + h('share.howto.sub') + '</span></span>' +
+      '<span class="et-tile__end flip">' + ET.icon('chev') + '</span></a>';
 
     ET.$('#help').innerHTML = out;
     scrollToPhone();

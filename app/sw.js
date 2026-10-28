@@ -9,13 +9,14 @@
    VERSION must change whenever the shell changes, or an installed copy keeps
    serving the old one. packer/et/generate.py (`npm run generate`) sets it from a
    hash of every SHELL file, and `easytransfer build` stamps card copies. */
-var VERSION = 'shell-74106c10bdbe';
+var VERSION = 'shell-3577ffb88fdb';
 
 var SHELL = [
   'index.html', 'library.html', 'item.html', 'share.html', 'help.html', 'nearby.html',
   'manifest.webmanifest', 'privacy.html', 'save-guide.html',
   'assets/css/app.css', 'assets/css/consent.css', 'assets/css/save-guide.css',
   'assets/css/help-device.css', 'assets/css/tokens.css', 'assets/css/components/sheet.css', 'assets/css/components/toast.css', 'assets/css/components/mascot.css',
+  'assets/css/components/button.css', 'assets/css/components/card.css', 'assets/css/components/chip.css',
   'assets/art/kandili-village.webp', 'assets/art/kandili-village.jpg',
   'assets/js/core.js', 'assets/js/ui/icons.js', 'assets/js/ui/sheet.js', 'assets/js/ui/toast.js', 'assets/js/ui/shell.js', 'assets/js/ui/covers.js', 'assets/js/brand/mascot.js', 'assets/js/i18n.js', 'assets/js/i18n-load.js', 'assets/js/i18n/en.js', 'assets/js/art.js', 'assets/js/analytics.js',
   'assets/js/home.js', 'assets/js/library.js', 'assets/js/item.js', 'assets/js/data/bible-books.js',

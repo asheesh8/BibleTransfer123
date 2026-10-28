@@ -39,11 +39,12 @@ in someone's hands.
 |---|---|---|
 | Pages | `app/*.html`, `app/<slug>/index.html` (57 language pages) | Each page lists its own scripts in load order. |
 | Shared code | `app/assets/js/core.js` | Module registry, storage, DOM helpers, library scope, theme, catalogue, content language, file safety, offline install (about 300 lines). |
-| Shared screens | `app/assets/js/ui/shell.js`, `ui/covers.js` | Header, tab bar, icons, sheets, toasts, step header; cover art and item rows. |
+| Design kit | `app/assets/js/ui/icons.js`, `ui/sheet.js`, `ui/toast.js`; `css/tokens.css`, `css/components/*.css` | On every page since October 2026: every sheet and toast in the app is the kit's. The rest of the kit (buttons, chips, cards, rows) is on `styleguide.html`, waiting for screens to move onto it. |
+| Shared screens | `app/assets/js/ui/shell.js`, `ui/covers.js` | Header, tab bar, legacy icons, step header, and `ET.sheet`/`ET.toast` (which open the kit's); cover art and item rows. |
 | Book data | `app/assets/js/data/bible-books.js` | Standard book list, local book names, audio Bible URLs. Loaded only by `item.html`. |
 | Interface text | `app/assets/js/i18n/<code>.js`, `i18n-load.js`, `i18n.js` | One strings file per language (14 to 64 KB). `i18n-load.js` writes the tags for English and the reader's language; `i18n.js` (about 45 KB) is the runtime plus the welcome screen's every-language lines. Another language loads when the reader switches. |
 | First-run funnel | `features/onboarding.js`, `data/onboarding-strings.js`, `css/pages/onboarding.css` | Kandili's questions after the welcome screen's language list (what to learn, how the reader gets online), then Home with the chosen shelf first (`et.want`). Loaded on demand by `welcome()` in `i18n.js`, first visit only. |
-| Screens | `home.js`, `library.js`, `item.js`, `save.js`, `share.js`, `nearby.js`, `help.js`, `save-guide.js`, `admin*.js` | One file per screen. |
+| Screens | `home.js`, `library.js`, `item.js`, `save.js`, `share.js`, `nearby.js`, `help.js`, `save-guide.js`, `admin*.js` | One file per screen, each an `ET.module` naming what it needs (admin aside). Moving them into `features/` is a later rename. |
 | Styles | `app/assets/css/app.css` and four smaller sheets | Colour, radius and touch-size tokens on `:root`, light and dark. |
 
 ## The front end after the rebuild
