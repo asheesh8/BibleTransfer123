@@ -161,7 +161,7 @@
     }
     typeFilters.innerHTML = [tile('', h('lib.all'), 'grid', counted.length)].concat(
       avail.map(function (ty) {
-        return tile(ty, h('type.' + ty), ty === 'audio-bible' ? 'ears' : ET.typeIcon(ty), count[ty] || 0);
+        return tile(ty, h('type.' + ty), ty === 'audio-bible' ? 'ears' : ty === 'book' ? 'book' : ET.typeIcon(ty), count[ty] || 0);
       })).join('');
     typeFilters.scrollLeft = typeScroll;
     if (!typeFilters.dataset.ready && state.type) {

@@ -138,6 +138,18 @@
   }
 
   // ---------------------------------------------------------------- the sheet
+  /* The finish line gets a celebration, the way a lesson does in Duolingo:
+     Kandili cheers in a burst of sparks. Without the mascot (an old page,
+     no shell) it is the plain green tick it always was. */
+  function doneMark() {
+    if (!ET.lantern) return '<div class="done-mark">' + ET.icon('check') + '</div>';
+    var sparks = '';
+    for (var i = 0; i < 12; i++) sparks += '<i style="--a:' + (i * 30) + 'deg"></i>';
+    setTimeout(function () { if (ET.loadMascot) ET.loadMascot(); }, 0);
+    return '<div class="done-kandili" aria-hidden="true"><span class="done-sparks">' + sparks + '</span>' +
+      ET.lantern(112, 'hooray') + '</div>';
+  }
+
   var STEPS = ['save.step.what', 'save.step.where', 'save.step.go', 'save.step.done'];
 
   function header(step) {
@@ -310,7 +322,7 @@
       }
       var place = S.target.kind === 'downloads' ? t('save.done.downloads') : S.target.name;
       paint((S.target.kind === 'downloads' ? ET.stepper(STEPS.length, 3) : header(3)) +
-        '<div class="done-mark">' + ET.icon('check') + '</div>' +
+        doneMark() +
         '<h3 class="center" style="margin:.2rem 0">' + h(S.target.kind === 'downloads' ? 'save.done.browser.title' : 'save.done.title') + '</h3>' +
         '<p class="center muted">' + (S.target.kind === 'downloads' ? h('save.done.browser.where') : h('save.done.where', { place: place })) + '</p>' +
         (S.target.kind === 'downloads' ? '<p class="center muted" style="font-size:.9rem">' +
@@ -508,7 +520,7 @@
     function finished() {
       S.ctrl = null;
       var place = S.target.kind === 'downloads' ? t('save.done.downloads') : S.target.name;
-      paint((S.target.kind === 'downloads' ? ET.stepper(3, 2) : batchHeader(2)) + '<div class="done-mark">' + ET.icon('check') + '</div>' +
+      paint((S.target.kind === 'downloads' ? ET.stepper(3, 2) : batchHeader(2)) + doneMark() +
         '<h3 class="center" style="margin:.2rem 0">' + h(S.target.kind === 'downloads' ? 'bulk.done.browser.title' : 'bulk.done.title', { n: resources.length }) + '</h3>' +
         '<p class="center muted">' + (S.target.kind === 'downloads' ? h('save.done.browser.where') : h('save.done.where', { place: place })) + '</p>' +
         '<button class="btn green block" id="bsv-done" style="margin-top:1rem">' +

@@ -140,6 +140,7 @@ PAGE = """<!doctype html>
 <meta name="theme-color" content="#6A35C2">
 <link rel="stylesheet" href="assets/css/app.css">
 <link rel="stylesheet" href="assets/css/consent.css">
+<link rel="stylesheet" href="assets/css/pages/screens.css">
 <script>
 window.ET_SHARED_LIBRARY = {shared};
 {guard}try {{
@@ -148,7 +149,7 @@ window.ET_SHARED_LIBRARY = {shared};
 }} catch (e) {{}}
 </script>
 </head>
-<body>
+<body class="screen-library">
 <main class="wrap" id="main">
   <section class="shared-hero">
     <p class="eyebrow" id="shared-badge">{badge}</p>
