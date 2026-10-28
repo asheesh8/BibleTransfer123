@@ -41,6 +41,7 @@ in someone's hands.
 | Shared code | `app/assets/js/core.js` | Module registry, storage, icons, DOM helpers, header, tab bar, rows, covers, sheets, install and share helpers (about 670 lines). |
 | Book data | `app/assets/js/data/bible-books.js` | Standard book list, local book names, audio Bible URLs. Loaded only by `item.html`. |
 | Interface text | `app/assets/js/i18n/<code>.js`, `i18n-load.js`, `i18n.js` | One strings file per language (14 to 64 KB). `i18n-load.js` writes the tags for English and the reader's language; `i18n.js` (about 45 KB) is the runtime plus the welcome screen's every-language lines. Another language loads when the reader switches. |
+| First-run funnel | `features/onboarding.js`, `data/onboarding-strings.js`, `css/pages/onboarding.css` | Kandili's questions after the welcome screen's language list (what to learn, how the reader gets online), then Home with the chosen shelf first (`et.want`). Loaded on demand by `welcome()` in `i18n.js`, first visit only. |
 | Screens | `home.js`, `library.js`, `item.js`, `save.js`, `share.js`, `nearby.js`, `help.js`, `save-guide.js`, `admin*.js` | One file per screen. |
 | Styles | `app/assets/css/app.css` and four smaller sheets | Colour, radius and touch-size tokens on `:root`, light and dark. |
 
