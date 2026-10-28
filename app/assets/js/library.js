@@ -442,7 +442,7 @@ window.ET.module('library', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save'], f
       document.body.classList.remove('bulk-mode');
       dock.hidden = true;
       controls.innerHTML = state.lang && downloadable.length
-        ? '<button class="et-btn et-btn--go et-btn--block bulk-start" id="bulk-start">' + ET.icon('save') +
+        ? '<button class="et-btn et-btn--quiet et-btn--block bulk-start" id="bulk-start">' + ET.icon('save') +
           ET.i18n.h('lib.bulk.start') + '</button>' : '';
       var start = ET.$('#bulk-start');
       if (actions) actions.classList.toggle('has-bulk', !!start);
