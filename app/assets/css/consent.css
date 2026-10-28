@@ -22,8 +22,10 @@
   box-shadow: 0 3px 15px #0003; cursor: pointer;
 }
 .consent-panel button:focus-visible, .cookie-settings:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
-body:not(.has-tabs) .consent-panel { bottom: calc(1rem + env(safe-area-inset-bottom)); }
-body:not(.has-tabs) .cookie-settings { bottom: calc(.8rem + env(safe-area-inset-bottom)); }
+/* Pages with <main id="main"> always get the tab bar, often a moment after the
+   panel appears; sit above it from the start so the panel does not jump. */
+body:not(.has-tabs):not(:has(> main#main)) .consent-panel { bottom: calc(1rem + env(safe-area-inset-bottom)); }
+body:not(.has-tabs):not(:has(> main#main)) .cookie-settings { bottom: calc(.8rem + env(safe-area-inset-bottom)); }
 .privacy-page { padding-block: 2rem 7rem; max-width: 46rem; }
 .privacy-page section { margin-top: 2rem; }
 .privacy-page li { margin-bottom: .5rem; }
