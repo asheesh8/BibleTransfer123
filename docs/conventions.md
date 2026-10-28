@@ -36,14 +36,17 @@ code disagree, fix one of them in the same pull request.
 
 ## Shipping a change
 
-1. `npm test` passes.
+1. `npm test` passes, and `npm run test:e2e` for any change under `app/`
+   (GitHub runs both on every pull request; see
+   [guides/testing.md](guides/testing.md)).
 2. Run `npm run generate` after changing a file the service worker caches or
    `registry/languages.json`. It sets `VERSION` in `app/sw.js` from the
    shell's contents and rewrites the generated language files;
    `tests/test_generate.py` fails if you forget.
 3. Docs that describe the changed behaviour are updated in the same pull
    request.
-4. Merge to `main` once tests pass, then check the live site.
+4. Merge to `main` once tests pass, then check the live site. Before a
+   release, follow [guides/release-checklist.md](guides/release-checklist.md).
 
 ## Commits and pull requests
 

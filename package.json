@@ -7,6 +7,10 @@
     "generate": "python3 packer/et/generate.py",
     "generate:check": "python3 packer/et/generate.py --check",
     "test": "python3 -m unittest discover -s tests -p 'test_*.py' && node --test tests/test_analytics_client.js tests/test_sw.js tests/test_i18n.js tests/test_startup.js tests/test_visibility.js tests/test_modules.js tests/test_design_system.js tests/test_i18n_files.js tests/test_onboarding.js && node tests/test_instrumentation.js && node tests/test_admin.js",
+    "posttest": "node tests/test_admin_journeys.js",
+    "test:e2e": "playwright test",
+    "test:e2e:chromium": "E2E_ENGINES=chromium playwright test",
+    "test:e2e:report": "playwright show-report",
     "dev": "python3 packer/serve.py 8095",
     "preview": "python3 packer/easytransfer.py preview && python3 packer/serve.py 8095",
     "card": "python3 packer/easytransfer.py build --profile standard --out ./card",
@@ -16,5 +20,8 @@
     "catalog": "python3 packer/easytransfer.py preview",
     "dbs:import": "python3 packer/import_dbs_rendered.py && python3 packer/enrich_local_online.py && python3 packer/easytransfer.py preview",
     "list": "python3 packer/easytransfer.py list"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0"
   }
 }
