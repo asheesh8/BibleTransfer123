@@ -202,6 +202,7 @@ window.ET = (function () {
           icon(t === 'dark' ? 'sun' : 'moon') + '</button>' +
       '</div>';
     document.body.insertBefore(el, document.body.firstChild);
+    document.body.classList.add('has-top');   // releases the space app.css held for it
 
     $('#et-theme').addEventListener('click', function () {
       var now = document.documentElement.getAttribute('data-theme') === 'dark'

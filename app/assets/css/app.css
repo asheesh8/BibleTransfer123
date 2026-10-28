@@ -453,9 +453,9 @@ body.bulk-mode { padding-bottom: calc(var(--tabbar) + 92px + env(safe-area-inset
 }
 /* The header is written by script, above <main>. Until it arrives, hold its
    64px + 2px border open so the page does not jump down when it lands — on a
-   slow phone that jump moves the button someone is reaching for. Once the
-   header is in, <main> is no longer the first child and this lets go. */
-body > main#main:first-child { padding-top: 66px; }
+   slow phone that jump moves the button someone is reaching for. header()
+   adds .has-top in the same frame, which lets this go. */
+body:not(.has-top):has(> main#main) { padding-top: 66px; }
 .brand {
   display: flex; align-items: center; gap: .55rem;
   font-weight: 800; font-size: 1.05rem; color: var(--ink);
