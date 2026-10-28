@@ -107,6 +107,24 @@ window.ET.module('ui/shell', ['core'], function (ET) {
     document.head.appendChild(sc);
   }
 
+  /* Reading a QR code with the camera, inside the page (features/scan.js).
+     The phone app needs it, because there the camera app would open the
+     browser instead of the app. Fetched on first use. */
+  function canScan() {
+    return !!(window.isSecureContext && navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
+  }
+  var scanLoad = null;
+  function scanCode() {
+    if (!scanLoad) scanLoad = ET.scan ? Promise.resolve() : new Promise(function (ok, no) {
+      var sc = document.createElement('script');
+      sc.src = ASSETS + 'js/features/scan.js';
+      sc.onload = function () { ET.scan ? ok() : no(new Error('scan.js did not load')); };
+      sc.onerror = function () { scanLoad = null; no(new Error('scan.js did not load')); };
+      document.head.appendChild(sc);
+    });
+    return scanLoad.then(function () { return ET.scan.start(); });
+  }
+
   function lanternSvg(s) {
     // Kandili: the flame on top is its mood, the face sits on the glass.
     return '<svg class="et-lantern" viewBox="-3 -9 54 54" width="' + s + '" height="' + s + '" aria-hidden="true">' +
@@ -136,6 +154,8 @@ window.ET.module('ui/shell', ['core'], function (ET) {
       '<div class="wrap">' +
         '<span class="brand">' + lantern(30) +
           '<span data-i18n="app.name">The Library</span></span>' +
+        (ET.native && canScan() ? '<button class="fchip" id="et-scan-btn" data-i18n-aria="scan.open" aria-label="Scan a code">' +
+          icon('scan') + '</button>' : '') +
         (scope ? '' : '<button class="fchip" id="et-lang" data-i18n-aria="ui.lang" aria-label="Language">' +
           icon('globe') + '<span id="et-lang-label"></span></button>') +
         '<button class="fchip" id="et-theme" data-i18n-aria="ui.theme" aria-label="Light or dark">' +
@@ -149,6 +169,9 @@ window.ET.module('ui/shell', ['core'], function (ET) {
         ? 'light' : 'dark';
       theme(now);
       this.innerHTML = icon(now === 'dark' ? 'sun' : 'moon');
+    });
+    if ($('#et-scan-btn')) $('#et-scan-btn').addEventListener('click', function () {
+      scanCode().then(function (text) { return ET.scan.go(text); }, function () {});
     });
     if (!scope) {
       $('#et-lang').addEventListener('click', function () {
@@ -343,6 +366,7 @@ window.ET.module('ui/shell', ['core'], function (ET) {
 
   var api = {
     icon: icon, lantern: lantern, mascots: mascots, loadMascot: loadMascot,
+    canScan: canScan, scanCode: scanCode,
     header: header, tabbar: tabbar, sheet: sheet, stepper: stepper,
     facebookUrl: facebookUrl, facebookShare: facebookShare, copyText: copyText, toast: toast
   };

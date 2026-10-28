@@ -11,7 +11,11 @@
    And one change on the way: pages load the admin's library switches with
    <script src="api/visibility">, which the app has no server to answer, so the
    copies ask the live site instead. Offline that fails quietly and the switches
-   built into the catalogue apply, exactly as off a card. */
+   built into the catalogue apply, exactly as off a card.
+
+   Plus routes.json: the website's short links (/kisii, /pidgin, /privacy)
+   from vercel.json, so a QR code scanned in the app (features/scan.js) finds
+   the right page among the files. */
 'use strict';
 const fs = require('fs');
 const path = require('path');
@@ -41,6 +45,13 @@ function copy(rel) {
 
 fs.rmSync(OUT, { recursive: true, force: true });
 copy('');
+const vercel = JSON.parse(fs.readFileSync(path.resolve(SRC, '..', 'vercel.json'), 'utf8'));
+const routes = {};
+for (const r of vercel.rewrites || []) {
+  const from = r.source.replace(/^\/+/, ''), to = r.destination.replace(/^\/+/, '');
+  if (/^[\w-]+(\/[\w-]+)*$/.test(from) && !/^admin(\/|$)/.test(from)) routes[from] = to;
+}
+fs.writeFileSync(path.join(OUT, 'routes.json'), JSON.stringify(routes));
 let bytes = 0, files = 0;
 (function walk(dir) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {

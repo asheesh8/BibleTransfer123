@@ -398,8 +398,12 @@
   // ---- 2b. receiver: type the code
   function guestAsk(msg) {
     S.role = 'guest';
+    // In the phone app the camera app would open the browser, so the app
+    // reads the code itself (features/scan.js).
+    var scan = ET.native && ET.canScan && ET.canScan();
     paint(1,
-      '<div class="nearby-tip">' + ET.icon('phone') + '<p>' + h('nearby.qr.tip') + '</p></div>' +
+      (scan ? '<div class="stack" style="margin-bottom:1rem">' + btn('scan', '', 'scan', h('nearby.scan')) + '</div>'
+        : '<div class="nearby-tip">' + ET.icon('phone') + '<p>' + h('nearby.qr.tip') + '</p></div>') +
       '<label class="flabel" for="code-in">' + h('nearby.enter') + '</label>' +
       '<input id="code-in" class="code-input" type="text" inputmode="numeric" pattern="[0-9]*" ' +
       'maxlength="7" autocomplete="one-time-code" placeholder="000 000">' +
@@ -407,7 +411,16 @@
       '<div class="stack" style="margin-top:1rem">' + btn('go', '', 'wifi', h('nearby.join')) +
       btn('x', 'ghost', 'back', h('save.back')) + '</div>');
     var input = ET.$('#code-in', root);
-    input.focus();
+    if (scan) on('scan', function () {
+      ET.scanCode().then(function (text) {
+        var c = '';
+        try { c = new URL(text).searchParams.get('join') || ''; } catch (e) { c = text; }
+        c = String(c).replace(/\D/g, '');
+        if (c.length === 6) join(c);
+        else guestAsk(h('scan.other'));
+      }, function () {});
+    });
+    else input.focus();
     function tryJoin() {
       var c = input.value.replace(/\D/g, '');
       if (c.length !== 6) { input.focus(); return; }
