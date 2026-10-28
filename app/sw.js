@@ -9,14 +9,19 @@
    VERSION must change whenever the shell changes, or an installed copy keeps
    serving the old one. packer/et/generate.py (`npm run generate`) sets it from a
    hash of every SHELL file, and `easytransfer build` stamps card copies. */
-var VERSION = 'shell-c17a69a94322';
+<<<<<<< HEAD
+var VERSION = 'shell-2cb0f4258351';
+=======
+var VERSION = 'shell-598d77c30f26';
+>>>>>>> origin/main
 
 var SHELL = [
   'index.html', 'library.html', 'item.html', 'share.html', 'help.html', 'nearby.html',
   'manifest.webmanifest', 'privacy.html', 'save-guide.html',
   'assets/css/app.css', 'assets/css/consent.css', 'assets/css/save-guide.css',
-  'assets/css/help-device.css',
-  'assets/js/core.js', 'assets/js/i18n.js', 'assets/js/art.js', 'assets/js/analytics.js',
+  'assets/css/help-device.css', 'assets/css/tokens.css', 'assets/css/components/mascot.css',
+  'assets/art/kandili-village.webp', 'assets/art/kandili-village.jpg',
+  'assets/js/core.js', 'assets/js/brand/mascot.js', 'assets/js/i18n.js', 'assets/js/i18n-load.js', 'assets/js/i18n/en.js', 'assets/js/art.js', 'assets/js/analytics.js',
   'assets/js/home.js', 'assets/js/library.js', 'assets/js/item.js', 'assets/js/data/bible-books.js',
   'assets/js/share.js', 'assets/js/help.js', 'assets/js/save.js', 'assets/js/nearby.js', 'assets/js/save-guide.js',
   'assets/js/shared-library.js', 'assets/js/share-libraries.js', 'assets/js/visibility.js', 'assets/vendor/peerjs.min.js',
@@ -141,8 +146,14 @@ self.addEventListener('activate', function (e) {
 var SCOPE = new URL(self.registration.scope).pathname;
 var SHELL_PATHS = SHELL.map(function (p) { return SCOPE + p; });
 
+/* Interface strings, one small static file per language. Only English is
+   installed up front; another language is kept once the reader has used it,
+   so switching to it later works offline without installing all 38. */
+var STRINGS_PATH = new RegExp('^' + SCOPE.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + 'assets/js/i18n/[a-z]{2,3}\\.js$');
+
 function shellPath(url) {
   var path = url.pathname === SCOPE ? SCOPE + 'index.html' : url.pathname;
+  if (STRINGS_PATH.test(path)) return path;
   return SHELL_PATHS.indexOf(path) === -1 ? null : path;
 }
 

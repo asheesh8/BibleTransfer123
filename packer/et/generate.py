@@ -184,6 +184,7 @@ window.ET_SHARED_LIBRARY = {shared};
 <script defer src="assets/js/visibility.js"></script>
 <script defer src="assets/js/core.js"></script>
 <script defer src="assets/js/art.js"></script>
+<script src="assets/js/i18n-load.js"></script>
 <script defer src="assets/js/i18n.js"></script>
 <script defer src="assets/js/analytics.js"></script>
 <script defer src="assets/js/save.js"></script>

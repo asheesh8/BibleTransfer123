@@ -28,21 +28,26 @@
 }
 .et-kandili.is-tappable { pointer-events: auto; cursor: pointer; }
 
-/* Each part scales and swings about its own box, not the whole drawing. */
-.et-kandili g { transform-box: fill-box; }
+/* Each moving part scales and swings about its own box, not the whole
+   drawing. Only the named parts: the plain groups that place the art carry
+   transform attributes that must keep the drawing's own origin. */
+.et-kandili :is(.k-fly, .k-float, .k-glowwrap, .k-tilt, .k-body, .k-flame, .k-face,
+                .k-eyes, .k-mouth, .k-prop, .k-spark, .k-bubble, .k-ember) { transform-box: fill-box; }
 .et-kandili .k-body   { transform-origin: 50% 100%; }   /* squash on the base   */
 .et-kandili .k-flame  { transform-origin: 50% 100%; }   /* sways from the wick  */
 .et-kandili .k-eyes   { transform-origin: 50% 50%; }    /* blink to a line      */
 .et-kandili .k-glowwrap { transform-origin: 50% 50%; }
 .et-kandili .k-shadow { transform-box: fill-box; transform-origin: 50% 50%; }
 .et-kandili .k-tilt   { transform-origin: 50% 100%; }
-.et-kandili .k-arm--r { transform-origin: 100% 100%; }  /* the character's right shoulder */
-.et-kandili .k-arm--l { transform-origin: 0 100%; }
+/* Arms sit in a group already moved to the shoulder, so they swing from
+   their own origin, wherever the pose has turned them. */
+.et-kandili .k-arm    { transform-box: view-box; transform-origin: 0 0; }
 .et-kandili .k-prop   { transform-origin: 50% 50%; }
 
 /* Right-to-left pages mirror the character, as the brief asks. Every pose
    is drawn with no direction-sensitive symbol, so mirroring is safe. */
-[dir="rtl"] .et-kandili .k-mirror { transform: scaleX(-1); transform-box: view-box; transform-origin: 50% 50%; }
+/* view-box puts 0 0 at the drawing's own origin, its centre line. */
+[dir="rtl"] .et-kandili .k-mirror { transform: scaleX(-1); transform-box: view-box; transform-origin: 0 0; }
 
 /* ---------------------------------------------------------------- idle */
 .et-kandili[data-mood="idle"] .k-float  { animation: k-float 2.4s var(--et-ease-inout) infinite; }

@@ -83,7 +83,7 @@ These still need the ISO code by hand until the screens are split up:
 | `app/assets/js/item.js` | The ISO code in three long inline `r.lang === …` lists (native titles, "spoken in" wording, the share text). |
 | `app/assets/js/shared-library.js` | The ISO code in two inline `scope.lang === …` lists (page title, email wording). |
 | `packer/et/build.py` | The ISO code in the inline tuple that keeps DBS's video labels. |
-| `app/assets/js/i18n.js` | Only if it gets its own interface language. |
+| `app/assets/js/i18n/<code>.js` and `i18n.js` | Only if it gets its own interface language: a new strings file, a `LANGS` entry, and its lines in `SAY`. |
 
 ## 4. Test and document
 

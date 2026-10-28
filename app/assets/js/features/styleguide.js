@@ -3,12 +3,12 @@
    demos from the real tokens and components, so the page can never show a
    value the app does not use.
 
-   Depends on: ui/icons.js, brand/mascot.js, ui/sheet.js, ui/toast.js.
+   Depends on: core.js, ui/icons.js, brand/mascot.js, ui/sheet.js, ui/toast.js.
    Page-only; nothing in the app loads this file. The demo copy is English
    because this page is for the team and the board, not for readers.
    ========================================================================= */
 
-(function (ET) {
+window.ET.module('features/styleguide', ['core', 'ui/icons', 'brand/mascot', 'ui/sheet', 'ui/toast'], function (ET) {
   'use strict';
 
   var root = document.documentElement;
@@ -262,4 +262,4 @@
     var mq = window.matchMedia('(prefers-color-scheme: dark)');
     if (mq.addEventListener) mq.addEventListener('change', refresh);
   }
-})(window.ET = window.ET || {});
+});
