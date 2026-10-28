@@ -1,6 +1,6 @@
 # 0003. Animate the mascot as cut-out SVG parts
 
-Status: Proposed
+Status: Accepted (2026-10-28, Ashish)
 Date: 2026-10-28
 
 ## Context
