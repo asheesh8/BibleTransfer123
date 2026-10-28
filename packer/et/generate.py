@@ -147,6 +147,7 @@ PAGE = """<!doctype html>
 <link rel="stylesheet" href="assets/css/components/toast.css">
 <link rel="stylesheet" href="assets/css/consent.css">
 <link rel="stylesheet" href="assets/css/pages/screens.css">
+<link rel="stylesheet" href="assets/css/pages/partners.css">
 <script>
 window.ET_SHARED_LIBRARY = {shared};
 {guard}try {{
