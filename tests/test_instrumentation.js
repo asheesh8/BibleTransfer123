@@ -71,6 +71,7 @@ function fixture(options = {}) {
     $: (selector, root = body) => root.querySelector(selector),
     $$: (selector, root = body) => root.querySelectorAll(selector),
     esc: String, icon: () => '', human: String, pad: n => String(n).padStart(2, '0'),
+    native: false, online: !options.file, publicOrigin: 'https://example.test', publicHref: href => new URL(href || 'https://example.test/item.html', 'https://example.test').href,
     libraryScope: () => scope, contentLang: () => 'eng',
     library: () => ({ languages: { eng: { name: 'English', native: 'English' } }, resources: [item] }),
     byId: id => id === item.id ? item : null,
