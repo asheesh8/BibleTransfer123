@@ -79,3 +79,18 @@ test('the app never installs the website\'s service worker', () => {
   const app = boot({ native: true, protocol: 'https:', href: 'https://localhost/index.html' });
   assert.deepEqual(app.registrations, []);
 });
+
+test('a kept film can be deleted from the phone, and is forgotten', async () => {
+  const { ET, window } = boot({ native: true, protocol: 'https:', href: 'https://localhost/index.html' });
+  const deleted = [];
+  window.Capacitor.Plugins.Filesystem = { deleteFile: o => (deleted.push(o.path), Promise.resolve()) };
+  ET.store.set('et.kept', JSON.stringify({
+    'https://cdn/a.mp4': { uri: 'file:///d/a.mp4', name: 'a.mp4', bytes: 1, id: 'x' },
+    'https://cdn/b.mp4': { uri: 'file:///d/b.mp4', name: 'b.mp4', bytes: 2, id: 'y' }
+  }));
+  assert.deepEqual(Object.keys(ET.keptFiles()), ['https://cdn/a.mp4', 'https://cdn/b.mp4']);
+  await ET.forgetKept('https://cdn/a.mp4');
+  await ET.forgetKept('https://cdn/never.mp4');
+  assert.deepEqual(deleted, ['file:///d/a.mp4']);
+  assert.deepEqual(Object.keys(ET.keptFiles()), ['https://cdn/b.mp4']);
+});

@@ -51,7 +51,7 @@ init script in `~/.gradle/init.d/` (`https://maven-central.storage-download.goog
 
 ## Not done yet (Phase 1 and 2)
 
-- A "Saved on this phone" shelf, deleting kept files, and downloads that continue with the screen locked
+- Downloads that continue with the screen locked (kept files are listed under "Saved on this phone" on Home, with Delete)
 - Receiving into the app over the hotspot (today the other phone saves into its browser's downloads), and joining the Wi-Fi from the in-app scanner
 - Native share sheet (Android WebView has no `navigator.share`)
 - Store listings, signing, TestFlight and Play internal testing
