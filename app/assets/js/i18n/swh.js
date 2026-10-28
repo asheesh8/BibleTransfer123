@@ -26,7 +26,6 @@
   "lib.kind": "Aina",
   "lib.partner": "Maktaba",
   "lib.partner.main": "Sehemu kubwa ya maktaba hii inatoka hapa",
-  "lib.partner.other": "Maktaba nyingine",
   "lib.partner.all": "Ona zote {n}",
   "lib.lang": "Lugha",
   "lib.clear": "Futa",

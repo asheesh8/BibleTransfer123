@@ -28,7 +28,6 @@
   "lib.kind": "Lolenge ya eloko",
   "lib.partner": "Babibliotɛkɛ",
   "lib.partner.main": "Biloko mingi ya bibliotɛkɛ oyo euti awa",
-  "lib.partner.other": "Babibliotɛkɛ mosusu",
   "lib.partner.all": "Tala nyonso ({n})",
   "lib.lang": "Lokota",
   "lib.clear": "Longola oyo oluki",

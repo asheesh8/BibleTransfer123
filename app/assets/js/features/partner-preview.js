@@ -10,7 +10,7 @@
    would travel from phone to phone.
 
    Depends on: core.js, ui/sheet.js. English only: it is shown in meetings,
-   not to readers. Names are written out; no partner logos are used.
+   not to readers. Logos sit in assets/partners/ and show only here.
    ========================================================================= */
 
 window.ET.module('features/partner-preview', ['core', 'ui/sheet'], function (ET) {
@@ -21,11 +21,20 @@ window.ET.module('features/partner-preview', ['core', 'ui/sheet'], function (ET)
   var partners = [
     {
       id: 'cef', name: 'Child Evangelism Fellowship', mark: 'CEF', tone: 'gold',
+      logo: 'assets/partners/cef.webp',
       tagline: 'Bible lessons, songs and stories for children',
       samples: [
         { type: 'film', title: 'The Wordless Book', sub: 'A gospel lesson for children, told with colours' },
         { type: 'book', title: 'Bible lesson with picture cards', sub: 'A lesson a teacher can print or show on a phone' },
         { type: 'audio', title: 'Songs for children', sub: 'Bible songs to sing along with' }
+      ]
+    },
+    {
+      id: 'braxton', name: 'Dean Braxton', mark: 'DB', tone: 'sky',
+      tagline: 'Talks and testimony, to watch and pass on',
+      samples: [
+        { type: 'film', title: 'A talk by Dean Braxton', sub: 'Plays on the phone, saves for later, passes on' },
+        { type: 'book', title: 'A book by Dean Braxton', sub: 'To read on the phone, with no internet' }
       ]
     },
     {
@@ -38,6 +47,7 @@ window.ET.module('features/partner-preview', ['core', 'ui/sheet'], function (ET)
     },
     {
       id: 'youversion', name: 'YouVersion', mark: 'YV', tone: 'purple',
+      logo: 'assets/partners/youversion-kids.webp',
       tagline: 'Reading plans, audio Bibles and Bible stories for kids',
       samples: [
         { type: 'scripture', title: '7-day reading plan', sub: 'A daily plan that reads with no internet' },
@@ -69,7 +79,8 @@ window.ET.module('features/partner-preview', ['core', 'ui/sheet'], function (ET)
     var body =
       '<div class="pp" lang="en" dir="ltr">' +
         '<header class="partner-head partner-head--' + p.tone + '">' +
-          '<span class="partner-mark" aria-hidden="true">' + esc(p.mark) + '</span>' +
+          '<span class="partner-mark' + (p.logo ? ' partner-mark--logo' : '') + '" aria-hidden="true">' +
+            (p.logo ? '<img src="' + esc(p.logo) + '" alt="">' : esc(p.mark)) + '</span>' +
           '<span class="partner-head__text"><span class="partner-soon">Partner preview · coming soon</span>' +
           '<strong class="pp-name">' + esc(p.name) + '</strong>' +
           '<span class="partner-tag">' + esc(p.tagline) + '</span></span></header>' +
