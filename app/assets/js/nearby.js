@@ -29,6 +29,11 @@
 (function (ET) {
   'use strict';
   var t = ET.i18n.t, h = ET.i18n.h;
+  var ASSETS = ((document.currentScript && document.currentScript.src) || '')
+    .replace(/js\/nearby\.js(\?.*)?$/, '');
+  // The Android app can open its own Wi-Fi and share with no internet
+  // (features/hotspot.js, fetched when chosen).
+  var HOTSPOT = !!(ET.native && window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.Hotspot);
 
   var scope = ET.libraryScope();
   var item = ET.qs('id') ? ET.byId(ET.qs('id')) : null;
@@ -366,9 +371,26 @@
           '<span class="ico" style="background:var(--sky-wash);color:var(--sky-deep)">' + ET.icon('save') + '</span>' +
           '<span><span class="t">' + h('nearby.receive') + '</span><span class="s">' + h('nearby.receive.sub') + '</span></span>' +
           '<span class="chev flip">' + ET.icon('chev') + '</span></button>' +
+        (HOTSPOT ? '<button class="tile" id="r-hotspot" style="width:100%;text-align:start">' +
+          '<span class="ico" style="background:var(--green-wash);color:var(--green-deep)">' + ET.icon('wifi') + '</span>' +
+          '<span><span class="t">' + h('hotspot.tile') + '</span><span class="s">' + h('hotspot.tile.sub') + '</span></span>' +
+          '<span class="chev flip">' + ET.icon('chev') + '</span></button>' : '') +
       '</div>');
+    on('r-hotspot', hotspot);
     on('r-send', function () { host(); });
     on('r-recv', function () { guestAsk(); });
+  }
+
+  // ---- 2c. sender, with no internet: the phone's own Wi-Fi
+  function hotspot() {
+    reset();
+    S.step = -1;     // off the Nearby steps: a language change must not reset it
+    function go() { ET.hotspot.open(root, role); }
+    if (ET.hotspot) return go();
+    var sc = document.createElement('script');
+    sc.src = ASSETS + 'js/features/hotspot.js';
+    sc.onload = go;
+    document.head.appendChild(sc);
   }
 
   // ---- 2a. sender: show a code and wait

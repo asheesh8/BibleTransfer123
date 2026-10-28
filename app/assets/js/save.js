@@ -636,5 +636,5 @@
   }
 
   ET.save = { open: open, openMany: openMany, canPickFolder: CAN_DIR, clean: clean, extOf: extOf,
-             inApp: IN_APP, local: local, keep: keepInApp };
+             inApp: IN_APP, local: local, keep: keepInApp, kept: kept };
 })(window.ET);
