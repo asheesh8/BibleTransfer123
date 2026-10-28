@@ -578,11 +578,36 @@ def cookie_header(value, production, expires=False):
     return f"{COOKIE_NAME}={value}; Path=/; HttpOnly; SameSite=Strict; Max-Age={0 if expires else SESSION_SECONDS}" + ("; Secure" if production else "")
 
 
-def require_same_origin(headers, production):
+# The iPhone and Android apps (Capacitor) load their pages from these origins
+# and call the public endpoints (analytics, emails) on this site. They are
+# allowed there only, never on admin endpoints, and the usual rate limits apply.
+APP_ORIGINS = frozenset(("capacitor://localhost", "https://localhost"))
+
+
+def app_cors(headers):
+    """CORS response headers for an app origin, or {} for anything else."""
+    origin = headers.get("origin", "")
+    if origin not in APP_ORIGINS:
+        return {}
+    return {"Access-Control-Allow-Origin": origin, "Access-Control-Allow-Methods": "POST, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type", "Access-Control-Max-Age": "86400", "Vary": "Origin"}
+
+
+def preflight(headers):
+    """Answer a CORS preflight from the apps; refuse every other origin."""
+    cors = app_cors(headers)
+    if not cors or headers.get("access-control-request-method", "POST") != "POST":
+        raise APIError(403, "This origin may not call this API.")
+    return 204, "", {"Cache-Control": "no-store", **cors}
+
+
+def require_same_origin(headers, production, allow_apps=False):
     # CSRF guard for state-changing requests (admin actions, library emails): any
     # request whose Origin is not exactly this site is refused, so another page
     # cannot drive these endpoints from a visitor's browser.
     origin = headers.get("origin", "")
+    if allow_apps and origin in APP_ORIGINS:
+        return
     configured = os.environ.get("EASYTRANSFER_PUBLIC_ORIGIN", "")
     scheme = "https" if production else "http"
     host = headers.get("host", "")
@@ -912,12 +937,16 @@ def dispatch(path, method, headers, raw=b"", client_ip="", production=False, pub
             if method != "GET":
                 raise APIError(405, "Method not allowed.")
             return dispatch_qr(route, headers, client_ip, production, public_root, now)
+        if route.path == "/api/analytics":
+            output_headers.update(app_cors(headers))
+            if method == "OPTIONS":
+                return preflight(headers)
         if method not in (("POST",) if route.path == "/api/analytics" else ("GET", "POST")):
             raise APIError(405, "Method not allowed.")
         limit = MAX_VISIBILITY_BODY if route.path == "/api/visibility" else MAX_BODY
         payload = None
         if method == "POST":
-            require_same_origin(headers, production)
+            require_same_origin(headers, production, allow_apps=route.path == "/api/analytics")
             if headers.get("content-type", "").split(";", 1)[0].strip().lower() != "application/json":
                 raise APIError(415, "Use application/json.")
             if len(raw) > limit:
