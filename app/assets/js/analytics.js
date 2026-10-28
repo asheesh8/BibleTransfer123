@@ -5,7 +5,7 @@
   'use strict';
   var VERSION = 1, CONSENT_AGE = 180 * 86400000, VISITOR_AGE = 90 * 86400000;
   var SESSION_AGE = 30 * 60000, QUEUE_AGE = 10 * 60000;
-  var web = /^https?:$/.test(location.protocol);
+  var web = ET.online;
   var queue = [], timer = null, sending = false, controller = null, generation = 0;
   var visitor = '', session = null, mounted = false, pageTracked = false;
   var TYPES = ['page_view', 'session_start', 'share_intent', 'share_complete', 'share_cancel',

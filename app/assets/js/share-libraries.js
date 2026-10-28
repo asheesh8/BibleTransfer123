@@ -61,11 +61,11 @@
     ['maasai', 'mas', 'Maasai', 'ɔl Maa']
   ].sort(function (a, b) { return a[2].localeCompare(b[2], 'en'); });
   var resources = ET.library().resources;
-  var web = location.protocol === 'http:' || location.protocol === 'https:';
+  var web = ET.online;
   var t = ET.i18n.t, h = ET.i18n.h;
 
   function urlFor(slug) {
-    return web ? location.origin + '/' + slug : slug + '/index.html';
+    return web ? ET.publicOrigin + '/' + slug : slug + '/index.html';
   }
 
   function render() {

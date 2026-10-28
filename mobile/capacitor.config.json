@@ -1,0 +1,12 @@
+{
+  "appId": "org.villageservers.library",
+  "appName": "The Library",
+  "webDir": "www",
+  "android": {
+    "backgroundColor": "#FFFBF2"
+  },
+  "ios": {
+    "backgroundColor": "#FFFBF2",
+    "contentInset": "never"
+  }
+}
