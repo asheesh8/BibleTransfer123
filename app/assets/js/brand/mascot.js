@@ -1,8 +1,8 @@
 /* ============================================================================
    ET.mascot: Kandili, the lantern, drawn and brought to life.
 
-   Depends on: nothing but the browser (and css/components/mascot.css for the
-   looping moods). Classic script, attaches to window.ET, runs on file://.
+   Depends on: core.js (the module registry) and css/components/mascot.css for the
+   looping moods. Classic script on window.ET, runs on file://.
 
    HOW IT IS BUILT
    The flat art is cut into parts (body, glass, flame, eyes, mouth, arms,
@@ -24,9 +24,9 @@
      ET.mascot.markup('share', { size: 48 })   // a still SVG string
      ET.mascot.mount(document)                  // upgrade every [data-kandili]
 
-   The geometry matches the concept sheet in brand/mascot (the Kandili brief).
-   When the final ChatGPT art is traced, only the PART strings below change;
-   the API, poses, moves and moods stay.
+   The parts are traced from Ashish's final ChatGPT art (brand/mascot in the
+   project files). New art changes only the PART strings below; the API,
+   poses, moves and moods stay.
    ========================================================================= */
 
 window.ET.module('brand/mascot', ['core'], function (ET) {
@@ -35,104 +35,129 @@ window.ET.module('brand/mascot', ['core'], function (ET) {
   /* Fixed palette: Kandili looks the same in light and dark. Mirrors the
      --et-k-* tokens in css/tokens.css (a test keeps them equal). */
   var C = {
-    brass: '#E8A317', shade: '#B87D06', glass: '#FDF3DC', shine: '#FFFBF2',
-    face: '#4E1F64', glow: '#FFE7A3', blush: '#F4A38C', go: '#3FA65C',
-    sky: '#2E86AB', card: '#6B2E86'
+    brass: '#E8A317', mid: '#D4920F', shade: '#B87D06', glass: '#FDF3DC',
+    shine: '#FFFBF2', face: '#3A1650', glow: '#FFE7A3', blush: '#F4A38C',
+    tongue: '#E8664F', go: '#3FA65C', sky: '#2E86AB', card: '#6B2E86'
   };
 
   // ------------------------------------------------------------------ parts
-  // Coordinates: the lantern stands on (0, 110) with the glass centred near
-  // the origin. The character's right hand is on the viewer's left (-x).
+  // Traced from the final ChatGPT art (brand/mascot/png/poses): a ring
+  // handle, a cap with three vents, a trapezoid glass between two frame bars,
+  // a banded base on two feet, and chunky mitten arms in front of the body.
+  // The body is drawn in the art's own 200 x 250 frame (centre x = 100,
+  // ground y = 236) and ART places it in the stage frame, where the lantern
+  // stands on (0, 120) with the glass near the origin. Effects, the glow and
+  // the shadow are drawn in the stage frame.
+  var ART = 'matrix(1.25 0 0 1.25 -125 -175)';
+  var f = function (c) { return ' fill="' + c + '"'; };
+  var line = function (c, w) { return ' stroke="' + c + '" stroke-width="' + w + '" stroke-linecap="round" fill="none"'; };
 
+  var FLAME_PATHS = '<path d="M100,30 C88,42 84,52 88,62 C90,68 96,70 100,70 C104,70 110,68 112,62 C116,52 112,42 100,30z"' + f(C.brass) + '/>' +
+                    '<path d="M100,44 C94,52 93,58 95,63 C96,66 98,67 100,67 C102,67 104,66 105,63 C107,58 106,52 100,44z"' + f(C.glow) + '/>';
+  var sized = function (k) { return '<g transform="translate(100,70) scale(' + k + ') translate(-100,-70)">' + FLAME_PATHS + '</g>'; };
   var FLAME = {
-    normal: '<path d="M0,-150 C-16,-128 -14,-112 0,-104 C14,-112 16,-128 0,-150z" fill="' + C.brass + '"/>' +
-            '<path d="M0,-134 C-6,-124 -6,-116 0,-112 C6,-116 6,-124 0,-134z" fill="' + C.glow + '"/>',
-    tall:   '<path d="M0,-178 C-26,-140 -20,-112 0,-102 C20,-112 26,-140 0,-178z" fill="' + C.brass + '"/>' +
-            '<path d="M0,-152 C-10,-132 -9,-118 0,-112 C9,-118 10,-132 0,-152z" fill="' + C.glow + '"/>',
-    small:  '<path d="M0,-126 C-8,-115 -7,-108 0,-104 C7,-108 8,-115 0,-126z" fill="' + C.brass + '"/>' +
-            '<path d="M0,-117 C-3,-112 -3,-108 0,-106 C3,-108 3,-112 0,-117z" fill="' + C.glow + '"/>',
-    ember:  '<ellipse cx="0" cy="-107" rx="5" ry="4" fill="' + C.shade + '"/>'
+    normal: FLAME_PATHS,
+    tall:   sized(1.3),
+    small:  sized(.6),
+    ember:  '<ellipse cx="100" cy="66" rx="6" ry="4.5"' + f(C.shade) + '/>'
   };
 
-  // The little flame left on the ground when Kandili flies off to a friend.
-  var EMBER = '<path d="M0,88 C-9,100 -8,108 0,113 C8,108 9,100 0,88z" fill="' + C.brass + '"/>' +
-              '<path d="M0,99 C-3,104 -3,108 0,110 C3,108 3,104 0,99z" fill="' + C.glow + '"/>';
+  var HANDLE = '<circle cx="100" cy="16" r="12"' + line(C.mid, 7) + '/>';
+  var CAP = '<rect x="78" y="62" width="44" height="10" rx="5"' + f(C.brass) + '/>' +
+            '<rect x="70" y="70" width="60" height="20" rx="7"' + f(C.brass) + '/>' +
+            '<rect x="80" y="75" width="6" height="10" rx="3"' + f(C.shade) + '/>' +
+            '<rect x="97" y="75" width="6" height="10" rx="3"' + f(C.shade) + '/>' +
+            '<rect x="114" y="75" width="6" height="10" rx="3"' + f(C.shade) + '/>' +
+            '<rect x="60" y="88" width="80" height="11" rx="5.5"' + f(C.mid) + '/>';
+  var GLASS = '<path d="M72,99 H128 Q136,99 138,108 L146,176 Q148,190 134,190 H66 Q52,190 54,176 L62,108 Q64,99 72,99z"' + f(C.glass) + '/>' +
+              '<path d="M68,108 L62,170"' + line(C.shine, 6) + '/>' +
+              '<path d="M64,96 Q52,140 50,186 M136,96 Q148,140 150,186"' + line(C.brass, 9) + '/>' +
+              '<circle cx="51" cy="144" r="6"' + f(C.mid) + '/><circle cx="149" cy="144" r="6"' + f(C.mid) + '/>';
+  var BASE = '<rect x="48" y="184" width="104" height="14" rx="7"' + f(C.brass) + '/>' +
+             '<rect x="54" y="196" width="92" height="11" rx="5.5"' + f(C.mid) + '/>' +
+             '<rect x="60" y="205" width="80" height="10" rx="5"' + f(C.brass) + '/>' +
+             '<ellipse cx="80" cy="222" rx="15" ry="9"' + f(C.mid) + '/><ellipse cx="120" cy="222" rx="15" ry="9"' + f(C.mid) + '/>';
+  var CHEEKS = '<ellipse cx="78" cy="160" rx="8" ry="5"' + f(C.blush) + ' opacity=".75"/>' +
+               '<ellipse cx="122" cy="160" rx="8" ry="5"' + f(C.blush) + ' opacity=".75"/>';
 
-  var eyePair = function (dx, dy, hx, hy) {
-    return '<ellipse cx="' + (-20 + dx) + '" cy="' + (-4 + dy) + '" rx="11" ry="15" fill="' + C.face + '"/>' +
-           '<ellipse cx="' + (20 + dx) + '" cy="' + (-4 + dy) + '" rx="11" ry="15" fill="' + C.face + '"/>' +
-           '<circle cx="' + (-16 + dx + hx) + '" cy="' + (-10 + dy + hy) + '" r="4.5" fill="#fff"/>' +
-           '<circle cx="' + (24 + dx + hx) + '" cy="' + (-10 + dy + hy) + '" r="4.5" fill="#fff"/>';
+  // The little flame left on the ground when Kandili flies off to a friend
+  // (stage frame).
+  var EMBER = '<path d="M0,88 C-9,100 -8,108 0,113 C8,108 9,100 0,88z"' + f(C.brass) + '/>' +
+              '<path d="M0,99 C-3,104 -3,108 0,110 C3,108 3,104 0,99z"' + f(C.glow) + '/>';
+
+  // Eyes blink (the first string); brows (the second) stay put.
+  var pupils = function (dy, hx, hy, rx, ry) {
+    return '<ellipse cx="85" cy="' + (142 + dy) + '" rx="' + rx + '" ry="' + ry + '"' + f(C.face) + '/>' +
+           '<ellipse cx="115" cy="' + (142 + dy) + '" rx="' + rx + '" ry="' + ry + '"' + f(C.face) + '/>' +
+           '<circle cx="' + (88 + hx) + '" cy="' + (138 + dy + hy) + '" r="3.2" fill="#fff"/>' +
+           '<circle cx="' + (118 + hx) + '" cy="' + (138 + dy + hy) + '" r="3.2" fill="#fff"/>';
   };
-  var arcs = function (d) {
-    return '<path d="M-32,-2 Q-20,' + d + ' -8,-2" stroke="' + C.face + '" stroke-width="7" stroke-linecap="round" fill="none"/>' +
-           '<path d="M8,-2 Q20,' + d + ' 32,-2" stroke="' + C.face + '" stroke-width="7" stroke-linecap="round" fill="none"/>';
-  };
+  var brows = function (d) { return '<path d="' + d + '"' + line(C.face, 2.6) + '/>'; };
   var EYES = {
-    open:    eyePair(0, 0, 0, 0),
-    up:      eyePair(0, -3, 2, -2),
-    side:    eyePair(5, -1, 3, 0),
-    happy:   arcs(-18),
-    sleepy:  arcs(6),
-    closed:  '<path d="M-31,0 H-9 M9,0 H31" stroke="' + C.face + '" stroke-width="6" stroke-linecap="round"/>',
-    worried: '<ellipse cx="-20" cy="0" rx="10" ry="13" fill="' + C.face + '"/>' +
-             '<ellipse cx="20" cy="0" rx="10" ry="13" fill="' + C.face + '"/>' +
-             '<circle cx="-17" cy="-5" r="4" fill="#fff"/><circle cx="23" cy="-5" r="4" fill="#fff"/>' +
-             '<path d="M-32,-16 L-12,-24 M32,-16 L12,-24" stroke="' + C.face + '" stroke-width="5" stroke-linecap="round"/>'
+    open:    [pupils(0, 0, 0, 8, 10), brows('M78,124 Q85,119 92,123 M108,123 Q115,119 122,124')],
+    up:      [pupils(-2, 0, -3, 8, 10), brows('M78,122 Q85,116 92,121 M108,121 Q115,116 122,122')],
+    side:    [pupils(0, 2, 0, 8, 10), brows('M78,126 Q85,122 92,126 M108,123 Q115,118 122,122')],
+    happy:   ['<path d="M77,144 Q85,132 93,144 M107,144 Q115,132 123,144"' + line(C.face, 4.5) + '/>', ''],
+    sleepy:  ['<path d="M77,140 H93 M107,140 H123"' + line(C.face, 3) + '/>' +
+              '<path d="M78,141 Q85,149 92,141 M108,141 Q115,149 122,141"' + f(C.face) + '/>', ''],
+    closed:  ['<path d="M77,142 Q85,150 93,142 M107,142 Q115,150 123,142"' + line(C.face, 4) + '/>', ''],
+    worried: [pupils(2, -1, 0, 7.5, 9), '<path d="M77,130 L92,125 M123,130 L108,125"' + line(C.face, 2.8) + '/>']
   };
 
   var MOUTH = {
-    smile:  '<path d="M-12,24 Q0,36 12,24" stroke="' + C.face + '" stroke-width="6" stroke-linecap="round" fill="none"/>',
-    open:   '<path d="M-16,20 Q0,50 16,20z" fill="' + C.face + '"/><path d="M-8,34 Q0,42 8,34" fill="' + C.blush + '"/>',
-    o:      '<ellipse cx="0" cy="28" rx="7" ry="9" fill="' + C.face + '"/>',
-    wobble: '<path d="M-12,30 Q-6,24 0,30 Q6,36 12,30" stroke="' + C.face + '" stroke-width="5" stroke-linecap="round" fill="none"/>',
-    flat:   '<path d="M-10,28 H10" stroke="' + C.face + '" stroke-width="5" stroke-linecap="round"/>',
-    tiny:   '<ellipse cx="0" cy="28" rx="4" ry="3.5" fill="' + C.face + '"/>'
+    smile:  '<path d="M92,160 Q100,168 108,160"' + line(C.face, 3.4) + '/>',
+    open:   '<path d="M90,157 H110 Q109,172 100,172 Q91,172 90,157z"' + f(C.face) + '/>' +
+            '<path d="M94,167 Q100,163 106,167 Q104,171 100,171 Q96,171 94,167z"' + f(C.tongue) + '/>',
+    o:      '<ellipse cx="100" cy="164" rx="4.5" ry="5.5"' + f(C.face) + '/>',
+    wobble: '<path d="M90,165 Q95,159 100,164 Q105,169 110,163"' + line(C.face, 3) + '/>',
+    flat:   '<path d="M93,163 H107"' + line(C.face, 3.2) + '/>',
+    tiny:   '<ellipse cx="100" cy="164" rx="3" ry="2.5"' + f(C.face) + '/>'
   };
 
-  var limb = function (d) {
-    return '<path d="' + d + '" stroke="' + C.shade + '" stroke-width="12" stroke-linecap="round" fill="none"/>';
+  // A mitten hanging from the shoulder at (0, 0); the pose turns it. The
+  // .k-arm group pivots on the shoulder, so the wave swings from there.
+  // k-arm--r is the arm on the viewer's right, the one that waves.
+  var arm = function (side, deg) {
+    var s = side === 'r' ? 1 : -1;
+    return '<g transform="translate(' + (100 + s * 50) + ',156)"><g class="k-arm k-arm--' + side + '">' +
+      '<g transform="rotate(' + (s * deg) + ') scale(1.35)">' +
+      '<path d="M' + (s * -2) + ',-4 C' + (s * 10) + ',-2 ' + (s * 18) + ',14 ' + (s * 16) + ',30 C' + (s * 14) + ',42 ' +
+        (s * 2) + ',44 ' + (s * -4) + ',36 C' + (s * -8) + ',28 ' + (s * -8) + ',8 ' + (s * -2) + ',-4z"' + f(C.brass) + '/>' +
+      '<ellipse cx="' + (s * 15) + '" cy="20" rx="5" ry="7"' + f(C.mid) + '/></g></g></g>';
   };
-  var hand = function (x, y, r) { return '<circle cx="' + x + '" cy="' + y + '" r="' + (r || 11) + '" fill="' + C.brass + '"/>'; };
-  var arm = function (side, inner) { return '<g class="k-arm k-arm--' + side + '">' + inner + '</g>'; };
-
-  // Arms behind the body (resting, raised) or in front of it (holding).
+  // Degrees each arm turns from hanging down: [viewer's left, viewer's right].
   var ARMS = {
-    none:  { back: '', front: '' },
-    rest:  { back: arm('r', limb('M-66,10 Q-90,30 -86,56')) + arm('l', limb('M66,10 Q90,30 86,56')), front: '' },
-    wave:  { back: arm('r', limb('M-66,-10 Q-100,-30 -104,-70') + hand(-104, -74, 12)) +
-                   arm('l', limb('M66,10 Q90,30 86,56')), front: '' },
-    cheer: { back: arm('r', limb('M-66,-10 Q-96,-40 -100,-84') + hand(-100, -88, 12)) +
-                   arm('l', limb('M66,-10 Q96,-40 100,-84') + hand(100, -88, 12)), front: '' },
-    think: { back: arm('l', limb('M66,10 Q90,30 86,56')),
-             front: arm('r', limb('M-60,0 Q-96,-40 -54,-92') + hand(-52, -94, 11)) },
-    hold:  { back: '', front: arm('r', limb('M-64,0 Q-74,58 -32,62') + hand(-30, 62, 10)) +
-                              arm('l', limb('M64,0 Q74,58 32,62') + hand(30, 62, 10)) }
+    none:  [0, 0],
+    rest:  [0, 0],
+    wave:  [0, -150],
+    cheer: [-150, -150],
+    think: [0, -165],
+    hold:  [55, 55]
   };
 
-  // Props are held in both hands, centred, so a mirrored pose still offers
-  // with "both hands" (never the left alone) and nothing points one way.
+  // Props are held in both hands, centred low on the base, so a mirrored
+  // pose still offers with both hands and nothing points one way.
   var PROP = {
     none: '',
-    play: '<circle cx="0" cy="68" r="22" fill="' + C.go + '"/><path d="M-7,58 L11,68 L-7,78z" fill="#fff"/>',
-    card: '<rect x="-30" y="40" width="60" height="42" rx="9" fill="' + C.card + '"/>' +
-          '<path d="M-11,58 L0,69 L11,58 M0,69 V47" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>',
-    flame: '<circle cx="0" cy="68" r="18" fill="' + C.glow + '" opacity=".8"/>' +
-           '<path d="M0,44 C-11,58 -10,71 0,78 C10,71 11,58 0,44z" fill="' + C.brass + '"/>' +
-           '<path d="M0,58 C-4,64 -4,69 0,73 C4,69 4,64 0,58z" fill="' + C.glow + '"/>'
+    play: '<circle cx="100" cy="200" r="18"' + f(C.go) + '/><path d="M94,191 L109,200 L94,209z" fill="#fff"/>',
+    card: '<rect x="78" y="184" width="44" height="32" rx="7"' + f(C.card) + '/>' +
+          '<path d="M100,190 V206 M93,199 L100,206 L107,199" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>',
+    flame: '<circle cx="100" cy="200" r="16"' + f(C.glow) + ' opacity=".8"/>' +
+           '<path d="M100,184 C92,193 91,200 93,205 C95,210 105,210 107,205 C109,200 108,193 100,184z"' + f(C.brass) + '/>' +
+           '<path d="M100,195 C97,199 97,202 98,204 C99,206 101,206 102,204 C103,202 103,199 100,195z"' + f(C.glow) + '/>'
   };
 
   var SPARK = 'M0,-14 L4,-4 14,0 4,4 0,14 -4,4 -14,0 -4,-4z';
   var sparkle = function (x, y, s) {
-    return '<g class="k-spark" transform="translate(' + x + ',' + y + ') scale(' + s + ')">' +
-           '<path d="' + SPARK + '" fill="' + C.brass + '"/></g>';
+    return '<g transform="translate(' + x + ',' + y + ') scale(' + s + ')"><g class="k-spark">' +
+           '<path d="' + SPARK + '"' + f(C.brass) + '/></g></g>';
   };
   var FX = {
     none: '',
     sparkles: sparkle(-112, -132, 1) + sparkle(122, -142, .8) + sparkle(-134, 34, .6) + sparkle(140, 26, .7),
-    bubbles: '<circle class="k-bubble" cx="70" cy="-118" r="7" fill="' + C.sky + '"/>' +
-             '<circle class="k-bubble" cx="84" cy="-132" r="5" fill="' + C.sky + '"/>' +
-             '<circle class="k-bubble" cx="76" cy="-146" r="4" fill="' + C.sky + '"/>'
+    bubbles: '<circle class="k-bubble" cx="56" cy="-118" r="7"' + f(C.sky) + '/>' +
+             '<circle class="k-bubble" cx="70" cy="-132" r="5"' + f(C.sky) + '/>' +
+             '<circle class="k-bubble" cx="62" cy="-146" r="4"' + f(C.sky) + '/>'
   };
 
   // ------------------------------------------------------------------ poses
@@ -266,30 +291,25 @@ window.ET.module('brand/mascot', ['core'], function (ET) {
   // ----------------------------------------------------------------- markup
   function inner(p) {
     var arms = ARMS[p.arms] || ARMS.none;
+    var eyes = EYES[p.eyes];
     var tilt = p.tilt ? ' transform="rotate(' + p.tilt + ')"' : '';
     return '<g class="k-mirror">' +
-      '<ellipse class="k-shadow" cx="0" cy="120" rx="70" ry="10" fill="' + C.face + '" opacity=".15"/>' +
+      '<ellipse class="k-shadow" cx="0" cy="120" rx="66" ry="9"' + f(C.face) + ' opacity=".15"/>' +
       '<g class="k-ember" opacity="0">' + EMBER + '</g>' +
       '<g class="k-fly"><g class="k-float">' +
-        '<g class="k-glowwrap"><circle class="k-glow" cx="0" cy="10" r="' + Math.round(120 * p.glow) + '" fill="' + C.glow + '" opacity=".35"/></g>' +
-        '<g class="k-tilt"><g' + tilt + '><g class="k-body">' +
-          '<path d="M-22,-112 a22,22 0 0 1 44,0" fill="none" stroke="' + C.shade + '" stroke-width="9" stroke-linecap="round"/>' +
+        '<g class="k-glowwrap"><circle class="k-glow" cx="0" cy="0" r="' + Math.round(120 * p.glow) + '"' + f(C.glow) + ' opacity=".35"/></g>' +
+        '<g class="k-tilt"><g' + tilt + '><g class="k-body"><g transform="' + ART + '">' +
+          HANDLE +
           '<g class="k-flame">' + FLAME[p.flame] + '</g>' +
-          '<rect x="-58" y="-104" width="116" height="26" rx="13" fill="' + C.shade + '"/>' +
-          arms.back +
-          '<path d="M-62,-80 H62 L74,72 Q76,92 56,92 H-56 Q-76,92 -74,72z" fill="' + C.brass + '"/>' +
-          '<path d="M-46,-66 H46 L56,64 Q57,78 42,78 H-42 Q-57,78 -56,64z" fill="' + C.glass + '"/>' +
-          '<path d="M-40,-58 Q-44,0 -46,40" stroke="' + C.shine + '" stroke-width="8" stroke-linecap="round" fill="none" opacity=".9"/>' +
-          '<g class="k-face">' +
-            '<ellipse cx="-30" cy="22" rx="11" ry="7" fill="' + C.blush + '" opacity=".7"/>' +
-            '<ellipse cx="30" cy="22" rx="11" ry="7" fill="' + C.blush + '" opacity=".7"/>' +
-            '<g class="k-eyes">' + EYES[p.eyes] + '</g>' +
+          CAP + GLASS +
+          '<g class="k-face">' + CHEEKS +
+            '<g class="k-eyes">' + eyes[0] + '</g>' + eyes[1] +
             '<g class="k-mouth">' + MOUTH[p.mouth] + '</g>' +
           '</g>' +
-          '<rect x="-66" y="88" width="132" height="22" rx="11" fill="' + C.shade + '"/>' +
+          BASE +
           '<g class="k-prop">' + PROP[p.prop] + '</g>' +
-          arms.front +
-        '</g></g></g>' +
+          arm('l', arms[0]) + arm('r', arms[1]) +
+        '</g></g></g></g>' +
       '</g></g>' +
       '<g class="k-fx">' + FX[p.fx] + '</g>' +
     '</g>';

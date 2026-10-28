@@ -6,7 +6,7 @@
   "scripts": {
     "build": "python3 packer/et/generate.py",
     "build:check": "python3 packer/et/generate.py --check",
-    "test": "python3 -m unittest discover -s tests -p 'test_*.py' && node --test tests/test_analytics_client.js tests/test_sw.js tests/test_i18n.js tests/test_startup.js tests/test_visibility.js tests/test_modules.js tests/test_design_system.js && node tests/test_instrumentation.js && node tests/test_admin.js && node tests/test_admin_journeys.js",
+    "test": "python3 -m unittest discover -s tests -p 'test_*.py' && node --test tests/test_analytics_client.js tests/test_sw.js tests/test_i18n.js tests/test_startup.js tests/test_visibility.js tests/test_modules.js tests/test_design_system.js tests/test_i18n_files.js && node tests/test_instrumentation.js && node tests/test_admin.js && node tests/test_admin_journeys.js",
     "test:e2e": "playwright test",
     "test:e2e:chromium": "E2E_ENGINES=chromium playwright test",
     "test:e2e:report": "playwright show-report",

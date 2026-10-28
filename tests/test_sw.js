@@ -259,3 +259,16 @@ test('background installation limits concurrent downloads and still caches the e
   assert.equal(active, 0);
   assert.equal(h.self.skipped, true);
 });
+
+test('interface strings: English installs with the shell, other languages are kept once used', async () => {
+  const h = harness();
+  await h.lifecycle('install');
+  assert.ok(h.context.SHELL.includes('assets/js/i18n/en.js'));
+  assert.ok(h.context.SHELL.includes('assets/js/i18n-load.js'));
+  assert.ok(!h.context.SHELL.includes('assets/js/i18n/swh.js'), 'all 38 tables must not install up front');
+  assert.equal((await h.dispatch('/assets/js/i18n/swh.js')).intercepted, true);
+  h.offline(true);
+  assert.equal((await h.dispatch('/assets/js/i18n/swh.js')).response.body, 'server:/assets/js/i18n/swh.js');
+  for (const url of ['/assets/js/i18n/swahili.js', '/assets/js/i18n/en.json', '/assets/js/i18n/x.json'])
+    assert.equal((await h.dispatch(url)).intercepted, false, url);
+});

@@ -64,12 +64,14 @@
   /* Kandili never changes with the theme: the lantern is the same lantern in
      the dark. Only mascot.css reads these. */
   --et-k-brass:  #E8A317;
+  --et-k-mid:    #D4920F;
   --et-k-shade:  #B87D06;
   --et-k-glass:  #FDF3DC;
   --et-k-shine:  #FFFBF2;
-  --et-k-face:   #4E1F64;
+  --et-k-face:   #3A1650;
   --et-k-glow:   #FFE7A3;
   --et-k-blush:  #F4A38C;
+  --et-k-tongue: #E8664F;
   --et-k-go:     #3FA65C;
   --et-k-sky:    #2E86AB;
   --et-k-card:   #6B2E86;
