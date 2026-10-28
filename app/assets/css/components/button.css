@@ -1,0 +1,139 @@
+/* ============================================================================
+   et-btn: the pressable button.
+
+   A chunky face on a darker lip, so it reads as something to press even to
+   someone who has never used a touchscreen app. On press the face drops onto
+   the lip. Always an icon plus a word: the icon carries meaning for a reader
+   who cannot read the label, the word for one who cannot read the icon.
+
+   <button class="et-btn et-btn--go">
+     <svg class="et-icon">…</svg><span>Play</span>
+   </button>
+
+   Tones:   (default brand) --go --gold --info --danger --quiet --ghost
+   Sizes:   --sm (48 px) (default 56 px) --lg (64 px)
+   Shape:   --block (full width)  --icon (square, needs aria-label)
+   States:  :disabled  aria-busy="true" (spinner)  aria-pressed="true"
+            .is-done (shows the check icon in .et-btn__done)
+   ========================================================================= */
+
+.et-btn {
+  --face: var(--et-fill-brand);
+  --on:   var(--et-on-brand);
+  --edge: var(--et-lip-brand);
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--et-space-2);
+  min-height: var(--et-tap);
+  min-width: var(--et-tap);
+  margin: 0 0 var(--et-lip);
+  padding: var(--et-space-2) var(--et-space-5);
+  border: 0;
+  border-radius: var(--et-radius-md);
+  background: var(--face);
+  color: var(--on);
+  box-shadow: 0 var(--et-lip) 0 var(--edge);
+  font: var(--et-weight-heavy) var(--et-text-md) / var(--et-leading-tight) var(--et-font);
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  transition:
+    transform  var(--et-dur-instant) var(--et-ease-out),
+    box-shadow var(--et-dur-instant) var(--et-ease-out),
+    filter     var(--et-dur-fast) var(--et-ease-out);
+}
+.et-btn:hover { filter: brightness(1.06); }
+.et-btn:active,
+.et-btn.is-pressing {
+  transform: translateY(var(--et-lip));
+  box-shadow: 0 0 0 var(--edge);
+}
+.et-btn:focus-visible { outline-offset: calc(var(--et-lip) + 2px); }
+
+.et-btn .et-icon { width: 1.4em; height: 1.4em; flex: none; }
+
+/* ------------------------------------------------------------- tones */
+.et-btn--go     { --face: var(--et-fill-go);     --on: var(--et-on-go);     --edge: var(--et-lip-go); }
+.et-btn--gold   { --face: var(--et-fill-gold);   --on: var(--et-on-gold);   --edge: var(--et-lip-gold); }
+.et-btn--info   { --face: var(--et-fill-info);   --on: var(--et-on-info);   --edge: var(--et-lip-info); }
+.et-btn--danger { --face: var(--et-fill-danger); --on: var(--et-on-danger); --edge: var(--et-lip-danger); }
+.et-btn--quiet  {
+  --face: var(--et-fill-quiet); --on: var(--et-on-quiet); --edge: var(--et-lip-quiet);
+  border: 2px solid var(--et-lip-quiet);
+}
+/* Ghost has no lip: it is the least important action in a group. */
+.et-btn--ghost {
+  --face: transparent; --on: var(--et-text-brand); --edge: transparent;
+  margin-bottom: 0;
+  box-shadow: none;
+}
+.et-btn--ghost:hover { background: var(--et-wash-brand); filter: none; }
+.et-btn--ghost:active { transform: scale(.97); }
+
+/* ------------------------------------------------------------- sizes */
+.et-btn--sm {
+  min-height: var(--et-tap-min); min-width: var(--et-tap-min);
+  padding: var(--et-space-1) var(--et-space-4);
+  font-size: var(--et-text-sm);
+  border-radius: var(--et-radius-sm);
+}
+.et-btn--lg {
+  min-height: var(--et-tap-lg);
+  padding: var(--et-space-3) var(--et-space-6);
+  font-size: var(--et-text-lg);
+  border-radius: var(--et-radius-lg);
+}
+.et-btn--block { display: flex; width: 100%; }
+.et-btn--icon  { padding: 0; aspect-ratio: 1; border-radius: var(--et-radius-pill); }
+
+/* ------------------------------------------------------------ states */
+.et-btn:disabled,
+.et-btn[aria-disabled="true"] {
+  --face: var(--et-sunk); --on: var(--et-text-soft); --edge: var(--et-line-strong);
+  cursor: not-allowed;
+  filter: none;
+  transform: none;
+}
+
+/* Busy: the label stays (so the button does not change width) but fades, and
+   a spinner sits over it. */
+.et-btn[aria-busy="true"] { cursor: progress; }
+.et-btn[aria-busy="true"] > :not(.et-spinner) { opacity: .35; }
+.et-btn[aria-busy="true"]::after {
+  content: "";
+  position: absolute;
+  width: 1.3em; height: 1.3em;
+  border-radius: 50%;
+  border: 3px solid currentColor;
+  border-right-color: transparent;
+  animation: et-spin calc(var(--et-dur-story) + 100ms) linear infinite;
+}
+
+/* Toggle buttons (Save on / off) show their state with the wash and a
+   check, not by colour alone. */
+.et-btn[aria-pressed="true"] { --face: var(--et-wash-go); --on: var(--et-text-go); --edge: var(--et-fill-go); }
+
+/* Done: swaps the icon for a check with a little pop. */
+.et-btn__done { display: none; }
+.et-btn.is-done .et-btn__icon { display: none; }
+.et-btn.is-done .et-btn__done {
+  display: inline-flex;
+  animation: et-pop var(--et-dur-slow) var(--et-ease-spring);
+}
+
+/* Descenders in Arabic script collide with the edge without extra room. */
+[dir="rtl"] .et-btn { padding-top: var(--et-space-3); padding-bottom: var(--et-space-3); }
+
+/* A row of buttons: wraps on a narrow phone, primary first in reading order. */
+.et-btn-row { display: flex; flex-wrap: wrap; gap: var(--et-space-3); align-items: flex-start; }
+
+@keyframes et-spin { to { transform: rotate(360deg); } }
+@keyframes et-pop {
+  0%   { transform: scale(.4); opacity: 0; }
+  100% { transform: scale(1);  opacity: 1; }
+}

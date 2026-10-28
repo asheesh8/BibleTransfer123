@@ -1,0 +1,113 @@
+/* ============================================================================
+   Kandili, the lantern: the looping moods.
+
+   The SVG is written by ET.mascot (js/brand/mascot.js). Each moving part is
+   its own group, and this file moves them with transform and opacity only,
+   which cheap Android phones animate on the GPU. One-shot moves (hop,
+   twirl, fly …) are Web Animations started from the script; the loops here
+   are keyed off data-mood on the <svg>:
+
+     idle   float, breathe, flicker          (default)
+     doze   slow tilt, bubbles rise          (waiting, empty)
+     dim    no float, low slow flame         (offline)
+     think  quick flicker, small sway        (searching)
+     still  nothing moves                    (inside dense lists, print)
+
+   Reduced motion: every loop stops and the still pose shows.
+   ========================================================================= */
+
+.et-kandili {
+  display: block;
+  overflow: visible;
+  width: var(--k-size, 10rem);
+  height: auto;
+  aspect-ratio: 320 / 340;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+.et-kandili.is-tappable { pointer-events: auto; cursor: pointer; }
+
+/* Each part scales and swings about its own box, not the whole drawing. */
+.et-kandili g { transform-box: fill-box; }
+.et-kandili .k-body   { transform-origin: 50% 100%; }   /* squash on the base   */
+.et-kandili .k-flame  { transform-origin: 50% 100%; }   /* sways from the wick  */
+.et-kandili .k-eyes   { transform-origin: 50% 50%; }    /* blink to a line      */
+.et-kandili .k-glowwrap { transform-origin: 50% 50%; }
+.et-kandili .k-shadow { transform-box: fill-box; transform-origin: 50% 50%; }
+.et-kandili .k-tilt   { transform-origin: 50% 100%; }
+.et-kandili .k-arm--r { transform-origin: 100% 100%; }  /* the character's right shoulder */
+.et-kandili .k-arm--l { transform-origin: 0 100%; }
+.et-kandili .k-prop   { transform-origin: 50% 50%; }
+
+/* Right-to-left pages mirror the character, as the brief asks. Every pose
+   is drawn with no direction-sensitive symbol, so mirroring is safe. */
+[dir="rtl"] .et-kandili .k-mirror { transform: scaleX(-1); transform-box: view-box; transform-origin: 50% 50%; }
+
+/* ---------------------------------------------------------------- idle */
+.et-kandili[data-mood="idle"] .k-float  { animation: k-float 2.4s var(--et-ease-inout) infinite; }
+.et-kandili[data-mood="idle"] .k-shadow { animation: k-shadow 2.4s var(--et-ease-inout) infinite; }
+.et-kandili[data-mood="idle"] .k-body   { animation: k-breathe 3s var(--et-ease-inout) infinite; }
+.et-kandili[data-mood="idle"] .k-flame  { animation: k-flicker 1.2s var(--et-ease-inout) infinite; }
+
+/* ---------------------------------------------------------------- doze */
+.et-kandili[data-mood="doze"] .k-tilt   { animation: k-doze 2s var(--et-ease-inout) infinite; }
+.et-kandili[data-mood="doze"] .k-body   { animation: k-breathe 4s var(--et-ease-inout) infinite; }
+.et-kandili[data-mood="doze"] .k-flame  { animation: k-flicker 2.4s var(--et-ease-inout) infinite; }
+.et-kandili[data-mood="doze"] .k-bubble { animation: k-bubble 2.4s var(--et-ease-out) infinite; }
+.et-kandili[data-mood="doze"] .k-bubble:nth-child(2) { animation-delay: .8s; }
+.et-kandili[data-mood="doze"] .k-bubble:nth-child(3) { animation-delay: 1.6s; }
+
+/* ----------------------------------------------------------------- dim */
+.et-kandili[data-mood="dim"] .k-flame { animation: k-flicker 2.8s var(--et-ease-inout) infinite; }
+.et-kandili[data-mood="dim"] .k-glowwrap { opacity: .4; transition: opacity .4s var(--et-ease-out); }
+
+/* --------------------------------------------------------------- think */
+.et-kandili[data-mood="think"] .k-flame { animation: k-flicker .6s var(--et-ease-inout) infinite; }
+.et-kandili[data-mood="think"] .k-tilt  { animation: k-sway 2.6s var(--et-ease-inout) infinite; }
+
+/* The glow is pale cream on a light ground. On a dark ground pale cream at
+   a third goes muddy grey, so there it becomes warm brass light instead.
+   Theme-dark pages get it automatically; an always-dark panel (a hero, the
+   board demo) opts in with .et-on-dark. */
+.et-on-dark .et-kandili .k-glow { fill: var(--et-k-brass); opacity: .2; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .et-kandili .k-glow { fill: var(--et-k-brass); opacity: .2; }
+}
+:root[data-theme="dark"] .et-kandili .k-glow { fill: var(--et-k-brass); opacity: .2; }
+
+/* Bubbles only exist to rise; outside doze they stay hidden. */
+.et-kandili .k-bubble { opacity: 0; }
+
+/* Loops pause when the lantern is off screen or the tab is hidden. */
+.et-kandili.is-paused *,
+.et-kandili.is-paused { animation-play-state: paused !important; }
+
+@keyframes k-float   { 0%, 100% { transform: translateY(0); }      50% { transform: translateY(-6px); } }
+@keyframes k-shadow  { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(.86); opacity: .7; } }
+@keyframes k-breathe { 0%, 100% { transform: scale(1, 1); }        50% { transform: scale(1.02, 1.02); } }
+@keyframes k-flicker {
+  0%, 100% { transform: rotate(0) scale(1, 1); }
+  25%      { transform: rotate(-5deg) scale(.96, 1.05); }
+  50%      { transform: rotate(2deg) scale(1.02, .97); }
+  75%      { transform: rotate(4deg) scale(.98, 1.04); }
+}
+@keyframes k-doze  { 0%, 100% { transform: rotate(-4deg); } 50% { transform: rotate(4deg); } }
+@keyframes k-sway  { 0%, 100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } }
+@keyframes k-bubble {
+  0%   { opacity: 0; transform: translate(0, 0) scale(.5); }
+  20%  { opacity: 1; }
+  100% { opacity: 0; transform: translate(14px, -46px) scale(1.15); }
+}
+
+/* --------------------------------------------------------- reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  :root:not([data-motion="full"]) .et-kandili * { animation: none !important; }
+}
+:root[data-motion="reduce"] .et-kandili * { animation: none !important; }
+
+/* A host waiting for ET.mascot.mount() keeps the lantern's space, so the
+   page does not jump when the drawing lands. Set --k-size on the host (or
+   use data-size, which mount() turns into the same thing). */
+[data-kandili] { display: inline-block; line-height: 0; }
+[data-kandili]:empty { width: var(--k-size, 10rem); aspect-ratio: 320 / 340; }
