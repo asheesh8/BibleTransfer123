@@ -310,8 +310,13 @@ resource title so two selected films cannot overwrite one another.
 
 ## Nearby — phone to phone, from the page
 
-**Send to a phone nearby**: one phone taps Send and shows a 6-digit code, the
-other taps Receive and types it. The receiver sees what is coming and its size,
+**Send to a phone nearby**: one phone taps Send and shows a QR code. The
+other phone scans it with its own camera (iPhone or Android, no app), which
+opens `nearby.html?join=<code>` and connects by itself; the page drops `join`
+from the address at once so a reload cannot reuse it. The 6-digit code under
+the QR still works for a camera that will not scan: tap Receive and type it.
+The QR encoder is vendored at `app/assets/vendor/qrcode.js` (qrcode-generator
+1.4.4, MIT), so it works offline on a Pi, where the link points at the Pi. The receiver sees what is coming and its size,
 accepts (optionally into a folder), both watch the progress, and the receiver
 gets **Send it to someone else** — which makes what just arrived the next thing
 it sends. The chain, built in.

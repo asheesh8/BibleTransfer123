@@ -76,6 +76,21 @@ class LibraryMailTest(unittest.TestCase):
         codes = [self.request({"to": f"p{n}@example.com", "library": "english"}, ip="192.0.2.9")[0] for n in range(21)]
         self.assertEqual(codes, [200] * 20 + [429])
 
+    def test_one_address_cannot_spend_the_whole_day_by_waiting_out_the_hour(self):
+        send = lambda settings, message: self.sent.append(message)
+        codes = [mail.dispatch("/api/send-library", "POST", self.headers, json.dumps({"to": f"p{n}@example.com", "library": "english"}).encode(),
+                               "192.0.2.10", False, now=NOW + 3601 * (n // 20), send=send)[0] for n in range(41)]
+        self.assertEqual(codes, [200] * 40 + [429])
+
+    def test_send_failure_does_not_describe_the_mail_setup(self):
+        def refuse(settings, port, message, context, progress):
+            raise mail.smtplib.SMTPServerDisconnected()
+        with patch.object(mail, "_send_once", refuse), patch("sys.stderr"):
+            with self.assertRaises(mail.APIError) as failure:
+                mail.deliver({"port": 587, "host": "smtp.example.org"}, None)
+        self.assertEqual(failure.exception.status, 502)
+        self.assertEqual(failure.exception.message, "The email could not be sent right now.")
+
     def test_wrong_port_falls_back_to_the_other_standard_port(self):
         tried = []
         def attempt(settings, port, message, context, progress):

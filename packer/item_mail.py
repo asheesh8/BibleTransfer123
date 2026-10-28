@@ -23,11 +23,11 @@ import unicodedata
 import urllib.parse
 
 try:
-    from packer.analytics import APIError, IDENTIFIER, get_store, rate_key, require_same_origin, secret_key
+    from packer.analytics import APIError, IDENTIFIER, app_cors, get_store, preflight, rate_key, require_same_origin, secret_key
     from packer.library_mail import ADDRESS, LIBRARIES, LIMITS, deliver, origin_for, smtp_settings
     from packer.item_mail_copy import COPY
 except ImportError:                  # direct `python3 packer/serve.py`
-    from analytics import APIError, IDENTIFIER, get_store, rate_key, require_same_origin, secret_key
+    from analytics import APIError, IDENTIFIER, app_cors, get_store, preflight, rate_key, require_same_origin, secret_key
     from library_mail import ADDRESS, LIBRARIES, LIMITS, deliver, origin_for, smtp_settings
     from item_mail_copy import COPY
 
@@ -127,9 +127,12 @@ def dispatch(path, method, headers, raw=b"", client_ip="", production=False, pub
     try:
         if urllib.parse.urlsplit(path).path != "/api/send-item":
             raise APIError(404, "API not found.")
+        output_headers.update(app_cors(headers))
+        if method == "OPTIONS":
+            return preflight(headers)
         if method != "POST":
             raise APIError(405, "Method not allowed.")
-        require_same_origin(headers, production)
+        require_same_origin(headers, production, allow_apps=True)
         if headers.get("content-type", "").split(";", 1)[0].strip().lower() != "application/json":
             raise APIError(415, "Use application/json.")
         if len(raw) > MAX_BODY:
@@ -192,7 +195,7 @@ def handle_http(handler, production=False, public_root=None):
     except (ValueError, APIError) as error:
         code, payload = (error.status, {"error": error.message}) if isinstance(error, APIError) else (400, {"error": "Invalid request length."})
         headers = {"Cache-Control": "no-store", "X-Content-Type-Options": "nosniff"}
-    body = json.dumps(payload, separators=(",", ":")).encode()
+    body = b"" if code == 204 else json.dumps(payload, separators=(",", ":")).encode()
     handler.send_response(code)
     handler.send_header("Content-Type", "application/json; charset=utf-8")
     handler.send_header("Content-Length", str(len(body)))

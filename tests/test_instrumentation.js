@@ -78,7 +78,7 @@ function fixture(options = {}) {
     qs: key => key === 'signal' ? 'broker' : key === 'id' && options.itemPage ? item.id : '',
     scopedUrl: (page, params = {}) => page + '?' + new URLSearchParams(params),
     scopeEntryUrl: () => '/english', safeUrl: x => x, safeType: () => 'video/mp4', openable: () => false,
-    displayTitle: r => r.title, thumb: () => '', header() {}, tabbar() {}, stepper: () => '',
+    displayTitle: r => r.title, thumb: () => '', header() {}, tabbar() {}, stepper: () => '', lantern: () => '',
     facebookUrl: url => 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url),
     facebookShare(a, url, words) { a.href = this.facebookUrl(url); posts.push(words); },
     art: { share: () => '' }, store: { get: (key, value) => value, set() {} },

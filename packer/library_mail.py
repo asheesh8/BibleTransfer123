@@ -18,14 +18,16 @@ import time
 import urllib.parse
 
 try:
-    from packer.analytics import APIError, IDENTIFIER, get_store, rate_key, require_same_origin, secret_key
+    from packer.analytics import APIError, IDENTIFIER, app_cors, get_store, preflight, rate_key, require_same_origin, secret_key
 except ImportError:                  # direct `python3 packer/serve.py`
-    from analytics import APIError, IDENTIFIER, get_store, rate_key, require_same_origin, secret_key
+    from analytics import APIError, IDENTIFIER, app_cors, get_store, preflight, rate_key, require_same_origin, secret_key
 
 MAX_BODY = 2048
 ADDRESS = re.compile(r"^[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]{1,64}@(?=.{4,253}$)(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\.)+[A-Za-z]{2,63}$")
-# Sends per visitor address per hour, per recipient per day, and site-wide per day.
-LIMITS = (("mail-ip-v2", 20, 3600), ("mail-to-v2", 5, 86400), ("mail-all-v2", 300, 86400))
+# Sends per visitor address per hour and per day, per recipient per day, and
+# site-wide per day. The Origin check stops other web pages, not scripts, so
+# these limits are what keeps one sender from spending the whole day's budget.
+LIMITS = (("mail-ip-v2", 20, 3600), ("mail-ip-day-v2", 40, 86400), ("mail-to-v2", 5, 86400), ("mail-all-v2", 300, 86400))
 
 # One entry per one-language page (app/<slug>/index.html). Generated from
 # registry/languages.json by packer/et/generate.py; edit the registry.
@@ -184,8 +186,10 @@ def deliver(settings, message):
             failures.append(f"{type(error).__name__} at {progress[0]} on port {port}")
             break
     failure = "; ".join(failures) + ("" if settings["host"] == "smtp.gmail.com" else "; host is not smtp.gmail.com")
+    # The details (ports, stage, host) go to the server log only: the public
+    # response says nothing about the mail setup.
     print("send-library: SMTP send failed:", failure, file=sys.stderr)
-    raise APIError(502, "The email could not be sent right now (" + failure + ").")
+    raise APIError(502, "The email could not be sent right now.")
 
 
 def origin_for(headers, production):
@@ -200,9 +204,12 @@ def dispatch(path, method, headers, raw=b"", client_ip="", production=False, pub
     try:
         if urllib.parse.urlsplit(path).path != "/api/send-library":
             raise APIError(404, "API not found.")
+        output_headers.update(app_cors(headers))
+        if method == "OPTIONS":
+            return preflight(headers)
         if method != "POST":
             raise APIError(405, "Method not allowed.")
-        require_same_origin(headers, production)
+        require_same_origin(headers, production, allow_apps=True)
         if headers.get("content-type", "").split(";", 1)[0].strip().lower() != "application/json":
             raise APIError(415, "Use application/json.")
         if len(raw) > MAX_BODY:
@@ -251,7 +258,7 @@ def handle_http(handler, production=False, public_root=None):
     except (ValueError, APIError) as error:
         code, payload = (error.status, {"error": error.message}) if isinstance(error, APIError) else (400, {"error": "Invalid request length."})
         headers = {"Cache-Control": "no-store", "X-Content-Type-Options": "nosniff"}
-    body = json.dumps(payload, separators=(",", ":")).encode()
+    body = b"" if code == 204 else json.dumps(payload, separators=(",", ":")).encode()
     handler.send_response(code)
     handler.send_header("Content-Type", "application/json; charset=utf-8")
     handler.send_header("Content-Length", str(len(body)))
