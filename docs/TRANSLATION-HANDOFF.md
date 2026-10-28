@@ -245,7 +245,12 @@ Everyday loanwords Eritrean and Ethiopian speakers use are kept: ስልኪ, ፋ�
 
 ## Source files
 
-Interface translations live in `app/assets/js/i18n.js`. Longer English help and
+Interface translations live in one file per language, `app/assets/js/i18n/<code>.js`
+(`en.js` is the reference). Each is a flat list of `"key": "wording"` lines, so a
+translator edits one file without touching code. The welcome screen and the
+header's "tap to change language" hint show a few lines in every language at
+once; those are copied into the `SAY` table in `app/assets/js/i18n.js`, and
+`tests/test_i18n_files.js` fails if the two drift. Longer English help and
 sharing instructions also live in `app/assets/js/help.js` and `share.js`, where
 `tOrHTML(key, english)` supplies a fallback. Update the corresponding translation
 when changing an instruction's meaning.

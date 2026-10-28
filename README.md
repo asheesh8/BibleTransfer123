@@ -405,8 +405,8 @@ way. They are not stylistic preferences.
 
 ### Translations
 
-English is the reference wording. Every interface language in
-`app/assets/js/i18n.js` covers the controls, the help page and the sharing
+English is the reference wording. Every interface language has its own file,
+`app/assets/js/i18n/<code>.js`, and covers the controls, the help page and the sharing
 guides, and each one has had a native-reader polish pass for natural wording,
 register and traditional church vocabulary. The help page and share wizard call
 `tOr(key, english)`, so a key missing from a language falls back to English
@@ -427,7 +427,7 @@ libraries are shown), `send-library.py` (emailing a library link) and
 `send-item.py` (emailing one item to a friend, from the item page's "Share
 this with a friend" card). Item emails read the title from `catalog.js`,
 which `vercel.json` bundles with the functions, and use the
-`itemshare.mail.*` strings from `i18n.js`; after changing those, run
+`itemshare.mail.*` strings from `i18n/<code>.js`; after changing those, run
 `python3 packer/write_item_mail_copy.py`. Shared item links carry the
 sender's name and a chain step (`et_from`, `et_hop`); the Sharing tab of
 `/admin` shows how far shares travel.
