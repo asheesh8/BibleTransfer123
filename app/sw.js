@@ -9,7 +9,7 @@
    VERSION must change whenever the shell changes, or an installed copy keeps
    serving the old one. packer/et/generate.py (`npm run generate`) sets it from a
    hash of every SHELL file, and `easytransfer build` stamps card copies. */
-var VERSION = 'shell-3577ffb88fdb';
+var VERSION = 'shell-23816c6b8244';
 
 var SHELL = [
   'index.html', 'library.html', 'item.html', 'share.html', 'help.html', 'nearby.html',
@@ -20,7 +20,7 @@ var SHELL = [
   'assets/art/kandili-village.webp', 'assets/art/kandili-village.jpg',
   'assets/js/core.js', 'assets/js/ui/icons.js', 'assets/js/ui/sheet.js', 'assets/js/ui/toast.js', 'assets/js/ui/shell.js', 'assets/js/ui/covers.js', 'assets/js/brand/mascot.js', 'assets/js/i18n.js', 'assets/js/i18n-load.js', 'assets/js/i18n/en.js', 'assets/js/art.js', 'assets/js/analytics.js',
   'assets/js/home.js', 'assets/js/library.js', 'assets/js/item.js', 'assets/js/data/bible-books.js',
-  'assets/css/pages/onboarding.css', 'assets/css/pages/screens.css', 'assets/js/data/onboarding-strings.js', 'assets/js/features/onboarding.js',
+  'assets/css/pages/onboarding.css', 'assets/css/pages/screens.css', 'assets/css/pages/partners.css', 'assets/js/features/partner-preview.js', 'assets/js/data/onboarding-strings.js', 'assets/js/features/onboarding.js',
   'assets/js/share.js', 'assets/js/help.js', 'assets/js/save.js', 'assets/js/nearby.js', 'assets/js/save-guide.js',
   'assets/js/shared-library.js', 'assets/js/share-libraries.js', 'assets/js/visibility.js', 'assets/vendor/peerjs.min.js', 'assets/vendor/qrcode.js',
   'assets/css/components/qr.css', 'assets/css/components/progress.css', 'assets/css/pages/nearby.css',
