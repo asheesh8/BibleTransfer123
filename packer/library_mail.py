@@ -27,7 +27,8 @@ ADDRESS = re.compile(r"^[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]{1,64}@(?=.{4,253}$)(?:[A
 # Sends per visitor address per hour, per recipient per day, and site-wide per day.
 LIMITS = (("mail-ip-v2", 20, 3600), ("mail-to-v2", 5, 86400), ("mail-all-v2", 300, 86400))
 
-# One entry per one-language page (app/<slug>/index.html); a test keeps them in step.
+# One entry per one-language page (app/<slug>/index.html). Generated from
+# registry/languages.json by packer/et/generate.py; edit the registry.
 LIBRARIES = {
     "akan": ("Akan", "Twi (Akan)"),
     "amharic": ("Amharic", "አማርኛ"),
@@ -85,7 +86,8 @@ LIBRARIES = {
     "western-punjabi": ("Western Punjabi", "پنجابی"),
     "xhosa": ("Xhosa", "isiXhosa"),
     "yoruba": ("Yoruba", "Èdè Yorùbá"),
-    "zulu": ("Zulu", "isiZulu"),}
+    "zulu": ("Zulu", "isiZulu")
+}
 
 
 def smtp_settings():
