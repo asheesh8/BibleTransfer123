@@ -47,7 +47,7 @@ window.ET.module('save', ['core', 'ui/shell', 'i18n'], function (ET) {
     // Two films can share a title, so the address picks the folder.
     var id = 0;
     for (var i = 0; i < url.length; i++) id = (id * 31 + url.charCodeAt(i)) >>> 0;
-    var path = 'library/' + id.toString(36) + '/' + job.name, handle = null, uri;
+    var path = 'library/' + id.toString(36) + '/' + job.name, handle = null, uri, size = job.bytes || 0;
     var stopped = new Promise(function (_, no) {
       if (signal) signal.addEventListener('abort', function () {
         var e = new Error('Stopped'); e.name = 'AbortError'; no(e);
@@ -59,7 +59,9 @@ window.ET.module('save', ['core', 'ui/shell', 'i18n'], function (ET) {
       .then(function (r) {
         uri = r.uri;
         return CAP.FileTransfer.addListener('progress', function (e) {
-          if (e.url === url) onProgress(e.bytes, e.lengthComputable ? e.contentLength : job.bytes || 0);
+          if (e.url !== url) return;
+          if (e.lengthComputable && e.contentLength) size = e.contentLength;
+          onProgress(e.bytes, size);
         });
       })
       .then(function (h) { handle = h; return CAP.FileTransfer.downloadFile({ url: url, path: uri, progress: true }); })
@@ -71,9 +73,9 @@ window.ET.module('save', ['core', 'ui/shell', 'i18n'], function (ET) {
           return CAP.Filesystem.deleteFile({ path: path, directory: DIR }).catch(function () {});
         }
         var k = kept();
-        k[url] = { uri: uri, name: job.name, bytes: job.bytes || 0, at: Date.now() };
+        k[url] = { uri: uri, name: job.name, bytes: size, at: Date.now(), id: job.resource || '' };
         ET.store.set(KEPT, JSON.stringify(k));
-        return { kept: uri, bytes: job.bytes || 0 };
+        return { kept: uri, bytes: size };
       }, function (err) { if (handle) handle.remove(); throw err; });
     return Promise.race([done, stopped]);
   }

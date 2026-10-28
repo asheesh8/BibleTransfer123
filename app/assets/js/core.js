@@ -338,7 +338,23 @@ window.ET = (function () {
   }
 
 
+  /* Films and audio kept inside the phone app: save.js keeps them, the home
+     shelf lists and deletes them. Keyed by the address they came from. */
+  var KEPT = 'et.kept';
+  function keptFiles() {
+    try { return JSON.parse(store.get(KEPT, '{}')) || {}; } catch (e) { return {}; }
+  }
+  function forgetKept(url) {
+    var k = keptFiles(), f = k[url];
+    if (!f) return Promise.resolve();
+    delete k[url];
+    store.set(KEPT, JSON.stringify(k));
+    var fs = window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.Filesystem;
+    return fs ? fs.deleteFile({ path: f.uri }).catch(function () {}) : Promise.resolve();
+  }
+
   var api = {
+    keptFiles: keptFiles, forgetKept: forgetKept,
     native: native, online: online, publicOrigin: publicOrigin, publicHref: publicHref,
     store: store, esc: esc, qs: qs, human: human, pad: pad, $: $, $$: $$,
     theme: theme, library: library, byId: byId, displayTitle: displayTitle,
