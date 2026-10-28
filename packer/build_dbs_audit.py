@@ -482,7 +482,7 @@ DIALECT = {'asante-twi': 'Asante Twi', 'akan-asante': 'Asante Twi', 'akan-akuape
 # Book names come from the interface's own LOCAL_BOOKS, so a film, an audio
 # Bible and the book picker all say the same thing.
 def local_books():
-    src = (ROOT / 'app/assets/js/core.js').read_text()
+    src = (ROOT / 'app/assets/js/data/bible-books.js').read_text()
     out = {}
     for ui in ('xh', 'ny', 'rw', 'sn', 'rn', 'ak', 'ti', 'ar', 'ht', 'es'):
         block = re.search(r'\n    ' + ui + r': (\{.*?\n\})', src, re.S)[1]

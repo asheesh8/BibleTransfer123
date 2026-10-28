@@ -1,6 +1,6 @@
 # 0004. Playwright for browser tests, dev only
 
-Status: Proposed
+Status: Accepted (2026-10-28, Ashish)
 Date: 2026-10-28
 
 ## Context

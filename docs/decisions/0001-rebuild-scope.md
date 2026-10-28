@@ -10,7 +10,7 @@ codebase, a proper design system and an animated mascot. The engine behind it
 works and is tested: language catalogues, the card packer, the Pi server,
 analytics, the visibility switches and phone-to-phone Nearby. The pain is in
 the front end: `core.js` is 2,155 lines, `i18n.js` loads all 38 interface
-languages (926 KB) on every page, and adding one language touches about 15
+languages (1.5 MB) on every page, and adding one language touches about 15
 files. Fifty-seven language links and printed QR codes are already in
 circulation.
 
