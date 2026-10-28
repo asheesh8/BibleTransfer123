@@ -69,7 +69,7 @@ function loadMascot() {
 
 test("Kandili's colours in mascot.js match the --et-k- tokens", () => {
   const M = loadMascot();
-  const map = { brass: 'brass', shade: 'shade', glass: 'glass', shine: 'shine', face: 'face',
+  const map = { brass: 'brass', mid: 'mid', shade: 'shade', glass: 'glass', shine: 'shine', face: 'face', tongue: 'tongue',
                 glow: 'glow', blush: 'blush', go: 'go', sky: 'sky', card: 'card' };
   for (const [js, tok] of Object.entries(map)) {
     const m = tokens.match(new RegExp('--et-k-' + tok + ':\\s*(#[0-9A-Fa-f]{6})'));

@@ -35,7 +35,7 @@ window.ET.module('data/bible-books', ['core'], function (ET) {
 | `ui/icons.js` | `ui/icons` (also `ET.ui.icon`) | `core` | `styleguide.html` |
 | `ui/sheet.js` | `ui/sheet` (also `ET.ui.sheet`) | `core`, `ui/icons` | `styleguide.html` |
 | `ui/toast.js` | `ui/toast` (also `ET.ui.toast`) | `core`, `ui/icons` | `styleguide.html` |
-| `brand/mascot.js` | `brand/mascot` (also `ET.mascot`) | `core` | `styleguide.html` |
+| `brand/mascot.js` | `brand/mascot` (also `ET.mascot`) | `core` | `styleguide.html`; fetched by `ET.loadMascot()` on app pages |
 | `features/styleguide.js` | `features/styleguide` | `core`, the four above | `styleguide.html` |
 | `i18n-load.js` | none (plain sync script) | nothing | every page, right before `i18n.js` |
 | `i18n/<code>.js` | `window.ET_STRINGS[code]` (data) | nothing | `en.js` always, plus the reader's language; others load on demand |
