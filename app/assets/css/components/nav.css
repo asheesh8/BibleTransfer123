@@ -1,0 +1,110 @@
+/* ============================================================================
+   App chrome: et-appbar (top) and et-tabbar (bottom).
+
+   Thumbs-first, after the Bible app this was modelled on: four destinations
+   fixed at the bottom so no screen needs its own way back. Anything deeper
+   (an item, a guided flow) puts a Back button in the app bar.
+
+     <header class="et-appbar">
+       <a class="et-appbar__back" href="…" aria-label="Back"><svg class="et-icon et-flip">…</svg></a>
+       <span class="et-appbar__brand">(mascot svg) The Library</span>
+       <button class="et-appbar__action" aria-label="Language">…</button>
+     </header>
+
+     <nav class="et-tabbar" aria-label="Main">
+       <a href="index.html" aria-current="page">
+         <span class="et-tabbar__pill"><svg class="et-icon">…</svg></span>Home
+       </a>
+       …
+     </nav>
+
+   A page with a tab bar sets --et-tabbar-h on <body> so toasts and the last
+   row of content clear it:  body { --et-tabbar-h: 4.875rem; }
+   ========================================================================= */
+
+.et-appbar {
+  position: sticky;
+  top: 0;
+  z-index: var(--et-z-sticky);
+  display: flex;
+  align-items: center;
+  gap: var(--et-space-2);
+  min-height: calc(var(--et-tap) + var(--et-space-2));
+  padding: env(safe-area-inset-top) var(--et-gutter) 0;
+  background: color-mix(in srgb, var(--et-bg) 92%, transparent);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--et-line);
+}
+.et-appbar__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--et-space-2);
+  flex: 1;
+  min-width: 0;
+  font-weight: var(--et-weight-black);
+  font-size: var(--et-text-lg);
+  color: var(--et-text);
+  text-decoration: none;
+}
+.et-appbar__back,
+.et-appbar__action {
+  display: grid; place-items: center;
+  flex: none;
+  width: var(--et-tap-min); height: var(--et-tap-min);
+  border: 0; border-radius: 50%;
+  background: transparent;
+  color: var(--et-text);
+  cursor: pointer;
+  text-decoration: none;
+}
+.et-appbar__back:hover,
+.et-appbar__action:hover { background: var(--et-sunk); }
+.et-appbar .et-icon { width: 1.5rem; height: 1.5rem; }
+
+/* --------------------------------------------------------------- tabbar */
+.et-tabbar {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: var(--et-z-nav);
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  height: calc(4.875rem + env(safe-area-inset-bottom));
+  padding: var(--et-space-1) var(--et-space-1) env(safe-area-inset-bottom);
+  background: color-mix(in srgb, var(--et-surface) 95%, transparent);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-top: 1px solid var(--et-line);
+}
+/* Inside the style guide the bar sits in its frame instead of the window. */
+.et-tabbar--inline { position: relative; height: 4.875rem; padding-bottom: var(--et-space-1); }
+
+.et-tabbar a {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 2px;
+  min-height: var(--et-tap);
+  color: var(--et-text-soft);
+  text-decoration: none;
+  font-size: var(--et-text-xs);
+  font-weight: var(--et-weight-heavy);
+  border-radius: var(--et-radius-md);
+}
+.et-tabbar__pill {
+  display: grid; place-items: center;
+  width: 4rem; height: 2rem;
+  border-radius: var(--et-radius-pill);
+  transition:
+    background var(--et-dur-base) var(--et-ease-out),
+    transform  var(--et-dur-base) var(--et-ease-spring);
+}
+.et-tabbar .et-icon { width: 1.5rem; height: 1.5rem; }
+.et-tabbar a:active .et-tabbar__pill { transform: scale(.9); }
+.et-tabbar a[aria-current="page"] { color: var(--et-text); }
+.et-tabbar a[aria-current="page"] .et-tabbar__pill {
+  background: var(--et-wash-brand);
+  color: var(--et-text-brand);
+}

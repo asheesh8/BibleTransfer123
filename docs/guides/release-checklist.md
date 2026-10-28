@@ -8,7 +8,7 @@ and a cheap Android).
 
 - [ ] Unit tests pass (`npm test`)
 - [ ] Browser tests pass on every device, including two-phone sharing (`npm run test:e2e`)
-- [ ] `VERSION` in `app/sw.js` bumped if any shell file changed
+- [ ] Generated files are current (`npm run build:check`)
 
 ## iPhone, on the Vercel preview
 

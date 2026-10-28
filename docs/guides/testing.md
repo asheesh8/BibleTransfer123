@@ -26,7 +26,7 @@ Pi runs), so nothing else needs to be running.
 
 - **`tests/e2e/smoke.spec.js`**: every screen opens on every device with no script error,
   no broken same-site file and no sideways scrolling; the first-visit language picker works;
-  every one-language library listed in `app/assets/js/share-libraries.js` opens on the two
+  every one-language library in `registry/languages.json` opens on the two
   smallest phones, and right-to-left languages set `dir="rtl"`. Controls under 56 px are listed
   in the report as an annotation; this becomes a failure once the design system fixes the size.
 - **`tests/e2e/two-phones.spec.js`**: Nearby, phone to phone. An iPhone sends to an Android,

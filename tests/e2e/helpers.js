@@ -6,11 +6,11 @@ const { expect } = require('@playwright/test');
 
 const APP = path.resolve(__dirname, '../../app');
 
-// Every one-language library, read from Larry's launcher so a new language is tested
-// the moment it is listed there: [slug, ISO code, English name, native name].
+// Every one-language library, from the language registry, so a new language is tested
+// the moment it is added there: [slug, ISO code, English name, native name].
 function languageRoutes() {
-  const source = fs.readFileSync(path.join(APP, 'assets/js/share-libraries.js'), 'utf8');
-  return [...source.matchAll(/\['([a-z-]+)', '([a-z]{3})', '([^']+)', '([^']+)'\]/g)].map(m => m.slice(1));
+  const registry = JSON.parse(fs.readFileSync(path.join(APP, '../registry/languages.json'), 'utf8'));
+  return registry.languages.map(l => [l.slug, l.lang, l.name, l.native]);
 }
 
 // Pages whose interface reads right to left.

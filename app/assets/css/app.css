@@ -19,21 +19,23 @@
    easier to read in the sun than a dark one. All three theme states are
    covered — no choice (system), an explicit light, an explicit dark. */
 :root {
-  --ground:      #0E0B12;
-  --surface:     #191520;
-  --sunk:        #221C2C;
-  --raised:      #2A2333;
+  /* "Lantern Night": a deep aubergine sky for Kandili's brass to glow against. */
+  --ground:      #120A1C;
+  --surface:     #1C1129;
+  --sunk:        #251834;
+  --raised:      #281A38;
 
-  --ink:         #F7F3FA;
-  --ink-soft:    #A99EB6;
+  --ink:         #F8F2FB;
+  --ink-soft:    #B6A8C4;
 
   --purple:      #C79AD9;
   --purple-deep: #8A55A6;
-  --purple-wash: #2C2038;
+  --purple-wash: #2C1C3E;
 
   --gold:        #F0B942;
   --gold-deep:   #C38F1E;
-  --gold-wash:   #33281A;
+  --gold-wash:   #2F2216;
+  --glow:        #FFE7A3;
 
   --green:       #4FBE72;
   --green-deep:  #379053;
@@ -43,8 +45,16 @@
   --sky-deep:    #3A88A8;
   --sky-wash:    #17262E;
 
-  --line:        #2E2739;
-  --line-strong: #43394F;
+  /* Words sitting on a coloured button face. The dark theme's faces are pale,
+     so they take dark words; every pair here clears 4.5:1. */
+  --on-face:     #1A1020;
+  --green-face:  #4FBE72;  --green-edge: #379053;
+  --sky-face:    #5BAFD0;  --sky-edge:   #3A88A8;
+  /* Small coloured words on a wash: the deep shade in light, the bright one in dark. */
+  --green-text:  #4FBE72;  --sky-text:   #5BAFD0;
+
+  --line:        #33244A;
+  --line-strong: #4A3860;
 
   --r-sm: 12px;
   --r:    18px;
@@ -57,6 +67,11 @@
 
   --wrap: 62rem;
   --gap:  1rem;
+
+  /* Rounded faces the phone already has (SF Rounded on Apple, Nunito or
+     Varela Round where installed). No web font is downloaded, by rule. */
+  --display: ui-rounded, "SF Pro Rounded", "Nunito", "Varela Round",
+             -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 @media (prefers-color-scheme: light) {
@@ -68,6 +83,10 @@
     --green: #3FA65C;   --green-deep: #2E7D45;  --green-wash: #E9F6ED;
     --sky: #2E86AB;     --sky-deep: #1F6182;    --sky-wash: #E7F2F8;
     --line: #EADFD0;    --line-strong: #D9C8B2;
+    --on-face: #FFFFFF;
+    --green-face: #2E7D45; --green-edge: #1F5A31;
+    --sky-face: #1F6182;   --sky-edge: #164A63;
+    --green-text: #2E7D45; --sky-text: #1F6182;
   }
 }
 :root[data-theme="light"] {
@@ -78,6 +97,10 @@
   --green: #3FA65C;   --green-deep: #2E7D45;  --green-wash: #E9F6ED;
   --sky: #2E86AB;     --sky-deep: #1F6182;    --sky-wash: #E7F2F8;
   --line: #EADFD0;    --line-strong: #D9C8B2;
+  --on-face: #FFFFFF;
+  --green-face: #2E7D45; --green-edge: #1F5A31;
+  --sky-face: #1F6182;   --sky-edge: #164A63;
+  --green-text: #2E7D45; --sky-text: #1F6182;
 }
 
 /* ------------------------------------------------------------------ base */
@@ -253,7 +276,7 @@ html[dir="rtl"] .rowi .kicker { text-transform: none; letter-spacing: 0; font-si
   display: inline-flex; align-items: center; gap: .4rem;
 }
 .rowi .go svg { width: 16px; height: 16px; }
-.rowi:hover .go { background: var(--purple); border-color: var(--purple); color: #fff; }
+.rowi:hover .go { background: var(--purple); border-color: var(--purple); color: var(--on-face); }
 
 /* ------------------------------------------------------ batch downloads */
 
@@ -301,7 +324,7 @@ body.bulk-mode { padding-bottom: calc(var(--tabbar) + 92px + env(safe-area-inset
 }
 .shared-hero .eyebrow {
   display: inline-flex; padding: .25rem .65rem; margin: 0 0 .65rem;
-  border-radius: var(--r-pill); background: var(--purple); color: #fff;
+  border-radius: var(--r-pill); background: var(--purple); color: var(--on-face);
   font-size: .8rem; font-weight: 800;
 }
 .shared-hero h1 { margin: 0; }
@@ -373,7 +396,11 @@ body.bulk-mode { padding-bottom: calc(var(--tabbar) + 92px + env(safe-area-inset
 .shelf { display: grid; gap: .6rem; margin-top: 1.7rem; }
 .shelf-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
 .shelf-head h2 { font-size: 1.32rem; margin: 0; }
-.shelf-head a { font-size: .92rem; font-weight: 700; text-decoration: none; color: var(--purple); }
+.shelf-head a {
+  font-size: .92rem; font-weight: 700; text-decoration: none; color: var(--purple);
+  /* A word-sized link is still a thumb-sized target. */
+  display: inline-flex; align-items: center; min-height: 48px; padding: 0 .4rem; margin: -.6rem -.4rem;
+}
 .rail-x {
   display: grid; grid-auto-flow: column; grid-auto-columns: 46%;
   gap: .7rem; overflow-x: auto; scroll-snap-type: x mandatory;
@@ -431,6 +458,11 @@ body.bulk-mode { padding-bottom: calc(var(--tabbar) + 92px + env(safe-area-inset
   display: flex; align-items: center; gap: .6rem;
   min-height: 64px;
 }
+/* The header is written by script, above <main>. Until it arrives, hold its
+   64px + 2px border open so the page does not jump down when it lands — on a
+   slow phone that jump moves the button someone is reaching for. header()
+   adds .has-top in the same frame, which lets this go. */
+body:not(.has-top):has(> main#main) { padding-top: 66px; }
 .brand {
   display: flex; align-items: center; gap: .55rem;
   font-weight: 800; font-size: 1.05rem; color: var(--ink);
@@ -490,7 +522,7 @@ body.bulk-mode { padding-bottom: calc(var(--tabbar) + 92px + env(safe-area-inset
   border-radius: var(--r);
   background: var(--face);
   box-shadow: 0 var(--press) 0 var(--edge);
-  color: #fff;
+  color: var(--on-face);
   font: inherit; font-weight: 800; font-size: 1.02rem;
   text-decoration: none; text-align: center;
   cursor: pointer;
@@ -504,10 +536,11 @@ body.bulk-mode { padding-bottom: calc(var(--tabbar) + 92px + env(safe-area-inset
 }
 .btn[disabled] { opacity: .45; pointer-events: none; }
 
-.btn.green { --face: var(--green); --edge: var(--green-deep); }
+.btn.green { --face: var(--green-face); --edge: var(--green-edge); }
 .btn.gold  { --face: var(--gold);  --edge: var(--gold-deep); color: #3A2A05; }
-.btn.sky   { --face: var(--sky);   --edge: var(--sky-deep); }
-.btn.fb    { --face: #1877F2; --edge: #0B5BC4; color: #fff; }
+.btn.sky   { --face: var(--sky-face); --edge: var(--sky-edge); }
+/* Facebook's own blue is 4.2:1 under white; its pressed shade clears 4.5. */
+.btn.fb    { --face: #166FE5; --edge: #0B5BC4; color: #fff; }
 
 .btn.ghost {
   --face: var(--surface); --edge: var(--line-strong);
@@ -607,10 +640,10 @@ body.bulk-mode { padding-bottom: calc(var(--tabbar) + 92px + env(safe-area-inset
   white-space: nowrap;
 }
 .chip svg { width: 15px; height: 15px; }
-.chip.offline { background: var(--green-wash); color: var(--green-deep); }
+.chip.offline { background: var(--green-wash); color: var(--green-text); }
 .chip.online  { background: var(--gold-wash);  color: var(--gold-deep); }
 .chip.lang    { background: var(--purple-wash); color: var(--purple); }
-.chip.stream  { background: var(--sky-wash); color: var(--sky-deep); }
+.chip.stream  { background: var(--sky-wash); color: var(--sky-text); }
 
 .player {
   width: 100%; aspect-ratio: 16 / 9;
@@ -716,7 +749,7 @@ html[dir="rtl"] .flabel { text-transform: none; font-size: .95rem; }
 }
 .fchip svg { width: 20px; height: 20px; flex: none; }
 .fchip[aria-pressed="true"] {
-  background: var(--purple); border-color: var(--purple-deep); color: #fff;
+  background: var(--purple); border-color: var(--purple-deep); color: var(--on-face);
 }
 
 /* ----------------------------------------------------------------- input */
@@ -768,7 +801,7 @@ input::placeholder { color: var(--ink-soft); font-weight: 500; }
   width: 2.9rem; height: 2.9rem;
   display: grid; place-items: center;
   border-radius: 50%;
-  background: var(--purple); color: #fff;
+  background: var(--purple); color: var(--on-face);
   font-weight: 800; font-size: 1.1rem;
   box-shadow: 0 0 0 5px var(--ground);
 }
@@ -833,8 +866,8 @@ input::placeholder { color: var(--ink-soft); font-weight: 500; }
   font-weight: 800; font-size: .95rem;
 }
 .stepper .dot svg { width: 18px; height: 18px; }
-.stepper .dot.on   { border-color: var(--purple); background: var(--purple); color: #fff; }
-.stepper .dot.done { border-color: var(--green-deep); background: var(--green); color: #fff; }
+.stepper .dot.on   { border-color: var(--purple); background: var(--purple); color: var(--on-face); }
+.stepper .dot.done { border-color: var(--green-deep); background: var(--green-face); color: var(--on-face); }
 .stepper .bar { flex: 1; height: 3px; background: var(--line); margin: 0 .3rem; border-radius: 2px; }
 .step-of { margin: 0 0 .2rem; color: var(--ink-soft); font-size: .85rem; font-weight: 700; }
 
@@ -1001,10 +1034,12 @@ html.welcoming #et-hint { display: none; }
   position: fixed; inset: 0; z-index: 200;
   background: var(--ground);
   overflow-y: auto; -webkit-overflow-scrolling: touch;
-  padding: max(1.25rem, env(safe-area-inset-top)) 16px max(1.5rem, env(safe-area-inset-bottom));
+  padding: 0 0 env(safe-area-inset-bottom);
 }
-.welcome-in { max-width: 34rem; margin: 0 auto; }
-.welcome-mark { display: flex; justify-content: center; margin: .75rem 0 .5rem; }
+.welcome-in { max-width: 34rem; margin: 0 auto; padding: 2rem 16px 3rem; scroll-margin-top: 0; }
+.welcome-mascot { display: flex; justify-content: center; margin-bottom: .4rem; }
+.et-kandili { display: inline-block; flex: none; }
+.et-kandili > .et-lantern { width: 100%; height: auto; }
 .welcome h1 { text-align: center; font-size: clamp(1.6rem, 6vw, 2.1rem); margin: 0 0 .35rem; }
 .welcome-also {
   text-align: center; color: var(--ink-soft); font-size: .92rem; line-height: 1.8;
@@ -1064,3 +1099,96 @@ html[lang="am"] .latin { font-family: inherit; }
 html[lang="am"] .kicker, html[lang="am"] .flabel, html[lang="am"] .eyebrow {
   text-transform: none; letter-spacing: 0; font-size: .86rem;
 }
+
+/* ============================================================ front door
+
+   The top of the first-run screen. The hero is always night, whatever the
+   theme, because the lantern is the light in it. Only transform and opacity
+   move, and nothing moves under "reduce motion". */
+.display { font-family: var(--display); letter-spacing: -.01em; }
+
+.lp-in { max-width: 72rem; margin: 0 auto; padding: 0 16px; }
+.lp-hero {
+  background: #120A1C; color: #F8F2FB;
+  padding: max(2.25rem, calc(env(safe-area-inset-top) + 1.5rem)) 0 3rem;
+  overflow: hidden;
+}
+.lp-hero-in { display: flex; flex-wrap: wrap-reverse; align-items: center; gap: 1.5rem 3rem; }
+.lp-copy { flex: 1 1 34rem; min-width: 0; }
+.lp-chip {
+  display: inline-block; margin: 0 0 1rem; padding: .35rem .9rem;
+  border-radius: var(--r-pill); background: #281A38; color: #FFE7A3;
+  font-size: .92rem; font-weight: 700;
+}
+.lp-h {
+  margin: 0 0 1rem; font-weight: 800; line-height: 1.04;
+  font-size: clamp(2.4rem, 6.4vw, 4.2rem);
+}
+.lp-h span { color: #F0B942; }
+.lp-sub { margin: 0 0 1.6rem; max-width: 34rem; font-size: 1.15rem; line-height: 1.55; color: #D9CFE3; }
+.lp-ctas { display: flex; flex-wrap: wrap; gap: .8rem; }
+.lp-ctas .btn.gold { --face: #F0B942; --edge: #B87D06; color: #2A1B05; border-radius: var(--r-pill); }
+.lp-hero .lp-ghost {
+  --face: transparent; --edge: transparent;
+  color: #F8F2FB; border: 2px solid #4A3860; border-radius: var(--r-pill);
+}
+.lp-art { flex: 1 1 30rem; min-width: 0; }
+.lp-art img {
+  width: 100%; height: auto; aspect-ratio: 971 / 465; object-fit: cover;
+  border-radius: var(--r-lg);
+  box-shadow: 0 0 0 1px #33244A, 0 24px 60px rgba(240, 185, 66, .14);
+}
+@media (max-width: 40rem) {
+  .lp-hero { padding-top: env(safe-area-inset-top); }
+  .lp-hero .lp-in.lp-hero-in { padding: 0; }
+  .lp-copy { padding: 0 16px; }
+  .lp-art img { border-radius: 0; box-shadow: none; aspect-ratio: 4 / 3; object-position: 62% 50%; }
+}
+
+.lp-band { padding: 3.5rem 0; }
+.lp-band h2 { font-size: clamp(1.8rem, 5vw, 2.8rem); margin: 0 0 .7rem; }
+.lp-lead { max-width: 40rem; font-size: 1.1rem; line-height: 1.6; color: var(--ink-soft); margin: 0 0 1.8rem; }
+.lp-eyebrow {
+  margin: 0 0 .6rem; font-size: .9rem; font-weight: 800; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--purple);
+}
+.lp-how { background: var(--purple-wash); }
+.lp-steps, .lp-phases { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+.lp-step {
+  display: flex; flex-direction: column; gap: .5rem;
+  background: var(--surface); border-radius: var(--r-lg); padding: 1.4rem;
+}
+.lp-ico {
+  width: 3.2rem; height: 3.2rem; border-radius: 1rem; margin-bottom: .4rem;
+  display: flex; align-items: center; justify-content: center;
+}
+.lp-ico svg { width: 26px; height: 26px; }
+.lp-step.purple .lp-ico { background: var(--purple-wash); color: var(--purple); }
+.lp-step.sky .lp-ico    { background: var(--sky-wash);    color: var(--sky-text); }
+.lp-step.gold .lp-ico   { background: var(--gold-wash);   color: var(--gold); }
+.lp-n { font-family: var(--display); font-weight: 800; font-size: 1.25rem; }
+.lp-points { list-style: none; margin: 0 0 1.8rem; padding: 0; display: grid; gap: .8rem; max-width: 44rem; }
+.lp-points li { padding-inline-start: 1.6rem; position: relative; line-height: 1.55; }
+.lp-points li::before {
+  content: ""; position: absolute; inset-inline-start: 0; top: .5em;
+  width: .7rem; height: .7rem; border-radius: 50%; background: var(--gold);
+}
+.lp-partner-btn { border-radius: var(--r-pill); }
+.lp-next { background: var(--sunk); }
+.lp-phase {
+  display: flex; flex-direction: column; gap: .4rem;
+  background: var(--surface); border-radius: var(--r-lg); padding: 1.4rem;
+  border: 2px solid var(--line);
+}
+.lp-phase strong { font-size: 1.2rem; }
+.lp-phase > span:last-child { color: var(--ink-soft); line-height: 1.5; }
+.lp-tag {
+  align-self: flex-start; padding: .25rem .75rem; border-radius: var(--r-pill);
+  font-size: .85rem; font-weight: 800;
+}
+.lp-phase.now  { border-color: var(--green-text); }
+.lp-phase.now .lp-tag  { background: var(--green-wash); color: var(--green-text); }
+.lp-phase.next { border-color: var(--gold); }
+.lp-phase.next .lp-tag { background: var(--gold-wash); color: var(--ink); }
+.lp-phase.then .lp-tag { background: var(--purple-wash); color: var(--purple); }
+.lp-foot { padding: 2rem 0 2.5rem; background: #120A1C; color: #B6A8C4; font-size: .95rem; }

@@ -200,6 +200,7 @@ async function languageLibraries() {
     f.document.querySelectorAll = selector => f.body.querySelectorAll(selector);
     f.load('core');
     f.context.ET = f.context.window.ET;
+    f.load('data/bible-books');
     f.load('i18n');
     const ET = f.context.ET;
     assert.equal(ET.i18n.current(), ui, 'the public page opens in its own UI language');

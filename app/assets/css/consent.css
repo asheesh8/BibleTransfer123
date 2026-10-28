@@ -10,7 +10,7 @@
 .consent-panel h2 { font-size: 1.3rem; margin-bottom: .6rem; }
 .consent-panel p { font-size: .94rem; line-height: 1.65; margin-bottom: .8rem; }
 .consent-panel .consent-state:empty { display: none; }
-.consent-panel a { display: inline-block; margin-top: .8rem; font-size: .9rem; text-underline-offset: .2rem; }
+.consent-panel a { display: inline-flex; align-items: center; min-height: 48px; margin-top: .3rem; font-size: .9rem; text-underline-offset: .2rem; }
 .consent-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
 .consent-actions .btn { flex: 1; min-width: 10rem; border: 2px solid var(--purple); color: var(--ink); }
 .consent-actions .btn:disabled { opacity: .55; cursor: not-allowed; }
@@ -22,8 +22,10 @@
   box-shadow: 0 3px 15px #0003; cursor: pointer;
 }
 .consent-panel button:focus-visible, .cookie-settings:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
-body:not(.has-tabs) .consent-panel { bottom: calc(1rem + env(safe-area-inset-bottom)); }
-body:not(.has-tabs) .cookie-settings { bottom: calc(.8rem + env(safe-area-inset-bottom)); }
+/* Pages with <main id="main"> always get the tab bar, often a moment after the
+   panel appears; sit above it from the start so the panel does not jump. */
+body:not(.has-tabs):not(:has(> main#main)) .consent-panel { bottom: calc(1rem + env(safe-area-inset-bottom)); }
+body:not(.has-tabs):not(:has(> main#main)) .cookie-settings { bottom: calc(.8rem + env(safe-area-inset-bottom)); }
 .privacy-page { padding-block: 2rem 7rem; max-width: 46rem; }
 .privacy-page section { margin-top: 2rem; }
 .privacy-page li { margin-bottom: .5rem; }
