@@ -27,6 +27,75 @@ window.ET.module('home', ['core', 'ui/shell', 'ui/covers', 'i18n'], function (ET
     return r && r.lang === ET.contentLang() ? r : null;
   }
 
+  /* Saved on this phone: what the phone app keeps in its own storage
+     (save.js "Keep it in this app"), one row per film or book however many
+     files it took, each with Delete. Only in the app; empty, it says nothing. */
+  function keptGroups() {
+    var k = ET.keptFiles(), groups = {}, list = [];
+    Object.keys(k).forEach(function (url) {
+      var f = k[url], key = f.id || url;
+      var g = groups[key];
+      if (!g) {
+        g = groups[key] = { key: key, id: f.id, name: f.name, urls: [], bytes: 0, at: 0 };
+        list.push(g);
+      }
+      g.urls.push(url);
+      g.bytes += f.bytes || 0;
+      g.at = Math.max(g.at, f.at || 0);
+    });
+    return list.sort(function (a, b) { return b.at - a.at; });
+  }
+  function keptTitle(g) {
+    var r = g.id && ET.byId(g.id);
+    return r ? ET.displayTitle(r) : g.name;
+  }
+  function keptShelf() {
+    if (!ET.native) return '';
+    var groups = keptGroups();
+    if (!groups.length) return '';
+    var total = groups.reduce(function (n, g) { return n + g.bytes; }, 0);
+    styles(['css/components/row.css', 'css/components/button.css']);
+    return '<section class="shelf kept-shelf"><div class="shelf-head">' +
+      '<h2>' + h('home.kept') + '</h2>' +
+      (total ? '<span class="muted num">' + ET.esc(ET.human(total)) + '</span>' : '') + '</div>' +
+      '<ul class="et-list">' + groups.map(function (g, i) {
+        var title = keptTitle(g);
+        var meta = [g.urls.length > 1 ? t('home.kept.files', { n: g.urls.length }) : '',
+                    g.bytes ? ET.human(g.bytes) : ''].filter(Boolean).join(' · ');
+        var r = g.id && ET.byId(g.id), ty = r ? r.type : /\.(mp3|m4a)$/i.test(g.name) ? 'audio' : 'film';
+        var ico = ty === 'film' ? 'film' : /audio/.test(ty) ? 'wave' : 'book';
+        var main = '<span class="et-row__thumb" data-tone="' + (i % 4 + 1) + '">' + ET.icon(ico, 'et-icon') + '</span>' +
+          '<span class="et-row__text"><span class="et-row__title" dir="auto">' + ET.esc(title) + '</span>' +
+          '<span class="et-row__meta">' + ET.esc(meta) + '</span></span>';
+        return '<li class="et-row is-saved">' +
+          (g.id ? '<a class="et-row__main" href="' + ET.esc(ET.scopedUrl('item.html', { id: g.id })) + '">' + main + '</a>'
+                : '<span class="et-row__main">' + main + '</span>') +
+          '<button class="et-btn et-btn--quiet et-btn--icon et-btn--sm" data-forget="' + i + '" aria-label="' +
+            ET.esc(t('home.kept.delete', { title: title })) + '">' + ET.icon('x', 'et-icon') + '</button></li>';
+      }).join('') + '</ul></section>';
+  }
+  function bindKept(root) {
+    var groups = keptGroups();
+    [].forEach.call(root.querySelectorAll('[data-forget]'), function (b) {
+      b.addEventListener('click', function () {
+        var g = groups[+b.getAttribute('data-forget')];
+        if (!g || !window.confirm(t('home.kept.confirm', { title: keptTitle(g) }))) return;
+        b.disabled = true;
+        Promise.all(g.urls.map(ET.forgetKept)).then(render);
+      });
+    });
+  }
+  // Kit stylesheets the shelf needs, added once and only when it shows.
+  var ASSETS = ((document.currentScript && document.currentScript.src) || '').replace(/js\/home\.js(\?.*)?$/, '');
+  function styles(list) {
+    list.forEach(function (href) {
+      if (document.querySelector('link[data-kit="' + href + '"]')) return;
+      var l = document.createElement('link');
+      l.rel = 'stylesheet'; l.href = ASSETS + href; l.setAttribute('data-kit', href);
+      document.head.appendChild(l);
+    });
+  }
+
   function render() {
     var lib = ET.library();
     var mine = ET.contentLang();
@@ -66,6 +135,8 @@ window.ET.module('home', ['core', 'ui/shell', 'ui/covers', 'i18n'], function (ET
           '<span class="quick-t">' + h('type.' + p[0]) + '</span></a>';
       }).join('') + '</nav>';
     }
+
+    out += keptShelf();
 
     // ---- headline: the VillageServer deployment film, the first thing on Home, in
     // every language. It lives in the app folder, so a card plays it offline.
@@ -125,6 +196,7 @@ window.ET.module('home', ['core', 'ui/shell', 'ui/covers', 'i18n'], function (ET
     });
 
     ET.$('#home').innerHTML = out;
+    bindKept(ET.$('#home'));
     if (ET.loadMascot) ET.loadMascot();
   }
 
