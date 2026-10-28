@@ -101,6 +101,8 @@
   }
 
   // ---------------------------------------------------------------- player
+  // A file kept inside the phone app plays from the phone, not the internet.
+  var local = (ET.save && ET.save.local) || function (u) { return u; };
   function player() {
     var p = r.play;
     if (!p) return '';
@@ -123,11 +125,11 @@
           '<button class="fchip" data-q="hd" aria-pressed="false">' + h('item.hd') + '</button></div>'
         : '';
       return '<video id="v" controls playsinline preload="metadata" class="player" src="' +
-        ET.esc(p.file) + '"></video>' + q;
+        ET.esc(local(p.file)) + '"></video>' + q;
     }
 
     if (p.kind === 'audio') {
-      return '<audio id="a" controls preload="metadata" src="' + ET.esc(p.file) +
+      return '<audio id="a" controls preload="metadata" src="' + ET.esc(local(p.file)) +
         '" style="width:100%"></audio>' + (p.items && p.items.length ?
         '<div class="picker"><label class="flabel" for="track">' + h('item.recordings') +
         '</label><select id="track">' + p.items.map(function (c, i) {
@@ -403,7 +405,7 @@
       var audio = ET.$('#a'), track = ET.$('#track');
       track.value = String(Math.max(0, Math.min(+ET.store.get(KEY, 0) || 0, p.items.length - 1)));
       function loadTrack(autoplay) {
-        audio.src = p.items[+track.value].file;
+        audio.src = local(p.items[+track.value].file);
         ET.store.set(KEY, track.value);
         if (autoplay) audio.play().catch(function () {});
       }
@@ -423,7 +425,7 @@
       var at = Math.min(+ET.store.get(KEY, 0) || 0, p.items.length - 1);
       ch.value = String(at);
       var load = function (autoplay) {
-        v.src = p.items[+ch.value].file;
+        v.src = local(p.items[+ch.value].file);
         ET.store.set(KEY, ch.value);
         if (autoplay) v.play().catch(function () {});
       };
@@ -443,7 +445,7 @@
       ET.$$('[data-q]').forEach(function (b) {
         b.addEventListener('click', function () {
           var t0 = vid.currentTime, playing = !vid.paused;
-          vid.src = p[b.getAttribute('data-q')];
+          vid.src = local(p[b.getAttribute('data-q')]);
           vid.currentTime = t0;
           if (playing) vid.play().catch(function () {});
           ET.$$('[data-q]').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
@@ -481,7 +483,7 @@
       function load(autoplay) {
         if (!bc.value || unavailable(+bc.value)) return;
         var b = books[+bk.value];
-        a.src = ET.audioBibleUrl(p, b[0], b[1], b[2], +bc.value);
+        a.src = local(ET.audioBibleUrl(p, b[0], b[1], b[2], +bc.value));
         ET.store.set(KEY, bk.value + ':' + bc.value);
         if (autoplay) a.play().catch(function () {});
       }
