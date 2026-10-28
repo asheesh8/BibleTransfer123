@@ -42,6 +42,7 @@ app/assets/js/
   ui/toast.js              ET.ui.toast.show(): confirmation toasts
   brand/mascot.js          ET.mascot: Kandili's drawing, poses, moves, moods
   features/styleguide.js   the style guide's demos (not used by the app)
+  features/onboarding.js   Kandili's first-run funnel (loaded by welcome())
 app/styleguide.html        the living style guide
 ```
 

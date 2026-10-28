@@ -16,10 +16,10 @@ function languageRoutes() {
 // Pages whose interface reads right to left.
 const RTL = new Set(['arabic', 'urdu', 'pashto', 'sindhi', 'western-punjabi']);
 
-// Skip the first-visit language picker; the picker has its own test.
+// Skip the first-visit language picker and Kandili's questions; they have their own test.
 async function asReturningVisitor(page, lang = 'en') {
   await page.addInitScript(code => {
-    try { localStorage.setItem('et.lang', code); localStorage.setItem('et.langknown', '1'); } catch (e) {}
+    try { localStorage.setItem('et.lang', code); localStorage.setItem('et.langknown', '1'); localStorage.setItem('et.onboarded', '1'); } catch (e) {}
   }, lang);
 }
 

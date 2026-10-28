@@ -35,14 +35,23 @@ test.describe('screens', () => {
 });
 
 test.describe('first visit', () => {
-  test('a new visitor picks a language, then sees the cookie choice', async ({ page }) => {
+  test('a new visitor picks a language, answers Kandili\'s questions, then sees the cookie choice', async ({ page }) => {
     const problems = watchForProblems(page);
     await page.goto('/');
     await expect(page.locator('#et-welcome')).toBeVisible();
     await page.locator('#et-welcome-q').fill('swahili');
     await page.locator('#et-welcome [data-lang]:visible').first().click();
-    await expect(page.locator('#et-welcome')).toHaveCount(0);
     await expect(page.locator('html')).toHaveAttribute('lang', /^sw/);
+    // The first-run funnel: what to learn, how you get online, then ready.
+    const funnel = page.locator('#et-funnel');
+    await expect(funnel).toBeVisible();
+    for (const group of ['want', 'net']) {
+      const choice = funnel.locator(`[data-${group}]`).first();
+      if (await choice.count()) { await choice.click(); await funnel.locator('.ob-go').click(); }
+    }
+    await funnel.locator('.ob-go').click();
+    await expect(page.locator('#et-welcome')).toHaveCount(0);
+    expect(await page.evaluate(() => localStorage.getItem('et.onboarded'))).toBe('1');
     await answerCookieBanner(page);
     expect(problems).toEqual([]);
   });
