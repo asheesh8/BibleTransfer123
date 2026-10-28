@@ -1,4 +1,4 @@
-// The module registry, and the Bible book data that moved out of core.js.
+// The module registry, and the code that moved out of core.js into modules.
 const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
@@ -63,5 +63,40 @@ test('the item page loads the book data between core and item.js', () => {
 test('core.js stays code: no book tables creep back in', () => {
   const core = read('assets/js/core.js');
   assert.doesNotMatch(core, /LOCAL_BOOKS|var BOOKS/);
-  assert.ok(core.split('\n').length < 1000, 'core.js is over 1,000 lines; split it into modules');
+  assert.ok(core.split('\n').length < 400, 'core.js is over 400 lines; move what it draws into a ui/ module');
+});
+
+test('the shell and covers keep the names screens already call', () => {
+  const ET = boot('assets/js/core.js', 'assets/js/ui/shell.js', 'assets/js/ui/covers.js');
+  for (const name of ['icon', 'lantern', 'loadMascot', 'header', 'tabbar', 'sheet', 'stepper', 'toast', 'copyText', 'facebookShare'])
+    assert.equal(ET[name], ET.use('ui/shell')[name], 'ET.' + name);
+  for (const name of ['row', 'poster', 'thumb', 'typeIcon'])
+    assert.equal(ET[name], ET.use('ui/covers')[name], 'ET.' + name);
+  const r = { id: 'film-eng', type: 'film', title: 'Jesus', lang: 'eng' };
+  assert.match(ET.row(r, { kicker: 'Film', sub: '2 h', verb: 'Watch' }), /class="rowi" href="item\.html\?id=film-eng"/);
+  assert.match(ET.poster(r), /class="gen"/);
+  assert.match(ET.icon('play'), /^<svg/);
+});
+
+/* Every page that loads core and draws a header, tab bar or icon needs the
+   shell straight after it; a page that shows items also needs covers. Read
+   from the files themselves, so a new page or a new call cannot slip by. */
+test('each page loads the modules its scripts call, after core', () => {
+  const SHELL = /ET\.(header|tabbar|icon|sheet|stepper|toast|copyText|facebookShare|facebookUrl|lantern|loadMascot)\(/;
+  const COVERS = /ET\.(row|poster|thumb|typeIcon)\(/;
+  const pages = fs.readdirSync(APP).filter(f => f.endsWith('.html'))
+    .concat(fs.readdirSync(APP).filter(d => fs.existsSync(path.join(APP, d, 'index.html')) && d !== 'admin').map(d => d + '/index.html'));
+  let checked = 0;
+  for (const page of pages) {
+    const html = read(page);
+    const at = f => html.indexOf('src="assets/js/' + f + '"');
+    if (at('core.js') === -1) continue;
+    const scripts = [...html.matchAll(/src="assets\/js\/([\w/-]+)\.js"/g)].map(m => m[1])
+      .filter(s => s !== 'core' && s !== 'i18n-load' && !s.startsWith('i18n/'));
+    const code = scripts.map(s => read('assets/js/' + s + '.js')).join('\n');
+    if (SHELL.test(code)) assert.ok(at('ui/shell.js') > at('core.js'), page + ' needs ui/shell.js after core.js');
+    if (COVERS.test(code)) assert.ok(at('ui/covers.js') > at('core.js'), page + ' needs ui/covers.js after core.js');
+    checked++;
+  }
+  assert.ok(checked > 50, 'only ' + checked + ' pages checked');
 });
