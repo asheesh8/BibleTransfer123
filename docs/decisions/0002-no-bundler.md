@@ -28,7 +28,7 @@ hand-maintaining the same list of languages in seven places.
 
   The registry resolves modules in page load order and throws a clear error
   when one is missing.
-- Allow one Python step, `npm run build`, that only generates repetitive files
+- Allow one Python step, `npm run generate`, that only generates repetitive files
   from `registry/languages.json`: the language pages, the `sw.js` cache list and
   `VERSION`, `vercel.json` rewrites, the share list and the analytics QR list.
   A test fails when a generated file is out of date, so forgetting the step

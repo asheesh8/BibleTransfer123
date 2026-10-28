@@ -1,5 +1,5 @@
 {
-  "about": "The one list of language libraries. packer/et/generate.py writes each app/<slug>/index.html, the sw.js cache list and VERSION, the vercel.json rewrites, the share-libraries.js routes, QR_LIBRARIES in packer/analytics.py and LIBRARIES in packer/library_mail.py from it. Edit this file, run npm run build, commit both. Field guide: docs/guides/adding-a-language.md.",
+  "about": "The one list of language libraries. packer/et/generate.py writes each app/<slug>/index.html, the sw.js cache list and VERSION, the vercel.json rewrites, the share-libraries.js routes, QR_LIBRARIES in packer/analytics.py and LIBRARIES in packer/library_mail.py from it. Edit this file, run npm run generate, commit both. Field guide: docs/guides/adding-a-language.md.",
   "pageText": {
     "en": {
       "email": "Email this library",
