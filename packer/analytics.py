@@ -28,6 +28,14 @@ MAX_ANALYSIS_EVENTS = 20000
 MAX_RECENT_EVENTS = 500
 COOKIE_NAME = "et_admin"
 SESSION_SECONDS = 12 * 3600
+# Abuse ceilings as (counter, maximum, window seconds). A per-address limit
+# alone lets many addresses add up, so each path also has a site-wide ceiling:
+# admin passwords cannot be guessed from a botnet faster than 100 an hour, and
+# a flood of fake events cannot fill the shared Upstash database (which also
+# holds the library switches and email limits) without bound.
+LOGIN_LIMITS = (("login", 10, 600, "ip"), ("login-all", 100, 3600, "site"))
+EVENT_LIMITS = (("events", 120, 60, "ip"), ("events-day", 3000, 86400, "ip"))
+SITE_EVENTS_PER_DAY = 250000
 PREFIX = "easytransfer:analytics:v1:"
 VISIBILITY_KEY = "easytransfer:library:v1:visibility"
 MAX_VISIBILITY_BODY = 512 * 1024
@@ -284,11 +292,11 @@ class SQLiteStore:
             db.execute("DELETE FROM limits WHERE expires <= ?", (now,))
             db.execute("DELETE FROM qr_scans WHERE day < ?", (qr_cutoff(now),))
 
-    def rate(self, key, maximum, window, now):
+    def rate(self, key, maximum, window, now, amount=1):
         with self.connect() as db:
             db.execute("BEGIN IMMEDIATE")
             db.execute("DELETE FROM limits WHERE expires <= ?", (now,))
-            db.execute("INSERT INTO limits VALUES (?, 1, ?) ON CONFLICT(key) DO UPDATE SET hits = hits + 1", (key, now + window))
+            db.execute("INSERT INTO limits VALUES (?, ?, ?) ON CONFLICT(key) DO UPDATE SET hits = hits + excluded.hits", (key, amount, now + window))
             return db.execute("SELECT hits FROM limits WHERE key = ?", (key,)).fetchone()[0] <= maximum
 
     def append(self, events, now):
@@ -344,7 +352,7 @@ class RedisStore:
         return inserted
     """
     RATE = """
-        local hits = redis.call('INCR', KEYS[1])
+        local hits = redis.call('INCRBY', KEYS[1], ARGV[2])
         if hits == 1 then redis.call('EXPIRE', KEYS[1], ARGV[1]) end
         return hits
     """
@@ -371,8 +379,8 @@ class RedisStore:
         except (OSError, ValueError, TypeError, RecursionError):
             raise APIError(503, "Analytics storage is temporarily unavailable.") from None
 
-    def rate(self, key, maximum, window, now):
-        return int(self.request(["EVAL", self.RATE, 1, PREFIX + "rate:" + key, window])) <= maximum
+    def rate(self, key, maximum, window, now, amount=1):
+        return int(self.request(["EVAL", self.RATE, 1, PREFIX + "rate:" + key, window, amount])) <= maximum
 
     def append(self, events, now):
         entries = [{"id": event["id"], "score": timestamp(event["at"]), "body": json.dumps(event, separators=(",", ":"))} for event in events]
@@ -526,6 +534,12 @@ def rate_key(kind, client_ip, now):
     return kind + ":" + hmac.new(secret_key(), material, hashlib.sha256).hexdigest()
 
 
+def check_limits(store, limits, client_ip, now, message):
+    for kind, maximum, window, scope in limits:
+        if not store.rate(rate_key(kind, client_ip if scope == "ip" else "site", now), maximum, window, now):
+            raise APIError(429, message, retry_after=window)
+
+
 def _encode(value):
     return base64.urlsafe_b64encode(value).decode().rstrip("=")
 
@@ -564,11 +578,36 @@ def cookie_header(value, production, expires=False):
     return f"{COOKIE_NAME}={value}; Path=/; HttpOnly; SameSite=Strict; Max-Age={0 if expires else SESSION_SECONDS}" + ("; Secure" if production else "")
 
 
-def require_same_origin(headers, production):
+# The iPhone and Android apps (Capacitor) load their pages from these origins
+# and call the public endpoints (analytics, emails) on this site. They are
+# allowed there only, never on admin endpoints, and the usual rate limits apply.
+APP_ORIGINS = frozenset(("capacitor://localhost", "https://localhost"))
+
+
+def app_cors(headers):
+    """CORS response headers for an app origin, or {} for anything else."""
+    origin = headers.get("origin", "")
+    if origin not in APP_ORIGINS:
+        return {}
+    return {"Access-Control-Allow-Origin": origin, "Access-Control-Allow-Methods": "POST, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type", "Access-Control-Max-Age": "86400", "Vary": "Origin"}
+
+
+def preflight(headers):
+    """Answer a CORS preflight from the apps; refuse every other origin."""
+    cors = app_cors(headers)
+    if not cors or headers.get("access-control-request-method", "POST") != "POST":
+        raise APIError(403, "This origin may not call this API.")
+    return 204, "", {"Cache-Control": "no-store", **cors}
+
+
+def require_same_origin(headers, production, allow_apps=False):
     # CSRF guard for state-changing requests (admin actions, library emails): any
     # request whose Origin is not exactly this site is refused, so another page
     # cannot drive these endpoints from a visitor's browser.
     origin = headers.get("origin", "")
+    if allow_apps and origin in APP_ORIGINS:
+        return
     configured = os.environ.get("EASYTRANSFER_PUBLIC_ORIGIN", "")
     scheme = "https" if production else "http"
     host = headers.get("host", "")
@@ -898,12 +937,16 @@ def dispatch(path, method, headers, raw=b"", client_ip="", production=False, pub
             if method != "GET":
                 raise APIError(405, "Method not allowed.")
             return dispatch_qr(route, headers, client_ip, production, public_root, now)
+        if route.path == "/api/analytics":
+            output_headers.update(app_cors(headers))
+            if method == "OPTIONS":
+                return preflight(headers)
         if method not in (("POST",) if route.path == "/api/analytics" else ("GET", "POST")):
             raise APIError(405, "Method not allowed.")
         limit = MAX_VISIBILITY_BODY if route.path == "/api/visibility" else MAX_BODY
         payload = None
         if method == "POST":
-            require_same_origin(headers, production)
+            require_same_origin(headers, production, allow_apps=route.path == "/api/analytics")
             if headers.get("content-type", "").split(";", 1)[0].strip().lower() != "application/json":
                 raise APIError(415, "Use application/json.")
             if len(raw) > limit:
@@ -918,8 +961,9 @@ def dispatch(path, method, headers, raw=b"", client_ip="", production=False, pub
             country = headers.get("x-vercel-ip-country", "") if production else ""
             events = validate_events(payload, now, country)
             store = get_store(production, public_root)
-            if not store.rate(rate_key("events", client_ip, now), 120, 60, now):
-                raise APIError(429, "Too many analytics requests. Try again shortly.")
+            check_limits(store, EVENT_LIMITS, client_ip, now, "Too many analytics requests. Try again shortly.")
+            if not store.rate(rate_key("events-site", "site", now), SITE_EVENTS_PER_DAY, 86400, now, amount=len(events)):
+                raise APIError(429, "Analytics is busy. Try again later.", retry_after=3600)
             inserted = store.append(events, now)
             return 200, {"ok": True, "accepted": inserted, "duplicates": len(events) - inserted, "rejected": len(payload["events"]) - len(events)}, output_headers
         if not os.environ.get("EASYTRANSFER_ADMIN_PASSWORD"):
@@ -935,8 +979,7 @@ def dispatch(path, method, headers, raw=b"", client_ip="", production=False, pub
             if set(payload) != {"action", "password"} or not isinstance(payload["password"], str) or len(payload["password"]) > 1024:
                 raise APIError(400, "Invalid login request.")
             store = get_store(production, public_root)
-            if not store.rate(rate_key("login", client_ip, now), 10, 600, now):
-                raise APIError(429, "Too many login attempts. Try again later.", retry_after=600)
+            check_limits(store, LOGIN_LIMITS, client_ip, now, "Too many login attempts. Try again later.")
             if not hmac.compare_digest(payload["password"].encode(), os.environ["EASYTRANSFER_ADMIN_PASSWORD"].encode()):
                 raise APIError(401, "Invalid admin credentials.")
             output_headers["Set-Cookie"] = cookie_header(issue_session(now), production)
