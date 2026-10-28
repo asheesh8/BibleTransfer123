@@ -453,12 +453,13 @@
       '<section class="lp-hero" lang="en" dir="ltr">' +
         '<div class="lp-in lp-hero-in">' +
           '<div class="lp-copy">' +
-            '<p class="lp-chip">Free · Works offline · 50+ languages</p>' +
+            '<ul class="lp-chips"><li class="lp-chip">Works offline</li><li class="lp-chip">50+ languages</li>' +
+              '<li class="lp-chip">No ads · No sign-up · Free</li></ul>' +
             '<p class="lp-h display">Light that travels <span>phone to phone.</span></p>' +
             '<p class="lp-sub">Films, Bibles and audio Scripture in your own language. ' +
               'Save them once, then pass them to anyone nearby. No internet needed.</p>' +
             '<div class="lp-ctas">' +
-              '<a class="btn gold big" href="#et-welcome-pick">' + ET.icon('globe') +
+              '<a class="btn big" href="#et-welcome-pick">' + ET.icon('globe') +
                 '<span dir="auto" lang="' + (guess || 'en') + '">' + ET.esc(pick) + '</span></a>' +
               '<a class="btn ghost lp-ghost" href="#et-how">How sharing works</a>' +
             '</div>' +
