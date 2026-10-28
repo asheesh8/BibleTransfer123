@@ -4,8 +4,8 @@
   "private": true,
   "description": "Packs a media library onto a microSD card, with an offline app that opens itself.",
   "scripts": {
-    "build": "python3 packer/et/generate.py",
-    "build:check": "python3 packer/et/generate.py --check",
+    "generate": "python3 packer/et/generate.py",
+    "generate:check": "python3 packer/et/generate.py --check",
     "test": "python3 -m unittest discover -s tests -p 'test_*.py' && node --test tests/test_analytics_client.js tests/test_sw.js tests/test_i18n.js tests/test_startup.js tests/test_visibility.js tests/test_modules.js tests/test_design_system.js tests/test_i18n_files.js tests/test_onboarding.js && node tests/test_instrumentation.js && node tests/test_admin.js",
     "posttest": "node tests/test_admin_journeys.js",
     "test:e2e": "playwright test",

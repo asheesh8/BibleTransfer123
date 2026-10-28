@@ -8,7 +8,7 @@ and a cheap Android).
 
 - [ ] Unit tests pass (`npm test`)
 - [ ] Browser tests pass on every device, including two-phone sharing (`npm run test:e2e`)
-- [ ] Generated files are current (`npm run build:check`)
+- [ ] Generated files are current (`npm run generate:check`)
 
 ## iPhone, on the Vercel preview
 

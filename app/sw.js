@@ -7,9 +7,9 @@
    would duplicate it into the phone's own storage and fill the device.
 
    VERSION must change whenever the shell changes, or an installed copy keeps
-   serving the old one. packer/et/generate.py (`npm run build`) sets it from a
+   serving the old one. packer/et/generate.py (`npm run generate`) sets it from a
    hash of every SHELL file, and `easytransfer build` stamps card copies. */
-var VERSION = 'shell-937596af4103';
+var VERSION = 'shell-967a72d6e7cc';
 
 var SHELL = [
   'index.html', 'library.html', 'item.html', 'share.html', 'help.html', 'nearby.html',
@@ -26,7 +26,7 @@ var SHELL = [
   'assets/icon/icon-192.png', 'assets/icon/icon-512.png',
   'data/catalog.js', 'data/catalog-home.js',
   // Language pages and catalogues come from registry/languages.json; run
-  // `npm run build` (packer/et/generate.py) instead of editing between markers.
+  // `npm run generate` (packer/et/generate.py) instead of editing between markers.
   // generated:languages:start
   'english/index.html', 'data/catalog-eng.js',
   'mandarin/index.html', 'data/catalog-cmn.js',
