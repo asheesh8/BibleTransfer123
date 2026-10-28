@@ -8,14 +8,14 @@
 
    VERSION must change whenever the shell changes, or an installed copy keeps
    serving the old one. `easytransfer build` rewrites it. */
-var VERSION = 'shell-v72';
+var VERSION = 'shell-v73';
 
 var SHELL = [
   'index.html', 'library.html', 'item.html', 'share.html', 'help.html', 'nearby.html',
   'manifest.webmanifest', 'privacy.html', 'save-guide.html',
   'assets/css/app.css', 'assets/css/consent.css', 'assets/css/save-guide.css',
   'assets/css/help-device.css',
-  'assets/js/core.js', 'assets/js/i18n.js', 'assets/js/art.js', 'assets/js/analytics.js',
+  'assets/js/core.js', 'assets/js/i18n.js', 'assets/js/i18n-pick.js', 'assets/js/art.js', 'assets/js/analytics.js',
   'assets/js/home.js', 'assets/js/library.js', 'assets/js/item.js',
   'assets/js/share.js', 'assets/js/help.js', 'assets/js/save.js', 'assets/js/nearby.js', 'assets/js/save-guide.js',
   'assets/js/shared-library.js', 'assets/js/share-libraries.js', 'assets/js/visibility.js', 'assets/vendor/peerjs.min.js',
@@ -128,8 +128,14 @@ self.addEventListener('activate', function (e) {
 var SCOPE = new URL(self.registration.scope).pathname;
 var SHELL_PATHS = SHELL.map(function (p) { return SCOPE + p; });
 
+/* The per-language interface files are the one exception: there are dozens
+   and a reader needs one, so none is fetched at install. Whichever a page asks
+   for is kept the first time, which is the language this phone reads. */
+var LANG_TEXT = SCOPE + 'assets/js/i18n/';
+
 function shellPath(url) {
   var path = url.pathname === SCOPE ? SCOPE + 'index.html' : url.pathname;
+  if (path.indexOf(LANG_TEXT) === 0 && /^[a-z]+\.js$/.test(path.slice(LANG_TEXT.length))) return path;
   return SHELL_PATHS.indexOf(path) === -1 ? null : path;
 }
 

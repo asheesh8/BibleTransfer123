@@ -17630,6 +17630,11 @@
   };
   Object.keys(SHARE_VIDEOS).forEach(function (code) { Object.assign(STRINGS[code], SHARE_VIDEOS[code]); });
 
+  /* Every language is in this file. The per-language builds in i18n/ (written
+     from this one by packer/write_i18n_split.js) carry English plus one
+     language, and list those two here instead. */
+  var LOADED = null;
+
   var shared = ET.libraryScope();
   var current = (shared && shared.ui) || ET.store.get('et.lang', '') || '';
   var listeners = [];
@@ -17701,8 +17706,15 @@
   }
 
   function set(code) {
-    current = code;
     ET.store.set('et.lang', code);
+    // A per-language build only holds English and its own language. Switching
+    // to another one reloads, and i18n-pick.js then brings that file instead.
+    if (LOADED && LOADED.indexOf(code) < 0 && !shared) {
+      var kept = '';
+      try { kept = localStorage.getItem('et.lang'); } catch (e) {}
+      if (kept === code) { location.reload(); return; }
+    }
+    current = code;
     apply();
   }
 
