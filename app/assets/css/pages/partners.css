@@ -85,7 +85,7 @@
 }
 html[dir="rtl"] .partner-soon { text-transform: none; letter-spacing: 0; }
 .partner-tag { font-size: .92rem; color: var(--ink-soft); }
-.partner-tag a { color: inherit; font-weight: 700; }
+.partner-tag a { color: inherit; font-weight: 700; display: inline-flex; align-items: center; min-height: 44px; margin-block: -13px; }
 
 /* ------------------------------------------- partner preview (pitch only) */
 .rowi.partner-sample {

@@ -207,7 +207,11 @@ window.ET.module('i18n', ['core'], function (ET) {
     });
 
     var label = ET.$('#et-lang-label');
-    if (label) label.textContent = m.native;
+    if (label) {
+      label.textContent = m.native;
+      // Spoken as "Language, English": voice control can say the word it sees.
+      label.parentNode.setAttribute('aria-label', t('ui.lang') + ', ' + m.native);
+    }
 
     listeners.forEach(function (fn) { try { fn(); } catch (e) {} });
   }
