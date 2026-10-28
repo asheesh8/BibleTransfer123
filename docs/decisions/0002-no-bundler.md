@@ -1,6 +1,6 @@
 # 0002. Modular classic scripts, no bundler
 
-Status: Proposed
+Status: Accepted (2026-10-28, Ashish)
 Date: 2026-10-28
 
 ## Context
@@ -38,5 +38,5 @@ hand-maintaining the same list of languages in seven places.
 
 - No new dependencies; Python 3 and a browser remain the whole toolchain.
 - No tree shaking or minification. Mitigated by splitting interface strings
-  per language, which cuts the largest file from 926 KB to about 25 KB a page.
+  per language, which cuts the largest file from 1.5 MB (about 380 KB compressed) to 25 to 40 KB a page.
 - Page script order matters and is enforced by a test rather than by imports.

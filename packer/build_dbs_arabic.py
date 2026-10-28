@@ -310,7 +310,7 @@ def chapters_in(src):
     return {k: int(n) for k, n in re.findall(r"\[\d+,'(\w+)',(\d+)\]", m[1])}
 
 
-CHAPTERS = chapters_in((ROOT / 'app/assets/js/core.js').read_text())
+CHAPTERS = chapters_in((ROOT / 'app/assets/js/data/bible-books.js').read_text())
 ARABIC = re.compile(r'[؀-ۿ]')
 DIGITS = str.maketrans('٠١٢٣٤٥٦٧٨٩', '0123456789')
 

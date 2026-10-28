@@ -43,7 +43,7 @@ def main():
                    'testaments':['NT'] if '_NT_' in fileset else ['OT','NT'],'saveChapter':True}
         opts=media['pages'][source]['selects'][0]['options']
         if not fileset.startswith('IGR'):
-            core=(ROOT/'app/assets/js/core.js').read_text()
+            core=(ROOT/'app/assets/js/data/bible-books.js').read_text()
             table=re.search(r'var BOOKS = (\{.*?\n  \});',core,re.S)[1]
             layout=json.loads(re.sub(r'(OT|NT):',r'"\1":',table).replace("'",'"'))
             # Standard names come from the app's canonical CDN book layout.

@@ -38,8 +38,9 @@ in someone's hands.
 | Layer | Files | Notes |
 |---|---|---|
 | Pages | `app/*.html`, `app/<slug>/index.html` (57 language pages) | Each page lists its own scripts in load order. |
-| Shared code | `app/assets/js/core.js` | Storage, icons, DOM helpers, header, tab bar, rows, covers, sheets, install and share helpers, plus about 1,500 lines of Bible book-name tables. |
-| Interface text | `app/assets/js/i18n.js` | All 38 interface languages in one 926 KB file. |
+| Shared code | `app/assets/js/core.js` | Module registry, storage, icons, DOM helpers, header, tab bar, rows, covers, sheets, install and share helpers (about 670 lines). |
+| Book data | `app/assets/js/data/bible-books.js` | Standard book list, local book names, audio Bible URLs. Loaded only by `item.html`. |
+| Interface text | `app/assets/js/i18n.js` | All 38 interface languages in one 1.5 MB file (about 380 KB compressed), loaded on every page. |
 | Screens | `home.js`, `library.js`, `item.js`, `save.js`, `share.js`, `nearby.js`, `help.js`, `save-guide.js`, `admin*.js` | One file per screen. |
 | Styles | `app/assets/css/app.css` and four smaller sheets | Colour, radius and touch-size tokens on `:root`, light and dark. |
 
@@ -58,7 +59,8 @@ Four layers, each allowed to call only the layers below it:
 Data (catalogues, interface strings, book names) sits beside the layers as
 one file per language. One registry, `registry/languages.json`, becomes the
 single list that language pages, `sw.js`, rewrites and the QR list are
-generated from. The full plan, with workstreams, is in the rebuild plan doc
+generated from. [modules.md](modules.md) lists every module and what it
+needs. The full plan, with workstreams, is in the rebuild plan doc
 linked from [decision 0001](../decisions/0001-rebuild-scope.md).
 
 ## Server side
