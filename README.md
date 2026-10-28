@@ -604,7 +604,7 @@ app/                      the app, copied onto every card
   <language>/index.html   one locked page per language library
   data/catalog*.js        generated catalogues (committed)
 tests/                    Python and Node regression tests
-docs/                     field guide, translation hand-off, how-it-works page
+docs/                     start at docs/README.md: architecture, decisions, guides, conventions
 art/                      artwork manifest
 output/client-guide/      slide decks handed to the client
 ```
