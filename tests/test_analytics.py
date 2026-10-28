@@ -221,6 +221,30 @@ class AnalyticsTest(unittest.TestCase):
         self.assertEqual(self.collect([event()])[0], 429)
         self.assertEqual(self.request(payload={"consent": {"version": 1, "analytics": True}, "events": [event(2)]}, now=NOW + 61)[0], 200)
 
+    def test_password_guesses_from_many_addresses_hit_a_site_wide_ceiling(self):
+        guess = json.dumps({"action": "login", "password": "guess"}).encode()
+        codes = [api.dispatch("/api/admin", "POST", self.headers, guess, f"198.51.100.{n}", now=NOW)[0] for n in range(101)]
+        self.assertEqual(codes, [401] * 100 + [429])
+        # Even the right password waits out the hour, so a botnet gains nothing.
+        right = json.dumps({"action": "login", "password": os.environ["EASYTRANSFER_ADMIN_PASSWORD"]}).encode()
+        self.assertEqual(api.dispatch("/api/admin", "POST", self.headers, right, "203.0.113.1", now=NOW)[0], 429)
+        self.assertEqual(api.dispatch("/api/admin", "POST", self.headers, right, "203.0.113.1", now=NOW + 3601)[0], 200)
+
+    def test_one_address_has_a_daily_ceiling_on_analytics_requests(self):
+        self.assertIn(("events-day", 3000, 86400, "ip"), api.EVENT_LIMITS)
+        body = lambda n: json.dumps({"consent": {"version": 1, "analytics": True}, "events": [event(n)]}).encode()
+        with patch.object(api, "EVENT_LIMITS", (("events", 4, 60, "ip"), ("events-day", 10, 86400, "ip"))):
+            codes = [api.dispatch("/api/analytics", "POST", self.headers, body(n), "192.0.2.50", now=NOW + 61 * (n // 4))[0] for n in range(11)]
+        self.assertEqual(codes, [200] * 10 + [429])
+
+    def test_events_from_every_address_together_have_a_daily_ceiling(self):
+        batch = lambda n: json.dumps({"consent": {"version": 1, "analytics": True}, "events": [event(n * 10 + k) for k in range(10)]}).encode()
+        with patch.object(api, "SITE_EVENTS_PER_DAY", 25):
+            codes = [api.dispatch("/api/analytics", "POST", self.headers, batch(n), f"198.51.100.{n}", now=NOW)[0] for n in range(3)]
+        self.assertEqual(codes, [200, 200, 429])
+        with api.SQLiteStore(self.db).connect() as db:
+            self.assertEqual(db.execute("SELECT COUNT(*) FROM events").fetchone()[0], 20)
+
     def test_sharing_chain_follows_passed_on_links_back_to_the_first_share(self):
         visitor = lambda n: {"visitorId": f"visitor-{n:08d}", "sessionId": f"session-{n:08d}"}
         events = [
@@ -441,6 +465,11 @@ class AnalyticsTest(unittest.TestCase):
             self.assertEqual(store.append(cleaned, NOW), 0)
         with patch("urllib.request.urlopen", side_effect=response_for({"result": 121})):
             self.assertFalse(store.rate("opaque-test-key", 120, 60, NOW))
+        self.assertIn("'INCRBY'", outgoing[-1][1][1])
+        self.assertEqual(outgoing[-1][1][-2:], [60, 1])
+        with patch("urllib.request.urlopen", side_effect=response_for({"result": 40})):
+            self.assertTrue(store.rate("opaque-test-key", 120, 60, NOW, amount=40))
+        self.assertEqual(outgoing[-1][1][-2:], [60, 40])
         responses = [io.BytesIO(json.dumps({"result": [cleaned[0]["id"]]}).encode()), io.BytesIO(json.dumps([{"result": [json.dumps(cleaned[0])]}]).encode())]
         with patch("urllib.request.urlopen", side_effect=responses) as network:
             loaded, truncated = store.read(NOW - 86400, NOW)

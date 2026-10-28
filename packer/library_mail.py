@@ -24,8 +24,10 @@ except ImportError:                  # direct `python3 packer/serve.py`
 
 MAX_BODY = 2048
 ADDRESS = re.compile(r"^[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]{1,64}@(?=.{4,253}$)(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\.)+[A-Za-z]{2,63}$")
-# Sends per visitor address per hour, per recipient per day, and site-wide per day.
-LIMITS = (("mail-ip-v2", 20, 3600), ("mail-to-v2", 5, 86400), ("mail-all-v2", 300, 86400))
+# Sends per visitor address per hour and per day, per recipient per day, and
+# site-wide per day. The Origin check stops other web pages, not scripts, so
+# these limits are what keeps one sender from spending the whole day's budget.
+LIMITS = (("mail-ip-v2", 20, 3600), ("mail-ip-day-v2", 40, 86400), ("mail-to-v2", 5, 86400), ("mail-all-v2", 300, 86400))
 
 # One entry per one-language page (app/<slug>/index.html). Generated from
 # registry/languages.json by packer/et/generate.py; edit the registry.
@@ -184,8 +186,10 @@ def deliver(settings, message):
             failures.append(f"{type(error).__name__} at {progress[0]} on port {port}")
             break
     failure = "; ".join(failures) + ("" if settings["host"] == "smtp.gmail.com" else "; host is not smtp.gmail.com")
+    # The details (ports, stage, host) go to the server log only: the public
+    # response says nothing about the mail setup.
     print("send-library: SMTP send failed:", failure, file=sys.stderr)
-    raise APIError(502, "The email could not be sent right now (" + failure + ").")
+    raise APIError(502, "The email could not be sent right now.")
 
 
 def origin_for(headers, production):
