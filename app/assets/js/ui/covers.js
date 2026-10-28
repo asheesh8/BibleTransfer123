@@ -95,7 +95,7 @@ window.ET.module('ui/covers', ['core'], function (ET) {
         '<span class="name" dir="auto">' + esc(displayTitle(r)) + '</span>' +
         '<span class="sub latin">' + esc(action.sub) + '</span>' +
       '</span>' +
-      '<span class="go">' + esc(action.verb) + '</span></a>';
+      '<span class="go' + (action.tone ? ' go--' + action.tone : '') + '">' + esc(action.verb) + '</span></a>';
   }
 
   function poster(r, sub) {
