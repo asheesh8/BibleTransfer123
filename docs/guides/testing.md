@@ -32,6 +32,12 @@ Pi runs), so nothing else needs to be running.
 - **`tests/e2e/two-phones.spec.js`**: Nearby, phone to phone. An iPhone sends to an Android,
   an Android to an iPhone, and Android to Android, over the Pi server's local signalling. The
   receiver's file must have the same SHA-256 as the sender's. A wrong code must show a message.
+- **`tests/e2e/journeys.spec.js`**: the tasks people come for. Play an audio Bible chapter,
+  save it (the downloaded file must match byte for byte), share it to WhatsApp and Telegram
+  with a link back to it, hand it to Nearby, and find a film in the library by name. Media
+  from DBS servers is answered from `tests/e2e/fixtures/tone.mp3`, so a slow or changed CDN
+  never fails the build. On iPhone, saving hands the file to Safari's share sheet, so that
+  step is covered by the release checklist instead.
 - **`tests/e2e/offline-card.spec.js`**: pages open from `file://`, as they do off a microSD card.
 
 ## Devices
