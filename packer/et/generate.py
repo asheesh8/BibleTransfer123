@@ -183,7 +183,7 @@ window.ET_SHARED_LIBRARY = {shared};
   <div class="foot-nav"></div>
 </main>
 <div id="bulk-dock" class="bulk-dock" hidden></div>
-<script defer src="data/catalog-{catalog}.js"></script>
+<script defer src="data/catalog-{catalog}-shelf.js"></script>
 <script defer src="api/visibility"></script>
 <script defer src="assets/js/visibility.js"></script>
 <script defer src="assets/js/core.js"></script>
@@ -248,6 +248,7 @@ def sw_block(registry):
         if catalog(entry) not in catalogues:
             catalogues.add(catalog(entry))
             files.append("data/catalog-%s.js" % catalog(entry))
+            files.append("data/catalog-%s-shelf.js" % catalog(entry))
         lines.append("  " + ", ".join("'%s'" % f for f in files) + ",")
     return "\n".join(lines)
 
