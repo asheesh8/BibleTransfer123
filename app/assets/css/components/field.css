@@ -1,0 +1,148 @@
+/* ============================================================================
+   Form controls: et-search, et-field (text input with a label), et-switch
+   (on/off), et-segmented (pick one of a few).
+
+     <label class="et-search">
+       <svg class="et-icon">…search…</svg>
+       <input type="search" placeholder="Search by name" aria-label="Search by name">
+       <button type="button" class="et-search__clear" aria-label="Clear">…</button>
+     </label>
+
+     <label class="et-field">
+       <span class="et-field__label">Their email address</span>
+       <input class="et-field__input" type="email" placeholder="name@example.com">
+       <span class="et-field__hint">We only use it to send this link.</span>
+     </label>
+
+     <label class="et-switch">
+       <input type="checkbox" role="switch">
+       <span class="et-switch__track" aria-hidden="true"></span>
+       <span>Dark theme</span>
+     </label>
+
+     <div class="et-segmented" role="radiogroup" aria-label="Quality">
+       <label><input type="radio" name="q" checked><span>Small</span></label>
+       <label><input type="radio" name="q"><span>Best</span></label>
+     </div>
+   ========================================================================= */
+
+/* --------------------------------------------------------------- search */
+.et-search {
+  display: flex;
+  align-items: center;
+  gap: var(--et-space-2);
+  min-height: var(--et-tap);
+  padding: 0 var(--et-space-2) 0 var(--et-space-4);
+  border: 2px solid var(--et-line-strong);
+  border-radius: var(--et-radius-pill);
+  background: var(--et-surface);
+  color: var(--et-text-soft);
+  transition: border-color var(--et-dur-fast) var(--et-ease-out);
+}
+[dir="rtl"] .et-search { padding: 0 var(--et-space-4) 0 var(--et-space-2); }
+.et-search:focus-within { border-color: var(--et-fill-brand); color: var(--et-text-brand); }
+.et-search > .et-icon { width: 1.35rem; height: 1.35rem; flex: none; }
+.et-search input {
+  flex: 1;
+  min-width: 0;
+  min-height: calc(var(--et-tap) - 4px);
+  border: 0;
+  background: transparent;
+  color: var(--et-text);
+  font-size: var(--et-text-md);       /* 16 px+ stops iOS zooming on focus */
+  font-weight: var(--et-weight-bold);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.et-search input::placeholder { color: var(--et-text-soft); }
+.et-search input::-webkit-search-cancel-button { display: none; }
+.et-search__clear {
+  display: grid; place-items: center;
+  width: 2.5rem; height: 2.5rem;
+  border: 0; border-radius: 50%;
+  background: var(--et-sunk);
+  color: var(--et-text);
+  cursor: pointer;
+}
+.et-search__clear .et-icon { width: 1.1rem; height: 1.1rem; }
+.et-search:has(input:placeholder-shown) .et-search__clear { visibility: hidden; }
+
+/* ---------------------------------------------------------------- field */
+.et-field { display: grid; gap: var(--et-space-1); }
+.et-field__label { font-weight: var(--et-weight-heavy); }
+.et-field__input {
+  width: 100%;
+  min-width: 0;
+  min-height: var(--et-tap);
+  padding: 0 var(--et-space-4);
+  border: 2px solid var(--et-line-strong);
+  border-radius: var(--et-radius-md);
+  background: var(--et-surface);
+  color: var(--et-text);
+  font-size: var(--et-text-md);
+  font-weight: var(--et-weight-bold);
+}
+.et-field__input:focus { outline: none; border-color: var(--et-fill-brand); box-shadow: 0 0 0 4px var(--et-wash-brand); }
+.et-field__hint { font-size: var(--et-text-xs); color: var(--et-text-soft); }
+.et-field.is-invalid .et-field__input { border-color: var(--et-fill-danger); }
+.et-field.is-invalid .et-field__hint  { color: var(--et-text-danger); font-weight: var(--et-weight-bold); }
+
+/* --------------------------------------------------------------- switch */
+.et-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--et-space-3);
+  min-height: var(--et-tap-min);
+  font-weight: var(--et-weight-bold);
+  cursor: pointer;
+}
+.et-switch input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.et-switch__track {
+  position: relative;
+  flex: none;
+  width: 3.25rem; height: 2rem;
+  border-radius: var(--et-radius-pill);
+  background: var(--et-line-strong);
+  transition: background var(--et-dur-fast) var(--et-ease-out);
+}
+.et-switch__track::after {
+  content: "";
+  position: absolute;
+  top: 3px; inset-inline-start: 3px;
+  width: calc(2rem - 6px); height: calc(2rem - 6px);
+  border-radius: 50%;
+  background: var(--et-p-white);
+  box-shadow: var(--et-shadow-1);
+  transition: transform var(--et-dur-base) var(--et-ease-spring);
+}
+.et-switch input:checked + .et-switch__track { background: var(--et-fill-go); }
+.et-switch input:checked + .et-switch__track::after { transform: translateX(1.25rem); }
+[dir="rtl"] .et-switch input:checked + .et-switch__track::after { transform: translateX(-1.25rem); }
+.et-switch input:focus-visible + .et-switch__track { outline: 3px solid var(--et-focus); outline-offset: 3px; }
+
+/* ------------------------------------------------------------ segmented */
+.et-segmented {
+  display: inline-flex;
+  justify-self: start;
+  align-self: start;
+  padding: var(--et-space-1);
+  gap: var(--et-space-1);
+  border-radius: var(--et-radius-pill);
+  background: var(--et-sunk);
+}
+.et-segmented label { position: relative; }
+.et-segmented input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.et-segmented span {
+  display: grid; place-items: center;
+  min-height: var(--et-tap-min);
+  padding: 0 var(--et-space-4);
+  border-radius: var(--et-radius-pill);
+  font-weight: var(--et-weight-heavy);
+  color: var(--et-text-soft);
+  transition:
+    background var(--et-dur-fast) var(--et-ease-out),
+    color      var(--et-dur-fast) var(--et-ease-out);
+}
+.et-segmented input:checked + span { background: var(--et-surface); color: var(--et-text); box-shadow: var(--et-shadow-1); }
+.et-segmented input:focus-visible + span { outline: 3px solid var(--et-focus); outline-offset: 2px; }

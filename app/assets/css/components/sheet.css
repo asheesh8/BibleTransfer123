@@ -1,0 +1,114 @@
+/* ============================================================================
+   et-sheet: a panel that slides up from the bottom (Share, Save options,
+   choose a language). On a wide screen it becomes a centred dialog.
+
+   Markup is written by ET.ui.sheet (js/ui/sheet.js), which also traps focus,
+   closes on Escape, on the scrim and on a downward swipe of the handle, and
+   puts focus back where it was.
+
+     <div class="et-sheet" role="dialog" aria-modal="true" aria-labelledby="…">
+       <div class="et-sheet__scrim"></div>
+       <div class="et-sheet__panel">
+         <div class="et-sheet__handle"></div>
+         <header class="et-sheet__head"><h2>…</h2><button class="et-sheet__close">…</button></header>
+         <div class="et-sheet__body">…</div>
+       </div>
+     </div>
+
+   State: .is-open (set a frame after insertion so the slide plays).
+   ========================================================================= */
+
+.et-sheet {
+  position: fixed;
+  inset: 0;
+  z-index: var(--et-z-sheet);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.et-sheet__scrim {
+  position: absolute; inset: 0;
+  background: var(--et-scrim);
+  opacity: 0;
+  transition: opacity var(--et-dur-slow) var(--et-ease-out);
+}
+.et-sheet__panel {
+  position: relative;
+  width: 100%;
+  max-width: 36rem;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--et-surface);
+  color: var(--et-text);
+  border-radius: var(--et-radius-xl) var(--et-radius-xl) 0 0;
+  box-shadow: var(--et-shadow-3);
+  padding-bottom: env(safe-area-inset-bottom);
+  transform: translateY(100%);
+  transition: transform var(--et-dur-slow) var(--et-ease-out);
+  will-change: transform;
+}
+.et-sheet.is-open .et-sheet__scrim { opacity: 1; }
+.et-sheet.is-open .et-sheet__panel { transform: translateY(var(--drag, 0px)); }
+.et-sheet.is-dragging .et-sheet__panel { transition: none; }
+.et-sheet.is-closing .et-sheet__panel {
+  transition-timing-function: var(--et-ease-in);
+  transition-duration: var(--et-dur-base);
+}
+
+.et-sheet__handle {
+  flex: none;
+  width: 100%;
+  height: var(--et-space-6);
+  display: grid; place-items: center;
+  cursor: grab;
+  touch-action: none;
+}
+.et-sheet__handle::before {
+  content: "";
+  width: 3rem; height: 5px;
+  border-radius: var(--et-radius-pill);
+  background: var(--et-line-strong);
+}
+.et-sheet__head {
+  display: flex;
+  align-items: center;
+  gap: var(--et-space-3);
+  padding: 0 var(--et-space-5) var(--et-space-3);
+}
+.et-sheet__head h2 { flex: 1; margin: 0; font-size: var(--et-text-xl); }
+.et-sheet__close {
+  display: grid; place-items: center;
+  flex: none;
+  width: var(--et-tap-min); height: var(--et-tap-min);
+  border: 0; border-radius: 50%;
+  background: var(--et-sunk);
+  color: var(--et-text);
+  cursor: pointer;
+}
+.et-sheet__close .et-icon { width: 1.3rem; height: 1.3rem; }
+.et-sheet__body {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  padding: 0 var(--et-space-5) var(--et-space-5);
+}
+
+/* Wide screens: a centred dialog that fades and rises a little. */
+@media (min-width: 48rem) {
+  .et-sheet { align-items: center; padding: var(--et-space-6); }
+  .et-sheet__panel {
+    border-radius: var(--et-radius-xl);
+    transform: translateY(var(--et-space-5)) scale(.98);
+    opacity: 0;
+    transition:
+      transform var(--et-dur-slow) var(--et-ease-out),
+      opacity   var(--et-dur-base) var(--et-ease-out);
+  }
+  .et-sheet.is-open .et-sheet__panel { transform: none; opacity: 1; }
+  .et-sheet__handle { height: var(--et-space-5); }
+  .et-sheet__handle::before { display: none; }
+}
+
+/* The page behind a sheet does not scroll. */
+html.et-has-sheet, html.et-has-sheet body { overflow: hidden; }

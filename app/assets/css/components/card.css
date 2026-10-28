@@ -1,0 +1,159 @@
+/* ============================================================================
+   et-card and et-poster.
+
+   Card: a surface that groups related things. Not pressable unless it is an
+   <a> or <button> (then it lifts on hover and sinks on press).
+
+     <section class="et-card">…</section>
+     <a class="et-card et-card--link" href="…">…</a>
+
+   Poster: one item in a shelf (a film, an audio Bible, a book). Cover art on
+   top, title and meta below, a kind badge, and a Play disc over the art.
+   The art box has a generated cover so a missing image still looks designed;
+   a real <img> laid inside covers it when it loads.
+
+     <a class="et-poster" href="item.html?id=…">
+       <span class="et-poster__art" data-tone="2">
+         <span class="et-poster__gen">Jesus</span>
+         <img src="…" alt="" loading="lazy">
+         <span class="et-poster__play" aria-hidden="true"><svg class="et-icon">…</svg></span>
+       </span>
+       <span class="et-poster__title">Jesus</span>
+       <span class="et-poster__meta">Film · 2 h</span>
+     </a>
+
+   Shelf: a sideways-scrolling row of posters.
+     <div class="et-shelf">…posters…</div>
+   ========================================================================= */
+
+.et-card {
+  display: block;
+  padding: var(--et-space-5);
+  border-radius: var(--et-radius-lg);
+  background: var(--et-surface);
+  border: 1px solid var(--et-line);
+  box-shadow: var(--et-shadow-1);
+  color: inherit;
+  text-decoration: none;
+}
+.et-card--sunk  { background: var(--et-sunk); box-shadow: none; }
+.et-card--brand { background: var(--et-fill-brand); color: var(--et-on-brand); border-color: transparent; }
+.et-card--tight { padding: var(--et-space-4); }
+
+.et-card--link {
+  cursor: pointer;
+  transition:
+    transform  var(--et-dur-fast) var(--et-ease-out),
+    box-shadow var(--et-dur-fast) var(--et-ease-out);
+}
+.et-card--link:hover  { transform: translateY(-2px); box-shadow: var(--et-shadow-2); }
+.et-card--link:active { transform: scale(.985); box-shadow: var(--et-shadow-1); }
+
+.et-card__title { margin: 0 0 var(--et-space-1); font-size: var(--et-text-lg); font-weight: var(--et-weight-heavy); }
+.et-card__text  { margin: 0; color: var(--et-text-soft); }
+
+/* ---------------------------------------------------------------- shelf */
+.et-shelf {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(9.5rem, 42%);
+  gap: var(--et-space-4);
+  overflow-x: auto;
+  padding: var(--et-space-1) var(--et-gutter) var(--et-space-4);
+  margin: 0 calc(var(--et-gutter) * -1);
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--et-gutter);
+  scrollbar-width: none;
+  touch-action: pan-x pan-y;
+}
+.et-shelf::-webkit-scrollbar { display: none; }
+@media (min-width: 40rem) { .et-shelf { grid-auto-columns: 11rem; } }
+
+/* --------------------------------------------------------------- poster */
+.et-poster {
+  display: grid;
+  gap: var(--et-space-1);
+  align-content: start;
+  scroll-snap-align: start;
+  color: inherit;
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.et-poster__art {
+  --tone-a: var(--et-p-purple-700);
+  --tone-b: var(--et-p-purple-800);
+  position: relative;
+  display: block;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  border-radius: var(--et-radius-md);
+  background: var(--tone-a);
+  box-shadow: var(--et-shadow-2);
+  margin-bottom: var(--et-space-2);
+  transition: transform var(--et-dur-fast) var(--et-ease-out);
+}
+.et-poster--wide .et-poster__art { aspect-ratio: 16 / 9; }
+.et-poster--square .et-poster__art { aspect-ratio: 1; }
+
+/* Generated covers: flat colour fields in brand tones, with a big soft
+   circle like a lamp's glow. Six tones so a shelf never repeats twice in a
+   row. Pick with data-tone="1…6" (item index mod 6). */
+.et-poster__art[data-tone="2"] { --tone-a: var(--et-p-green-700);  --tone-b: var(--et-p-green-800); }
+.et-poster__art[data-tone="3"] { --tone-a: var(--et-p-sky-700);    --tone-b: var(--et-p-sky-800); }
+.et-poster__art[data-tone="4"] { --tone-a: var(--et-p-gold-700);   --tone-b: var(--et-p-purple-800); }
+.et-poster__art[data-tone="5"] { --tone-a: var(--et-p-red-600);    --tone-b: var(--et-p-red-800); }
+.et-poster__art[data-tone="6"] { --tone-a: var(--et-p-purple-500); --tone-b: var(--et-p-purple-900); }
+.et-poster__art::before {
+  content: "";
+  position: absolute;
+  width: 120%; aspect-ratio: 1;
+  inset-inline-end: -45%; top: -30%;
+  border-radius: 50%;
+  background: var(--tone-b);
+}
+.et-poster__gen {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: var(--et-space-3);
+  padding-inline-end: 3.75rem;          /* clear of the Play disc */
+  color: var(--et-p-white);
+  font-weight: var(--et-weight-black);
+  font-size: var(--et-text-lg);
+  line-height: var(--et-leading-tight);
+}
+.et-poster__art img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+/* Play disc: sits bottom-end on the art; grows on hover/press. */
+.et-poster__play {
+  position: absolute;
+  inset-inline-end: var(--et-space-2);
+  bottom: var(--et-space-2);
+  display: grid; place-items: center;
+  width: 2.75rem; height: 2.75rem;
+  border-radius: 50%;
+  background: var(--et-p-white);         /* white disc reads on every cover tone */
+  color: var(--et-p-green-700);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, .25);
+  transition: transform var(--et-dur-fast) var(--et-ease-spring);
+}
+.et-poster__play .et-icon { width: 1.3rem; height: 1.3rem; }
+.et-poster__badge { position: absolute; top: var(--et-space-2); inset-inline-start: var(--et-space-2); }
+
+.et-poster:hover .et-poster__art  { transform: translateY(-3px); }
+.et-poster:hover .et-poster__play { transform: scale(1.08); }
+.et-poster:active .et-poster__art { transform: scale(.97); }
+
+.et-poster__title {
+  font-weight: var(--et-weight-heavy);
+  font-size: var(--et-text-md);
+  line-height: var(--et-leading-snug);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.et-poster__meta { font-size: var(--et-text-xs); color: var(--et-text-soft); font-weight: var(--et-weight-bold); }

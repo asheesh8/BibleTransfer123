@@ -1,0 +1,126 @@
+/* ============================================================================
+   et-row: one line in a list (library results, saved items, chapters,
+   language picker). The whole row is the link; a trailing action, when there
+   is one, is its own button beside it, never nested inside the link.
+
+     <ul class="et-list">
+       <li class="et-row">
+         <a class="et-row__main" href="…">
+           <span class="et-row__thumb" data-tone="3"><svg class="et-icon">…</svg></span>
+           <span class="et-row__text">
+             <span class="et-row__title">Gospel of John</span>
+             <span class="et-row__meta">Audio · 2 h 10 min</span>
+           </span>
+         </a>
+         <button class="et-btn et-btn--quiet et-btn--icon et-btn--sm" aria-label="Save">…</button>
+       </li>
+     </ul>
+
+   Modifiers: .is-current (now playing / chosen), .is-saved (shows a check
+   badge on the thumb), .et-row--progress with <span class="et-row__bar"
+   style="--value: 40%"> for partial downloads.
+   ========================================================================= */
+
+.et-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-radius: var(--et-radius-lg);
+  background: var(--et-surface);
+  border: 1px solid var(--et-line);
+  overflow: hidden;
+}
+
+.et-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--et-space-2);
+  padding-inline-end: var(--et-space-3);
+}
+.et-row + .et-row { border-top: 1px solid var(--et-line); }
+
+.et-row__main {
+  display: flex;
+  align-items: center;
+  gap: var(--et-space-3);
+  flex: 1;
+  min-width: 0;
+  min-height: calc(var(--et-tap) + var(--et-space-4));
+  padding: var(--et-space-2) var(--et-space-2) var(--et-space-2) var(--et-space-4);
+  color: inherit;
+  text-decoration: none;
+  transition: background var(--et-dur-fast) var(--et-ease-out);
+}
+[dir="rtl"] .et-row__main { padding: var(--et-space-2) var(--et-space-4) var(--et-space-2) var(--et-space-2); }
+.et-row__main:hover  { background: var(--et-sunk); }
+.et-row__main:active { background: var(--et-wash-brand); }
+.et-row__main:focus-visible { outline-offset: -3px; }
+
+.et-row__thumb {
+  --tone: var(--et-p-purple-700);       /* fixed tones: a white icon must read in both themes */
+  position: relative;
+  display: grid; place-items: center;
+  flex: none;
+  width: var(--et-tap); height: var(--et-tap);
+  border-radius: var(--et-radius-sm);
+  background: var(--tone);
+  color: var(--et-p-white);
+  overflow: hidden;
+}
+.et-row__thumb img { width: 100%; height: 100%; object-fit: cover; }
+.et-row__thumb .et-icon { width: 1.6rem; height: 1.6rem; }
+.et-row__thumb[data-tone="2"] { --tone: var(--et-p-green-700); }
+.et-row__thumb[data-tone="3"] { --tone: var(--et-p-sky-700); }
+.et-row__thumb[data-tone="4"] { --tone: var(--et-p-gold-700); }
+
+.et-row__text { display: grid; min-width: 0; flex: 1; }
+.et-row__title {
+  font-weight: var(--et-weight-heavy);
+  font-size: var(--et-text-md);
+  line-height: var(--et-leading-snug);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.et-row__meta { font-size: var(--et-text-xs); color: var(--et-text-soft); font-weight: var(--et-weight-bold); }
+.et-row__end { color: var(--et-text-soft); flex: none; display: flex; }
+.et-row__end .et-icon { width: 1.25rem; height: 1.25rem; }
+
+/* Chosen / now playing: a brand bar at the start edge plus bold brand
+   title. Two cues, so it is not colour alone. */
+.et-row.is-current { background: var(--et-wash-brand); }
+.et-row.is-current::before {
+  content: "";
+  position: absolute; inset-block: var(--et-space-2); inset-inline-start: 0;
+  width: 4px; border-radius: 0 4px 4px 0;
+  background: var(--et-fill-brand);
+}
+.et-row.is-current .et-row__title { color: var(--et-text-brand); }
+
+/* Saved: a green check badge on the thumb's corner. */
+.et-row.is-saved .et-row__thumb::after {
+  content: "";
+  position: absolute; inset-inline-end: 3px; bottom: 3px;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: var(--et-fill-go)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E")
+    center / 12px no-repeat;
+  box-shadow: 0 0 0 2px var(--et-surface);
+}
+
+/* Partial download: a thin bar along the bottom of the row. */
+.et-row__bar {
+  position: absolute; inset-inline: 0; bottom: 0;
+  height: 3px;
+  background: var(--et-sunk);
+}
+.et-row__bar::after {
+  content: "";
+  display: block;
+  width: var(--value, 0%);
+  height: 100%;
+  background: var(--et-fill-go);
+  transition: width var(--et-dur-base) var(--et-ease-out);
+}

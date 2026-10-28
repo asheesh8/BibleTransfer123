@@ -1,0 +1,91 @@
+/* ============================================================================
+   et-chip and et-badge.
+
+   Chip: a filter or choice the reader toggles (Films / Audio / Scripture).
+   A <button aria-pressed>, so the state is read out, and shown with a check
+   as well as colour.
+
+     <div class="et-chips" role="group" aria-label="Type">
+       <button class="et-chip" aria-pressed="true">
+         <svg class="et-icon">…</svg>Films <span class="et-chip__count">12</span>
+       </button>
+     </div>
+
+   Badge: a short, non-interactive label on a card or row.
+     <span class="et-badge et-badge--go">Saved</span>
+   Tones: (default brand) --go --gold --info --danger --soft
+   ========================================================================= */
+
+.et-chips {
+  display: flex;
+  gap: var(--et-space-2);
+  overflow-x: auto;
+  padding: var(--et-space-1) var(--et-space-1) var(--et-space-2);
+  scrollbar-width: none;
+  touch-action: pan-x pan-y;   /* the strip scrolls sideways; the page does not */
+}
+.et-chips::-webkit-scrollbar { display: none; }
+
+.et-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--et-space-2);
+  flex: none;
+  min-height: var(--et-tap-min);
+  padding: 0 var(--et-space-4);
+  border: 2px solid var(--et-line-strong);
+  border-radius: var(--et-radius-pill);
+  background: var(--et-surface);
+  color: var(--et-text);
+  font: var(--et-weight-bold) var(--et-text-sm) / 1 var(--et-font);
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background   var(--et-dur-fast) var(--et-ease-out),
+    border-color var(--et-dur-fast) var(--et-ease-out),
+    transform    var(--et-dur-instant) var(--et-ease-out);
+}
+.et-chip .et-icon { width: 1.2em; height: 1.2em; }
+.et-chip:hover { border-color: var(--et-text-brand); }
+.et-chip:active { transform: scale(.96); }
+.et-chip[aria-pressed="true"] {
+  background: var(--et-wash-brand);
+  border-color: var(--et-fill-brand);
+  color: var(--et-text-brand);
+}
+/* The check appears only when selected, so state is never colour alone. */
+.et-chip[aria-pressed="true"]::before {
+  content: "";
+  width: .5em; height: .85em;
+  margin-inline-end: var(--et-space-1);
+  border: solid currentColor;
+  border-width: 0 3px 3px 0;
+  transform: translateY(-.1em) rotate(45deg);
+}
+.et-chip__count {
+  font-size: var(--et-text-xs);
+  color: var(--et-text-soft);
+  font-weight: var(--et-weight-heavy);
+}
+
+/* ---------------------------------------------------------------- badge */
+.et-badge {
+  --tone: var(--et-text-brand);
+  --wash: var(--et-wash-brand);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--et-space-1);
+  padding: .2em .65em;
+  border-radius: var(--et-radius-pill);
+  background: var(--wash);
+  color: var(--tone);
+  font: var(--et-weight-heavy) var(--et-text-2xs) / 1.3 var(--et-font);
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+.et-badge .et-icon { width: 1.1em; height: 1.1em; }
+.et-badge--go     { --tone: var(--et-text-go);     --wash: var(--et-wash-go); }
+.et-badge--gold   { --tone: var(--et-on-gold);     --wash: var(--et-fill-gold); }
+.et-badge--info   { --tone: var(--et-text-info);   --wash: var(--et-wash-info); }
+.et-badge--danger { --tone: var(--et-text-danger); --wash: var(--et-wash-danger); }
+.et-badge--soft   { --tone: var(--et-text-soft);   --wash: var(--et-sunk); }
