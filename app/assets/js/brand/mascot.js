@@ -29,7 +29,7 @@
    the API, poses, moves and moods stay.
    ========================================================================= */
 
-(function (ET) {
+window.ET.module('brand/mascot', ['core'], function (ET) {
   'use strict';
 
   /* Fixed palette: Kandili looks the same in light and dark. Mirrors the
@@ -444,4 +444,5 @@
     MOMENTS: Object.keys(MOMENTS),
     COLORS: C
   };
-})(window.ET = window.ET || {});
+  return ET.mascot;
+});

@@ -58,11 +58,13 @@ test('reduced motion collapses every duration token', () => {
 });
 
 function loadMascot() {
-  const window = {};
-  const ctx = { window, document: { documentElement: { getAttribute: () => null } } };
+  const window = { addEventListener() {}, setTimeout() {} };
+  window.window = window;
+  const ctx = { window, location: { protocol: 'file:' }, navigator: {},
+                document: { readyState: 'loading', documentElement: { getAttribute: () => null } } };
   vm.createContext(ctx);
-  vm.runInContext(read(path.join(APP, 'assets/js/brand/mascot.js')), ctx);
-  return window.ET.mascot;
+  for (const f of ['core.js', 'brand/mascot.js']) vm.runInContext(read(path.join(APP, 'assets/js', f)), ctx);
+  return window.ET.use('brand/mascot');
 }
 
 test("Kandili's colours in mascot.js match the --et-k- tokens", () => {
@@ -96,20 +98,24 @@ test('the style guide loads every component stylesheet and kit script', () => {
   for (const f of components) assert.ok(html.includes(`assets/css/components/${f}`), `styleguide.html misses ${f}`);
   for (const s of ['tokens.css', 'base.css'])
     assert.ok(html.indexOf(s) < html.indexOf('components/'), `${s} must load before components`);
-  for (const js of ['ui/icons.js', 'brand/mascot.js', 'ui/sheet.js', 'ui/toast.js'])
-    assert.ok(html.includes(`assets/js/${js}`), js);
+  // core.js first: it holds the module registry every kit script registers with.
+  const at = js => html.lastIndexOf(`src="assets/js/${js}"`);
+  for (const js of ['ui/icons.js', 'brand/mascot.js', 'ui/sheet.js', 'ui/toast.js', 'features/styleguide.js'])
+    assert.ok(at(js) > at('core.js') && at('core.js') > -1, `${js} must load after core.js`);
   // Runs off a card: nothing from the network.
   assert.ok(!/(src|href)="https?:/.test(html), 'styleguide.html loads something from the network');
   assert.ok(!/type="module"/.test(html), 'ES modules do not load from file://');
 });
 
-test('every kit script opens with a header comment and uses no ES module syntax', () => {
+test('every kit script opens with a header comment and registers with ET.module', () => {
   const dirs = ['ui', 'brand', 'features'].map(d => path.join(APP, 'assets/js', d));
   for (const d of dirs) {
     for (const f of fs.readdirSync(d).filter(f => f.endsWith('.js'))) {
       const src = read(path.join(d, f));
       assert.ok(src.startsWith('/* ='), `${f} needs a header comment`);
       assert.ok(!/^\s*(import|export)\s/m.test(src), `${f} uses ES module syntax`);
+      const name = path.basename(d) + '/' + f.replace(/\.js$/, '');
+      assert.ok(src.includes(`window.ET.module('${name}', [`), `${f} should register as ET.module('${name}')`);
     }
   }
 });

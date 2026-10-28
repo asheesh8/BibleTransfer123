@@ -19,7 +19,7 @@
    · The page behind does not scroll.
    ========================================================================= */
 
-(function (ET) {
+window.ET.module('ui/sheet', ['core', 'ui/icons'], function (ET) {
   'use strict';
 
   var FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]), select, textarea, [tabindex]:not([tabindex="-1"])';
@@ -123,4 +123,5 @@
 
   ET.ui = ET.ui || {};
   ET.ui.sheet = { open: open };
-})(window.ET = window.ET || {});
+  return ET.ui.sheet;
+});

@@ -14,7 +14,7 @@
    look the same during the migration.
    ========================================================================= */
 
-(function (ET) {
+window.ET.module('ui/icons', ['core'], function (ET) {
   'use strict';
 
   var P = {
@@ -66,5 +66,6 @@
   ET.ui = ET.ui || {};
   ET.ui.icon = icon;
   ET.ui.icon.names = Object.keys(P);
-  ET.ui.icons = { hydrate: hydrate };
-})(window.ET = window.ET || {});
+  ET.ui.icons = { icon: icon, names: ET.ui.icon.names, hydrate: hydrate };
+  return ET.ui.icons;
+});
