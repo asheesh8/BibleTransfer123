@@ -146,6 +146,7 @@ PAGE = """<!doctype html>
 <link rel="stylesheet" href="assets/css/components/sheet.css">
 <link rel="stylesheet" href="assets/css/components/toast.css">
 <link rel="stylesheet" href="assets/css/consent.css">
+<link rel="stylesheet" href="assets/css/pages/screens.css">
 <link rel="stylesheet" href="assets/css/pages/partners.css">
 <script>
 window.ET_SHARED_LIBRARY = {shared};
@@ -155,7 +156,7 @@ window.ET_SHARED_LIBRARY = {shared};
 }} catch (e) {{}}
 </script>
 </head>
-<body>
+<body class="screen-library">
 <main class="wrap" id="main">
   <section class="shared-hero">
     <p class="eyebrow" id="shared-badge">{badge}</p>

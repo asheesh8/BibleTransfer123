@@ -168,6 +168,9 @@ window.ET.module('help', ['core', 'ui/shell', 'i18n'], function (ET) {
       '<span class="et-tile__end flip">' + ET.icon('chev') + '</span></a>';
 
     ET.$('#help').innerHTML = out;
+    // Kandili points the way, the same lantern that greets people on Home.
+    var k = ET.$('#help-kandili');
+    if (k && ET.lantern && !k.firstChild) { k.innerHTML = ET.lantern(76, 'thinking'); if (ET.loadMascot) ET.loadMascot(); }
     scrollToPhone();
   }
 

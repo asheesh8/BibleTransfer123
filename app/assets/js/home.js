@@ -185,8 +185,9 @@ window.ET.module('home', ['core', 'ui/shell', 'ui/covers', 'i18n'], function (ET
         if (art && seenArt[art]) again.push(r); else { if (art) seenArt[art] = 1; first.push(r); }
       });
       list = first.concat(again);
-      out += '<section class="shelf"><div class="shelf-head">' +
-        '<h2>' + h('type.' + ty) + '</h2>' +
+      out += '<section class="shelf" data-kind="' + ty + '"><div class="shelf-head">' +
+        '<h2><span class="shelf-ico">' + ET.icon(ty === 'audio-bible' ? 'ears' : ty === 'book' ? 'book' : ET.typeIcon(ty)) + '</span>' +
+          h('type.' + ty) + '</h2>' +
         (list.length > 4 ? '<a href="library.html?type=' + ty + '&lang=' + mine + '">' +
           h('home.seeall', { n: list.length }) + '</a>' : '') +
         '</div><div class="rail-x">' +
