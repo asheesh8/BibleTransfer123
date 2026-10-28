@@ -19,6 +19,7 @@ hardware sourced locally.
 | **Server** | `packer/serve.py` locally or on a Raspberry Pi; four Python serverless functions in `api/` on Vercel. |
 | **Storage** | Upstash Redis (REST) in production; SQLite under `.cache/` locally. Analytics only — the library itself is static. |
 | **Peer-to-peer** | WebRTC via a vendored PeerJS client (`app/assets/vendor/`). |
+| **Phone apps** | iPhone and Android apps built from the same `app/` with Capacitor — see [`mobile/README.md`](mobile/README.md). |
 | **Tests** | `npm test` — Python `unittest` plus `node --test`. `npm run test:e2e` — Playwright browser tests on iPhone and Android screens, including phone-to-phone Nearby. See [docs/guides/testing.md](docs/guides/testing.md). |
 
 ### Setup in one minute

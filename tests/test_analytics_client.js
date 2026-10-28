@@ -20,7 +20,7 @@ function client(options = {}) {
     fetch: async (url, config) => { requests.push({ url, config, body: JSON.parse(config.body) }); return { ok: true }; },
     crypto: { getRandomValues: values => crypto.randomFillSync(values) },
     addEventListener: (type, callback) => { listeners[type] = callback; },
-    ET: { contentLang: () => 'eng', byId: value => value === 'book-1' ? { id: value, lang: 'eng' } : null,
+    ET: { online: /^https?:$/.test(location.protocol), contentLang: () => 'eng', byId: value => value === 'book-1' ? { id: value, lang: 'eng' } : null,
       qs: key => new URLSearchParams(location.search).get(key), libraryScope: () => null }
   };
   context.window = context;

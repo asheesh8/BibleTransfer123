@@ -51,7 +51,7 @@
   // been passed on (et_hop). The chain lives only in links and this tab's
   // session, so it works with analytics declined; with analytics accepted,
   // each new share also records the share it grew from.
-  var web = /^https?:$/.test(location.protocol);
+  var web = ET.online;
   var NAME_JUNK = (function () {
     try { return new RegExp("[^\\p{L}\\p{M} '’-]", 'gu'); }
     catch (e) { return /[0-9_.,:;\/\\@<>"(){}\[\]#%&*+=?!|~^$`\u0000-\u001f]/g; }
@@ -84,7 +84,7 @@
   // This page's address, carrying the sender and the next step of the chain.
   function passUrl(name) {
     try {
-      var u = new URL(location.href);
+      var u = new URL(ET.publicHref());
       u.hash = '';
       ['et_from', 'et_hop', 'et_share', 'et_channel'].forEach(function (k) { u.searchParams.delete(k); });
       if (name) u.searchParams.set('et_from', name);
