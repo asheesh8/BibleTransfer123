@@ -45,7 +45,7 @@ test('all thirty-eight languages retain formatter variables and render escaped s
 
 test('literal interface and accessibility keys have an English fallback', () => {
   const { dictionaries } = harness();
-  for (const name of ['core', 'home', 'library', 'item', 'save', 'shared-library', 'share-libraries', 'nearby', 'share', 'help', 'i18n']) {
+  for (const name of ['core', 'ui/shell', 'ui/covers', 'home', 'library', 'item', 'save', 'shared-library', 'share-libraries', 'nearby', 'share', 'help', 'i18n']) {
     const file = fs.readFileSync(path.join(app, 'assets/js', name + '.js'), 'utf8');
     for (const match of file.matchAll(/\b(?:t|h)\(\s*['"]([a-z][\w.-]+)['"]\s*[,)]/g)) {
       assert.ok(dictionaries.en[match[1]], `${name}.js uses unresolved key ${match[1]}`);

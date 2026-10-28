@@ -31,6 +31,8 @@ window.ET.module('data/bible-books', ['core'], function (ET) {
 | File | Module | Needs | Loaded by |
 |---|---|---|---|
 | `core.js` | `core` | catalogue, `visibility.js` | every page |
+| `ui/shell.js` | `ui/shell` (also `ET.header`, `ET.tabbar`, `ET.icon`, `ET.sheet`, `ET.stepper`, `ET.toast`, `ET.lantern`, `ET.loadMascot`, `ET.facebookShare`) | `core` | every page that loads `core.js`, right after it |
+| `ui/covers.js` | `ui/covers` (also `ET.row`, `ET.poster`, `ET.thumb`, `ET.typeIcon`) | `core` | pages that list items: `index.html`, `library.html`, `item.html`, language pages |
 | `data/bible-books.js` | `data/bible-books` | `core` | `item.html` |
 | `ui/icons.js` | `ui/icons` (also `ET.ui.icon`) | `core` | `styleguide.html` |
 | `ui/sheet.js` | `ui/sheet` (also `ET.ui.sheet`) | `core`, `ui/icons` | `styleguide.html` |
@@ -55,5 +57,21 @@ window.ET.module('data/bible-books', ['core'], function (ET) {
 | `share-libraries.js` | legacy | `core`, `i18n` | `share-libraries/` |
 | `admin*.js` | legacy | `core` | `admin/` |
 
-Tests: `tests/test_modules.js` checks the registry, the book data and the
-item page's script order.
+## What core.js keeps
+
+Since the core split (October 2026) `core.js` holds only what has no look of
+its own: the registry, storage, `esc`/`qs`/`$`/`$$`/`human`/`pad`, the
+shared-library scope (`libraryScope`, `scopedUrl`, `scopeEntryUrl`), theme,
+the catalogue (`library`, `byId`), content language and `displayTitle`,
+file safety (`safeType`, `openable`, `safeUrl`) and the offline install.
+Anything that draws goes in a `ui/` module. A test keeps `core.js` under 400
+lines.
+
+`ui/shell.js` and `ui/covers.js` set their old `ET.*` names so no screen had
+to change when they moved. As screens move onto the design kit, they call
+`ET.ui.sheet`, `ET.ui.toast` and `ET.ui.icon` instead, and the shell's
+versions retire.
+
+Tests: `tests/test_modules.js` checks the registry, the book data, the
+item page's script order, the old names, and that every page loads
+`ui/shell.js` and `ui/covers.js` when its scripts call them.
