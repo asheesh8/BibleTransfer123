@@ -240,7 +240,7 @@ class DbsAuditTest(unittest.TestCase):
         for code, (slug, ui, _) in SHELVES.items():
             page = (ROOT / f'app/{slug}/index.html').read_text()
             self.assertIn(f'"lang":"{code}","ui":"{ui}","slug":"{slug}"', page)
-            self.assertIn(f'data/catalog-{code}.js', page)
+            self.assertIn(f'data/catalog-{code}-shelf.js', page)
             self.assertIn(f"'{slug}/index.html', 'data/catalog-{code}.js'", sw)
             # Kuria uses the Swahili interface, whose own code is the Swahili page's route.
             for path in (slug, code) + ((ui,) if ui != 'swh' else ()):
@@ -363,7 +363,7 @@ class DbsAuditTest(unittest.TestCase):
         # One shelf, two pages: /tiriki names itself and loads the same catalogue.
         tiriki = (ROOT / 'app/tiriki/index.html').read_text()
         self.assertIn('"lang":"ida","ui":"swh","slug":"tiriki","name":"Tiriki","native":"Lutirichi"', tiriki)
-        self.assertIn('data/catalog-ida.js', tiriki)
+        self.assertIn('data/catalog-ida-shelf.js', tiriki)
         self.assertIn("'tiriki/index.html'", (ROOT / 'app/sw.js').read_text())
         vercel = (ROOT / 'vercel.json').read_text()
         for slug, aliases in (('maragoli', ('lulogooli', 'logooli', 'luragoli', 'maragooli')),
@@ -387,7 +387,7 @@ class DbsAuditTest(unittest.TestCase):
             self.assertEqual(grn, {r['id'].rsplit('-', 1)[1] for r in luy if r.get('scope') == variety}, code)
             page = (ROOT / f'app/{slug}/index.html').read_text()
             self.assertIn(f'"lang":"{code}","ui":"swh","slug":"{slug}"', page)
-            self.assertIn(f'data/catalog-{code}.js', page)
+            self.assertIn(f'data/catalog-{code}-shelf.js', page)
             self.assertIn(f"'{slug}/index.html', 'data/catalog-{code}.js'", (ROOT / 'app/sw.js').read_text())
         nle = self.shelf('nle')
         self.assertEqual(nle[0]['id'], 'nle-ab-nleufw-fcbh-nt-n')
@@ -418,7 +418,7 @@ class DbsAuditTest(unittest.TestCase):
         for code, slug in (('kam', 'kamba'), ('kln', 'kalenjin')):
             page = (ROOT / f'app/{slug}/index.html').read_text()
             self.assertIn(f'"lang":"{code}","ui":"swh","slug":"{slug}"', page)
-            self.assertIn(f'data/catalog-{code}.js', page)
+            self.assertIn(f'data/catalog-{code}-shelf.js', page)
             self.assertIn(f"'{slug}/index.html', 'data/catalog-{code}.js'", (ROOT / 'app/sw.js').read_text())
             self.assertIn(f'"{slug}": (', (ROOT / 'packer/library_mail.py').read_text())
         vercel = (ROOT / 'vercel.json').read_text()
