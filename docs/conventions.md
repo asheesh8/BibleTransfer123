@@ -12,7 +12,7 @@ code disagree, fix one of them in the same pull request.
 - File names are lowercase with hyphens: `save-guide.js`, `share-libraries.js`.
 - CSS classes for shared components are prefixed `et-`: `et-row`, `et-sheet`.
 - Language codes follow ISO 639-3 for content (`swh`, `luy`) and the interface
-  code listed in `i18n.js` for the interface.
+  code in `LANGS` in `i18n.js` (and the file name in `i18n/`) for the interface.
 
 ## Every script file
 

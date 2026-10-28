@@ -6,16 +6,19 @@ const assert = require('node:assert/strict');
 const test = require('node:test');
 const app = path.join(__dirname, '../app');
 const source = fs.readFileSync(path.join(app, 'assets/js/i18n.js'), 'utf8');
+// Every language's table, as the per-language files register them.
+const tables = fs.readdirSync(path.join(app, 'assets/js/i18n')).filter(f => f.endsWith('.js'))
+  .map(f => fs.readFileSync(path.join(app, 'assets/js/i18n', f), 'utf8'));
 function harness(elements = {}, scope = null) {
   const attributes = {};
   const ET = { libraryScope: () => scope, store: { get: (_, fallback) => fallback, set() {} },
     $$: selector => elements[selector] || [], $: () => null, esc: value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') };
   const window = { ET };
   const document = { documentElement: { setAttribute: (key, value) => { attributes[key] = value; } } };
-  // Capture dictionaries without bypassing normal initialization or formatting.
-  vm.runInNewContext(source.replace('  var shared = ET.libraryScope();',
-    '  window.audit = STRINGS;\n  var shared = ET.libraryScope();'), { window, document, navigator: { languages: [] } });
-  return { ET, dictionaries: window.audit, attributes };
+  const context = vm.createContext({ window, document, navigator: { languages: [] } });
+  for (const table of tables) vm.runInContext(table, context);
+  vm.runInContext(source, context);
+  return { ET, dictionaries: window.ET_STRINGS, attributes };
 }
 const placeholders = value => [...value.matchAll(/\{(\w+)\}/g)].map(match => match[1]).sort();
 
