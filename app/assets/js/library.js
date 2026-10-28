@@ -18,6 +18,7 @@ window.ET.module('library', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save'], f
     type: ET.qs('type') || '',
     lang: lockedLang || (urlLang === 'all' ? '' : (urlLang || ET.contentLang())),
     from: ET.qs('from') || '',
+    partner: ET.qs('partner') || '',
     bulk: false
   };
   var selected = {};
@@ -57,6 +58,43 @@ window.ET.module('library', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save'], f
     }).map(function (s) { return { name: s, n: n[s] }; });
   }
 
+  /* Partner libraries: whole collections that reach us from one partner.
+     Nearly everything here comes through the Digital Bible Society's library
+     (dbs.org), so DBS gets the first and biggest section, and the rest sit
+     under "Other libraries". Partners still being invited are shown only in
+     the partner preview (?demo=partners), never to the public: their shelves
+     come from features/partner-preview.js, fetched only in that mode. */
+  var DBS = { id: 'dbs', name: 'Digital Bible Society', mark: 'DBS', tone: 'sky', url: 'https://dbs.org' };
+  var OTHER = { id: 'other', mark: '', tone: 'plain' };
+
+  function partnerOf(r) {
+    var host = String(r.source || '').replace(/^https?:\/\/([^\/]+).*$/, '$1');
+    if (/(^|\.)dbs\.org$/.test(host) || /^Digital Bible Society/.test(r.org || '')) return 'dbs';
+    return 'other';
+  }
+
+  // The partner preview stays on for this phone until ?demo=off.
+  var demoAsk = ET.qs('demo');
+  if (demoAsk) ET.store.set('et.demo', demoAsk === 'partners' ? 'partners' : '');
+  var demoOn = ET.store.get('et.demo', '') === 'partners';
+  var preview = [];   // filled by features/partner-preview.js in demo mode
+
+  function partners() { return [DBS].concat(preview, [OTHER]); }
+  function partnerById(id) {
+    return partners().filter(function (p) { return p.id === id; })[0];
+  }
+  function partnerName(p) { return p.id === 'other' ? t('lib.partner.other') : p.name; }
+
+  // A sample card on a preview shelf matches the kind and words being searched.
+  function sampleMatches(s) {
+    if (state.type && s.type !== state.type) return false;
+    if (state.from) return false;
+    var hay = (s.title + ' ' + s.sub).toLowerCase();
+    return state.q.toLowerCase().split(/\s+/).filter(Boolean).every(function (w) {
+      return hay.indexOf(w) > -1;
+    });
+  }
+
   function present(list) {
     var seen = {};
     list.forEach(function (r) { seen[r.type] = true; });
@@ -68,6 +106,7 @@ window.ET.module('library', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save'], f
     if (state.type && r.type !== state.type) return false;
     if (state.lang && r.lang !== state.lang) return false;
     if (state.from && sources(r).indexOf(state.from) < 0) return false;
+    if (state.partner && partnerOf(r) !== state.partner) return false;
     if (state.q) {
       var hay = [r.title, r.native, r.org, r.desc, r.langName, r.typeLabel]
         .join(' ').toLowerCase();
@@ -160,6 +199,7 @@ window.ET.module('library', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save'], f
     if (state.q) p.push('q=' + encodeURIComponent(state.q));
     if (state.type) p.push('type=' + state.type);
     if (state.from) p.push('from=' + encodeURIComponent(state.from));
+    if (state.partner) p.push('partner=' + encodeURIComponent(state.partner));
     if (!lockedLang) p.push('lang=' + (state.lang || 'all'));
     var url = location.pathname + (p.length ? '?' + p.join('&') : '');
     // Some browsers refuse replaceState on a file:// origin. Keeping the URL in
@@ -203,6 +243,7 @@ window.ET.module('library', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save'], f
     });
 
     sourceChips();
+    partnerTiles(counted);
 
     var langFilters = ET.$('#lang-filters');
     if (!langFilters || lockedLang) return;
@@ -272,6 +313,104 @@ window.ET.module('library', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save'], f
     });
   }
 
+  /* The partner row: one big tile per library, DBS first. Each counts what it
+     holds in the language and kind being browsed; a tap shows only that shelf. */
+  function partnerTiles(counted) {
+    var box = ET.$('#partner-tiles');
+    if (!box) return;
+    if (state.type) counted = counted.filter(function (r) { return r.type === state.type; });
+    var n = { dbs: 0, other: 0 };
+    counted.forEach(function (r) { n[partnerOf(r)]++; });
+    // A preview shelf named in the link waits for the preview to arrive.
+    if (state.partner && !partnerById(state.partner) && !(demoOn && !preview.length)) state.partner = '';
+    var list = partners().filter(function (p) { return p.samples || n[p.id]; });
+    // With nothing but DBS there is nothing to choose between.
+    box.hidden = list.length < 2;
+    ET.$('#partner-label').hidden = box.hidden;
+    if (box.hidden) return;
+    var scroll = box.scrollLeft;
+    box.innerHTML = list.map(function (p) {
+      var soon = !!p.samples;
+      return '<button class="fchip partner-tile partner-tile--' + p.tone + '" data-partner="' + p.id +
+        '" aria-pressed="' + (state.partner === p.id) + '">' +
+        '<span class="partner-mark" aria-hidden="true">' +
+          (p.mark ? ET.esc(p.mark) : ET.icon('grid')) + '</span>' +
+        '<span class="partner-name" dir="auto">' + ET.esc(partnerName(p)) + '</span>' +
+        '<span class="partner-n">' + (soon ? '<span lang="en">Coming soon</span>' : h('lib.countall', { n: n[p.id] })) +
+        '</span></button>';
+    }).join('');
+    box.scrollLeft = scroll;
+    ET.$$('#partner-tiles [data-partner]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var id = b.getAttribute('data-partner');
+        state.partner = state.partner === id ? '' : id;
+        render();
+      });
+    });
+  }
+
+  // The branded band that opens a partner's section of the list.
+  function partnerHead(p, count) {
+    var soon = !!p.samples;
+    return '<header class="partner-head partner-head--' + p.tone + '">' +
+      '<span class="partner-mark" aria-hidden="true">' + (p.mark ? ET.esc(p.mark) : ET.icon('grid')) + '</span>' +
+      '<span class="partner-head__text">' +
+        (soon ? '<span class="partner-soon" lang="en">Partner preview · coming soon</span>'
+              : p.id === 'dbs' ? '<span class="partner-soon">' + h('lib.partner.main') + '</span>' : '') +
+        '<h2 dir="auto">' + ET.esc(partnerName(p)) + '</h2>' +
+        (soon ? '<span class="partner-tag" lang="en">' + ET.esc(p.tagline) + '</span>'
+              : '<span class="partner-tag">' + h('lib.countall', { n: count }) +
+                (p.url ? ' · <a href="' + ET.esc(p.url) + '" target="_blank" rel="noopener">' +
+                  ET.esc(p.url.replace(/^https?:\/\//, '')) + '</a>' : '') + '</span>') +
+      '</span></header>';
+  }
+
+  function sampleCard(p, s, i) {
+    var fake = { id: p.id + '-' + i, type: s.type, title: s.title };
+    return '<button type="button" class="rowi partner-sample" data-sample="' + p.id + ':' + i + '">' +
+      '<span class="art">' + ET.use('ui/covers').artHTML(fake, false) + '</span>' +
+      '<span class="meta"><span class="kicker">' + h('type.' + s.type) + ' · <span lang="en">Sample</span></span>' +
+        '<span class="name" lang="en">' + ET.esc(s.title) + '</span>' +
+        '<span class="sub" lang="en">' + ET.esc(s.sub) + '</span></span>' +
+      '<span class="go go--soon" lang="en">Preview</span></button>';
+  }
+
+  /* The list, in sections: DBS, then each partner in the preview, then every
+     other library. Readers get every item, in order, as before. In the
+     partner preview each section shows its first few and a button for the
+     rest, so every partner is in view on one screen; choosing a partner, or
+     searching, shows the whole of it. */
+  var SHELF = 6;
+  function sections(hits) {
+    var by = { dbs: [], other: [] };
+    hits.forEach(function (r) { by[partnerOf(r)].push(r); });
+    var list = partners().filter(function (p) {
+      if (state.partner && state.partner !== p.id) return false;
+      return p.samples ? p.samples.some(sampleMatches) : by[p.id].length > 0;
+    });
+    var cap = demoOn && !state.partner && !state.q && list.length > 1;
+    return list.map(function (p, n) {
+      if (p.samples) {
+        return '<section class="partner-section">' + partnerHead(p) +
+          p.samples.map(function (s, i) { return sampleMatches(s) ? sampleCard(p, s, i) : ''; }).join('') + '</section>';
+      }
+      var items = by[p.id], more = cap && items.length > SHELF;
+      // An "Other libraries" band with no section above it says nothing.
+      var bare = p.id === 'other' && n === 0;
+      return '<section class="partner-section">' + (bare ? '' : partnerHead(p, items.length)) +
+        (more ? items.slice(0, SHELF) : items).map(card).join('') +
+        (more ? '<button type="button" class="et-btn et-btn--quiet et-btn--block partner-more" data-partner-more="' + p.id + '">' +
+          h('lib.partner.all', { n: items.length }) + '</button>' : '') +
+        '</section>';
+    }).join('');
+  }
+
+  function samplesShown() {
+    return preview.some(function (p) {
+      return (!state.partner || state.partner === p.id) && p.samples.some(sampleMatches);
+    });
+  }
+
   function selectedResources() {
     return lib.resources.filter(function (r) { return selected[r.id] && canSave(r); });
   }
@@ -324,7 +463,23 @@ window.ET.module('library', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save'], f
     chips();
     var visible = lib.resources.filter(matches);
     var hits = state.bulk ? visible.filter(canSave) : visible;
-    ET.$('#results').innerHTML = hits.map(state.bulk ? selectCard : card).join('');
+    ET.$('#results').innerHTML = state.bulk ? hits.map(selectCard).join('') : sections(hits);
+    ET.$$('#results [data-partner-more]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        state.partner = b.getAttribute('data-partner-more');
+        render();
+        var top = ET.$('#partner-tiles');
+        if (top && top.scrollIntoView) top.scrollIntoView({ block: 'start' });
+      });
+    });
+    if (!state.bulk && preview.length) {
+      ET.$$('#results [data-sample]').forEach(function (b) {
+        b.addEventListener('click', function () {
+          var at = b.getAttribute('data-sample').split(':');
+          ET.partnerPreview.open(partnerById(at[0]), +at[1], hits.filter(function (r) { return partnerOf(r) === 'dbs'; })[0]);
+        });
+      });
+    }
     if (state.bulk) {
       ET.$$('#results [data-bulk-id]').forEach(function (b) {
         b.addEventListener('click', function () {
@@ -340,11 +495,14 @@ window.ET.module('library', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save'], f
     var scopeLang = lockedLang || state.lang;
     var total = scopeLang ? lib.resources.filter(function (r) { return r.lang === scopeLang; }).length
                           : lib.resources.length;
-    ET.$('#count').innerHTML = hits.length === total
+    var onPreview = state.partner && !hits.length && samplesShown();
+    ET.$('#count').innerHTML = onPreview ? '<span lang="en">Sample shelf: where this partner\'s library would appear</span>'
+      : hits.length === total
       ? h('lib.countall', { n: total })
       : h('lib.count', { n: hits.length, total: total });
-    ET.$('#empty').hidden = hits.length > 0;
-    ET.$('#results').hidden = hits.length === 0;
+    var any = hits.length > 0 || (!state.bulk && samplesShown());
+    ET.$('#empty').hidden = any;
+    ET.$('#results').hidden = !any;
     syncUrl();
   }
 
@@ -374,6 +532,26 @@ window.ET.module('library', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save'], f
       '</details>');
   }
 
+  // The partner row sits above the kinds, on the library and on language pages.
+  if (!ET.$('#partner-tiles')) {
+    var kindLabel = ET.$('#type-filters').previousElementSibling;
+    (kindLabel && kindLabel.classList.contains('flabel') ? kindLabel : ET.$('#type-filters')).insertAdjacentHTML('beforebegin',
+      '<p class="flabel library-partner" id="partner-label" data-i18n="lib.partner" hidden>Libraries</p>' +
+      '<div class="filters partner-tiles" id="partner-tiles" role="group" data-i18n-aria="lib.partner" aria-label="Libraries" hidden></div>');
+  }
+
+  if (demoOn) {
+    var pv = document.createElement('script');
+    pv.src = 'assets/js/features/partner-preview.js';
+    pv.onload = function () {
+      if (!ET.partnerPreview) return;
+      preview = ET.partnerPreview.partners;
+      ET.partnerPreview.banner();
+      render();
+    };
+    document.head.appendChild(pv);
+  }
+
   var q = ET.$('#q');
   q.value = state.q;
   var timer;
@@ -382,7 +560,7 @@ window.ET.module('library', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save'], f
     timer = setTimeout(function () { state.q = q.value.trim(); render(); }, 140);
   });
   ET.$('#reset').addEventListener('click', function () {
-    state.q = ''; state.type = ''; state.from = ''; state.lang = lockedLang || ''; q.value = ''; render();
+    state.q = ''; state.type = ''; state.from = ''; state.partner = ''; state.lang = lockedLang || ''; q.value = ''; render();
   });
 
   render();
