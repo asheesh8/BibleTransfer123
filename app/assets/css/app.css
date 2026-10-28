@@ -365,17 +365,15 @@ body.bulk-mode { padding-bottom: calc(var(--tabbar) + 92px + env(safe-area-inset
 .share-video-row figcaption { margin-top: .4rem; font-weight: 800; text-align: center; }
 @media (max-width: 520px) { .share-video-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
-/* Short confirmation pinned above the bottom edge (e.g. "post words copied"). */
-.et-toast {
-  position: fixed; left: 50%; bottom: calc(6rem + env(safe-area-inset-bottom)); z-index: 60;
-  display: flex; gap: .6rem; align-items: flex-start; width: min(32rem, calc(100% - 2rem));
-  margin: 0; padding: .85rem 1rem; border-radius: var(--r-lg);
-  background: #12233D; color: #fff; font-weight: 700; box-shadow: 0 10px 30px rgba(0,0,0,.3);
-  transform: translate(-50%, 140%); opacity: 0; transition: transform .25s ease, opacity .25s ease;
-  pointer-events: none;
+/* Read aloud, never shown: the design kit's sheet and toast label their icon
+   buttons with it. Same rule as base.css, which app pages do not load. */
+.et-sr {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
 }
-.et-toast.show { transform: translate(-50%, 0); opacity: 1; }
-.et-toast svg { width: 22px; height: 22px; flex: none; color: #6EE7A0; }
+/* Kit toasts rise above the tab bar, not behind it. */
+body.has-tabs { --et-tabbar-h: var(--tabbar); }
+
 
 /* Pass it on: the inline share card on every item, and the note a recipient
    sees saying who sent it. Prominent, but part of the page, never a pop-up. */

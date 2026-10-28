@@ -1,18 +1,18 @@
 /* ============================================================================
    ET shell: the furniture every screen shares.
 
-   Depends on: core.js. Draws the header (logo, language and theme buttons),
+   Depends on: core.js, ui/icons.js, ui/sheet.js, ui/toast.js and their
+   stylesheets (tokens.css, components/sheet.css, toast.css). Draws the header (logo, language and theme buttons),
    the tab bar, the "tap to change language" hint, the lantern logo and its
    animated Kandili slot, the icon set, the plain sheet, the step header, the
    copy-to-clipboard toast and the Facebook share link.
 
    These were part of core.js until the modular rebuild (docs/decisions/0002)
-   and keep their old names (ET.header, ET.icon, ET.sheet, …), so no screen
-   had to change when they moved. The design kit's ET.ui.sheet, ET.ui.toast
-   and ET.ui.icon are their successors as screens move onto the kit.
+   and keep their old names (ET.header, ET.icon, ET.sheet, …). ET.sheet and
+   ET.toast now open the design kit's sheet and toast.
    ========================================================================= */
 
-window.ET.module('ui/shell', ['core'], function (ET) {
+window.ET.module('ui/shell', ['core', 'ui/icons', 'ui/sheet', 'ui/toast'], function (ET) {
   'use strict';
 
   var store = ET.store, esc = ET.esc, $ = ET.$, $$ = ET.$$, theme = ET.theme;
@@ -95,6 +95,7 @@ window.ET.module('ui/shell', ['core'], function (ET) {
     if (ET.mascot) { mascots(); return; }
     if (!ASSETS || $('#et-mascot-js')) return;
     ['css/tokens.css', 'css/components/mascot.css'].forEach(function (href) {
+      if ($('link[href$="' + href + '"]')) return;     // already on the page
       var l = document.createElement('link');
       l.rel = 'stylesheet';
       l.href = ASSETS + href;
@@ -269,21 +270,19 @@ window.ET.module('ui/shell', ['core'], function (ET) {
   }
 
   // -------------------------------------------------------------- sheets
-  function sheet(html) {
-    var back = document.createElement('div');
-    back.className = 'sheet-back';
-    back.innerHTML = '<div class="sheet" role="dialog" aria-modal="true">' + html + '</div>';
-    function close() {
-      back.remove();
-      document.removeEventListener('keydown', onKey);
-    }
-    function onKey(e) { if (e.key === 'Escape') close(); }
-    back.addEventListener('click', function (e) { if (e.target === back) close(); });
-    document.addEventListener('keydown', onKey);
-    document.body.appendChild(back);
-    var first = back.querySelector('button, a, input');
-    if (first) first.focus();
-    return { el: back.firstChild, close: close };
+  /* The design kit's sheet (ui/sheet.js): focus held inside, Escape, a tap
+     outside or a drag down closes it, and the page behind stays put. The
+     title is plain text and becomes the sheet's heading; onClose runs however
+     it was closed. */
+  function sheet(html, opts) {
+    opts = opts || {};
+    var s = ET.ui.sheet.open({
+      title: opts.title || '',
+      body: html,
+      closeLabel: ET.i18n ? ET.i18n.t('ui.close') : 'Close',
+      onClose: opts.onClose
+    });
+    return { el: s.el, body: s.body, close: s.close };
   }
 
   /* The step header every guided flow uses: numbered dots joined by a bar,
@@ -322,22 +321,14 @@ window.ET.module('ui/shell', ['core'], function (ET) {
       navigator.clipboard.writeText(text).then(done, fallback);
     } else fallback();
   }
-  var toastTimer;
-  function toast(html) {
-    var el = document.getElementById('et-toast');
-    if (!el) {
-      el = document.createElement('p');
-      el.id = 'et-toast'; el.className = 'et-toast'; el.setAttribute('role', 'status');
-      document.body.appendChild(el);
-    }
-    el.innerHTML = icon('check') + '<span>' + html + '</span>';
-    el.classList.add('show');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(function () { el.classList.remove('show'); }, 9000);
+  /* The design kit's toast (ui/toast.js). Plain text, never HTML. It stays
+     long enough to read a sentence about what to do next. */
+  function toast(text) {
+    return ET.ui.toast.show({ text: text, icon: 'check', ms: 9000 });
   }
   function facebookShare(a, url, words) {
     a.href = facebookUrl(url);
-    copyText(words, function () { toast(window.ET.i18n.h('fbshare.copied')); });
+    copyText(words, function () { toast(ET.i18n.t('fbshare.copied')); });
   }
 
 

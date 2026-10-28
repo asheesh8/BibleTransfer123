@@ -98,16 +98,16 @@
   function open(r, preselect) {
     if (r.lang === 'ibo' || r.lang === 'fra' || r.lang === 'amh' || r.lang === 'por' || r.lang === 'yor' || r.lang === 'pcm' || r.lang === 'lin') r = Object.assign({}, r, { title: ET.displayTitle(r) });
     var S = { file: null, jobs: null, target: null, ctrl: null, done: [], blobUrl: null };
-    var sheet = ET.sheet('<div id="save-flow"></div>');
-    var root = ET.$('#save-flow', sheet.el);
-
-    // Leaving mid-download must actually stop it.
-    var close = sheet.close;
-    sheet.close = function () {
+    // Leaving mid-download must actually stop it, however the sheet closes.
+    function stop() {
       if (S.ctrl) S.ctrl.abort();
       if (S.blobUrl) URL.revokeObjectURL(S.blobUrl);
-      close();
-    };
+      S.blobUrl = null;
+    }
+    var sheet = ET.sheet('<div id="save-flow"></div>', { title: t('save.title'), onClose: stop });
+    var root = ET.$('#save-flow', sheet.el);
+    var close = sheet.close;
+    sheet.close = function () { stop(); close(); };
 
     function paint(html) { root.innerHTML = html; }
 
@@ -343,13 +343,11 @@
     if (!jobs.length) return null;
 
     var S = { target: null, ctrl: null, done: [] };
-    var sheet = ET.sheet('<div id="save-many-flow"></div>');
+    function stop() { if (S.ctrl) S.ctrl.abort(); }
+    var sheet = ET.sheet('<div id="save-many-flow"></div>', { title: t('save.title'), onClose: stop });
     var root = ET.$('#save-many-flow', sheet.el);
     var close = sheet.close;
-    sheet.close = function () {
-      if (S.ctrl) S.ctrl.abort();
-      close();
-    };
+    sheet.close = function () { stop(); close(); };
 
     function paint(html) { root.innerHTML = html; }
     function batchHeader(step) {
