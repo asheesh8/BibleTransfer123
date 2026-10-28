@@ -21,6 +21,60 @@
 window.ET = (function () {
   'use strict';
 
+  // ----------------------------------------------------------- app shell
+  /* The same files also run inside the iPhone and Android apps (mobile/,
+     Capacitor). There the page comes from inside the app — capacitor:// on
+     iPhone, https://localhost on Android — so neither "is it http(s)?" nor
+     location.origin means what it does on the website:
+
+     · native        true inside the app
+     · online        true where the website's services can be reached: the
+                     website, a Pi, and the app (which calls the live site)
+     · publicOrigin  where a link someone else can open points: the live site
+                     from the app, this server everywhere else
+     · publicHref    this page's address as such a link
+
+     Inside the app pages link to each other as files (kikuyu/index.html), the
+     way they do off a card, because the app has no server to rewrite /kikuyu. */
+  var PUBLIC_ORIGIN = 'https://www.bibletransfer123.org';
+  var native = !!(window.Capacitor && typeof window.Capacitor.isNativePlatform === 'function' &&
+                  window.Capacitor.isNativePlatform());
+  var online = native || location.protocol === 'http:' || location.protocol === 'https:';
+  var publicOrigin = native ? PUBLIC_ORIGIN : location.origin;
+  function publicHref(href) {
+    var u = new URL(href || location.href, location.href);
+    return native ? PUBLIC_ORIGIN + u.pathname + u.search + u.hash : u.href;
+  }
+
+  /* The app has no /api of its own, so its calls go to the live site through
+     Capacitor's native HTTP (a browser fetch from the app's origin would be a
+     cross-site request the site refuses). The site's same-origin check guards
+     against other web pages driving a visitor's browser; the app is not a web
+     page, so it says which site it belongs to. Everything else — the DBS CDNs,
+     PeerJS — stays an ordinary fetch. */
+  if (native && window.fetch && window.Capacitor.Plugins && window.Capacitor.Plugins.CapacitorHttp) {
+    var pageFetch = window.fetch.bind(window);
+    window.fetch = function (input, init) {
+      var url = typeof input === 'string' ? input : '';
+      if (!/^\/api\//.test(url)) return pageFetch(input, init);
+      init = init || {};
+      var headers = { Origin: PUBLIC_ORIGIN };
+      var given = init.headers || {};
+      Object.keys(given).forEach(function (k) { headers[k] = given[k]; });
+      var data;
+      if (typeof init.body === 'string') {
+        try { data = JSON.parse(init.body); } catch (e) { data = init.body; }
+      }
+      return window.Capacitor.Plugins.CapacitorHttp.request({
+        url: PUBLIC_ORIGIN + url, method: init.method || 'GET', headers: headers,
+        data: data, responseType: 'json'
+      }).then(function (res) {
+        var body = typeof res.data === 'string' ? res.data : JSON.stringify(res.data);
+        return new Response(body, { status: res.status, headers: { 'Content-Type': 'application/json' } });
+      });
+    };
+  }
+
   // ------------------------------------------------------------- storage
   // Safari blocks localStorage on file:// entirely, and a phone in private
   // mode throws on write. Neither is a reason for the app to stop working, so
@@ -139,7 +193,7 @@ window.ET = (function () {
     var scope = libraryScope();
     if (!scope) return 'library.html';
     if (scope.slug) {
-      return location.protocol === 'file:' ? scope.slug + '/index.html' : '/' + scope.slug;
+      return location.protocol === 'file:' || native ? scope.slug + '/index.html' : '/' + scope.slug;
     }
     return scopedUrl('library.html');
   }
@@ -2041,7 +2095,7 @@ window.ET = (function () {
   // Off a card the page is file://, where service workers do not exist and
   // registering one throws. Only ever attempt it over HTTP(S).
   function registerSW() {
-    if (!('serviceWorker' in navigator)) return;
+    if (!('serviceWorker' in navigator) || native) return;
     if (location.protocol !== 'http:' && location.protocol !== 'https:') return;
     navigator.serviceWorker.register('sw.js').catch(function () {
       // A Pi served over plain http from a non-localhost address will refuse.
@@ -2092,7 +2146,7 @@ window.ET = (function () {
       window.setTimeout(registerSW, 1500);
     }
   }
-  if ('serviceWorker' in navigator &&
+  if ('serviceWorker' in navigator && !native &&
       (location.protocol === 'http:' || location.protocol === 'https:')) {
     if (document.readyState === 'complete') scheduleSW();
     else window.addEventListener('load', scheduleSW, { once: true });
@@ -2140,6 +2194,7 @@ window.ET = (function () {
   }
 
   return {
+    native: native, online: online, publicOrigin: publicOrigin, publicHref: publicHref,
     facebookUrl: facebookUrl, facebookShare: facebookShare, copyText: copyText, toast: toast,
     store: store, icon: icon, lantern: lantern, esc: esc, qs: qs, human: human,
     canInstall: canInstall, onInstallable: onInstallable,

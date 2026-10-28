@@ -9,9 +9,9 @@
   var L = (ET.library().languages || {})[scope.lang] || {};
   // A page's own name leads: /idakho and /tiriki share one shelf.
   var language = scope.native || L.native || scope.name || L.name || scope.lang;
-  var publicUrl = location.protocol === 'file:'
+  var publicUrl = location.protocol === 'file:' && !ET.native
     ? location.href.split(/[?#]/)[0]
-    : location.origin + '/' + scope.slug;
+    : ET.publicOrigin + '/' + scope.slug;
 
   document.title = t('sharelib.title', { lang: (scope.lang === 'fra' || scope.lang === 'amh' || scope.lang === 'por' || scope.lang === 'yor' || scope.lang === 'pcm' || scope.lang === 'lin' || scope.lang === 'hau' || scope.lang === 'mlg' || scope.lang === 'nya' || scope.lang === 'run' || scope.lang === 'aka' || scope.lang === 'tir' || scope.lang === 'hat' || scope.lang === 'spa' || scope.lang === 'kuj' || scope.lang === 'lsm' || scope.lang === 'luy' || scope.lang === 'bxk' || scope.lang === 'rag' || scope.lang === 'ida' || scope.lang === 'lkb' || scope.lang === 'lts' || scope.lang === 'nle' || scope.lang === 'lri' || scope.lang === 'kam' || scope.lang === 'kln' || scope.lang === 'nyf' || scope.lang === 'dig' || scope.lang === 'dug' || scope.lang === 'mer' || scope.lang === 'tuv' || scope.lang === 'teo' || scope.lang === 'ara' || scope.lang === 'kin' || scope.lang === 'xho' || scope.lang === 'sna') ? language : L.name || scope.name || language });
   ET.$('#shared-badge').innerHTML = h('sharelib.only', { lang: language });
@@ -28,7 +28,7 @@
       '&body=' + encodeURIComponent(t('sharelib.body', { lang: mailLanguage, url: url }));
   }
   email.href = emailUrl(publicUrl);
-  var sendForm = /^https?:$/.test(location.protocol) && window.fetch && buildSendForm();
+  var sendForm = ET.online && window.fetch && buildSendForm();
   email.addEventListener('click', function (e) {
     if (sendForm) {
       e.preventDefault();
@@ -90,7 +90,7 @@
       : 'https://t.me/share/url?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(document.title);
   }
   var actions = ET.$('.shared-actions');
-  if (/^https?:$/.test(location.protocol) && actions) {
+  if (ET.online && actions) {
     var fb = document.createElement('a');
     fb.className = 'btn fb'; fb.setAttribute('data-shared-channel', 'facebook');
     fb.innerHTML = ET.icon('facebook') + h('fbshare.button');
