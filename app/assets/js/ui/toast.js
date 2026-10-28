@@ -17,7 +17,7 @@
    without moving focus. At most two show at once; the oldest leaves first.
    ========================================================================= */
 
-(function (ET) {
+window.ET.module('ui/toast', ['core', 'ui/icons'], function (ET) {
   'use strict';
 
   var region = null;
@@ -78,4 +78,5 @@
 
   ET.ui = ET.ui || {};
   ET.ui.toast = { show: show };
-})(window.ET = window.ET || {});
+  return ET.ui.toast;
+});

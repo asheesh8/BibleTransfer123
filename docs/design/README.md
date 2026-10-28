@@ -46,9 +46,10 @@ app/styleguide.html        the living style guide
 ```
 
 All scripts are classic scripts on the global `ET` (they must run from
-`file://`; see [decision 0002](../decisions/0002-no-bundler.md)). When the
-module registry lands, each file wraps its body in `ET.module(...)` without
-changing its API.
+`file://`; see [decision 0002](../decisions/0002-no-bundler.md)). Each one
+registers with the module registry in `core.js`, so `core.js` loads first:
+`ET.use('brand/mascot')` and `ET.mascot` are the same object. See
+[the module map](../architecture/modules.md).
 
 The new kit uses `--et-` names so it can load beside the old `app.css` during
 the migration without either overriding the other. Colours deliberately match
@@ -214,6 +215,7 @@ near the origin) and every pose, move and mood keeps working. Budget: under
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/components/button.css">
 <!-- …only the components this page uses… -->
+<script src="assets/js/core.js"></script>
 <script src="assets/js/ui/icons.js"></script>
 <script src="assets/js/brand/mascot.js"></script>
 ```
