@@ -138,7 +138,10 @@ PAGE = """<!doctype html>
 <link rel="apple-touch-icon" href="assets/icon/apple-touch-icon.png">
 <link rel="icon" href="assets/icon/favicon-32.png" sizes="32x32">
 <meta name="theme-color" content="#6A35C2">
+<link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/app.css">
+<link rel="stylesheet" href="assets/css/components/sheet.css">
+<link rel="stylesheet" href="assets/css/components/toast.css">
 <link rel="stylesheet" href="assets/css/consent.css">
 <script>
 window.ET_SHARED_LIBRARY = {shared};
@@ -182,10 +185,13 @@ window.ET_SHARED_LIBRARY = {shared};
   <div class="foot-nav"></div>
 </main>
 <div id="bulk-dock" class="bulk-dock" hidden></div>
-<script defer src="data/catalog-{catalog}.js"></script>
+<script defer src="data/catalog-{catalog}-shelf.js"></script>
 <script defer src="api/visibility"></script>
 <script defer src="assets/js/visibility.js"></script>
 <script defer src="assets/js/core.js"></script>
+<script defer src="assets/js/ui/icons.js"></script>
+<script defer src="assets/js/ui/sheet.js"></script>
+<script defer src="assets/js/ui/toast.js"></script>
 <script defer src="assets/js/ui/shell.js"></script>
 <script defer src="assets/js/ui/covers.js"></script>
 <script defer src="assets/js/art.js"></script>
@@ -247,6 +253,7 @@ def sw_block(registry):
         if catalog(entry) not in catalogues:
             catalogues.add(catalog(entry))
             files.append("data/catalog-%s.js" % catalog(entry))
+            files.append("data/catalog-%s-shelf.js" % catalog(entry))
         lines.append("  " + ", ".join("'%s'" % f for f in files) + ",")
     return "\n".join(lines)
 

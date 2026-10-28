@@ -67,7 +67,7 @@ test('core.js stays code: no book tables creep back in', () => {
 });
 
 test('the shell and covers keep the names screens already call', () => {
-  const ET = boot('assets/js/core.js', 'assets/js/ui/shell.js', 'assets/js/ui/covers.js');
+  const ET = boot('assets/js/core.js', 'assets/js/ui/icons.js', 'assets/js/ui/sheet.js', 'assets/js/ui/toast.js', 'assets/js/ui/shell.js', 'assets/js/ui/covers.js');
   for (const name of ['icon', 'lantern', 'loadMascot', 'header', 'tabbar', 'sheet', 'stepper', 'toast', 'copyText', 'facebookShare'])
     assert.equal(ET[name], ET.use('ui/shell')[name], 'ET.' + name);
   for (const name of ['row', 'poster', 'thumb', 'typeIcon'])
@@ -95,6 +95,12 @@ test('each page loads the modules its scripts call, after core', () => {
       .filter(s => s !== 'core' && s !== 'i18n-load' && !s.startsWith('i18n/'));
     const code = scripts.map(s => read('assets/js/' + s + '.js')).join('\n');
     if (SHELL.test(code)) assert.ok(at('ui/shell.js') > at('core.js'), page + ' needs ui/shell.js after core.js');
+    if (at('ui/shell.js') > -1) {
+      for (const kit of ['ui/icons.js', 'ui/sheet.js', 'ui/toast.js'])
+        assert.ok(at(kit) > at('core.js') && at(kit) < at('ui/shell.js'), page + ' needs ' + kit + ' between core.js and ui/shell.js');
+      for (const css of ['tokens.css', 'components/sheet.css', 'components/toast.css'])
+        assert.ok(html.includes('href="assets/css/' + css + '"'), page + ' needs ' + css + ' for the kit sheet and toast');
+    }
     if (COVERS.test(code)) assert.ok(at('ui/covers.js') > at('core.js'), page + ' needs ui/covers.js after core.js');
     checked++;
   }

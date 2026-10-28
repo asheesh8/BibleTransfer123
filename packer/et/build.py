@@ -325,7 +325,26 @@ def write_catalog(app_dir, library):
                             for r in scoped["resources"]),
         }
         write("catalog-" + lang + ".js", scoped)
+        write("catalog-" + lang + "-shelf.js", shelf_catalog(scoped))
     return size
+
+
+def shelf_catalog(scoped):
+    """A language page's own catalogue without the chapter and download lists.
+
+    The landing page only needs to know whether each item plays, reads or can
+    be saved. Arabic's full list is 3.4 MB (190 KB compressed); this is 18 KB.
+    Bulk save fetches the full catalogue when someone actually starts it."""
+    shelf = dict(scoped, shelf=True)
+    rows = []
+    for r in scoped["resources"]:
+        files = r.get("files") or []
+        row = {k: v for k, v in r.items() if k not in ("files", "play", "read")}
+        row.update(play=bool(r.get("play")), read=bool(r.get("read")), hasFiles=bool(files),
+                   canSave=any(f.get("file") or f.get("chapters") for f in files))
+        rows.append(row)
+    shelf["resources"] = rows
+    return shelf
 
 
 def write_manifest(root, chosen, library):

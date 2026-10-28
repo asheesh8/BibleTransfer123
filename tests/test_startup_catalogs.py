@@ -42,6 +42,16 @@ class StartupCatalogTest(unittest.TestCase):
                 self.assertEqual(scoped["counts"]["total"], len(expected))
                 self.assertEqual(scoped["counts"]["offline"],
                                  sum(bool(r.get("offline")) for r in expected))
+                shelf = read_catalog(data / ("catalog-" + lang + "-shelf.js"))
+                self.assertTrue(shelf["shelf"])
+                self.assertEqual([r["id"] for r in shelf["resources"]], [r["id"] for r in expected])
+                for small, whole in zip(shelf["resources"], expected):
+                    self.assertNotIn("files", small)
+                    self.assertEqual(small["play"], bool(whole.get("play")))
+                    self.assertEqual(small["read"], bool(whole.get("read")))
+                    self.assertEqual(small["hasFiles"], bool(whole.get("files")))
+                    self.assertEqual(small["canSave"], any(f.get("file") or f.get("chapters")
+                                                           for f in whole.get("files") or []))
             full_bytes = len(gzip.compress((data / "catalog.js").read_bytes()))
             self.assertLess(len(gzip.compress((data / "catalog-home.js").read_bytes())),
                             full_bytes // 2, "Home should not download full chapter lists")
@@ -68,7 +78,10 @@ class StartupCatalogTest(unittest.TestCase):
             scope = re.search(r"window\.ET_SHARED_LIBRARY = (\{[^\n]+\});", html)
             if scope:
                 lang = json.loads(scope[1])["lang"]
-                filename = "data/catalog-" + lang + ".js"
+                # The landing page ships the light shelf catalogue; item pages
+                # and bulk save fetch the full one, so both are cached.
+                filename = "data/catalog-" + lang + "-shelf.js"
+                self.assertIn("'data/catalog-" + lang + ".js'", worker)
             elif page in (APP / "index.html", APP / "share-libraries/index.html"):
                 filename = "data/catalog-home.js"
             else:

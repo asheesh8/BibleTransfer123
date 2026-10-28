@@ -300,15 +300,12 @@
     }).join('');
 
     var s = ET.sheet(
-      '<h2 data-i18n="home.pick">' + ET.esc(t('home.pick')) + '</h2>' +
       '<p class="muted" data-i18n="home.pick.sub">' + ET.esc(t('home.pick.sub')) + '</p>' +
       '<div class="search" style="margin-bottom:.8rem">' + ET.icon('search') +
         '<input type="search" id="et-picker-q" autocomplete="off" enterkeyhint="search" ' +
         'placeholder="' + ET.esc(t('welcome.search')) + '" aria-label="' +
         ET.esc(t('welcome.search')) + '"></div>' +
-      '<div class="stack">' + rows + '</div>' +
-      (force ? '' : '<div style="margin-top:1rem"><button class="btn ghost block" id="et-lang-x">' +
-                    ET.esc(t('ui.close')) + '</button></div>'));
+      '<div class="stack">' + rows + '</div>', { title: t('home.pick') });
 
     ET.$$('[data-lang]', s.el).forEach(function (b) {
       b.addEventListener('click', function () { set(b.getAttribute('data-lang')); s.close(); });
@@ -319,8 +316,6 @@
         b.hidden = !!query && b.getAttribute('data-find').indexOf(query) < 0;
       });
     });
-    var x = ET.$('#et-lang-x', s.el);
-    if (x) x.addEventListener('click', s.close);
     return s;
   }
 
@@ -361,6 +356,16 @@
       return '<li class="lp-step ' + cls + '"><span class="lp-ico">' + ET.icon(icon) + '</span>' +
         '<span class="lp-n">' + n + ' · ' + title + '</span><span>' + text + '</span></li>';
     }
+    function stat(n, label, cls) {
+      return '<li class="lp-stat ' + cls + '"><strong>' + n + '</strong><span>' + label + '</span></li>';
+    }
+    var stats = { langs: 0, items: 0 };
+    try {
+      stats.items = ET.library().resources.length;
+      stats.langs = Object.keys(ET.library().languages || {}).length;
+    } catch (e) {}
+    stats.langs = stats.langs || '50+';
+    stats.items = stats.items ? stats.items.toLocaleString('en') : 'Hundreds of';
     function phase(cls, tag, title, text) {
       return '<li class="lp-phase ' + cls + '"><span class="lp-tag">' + tag + '</span>' +
         '<strong>' + title + '</strong><span>' + text + '</span></li>';
@@ -375,17 +380,27 @@
           step(3, 'gold', 'share', 'Pass it on', 'Show a code. Your friend scans it and it copies across, phone to phone.') +
         '</ol>' +
       '</div></section>' +
-      '<section class="lp-band lp-partners" lang="en" dir="ltr"><div class="lp-in">' +
-        '<p class="lp-eyebrow">For ministries and content partners</p>' +
-        '<h2 class="display">Bring your library. We carry it the last mile.</h2>' +
-        '<p class="lp-lead">You have the films, Bibles and teaching. We put them in people\'s hands ' +
-          'where the internet stops, and show you where they travel.</p>' +
-        '<ul class="lp-points">' +
-          '<li><strong>Your content, every language.</strong> One upload reaches every library that speaks it.</li>' +
-          '<li><strong>Offline by design.</strong> Phones, memory cards and VillageServer hubs, with no data cost to the viewer.</li>' +
-          '<li><strong>Reach you can measure.</strong> Plays and shares by language and country, with privacy built in.</li>' +
+      '<section class="lp-band lp-partners" lang="en" dir="ltr"><div class="lp-in lp-partners-in">' +
+        '<div class="lp-partners-copy">' +
+          '<p class="lp-eyebrow">For ministries and content partners</p>' +
+          '<h2 class="display">Bring your library. We carry it the last mile.</h2>' +
+          '<p class="lp-lead">You have the films, Bibles and teaching. We put them in people\'s hands ' +
+            'where the internet stops, and show you where they travel.</p>' +
+          '<ol class="lp-flow">' +
+            '<li><span class="lp-flow-n">1</span><span><strong>Send us your files.</strong> Films, audio, PDFs, in any language.</span></li>' +
+            '<li><span class="lp-flow-n">2</span><span><strong>We shelve them.</strong> Your titles join every library that speaks the language.</span></li>' +
+            '<li><span class="lp-flow-n">3</span><span><strong>They travel offline.</strong> Phone to phone, memory cards and VillageServer hubs, with no data cost to the viewer.</span></li>' +
+          '</ol>' +
+          '<a class="btn big lp-partner-btn" href="https://villageservers.org" target="_blank" rel="noopener">Partner with us</a>' +
+        '</div>' +
+        // Counted from the library this page carries, so the numbers are
+        // always the ones a visitor can open.
+        '<ul class="lp-stats">' +
+          stat(stats.langs, 'languages with their own library', 'purple') +
+          stat(stats.items, 'films, Bibles and audio', 'green') +
+          stat('0', 'data cost to share', 'gold') +
+          stat('20–40', 'phones per VillageServer hub', 'sky') +
         '</ul>' +
-        '<a class="btn big lp-partner-btn" href="https://villageservers.org" target="_blank" rel="noopener">Partner with us</a>' +
       '</div></section>' +
       '<section class="lp-band lp-next" lang="en" dir="ltr"><div class="lp-in">' +
         '<h2 class="display">What\'s coming</h2>' +

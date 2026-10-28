@@ -150,16 +150,16 @@
   function open(r, preselect) {
     if (r.lang === 'ibo' || r.lang === 'fra' || r.lang === 'amh' || r.lang === 'por' || r.lang === 'yor' || r.lang === 'pcm' || r.lang === 'lin') r = Object.assign({}, r, { title: ET.displayTitle(r) });
     var S = { file: null, jobs: null, target: null, ctrl: null, done: [], blobUrl: null };
-    var sheet = ET.sheet('<div id="save-flow"></div>');
-    var root = ET.$('#save-flow', sheet.el);
-
-    // Leaving mid-download must actually stop it.
-    var close = sheet.close;
-    sheet.close = function () {
+    // Leaving mid-download must actually stop it, however the sheet closes.
+    function stop() {
       if (S.ctrl) S.ctrl.abort();
       if (S.blobUrl) URL.revokeObjectURL(S.blobUrl);
-      close();
-    };
+      S.blobUrl = null;
+    }
+    var sheet = ET.sheet('<div id="save-flow"></div>', { title: t('save.title'), onClose: stop });
+    var root = ET.$('#save-flow', sheet.el);
+    var close = sheet.close;
+    sheet.close = function () { stop(); close(); };
 
     function paint(html) { root.innerHTML = html; }
 
@@ -310,7 +310,7 @@
       }
       var place = S.target.kind === 'downloads' ? t('save.done.downloads') : S.target.name;
       paint((S.target.kind === 'downloads' ? ET.stepper(STEPS.length, 3) : header(3)) +
-        '<div class="done-mark">' + ET.icon('check') + '</div>' +
+        cheer() +
         '<h3 class="center" style="margin:.2rem 0">' + h(S.target.kind === 'downloads' ? 'save.done.browser.title' : 'save.done.title') + '</h3>' +
         '<p class="center muted">' + (S.target.kind === 'downloads' ? h('save.done.browser.where') : h('save.done.where', { place: place })) + '</p>' +
         (S.target.kind === 'downloads' ? '<p class="center muted" style="font-size:.9rem">' +
@@ -325,6 +325,7 @@
         last.handle.getFile().then(function (file) { window.open(URL.createObjectURL(file), '_blank'); });
       });
       ET.$('#sv-more', root).addEventListener('click', function () { preselect = null; what(); });
+      if (ET.loadMascot) ET.loadMascot();
     }
 
     function failed(err) {
@@ -399,13 +400,11 @@
     if (!jobs.length) return null;
 
     var S = { target: null, ctrl: null, done: [] };
-    var sheet = ET.sheet('<div id="save-many-flow"></div>');
+    function stop() { if (S.ctrl) S.ctrl.abort(); }
+    var sheet = ET.sheet('<div id="save-many-flow"></div>', { title: t('save.title'), onClose: stop });
     var root = ET.$('#save-many-flow', sheet.el);
     var close = sheet.close;
-    sheet.close = function () {
-      if (S.ctrl) S.ctrl.abort();
-      close();
-    };
+    sheet.close = function () { stop(); close(); };
 
     function paint(html) { root.innerHTML = html; }
     function batchHeader(step) {
@@ -508,12 +507,13 @@
     function finished() {
       S.ctrl = null;
       var place = S.target.kind === 'downloads' ? t('save.done.downloads') : S.target.name;
-      paint((S.target.kind === 'downloads' ? ET.stepper(3, 2) : batchHeader(2)) + '<div class="done-mark">' + ET.icon('check') + '</div>' +
+      paint((S.target.kind === 'downloads' ? ET.stepper(3, 2) : batchHeader(2)) + cheer() +
         '<h3 class="center" style="margin:.2rem 0">' + h(S.target.kind === 'downloads' ? 'bulk.done.browser.title' : 'bulk.done.title', { n: resources.length }) + '</h3>' +
         '<p class="center muted">' + (S.target.kind === 'downloads' ? h('save.done.browser.where') : h('save.done.where', { place: place })) + '</p>' +
         '<button class="btn green block" id="bsv-done" style="margin-top:1rem">' +
         h('bulk.close') + '</button>');
       ET.$('#bsv-done', root).addEventListener('click', sheet.close);
+      if (ET.loadMascot) ET.loadMascot();
     }
 
     function failed(err) {
@@ -528,6 +528,15 @@
 
     where();
     return sheet;
+  }
+
+  /* The done moment: Kandili twirls with a burst of sparks behind it, the way
+     a lesson ends in a friendly app. The green tick stays as the fallback
+     where the mascot cannot draw. */
+  function cheer() {
+    return ET.lantern
+      ? '<div class="cheer" aria-hidden="true">' + ET.lantern(96, 'hooray') + '</div>'
+      : '<div class="done-mark">' + ET.icon('check') + '</div>';
   }
 
   // ------------------------------------------------------------ one file

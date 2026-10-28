@@ -88,7 +88,7 @@
     var verb = r.play ? t('act.watch') : r.read ? t('act.read') : t('act.open');
     var tone = r.play ? 'watch' : r.read ? 'read' : '';
     if (r.type === 'audio' || r.type === 'audio-bible') { verb = t('act.listen'); tone = 'listen'; }
-    if (!r.play && !r.read && !(r.files || []).length) {
+    if (!r.play && !r.read && !hasFiles(r)) {
       verb = r.cardOnly ? t('act.oncard') : t('act.visit'); tone = '';
     }
     var bits = [r.langName, r.duration || r.stats, r.org].filter(Boolean);
@@ -102,8 +102,35 @@
 
   function card(r) { return ET.row(r, details(r)); }
 
+  // A language page loads its shelf catalogue (catalog-xxx-shelf.js), which
+  // says these up front instead of carrying every file and chapter link.
+  function hasFiles(r) { return r.hasFiles != null ? r.hasFiles : !!(r.files || []).length; }
   function canSave(r) {
+    if (r.canSave != null) return r.canSave;
     return (r.files || []).some(function (f) { return f.file || f.chapters; });
+  }
+
+  /* Bulk save needs the download lists the shelf left out: fetch this
+     language's full catalogue once, when someone actually asks for it. */
+  var full = null;
+  function withFullRecords(picked, done) {
+    if (!lib.shelf || !lockedLang) return done(picked);
+    function pick() { done(picked.map(function (r) { return full[r.id] || r; })); }
+    if (full) return pick();
+    var shelf = window.LIBRARY, s = document.createElement('script');
+    s.src = 'data/catalog-' + lockedLang + '.js';
+    s.onload = function () {
+      full = {};
+      ((window.LIBRARY || {}).resources || []).forEach(function (r) { full[r.id] = r; });
+      window.LIBRARY = shelf;
+      pick();
+    };
+    s.onerror = function () {
+      window.LIBRARY = shelf;
+      if (ET.ui && ET.ui.toast) ET.ui.toast.show({ text: t('ui.needsnet'), tone: 'danger' });
+      else window.alert(t('ui.needsnet'));
+    };
+    document.head.appendChild(s);
   }
 
   function selectCard(r) {
@@ -289,7 +316,7 @@
     });
     ET.$('#bulk-download').addEventListener('click', function () {
       var picked = selectedResources();
-      if (picked.length) ET.save.openMany(picked);
+      if (picked.length) withFullRecords(picked, ET.save.openMany);
     });
   }
 

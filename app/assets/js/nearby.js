@@ -723,7 +723,7 @@
     if (S.transferActive) trackTransfer('transfer_complete', 'sent', S.sentBytes);
     S.transferActive = false;
     paint(4,
-      '<div class="nearby-wait nearby-wait--big">' + ET.lantern(96, 'share') + '</div>' +
+      '<div class="nearby-wait nearby-wait--big cheer">' + ET.lantern(96, 'share') + '</div>' +
       '<h3 class="center">' + h('nearby.sent') + ' → <span class="latin">' + ET.esc(S.peer) + '</span></h3>' +
       '<div class="note good" style="margin-top:1rem"><p style="margin:0">' + h('nearby.teach') + '</p></div>' +
       '<div class="stack" style="margin-top:1rem">' + btn('again', '', 'share', h('nearby.again')) +
@@ -751,7 +751,7 @@
         ET.esc(g.name) + '</p><div class="btn-row">' + open + '</div></div>';
     }).join('');
     paint(4,
-      '<div class="nearby-wait nearby-wait--big">' + ET.lantern(96, 'hooray') + '</div>' +
+      '<div class="nearby-wait nearby-wait--big cheer">' + ET.lantern(96, 'hooray') + '</div>' +
       '<h3 class="center">' + h('nearby.got') + ' ← <span class="latin">' + ET.esc(S.peer) + '</span></h3>' +
       (S.dir ? '<p class="center muted">' + h('save.done.where', { place: S.dir.name }) + '</p>' : '') +
       '<div class="stack" style="margin-top:1rem">' + rows + '</div>' +
