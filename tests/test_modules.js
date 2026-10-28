@@ -106,3 +106,47 @@ test('each page loads the modules its scripts call, after core', () => {
   }
   assert.ok(checked > 50, 'only ' + checked + ' pages checked');
 });
+
+/* Every app script registers with ET.module, except the few that must run
+   before the registry exists or outside the app. And on every page, each
+   module's dependencies are loaded by an earlier <script> tag, so a
+   misordered page fails here instead of on a phone. */
+const NOT_MODULES = ['core', 'i18n-load', 'visibility', 'admin', 'admin-journeys', 'admin-library'];
+function moduleOf(file) {
+  const m = read('assets/js/' + file + '.js').match(/window\.ET\.module\('([\w/-]+)',\s*\[([^\]]*)\]/);
+  return m && { name: m[1], deps: [...m[2].matchAll(/'([\w/-]+)'/g)].map(d => d[1]) };
+}
+
+test('every app script registers as a module named after its file', () => {
+  const files = [];
+  (function walk(dir) {
+    for (const f of fs.readdirSync(path.join(APP, 'assets/js', dir))) {
+      const rel = dir ? dir + '/' + f : f;
+      if (fs.statSync(path.join(APP, 'assets/js', rel)).isDirectory()) { if (f !== 'i18n') walk(rel); }
+      else if (f.endsWith('.js')) files.push(rel.slice(0, -3));
+    }
+  })('');
+  for (const f of files) {
+    if (NOT_MODULES.includes(f)) continue;
+    const m = moduleOf(f);
+    assert.ok(m, f + '.js does not register with ET.module');
+    assert.equal(m.name, f, f + '.js registers as "' + m.name + '"');
+  }
+});
+
+test('each page loads a module after everything it needs', () => {
+  const pages = fs.readdirSync(APP).filter(f => f.endsWith('.html'))
+    .concat(fs.readdirSync(APP).filter(d => fs.existsSync(path.join(APP, d, 'index.html')) && d !== 'admin').map(d => d + '/index.html'));
+  for (const page of pages) {
+    const order = [...read(page).matchAll(/<script[^>]*\ssrc="assets\/js\/([\w/-]+)\.js"/g)].map(m => m[1]);
+    order.forEach((f, i) => {
+      if (NOT_MODULES.includes(f) || f.startsWith('i18n/') || !fs.existsSync(path.join(APP, 'assets/js', f + '.js'))) return;
+      const m = moduleOf(f);
+      if (!m) return;
+      for (const d of m.deps) {
+        const at = order.indexOf(d);
+        assert.ok(at > -1 && at < i, page + ' loads ' + f + '.js before ' + d + '.js, which it needs');
+      }
+    });
+  }
+});

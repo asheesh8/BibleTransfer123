@@ -21,7 +21,7 @@
    Arabic-script rules off them.
    ========================================================================= */
 
-(function (ET) {
+window.ET.module('i18n', ['core'], function (ET) {
   'use strict';
 
   var LANGS = [
@@ -564,4 +564,5 @@
 
   ET.i18n = { t: t, h: h, say: say, welcome: welcome, suggested: suggested, tOr: tOr, tOrHTML: tOrHTML, set: set, extend: extend, apply: apply, onChange: onChange, picker: picker,
               chosen: chosen, langs: LANGS, meta: meta, current: function () { return current || 'en'; } };
-})(window.ET);
+  return ET.i18n;
+});

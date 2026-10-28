@@ -16,7 +16,7 @@
    is what keeps it warm rather than decorative.
    ========================================================================= */
 
-(function (ET) {
+window.ET.module('art', ['core'], function (ET) {
   'use strict';
 
   function svg(w, h, body, label) {
@@ -116,4 +116,5 @@
   }
 
   ET.art = { home: home, share: share, empty: empty, lanternBody: lanternBody };
-})(window.ET);
+  return ET.art;
+});

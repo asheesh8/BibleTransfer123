@@ -11,6 +11,7 @@ const read = f => fs.readFileSync(path.join(app, f), 'utf8');
 
 function boot() {
   const ET = {
+    module(name, deps, factory) { return factory(this); }, 
     libraryScope: () => null, store: { get: (_, d) => d, set() {} }, $$: () => [], $: () => null, esc: v => v,
     mods: {}, module: (name, deps, fn) => (ET.mods[name] = fn(ET))
   };
