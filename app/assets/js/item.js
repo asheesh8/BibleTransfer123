@@ -190,7 +190,10 @@ window.ET.module('item', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save', 'data
     if (r.play && (r.play.kind === 'chapters' || r.play.kind === 'video')) return '';
     // On a phone the Read action matters more than a decorative scan cover.
     if (isText && phoneScreen()) return '';
-    return ET.thumb(r, 'aspect-ratio:16/9;border-radius:var(--r-lg);border:2px solid var(--line)');
+    // A recording's artwork is a banner on a phone, so the player, the book
+    // picker and Save and Share all fit on the first screen.
+    var banner = r.play && /^audio/.test(r.play.kind) && phoneScreen();
+    return ET.thumb(r, 'aspect-ratio:' + (banner ? '5/2' : '16/9') + ';border-radius:var(--r-lg);border:2px solid var(--line)');
   }
 
   function render() {

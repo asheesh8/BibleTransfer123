@@ -1402,3 +1402,18 @@ html[dir="rtl"] .top .fchip { padding-top: .35rem; padding-bottom: .35rem; }
 }
 html[data-motion="reduce"] .tabbar a:active .pipe,
 html[data-motion="reduce"] .fchip:active { transform: none; }
+
+/* Library refine row: "From" and "Language" sit side by side as two small
+   cards (a word on top, the choice under it), the way iPhone apps show a
+   filter; the one that is open takes the whole width below. The two tools
+   under them are quiet buttons: they matter, but the list is the page. */
+.library-refine { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
+.library-refine > .library-language { flex: 1 1 9rem; min-width: 0; margin-top: 0; }
+.library-refine > .library-language[open] { flex-basis: 100%; order: 1; }
+.library-refine summary { position: relative; flex-wrap: wrap; gap: 0 .5rem; padding-inline-end: 2.2rem; min-height: 56px; }
+.library-refine summary > span { width: 100%; font-size: .74rem; font-weight: 700; color: var(--ink-soft); line-height: 1.2; }
+.library-refine summary strong { margin-inline-start: 0; max-width: 100%; line-height: 1.3; }
+.library-refine summary::after { border-inline-end: 0; border-right: 2px solid currentColor; position: absolute; inset-inline-end: .9rem; top: 50%; margin: -.4rem 0 0; }
+.library-refine .library-language[open] summary::after { margin: -.1rem 0 0; }
+.library-actions .et-btn--quiet svg { color: var(--purple); }
+.library-actions #bulk-start svg { color: var(--green); }
