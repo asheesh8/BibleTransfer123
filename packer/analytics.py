@@ -60,6 +60,7 @@ FIELDS = frozenset((
 # redirects those to /api/qr (a rewrite would lose to the <slug>/ folder),
 # which adds one to a per-day count and redirects to the library. The count has no visitor ID, cookie or address, so it covers
 # every scan, not only visitors who accept analytics. Mirrors share-libraries.js.
+# Generated from registry/languages.json by packer/et/generate.py; edit the registry.
 QR_LIBRARIES = {
     "english": "eng",
     "mandarin": "cmn",
