@@ -29,6 +29,8 @@ window.ET.module('ui/shell', ['core', 'ui/icons', 'ui/sheet', 'ui/toast'], funct
     chev:    '<path d="M9 5l7 7-7 7"/>',
     back:    '<path d="M15 5l-7 7 7 7"/>',
     save:    '<path d="M12 3v12"/><path d="M7.5 10.5L12 15l4.5-4.5"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/>',
+    chat:    '<path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.4-4A8 8 0 1 1 20 11.5z"/>',
+    send:    '<path d="M21 3L10 14"/><path d="M21 3l-7 18-4-7-7-4z"/>',
     mail:    '<rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/>',
     share:   '<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 10.7l6.8-4M8.6 13.3l6.8 4"/>',
     play:    '<path d="M7 4.5l12 7.5-12 7.5z"/>',

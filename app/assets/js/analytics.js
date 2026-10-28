@@ -658,7 +658,11 @@ window.ET.module('analytics', ['core', 'i18n'], function (ET) {
       '<a href="privacy.html"></a>';
     var button = document.createElement('button'); button.type = 'button'; button.id = 'et-cookie-settings';
     button.className = 'cookie-settings'; button.addEventListener('click', show);
-    document.body.appendChild(panel); document.body.appendChild(button);
+    // Once answered, the way back in is a quiet line at the foot of the page,
+    // not a pill floating over whatever someone is trying to tap.
+    var foot = document.querySelector('.foot-nav') || document.querySelector('main#main');
+    if (foot) button.classList.add('in-flow');
+    document.body.appendChild(panel); (foot || document.body).appendChild(button);
     panel.querySelector('[data-consent="accept"]').addEventListener('click', function () { choose(true); });
     panel.querySelector('[data-consent="reject"]').addEventListener('click', function () { choose(false); });
     render();

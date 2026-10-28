@@ -127,15 +127,14 @@ html[dir="rtl"] .screen-item .item-head h1 { letter-spacing: 0; line-height: 1.5
   box-shadow: 0 var(--press) 0 var(--line-strong);
 }
 
-/* The three verbs sit right under what they act on, big and equal. */
+/* Save and Share sit right under what they act on, big and equal. */
 .screen-item .item-actions { margin-top: 1.2rem; gap: .6rem; }
 .screen-item .item-actions .et-btn {
   flex: 1 1 0;
   min-width: 0;
   min-height: 64px;
   padding: .6rem .5rem;
-  flex-direction: column;
-  gap: .3rem;
+  gap: .5rem;
   font-size: 1rem;
   line-height: 1.15;
   border-radius: var(--r-lg);
@@ -220,3 +219,16 @@ html[dir="rtl"] .screen-item .item-head h1 { letter-spacing: 0; line-height: 1.5
 .screen-help .help-heading h2 { margin: 0; }
 .screen-help .help-heading .et-tile__icon { width: 44px; height: 44px; }
 .screen-help .help-heading .et-tile__icon svg { width: 24px; height: 24px; }
+
+/* The chapter (or recording) picker and its Next button share one line, so
+   Save and Share stay on the first screen of a small Android. */
+.screen-item .picker { flex-wrap: nowrap; align-items: stretch; }
+.screen-item .picker > label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.screen-item .picker > select { flex: 1 1 auto; min-width: 0; }
+.screen-item .picker > .et-btn { flex: none; white-space: nowrap; }
+.screen-item .picker.two > div { min-width: 0; }
+/* On a phone, Next is a round arrow; its words stay as its spoken name. */
+@media (max-width: 40rem) {
+  .screen-item .picker > .et-btn { font-size: 0; width: 56px; min-width: 56px; padding: 0; justify-content: center; }
+  .screen-item .picker > .et-btn svg { width: 24px; height: 24px; margin: 0; }
+}

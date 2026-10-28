@@ -225,7 +225,7 @@ html[dir="rtl"] .tabbar a { font-size: .78rem; }
 .greet-mascot { flex: none; display: flex; }
 
 /* Quick picks under the greeting: big, bright, pressable, one per kind. */
-.quick { display: grid; grid-template-columns: repeat(auto-fit, minmax(6.5rem, 1fr)); gap: .7rem; margin: .9rem 0 1.1rem; }
+.quick { display: grid; grid-template-columns: repeat(auto-fit, minmax(5.8rem, 1fr)); gap: .7rem; margin: .9rem 0 1.1rem; }
 .quick-pick {
   --c: var(--purple); --w: var(--purple-wash);
   display: flex; flex-direction: column; align-items: flex-start; gap: .45rem;
@@ -355,8 +355,39 @@ body.bulk-mode { padding-bottom: calc(var(--tabbar) + 92px + env(safe-area-inset
 }
 .shared-hero h1 { margin: 0; }
 .shared-hero p { margin: .45rem 0 0; }
-.shared-actions { margin-top: 1rem; }
-.shared-actions .btn, .shared-actions .et-btn { flex: 1 1 11rem; border-radius: var(--r-pill); }
+/* One row of round share targets with a word under each, the way the
+   iPhone and Android share sheets lay them out, so the library itself starts
+   on the first screen. The row has a fixed height from the first paint: the
+   page ships plain-text buttons and shared-library.js dresses them, and
+   nothing below may move when it does. */
+.shared-hero .shared-actions {
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr);
+  gap: .1rem; margin-inline: -.4rem; margin-top: 1rem; height: 5.6rem; overflow: hidden;
+}
+.shared-hero .shared-actions .btn {
+  --face: var(--surface); --edge: var(--line-strong);
+  display: flex; flex-direction: column; justify-content: flex-start; align-items: center; gap: .35rem;
+  min-height: 0; height: 100%; padding: 0; margin: 0;
+  background: none; border: 0; box-shadow: none; color: var(--ink);
+  font-size: .78rem; font-weight: 700; line-height: 1.2; text-align: center;
+  white-space: normal; overflow: hidden;
+}
+.shared-actions .btn:active { transform: none; box-shadow: none; }
+.sa-ico {
+  display: grid; place-items: center; flex: none;
+  width: min(3.4rem, 13vw); height: min(3.4rem, 13vw); border-radius: 50%;
+  background: var(--face); color: var(--ink);
+  border: 2px solid var(--edge); box-shadow: 0 3px 0 var(--edge);
+  transition: transform .32s cubic-bezier(.34, 1.56, .64, 1);
+}
+.sa-ico svg { width: 24px; height: 24px; }
+.shared-actions .btn:active .sa-ico { transform: scale(.9); transition-duration: .08s; }
+.shared-actions .btn.green { --face: var(--green-face); --edge: var(--green-edge); }
+.shared-actions .btn.green .sa-ico { color: var(--on-face); }
+.shared-actions .btn.fb { --face: #166FE5; --edge: #0B5BC4; }
+.shared-actions .btn.fb .sa-ico { color: #fff; }
+.sa-label { max-width: 100%; font-size: .68rem; letter-spacing: -.02em; overflow-wrap: normal; word-break: normal; hyphens: none; }
+html[dir="rtl"] .shared-actions .btn { padding: 0; }
 .send-library { margin-top: 1rem; }
 .send-library[hidden] { display: none; }
 .send-library .flabel { display: block; margin: 0 0 .4rem; }
@@ -1320,3 +1351,54 @@ html[lang="am"] .kicker, html[lang="am"] .flabel, html[lang="am"] .eyebrow {
 html[data-motion="reduce"] .quick-pick, html[data-motion="reduce"] .lp-stat,
 html[data-motion="reduce"] .lp-step, html[data-motion="reduce"] .lp-phase { animation: none; }
 html[data-motion="reduce"] .cheer::before { animation: none; opacity: 0; }
+
+/* ======================================================== motion and feel
+
+   What makes the best phone apps feel solid is mostly three small things:
+   every tap answers at once, pages hand over to each other instead of
+   blinking, and nothing moves that the person did not cause. All of it is
+   CSS, costs nothing on a 2 GB Android, and switches off for reduced motion. */
+
+/* Page to page: a short cross-fade instead of a white blink. The header and
+   tab bar are the same pixels on both pages, so they read as standing still.
+   Browsers without cross-document view transitions (and file:// cards) just
+   navigate as before. */
+@view-transition { navigation: auto; }
+::view-transition-old(root) { animation: et-page-out 120ms cubic-bezier(.4, 0, 1, 1) both; }
+::view-transition-new(root) { animation: et-page-in 220ms cubic-bezier(.2, .8, .2, 1) both; }
+@keyframes et-page-out { to { opacity: 0; } }
+@keyframes et-page-in { from { opacity: 0; } }
+
+/* Tab bar: the pill under the icon dips when pressed and springs back. */
+.tabbar a { transition: color .16s ease; }
+.tabbar .pipe { transition: transform .32s cubic-bezier(.34, 1.56, .64, 1), background .2s ease; }
+.tabbar a:active .pipe { transform: scale(.86); transition-duration: .08s; }
+
+/* Filter chips, header buttons and list rows answer the finger too. */
+.fchip { transition: transform .32s cubic-bezier(.34, 1.56, .64, 1), background .16s ease, border-color .16s ease; }
+.fchip:active { transform: scale(.95); transition-duration: .08s; }
+.rowi { transition: background .16s ease, transform .3s cubic-bezier(.34, 1.56, .64, 1); }
+
+/* The header stays out of the way: one line, never a two-line logo. */
+.brand > span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.brand { min-width: 0; }
+/* RTL's taller control padding is for descenders in body text; the header's
+   round buttons already have the room, and doubling them crowded the bar. */
+html[dir="rtl"] .top .fchip { padding-top: .35rem; padding-bottom: .35rem; }
+.top .wrap { gap: .45rem; }
+.top .fchip { padding-inline: .8rem; }
+@media (max-width: 380px) { .brand { font-size: .98rem; gap: .4rem; } .top .fchip { padding-inline: .7rem; } }
+
+/* On a phone, "save to your computer" is a Guide topic, not something to
+   step over on every library and item page. */
+@media (max-width: 40rem) and (pointer: coarse) {
+  .save-guide-entry, .desk-only { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
+  .tabbar .pipe, .fchip, .rowi { transition: none; }
+  .tabbar a:active .pipe, .fchip:active { transform: none; }
+}
+html[data-motion="reduce"] .tabbar a:active .pipe,
+html[data-motion="reduce"] .fchip:active { transform: none; }
