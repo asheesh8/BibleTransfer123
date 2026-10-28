@@ -86,13 +86,17 @@
   function details(r) {
     var kicker = t('type.' + r.type);
     var verb = r.play ? t('act.watch') : r.read ? t('act.read') : t('act.open');
-    if (r.type === 'audio' || r.type === 'audio-bible') verb = t('act.listen');
-    if (!r.play && !r.read && !(r.files || []).length) verb = r.cardOnly ? t('act.oncard') : t('act.visit');
+    var tone = r.play ? 'watch' : r.read ? 'read' : '';
+    if (r.type === 'audio' || r.type === 'audio-bible') { verb = t('act.listen'); tone = 'listen'; }
+    if (!r.play && !r.read && !(r.files || []).length) {
+      verb = r.cardOnly ? t('act.oncard') : t('act.visit'); tone = '';
+    }
     var bits = [r.langName, r.duration || r.stats, r.org].filter(Boolean);
     return {
       kicker: kicker + (r.offline ? ' · ' + t('item.offline') : ''),
       sub: bits.join(' · '),
-      verb: verb
+      verb: verb,
+      tone: tone
     };
   }
 
@@ -142,13 +146,23 @@
     var avail = present(inScope);
     var typeFilters = ET.$('#type-filters');
     var typeScroll = typeFilters.scrollLeft;
-    typeFilters.innerHTML =
-      ['<button class="fchip" data-type="" aria-pressed="' + (!state.type) + '">' +
-        h('lib.all') + '</button>'].concat(
-        avail.map(function (ty) {
-          return '<button class="fchip" data-type="' + ty + '" aria-pressed="' +
-            (state.type === ty) + '">' + h('type.' + ty) + '</button>';
-        })).join('');
+    /* The kinds are picture tiles, not a row of words: an icon in its own
+       colour, the word, and how many there are. Someone who cannot read the
+       word still finds the films by the film picture. */
+    var counted = inScope.filter(function (r) { return !state.lang || r.lang === state.lang; });
+    var count = {};
+    counted.forEach(function (r) { count[r.type] = (count[r.type] || 0) + 1; });
+    function tile(ty, label, icon, n) {
+      return '<button class="fchip kind-tile" data-type="' + ty + '" data-kind="' + (ty || 'all') +
+        '" aria-pressed="' + (state.type === ty) + '">' +
+        '<span class="kind-ico">' + ET.icon(icon) + '</span>' +
+        '<span class="kind-name">' + label + '</span>' +
+        '<span class="kind-n">' + n + '</span></button>';
+    }
+    typeFilters.innerHTML = [tile('', h('lib.all'), 'grid', counted.length)].concat(
+      avail.map(function (ty) {
+        return tile(ty, h('type.' + ty), ty === 'audio-bible' ? 'ears' : ET.typeIcon(ty), count[ty] || 0);
+      })).join('');
     typeFilters.scrollLeft = typeScroll;
     if (!typeFilters.dataset.ready && state.type) {
       var activeType = typeFilters.querySelector('[aria-pressed="true"]');
