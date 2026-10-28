@@ -154,7 +154,8 @@ img, svg, video { max-width: 100%; display: block; }
 
 /* A dragged image or button is a UI that has come loose. Prose stays
    selectable — someone may want to copy an address or a filename out of it. */
-img, svg, video, .btn, .tile, .res, .fchip, .chip, .top, .steps > li::before {
+img, svg, video, .btn, .tile, .res, .fchip, .chip, .top, .steps > li::before,
+.et-btn, .et-tile, .et-chip, .et-badge {
   -webkit-user-drag: none;
   -webkit-user-select: none;
   user-select: none;
@@ -163,12 +164,10 @@ p, li, h1, h2, h3, code, input { -webkit-user-select: text; user-select: text; }
 
 /* Taps register immediately instead of waiting out a double-tap that can no
    longer happen. */
-.btn, .tile, .res, .fchip, a, button, select, input { touch-action: manipulation; }
+.btn, .tile, .res, .fchip, .et-tile, .et-chip, a, button, select, input { touch-action: manipulation; }
 
 .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 1.1rem; }
 .stack > * + * { margin-top: var(--gap); }
-/* Kit buttons reset their own margin for the ledge; keep the stack's gap. */
-.stack > * + .et-btn { margin-top: var(--gap); }
 .muted { color: var(--ink-soft); }
 .center { text-align: center; }
 [hidden] { display: none !important; }
@@ -307,7 +306,7 @@ html[dir="rtl"] .rowi .kicker { text-transform: none; letter-spacing: 0; font-si
   background: var(--green-wash);
 }
 .bulk-tools strong { font-size: 1.05rem; }
-.bulk-tools .btn { min-height: 48px; padding: .65rem 1rem; }
+.bulk-tools .btn, .bulk-tools .et-btn { min-height: 48px; padding: .65rem 1rem; }
 button.bulk-row {
   width: 100%; border: 2px solid transparent; background: transparent;
   color: inherit; font: inherit; text-align: start; cursor: pointer;
@@ -357,13 +356,13 @@ body.bulk-mode { padding-bottom: calc(var(--tabbar) + 92px + env(safe-area-inset
 .shared-hero h1 { margin: 0; }
 .shared-hero p { margin: .45rem 0 0; }
 .shared-actions { margin-top: 1rem; }
-.shared-actions .btn { flex: 1 1 11rem; border-radius: var(--r-pill); }
+.shared-actions .btn, .shared-actions .et-btn { flex: 1 1 11rem; border-radius: var(--r-pill); }
 .send-library { margin-top: 1rem; }
 .send-library[hidden] { display: none; }
 .send-library .flabel { display: block; margin: 0 0 .4rem; }
 .send-library-row { display: flex; flex-wrap: wrap; gap: .7rem; }
 .send-library-row input { flex: 1 1 14rem; width: auto; }
-.send-library-row .btn { flex: 0 1 9rem; }
+.send-library-row .btn, .send-library-row .et-btn { flex: 0 1 9rem; }
 .send-library .send-library-status:empty { display: none; }
 
 /* Guide: the three how-to-share videos. */
@@ -395,7 +394,7 @@ body.has-tabs { --et-tabbar-h: var(--tabbar); }
 .pass-on input { width: 100%; }
 .pass-names { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: .7rem; }
 .pass-on .send-library-row input { flex: 1 1 12rem; width: auto; }
-.pass-on .send-library-row .btn { flex: 1 1 12rem; }
+.pass-on .send-library-row .et-btn { flex: 1 1 12rem; }
 .pass-on .send-library-status { margin: 0; font-weight: 600; }
 .pass-on .send-library-status:empty { display: none; }
 .pass-privacy { font-size: .9rem; }
@@ -411,7 +410,7 @@ body.has-tabs { --et-tabbar-h: var(--tabbar); }
   align-items: center; gap: 1rem;
 }
 .share-language-card h2, .share-language-card p { margin: 0; }
-.share-language-card .btn { min-width: 10rem; }
+.share-language-card .btn, .share-language-card .et-btn { min-width: 10rem; }
 @media (max-width: 680px) {
   .share-language-card { grid-template-columns: 1fr; }
   .share-language-card .btn-row { width: 100%; }
@@ -577,7 +576,7 @@ body:not(.has-top):has(> main#main) { padding-top: 66px; }
 .btn svg   { width: 22px; height: 22px; flex: none; }
 
 .btn-row { display: flex; flex-wrap: wrap; gap: .7rem; }
-.btn-row .btn { flex: 1 1 10rem; }
+.btn-row .btn, .btn-row .et-btn { flex: 1 1 10rem; }
 
 /* ----------------------------------------------------------------- cards */
 
@@ -722,7 +721,7 @@ html[dir="rtl"] .flabel { text-transform: none; font-size: .95rem; }
 .library-language[open] summary::after { transform: rotate(225deg); margin: .25rem .2rem 0 0; }
 .library-language .filters { padding: .8rem 0 .25rem; }
 .library-source[hidden] { display: none; }
-.fchip .fcount { font-weight: 500; opacity: .7; }
+.fchip .fcount, .et-chip .fcount { font-weight: 500; opacity: .7; }
 .library-search { margin-bottom: .9rem; }
 .library-actions { margin-top: 1rem; }
 .library-actions .bulk-start { margin-top: 1rem; }
@@ -745,12 +744,12 @@ html[dir="rtl"] .flabel { text-transform: none; font-size: .95rem; }
     display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: .5rem; margin-top: .8rem;
   }
-  .library-actions.has-bulk > *, .library-actions.has-bulk .btn { min-width: 0; }
-  .library-actions.has-bulk .btn {
+  .library-actions.has-bulk > *, .library-actions.has-bulk .et-btn { min-width: 0; }
+  .library-actions.has-bulk .et-btn {
     width: 100%; min-height: 56px; padding: .4rem .3rem;
     font-size: .78rem; line-height: 1.2; gap: .25rem;
   }
-  .library-actions.has-bulk .btn svg { width: 18px; height: 18px; }
+  .library-actions.has-bulk .et-btn svg { width: 18px; height: 18px; }
   .library-actions.has-bulk .bulk-start { margin-top: 0; }
   .library-count { margin: .55rem 0 .35rem; }
 }
@@ -1028,7 +1027,8 @@ html[dir="rtl"] h3 { line-height: 1.7; }
 
 /* Descenders collide with control borders without extra room. */
 html[dir="rtl"] .btn,
-html[dir="rtl"] .fchip { padding-top: 1.05rem; padding-bottom: 1.05rem; }
+html[dir="rtl"] .fchip,
+html[dir="rtl"] .et-chip { padding-top: 1.05rem; padding-bottom: 1.05rem; }
 
 /* Catalogue data — titles, publisher names — stays English. Inside an RTL page
    it needs its own face and its own direction or it zig-zags between the two. */

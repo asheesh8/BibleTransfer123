@@ -45,7 +45,8 @@
     border-color var(--et-dur-fast) var(--et-ease-out),
     transform    var(--et-dur-instant) var(--et-ease-out);
 }
-.et-chip .et-icon { width: 1.2em; height: 1.2em; }
+.et-chip .et-icon,
+.et-chip svg { width: 1.2em; height: 1.2em; flex: none; }
 .et-chip:hover { border-color: var(--et-text-brand); }
 .et-chip:active { transform: scale(.96); }
 .et-chip[aria-pressed="true"] {
@@ -83,7 +84,8 @@
   letter-spacing: .02em;
   white-space: nowrap;
 }
-.et-badge .et-icon { width: 1.1em; height: 1.1em; }
+.et-badge .et-icon,
+.et-badge svg { width: 1.1em; height: 1.1em; flex: none; }
 .et-badge--go     { --tone: var(--et-text-go);     --wash: var(--et-wash-go); }
 .et-badge--gold   { --tone: var(--et-on-gold);     --wash: var(--et-fill-gold); }
 .et-badge--info   { --tone: var(--et-text-info);   --wash: var(--et-wash-info); }

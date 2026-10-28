@@ -108,6 +108,8 @@
 /* -------------------------------------------------------------------- item */
 .screen-item .item-head { gap: .45rem; margin: .4rem 0 1rem; }
 .screen-item .item-chips { display: flex; gap: .4rem; flex-wrap: wrap; }
+/* The facts about an item are read before anything else: badge size up. */
+.screen-item .item-chips .et-badge { font-size: .82rem; padding: .3rem .7rem; gap: .35rem; }
 .screen-item .item-head h1 {
   margin: .2rem 0 0;
   font-size: clamp(1.9rem, 7vw, 2.6rem);
@@ -127,7 +129,7 @@ html[dir="rtl"] .screen-item .item-head h1 { letter-spacing: 0; line-height: 1.5
 
 /* The three verbs sit right under what they act on, big and equal. */
 .screen-item .item-actions { margin-top: 1.2rem; gap: .6rem; }
-.screen-item .item-actions .btn {
+.screen-item .item-actions .et-btn {
   flex: 1 1 0;
   min-width: 0;
   min-height: 64px;
@@ -139,9 +141,9 @@ html[dir="rtl"] .screen-item .item-head h1 { letter-spacing: 0; line-height: 1.5
   border-radius: var(--r-lg);
   text-align: center;
 }
-.screen-item .item-actions .btn svg { width: 24px; height: 24px; }
+.screen-item .item-actions .et-btn svg { width: 24px; height: 24px; }
 @media (min-width: 40rem) {
-  .screen-item .item-actions .btn { flex-direction: row; min-height: 60px; font-size: 1.05rem; }
+  .screen-item .item-actions .et-btn { flex-direction: row; min-height: 60px; font-size: 1.05rem; }
 }
 .screen-item .item-desc { font-size: 1.06rem; line-height: 1.6; margin: 1.2rem 0 0; }
 .screen-item .chain-banner { margin-bottom: 1rem; }

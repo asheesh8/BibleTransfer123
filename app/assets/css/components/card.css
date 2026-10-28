@@ -109,7 +109,8 @@ button.et-tile { width: 100%; font: inherit; text-align: start; cursor: pointer;
 .et-tile__text  { min-width: 0; }
 .et-tile__title { display: block; font-weight: var(--et-weight-heavy); font-size: 1.08rem; }
 .et-tile__sub   { display: block; color: var(--et-text-soft); font-size: var(--et-text-sm); }
-.et-tile__end   { margin-inline-start: auto; flex: none; color: var(--et-line-strong); }
+.et-tile__end   { margin-inline-start: auto; flex: none; display: flex; color: var(--et-line-strong); }
+.et-tile__end svg { width: 1.5rem; height: 1.5rem; }
 
 /* ---------------------------------------------------------------- shelf */
 .et-shelf {

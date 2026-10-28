@@ -139,6 +139,9 @@ PAGE = """<!doctype html>
 <link rel="icon" href="assets/icon/favicon-32.png" sizes="32x32">
 <meta name="theme-color" content="#6A35C2">
 <link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/components/button.css">
+<link rel="stylesheet" href="assets/css/components/card.css">
+<link rel="stylesheet" href="assets/css/components/chip.css">
 <link rel="stylesheet" href="assets/css/app.css">
 <link rel="stylesheet" href="assets/css/components/sheet.css">
 <link rel="stylesheet" href="assets/css/components/toast.css">

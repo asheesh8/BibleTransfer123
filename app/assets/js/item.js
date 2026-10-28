@@ -20,9 +20,9 @@ window.ET.module('item', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save', 'data
     ET.header();
     ET.tabbar();                 // a dead end still needs a way out
     ET.$('#item').innerHTML =
-      '<div class="card center"><h2>' + h('item.missing') + '</h2>' +
+      '<div class="et-card center"><h2>' + h('item.missing') + '</h2>' +
       '<p class="muted">' + h('item.missing.sub') + '</p>' +
-      '<a class="btn" href="' + ET.esc(ET.scopeEntryUrl()) + '">' + h('home.browse') + '</a></div>';
+      '<a class="et-btn" href="' + ET.esc(ET.scopeEntryUrl()) + '">' + h('home.browse') + '</a></div>';
     ET.i18n.apply();
     return;
   }
@@ -114,15 +114,15 @@ window.ET.module('item', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save', 'data
           '<select id="ch">' + p.items.map(function (c, i) {
             return '<option value="' + i + '">' + ET.esc(c.n + '. ' + c.title) + '</option>';
           }).join('') + '</select>' +
-          '<button class="btn ghost" id="ch-next">' + h('item.next') + ET.icon('chev', 'flip') + '</button>' +
+          '<button class="et-btn et-btn--quiet" id="ch-next">' + h('item.next') + ET.icon('chev', 'flip') + '</button>' +
         '</div>';
     }
 
     if (p.kind === 'video') {
       var q = (p.hd && p.sd)
         ? '<div class="filters" role="group" style="margin-top:.7rem">' +
-          '<button class="fchip" data-q="sd" aria-pressed="true">' + h('item.sd') + '</button>' +
-          '<button class="fchip" data-q="hd" aria-pressed="false">' + h('item.hd') + '</button></div>'
+          '<button class="et-chip" data-q="sd" aria-pressed="true">' + h('item.sd') + '</button>' +
+          '<button class="et-chip" data-q="hd" aria-pressed="false">' + h('item.hd') + '</button></div>'
         : '';
       return '<video id="v" controls playsinline preload="metadata" class="player" src="' +
         ET.esc(local(p.file)) + '"></video>' + q;
@@ -134,7 +134,7 @@ window.ET.module('item', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save', 'data
         '<div class="picker"><label class="flabel" for="track">' + h('item.recordings') +
         '</label><select id="track">' + p.items.map(function (c, i) {
           return '<option value="' + i + '">' + ET.esc(c.title) + '</option>';
-        }).join('') + '</select><button class="btn ghost" id="track-next">' +
+        }).join('') + '</select><button class="et-btn et-btn--quiet" id="track-next">' +
         h('item.next.recording') + ET.icon('chev', 'flip') + '</button></div>' : '');
     }
 
@@ -168,15 +168,13 @@ window.ET.module('item', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save', 'data
     var companion = (r.links || []).filter(function (link) {
       return /^Read .+\(PDF\)$/i.test(link.label || '');
     });
-    var original = '<a class="btn ' + (phone && companion.length ? 'ghost' : 'sky') +
-      ' block" style="margin-top:.7rem" href="' + ET.esc(r.read.file) +
+    var original = '<a class="et-btn ' + (phone && companion.length ? 'et-btn--quiet' : 'et-btn--info') + ' et-btn--block" style="margin-top:.7rem" href="' + ET.esc(r.read.file) +
       '" target="_blank" rel="noopener">' + ET.icon('book') +
       h(phone && companion.length ? 'item.read.original' : 'item.read.full') + '</a>';
     var alternatives = companion.map(function (link) {
       var label = link.label === 'Read Wycliffe in modern spelling (PDF)'
         ? h('item.read.modern') : ET.esc(link.label);
-      return '<a class="btn ' + (phone ? 'sky' : 'ghost') +
-        ' block" style="margin-top:.7rem" href="' +
+      return '<a class="et-btn ' + (phone ? 'et-btn--info' : 'et-btn--quiet') + ' et-btn--block" style="margin-top:.7rem" href="' +
         ET.esc(ET.safeUrl(link.url)) + '" target="_blank" rel="noopener">' +
         ET.icon('book') + label + '</a>';
     }).join('');
@@ -197,25 +195,25 @@ window.ET.module('item', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save', 'data
 
   function render() {
     var where = r.offline
-      ? '<span class="chip offline">' + ET.icon('check') + h('item.offline') + '</span>'
+      ? '<span class="et-badge et-badge--go">' + ET.icon('check') + h('item.offline') + '</span>'
       : (r.play || r.read)
-        ? '<span class="chip stream">' + ET.icon('wifi') + h(r.play ? 'item.stream' : 'item.stream.read') + '</span>'
+        ? '<span class="et-badge et-badge--info">' + ET.icon('wifi') + h(r.play ? 'item.stream' : 'item.stream.read') + '</span>'
         : r.cardOnly
-          ? '<span class="chip online">' + ET.icon('card') + h('item.cardonly') + '</span>'
-          : '<span class="chip online">' + ET.icon('warn') + h('ui.needsnet') + '</span>';
+          ? '<span class="et-badge et-badge--gold">' + ET.icon('card') + h('item.cardonly') + '</span>'
+          : '<span class="et-badge et-badge--gold">' + ET.icon('warn') + h('ui.needsnet') + '</span>';
 
     // What language this is actually in, before anyone presses play.
-    var tongue = '<span class="chip lang">' + ET.icon('globe') +
+    var tongue = '<span class="et-badge">' + ET.icon('globe') +
       h(isText ? 'item.written' : 'item.spoken', { lang: (r.lang === 'ibo' && r.scope && r.scope !== 'Igbo') || r.lang === 'fra' || r.lang === 'amh' || r.lang === 'por' || r.lang === 'yor' || r.lang === 'pcm' || r.lang === 'lin' || r.lang === 'mlg' || r.lang === 'nya' || r.lang === 'run' || r.lang === 'aka' || r.lang === 'tir' || r.lang === 'hat' || r.lang === 'spa' || r.lang === 'kuj' || r.lang === 'lsm' || r.lang === 'luy' || r.lang === 'bxk' || r.lang === 'rag' || r.lang === 'ida' || r.lang === 'lkb' || r.lang === 'lts' || r.lang === 'nle' || r.lang === 'lri' || r.lang === 'kam' || r.lang === 'kln' || r.lang === 'nyf' || r.lang === 'dig' || r.lang === 'dug' || r.lang === 'mer' || r.lang === 'tuv' || r.lang === 'teo' || r.lang === 'ara' || r.lang === 'kin' || r.lang === 'xho' || r.lang === 'sna'
         ? r.langName : L.native && L.native !== L.name
         ? L.native + ' · ' + L.name : (L.name || r.langName || '') }) + '</span>';
 
     var banner = chain.arrived && chain.from
-      ? '<section class="card chain-banner" aria-labelledby="chain-h">' +
+      ? '<section class="et-card chain-banner" aria-labelledby="chain-h">' +
           '<span class="ico">' + ET.icon('share') + '</span><div>' +
           '<h2 id="chain-h" dir="auto">' + h('chain.title', { from: chain.from }) + '</h2>' +
           '<p>' + h('chain.sub', { n: chain.hop + 1 }) + '</p>' +
-          (web ? '<button class="btn green" id="chain-pass" type="button">' + ET.icon('share') + h('chain.pass') + '</button>' : '') +
+          (web ? '<button class="et-btn et-btn--go" id="chain-pass" type="button">' + ET.icon('share') + h('chain.pass') + '</button>' : '') +
         '</div></section>'
       : '';
     // Title first, then the thing itself, then the three verbs: the order a
@@ -223,7 +221,7 @@ window.ET.module('item', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save', 'data
     var html = banner +
       '<header class="stack item-head">' +
         '<div class="item-chips">' + tongue + where +
-          '<span class="chip">' + h('type.' + r.type) + '</span></div>' +
+          '<span class="et-badge et-badge--soft">' + h('type.' + r.type) + '</span></div>' +
         '<h1 dir="auto">' + ET.esc(ET.displayTitle(r)) + '</h1>' +
         (r.native && r.native !== r.title && !((r.lang === 'amh' && ET.i18n.current() === 'am') || (r.lang === 'por' && ET.i18n.current() === 'pt') || (r.lang === 'yor' && ET.i18n.current() === 'yo') || (r.lang === 'pcm' && ET.i18n.current() === 'pcm') || (r.lang === 'mlg' && ET.i18n.current() === 'mg') || (r.lang === 'nya' && ET.i18n.current() === 'ny') || (r.lang === 'run' && ET.i18n.current() === 'rn') || (r.lang === 'aka' && ET.i18n.current() === 'ak') || (r.lang === 'tir' && ET.i18n.current() === 'ti') || (r.lang === 'hat' && ET.i18n.current() === 'ht') || (r.lang === 'spa' && ET.i18n.current() === 'es') || (r.lang === 'kuj' && ET.i18n.current() === 'swh') || (r.lang === 'lsm' && ET.i18n.current() === 'swh') || (r.lang === 'luy' && ET.i18n.current() === 'swh') || (r.lang === 'bxk' && ET.i18n.current() === 'swh') || (r.lang === 'rag' && ET.i18n.current() === 'swh') || (r.lang === 'ida' && ET.i18n.current() === 'swh') || (r.lang === 'lkb' && ET.i18n.current() === 'swh') || (r.lang === 'lts' && ET.i18n.current() === 'swh') || (r.lang === 'nle' && ET.i18n.current() === 'swh') || (r.lang === 'lri' && ET.i18n.current() === 'swh') || (r.lang === 'kam' && ET.i18n.current() === 'swh') || (r.lang === 'kln' && ET.i18n.current() === 'swh') || (r.lang === 'nyf' && ET.i18n.current() === 'swh') || (r.lang === 'dig' && ET.i18n.current() === 'swh') || (r.lang === 'dug' && ET.i18n.current() === 'swh') || (r.lang === 'mer' && ET.i18n.current() === 'swh') || (r.lang === 'tuv' && ET.i18n.current() === 'swh') || (r.lang === 'teo' && ET.i18n.current() === 'swh') || (r.lang === 'ara' && ET.i18n.current() === 'ar') || (r.lang === 'kin' && ET.i18n.current() === 'rw') || (r.lang === 'xho' && ET.i18n.current() === 'xh') || (r.lang === 'sna' && ET.i18n.current() === 'sn') || (r.lang === 'lin' && ET.i18n.current() === 'ln')) ? '<p class="latin" style="font-size:1rem;margin:0">' +
           ET.esc(ET.displayTitle(r) === r.native ? r.title : r.native) + '</p>' : '') +
@@ -248,10 +246,10 @@ window.ET.module('item', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save', 'data
     // One colour per verb everywhere: green plays, blue saves, gold shares.
     var listen = r.type === 'audio' || r.type === 'audio-bible';
     html += '<div class="btn-row item-actions">' +
-      (r.play ? '<button class="btn green" id="play-now" type="button">' + ET.icon('play') +
+      (r.play ? '<button class="et-btn et-btn--go" id="play-now" type="button">' + ET.icon('play') +
         h(listen ? 'act.listen' : 'act.watch') + '</button>' : '') +
-      (canSave ? '<button class="btn sky" id="save">' + ET.icon('save') + h('item.save') + '</button>' : '') +
-      '<button class="btn gold" id="share">' + ET.icon('share') + h('item.share') + '</button></div>';
+      (canSave ? '<button class="et-btn et-btn--info" id="save">' + ET.icon('save') + h('item.save') + '</button>' : '') +
+      '<button class="et-btn et-btn--gold" id="share">' + ET.icon('share') + h('item.share') + '</button></div>';
     if (r.desc) html += '<p class="latin item-desc">' + ET.esc(r.desc) + '</p>';
 
     if (web) html += passCard();
@@ -276,10 +274,10 @@ window.ET.module('item', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save', 'data
     if (links.length) {
       html += '<p class="flabel" style="margin-top:1.6rem">' + h('item.more') + '</p>' +
         '<div class="stack">' + links.map(function (l) {
-          return '<a class="tile" href="' + ET.esc(ET.safeUrl(l.url)) + '" target="_blank" rel="noopener">' +
-            '<span class="ico">' + ET.icon('link') + '</span>' +
-            '<span><span class="t latin">' + ET.esc(l.label) + '</span></span>' +
-            '<span class="chev flip">' + ET.icon('chev') + '</span></a>';
+          return '<a class="et-tile" href="' + ET.esc(ET.safeUrl(l.url)) + '" target="_blank" rel="noopener">' +
+            '<span class="et-tile__icon">' + ET.icon('link') + '</span>' +
+            '<span class="et-tile__text"><span class="et-tile__title latin">' + ET.esc(l.label) + '</span></span>' +
+            '<span class="et-tile__end flip">' + ET.icon('chev') + '</span></a>';
         }).join('') + '</div>';
     }
 
@@ -310,7 +308,7 @@ window.ET.module('item', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save', 'data
   // Always on the page, never a pop-up: whoever just chose this is the
   // person most likely to know who else needs it.
   function passCard() {
-    return '<section class="card pass-on" id="pass-on" aria-labelledby="pass-on-h">' +
+    return '<section class="et-card pass-on" id="pass-on" aria-labelledby="pass-on-h">' +
       '<h2 id="pass-on-h">' + ET.icon('share') + h(chain.hop ? 'itemshare.title.chain' : 'itemshare.title') + '</h2>' +
       '<p class="muted">' + h('itemshare.sub') + '</p>' +
       '<div class="pass-names">' +
@@ -319,12 +317,12 @@ window.ET.module('item', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save', 'data
         '<div><label class="flabel" for="ps-to">' + h('itemshare.to') + '</label>' +
         '<input type="text" id="ps-to" maxlength="40" autocomplete="off" dir="auto" value="' + ET.esc(pass.to) + '"></div>' +
       '</div>' +
-      '<a class="btn green block" id="ps-wa" target="_blank" rel="noopener noreferrer" href="#">' +
+      '<a class="et-btn et-btn--go et-btn--block" id="ps-wa" target="_blank" rel="noopener noreferrer" href="#">' +
         ET.icon('share') + h('itemshare.whatsapp') + '</a>' +
       '<label class="flabel" for="ps-email">' + h('itemshare.email') + '</label>' +
       '<div class="send-library-row"><input type="email" id="ps-email" maxlength="254" autocomplete="email" ' +
         'inputmode="email" dir="ltr" placeholder="name@example.com" value="' + ET.esc(pass.email) + '">' +
-        '<button class="btn sky" type="button" id="ps-send">' + ET.icon('mail') + h('itemshare.send') + '</button></div>' +
+        '<button class="et-btn et-btn--info" type="button" id="ps-send">' + ET.icon('mail') + h('itemshare.send') + '</button></div>' +
       '<p class="send-library-status" id="ps-status" role="status" aria-live="polite"></p>' +
       '<p class="muted pass-privacy">' + h('itemshare.privacy') + '</p>' +
     '</section>';
@@ -536,11 +534,11 @@ window.ET.module('item', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save', 'data
       '<div class="stack">' + rows.map(function (x) {
         var tag = x[4] ? 'a' : 'button';
         var link = x[4] ? ' href="' + ET.esc(composerUrl(x[0], url)) + '" target="_blank" rel="noopener noreferrer"' : '';
-        return '<' + tag + ' class="tile" data-s="' + x[0] + '"' + link + ' style="width:100%;text-align:start">' +
-          '<span class="ico">' + ET.icon(x[1]) + '</span>' +
-          '<span><span class="t">' + (x[4] ? ET.esc(x[2]) : h(x[2])) + '</span>' +
-          (x[3] ? '<span class="s">' + h(x[3]) + '</span>' : '') + '</span>' +
-          '<span class="chev flip">' + ET.icon('chev') + '</span></' + tag + '>';
+        return '<' + tag + ' class="et-tile" data-s="' + x[0] + '"' + link + '>' +
+          '<span class="et-tile__icon">' + ET.icon(x[1]) + '</span>' +
+          '<span class="et-tile__text"><span class="et-tile__title">' + (x[4] ? ET.esc(x[2]) : h(x[2])) + '</span>' +
+          (x[3] ? '<span class="et-tile__sub">' + h(x[3]) + '</span>' : '') + '</span>' +
+          '<span class="et-tile__end flip">' + ET.icon('chev') + '</span></' + tag + '>';
       }).join('') + '</div>', { title: t('share.sheet') });
 
     ET.$$('[data-s]', s.el).forEach(function (b) {
@@ -581,9 +579,9 @@ window.ET.module('item', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save', 'data
       ET.analytics.track('share_complete', {
         resource: r.id, language: r.lang, channel: 'copy_link', shareId: shareId, status: 'copied'
       });
-      var tt = btn.querySelector('.t');
+      var tt = btn.querySelector('.et-tile__title');
       if (tt) tt.innerHTML = h('share.copied');
-      btn.querySelector('.ico').innerHTML = ET.icon('check');
+      btn.querySelector('.et-tile__icon').innerHTML = ET.icon('check');
     };
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(ok, fallback);
