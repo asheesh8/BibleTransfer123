@@ -400,6 +400,28 @@
       '</div></footer>';
   }
 
+  /* Kandili's first-run funnel: its stylesheet, words and script, fetched
+     after the welcome screen has painted and only on a first visit. Plain
+     tags, so it loads from file:// off a card exactly as it does online. */
+  function funnel(el) {
+    if (ET.$('#et-funnel-js')) return;
+    var head = document.head;
+    var css = document.createElement('link');
+    css.rel = 'stylesheet';
+    css.href = 'assets/css/pages/onboarding.css';
+    head.appendChild(css);
+    ['assets/js/data/onboarding-strings.js', 'assets/js/features/onboarding.js'].forEach(function (src, i) {
+      var sc = document.createElement('script');
+      sc.src = src;
+      sc.async = false;   // run in order: the words before the funnel
+      if (i) {
+        sc.id = 'et-funnel-js';
+        sc.onload = function () { if (ET.onboarding && el.isConnected) ET.onboarding.decorate(el); };
+      }
+      head.appendChild(sc);
+    });
+  }
+
   /* First run: a whole screen, not a sheet. It cannot be dismissed — there is
      no sensible default for someone who has not said what they read — and it
      says how much is waiting in each language, so choosing one is choosing a
@@ -480,16 +502,24 @@
     document.body.appendChild(el);
     document.documentElement.classList.add('welcoming');
     if (ET.loadMascot) ET.loadMascot();
+    funnel(el);
 
+    function done() {
+      el.remove();
+      document.documentElement.classList.remove('welcoming');
+      window.scrollTo(0, 0);
+    }
     ET.$$('[data-lang]', el).forEach(function (b) {
       b.addEventListener('click', function () {
         // Stay on this screen until the chosen language has loaded, so the
         // library never flashes up in English first.
         b.setAttribute('aria-busy', 'true');
         set(b.getAttribute('data-lang'), function () {
-          el.remove();
-          document.documentElement.classList.remove('welcoming');
-          window.scrollTo(0, 0);
+          b.removeAttribute('aria-busy');
+          // Kandili's questions take over from here (features/onboarding.js).
+          // If they have not arrived yet, the library simply opens.
+          if (ET.onboarding) ET.onboarding.start(el, done);
+          else done();
         });
       });
     });
