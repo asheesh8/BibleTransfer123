@@ -1,7 +1,7 @@
 # Adding a language library
 
 Every language library is one entry in `registry/languages.json`. The generator
-`packer/et/generate.py` (run it with `npm run build`) turns that list into the
+`packer/et/generate.py` (run it with `npm run generate`) turns that list into the
 files that used to be edited by hand:
 
 | Generated file | What it gets from the registry |
@@ -15,11 +15,13 @@ files that used to be edited by hand:
 | `packer/library_mail.py` | `LIBRARIES` for "Email this library". |
 
 `tests/test_generate.py` fails while any of these is out of date, so a
-forgotten build cannot ship. Never edit a generated file by hand; the next
+forgotten run cannot ship. The script is deliberately not called `build`:
+Vercel runs a package.json `build` script on every deploy, and the site must
+deploy the committed files as they are. Never edit a generated file by hand; the next
 build puts it back.
 
 `VERSION` in `sw.js` is a hash of every file the shell caches, so **any** change
-to a shell file (a script, a stylesheet, a catalogue) needs `npm run build`
+to a shell file (a script, a stylesheet, a catalogue) needs `npm run generate`
 before commit. That replaces bumping `shell-vNN` by hand. Non-language entries
 in `SHELL` and non-language rewrites in `vercel.json` (`/admin`, `/privacy`...)
 stay hand-written; the generator keeps them.
@@ -52,7 +54,7 @@ a ranged check of every file. Only files that check as real media are carried.
    is the order of the share list and the QR redirect.
 2. Add its preview card words to `art/og/cards.json`, then run
    `node art/og/render.js` for the picture. The page reads the words from there.
-3. Run `npm run build` and commit the registry together with what it wrote.
+3. Run `npm run generate` and commit the registry together with what it wrote.
 
 Registry fields:
 

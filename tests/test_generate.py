@@ -1,6 +1,6 @@
 """Every per-language file matches registry/languages.json.
 
-If this fails, run `npm run build` (python3 packer/et/generate.py) and commit
+If this fails, run `npm run generate` (python3 packer/et/generate.py) and commit
 what it writes. Never edit a generated file by hand: the next build undoes it.
 """
 import copy
@@ -20,7 +20,7 @@ class Generated(unittest.TestCase):
 
     def test_generated_files_are_up_to_date(self):
         stale = generate.stale(self.out)
-        self.assertEqual(stale, [], "stale generated files; run `npm run build` and commit the result")
+        self.assertEqual(stale, [], "stale generated files; run `npm run generate` and commit the result")
 
     def test_every_language_folder_comes_from_the_registry(self):
         folders = {path.parent.name for path in (ROOT / "app").glob("*/index.html")}

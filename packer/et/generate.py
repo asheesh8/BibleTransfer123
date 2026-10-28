@@ -13,7 +13,7 @@ The registry is the one list of language libraries. From it this writes:
 Run it after editing the registry (or any shell file, since VERSION follows
 the shell's contents), then commit what it wrote:
 
-    npm run build                       # python3 packer/et/generate.py
+    npm run generate                       # python3 packer/et/generate.py
     python3 packer/et/generate.py --check   # list stale files, change nothing
 
 tests/test_generate.py fails while any generated file is out of date.
