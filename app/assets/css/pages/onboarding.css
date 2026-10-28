@@ -1,0 +1,160 @@
+/* ============================================================================
+   Kandili's first-run funnel (js/features/onboarding.js).
+
+   Loaded on demand with the funnel, on a first visit only. Builds on the
+   welcome screen in app.css: step 1 is that screen with a progress bar and
+   Kandili's hello added; from step 2 the funnel covers it.
+
+   Uses app.css colour tokens, so it follows the light and dark themes.
+   Touch targets are 56px or more; layout uses logical properties so Urdu,
+   Arabic, Pashto and Sindhi mirror; motion stops under reduced motion.
+   ========================================================================= */
+
+/* ------------------------------------------------------------ step 1 */
+.ob-step1 { margin: 0 auto 1.2rem; max-width: 22rem; }
+.ob-hello {
+  position: relative; width: max-content; max-width: 100%;
+  margin: .2rem auto .9rem; padding: .55rem 1.1rem;
+  border: 2px solid var(--line-strong); border-radius: 18px;
+  background: var(--surface); color: var(--ink);
+  font-family: var(--display); font-weight: 800; font-size: 1.1rem; text-align: center;
+}
+/* The bubble's tail points up at Kandili. */
+.ob-hello::before {
+  content: ""; position: absolute; top: -8px; inset-inline-start: calc(50% - 7px);
+  width: 12px; height: 12px; background: var(--surface);
+  border-top: 2px solid var(--line-strong); border-inline-start: 2px solid var(--line-strong);
+  transform: rotate(45deg);
+}
+
+/* ------------------------------------------------- the progress bar */
+.ob-bar {
+  position: relative; flex: 1; height: 16px; border-radius: 999px;
+  background: var(--sunk); overflow: hidden;
+}
+.ob-bar i {
+  position: absolute; inset-block: 0; inset-inline-start: 0;
+  border-radius: inherit; background: var(--gold);
+  transition: width .4s cubic-bezier(.3, 1.4, .5, 1);
+}
+/* The shine along the top of the fill, as on a lit lantern's brass. */
+.ob-bar i::after {
+  content: ""; position: absolute; inset-block-start: 4px; inset-inline: 8px;
+  height: 4px; border-radius: 4px; background: rgba(255, 255, 255, .35);
+}
+
+/* ---------------------------------------------------- the funnel */
+.welcome.ob-on > :not(.ob) { display: none; }
+.ob { min-height: 100%; display: flex; }
+.ob-in {
+  flex: 1; display: flex; flex-direction: column;
+  width: 100%; max-width: 34rem; margin: 0 auto;
+  padding: max(.6rem, env(safe-area-inset-top)) 16px 0;
+}
+
+.ob-top { display: flex; align-items: center; gap: .5rem; min-height: 56px; }
+.ob-icon, .ob-skip {
+  min-width: 56px; min-height: 56px; flex: none;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 0; border-radius: 16px; background: transparent; color: var(--ink-soft);
+  font: inherit; font-weight: 700; cursor: pointer;
+}
+.ob-skip { padding: 0 .8rem; text-transform: uppercase; letter-spacing: .04em; font-size: .9rem; }
+.ob-icon svg { width: 26px; height: 26px; }
+.ob-icon:hover, .ob-skip:hover { background: var(--sunk); color: var(--ink); }
+.ob-icon:focus-visible, .ob-skip:focus-visible, .ob-opt:focus-visible {
+  outline: 3px solid var(--purple); outline-offset: 2px;
+}
+.ob-barwrap { flex: 1; display: flex; }
+
+/* Kandili talks: lantern on the start side, a speech bubble beside it. */
+.ob-talk { display: flex; align-items: flex-end; gap: .4rem; margin: 1rem 0 1.4rem; }
+.ob-k { flex: none; }
+.ob-bubble {
+  position: relative; flex: 1; min-width: 0; margin-block-end: 1.6rem;
+  padding: .9rem 1.1rem; border: 2px solid var(--line-strong); border-radius: 20px;
+  background: var(--surface);
+}
+.ob-bubble::before {
+  content: ""; position: absolute; inset-block-end: 18px; inset-inline-start: -9px;
+  width: 14px; height: 14px; background: var(--surface);
+  border-block-end: 2px solid var(--line-strong); border-inline-start: 2px solid var(--line-strong);
+  transform: rotate(45deg);
+}
+html[dir="rtl"] .ob-bubble::before { transform: rotate(-45deg); }
+.welcome .ob-q {
+  margin: 0; text-align: start; font-family: var(--display); font-weight: 800;
+  font-size: clamp(1.3rem, 5.4vw, 1.65rem); line-height: 1.3; outline: none;
+}
+.ob-say { margin: .35rem 0 0; color: var(--ink-soft); line-height: 1.5; }
+.ob-say:empty { display: none; }
+
+/* Choices: big cards with a lip, pressed down when chosen. */
+.ob-body { flex: 1; }
+.ob-opts { display: grid; gap: .7rem; }
+.ob-opt {
+  display: flex; align-items: center; gap: .9rem; width: 100%; min-height: 72px;
+  padding: .7rem 1rem; text-align: start; cursor: pointer;
+  font: inherit; color: var(--ink);
+  background: var(--surface); border: 2px solid var(--line-strong);
+  border-block-end-width: 5px; border-radius: 18px;
+  transition: transform .12s ease, border-color .12s ease, background-color .12s ease;
+}
+.ob-opt:hover { border-color: var(--purple); }
+.ob-opt:active { transform: translateY(3px); border-block-end-width: 2px; margin-block-end: 3px; }
+.ob-opt[aria-checked="true"] { border-color: var(--gold); background: var(--gold-wash); }
+.ob-ico {
+  flex: none; width: 44px; height: 44px; border-radius: 14px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--purple-wash); color: var(--purple);
+}
+.ob-ico svg { width: 24px; height: 24px; }
+.ob-gold .ob-ico   { background: var(--gold-wash);  color: var(--gold); }
+.ob-green .ob-ico  { background: var(--green-wash); color: var(--green-text); }
+.ob-sky .ob-ico    { background: var(--sky-wash);   color: var(--sky-text); }
+.ob-night .ob-ico  { background: var(--sunk);       color: var(--ink); }
+.ob-txt { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.ob-t { font-weight: 800; font-size: 1.12rem; line-height: 1.35; }
+.ob-s { color: var(--ink-soft); font-size: .9rem; }
+.ob-tick {
+  flex: none; width: 28px; height: 28px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 2px solid var(--line-strong); color: transparent;
+}
+.ob-tick svg { width: 16px; height: 16px; }
+.ob-opt[aria-checked="true"] .ob-tick { background: var(--gold); border-color: var(--gold); color: var(--on-face); }
+
+/* The ready screen: what was chosen, as chips on a card. */
+.ob-card {
+  display: flex; flex-wrap: wrap; gap: .6rem; padding: 1.1rem;
+  border: 2px solid var(--line-strong); border-radius: 20px; background: var(--surface);
+}
+.ob-chip {
+  display: inline-flex; align-items: center; gap: .55rem; min-height: 56px;
+  padding: .3rem 1rem .3rem .35rem; border-radius: 999px; background: var(--sunk);
+  font-weight: 800;
+}
+.ob-chip .ob-ico { width: 40px; height: 40px; border-radius: 50%; }
+.ob-chip .ob-s { font-weight: 600; }
+.ob-count { flex-basis: 100%; margin: .2rem 0 0; color: var(--ink-soft); }
+
+/* Continue stays in reach of a thumb. */
+.ob-foot {
+  position: sticky; bottom: 0; margin-top: 1.4rem;
+  padding: 1rem 0 max(1rem, env(safe-area-inset-bottom));
+  background: linear-gradient(to bottom, transparent, var(--ground) 30%);
+}
+.ob-go { border-radius: 18px; }
+.ob-go:not(.gold) { --face: var(--sunk); --edge: var(--line-strong); color: var(--ink-soft); }
+
+/* Each question arrives from the reading direction. */
+.ob-enter .ob-talk, .ob-enter .ob-body { animation: ob-in .32s cubic-bezier(.2, .8, .2, 1) both; }
+.ob-enter .ob-body { animation-delay: .06s; }
+@keyframes ob-in { from { opacity: 0; transform: translateX(28px); } to { opacity: 1; transform: none; } }
+html[dir="rtl"] .ob-enter .ob-talk, html[dir="rtl"] .ob-enter .ob-body { animation-name: ob-in-rtl; }
+@keyframes ob-in-rtl { from { opacity: 0; transform: translateX(-28px); } to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .ob-enter .ob-talk, .ob-enter .ob-body { animation: none; }
+  .ob-bar i, .ob-opt { transition: none; }
+}
