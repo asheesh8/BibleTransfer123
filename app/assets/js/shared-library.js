@@ -89,31 +89,41 @@
       ? 'https://wa.me/?text=' + encodeURIComponent(document.title + '\n' + url)
       : 'https://t.me/share/url?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(document.title);
   }
+  /* The page ships the share buttons already in place, so the hero is its
+     final height from the first paint and nothing below it jumps when this
+     runs. Off a card they can't work, so they go. */
   var actions = ET.$('.shared-actions');
-  if (ET.online && actions) {
-    var fb = document.createElement('a');
-    fb.className = 'btn fb'; fb.setAttribute('data-shared-channel', 'facebook');
+  function channel(name, cls, label) {
+    var a = actions && ET.$('[data-shared-channel="' + name + '"]', actions);
+    if (!a && actions && ET.online) {
+      a = document.createElement('a');
+      a.setAttribute('data-shared-channel', name);
+      a.target = '_blank'; a.rel = 'noopener noreferrer';
+      actions.appendChild(a);
+    }
+    if (!a) return null;
+    if (!ET.online) { a.remove(); return null; }
+    a.className = cls; a.textContent = label;
+    return a;
+  }
+  var fb = channel('facebook', 'btn fb', '');
+  if (fb) {
     fb.innerHTML = ET.icon('facebook') + h('fbshare.button');
-    fb.target = '_blank'; fb.rel = 'noopener noreferrer';
     fb.href = ET.facebookUrl(publicUrl);
     fb.addEventListener('click', function () {
       var intent = ET.analytics.shareIntent(publicUrl, 'facebook', { language: scope.lang, status: 'opened' });
       ET.facebookShare(fb, intent.url, t('fbshare.post', { lang: language }));
     });
-    actions.insertBefore(fb, email.nextSibling);
-    [['whatsapp', 'WhatsApp'], ['telegram', 'Telegram']].forEach(function (method) {
-      var a = document.createElement('a');
-      a.className = 'btn ghost'; a.textContent = method[1];
-      a.setAttribute('data-shared-channel', method[0]);
-      a.target = '_blank'; a.rel = 'noopener noreferrer';
-      a.href = composerUrl(method[0], publicUrl);
-      a.addEventListener('click', function () {
-        var intent = ET.analytics.shareIntent(publicUrl, method[0], { language: scope.lang, status: 'opened' });
-        a.href = composerUrl(method[0], intent.url);
-      });
-      actions.appendChild(a);
-    });
   }
+  [['whatsapp', 'WhatsApp'], ['telegram', 'Telegram']].forEach(function (method) {
+    var a = channel(method[0], 'btn ghost', method[1]);
+    if (!a) return;
+    a.href = composerUrl(method[0], publicUrl);
+    a.addEventListener('click', function () {
+      var intent = ET.analytics.shareIntent(publicUrl, method[0], { language: scope.lang, status: 'opened' });
+      a.href = composerUrl(method[0], intent.url);
+    });
+  });
 
   var copy = ET.$('#copy-library');
   copy.innerHTML = ET.icon('link') + h('sharelib.copy');
