@@ -516,6 +516,15 @@ window.ET.module('analytics', ['core', 'i18n'], function (ET) {
       visitorId: visitor, sessionId: session.id, language: language() };
     var r = resource();
     if (r) e.resource = r;
+    // Inside the store apps, say which one (and its version) so the reports
+    // can tell the website from the iPhone and Android apps.
+    if (ET.native && window.Capacitor && typeof window.Capacitor.getPlatform === 'function') {
+      var platform = window.Capacitor.getPlatform();
+      if (platform === 'ios' || platform === 'android') {
+        e.platform = platform;
+        if (/^\d{1,4}(\.\d{1,4}){0,2}$/.test(window.ET_APP_VERSION || '')) e.appVersion = window.ET_APP_VERSION;
+      }
+    }
     if (code(fields.language)) e.language = fields.language;
     if (slug(fields.resource)) e.resource = fields.resource;
     if (CHANNELS.indexOf(fields.channel) >= 0) e.channel = fields.channel;
@@ -704,8 +713,30 @@ window.ET.module('analytics', ['core', 'i18n'], function (ET) {
       } catch (err) {}
     });
   }
+  /* "Delete my data" (privacy and /delete-data pages): turn analytics off,
+     then ask the site to delete every event sent with this phone's random ID.
+     Resolves to { deleted: n }, or { nothing: true } when this phone holds no
+     ID (analytics was never on, or was already turned off and cleared). */
+  function forget() {
+    // A request that failed (offline) left its ID behind to try again with.
+    var v = visitor || (read('et.analytics.visitor') || {}).id || (read('et.analytics.forget') || {}).id || '';
+    memoryConsent = { version: VERSION, analytics: false, at: Date.now() };
+    write('et.consent', memoryConsent);
+    stop();
+    if (!id(v)) return Promise.resolve({ ok: true, deleted: 0, nothing: true });
+    write('et.analytics.forget', { id: v, at: Date.now() });
+    return fetch('/api/analytics', { method: 'POST', credentials: 'omit', cache: 'no-store',
+      headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ forget: { visitorId: v } })
+    }).then(function (res) {
+      return res.json().then(function (body) {
+        if (!res.ok) throw new Error(body.error || 'failed');
+        remove('et.analytics.forget');
+        return body;
+      });
+    });
+  }
   ET.analytics = { track: track, shareUrl: shareUrl, shareIntent: shareIntent, allowed: allowed,
-    showConsent: show, flush: flush };
+    showConsent: show, flush: flush, forget: forget };
   window.addEventListener('storage', function (e) {
     if (e.key !== 'et.consent') return;
     memoryConsent = null;
