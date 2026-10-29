@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The splash page (docs/design/color.md), dark phones.
+         features/launch.js paints the same colour as the app opens. -->
+    <color name="splash_ground">#1A1316</color>
+</resources>

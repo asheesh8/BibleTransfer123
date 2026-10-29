@@ -81,28 +81,19 @@ window.ET = (function () {
     };
   }
 
-  /* Online features VillageServer can switch off in every app at once, from
-     registry/app-config.json, without a new release. features/app.js keeps
-     the last answer from /api/app-config; until there is one, all are on. The
-     website and cards always have them all. */
+  // Online features switched off for every app in registry/app-config.json (kept by features/app.js).
   function feature(name) {
-    if (!native) return true;
-    try {
-      var c = JSON.parse(window.localStorage.getItem('et.appconfig') || 'null');
-      return !(c && c.data && c.data.features && c.data.features[name] === false);
-    } catch (e) { return true; }
+    try { var c = native && JSON.parse(window.localStorage.getItem('et.appconfig') || 'null'); } catch (e) { c = null; }
+    return !(c && c.data && c.data.features && c.data.features[name] === false);
   }
 
-  /* Android's WebView has no navigator.share, so the app's share sheet comes
-     from Capacitor's Share plugin; a closed sheet rejects with AbortError. */
+  // Android's WebView lacks navigator.share: use Capacitor's Share (closed sheet = AbortError).
   var Share = native && window.Capacitor.Plugins && window.Capacitor.Plugins.Share;
   if (Share && typeof navigator.share !== 'function') try {
     navigator.share = function (d) {
-      d = d || {};
-      return Share.share({ title: d.title, text: d.text, url: d.url }).then(function () {}, function (err) {
-        var e = new Error((err && err.message) || 'Share cancelled');
-        e.name = /cancel/i.test(e.message) ? 'AbortError' : 'Error';
-        throw e;
+      return Share.share({ title: (d || {}).title, text: (d || {}).text, url: (d || {}).url }).then(function () {}, function (err) {
+        var m = (err && err.message) || 'Share cancelled';
+        throw Object.assign(new Error(m), { name: /cancel/i.test(m) ? 'AbortError' : 'Error' });
       });
     };
   } catch (e) { /* read-only navigator: the share row stays hidden */ }
@@ -379,8 +370,19 @@ window.ET = (function () {
     return fs ? fs.deleteFile({ path: f.uri }).catch(function () {}) : Promise.resolve();
   }
 
+  /* Whether to keep still: the phone's reduce-motion setting, unless the
+     page forces it with html[data-motion="reduce" | "full"]. */
+  var motion = {
+    reduced: function () {
+      var forced = document.documentElement.getAttribute('data-motion');
+      if (forced === 'reduce') return true;
+      if (forced === 'full') return false;
+      return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    }
+  };
+
   var api = {
-    keptFiles: keptFiles, forgetKept: forgetKept,
+    motion: motion, keptFiles: keptFiles, forgetKept: forgetKept,
     native: native, online: online, publicOrigin: publicOrigin, publicHref: publicHref, feature: feature,
     store: store, esc: esc, qs: qs, human: human, pad: pad, $: $, $$: $$,
     theme: theme, library: library, byId: byId, displayTitle: displayTitle,

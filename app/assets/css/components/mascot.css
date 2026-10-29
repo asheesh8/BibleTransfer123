@@ -40,6 +40,7 @@
 .et-kandili .k-handle { transform-origin: 50% 100%; }   /* swings from its neck */
 .et-kandili .k-look   { transform-origin: 50% 50%; }
 .et-kandili .k-eyes   { transform-origin: 50% 50%; }    /* blink to a line      */
+.et-kandili .k-mouth  { transform-origin: 50% 0; }      /* talks from the lip   */
 .et-kandili .k-glowwrap { transform-origin: 50% 50%; }
 .et-kandili .k-shadow { transform-box: fill-box; transform-origin: 50% 50%; }
 .et-kandili .k-tilt   { transform-origin: 50% 100%; }
