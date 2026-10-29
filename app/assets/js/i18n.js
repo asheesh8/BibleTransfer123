@@ -351,77 +351,107 @@ window.ET.module('i18n', ['core'], function (ET) {
     return '';
   }
 
-  /* The rest of the front door, below the language list: how sharing works,
-     the offer to content partners, and what is coming. English only and
-     marked so; the reader-facing library is fully translated. */
-  function landing() {
-    function step(n, cls, icon, title, text) {
-      return '<li class="lp-step ' + cls + '"><span class="lp-ico">' + ET.icon(icon) + '</span>' +
-        '<span class="lp-n">' + n + ' · ' + title + '</span><span>' + text + '</span></li>';
-    }
-    function stat(n, label, cls) {
-      return '<li class="lp-stat ' + cls + '"><strong>' + n + '</strong><span>' + label + '</span></li>';
-    }
+  /* The first-run tour, one screen at a time, the way a good phone app
+     opens: never a long page to scroll. Four screens here, then Kandili's
+     questions (features/onboarding.js) carry on in the reader's language.
+
+       hello  what BibleTransfer123 is, in one picture and one line
+       how    one phone lights the next: choose, save, pass it on
+       road   where it is going: the website today, the app being built now
+       lang   which language; nothing else has to be decided
+
+     The first three are in English, marked so, for partners and first-time
+     visitors; Skip, and a line in the phone's own language, jump straight to
+     the language list for anyone who cannot read them. */
+  var TOUR = ['hello', 'how', 'road', 'lang'];
+  var TOUR_STEPS = 7;   // these four, then want, net and ready in the funnel
+
+  function tourScreens(guess, order, counts) {
     var stats = { langs: 0, items: 0 };
     try {
       stats.items = ET.library().resources.length;
       stats.langs = Object.keys(ET.library().languages || {}).length;
     } catch (e) {}
-    stats.langs = stats.langs || '50+';
-    stats.items = stats.items ? stats.items.toLocaleString('en') : 'Hundreds of';
-    function phase(cls, tag, title, text) {
-      return '<li class="lp-phase ' + cls + '"><span class="lp-tag">' + tag + '</span>' +
-        '<strong>' + title + '</strong><span>' + text + '</span></li>';
+    var langs = stats.langs || '50+';
+    function stop(cls, icon, title, text, tag) {
+      return '<li class="tp-stop ' + cls + '"><span class="tp-node">' + icon + '</span>' +
+        '<span class="tp-txt">' + (tag ? '<span class="tp-tag">' + tag + '</span>' : '') +
+        '<strong>' + title + '</strong><span>' + text + '</span></span></li>';
     }
-    return '<section class="lp-band lp-how" id="et-how" lang="en" dir="ltr"><div class="lp-in">' +
-        '<h2 class="display">One phone lights the next</h2>' +
-        '<p class="lp-lead">Most people we serve have little or no data. So the library is built to be ' +
-          'saved once and shared the rest of the way, from one phone to another, with no internet at all.</p>' +
-        '<ol class="lp-steps">' +
-          step(1, 'purple', 'globe', 'Choose', 'Pick your language. Everything, buttons included, switches to it.') +
-          step(2, 'sky', 'save', 'Save', 'Save a film or Bible to your phone once, wherever there is Wi‑Fi or a VillageServer.') +
-          step(3, 'gold', 'share', 'Pass it on', 'Show a code. Your friend scans it and it copies across, phone to phone.') +
+    var hello = ['en', 'hi', 'ur', 'swh', 'cmn'].filter(function (c) { return c !== guess; }).slice(0, 4);
+    if (guess) hello.unshift(guess);
+    return '' +
+      '<section class="ob-screen tour-hello" data-step="hello" lang="en" dir="ltr" aria-labelledby="tour-h-hello">' +
+        // Kandili over a village at dusk, flames drifting down to phones:
+        // the whole idea in one picture. 23 KB, size held so nothing jumps.
+        '<div class="tour-art"><picture><source srcset="assets/art/kandili-village.webp" type="image/webp">' +
+          '<img src="assets/art/kandili-village.jpg" width="971" height="465" decoding="async" ' +
+          'alt="Kandili the lantern floats over a village at night, sending small flames down to the phones people hold up."></picture></div>' +
+        '<p class="tour-brand">BibleTransfer<span>123</span></p>' +
+        '<h1 class="tour-h display" id="tour-h-hello" tabindex="-1">Light that travels <span>phone to phone.</span></h1>' +
+        '<p class="tour-sub">Bible films, audio Bibles and Scripture in your own language. Save them once, then pass them on. No internet needed.</p>' +
+        '<ul class="tour-chips"><li>Free</li><li>No ads</li><li>No sign-up</li><li>' + langs + ' languages</li></ul>' +
+        (guess && guess !== 'en' ? '<button type="button" class="tour-own" data-jump="lang" dir="auto" lang="' + guess + '">' +
+          ET.icon('globe') + '<span>' + ET.esc(say('welcome.title', guess)) + '</span></button>' : '') +
+      '</section>' +
+      '<section class="ob-screen tour-how" data-step="how" lang="en" dir="ltr" aria-labelledby="tour-h-how" hidden>' +
+        '<h1 class="tour-h display" id="tour-h-how" tabindex="-1">One phone lights the next</h1>' +
+        '<p class="tour-sub">Most people we serve have little or no internet. So BibleTransfer123 is made to be saved once and shared the rest of the way.</p>' +
+        '<ol class="tour-path">' +
+          stop('plum', ET.icon('globe'), 'Choose', 'Pick your language. Every button changes to it.') +
+          stop('teal', ET.icon('save'), 'Save', 'Save a film or Bible to your phone once, wherever there is Wi‑Fi.') +
+          stop('gold', ET.icon('share'), 'Pass it on', 'Show a code. A friend scans it and it copies across, phone to phone.') +
         '</ol>' +
-      '</div></section>' +
-      '<section class="lp-band lp-partners" lang="en" dir="ltr"><div class="lp-in lp-partners-in">' +
-        '<div class="lp-partners-copy">' +
-          '<p class="lp-eyebrow">For ministries and content partners</p>' +
-          '<h2 class="display">Bring your library. We carry it the last mile.</h2>' +
-          '<p class="lp-lead">You have the films, Bibles and teaching. We put them in people\'s hands ' +
-            'where the internet stops, and show you where they travel.</p>' +
-          '<ol class="lp-flow">' +
-            '<li><span class="lp-flow-n">1</span><span><strong>Send us your files.</strong> Films, audio, PDFs, in any language.</span></li>' +
-            '<li><span class="lp-flow-n">2</span><span><strong>We shelve them.</strong> Your titles join every library that speaks the language.</span></li>' +
-            '<li><span class="lp-flow-n">3</span><span><strong>They travel offline.</strong> Phone to phone, memory cards and VillageServer hubs, with no data cost to the viewer.</span></li>' +
-          '</ol>' +
-          '<a class="btn big lp-partner-btn" href="https://villageservers.org" target="_blank" rel="noopener">Partner with us</a>' +
+      '</section>' +
+      '<section class="ob-screen tour-road" data-step="road" lang="en" dir="ltr" aria-labelledby="tour-h-road" hidden>' +
+        '<h1 class="tour-h display" id="tour-h-road" tabindex="-1">Where we are going</h1>' +
+        '<ol class="tour-path road">' +
+          stop('done', ET.icon('check'), 'The BibleTransfer123 website',
+            'Films, Bibles and audio in ' + langs + ' languages. Open it on any phone.', 'Live today') +
+          stop('here', ET.lantern ? ET.lantern(44, 'hello') : ET.icon('phone'), 'iPhone and Android app',
+            'Share between two phones by QR code, even with no internet.', 'Building now') +
+          stop('soon', ET.icon('wifi'), 'VillageServer hubs',
+            'One small box lights a whole village: 20 to 40 phones at once.', 'Next') +
+        '</ol>' +
+        '<a class="tour-partner" href="https://villageservers.org" target="_blank" rel="noopener">' +
+          '<span><strong>Ministries and content partners</strong><span>Bring your films and Bibles. We carry them the last mile.</span></span>' +
+          ET.icon('chev', 'flip') + '</a>' +
+      '</section>' +
+      '<section class="ob-screen tour-lang" data-step="lang" id="et-welcome-pick" aria-labelledby="et-welcome-h" hidden>' +
+        '<div class="ob-talk">' +
+          (ET.lantern ? '<div class="ob-k" aria-hidden="true">' + ET.lantern(72, 'hello') + '</div>' : '') +
+          '<div class="ob-bubble"><h1 class="ob-q" id="et-welcome-h" tabindex="-1" dir="auto" lang="' + (guess || 'en') + '">' +
+            ET.esc(say('welcome.title', guess || 'en')) + '</h1>' +
+          '<p class="ob-say welcome-also">' + hello.slice(1).map(function (c) {
+            return '<span dir="' + meta(c).dir + '" lang="' + c + '">' + ET.esc(say('welcome.title', c)) + '</span>';
+          }).join('<span aria-hidden="true"> · </span>') + '</p></div>' +
         '</div>' +
-        // Counted from the library this page carries, so the numbers are
-        // always the ones a visitor can open.
-        '<ul class="lp-stats">' +
-          stat(stats.langs, 'languages with their own library', 'purple') +
-          stat(stats.items, 'films, Bibles and audio', 'green') +
-          stat('0', 'data cost to share', 'gold') +
-          stat('20–40', 'phones per VillageServer hub', 'sky') +
-        '</ul>' +
-      '</div></section>' +
-      '<section class="lp-band lp-next" lang="en" dir="ltr"><div class="lp-in">' +
-        '<h2 class="display">What\'s coming</h2>' +
-        '<ol class="lp-phases">' +
-          phase('now', 'Live now', 'The web library', 'Films, Bibles and audio in 50+ languages, saved to the phone and shared by link or nearby code.') +
-          phase('next', 'Next', 'iPhone and Android apps', 'Share by QR code between any two phones, with Kandili the lantern and full offline playback.') +
-          phase('then', 'Then', 'VillageServer hubs', 'One small server lights a whole village: 20 to 40 phones at once.') +
-        '</ol>' +
-      '</div></section>' +
-      '<footer class="lp-foot" lang="en" dir="ltr"><div class="lp-in">' +
-        'A VillageServer Initiative. Content from the Digital Bible Society and partners. Always free.' +
-      '</div></footer>';
+        (order.length > 8 ? '<div class="search welcome-search">' + ET.icon('search') +
+          '<input type="search" id="et-welcome-q" autocomplete="off" enterkeyhint="search" placeholder="' +
+          ET.esc(say('welcome.search', guess || 'en')) + '" aria-label="' + ET.esc(say('welcome.search', guess || 'en')) + '"></div>' : '') +
+        '<div class="welcome-list" role="radiogroup" aria-labelledby="et-welcome-h">' + order.map(function (l) {
+          var n = counts[ET.contentCode ? ET.contentCode(l.code) : l.code] || 0;
+          var on = l.code === guess;
+          return '<button type="button" class="welcome-lang' + (on ? ' guess' : '') + '" role="radio" aria-checked="' + on + '" data-lang="' + l.code + '" ' +
+            'data-find="' + ET.esc((l.name + ' ' + l.native + ' ' + l.code).toLowerCase()) + '">' +
+            '<span class="wl-text"><span class="wl-native" dir="' + l.dir + '" lang="' + l.code + '">' + ET.esc(l.native) + '</span>' +
+            '<span class="wl-name latin" lang="en">' + ET.esc(l.name) +
+              (on ? ' · ' + ET.esc(say('welcome.suggested', 'en')) : '') + '</span>' +
+            (l.interfaceNote ? '<span class="wl-name latin" lang="en">' + ET.esc(l.interfaceNote) + '</span>' : '') +
+            (n ? '<span class="wl-count" dir="' + l.dir + '" lang="' +
+              (isFallback('welcome.count', { n: n }, l.code) ? 'en' : l.code) + '">' +
+              ET.esc(say('welcome.count', l.code, { n: n })) + '</span>' : '') +
+            '</span>' +
+            '<span class="wl-tick" aria-hidden="true">' + ET.icon('check') + '</span>' +
+          '</button>';
+        }).join('') + '</div>' +
+      '</section>';
   }
 
   /* Kandili's first-run funnel: its stylesheet, words and script, fetched
      after the welcome screen has painted and only on a first visit. Plain
      tags, so it loads from file:// off a card exactly as it does online. */
-  function funnel(el) {
+  function funnel() {
     if (ET.$('#et-funnel-js')) return;
     var head = document.head;
     var css = document.createElement('link');
@@ -432,10 +462,7 @@ window.ET.module('i18n', ['core'], function (ET) {
       var sc = document.createElement('script');
       sc.src = src;
       sc.async = false;   // run in order: the words before the funnel
-      if (i) {
-        sc.id = 'et-funnel-js';
-        sc.onload = function () { if (ET.onboarding && el.isConnected) ET.onboarding.decorate(el); };
-      }
+      if (i) sc.id = 'et-funnel-js';
       head.appendChild(sc);
     });
   }
@@ -459,87 +486,99 @@ window.ET.module('i18n', ['core'], function (ET) {
     el.className = 'welcome';
     el.setAttribute('role', 'dialog');
     el.setAttribute('aria-modal', 'true');
-    el.setAttribute('aria-labelledby', 'et-welcome-h');
-    var hello = ['en', 'hi', 'ur', 'swh', 'cmn'].filter(function (c) { return c !== guess; }).slice(0, 4);
-    if (guess) hello.unshift(guess);
-    // The first screen anyone sees, so it doubles as the front door: what this
-    // is and why it matters (in English, for partners and first-time visitors),
-    // then straight into the language list, which is the only thing a reader
-    // has to do. The hero's own button speaks the reader's language.
-    var pick = say('welcome.title', guess || 'en');
+    el.setAttribute('aria-label', 'BibleTransfer123');
     el.innerHTML =
-      '<section class="lp-hero" lang="en" dir="ltr">' +
-        '<div class="lp-in lp-hero-in">' +
-          '<div class="lp-copy">' +
-            '<ul class="lp-chips"><li class="lp-chip">Works offline</li><li class="lp-chip">50+ languages</li>' +
-              '<li class="lp-chip">No ads · No sign-up · Free</li></ul>' +
-            '<p class="lp-h display">Light that travels <span>phone to phone.</span></p>' +
-            '<p class="lp-sub">Films, Bibles and audio Scripture in your own language. ' +
-              'Save them once, then pass them to anyone nearby. No internet needed.</p>' +
-            '<div class="lp-ctas">' +
-              '<a class="btn big" href="#et-welcome-pick">' + ET.icon('globe') +
-                '<span dir="auto" lang="' + (guess || 'en') + '">' + ET.esc(pick) + '</span></a>' +
-              '<a class="btn ghost lp-ghost" href="#et-how">How sharing works</a>' +
-            '</div>' +
-          '</div>' +
-          // Kandili over a village at dusk, flames drifting down to phones:
-          // the whole idea in one picture. 23 KB, size held so nothing jumps.
-          '<div class="lp-art">' +
-            '<picture><source srcset="assets/art/kandili-village.webp" type="image/webp">' +
-            '<img src="assets/art/kandili-village.jpg" width="971" height="465" decoding="async" ' +
-              'alt="Kandili the lantern floats over a village at night, sending small flames down to the phones people hold up."></picture>' +
-          '</div>' +
+      '<div class="ob-in">' +
+        '<div class="ob-top" lang="en" dir="ltr">' +
+          '<button type="button" class="ob-icon ob-back" hidden>' + ET.icon('back') + '<span class="sr">Back</span></button>' +
+          '<div class="ob-barwrap"><div class="ob-bar" role="progressbar" aria-valuemin="1" aria-valuemax="' + TOUR_STEPS +
+            '" aria-valuenow="1"><i></i></div></div>' +
+          '<button type="button" class="ob-skip" data-jump="lang">Skip</button>' +
         '</div>' +
-      '</section>' +
-      '<div class="welcome-in" id="et-welcome-pick">' +
-        (ET.lantern ? '<div class="welcome-mascot">' + ET.lantern(88, 'hello') + '</div>' : '') +
-        '<h1 id="et-welcome-h" dir="auto">' + ET.esc(say('welcome.title', guess || 'en')) + '</h1>' +
-        '<p class="welcome-also">' + hello.slice(1).map(function (c) {
-          return '<span dir="' + meta(c).dir + '">' + ET.esc(say('welcome.title', c)) + '</span>';
-        }).join('<span aria-hidden="true"> · </span>') + '</p>' +
-        '<p class="muted" dir="auto">' + ET.esc(say('welcome.sub', guess || 'en')) + '</p>' +
-        (order.length > 8 ? '<div class="search welcome-search">' + ET.icon('search') +
-          '<input type="search" id="et-welcome-q" autocomplete="off" enterkeyhint="search" placeholder="' +
-          ET.esc(say('welcome.search', guess || 'en')) + '" aria-label="' + ET.esc(say('welcome.search', guess || 'en')) + '"></div>' : '') +
-        '<div class="welcome-list" role="list">' + order.map(function (l) {
-          var n = counts[ET.contentCode ? ET.contentCode(l.code) : l.code] || 0;
-          return '<button class="welcome-lang' + (l.code === guess ? ' guess' : '') + '" role="listitem" data-lang="' + l.code + '" ' +
-            'data-find="' + ET.esc((l.name + ' ' + l.native + ' ' + l.code).toLowerCase()) + '">' +
-            '<span class="wl-text"><span class="wl-native" dir="' + l.dir + '" lang="' + l.code + '">' + ET.esc(l.native) + '</span>' +
-            '<span class="wl-name latin" lang="en">' + ET.esc(l.name) +
-              (l.code === guess ? ' · ' + ET.esc(say('welcome.suggested', 'en')) : '') + '</span>' +
-            (l.interfaceNote ? '<span class="wl-name latin" lang="en">' + ET.esc(l.interfaceNote) + '</span>' : '') +
-            (n ? '<span class="wl-count" dir="' + l.dir + '" lang="' +
-              (isFallback('welcome.count', { n: n }, l.code) ? 'en' : l.code) + '">' +
-              ET.esc(say('welcome.count', l.code, { n: n })) + '</span>' : '') +
-            '</span>' +
-            '<span class="wl-go" aria-hidden="true">' + ET.icon('chev') + '</span>' +
-          '</button>';
-        }).join('') + '</div>' +
-      '</div>' +
-      landing();
+        '<div class="ob-screens">' + tourScreens(guess, order, counts) + '</div>' +
+        '<div class="ob-foot"><button type="button" class="btn big block ob-go" lang="en" dir="ltr"></button></div>' +
+      '</div>';
     document.body.appendChild(el);
     document.documentElement.classList.add('welcoming');
     if (ET.loadMascot) ET.loadMascot();
-    funnel(el);
+    funnel();
+
+    var at = -1, picked = guess || '';
+    var go = ET.$('.ob-go', el), backBtn = ET.$('.ob-back', el), skip = ET.$('.ob-skip', el);
+    var bar = ET.$('.ob-bar', el);
+
+    function label() {
+      var step = TOUR[at];
+      if (step === 'hello') return 'Get started';
+      if (step !== 'lang') return 'Next';
+      var l = picked && meta(picked);
+      return l ? '<span dir="' + l.dir + '" lang="' + l.code + '">' + ET.esc(l.native) + '</span>' + ET.icon('chev', 'flip') : '';
+    }
+    function show(i, dir) {
+      if (i < 0 || i >= TOUR.length || i === at) return;
+      var from = at;
+      at = i;
+      ET.$$('.ob-screen', el).forEach(function (s, n) {
+        s.hidden = n !== i;
+        s.classList.remove('ob-from-end', 'ob-from-start');
+      });
+      var now = ET.$$('.ob-screen', el)[i];
+      // Each screen slides in from the side it comes from, so forward always
+      // feels like forward, in either reading direction.
+      if (from >= 0) {
+        void now.offsetWidth;
+        now.classList.add((dir || (i > from ? 1 : -1)) > 0 ? 'ob-from-end' : 'ob-from-start');
+      }
+      backBtn.hidden = i === 0;
+      skip.hidden = TOUR[i] === 'lang';
+      bar.setAttribute('aria-valuenow', String(i + 1));
+      bar.setAttribute('aria-label', 'Step ' + (i + 1) + ' of ' + TOUR_STEPS);
+      ET.$('i', bar).style.width = Math.round((i + 1) / TOUR_STEPS * 100) + '%';
+      go.innerHTML = label();
+      go.disabled = TOUR[i] === 'lang' && !picked;
+      go.setAttribute('lang', TOUR[i] === 'lang' ? (picked || 'en') : 'en');
+      var head = ET.$('h1', now);
+      if (from >= 0 && head) { try { head.focus({ preventScroll: true }); } catch (e) { head.focus(); } }
+      if (TOUR[i] === 'lang') {
+        var chosen = ET.$('.welcome-lang[aria-checked="true"]', el);
+        if (chosen) chosen.scrollIntoView({ block: 'nearest' });
+      }
+    }
+    el._tour = { show: function (step) { show(TOUR.indexOf(step), -1); } };
 
     function done() {
       el.remove();
       document.documentElement.classList.remove('welcoming');
       window.scrollTo(0, 0);
     }
+    function choose() {
+      if (!picked) return;
+      // Stay on this screen until the chosen language has loaded, so the
+      // library never flashes up in English first.
+      go.setAttribute('aria-busy', 'true');
+      set(picked, function () {
+        go.removeAttribute('aria-busy');
+        // Kandili's questions take over from here (features/onboarding.js).
+        // If they have not arrived yet, the library simply opens.
+        if (ET.onboarding) ET.onboarding.start(el, done);
+        else done();
+      });
+    }
+    go.addEventListener('click', function () {
+      if (TOUR[at] === 'lang') choose();
+      else show(at + 1, 1);
+    });
+    backBtn.addEventListener('click', function () { show(at - 1, -1); });
+    ET.$$('[data-jump]', el).forEach(function (b) {
+      b.addEventListener('click', function () { show(TOUR.indexOf(b.getAttribute('data-jump')), 1); });
+    });
     ET.$$('[data-lang]', el).forEach(function (b) {
       b.addEventListener('click', function () {
-        // Stay on this screen until the chosen language has loaded, so the
-        // library never flashes up in English first.
-        b.setAttribute('aria-busy', 'true');
-        set(b.getAttribute('data-lang'), function () {
-          b.removeAttribute('aria-busy');
-          // Kandili's questions take over from here (features/onboarding.js).
-          // If they have not arrived yet, the library simply opens.
-          if (ET.onboarding) ET.onboarding.start(el, done);
-          else done();
-        });
+        picked = b.getAttribute('data-lang');
+        ET.$$('[data-lang]', el).forEach(function (o) { o.setAttribute('aria-checked', String(o === b)); });
+        go.innerHTML = label();
+        go.disabled = false;
+        go.setAttribute('lang', picked);
       });
     });
     var q = ET.$('#et-welcome-q', el);
@@ -549,20 +588,27 @@ window.ET.module('i18n', ['core'], function (ET) {
         b.hidden = !!v && b.getAttribute('data-find').indexOf(v) < 0;
       });
     });
-    // In-page links scroll the welcome screen itself, not the page behind it.
-    ET.$$('a[href^="#et-"]', el).forEach(function (a) {
-      a.addEventListener('click', function (e) {
-        var to = ET.$(a.getAttribute('href'), el);
-        if (!to) return;
-        e.preventDefault();
-        var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-        to.scrollIntoView({ behavior: still ? 'auto' : 'smooth', block: 'start' });
-      });
-    });
-    // Focus the likeliest language for keyboard and screen-reader users, but
-    // leave the hero in view.
-    var first = ET.$('.welcome-lang', el);
-    if (first) { try { first.focus({ preventScroll: true }); } catch (e) { first.focus(); } }
+
+    // Swipe between the tour screens, as on any phone. Not past the language
+    // list: that step needs a choice.
+    var x0 = null, y0 = 0;
+    var screens = ET.$('.ob-screens', el);
+    screens.addEventListener('touchstart', function (e) {
+      if (el.classList.contains('ob-on') || e.touches.length > 1) { x0 = null; return; }
+      x0 = e.touches[0].clientX; y0 = e.touches[0].clientY;
+    }, { passive: true });
+    screens.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+      x0 = null;
+      if (Math.abs(dx) < 56 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+      var fwd = dx < 0;   // the tour itself is laid out left to right
+      if (fwd && TOUR[at] !== 'lang') show(at + 1, 1);
+      else if (!fwd) show(at - 1, -1);
+    }, { passive: true });
+
+    show(0);
+    try { go.focus({ preventScroll: true }); } catch (e) { go.focus(); }
   }
 
   ET.i18n = { t: t, h: h, say: say, welcome: welcome, suggested: suggested, tOr: tOr, tOrHTML: tOrHTML, set: set, extend: extend, apply: apply, onChange: onChange, picker: picker,

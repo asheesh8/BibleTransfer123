@@ -38,9 +38,17 @@ test.describe('first visit', () => {
   test('a new visitor picks a language, answers Kandili\'s questions, then sees the cookie choice', async ({ page }) => {
     const problems = watchForProblems(page);
     await page.goto('/');
-    await expect(page.locator('#et-welcome')).toBeVisible();
+    const welcome = page.locator('#et-welcome');
+    await expect(welcome).toBeVisible();
+    // One screen at a time: hello, how sharing works, where it is going, then languages.
+    for (const step of ['hello', 'how', 'road']) {
+      await expect(welcome.locator(`[data-step="${step}"]`)).toBeVisible();
+      expect(await welcome.evaluate(w => w.scrollHeight <= w.clientHeight + 1)).toBe(true);
+      await welcome.locator('.ob-go').click();
+    }
     await page.locator('#et-welcome-q').fill('swahili');
     await page.locator('#et-welcome [data-lang]:visible').first().click();
+    await welcome.locator('.ob-go').click();
     await expect(page.locator('html')).toHaveAttribute('lang', /^sw/);
     // The first-run funnel: what to learn, how you get online, then ready.
     const funnel = page.locator('#et-funnel');
