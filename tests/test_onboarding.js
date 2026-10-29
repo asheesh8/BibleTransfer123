@@ -79,9 +79,28 @@ test('Home shelves the kind of thing someone asked Kandili for first', () => {
   assert.equal(with_('audio').length, ORDER.length);
 });
 
-test('the funnel stylesheet keeps 56px targets and honours reduced motion', () => {
-  const css = read('assets/css/pages/onboarding.css');
+test('the first-run stylesheets keep 56px targets and honour reduced motion', () => {
+  // The shell (top bar, bubble, pinned button) lives in app.css so the tour
+  // paints before the funnel's own stylesheet arrives.
+  const app = read('assets/css/app.css');
+  const shell = app.slice(app.indexOf('/* ============================================================ first run'), app.indexOf('/* ------------------------------------------------------------ generated covers'));
+  assert.ok(shell.length > 1000, 'app.css has its first-run section');
+  const css = read('assets/css/pages/onboarding.css') + shell;
   assert.match(css, /\.ob-icon, \.ob-skip \{\s*min-width: 56px; min-height: 56px;/);
   assert.match(css, /prefers-reduced-motion: reduce/);
   assert.doesNotMatch(css, /margin-left|margin-right|padding-left|padding-right|[^-]left:|[^-]right:/, 'use logical properties so RTL mirrors');
+});
+
+test('the first visit is a tour of screens, one at a time, never one long page', () => {
+  const i18n = fs.readFileSync(path.join(js, 'i18n.js'), 'utf8');
+  assert.match(i18n, /var TOUR = \['hello', 'how', 'road', 'lang'\];/);
+  for (const step of ['hello', 'how', 'road', 'lang']) assert.ok(i18n.includes('data-step="' + step + '"'), step + ' screen');
+  assert.doesNotMatch(i18n, /function landing\(/, 'the long scrolling front page is gone');
+  // The product is BibleTransfer123, never "the library", in the tour and the funnel's English.
+  const tour = i18n.slice(i18n.indexOf('function tourScreens'), i18n.indexOf('function funnel'));
+  assert.doesNotMatch(tour, /[Tt]he (web )?library/);
+  const ET = boot();
+  assert.doesNotMatch(ET.i18n.say('ob.ready', 'en') + ET.i18n.say('ob.open', 'en'), /library/i);
+  // The funnel's steps carry on the tour's count.
+  assert.match(funnel, /var TOUR = 4, TOTAL = 7;/);
 });

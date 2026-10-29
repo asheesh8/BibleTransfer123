@@ -2,10 +2,11 @@
    features/onboarding.js: Kandili walks a first-time visitor into the right
    library, one question at a time, the way a language course app does.
 
-     1  Which language?           the language list on the welcome screen
-     2  What would you like to learn today?   films, listen, read, stories, all
-     3  How do you usually get online?        tailors Kandili's sharing tip
-     4  Your library is ready!     Home opens with the chosen shelf first
+     1-4  the tour in i18n.js welcome(): hello, how sharing works, where
+          BibleTransfer123 is going, then which language
+     5    What would you like to learn today?   films, listen, read, stories, all
+     6    How do you usually get online?        tailors Kandili's sharing tip
+     7    You're all set!          Home opens with the chosen shelf first
 
    Depends on: core.js, i18n.js, data/onboarding-strings.js, and
    brand/mascot.js (ET.mascot), which core.js loads after paint. This
@@ -13,9 +14,9 @@
    visit; until it arrives a language tap simply opens the library, so a slow
    phone is never stuck behind it.
 
-   Step 1 stays the Lantern Night welcome screen (village hero, language
-   list, then the partner pages). This module only adds the progress bar and
-   Kandili's hello there, then takes over once a language is chosen.
+   It wears the tour's clothes (the same top bar, progress and pinned
+   button, styled in app.css) and covers it once a language is chosen, so
+   the visitor sees one flow, one screen at a time, never a page to scroll.
 
    Answers are kept on the phone (ET.store): et.want orders the shelves on
    Home (home.js), et.net is kept for the sharing prompts. Nothing is sent.
@@ -25,15 +26,18 @@ window.ET.module('features/onboarding', ['core', 'data/onboarding-strings'], fun
   'use strict';
   var t = ET.i18n.t, h = ET.i18n.h;
 
-  var TOTAL = 3;   // questions; the ready screen fills the bar
+  var TOUR = 4, TOTAL = 7;   // the tour's screens, then all the steps
+  var STEP = { want: 5, net: 6, ready: 7 };
 
   // What someone came for, and the shelves that answer it. Only choices the
   // chosen language actually has are offered.
   var WANTS = [
-    { key: 'film',        types: ['film'],              icon: 'film', tone: 'gold',   pose: 'play' },
-    { key: 'audio-bible', types: ['audio-bible'],       icon: 'wave', tone: 'green',  pose: 'hello' },
-    { key: 'scripture',   types: ['scripture', 'book'], icon: 'book', tone: 'sky',    pose: 'saved' },
-    { key: 'audio',       types: ['audio'],             icon: 'wave', tone: 'purple', pose: 'hello' },
+    // Tones are the kinds' colours everywhere else: films clay, audio
+    // Bibles teal, Scripture plum (docs/design/color.md).
+    { key: 'film',        types: ['film'],              icon: 'film', tone: 'clay',   pose: 'play' },
+    { key: 'audio-bible', types: ['audio-bible'],       icon: 'wave', tone: 'sky',    pose: 'hello' },
+    { key: 'scripture',   types: ['scripture', 'book'], icon: 'book', tone: 'purple', pose: 'saved' },
+    { key: 'audio',       types: ['audio'],             icon: 'ears', tone: 'night',  pose: 'hello' },
     { key: 'all',         types: null,                  icon: 'globe', tone: 'night', pose: 'hooray' }
   ];
   var NETS = [
@@ -69,7 +73,7 @@ window.ET.module('features/onboarding', ['core', 'data/onboarding-strings'], fun
   function pose(f, name, move) {
     var host = ET.$('.ob-k', f.el);
     if (!host || !ET.mascot) return;
-    if (!f.k) f.k = ET.mascot.create(host, { pose: name, size: '104px', tappable: true });
+    if (!f.k) f.k = ET.mascot.create(host, { pose: name, size: '88px', tappable: true });
     else f.k.pose(name);
     if (move) f.k.play(move);
   }
@@ -81,32 +85,10 @@ window.ET.module('features/onboarding', ['core', 'data/onboarding-strings'], fun
   }
 
   // ------------------------------------------------------------- the shell
-  function bar(step, label) {
-    var now = Math.min(step, TOTAL);
-    return '<div class="ob-bar" role="progressbar" aria-valuemin="0" aria-valuemax="' + TOTAL +
-      '" aria-valuenow="' + now + '" aria-label="' + ET.esc(label || t('ob.step', { n: now, total: TOTAL })) +
-      '"><i style="width:' + Math.round(step / (TOTAL + 1) * 100) + '%"></i></div>';
-  }
-
-  /* Step 1 is the welcome screen itself. Add the progress bar and Kandili's
-     hello in the reader's likely language, and leave the rest alone. */
-  function decorate(root) {
-    var pick = ET.$('#et-welcome-pick', root);
-    if (!pick || ET.$('.ob-step1', pick)) return;
-    var guess = ET.i18n.suggested() || 'en';
-    var top = document.createElement('div');
-    top.className = 'ob-step1';
-    top.innerHTML = bar(1, ET.i18n.say('ob.step', guess, { n: 1, total: TOTAL }));
-    pick.insertBefore(top, pick.firstChild);
-    var h1 = ET.$('#et-welcome-h', pick);
-    if (h1) {
-      var hi = document.createElement('p');
-      hi.className = 'ob-hello';
-      hi.setAttribute('dir', 'auto');
-      hi.setAttribute('lang', guess);
-      hi.textContent = ET.i18n.say('ob.hello', guess);
-      h1.parentNode.insertBefore(hi, h1);
-    }
+  function bar(step) {
+    return '<div class="ob-bar" role="progressbar" aria-valuemin="1" aria-valuemax="' + TOTAL +
+      '" aria-valuenow="' + step + '" aria-label="' + ET.esc(t('ob.step', { n: step, total: TOTAL })) +
+      '"><i style="width:' + Math.round(step / TOTAL * 100) + '%"></i></div>';
   }
 
   function Funnel(root, done) {
@@ -136,7 +118,7 @@ window.ET.module('features/onboarding', ['core', 'data/onboarding-strings'], fun
           '<button type="button" class="ob-skip">' + h('ob.skip') + '</button>' +
         '</div>' +
         '<div class="ob-talk">' +
-          '<div class="ob-k" aria-hidden="true">' + ET.lantern(104) + '</div>' +
+          '<div class="ob-k" aria-hidden="true">' + ET.lantern(88) + '</div>' +
           '<div class="ob-bubble"><h1 class="ob-q" id="ob-q" tabindex="-1" dir="auto"></h1>' +
             '<p class="ob-say" dir="auto" aria-live="polite"></p></div>' +
         '</div>' +
@@ -151,13 +133,13 @@ window.ET.module('features/onboarding', ['core', 'data/onboarding-strings'], fun
     ET.$('.ob-back', el).addEventListener('click', function () { self.back(); });
     ET.$('.ob-skip', el).addEventListener('click', function () { self.finish(); });
     ET.$('.ob-go', el).addEventListener('click', function () { self.next(); });
-    root.scrollTop = 0;
   };
 
   Funnel.prototype.show = function (step) {
     this.step = step;
     var el = this.el;
-    ET.$('.ob-barwrap', el).innerHTML = bar(step === 'want' ? 2 : step === 'net' ? 3 : TOTAL + 1);
+    el.setAttribute('data-step', step);
+    ET.$('.ob-barwrap', el).innerHTML = bar(STEP[step]);
     ET.$('.ob-skip', el).hidden = step === 'ready';
     var body = ET.$('.ob-body', el);
     var say = ET.$('.ob-say', el);
@@ -203,7 +185,6 @@ window.ET.module('features/onboarding', ['core', 'data/onboarding-strings'], fun
   Funnel.prototype.go = function (on) {
     var b = ET.$('.ob-go', this.el);
     b.disabled = !on;
-    b.classList.toggle('gold', on);
   };
 
   Funnel.prototype.renderWant = function (body) {
@@ -275,9 +256,8 @@ window.ET.module('features/onboarding', ['core', 'data/onboarding-strings'], fun
     // Back to the language list, as it was.
     this.el.remove();
     this.root.classList.remove('ob-on');
-    var pick = ET.$('#et-welcome-pick', this.root);
-    if (pick) pick.scrollIntoView({ block: 'start' });
-    var first = ET.$('.welcome-lang.guess', this.root) || ET.$('.welcome-lang', this.root);
+    if (this.root._tour) this.root._tour.show('lang');
+    var first = ET.$('.welcome-lang[aria-checked="true"]', this.root) || ET.$('.welcome-lang', this.root);
     if (first) { try { first.focus({ preventScroll: true }); } catch (e) { first.focus(); } }
   };
 
@@ -299,6 +279,6 @@ window.ET.module('features/onboarding', ['core', 'data/onboarding-strings'], fun
     return f;
   }
 
-  ET.onboarding = { start: start, decorate: decorate, WANTS: WANTS, NETS: NETS };
+  ET.onboarding = { start: start, WANTS: WANTS, NETS: NETS, TOUR: TOUR };
   return ET.onboarding;
 });
