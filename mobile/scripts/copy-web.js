@@ -7,6 +7,9 @@
    · assets/library/ VillageServer's own files; the catalogue already points
                      at their https://www.bibletransfer123.org copies
    · sw.js           the website's offline cache; the app is offline already
+   · assets/media/**.mp4  the how-to and VillageServer videos (60 MB). The
+                     pages play them from the live site instead, so the app
+                     download stays small; their posters stay in the app
 
    And one change on the way: pages load the admin's library switches with
    <script src="api/visibility">, which the app has no server to answer, so the
@@ -33,11 +36,16 @@ function copy(rel) {
     fs.mkdirSync(to, { recursive: true });
     for (const name of fs.readdirSync(from)) {
       const child = rel ? rel + '/' + name : name;
-      if (!SKIP.has(child) && name !== '.DS_Store') copy(child);
+      if (SKIP.has(child) || name === '.DS_Store') continue;
+      if (/^assets\/media\/.*\.mp4$/.test(child)) continue;
+      copy(child);
     }
   } else if (rel.endsWith('.html')) {
     fs.writeFileSync(to, fs.readFileSync(from, 'utf8')
       .replace(/src="api\/visibility"/g, `src="${LIVE}/api/visibility"`));
+  } else if (rel.endsWith('.js')) {
+    fs.writeFileSync(to, fs.readFileSync(from, 'utf8')
+      .replace(/<source src="assets\/media\//g, `<source src="${LIVE}/assets/media/`));
   } else {
     fs.copyFileSync(from, to);
   }

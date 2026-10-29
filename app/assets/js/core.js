@@ -81,6 +81,25 @@ window.ET = (function () {
     };
   }
 
+  /* Android's WebView has no navigator.share, so in the app the phone's own
+     share sheet comes from Capacitor's Share plugin. Pages keep calling
+     navigator.share as they do on the web; a closed sheet rejects with an
+     AbortError there too. */
+  if (native && typeof navigator.share !== 'function' && window.Capacitor.Plugins &&
+      window.Capacitor.Plugins.Share) {
+    try {
+      navigator.share = function (data) {
+        data = data || {};
+        return window.Capacitor.Plugins.Share.share({ title: data.title, text: data.text, url: data.url })
+          .then(function () {}, function (err) {
+            var e = new Error((err && err.message) || 'Share cancelled');
+            e.name = /cancel/i.test(e.message) ? 'AbortError' : 'Error';
+            throw e;
+          });
+      };
+    } catch (e) { /* navigator is read-only here; the share row stays hidden */ }
+  }
+
   // ------------------------------------------------------------- modules
   // Each file registers one module and names the modules it needs. Pages
   // still load plain <script> tags in order (see docs/decisions/0002); the

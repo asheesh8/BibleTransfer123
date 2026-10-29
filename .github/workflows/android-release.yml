@@ -1,0 +1,54 @@
+# Builds the signed Android upload file (.aab) for Google Play, and the signed
+# .apk for sharing by card or link, from main. Run it by hand: Actions >
+# Android app for Google Play > Run workflow; the files are on the run's page.
+#
+# Needs repository secrets (mobile/README.md, "Sending the Android app"):
+#   ANDROID_KEYSTORE_B64       the upload key (.jks), as base64
+#   ANDROID_KEYSTORE_PASSWORD  its password (store and key use the same one)
+name: Android app for Google Play
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bundle:
+    name: Build signed AAB and APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Copy the web app into the Android project
+        working-directory: mobile
+        run: npm ci && npm run web && npx cap sync android
+      - name: Write the upload key
+        working-directory: mobile/android
+        env:
+          KEY_B64: ${{ secrets.ANDROID_KEYSTORE_B64 }}
+          KEY_PW: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+        run: |
+          printf '%s' "$KEY_B64" | base64 -d > "$RUNNER_TEMP/upload.jks"
+          printf 'storeFile=%s\nstorePassword=%s\nkeyAlias=upload\nkeyPassword=%s\n' \
+            "$RUNNER_TEMP/upload.jks" "$KEY_PW" "$KEY_PW" > keystore.properties
+      - name: Build
+        working-directory: mobile/android
+        run: ./gradlew --no-daemon bundleRelease assembleRelease
+      - name: Remove the key
+        if: always()
+        run: rm -f "$RUNNER_TEMP/upload.jks" mobile/android/keystore.properties
+      - uses: actions/upload-artifact@v4
+        with:
+          name: the-library-android
+          path: |
+            mobile/android/app/build/outputs/bundle/release/app-release.aab
+            mobile/android/app/build/outputs/apk/release/app-release.apk
+          retention-days: 30

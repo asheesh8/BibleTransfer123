@@ -41,6 +41,47 @@ Run `npm run sync` after any change to `app/`. A debug APK installs on any Andro
 "Install unknown apps" allowed; a store build needs the signing key, which lives with VillageServer,
 never in git.
 
+The app leaves out the how-to and VillageServer videos (`assets/media/**.mp4`, 60 MB) and plays
+them from the live site, so the download stays near 50 MB.
+
+## Sending the Android app (Google Play)
+
+The upload key is `the-library-upload.jks` (alias `upload`), made 2026-10-29 and kept by
+VillageServer. Google Play re-signs the app with its own key (Play App Signing); the upload key
+only proves an upload is ours, and Play support can replace it if it is lost.
+
+- **On a computer:** put `keystore.properties` in `mobile/android/` (gitignored) with
+  `storeFile=/path/to/the-library-upload.jks`, `storePassword=…`, `keyAlias=upload`, `keyPassword=…`,
+  then `npm run android:release`. Out come `android/app/build/outputs/bundle/release/app-release.aab`
+  (upload this to Play) and `…/apk/release/app-release.apk` (for cards and links).
+- **In GitHub:** add the secrets `ANDROID_KEYSTORE_B64` (`base64 -w0 the-library-upload.jks`) and
+  `ANDROID_KEYSTORE_PASSWORD`, then run **Actions → Android app for Google Play**. The two files
+  are on the run's page.
+
+Raise `versionCode` in `android/app/build.gradle` for every upload; Play refuses a number it has seen.
+
+## Sending the iPhone app (TestFlight and the App Store)
+
+No Mac needed: **Actions → iPhone app to TestFlight** builds on GitHub's Mac and uploads.
+Once the Apple developer account is open:
+
+1. In App Store Connect, **Apps → +**: bundle ID `org.villageservers.library`, SKU `the-library`.
+2. **Users and Access → Integrations → App Store Connect API → +**, access **App Manager**.
+   Download the `.p8` (only once) and note the Key ID and Issuer ID.
+3. Add the repository secrets `APPLE_TEAM_ID` (Membership details), `ASC_KEY_ID`,
+   `ASC_ISSUER_ID` and `ASC_KEY_P8` (the whole `.p8` file).
+4. Run the workflow. The build number is the run number; the version is `MARKETING_VERSION`
+   in `ios/App/App.xcodeproj` (1.0.0). Signing is automatic. The build shows in TestFlight in
+   about 15 minutes.
+
+With a Mac instead: `npm run ios:open`, pick the team under Signing & Capabilities, then
+**Product → Archive → Distribute App**.
+
+The app is iPhone only for now (`TARGETED_DEVICE_FAMILY = 1`), so the store asks for iPhone
+screenshots only; iPads still run it. `App/PrivacyInfo.xcprivacy` is the privacy manifest Apple
+reads at upload, and `ITSAppUsesNonExemptEncryption` is false (HTTPS only), so no export
+paperwork.
+
 If Gradle gets `429 Too Many Requests` from Maven Central, point it at Google's mirror with an
 init script in `~/.gradle/init.d/` (`https://maven-central.storage-download.googleapis.com/maven2/`).
 
@@ -54,5 +95,3 @@ init script in `~/.gradle/init.d/` (`https://maven-central.storage-download.goog
 
 - Downloads that continue with the screen locked (kept files are listed under "Saved on this phone" on Home, with Delete)
 - iPhone as the sharing phone (Multipeer Connectivity, or serving files on the receiver's network), and joining the Wi-Fi from the iPhone app (needs the Hotspot Configuration entitlement)
-- Native share sheet (Android WebView has no `navigator.share`)
-- Store listings, signing, TestFlight and Play internal testing
