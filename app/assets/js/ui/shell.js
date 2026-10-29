@@ -93,9 +93,12 @@ window.ET.module('ui/shell', ['core', 'ui/icons', 'ui/sheet', 'ui/toast'], funct
     });
   }
 
-  function loadMascot() {
-    if (ET.mascot) { mascots(); return; }
-    if (!ASSETS || $('#et-mascot-js')) return;
+  // done (optional) runs once ET.mascot is there.
+  function loadMascot(done) {
+    if (ET.mascot) { mascots(); if (done) done(); return; }
+    var old = $('#et-mascot-js');
+    if (old && done) old.addEventListener('load', function () { done(); });
+    if (!ASSETS || old) return;
     ['css/tokens.css', 'css/components/mascot.css'].forEach(function (href) {
       if ($('link[href$="' + href + '"]')) return;     // already on the page
       var l = document.createElement('link');
@@ -106,9 +109,31 @@ window.ET.module('ui/shell', ['core', 'ui/icons', 'ui/sheet', 'ui/toast'], funct
     var sc = document.createElement('script');
     sc.id = 'et-mascot-js';
     sc.src = ASSETS + 'js/brand/mascot.js';
-    sc.onload = function () { mascots(); };
+    sc.onload = function () { mascots(); if (done) done(); };
     document.head.appendChild(sc);
   }
+
+  /* The app opening (features/launch.js): Kandili wakes on the splash
+     screen, then the library shows. Once per app start; ?launch shows it on
+     the website too. The native splash waits for it, never more than 4 s. */
+  var LAUNCHED = 'et.launched';
+  function splashHide() {
+    var s = window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.SplashScreen;
+    if (s) s.hide({ fadeOutDuration: 0 }).catch(function () {});
+  }
+  function launch() {
+    var first = true;
+    try { first = !sessionStorage.getItem(LAUNCHED); sessionStorage.setItem(LAUNCHED, '1'); } catch (e) { /* no storage */ }
+    if (/[?&]launch\b/.test(location.search)) first = true;
+    else if (!ET.native) return;
+    setTimeout(splashHide, first ? 4000 : 0);
+    if (!first || !ASSETS) return;
+    var sc = document.createElement('script');
+    sc.src = ASSETS + 'js/features/launch.js';
+    sc.onerror = splashHide;
+    document.head.appendChild(sc);
+  }
+  launch();
 
   /* Reading a QR code with the camera, inside the page (features/scan.js).
      The phone app needs it, because there the camera app would open the
@@ -358,7 +383,7 @@ window.ET.module('ui/shell', ['core', 'ui/icons', 'ui/sheet', 'ui/toast'], funct
 
 
   var api = {
-    icon: icon, lantern: lantern, mascots: mascots, loadMascot: loadMascot,
+    icon: icon, lantern: lantern, mascots: mascots, loadMascot: loadMascot, splashHide: splashHide,
     canScan: canScan, scanCode: scanCode,
     header: header, tabbar: tabbar, sheet: sheet, stepper: stepper,
     facebookUrl: facebookUrl, facebookShare: facebookShare, copyText: copyText, toast: toast

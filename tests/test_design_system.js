@@ -79,6 +79,29 @@ test("Kandili's colours in mascot.js match the --et-k- tokens", () => {
   }
 });
 
+test('Kandili can talk, look, fidget, and take a feature\'s own move', () => {
+  const M = loadMascot();
+  for (const m of ['flare', 'jiggle', 'nod', 'twirl']) assert.ok(M.MOVES.includes(m), m);
+  assert.equal(typeof M.addMove, 'function');
+  M.addMove('test-move', [['.k-body', [], { duration: 1 }]]);
+  assert.ok(M.MOVES.includes('test-move'));
+  const src = read(path.join(APP, 'assets/js/brand/mascot.js'));
+  for (const fn of ['say', 'look', 'pose', 'play', 'moment']) assert.ok(src.includes('Kandili.prototype.' + fn + ' ='), fn);
+});
+
+test('the launch moment draws Kandili where the splash screens do', () => {
+  const launch = read(path.join(APP, 'assets/js/features/launch.js'));
+  const icons = read(path.join(APP, '..', 'mobile/scripts/make-icons.js'));
+  for (const k of ['SPLASH_DP', 'IOS_SHARE']) {
+    const a = launch.match(new RegExp(k + ' = ([\\d.]+)')), b = icons.match(new RegExp(k + ' = ([\\d.]+)'));
+    assert.ok(a && b, k);
+    assert.equal(a[1], b[1], k + ' differs between features/launch.js and make-icons.js');
+  }
+  for (const c of ['#FBF7F1', '#1A1316']) {
+    assert.ok(launch.includes(c) && icons.includes(c), c + ' should be the splash ground in both');
+  }
+});
+
 test('every pose draws a complete lantern with no text in the art', () => {
   const M = loadMascot();
   assert.equal(M.POSES.length, 10);

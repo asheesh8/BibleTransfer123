@@ -73,6 +73,12 @@ window.ET.module('features/onboarding', ['core', 'data/onboarding-strings'], fun
     else f.k.pose(name);
     if (move) f.k.play(move);
   }
+  // Kandili talks while its bubble changes, and looks at what was picked.
+  function react(f, picked) {
+    if (!f.k) return;
+    if (picked) f.k.look(picked);
+    f.k.say(1000);
+  }
 
   // ------------------------------------------------------------- the shell
   function bar(step, label) {
@@ -164,6 +170,7 @@ window.ET.module('features/onboarding', ['core', 'data/onboarding-strings'], fun
     el.classList.remove('ob-enter');
     void el.offsetWidth;
     el.classList.add('ob-enter');
+    react(this);
     var q = ET.$('#ob-q', el);
     try { q.focus({ preventScroll: true }); } catch (e) { q.focus(); }
   };
@@ -187,6 +194,7 @@ window.ET.module('features/onboarding', ['core', 'data/onboarding-strings'], fun
           o.setAttribute('aria-checked', String(o === b));
         });
         render(key);
+        react(self, b);
         self.go(true);
       });
     });

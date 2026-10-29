@@ -353,8 +353,19 @@ window.ET = (function () {
     return fs ? fs.deleteFile({ path: f.uri }).catch(function () {}) : Promise.resolve();
   }
 
+  /* Whether to keep still: the phone's reduce-motion setting, unless the
+     page forces it with html[data-motion="reduce" | "full"]. */
+  var motion = {
+    reduced: function () {
+      var forced = document.documentElement.getAttribute('data-motion');
+      if (forced === 'reduce') return true;
+      if (forced === 'full') return false;
+      return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    }
+  };
+
   var api = {
-    keptFiles: keptFiles, forgetKept: forgetKept,
+    motion: motion, keptFiles: keptFiles, forgetKept: forgetKept,
     native: native, online: online, publicOrigin: publicOrigin, publicHref: publicHref,
     store: store, esc: esc, qs: qs, human: human, pad: pad, $: $, $$: $$,
     theme: theme, library: library, byId: byId, displayTitle: displayTitle,
