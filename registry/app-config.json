@@ -1,8 +1,8 @@
 {
   "_readme": "Served by /api/app-config to the iPhone and Android apps. Raise `minimum` to make older apps ask people to update before they carry on (only for a broken or unsafe version). Raise `latest` after a store release so older apps offer an update. `store` stays empty until the app is live in that store. A `notice` (or null) shows once per id in the app. `features` turns online features off in every app without a new release.",
   "platforms": {
-    "ios": { "latest": "0.6.0", "minimum": "0.1.0", "store": "" },
-    "android": { "latest": "0.6.0", "minimum": "0.1.0", "store": "" }
+    "ios": { "latest": "1.0.0", "minimum": "0.1.0", "store": "" },
+    "android": { "latest": "1.0.0", "minimum": "0.1.0", "store": "" }
   },
   "notice": null,
   "features": {

@@ -374,6 +374,7 @@ window.ET.module('item', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save', 'data
           encodeURIComponent(passMessage(name, pass.to, intent.url));
         say('itemshare.fallback');
       }
+      if (!ET.feature('emailShare')) { openMailApp(); return; }   // switched off: the phone's mail app
       send.disabled = true; say('itemshare.sending');
       fetch('/api/send-item', {
         method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'same-origin',

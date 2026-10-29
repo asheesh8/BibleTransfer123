@@ -521,5 +521,13 @@
   "sharevid.sub": "Àwọn fídíò kúkúrú, ọ̀kọ̀ọ̀kan tó ìṣẹ́jú-àáyá 30. Àwọn fídíò wà ní èdè Gẹ̀ẹ́sì.",
   "sharevid.facebook": "Lórí Facebook",
   "sharevid.email": "Pẹ̀lú ímeèlì tàbí Gmail",
-  "sharevid.whatsapp": "Lórí WhatsApp"
+  "sharevid.whatsapp": "Lórí WhatsApp",
+  "app.update.title": "Jọ̀wọ́ ṣe àtúnṣe áàpù náà",
+  "app.update.body": "Ẹ̀yà áàpù yìí kò ṣiṣẹ́ mọ́. Gba tuntun láti inú ilé ìtajà. Àwọn fíìmù tí o fi pamọ́ yóò wà lórí fóònù yìí.",
+  "app.update.go": "Ṣe àtúnṣe",
+  "app.update.available": "Ẹ̀yà tuntun áàpù náà ti wà nínú ilé ìtajà.",
+  "app.privacy": "Ìpamọ́",
+  "app.delete": "Pa dátà mi rẹ́",
+  "app.help": "Ìrànlọ́wọ́ àti ìkànsí",
+  "app.version": "Ẹ̀yà {v}"
 };

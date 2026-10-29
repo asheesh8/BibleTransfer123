@@ -521,5 +521,13 @@
   "sharevid.sub": "Gajerun bidiyo, kowanne kusan daƙiƙa 30. Bidiyon da Turanci suke.",
   "sharevid.facebook": "A Facebook",
   "sharevid.email": "Ta imel ko Gmail",
-  "sharevid.whatsapp": "A WhatsApp"
+  "sharevid.whatsapp": "A WhatsApp",
+  "app.update.title": "Da fatan za a sabunta manhajar",
+  "app.update.body": "Wannan sigar manhajar ba ta aiki kuma. Samo sabuwar daga shago. Fina-finan da ka adana za su ci gaba da kasancewa a wannan wayar.",
+  "app.update.go": "Sabunta",
+  "app.update.available": "Sabuwar sigar manhajar ta shirya a shago.",
+  "app.privacy": "Sirri",
+  "app.delete": "Goge bayanaina",
+  "app.help": "Taimako da tuntuɓa",
+  "app.version": "Siga {v}"
 };
