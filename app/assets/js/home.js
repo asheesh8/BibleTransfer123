@@ -58,6 +58,9 @@ window.ET.module('home', ['core', 'ui/shell', 'ui/covers', 'i18n'], function (ET
     return '<section class="shelf kept-shelf"><div class="shelf-head">' +
       '<h2>' + h('home.kept') + '</h2>' +
       (total ? '<span class="muted num">' + ET.esc(ET.human(total)) + '</span>' : '') + '</div>' +
+      (window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.Hotspot
+        ? '<a class="btn block" style="margin:0 0 .8rem" href="' + ET.esc(ET.scopedUrl('nearby.html', { offline: 'send' })) + '">' +
+          ET.icon('wifi') + h('home.kept.share') + '</a>' : '') +
       '<ul class="et-list">' + groups.map(function (g, i) {
         var title = keptTitle(g);
         var meta = [g.urls.length > 1 ? t('home.kept.files', { n: g.urls.length }) : '',

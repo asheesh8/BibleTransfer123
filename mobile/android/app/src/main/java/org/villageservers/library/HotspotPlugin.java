@@ -2,6 +2,13 @@ package org.villageservers.library;
 
 import android.Manifest;
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.LinkProperties;
+import android.net.Network;
+import android.net.NetworkCapabilities;
+import android.net.NetworkRequest;
+import android.net.RouteInfo;
+import android.net.wifi.WifiNetworkSpecifier;
 import android.net.wifi.SoftApConfiguration;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
@@ -41,6 +48,12 @@ import java.util.List;
  *     -> { ssid, password, url }
  *   Hotspot.stop()
  *   Hotspot.status() -> { on, ssid?, password?, url?, served }
+ *
+ * And the other side, when the receiving phone has the app too (Android 10+):
+ *   Hotspot.join({ ssid, password }) -> { gateway }   joins the sharing phone's
+ *                                     Wi-Fi for this app only; gateway is the
+ *                                     sharing phone's address
+ *   Hotspot.leave()
  *
  * Only the files handed to start() can be fetched, by their place in the list.
  */
@@ -101,6 +114,7 @@ public class HotspotPlugin extends Plugin {
             return;
         }
         final String page = call.getString("page", "");
+        final String listJson = call.getString("list", "[]");
         stopAll();
 
         WifiManager wifi = (WifiManager) getContext().getApplicationContext().getSystemService(Context.WIFI_SERVICE);
@@ -111,7 +125,7 @@ public class HotspotPlugin extends Plugin {
                     reservation = r;
                     readCredentials(r);
                     try {
-                        server = new HotspotServer(PORT, files, page);
+                        server = new HotspotServer(PORT, files, page, listJson);
                         server.start();
                     } catch (Exception e) {
                         stopAll();
@@ -210,6 +224,80 @@ public class HotspotPlugin extends Plugin {
         call.resolve(ret);
     }
 
+    // ------------------------------------------------------------ receiving
+
+    private ConnectivityManager.NetworkCallback joined;
+
+    @PluginMethod
+    public void join(final PluginCall call) {
+        if (Build.VERSION.SDK_INT < 29) {
+            call.reject("Join the Wi-Fi from the phone's settings.", "OLD_ANDROID");
+            return;
+        }
+        String ssid = call.getString("ssid"), password = call.getString("password");
+        if (ssid == null || ssid.isEmpty()) { call.reject("No Wi-Fi name.", "BAD_CODE"); return; }
+        leaveAll();
+        final ConnectivityManager cm = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        WifiNetworkSpecifier.Builder spec = new WifiNetworkSpecifier.Builder().setSsid(ssid);
+        if (password != null && !password.isEmpty()) spec.setWpa2Passphrase(password);
+        NetworkRequest request = new NetworkRequest.Builder()
+            .addTransportType(NetworkCapabilities.TRANSPORT_WIFI)
+            .removeCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
+            .setNetworkSpecifier(spec.build())
+            .build();
+        final boolean[] answered = { false };
+        joined = new ConnectivityManager.NetworkCallback() {
+            @Override
+            public void onAvailable(Network network) {
+                // Everything this app fetches now goes over the sharing phone's Wi-Fi.
+                cm.bindProcessToNetwork(network);
+                if (answered[0]) return;
+                answered[0] = true;
+                JSObject ret = new JSObject();
+                ret.put("gateway", gateway(cm, network));
+                call.resolve(ret);
+            }
+
+            @Override
+            public void onUnavailable() {
+                if (answered[0]) return;
+                answered[0] = true;
+                joined = null;
+                call.reject("Could not join the other phone's Wi-Fi.", "JOIN_FAILED");
+            }
+        };
+        try {
+            cm.requestNetwork(request, joined, 30000);
+        } catch (Exception e) {
+            joined = null;
+            call.reject("Could not join the other phone's Wi-Fi.", "JOIN_FAILED", e);
+        }
+    }
+
+    private static String gateway(ConnectivityManager cm, Network network) {
+        LinkProperties lp = cm.getLinkProperties(network);
+        if (lp != null) {
+            for (RouteInfo r : lp.getRoutes()) {
+                if (r.hasGateway() && r.getGateway() instanceof Inet4Address) return r.getGateway().getHostAddress();
+            }
+        }
+        return null;
+    }
+
+    @PluginMethod
+    public void leave(PluginCall call) {
+        leaveAll();
+        call.resolve();
+    }
+
+    private void leaveAll() {
+        if (joined == null) return;
+        ConnectivityManager cm = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        cm.bindProcessToNetwork(null);
+        try { cm.unregisterNetworkCallback(joined); } catch (Exception ignored) {}
+        joined = null;
+    }
+
     private void stopAll() {
         if (server != null) { server.stop(); server = null; }
         if (reservation != null) {
@@ -222,6 +310,7 @@ public class HotspotPlugin extends Plugin {
     @Override
     protected void handleOnDestroy() {
         stopAll();
+        leaveAll();
         super.handleOnDestroy();
     }
 }

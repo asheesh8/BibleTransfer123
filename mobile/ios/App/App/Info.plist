@@ -2,6 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>The Library talks to a phone nearby over its own Wi-Fi to receive films with no internet.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>The Library uses the camera to read QR codes from other phones and posters, so you can open a library or receive a film.</string>
   <key>CAPACITOR_DEBUG</key>

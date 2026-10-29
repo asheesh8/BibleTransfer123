@@ -355,43 +355,54 @@ window.ET.module('nearby', ['core', 'ui/shell', 'i18n', 'save'], function (ET) {
   function on(id, fn) { var el = ET.$('#' + id, root); if (el) el.addEventListener('click', fn); }
 
   // ---- 1. role
+  /* In the phone app, sharing with no internet comes first: films saved
+     ahead of time go from phone to phone with no Wi-Fi or data at all
+     (features/hotspot.js). The internet way (WebRTC) follows, under its own
+     heading. The website has only the internet way. */
+  function tile(id, icon, tone, title, sub) {
+    return '<button class="tile" id="' + id + '" style="width:100%;text-align:start">' +
+      '<span class="ico" style="background:var(--' + tone + '-wash);color:var(--' + tone + '-deep)">' + ET.icon(icon) + '</span>' +
+      '<span><span class="t">' + title + '</span><span class="s">' + sub + '</span></span>' +
+      '<span class="chev flip">' + ET.icon('chev') + '</span></button>';
+  }
   function role() {
     reset();
+    var online = tile('r-send', 'share', 'green', h('nearby.send'), h('nearby.send.sub')) +
+                 tile('r-recv', 'save', 'sky', h('nearby.receive'), h('nearby.receive.sub'));
     paint(0,
       '<div class="nearby-wait nearby-wait--big">' + ET.lantern(84, 'share') + '</div>' +
-      '<p class="muted">' + h('nearby.lead') + '</p>' +
       (item ? '<div class="note info" style="margin-bottom:1rem"><strong class="latin">' +
         ET.esc(item.title) + '</strong></div>' : '') +
-      '<div class="stack">' +
-        '<button class="tile" id="r-send" style="width:100%;text-align:start">' +
-          '<span class="ico" style="background:var(--green-wash);color:var(--green-deep)">' + ET.icon('share') + '</span>' +
-          '<span><span class="t">' + h('nearby.send') + '</span><span class="s">' + h('nearby.send.sub') + '</span></span>' +
-          '<span class="chev flip">' + ET.icon('chev') + '</span></button>' +
-        '<button class="tile" id="r-recv" style="width:100%;text-align:start">' +
-          '<span class="ico" style="background:var(--sky-wash);color:var(--sky-deep)">' + ET.icon('save') + '</span>' +
-          '<span><span class="t">' + h('nearby.receive') + '</span><span class="s">' + h('nearby.receive.sub') + '</span></span>' +
-          '<span class="chev flip">' + ET.icon('chev') + '</span></button>' +
-        (HOTSPOT ? '<button class="tile" id="r-hotspot" style="width:100%;text-align:start">' +
-          '<span class="ico" style="background:var(--green-wash);color:var(--green-deep)">' + ET.icon('wifi') + '</span>' +
-          '<span><span class="t">' + h('hotspot.tile') + '</span><span class="s">' + h('hotspot.tile.sub') + '</span></span>' +
-          '<span class="chev flip">' + ET.icon('chev') + '</span></button>' : '') +
-      '</div>');
+      (ET.native
+        ? '<p class="flabel">' + h('offline.title') + '</p>' +
+          '<div class="stack">' +
+            (HOTSPOT ? tile('r-hotspot', 'wifi', 'green', h('hotspot.tile'), h('hotspot.tile.sub'))
+                     : '<div class="note info"><p>' + h('offline.iphone') + '</p></div>') +
+            tile('r-offrecv', 'scan', 'sky', h('offline.receive'), h('offline.receive.sub')) +
+          '</div>' +
+          (S.kind && S.kind !== 'none'
+            ? '<p class="flabel" style="margin-top:1.4rem">' + h('offline.online') + '</p><div class="stack">' + online + '</div>'
+            : '')
+        : '<p class="muted">' + h('nearby.lead') + '</p><div class="stack">' + online + '</div>'));
     on('r-hotspot', hotspot);
+    on('r-offrecv', offRecv);
     on('r-send', function () { host(); });
     on('r-recv', function () { guestAsk(); });
   }
 
-  // ---- 2c. sender, with no internet: the phone's own Wi-Fi
-  function hotspot() {
+  function loadHotspot(go) {
     reset();
     S.step = -1;     // off the Nearby steps: a language change must not reset it
-    function go() { ET.hotspot.open(root, role); }
     if (ET.hotspot) return go();
     var sc = document.createElement('script');
     sc.src = ASSETS + 'js/features/hotspot.js';
     sc.onload = go;
     document.head.appendChild(sc);
   }
+  function offRecv() { loadHotspot(function () { ET.hotspot.receive(root, role); }); }
+
+  // ---- 2c. sender, with no internet: the phone's own Wi-Fi
+  function hotspot() { loadHotspot(function () { ET.hotspot.open(root, role, { item: item }); }); }
 
   // ---- 2a. sender: show a code and wait
   function host(tries) {
@@ -826,12 +837,16 @@ window.ET.module('nearby', ['core', 'ui/shell', 'i18n', 'save'], function (ET) {
   root = ET.$('#nearby');
   window.addEventListener('beforeunload', reset);
 
-  if (typeof RTCPeerConnection !== 'function') { offline(); }
+  var want = ET.qs('offline');
+  if (ET.native && want) detect().then(function (kind) { S.kind = kind; });
+  if (ET.native && want === 'send' && HOTSPOT) hotspot();
+  else if (ET.native && want === 'receive') offRecv();
+  else if (typeof RTCPeerConnection !== 'function') { if (ET.native) role(); else offline(); }
   else {
     detect().then(function (kind) {
       S.kind = kind;
       var scanned = (ET.qs('join') || '').replace(/\D/g, '');
-      if (kind === 'none') offline();
+      if (kind === 'none') { if (ET.native) role(); else offline(); }
       else if (scanned.length === 6) {
         // Opened by a camera from the sender's QR code. Forget the code at
         // once, so a reload or a shared link does not try a stale one.
