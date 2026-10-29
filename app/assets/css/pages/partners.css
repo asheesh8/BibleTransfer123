@@ -20,7 +20,7 @@
 }
 .partner-tile--sky,    .partner-head--sky    { --p-face: var(--sky-face);   --p-wash: var(--sky-wash); }
 .partner-tile--green,  .partner-head--green  { --p-face: var(--green-face); --p-wash: var(--green-wash); }
-.partner-tile--gold,   .partner-head--gold   { --p-face: var(--gold);       --p-wash: var(--gold-wash); --p-on: #3A2A05; }
+.partner-tile--gold,   .partner-head--gold   { --p-face: var(--gold);       --p-wash: var(--gold-wash); --p-on: var(--on-gold); }
 .partner-tile--plain,  .partner-head--plain  { --p-face: var(--ink-soft);   --p-wash: var(--sunk); }
 
 .partner-mark {
@@ -97,7 +97,7 @@ html[dir="rtl"] .partner-soon { text-transform: none; letter-spacing: 0; }
 .pp-bar {
   display: flex; align-items: center; justify-content: center; gap: .8rem; flex-wrap: wrap;
   padding: .4rem 1rem;
-  background: var(--gold); color: #3A2A05;
+  background: var(--gold); color: var(--on-gold);
   font-size: .88rem; font-weight: 700; text-align: center;
 }
 .pp-bar a { color: inherit; text-decoration: underline; font-weight: 900; }
@@ -114,7 +114,7 @@ html[dir="rtl"] .partner-soon { text-transform: none; letter-spacing: 0; }
 .pp-ico {
   width: 2.6rem; height: 2.6rem; border-radius: .9rem;
   display: grid; place-items: center;
-  background: var(--gold); color: #3A2A05;
+  background: var(--gold); color: var(--on-gold);
 }
 .pp-ico svg { width: 1.4rem; height: 1.4rem; }
 .pp-txt { display: grid; gap: .15rem; font-size: .92rem; color: var(--ink-soft); }

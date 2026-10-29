@@ -137,7 +137,7 @@ PAGE = """<!doctype html>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="assets/icon/apple-touch-icon.png">
 <link rel="icon" href="assets/icon/favicon-32.png" sizes="32x32">
-<meta name="theme-color" content="#6A35C2">
+<meta name="theme-color" content="#7A2C5E">
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/components/button.css">
 <link rel="stylesheet" href="assets/css/components/card.css">

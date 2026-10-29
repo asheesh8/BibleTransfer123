@@ -24,43 +24,51 @@
   /* ---------------------------------------------------------- 1. palette
      The brand palette from the Kandili brief, plus the deeper and lighter
      steps each one needs to pass contrast on both grounds. */
-  --et-p-purple-900: #25163A;
-  --et-p-purple-800: #4F2696;
-  --et-p-purple-700: #6A35C2;
-  --et-p-purple-500: #8A55A6;
-  --et-p-purple-300: #C79AD9;
-  --et-p-purple-100: #F2EBFF;
+  /* "purple" is the brand plum and "sky" is teal; the names are kept so
+     nothing that reads them breaks. docs/design/color.md has the plan. */
+  --et-p-purple-900: #2A1E22;   /* cocoa ink: the darkest step, not violet-black */
+  --et-p-purple-800: #5A1F45;
+  --et-p-purple-700: #7A2C5E;
+  --et-p-purple-500: #A9608C;
+  --et-p-purple-300: #D88AB9;
+  --et-p-purple-100: #F6E9F0;
 
-  --et-p-gold-700: #D99A00;
-  --et-p-gold-500: #FFC21A;
-  --et-p-gold-400: #F0B942;
-  --et-p-gold-100: #FFF4D1;
+  --et-p-gold-700: #D39200;
+  --et-p-gold-500: #FFBE1A;
+  --et-p-gold-400: #F5BC45;
+  --et-p-gold-100: #FDF0D2;
 
-  --et-p-green-800: #0F6436;
-  --et-p-green-700: #18874A;
-  --et-p-green-500: #3FA65C;
-  --et-p-green-400: #4FBE72;
-  --et-p-green-100: #E3F7EA;
+  --et-p-green-800: #1E5A36;
+  --et-p-green-700: #2B7A4B;
+  --et-p-green-500: #4E9A6A;
+  --et-p-green-400: #77C994;
+  --et-p-green-100: #E5F1E7;
 
-  --et-p-sky-800: #0F528A;
-  --et-p-sky-700: #1670B5;
-  --et-p-sky-500: #2E86AB;
-  --et-p-sky-400: #5BAFD0;
-  --et-p-sky-100: #E6F3FD;
+  --et-p-sky-800: #124E4D;
+  --et-p-sky-700: #1C6B6A;
+  --et-p-sky-500: #4A9993;
+  --et-p-sky-400: #74C6BF;
+  --et-p-sky-100: #E2F0EE;
+
+  --et-p-clay-800: #87391C;
+  --et-p-clay-700: #B04E2A;
+  --et-p-clay-500: #C0714F;
+  --et-p-clay-400: #F09C76;
+  --et-p-clay-100: #FAE8DF;
 
   --et-p-red-800: #8A2727;
   --et-p-red-600: #B83A3A;
   --et-p-red-300: #F28B82;
   --et-p-red-100: #FBEAEA;
 
-  --et-p-cream:  #FFFDF8;
-  --et-p-sand:   #F7F1FF;
-  --et-p-white:  #FFFFFF;
-  --et-p-ink:    #1A1020;   /* words on a pale dark-theme button face */
-  --et-p-night:  #120A1C;   /* the rebrand's night sky */
-  --et-p-night-2: #1C1328;
-  --et-p-night-3: #251A33;
-  --et-p-night-4: #2F223F;
+  --et-p-cream:  #FBF7F1;   /* warm paper: the 60 in 60-30-10 */
+  --et-p-sand:   #F4ECE2;
+  --et-p-white:  #FFFDF9;   /* card face; a touch warm, never stark white */
+  --et-p-ink:    #1E1416;   /* words on a pale dark-theme button face */
+  --et-p-night:  #1A1316;   /* a room lit by one lamp, not violet-black */
+  --et-p-night-2: #231B1E;
+  --et-p-night-3: #2B2125;
+  --et-p-night-4: #31272B;
 
   /* Kandili never changes with the theme: the lantern is the same lantern in
      the dark. Only mascot.css reads these. */
@@ -87,17 +95,17 @@
   --et-surface:     var(--et-p-white);
   --et-sunk:        var(--et-p-sand);
   --et-raised:      var(--et-p-white);
-  --et-scrim:       rgba(26, 14, 34, .55);
+  --et-scrim:       rgba(30, 20, 22, .55);
 
   --et-text:        var(--et-p-purple-900);   /* 15.6:1 on bg */
-  --et-text-soft:   #5F4E75;                  /* 7.3:1 on bg  */
+  --et-text-soft:   #66565B;                  /* 6.5:1 on bg  */
   --et-text-brand:  var(--et-p-purple-700);
   --et-text-go:     var(--et-p-green-700);
   --et-text-info:   var(--et-p-sky-700);
   --et-text-danger: var(--et-p-red-600);
 
-  --et-line:        #ECE4F3;
-  --et-line-strong: #D9CCE8;
+  --et-line:        #EADFD3;
+  --et-line-strong: #D8C8B8;
   --et-focus:       var(--et-p-purple-700);
 
   --et-wash-brand:  var(--et-p-purple-100);
@@ -106,13 +114,20 @@
   --et-wash-info:   var(--et-p-sky-100);
   --et-wash-danger: var(--et-p-red-100);
 
+  /* One colour per kind of thing, the same on every screen, picked at
+     matched strength so four hues sit together instead of shouting. */
+  --et-kind-film:      var(--et-p-clay-700);    --et-kind-film-wash:      var(--et-p-clay-100);
+  --et-kind-scripture: var(--et-p-purple-700);  --et-kind-scripture-wash: var(--et-p-purple-100);
+  --et-kind-audio:     var(--et-p-sky-700);     --et-kind-audio-wash:     var(--et-p-sky-100);
+  --et-kind-book:      var(--et-p-gold-500);    --et-kind-book-wash:      var(--et-p-gold-100);
+
   /* Filled controls: face, label, and the lip under it that makes it press. */
   --et-fill-brand:  var(--et-p-purple-700);  --et-on-brand:  var(--et-p-white);      --et-lip-brand:  var(--et-p-purple-800);
   --et-fill-go:     var(--et-p-green-700);   --et-on-go:     var(--et-p-white);      --et-lip-go:     var(--et-p-green-800);
   --et-fill-gold:   var(--et-p-gold-500);    --et-on-gold:   var(--et-p-purple-900); --et-lip-gold:   var(--et-p-gold-700);
   --et-fill-info:   var(--et-p-sky-700);     --et-on-info:   var(--et-p-white);      --et-lip-info:   var(--et-p-sky-800);
   --et-fill-danger: var(--et-p-red-600);     --et-on-danger: var(--et-p-white);      --et-lip-danger: var(--et-p-red-800);
-  --et-fill-quiet:  var(--et-p-white);       --et-on-quiet:  var(--et-p-purple-900); --et-lip-quiet:  #D9CCE8;
+  --et-fill-quiet:  var(--et-p-white);       --et-on-quiet:  var(--et-p-purple-900); --et-lip-quiet:  #D8C8B8;
 
   /* QR codes are always dark on white whatever the theme: phone cameras read
      inverted codes badly. */
@@ -182,11 +197,12 @@
   --et-radius-pill: 999px;
 
   /* -------------------------------------------------------- elevation
-     Shadows are tinted with the brand purple, not grey, so a card on cream
-     looks warm rather than dirty. */
-  --et-shadow-1: 0 1px 2px rgba(42, 27, 51, .06), 0 2px 8px rgba(42, 27, 51, .06);
-  --et-shadow-2: 0 2px 6px rgba(42, 27, 51, .08), 0 10px 24px -6px rgba(42, 27, 51, .14);
-  --et-shadow-3: 0 6px 16px rgba(42, 27, 51, .12), 0 24px 48px -12px rgba(42, 27, 51, .28);
+     Shadows are tinted with the cocoa ink, not grey, so a card on paper
+     looks warm rather than dirty. Kept faint: depth comes from the ledge
+     under a control and from the paper/card step, not from floating cards. */
+  --et-shadow-1: 0 1px 2px rgba(42, 30, 34, .06), 0 2px 6px rgba(42, 30, 34, .05);
+  --et-shadow-2: 0 2px 6px rgba(42, 30, 34, .07), 0 8px 18px -6px rgba(42, 30, 34, .12);
+  --et-shadow-3: 0 6px 16px rgba(42, 30, 34, .10), 0 20px 40px -12px rgba(42, 30, 34, .22);
 
   /* ----------------------------------------------------------- motion
      Durations are named by job, not by number. Curves:
@@ -228,29 +244,34 @@
     --et-raised:      var(--et-p-night-4);
     --et-scrim:       rgba(0, 0, 0, .66);
 
-    --et-text:        #F7F3FA;
-    --et-text-soft:   #A99EB6;
+    --et-text:        #F7EFE7;
+    --et-text-soft:   #BCABA5;
     --et-text-brand:  var(--et-p-purple-300);
     --et-text-go:     var(--et-p-green-400);
     --et-text-info:   var(--et-p-sky-400);
     --et-text-danger: var(--et-p-red-300);
 
-    --et-line:        #2E2739;
-    --et-line-strong: #43394F;
+    --et-line:        #3A2E31;
+    --et-line-strong: #514246;
     --et-focus:       var(--et-p-gold-400);
 
-    --et-wash-brand:  #2C2038;
-    --et-wash-gold:   #33281A;
-    --et-wash-go:     #16281D;
-    --et-wash-info:   #17262E;
+    --et-wash-brand:  #3A2230;
+    --et-wash-gold:   #36291A;
+    --et-wash-go:     #1C2B21;
+    --et-wash-info:   #172B2A;
     --et-wash-danger: #331A1A;
 
+    --et-kind-film:      var(--et-p-clay-400);    --et-kind-film-wash:      #3A231A;
+    --et-kind-scripture: var(--et-p-purple-300);  --et-kind-scripture-wash: #3A2230;
+    --et-kind-audio:     var(--et-p-sky-400);     --et-kind-audio-wash:     #172B2A;
+    --et-kind-book:      var(--et-p-gold-400);    --et-kind-book-wash:      #36291A;
+
     --et-fill-brand:  var(--et-p-purple-300);  --et-on-brand:  var(--et-p-ink);        --et-lip-brand:  var(--et-p-purple-500);
-    --et-fill-go:     var(--et-p-green-400);   --et-on-go:     var(--et-p-ink);        --et-lip-go:     #379053;
+    --et-fill-go:     var(--et-p-green-400);   --et-on-go:     var(--et-p-ink);        --et-lip-go:     var(--et-p-green-500);
     --et-fill-gold:   var(--et-p-gold-400);    --et-on-gold:   var(--et-p-ink);        --et-lip-gold:   var(--et-p-gold-700);
-    --et-fill-info:   var(--et-p-sky-400);     --et-on-info:   var(--et-p-ink);        --et-lip-info:   #3A88A8;
+    --et-fill-info:   var(--et-p-sky-400);     --et-on-info:   var(--et-p-ink);        --et-lip-info:   var(--et-p-sky-500);
     --et-fill-danger: var(--et-p-red-300);     --et-on-danger: var(--et-p-ink);        --et-lip-danger: var(--et-p-red-600);
-    --et-fill-quiet:  var(--et-p-night-4);     --et-on-quiet:  #F7F3FA;                --et-lip-quiet:  #43394F;
+    --et-fill-quiet:  var(--et-p-night-4);     --et-on-quiet:  #F7EFE7;                --et-lip-quiet:  #514246;
 
     --et-shadow-1: 0 1px 2px rgba(0, 0, 0, .4);
     --et-shadow-2: 0 2px 6px rgba(0, 0, 0, .4), 0 10px 24px -6px rgba(0, 0, 0, .6);
@@ -266,29 +287,34 @@
   --et-raised:      var(--et-p-night-4);
   --et-scrim:       rgba(0, 0, 0, .66);
 
-  --et-text:        #F7F3FA;
-  --et-text-soft:   #A99EB6;
+  --et-text:        #F7EFE7;
+  --et-text-soft:   #BCABA5;
   --et-text-brand:  var(--et-p-purple-300);
   --et-text-go:     var(--et-p-green-400);
   --et-text-info:   var(--et-p-sky-400);
   --et-text-danger: var(--et-p-red-300);
 
-  --et-line:        #2E2739;
-  --et-line-strong: #43394F;
+  --et-line:        #3A2E31;
+  --et-line-strong: #514246;
   --et-focus:       var(--et-p-gold-400);
 
-  --et-wash-brand:  #2C2038;
-  --et-wash-gold:   #33281A;
-  --et-wash-go:     #16281D;
-  --et-wash-info:   #17262E;
+  --et-wash-brand:  #3A2230;
+  --et-wash-gold:   #36291A;
+  --et-wash-go:     #1C2B21;
+  --et-wash-info:   #172B2A;
   --et-wash-danger: #331A1A;
 
+  --et-kind-film:      var(--et-p-clay-400);    --et-kind-film-wash:      #3A231A;
+  --et-kind-scripture: var(--et-p-purple-300);  --et-kind-scripture-wash: #3A2230;
+  --et-kind-audio:     var(--et-p-sky-400);     --et-kind-audio-wash:     #172B2A;
+  --et-kind-book:      var(--et-p-gold-400);    --et-kind-book-wash:      #36291A;
+
   --et-fill-brand:  var(--et-p-purple-300);  --et-on-brand:  var(--et-p-ink);        --et-lip-brand:  var(--et-p-purple-500);
-  --et-fill-go:     var(--et-p-green-400);   --et-on-go:     var(--et-p-ink);        --et-lip-go:     #379053;
+  --et-fill-go:     var(--et-p-green-400);   --et-on-go:     var(--et-p-ink);        --et-lip-go:     var(--et-p-green-500);
   --et-fill-gold:   var(--et-p-gold-400);    --et-on-gold:   var(--et-p-ink);        --et-lip-gold:   var(--et-p-gold-700);
-  --et-fill-info:   var(--et-p-sky-400);     --et-on-info:   var(--et-p-ink);        --et-lip-info:   #3A88A8;
+  --et-fill-info:   var(--et-p-sky-400);     --et-on-info:   var(--et-p-ink);        --et-lip-info:   var(--et-p-sky-500);
   --et-fill-danger: var(--et-p-red-300);     --et-on-danger: var(--et-p-ink);        --et-lip-danger: var(--et-p-red-600);
-  --et-fill-quiet:  var(--et-p-night-4);     --et-on-quiet:  #F7F3FA;                --et-lip-quiet:  #43394F;
+  --et-fill-quiet:  var(--et-p-night-4);     --et-on-quiet:  #F7EFE7;                --et-lip-quiet:  #514246;
 
   --et-shadow-1: 0 1px 2px rgba(0, 0, 0, .4);
   --et-shadow-2: 0 2px 6px rgba(0, 0, 0, .4), 0 10px 24px -6px rgba(0, 0, 0, .6);
