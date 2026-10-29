@@ -5,9 +5,9 @@
    is live. The partners below are being invited and are NOT partners yet, so
    the public never sees them: library.js fetches this file only when the
    phone has asked for the preview with ?demo=partners (it stays on for that
-   phone until ?demo=off). Their shelves hold labelled sample cards, and a tap
-   on one shows where the partner's content would sit and the three ways it
-   would travel from phone to phone.
+   phone until ?demo=off). Each gets an empty shelf that says it is waiting
+   for them and asks for help filling it; its button shows where the content
+   would sit and the three ways it would travel from phone to phone.
 
    Depends on: core.js, ui/sheet.js. English only: it is shown in meetings,
    not to readers. Logos sit in assets/partners/ and show only here.
@@ -23,37 +23,23 @@ window.ET.module('features/partner-preview', ['core', 'ui/sheet'], function (ET)
       id: 'cef', name: 'Child Evangelism Fellowship', mark: 'CEF', tone: 'gold',
       logo: 'assets/partners/cef.webp',
       tagline: 'Bible lessons, songs and stories for children',
-      samples: [
-        { type: 'film', title: 'The Wordless Book', sub: 'A gospel lesson for children, told with colours' },
-        { type: 'book', title: 'Bible lesson with picture cards', sub: 'A lesson a teacher can print or show on a phone' },
-        { type: 'audio', title: 'Songs for children', sub: 'Bible songs to sing along with' }
-      ]
+      preview: true
     },
     {
       id: 'braxton', name: 'Dean Braxton', mark: 'DB', tone: 'sky',
       tagline: 'Talks and testimony, to watch and pass on',
-      samples: [
-        { type: 'film', title: 'A talk by Dean Braxton', sub: 'Plays on the phone, saves for later, passes on' },
-        { type: 'book', title: 'A book by Dean Braxton', sub: 'To read on the phone, with no internet' }
-      ]
+      preview: true
     },
     {
       id: 'unite', name: 'Unite', mark: 'U', tone: 'green',
-      tagline: 'Their films and studies, in every language this library carries',
-      samples: [
-        { type: 'film', title: 'A film from Unite', sub: 'Plays on the phone, saves for later, passes on' },
-        { type: 'book', title: 'A study from Unite', sub: 'To read alone or in a small group' }
-      ]
+      tagline: 'Their films and studies',
+      preview: true
     },
     {
       id: 'youversion', name: 'YouVersion', mark: 'YV', tone: 'purple',
       logo: 'assets/partners/youversion-kids.webp',
       tagline: 'Reading plans, audio Bibles and Bible stories for kids',
-      samples: [
-        { type: 'scripture', title: '7-day reading plan', sub: 'A daily plan that reads with no internet' },
-        { type: 'audio-bible', title: 'Audio Bible', sub: 'Listen to the whole Bible in your language' },
-        { type: 'film', title: 'Bible story for kids', sub: 'An animated Bible story for children' }
-      ]
+      preview: true
     }
   ];
 
@@ -74,19 +60,18 @@ window.ET.module('features/partner-preview', ['core', 'ui/sheet'], function (ET)
     ];
   }
 
-  function open(p, at, example) {
-    var s = p.samples[at];
+  function open(p, example) {
     var body =
       '<div class="pp" lang="en" dir="ltr">' +
         '<header class="partner-head partner-head--' + p.tone + '">' +
           '<span class="partner-mark' + (p.logo ? ' partner-mark--logo' : '') + '" aria-hidden="true">' +
             (p.logo ? '<img src="' + esc(p.logo) + '" alt="">' : esc(p.mark)) + '</span>' +
-          '<span class="partner-head__text"><span class="partner-soon">Partner preview · coming soon</span>' +
+          '<span class="partner-head__text"><span class="partner-soon">Empty shelf · waiting for you</span>' +
           '<strong class="pp-name">' + esc(p.name) + '</strong>' +
           '<span class="partner-tag">' + esc(p.tagline) + '</span></span></header>' +
-        '<p class="pp-lead">This is a sample. When ' + esc(p.name) + ' joins, its shelf sits here, next to the ' +
+        '<p class="pp-lead">When ' + esc(p.name) + ' joins, this shelf fills up, next to the ' +
           'Digital Bible Society, in every language this library carries: on the website, in the phone app, ' +
-          'on the offline card and on Village Server hubs. “' + esc(s.title) + '” would play, save and share ' +
+          'on the offline card and on Village Server hubs. Everything on it plays, saves and shares ' +
           'like everything else here.</p>' +
         '<h3 class="pp-h">How it travels</h3>' +
         '<ol class="pp-routes">' + routes(example).map(function (r) {
@@ -95,7 +80,7 @@ window.ET.module('features/partner-preview', ['core', 'ui/sheet'], function (ET)
             '<a class="et-btn et-btn--quiet pp-go" href="' + esc(r.href) + '">' + esc(r.go) + '</a></li>';
         }).join('') + '</ol>' +
       '</div>';
-    return ET.ui.sheet.open({ title: s.title, body: body, closeLabel: 'Close' });
+    return ET.ui.sheet.open({ title: 'A shelf for ' + p.name, body: body, closeLabel: 'Close' });
   }
 
   // A strip under the header, so whoever holds the phone knows the preview

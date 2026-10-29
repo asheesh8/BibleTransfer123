@@ -88,11 +88,21 @@ html[dir="rtl"] .partner-soon { text-transform: none; letter-spacing: 0; }
 .partner-tag a { color: inherit; font-weight: 700; display: inline-flex; align-items: center; min-height: 44px; margin-block: -13px; }
 
 /* ------------------------------------------- partner preview (pitch only) */
-.rowi.partner-sample {
-  width: 100%; font: inherit; color: inherit; text-align: start; cursor: pointer;
-  border-style: dashed;
+/* An empty shelf waiting for a partner: dashed, in the partner's colour. */
+.partner-empty {
+  display: grid; gap: .5rem; justify-items: start;
+  padding: 1.1rem 1.1rem 1.2rem;
+  border: 3px dashed var(--p-face, var(--line-strong));
+  border-radius: var(--r-lg);
+  background: var(--surface);
 }
-.rowi .go--soon { background: var(--sunk); border-color: var(--line-strong); color: var(--ink); }
+.partner-section:has(.partner-head--gold)   .partner-empty { --p-face: var(--gold); }
+.partner-section:has(.partner-head--sky)    .partner-empty { --p-face: var(--sky-face); }
+.partner-section:has(.partner-head--green)  .partner-empty { --p-face: var(--green-face); }
+.partner-section:has(.partner-head--purple) .partner-empty { --p-face: var(--purple); }
+.partner-empty__title { margin: 0; font-weight: 900; font-size: 1.1rem; }
+.partner-empty__text { margin: 0; color: var(--ink-soft); line-height: 1.5; }
+.partner-empty__go { margin-top: .3rem; }
 
 .pp-bar {
   display: flex; align-items: center; justify-content: center; gap: .8rem; flex-wrap: wrap;
