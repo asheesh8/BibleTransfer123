@@ -357,6 +357,22 @@ window.ET.module('ui/shell', ['core', 'ui/icons', 'ui/sheet', 'ui/toast'], funct
   }
 
 
+  /* Inside the phone app only: footer links, update checks and remote
+     switches (features/app.js), loaded once the page is in place. */
+  function appFeatures() {
+    if (!ET.native || document.getElementById('et-app-js')) return;
+    var sc = document.createElement('script');
+    sc.id = 'et-app-js';
+    sc.src = ASSETS + 'js/features/app.js';
+    sc.onload = function () { if (ET.app) ET.app.start(); };
+    document.head.appendChild(sc);
+  }
+  if (ET.native) {
+    // After every deferred script, so i18n is ready whatever the page's order.
+    if (document.readyState === 'complete') appFeatures();
+    else document.addEventListener('DOMContentLoaded', appFeatures);
+  }
+
   var api = {
     icon: icon, lantern: lantern, mascots: mascots, loadMascot: loadMascot,
     canScan: canScan, scanCode: scanCode,

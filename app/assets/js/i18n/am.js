@@ -521,5 +521,13 @@
   "sharevid.sub": "አጫጭር ቪዲዮዎች፣ እያንዳንዳቸው 30 ሰከንድ ገደማ። ቪዲዮዎቹ በእንግሊዝኛ ናቸው።",
   "sharevid.facebook": "በFacebook",
   "sharevid.email": "በኢሜይል ወይም በGmail",
-  "sharevid.whatsapp": "በWhatsApp"
+  "sharevid.whatsapp": "በWhatsApp",
+  "app.update.title": "እባክዎ መተግበሪያውን ያዘምኑ",
+  "app.update.body": "ይህ የመተግበሪያው ስሪት ከእንግዲህ አይሰራም። አዲሱን ከመደብሩ ያውርዱ። ያስቀመጧቸው ፊልሞች በዚህ ስልክ ላይ ይቆያሉ።",
+  "app.update.go": "አዘምን",
+  "app.update.available": "አዲስ የመተግበሪያው ስሪት በመደብሩ ውስጥ ዝግጁ ነው።",
+  "app.privacy": "ግላዊነት",
+  "app.delete": "የእኔን መረጃ ሰርዝ",
+  "app.help": "እገዛ እና ግንኙነት",
+  "app.version": "ስሪት {v}"
 };

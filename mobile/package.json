@@ -1,12 +1,13 @@
 {
   "name": "easytransfer-mobile",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "description": "The Library as an iPhone and Android app: the web app in app/, wrapped by Capacitor.",
   "scripts": {
     "web": "node scripts/copy-web.js",
     "sync": "npm run web && cap sync",
     "android:debug": "npm run sync && cd android && ./gradlew assembleDebug",
+    "android:release": "npm run sync && cd android && ./gradlew bundleRelease assembleRelease",
     "ios:open": "npm run sync && cap open ios"
   },
   "dependencies": {
@@ -14,7 +15,8 @@
     "@capacitor/core": "8.5.3",
     "@capacitor/file-transfer": "^2.0.6",
     "@capacitor/filesystem": "^8.1.5",
-    "@capacitor/ios": "8.5.3"
+    "@capacitor/ios": "8.5.3",
+    "@capacitor/share": "^8.0.3"
   },
   "devDependencies": {
     "@capacitor/cli": "8.5.3"

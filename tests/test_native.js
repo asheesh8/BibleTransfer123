@@ -8,7 +8,7 @@ const test = require('node:test');
 const source = fs.readFileSync(path.join(__dirname, '../app/assets/js/core.js'), 'utf8');
 
 function boot({ native, protocol, href }) {
-  const calls = { page: [], http: [] };
+  const calls = { page: [], http: [], share: [] };
   const window = {
     addEventListener() {}, setTimeout() {},
     fetch(input, init) { calls.page.push(input); return Promise.resolve('page'); }
@@ -19,17 +19,22 @@ function boot({ native, protocol, href }) {
       Plugins: { CapacitorHttp: { request(options) {
         calls.http.push(options);
         return Promise.resolve({ status: 200, data: { ok: true } });
+      } },
+      Share: { share(options) {
+        calls.share.push(options);
+        return options.title === 'closed' ? Promise.reject(new Error('Share canceled')) : Promise.resolve({});
       } } }
     };
   }
   const registrations = [];
   const url = new URL(href);
+  const navigator = { serviceWorker: { register(u) { registrations.push(u); return Promise.resolve(); } } };
   vm.runInNewContext(source, {
     window, document: { readyState: 'complete' }, URL, Response,
     location: { protocol, href, origin: url.origin, search: url.search },
-    navigator: { serviceWorker: { register(u) { registrations.push(u); return Promise.resolve(); } } }
+    navigator
   });
-  return { ET: window.ET, window, calls, registrations };
+  return { ET: window.ET, window, navigator, calls, registrations };
 }
 
 test('the app knows it is the app, on iPhone and on Android', () => {
@@ -93,4 +98,14 @@ test('a kept film can be deleted from the phone, and is forgotten', async () => 
   await ET.forgetKept('https://cdn/never.mp4');
   assert.deepEqual(deleted, ['file:///d/a.mp4']);
   assert.deepEqual(Object.keys(ET.keptFiles()), ['https://cdn/b.mp4']);
+});
+
+test('the app opens the phone\'s own share sheet, which Android\'s WebView lacks', async () => {
+  const app = boot({ native: true, protocol: 'https:', href: 'https://localhost/item.html' });
+  assert.equal(typeof app.navigator.share, 'function');
+  await app.navigator.share({ title: 'Yesu', text: 'Yesu — Kikuyu', url: 'https://www.bibletransfer123.org/x' });
+  assert.deepEqual({ ...app.calls.share[0] }, { title: 'Yesu', text: 'Yesu — Kikuyu', url: 'https://www.bibletransfer123.org/x' });
+  await assert.rejects(app.navigator.share({ title: 'closed' }), e => e.name === 'AbortError');
+  const web = boot({ protocol: 'https:', href: 'https://www.bibletransfer123.org/item.html' });
+  assert.equal(web.navigator.share, undefined);
 });

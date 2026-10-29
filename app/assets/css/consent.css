@@ -39,3 +39,16 @@ body:not(.has-tabs):not(:has(> main#main)) .cookie-settings { bottom: calc(.8rem
   .consent-panel { inset-inline: .5rem; width: calc(100% - 1rem); padding: 1rem; }
   .consent-actions .btn { min-width: 8rem; font-size: .9rem; }
 }
+
+/* The phone app's own footer links (features/app.js): privacy, deleting your
+   data, help, and which version this is. Both stores want these in the app. */
+.app-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 1.1rem; margin: 1.2rem auto 0; font-size: .85rem; }
+.app-links a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink-soft); text-underline-offset: .2rem; }
+.app-links .app-version { flex-basis: 100%; text-align: center; color: var(--ink-soft); font-size: .78rem; }
+
+/* "Please update": only when VillageServer marks this version as broken. */
+.app-update { position: fixed; inset: 0; z-index: 1100; display: grid; place-items: center; padding: 1.5rem; background: var(--ground); }
+.app-update > div { max-width: 26rem; text-align: center; }
+.app-update .et-lantern, .app-update .et-kandili-slot { display: block; margin-inline: auto; }
+.app-update h2 { font-size: 1.4rem; margin: 1rem 0 .6rem; }
+.app-update p { line-height: 1.6; margin-bottom: 1.2rem; }

@@ -521,5 +521,13 @@
   "sharevid.sub": "Bavideo ya mokuse, moko na moko pene na basekondi 30. Bavideo ezali na Lingɛlɛ́sa.",
   "sharevid.facebook": "Na Facebook",
   "sharevid.email": "Na email to Gmail",
-  "sharevid.whatsapp": "Na WhatsApp"
+  "sharevid.whatsapp": "Na WhatsApp",
+  "app.update.title": "Svp, bongisa application",
+  "app.update.body": "Version oyo ya application esalaka lisusu te. Zwá ya sika na magazini. Ba films oyo obombaki ekotikala na telefone oyo.",
+  "app.update.go": "Bongisa",
+  "app.update.available": "Version ya sika ya application ezali prêt na magazini.",
+  "app.privacy": "Sekele na yo",
+  "app.delete": "Longola ba données na ngai",
+  "app.help": "Lisalisi mpe kokutana",
+  "app.version": "Version {v}"
 };
