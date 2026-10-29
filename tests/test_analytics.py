@@ -340,7 +340,7 @@ class AnalyticsTest(unittest.TestCase):
         self.assertEqual(rows("shareOutcomes"), {"handed_off": 1, "copied": 1, "failed": 1, "cancelled": 1})
         self.assertEqual(rows("downloadOutcomes"), {"browser_handoff": 1, "saved": 1, "cancelled": 1, "error": 1})
         self.assertEqual(rows("transferOutcomes"), {"sent": 1, "received": 1, "unspecified": 1})
-        self.assertEqual(result["breakdownTotals"], {"channels": 1, "countries": 2, "languages": 2, "resources": 1, "referrers": 2, "pages": 2, "eventTypes": 21, "statuses": 21, "shareOutcomes": 4, "downloadOutcomes": 4, "transferOutcomes": 3})
+        self.assertEqual(result["breakdownTotals"], {"channels": 1, "countries": 2, "languages": 2, "resources": 1, "referrers": 2, "pages": 2, "eventTypes": 21, "statuses": 21, "shareOutcomes": 4, "downloadOutcomes": 4, "transferOutcomes": 3, "platforms": 2, "appVersions": 0})
         self.assertEqual(result["coverage"], {"pageViewsWithCountry": 1, "pageViewsWithReferrer": 1, "sharedVisitsWithShareId": 1, "errorEvents": 3, "cancelledEvents": 2, "distinctResources": 1})
         self.assertEqual(rows("eventTypes")["share_intent"], 1)
         self.assertEqual(rows("eventTypes")["transfer_complete"], 2)

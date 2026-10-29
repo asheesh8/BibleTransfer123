@@ -13,7 +13,7 @@
   "trailingSlash": false,
   "functions": {
     "api/*.py": {
-      "includeFiles": "{packer/*.py,app/data/catalog.js}",
+      "includeFiles": "{packer/*.py,app/data/catalog.js,registry/app-config.json}",
       "excludeFiles": "{app/assets/**,catalog/**,art/**,docs/**,output/**,tests/**,node_modules/**,mobile/**}"
     }
   },
@@ -24,6 +24,11 @@
     { "source": "/admin", "destination": "/admin/index.html" },
     { "source": "/admin/library", "destination": "/admin/library.html" },
     { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/privacy-policy", "destination": "/privacy.html" },
+    { "source": "/delete-data", "destination": "/delete-data.html" },
+    { "source": "/data-deletion", "destination": "/delete-data.html" },
+    { "source": "/support", "destination": "/support.html" },
+    { "source": "/contact", "destination": "/support.html" },
     { "source": "/share-libraries", "destination": "/share-libraries/index.html" },
     { "source": "/english", "destination": "/english/index.html" },
     { "source": "/mandarin", "destination": "/mandarin/index.html" },
