@@ -9,7 +9,7 @@
    VERSION must change whenever the shell changes, or an installed copy keeps
    serving the old one. packer/et/generate.py (`npm run generate`) sets it from a
    hash of every SHELL file, and `easytransfer build` stamps card copies. */
-var VERSION = 'shell-ef15c299c9ba';
+var VERSION = 'shell-6b6ae40d2589';
 
 var SHELL = [
   'index.html', 'library.html', 'item.html', 'share.html', 'help.html', 'nearby.html',

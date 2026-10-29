@@ -49,7 +49,7 @@ html, .save-guide-page { touch-action: auto; }
 .guide-toolbar { display: flex; align-items: center; justify-content: space-between; gap: .6rem; padding: .65rem 1rem; border-bottom: 1px solid var(--line); }
 .guide-toolbar p { margin: 0; font-weight: 800; }
 .guide-slide { display: grid; grid-template-columns: minmax(0, 1fr); }
-.guide-picture { min-width: 0; margin: 0; background: #f8f5fb; align-self: start; }
+.guide-picture { min-width: 0; margin: 0; background: var(--sunk); align-self: start; }
 .guide-picture img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; }
 .guide-picture figcaption { background: var(--sunk); color: var(--ink-soft); font-size: .82rem; padding: .5rem 1rem; }
 .guide-caption { padding: 1.1rem 1.2rem; min-width: 0; }

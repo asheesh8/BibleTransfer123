@@ -5,9 +5,12 @@
    belongs to the rebrand. This sheet only arranges those colours into the
    chunky, picture-first screens from the "App screens" design canvas:
 
-   · every kind of thing has a picture tile and its own colour
+   · every kind of thing has a picture tile and its own colour, the same
+     colour on every screen: Films clay, Scripture plum, Audio Bibles teal,
+     Books gold
    · every row is a card you can press, with a ledge under it
-   · the verbs keep one colour everywhere: green plays, blue saves, gold shares
+   · one verb colour, not a rainbow: opening something (Watch, Listen, Read)
+     and saving it are the brand plum, sharing is gold
 
    It reads app.css custom properties only (--surface, --green-face …), so it
    follows light and dark without a block of its own. Each page opts in with a
@@ -20,10 +23,11 @@
 .screen-share .wrap,
 .screen-help .wrap { padding-bottom: 1.5rem; }
 
-/* The pill at the end of a row says what a tap does, in that verb's colour. */
-.rowi .go--watch  { background: var(--green-face); border-color: var(--green-edge); color: var(--on-face); }
-.rowi .go--listen { background: var(--purple); border-color: var(--purple-deep); color: var(--on-face); }
-.rowi .go--read   { background: var(--gold); border-color: var(--gold-deep); color: #3A2A05; }
+/* The pill at the end of a row says what a tap does. The word carries the
+   difference; the colour stays the same, so a list reads calm, not striped. */
+.rowi .go--watch,
+.rowi .go--listen,
+.rowi .go--read   { background: var(--purple); border-color: var(--purple-deep); color: var(--on-face); }
 
 /* ----------------------------------------------------------------- library */
 .screen-library .library-search input[type="search"] {
@@ -67,11 +71,11 @@
 }
 .screen-library .kind-tile[aria-pressed="true"] .kind-n { color: var(--ink); }
 
-.kind-tile[data-kind="film"]        { --tile: var(--green-wash);  --ico: var(--green-face); }
-.kind-tile[data-kind="audio-bible"] { --tile: var(--purple-wash); --ico: var(--purple); }
+.kind-tile[data-kind="film"]        { --tile: var(--clay-wash);   --ico: var(--clay-face); }
+.kind-tile[data-kind="scripture"]   { --tile: var(--purple-wash); --ico: var(--purple); }
+.kind-tile[data-kind="audio-bible"],
 .kind-tile[data-kind="audio"]       { --tile: var(--sky-wash);    --ico: var(--sky-face); }
-.kind-tile[data-kind="scripture"],
-.kind-tile[data-kind="book"]        { --tile: var(--gold-wash);   --ico: var(--gold); --ico-on: #3A2A05; }
+.kind-tile[data-kind="book"]        { --tile: var(--gold-wash);   --ico: var(--gold); --ico-on: var(--on-gold); }
 .kind-tile[data-kind="historic"],
 .kind-tile[data-kind="link"]        { --tile: var(--sunk);        --ico: var(--ink-soft); }
 
@@ -96,9 +100,9 @@
 .screen-library .rowi .art { width: 76px; height: 76px; border-radius: 18px; }
 .screen-library .rowi .name { font-size: 1.08rem; }
 .screen-library .rowi .go { min-height: 44px; padding: .5rem 1rem; font-size: .95rem; }
-.screen-library .rowi:hover .go--watch  { background: var(--green-face); border-color: var(--green-edge); }
-.screen-library .rowi:hover .go--listen { background: var(--purple); border-color: var(--purple-deep); }
-.screen-library .rowi:hover .go--read   { background: var(--gold); border-color: var(--gold-deep); color: #3A2A05; }
+.screen-library .rowi:hover .go--watch,
+.screen-library .rowi:hover .go--listen,
+.screen-library .rowi:hover .go--read   { background: var(--purple); border-color: var(--purple-deep); }
 @media (max-width: 360px) {
   .screen-library .rowi { grid-template-columns: 60px 1fr auto; gap: .6rem; padding: .6rem; }
   .screen-library .rowi .art { width: 60px; height: 60px; border-radius: 14px; }
@@ -180,10 +184,10 @@ html[dir="rtl"] .screen-item .item-head h1 { letter-spacing: 0; line-height: 1.5
   background: var(--ico); color: var(--ico-on);
 }
 .shelf-ico svg { width: 1.3rem; height: 1.3rem; }
-.shelf[data-kind="film"] .shelf-ico      { --ico: var(--green-face); }
+.shelf[data-kind="film"] .shelf-ico      { --ico: var(--clay-face); }
+.shelf[data-kind="audio-bible"] .shelf-ico,
 .shelf[data-kind="audio"] .shelf-ico     { --ico: var(--sky-face); }
-.shelf[data-kind="scripture"] .shelf-ico,
-.shelf[data-kind="book"] .shelf-ico      { --ico: var(--gold); --ico-on: #3A2A05; }
+.shelf[data-kind="book"] .shelf-ico      { --ico: var(--gold); --ico-on: var(--on-gold); }
 .shelf[data-kind="historic"] .shelf-ico,
 .shelf[data-kind="link"] .shelf-ico      { --ico: var(--ink-soft); }
 

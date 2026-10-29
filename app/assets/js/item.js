@@ -252,7 +252,7 @@ window.ET.module('item', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save', 'data
     // screen is the Watch or Listen button; a second one only made people
     // wonder which to press.
     var actions = '<div class="btn-row item-actions">' +
-      (canSave ? '<button class="et-btn et-btn--info" id="save">' + ET.icon('save') + h('item.save') + '</button>' : '') +
+      (canSave ? '<button class="et-btn" id="save">' + ET.icon('save') + h('item.save') + '</button>' : '') +
       '<button class="et-btn et-btn--gold" id="share">' + ET.icon('share') + h('item.share') + '</button></div>';
     html = html.slice(0, actionsAt) + actions + html.slice(actionsAt);
     if (r.desc) html += '<p class="latin item-desc">' + ET.esc(r.desc) + '</p>';
@@ -319,7 +319,7 @@ window.ET.module('item', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save', 'data
       '<label class="flabel" for="ps-email">' + h('itemshare.email') + '</label>' +
       '<div class="send-library-row"><input type="email" id="ps-email" maxlength="254" autocomplete="email" ' +
         'inputmode="email" dir="ltr" placeholder="name@example.com" value="' + ET.esc(pass.email) + '">' +
-        '<button class="et-btn et-btn--info" type="button" id="ps-send">' + ET.icon('mail') + h('itemshare.send') + '</button></div>' +
+        '<button class="et-btn" type="button" id="ps-send">' + ET.icon('mail') + h('itemshare.send') + '</button></div>' +
       '<p class="send-library-status" id="ps-status" role="status" aria-live="polite"></p>' +
       '<p class="muted pass-privacy">' + h('itemshare.privacy') + '</p>' +
     '</section>';

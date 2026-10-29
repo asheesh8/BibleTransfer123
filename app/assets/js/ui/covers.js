@@ -21,13 +21,18 @@ window.ET.module('ui/covers', ['core'], function (ET) {
      own script. It is CSS and a few SVG paths — no image to fetch, so it is
      there offline and on the first paint, and a real cover simply lands on
      top of it when one loads. */
+  /* Hue, saturation and two lightness steps per kind. The two stops share
+     one hue, so a cover is a single colour getting deeper, not two colours
+     fighting; the per-title shift is small for the same reason. The hues
+     are the kind colours used everywhere else: Films clay, Scripture plum,
+     Audio Bibles teal. */
   var COVER = {
-    film:          [[292, 48, 22], [338, 55, 34]],
-    scripture:     [[232, 45, 22], [258, 50, 34]],
-    'audio-bible': [[186, 55, 18], [200, 60, 30]],
-    audio:         [[26, 70, 22], [40, 78, 36]],
-    historic:      [[32, 38, 20], [40, 45, 34]],
-    link:          [[214, 25, 20], [222, 30, 32]]
+    film:          [16, 52, 30, 42],
+    scripture:     [322, 40, 24, 36],
+    'audio-bible': [178, 50, 20, 32],
+    audio:         [178, 42, 22, 34],
+    historic:      [30, 34, 22, 34],
+    link:          [20, 12, 24, 36]
   };
   var MOTIF = {
     // sunrise over hills
@@ -64,16 +69,15 @@ window.ET.module('ui/covers', ['core'], function (ET) {
   function genCover(r, withTitle) {
     var ty = COVER[r.type] ? r.type : 'link';
     var c = COVER[ty], h = hash(r.id || r.title || '');
-    var shift = (h % 40) - 20, angle = 130 + (h % 80);
+    var shift = (h % 16) - 8, angle = 150 + (h % 40);
     // The motif sits in the upper part, clear of the title, at a slight tilt
     // that differs per title so a shelf of one kind still varies.
     var tilt = ((h >> 8) % 17) - 8, size = withTitle ? .62 : .8;
     var off = (100 - 100 * size) / 2;
-    var a = 'hsl(' + (c[0][0] + shift) + ' ' + c[0][1] + '% ' + c[0][2] + '%)';
-    var b = 'hsl(' + (c[1][0] + shift) + ' ' + c[1][1] + '% ' + c[1][2] + '%)';
+    var a = 'hsl(' + (c[0] + shift) + ' ' + c[1] + '% ' + c[2] + '%)';
+    var b = 'hsl(' + (c[0] + shift) + ' ' + c[1] + '% ' + c[3] + '%)';
     var year = ty === 'historic' && r.year ? '<span class="gen-year">' + esc(r.year) + '</span>' : '';
-    var glow = 'radial-gradient(circle at ' + (20 + h % 60) + '% ' + (10 + (h >> 4) % 30) + '%, rgba(255,255,255,.16), transparent 55%)';
-    return '<span class="gen" style="background:' + glow + ',linear-gradient(' + angle + 'deg,' + a + ',' + b + ')" aria-hidden="true">' +
+    return '<span class="gen" style="background:linear-gradient(' + angle + 'deg,' + a + ',' + b + ')" aria-hidden="true">' +
       '<svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMin meet"><g transform="translate(' + off + ' ' + (withTitle ? 4 : off) + ') ' +
       'rotate(' + tilt + ' ' + (50 * size) + ' ' + (50 * size) + ') scale(' + size + ')">' + MOTIF[ty] + '</g></svg>' + year +
       (withTitle ? '<span class="gen-title" dir="auto">' + esc(displayTitle(r)) + '</span>' : '') +

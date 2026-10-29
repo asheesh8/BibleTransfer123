@@ -18,43 +18,60 @@
    lit screen beats a dark one in the sun. "Lantern Night" is a tap away in the
    header and is only used when someone chooses it (data-theme="dark"), so the
    library looks the same bright way on every phone the first time it opens.
-   Every text/ground pair below clears 4.5:1. */
+   Every text/ground pair below clears 4.5:1.
+
+   The colour plan (docs/design/color.md has the reasoning):
+   · 60  warm paper ground and cards. Never pure white, never cold grey.
+   · 30  cocoa ink and one brand colour, a lantern-lit plum. Not violet on
+         black: that pairing is what every generated site looks like.
+   · 10  lantern gold, kept for the one thing we most want tapped (Share).
+   · Kinds get one colour each, picked at matched strength so they sit
+         together: Films clay, Scripture plum, Audio Bibles teal, Books gold.
+   · Green means done or offline, nothing else.
+   The old names stay (--purple is the brand plum, --sky is teal) so every
+   page keeps working; read the name as a role, not a hue. */
 :root {
-  --ground:      #FFFDF8;
-  --surface:     #FFFFFF;
-  --sunk:        #F7F1FF;
-  --raised:      #FFFFFF;
+  --ground:      #FBF7F1;
+  --surface:     #FFFDF9;
+  --sunk:        #F4ECE2;
+  --raised:      #FFFDF9;
 
-  --ink:         #25163A;
-  --ink-soft:    #5F4E75;
+  --ink:         #2A1E22;
+  --ink-soft:    #66565B;
 
-  --purple:      #6A35C2;
-  --purple-deep: #4F2696;
-  --purple-wash: #F2EBFF;
+  --purple:      #7A2C5E;
+  --purple-deep: #5A1F45;
+  --purple-wash: #F6E9F0;
 
-  --gold:        #FFC21A;
-  --gold-deep:   #D99A00;
-  --gold-wash:   #FFF4D1;
-  --gold-text:   #8A5A00;
+  --gold:        #FFBE1A;
+  --gold-deep:   #D39200;
+  --gold-wash:   #FDF0D2;
+  --gold-text:   #875800;
   --glow:        #FFE7A3;
 
-  --green:       #18874A;
-  --green-deep:  #0F6436;
-  --green-wash:  #E3F7EA;
+  --green:       #2B7A4B;
+  --green-deep:  #1E5A36;
+  --green-wash:  #E5F1E7;
 
-  --sky:         #1670B5;
-  --sky-deep:    #0F528A;
-  --sky-wash:    #E6F3FD;
+  --sky:         #1C6B6A;
+  --sky-deep:    #124E4D;
+  --sky-wash:    #E2F0EE;
+
+  --clay:        #B04E2A;
+  --clay-deep:   #87391C;
+  --clay-wash:   #FAE8DF;
 
   /* Words sitting on a coloured button face, and the faces themselves. */
   --on-face:     #FFFFFF;
-  --green-face:  #18874A;  --green-edge: #0F6436;
-  --sky-face:    #1670B5;  --sky-edge:   #0F528A;
+  --on-gold:     #3A2605;
+  --green-face:  #2B7A4B;  --green-edge: #1E5A36;
+  --sky-face:    #1C6B6A;  --sky-edge:   #124E4D;
+  --clay-face:   #B04E2A;  --clay-edge:  #87391C;
   /* Small coloured words on a wash. */
-  --green-text:  #13703D;  --sky-text:   #1462A0;
+  --green-text:  #256B42;  --sky-text:   #1A6362;  --clay-text: #9E4524;
 
-  --line:        #ECE4F3;
-  --line-strong: #D9CCE8;
+  --line:        #EADFD3;
+  --line-strong: #D8C8B8;
 
   --r-sm: 12px;
   --r:    18px;
@@ -67,7 +84,7 @@
 
   --wrap: 62rem;
   --gap:  1rem;
-  --focus: #6A35C2;
+  --focus: #7A2C5E;
 
   /* Rounded faces the phone already has (SF Rounded on Apple, Nunito or
      Varela Round where installed). No web font is downloaded, by rule. */
@@ -76,21 +93,24 @@
   color-scheme: light;
 }
 
-/* "Lantern Night": a deep aubergine sky for Kandili's brass to glow against.
-   The dark theme's faces are pale, so they take dark words. */
+/* "Lantern Night": a warm night, the colour of a room lit by one lamp, not
+   the violet-black of a code editor. The dark theme's faces are pale, so
+   they take dark words. */
 :root[data-theme="dark"] {
-  --ground: #120A1C;  --surface: #1C1129;  --sunk: #251834;  --raised: #281A38;
-  --ink: #F8F2FB;     --ink-soft: #B6A8C4;
-  --purple: #C79AD9;  --purple-deep: #8A55A6; --purple-wash: #2C1C3E;
-  --gold: #F0B942;    --gold-deep: #C38F1E;   --gold-wash: #2F2216; --gold-text: #F0B942;
-  --green: #4FBE72;   --green-deep: #379053;  --green-wash: #16281D;
-  --sky: #5BAFD0;     --sky-deep: #3A88A8;    --sky-wash: #17262E;
-  --on-face: #1A1020;
-  --green-face: #4FBE72; --green-edge: #379053;
-  --sky-face: #5BAFD0;   --sky-edge: #3A88A8;
-  --green-text: #4FBE72; --sky-text: #5BAFD0;
-  --line: #33244A;    --line-strong: #4A3860;
-  --focus: #F0B942;
+  --ground: #1A1316;  --surface: #231B1E;  --sunk: #2B2125;  --raised: #31272B;
+  --ink: #F7EFE7;     --ink-soft: #BCABA5;
+  --purple: #D88AB9;  --purple-deep: #A9608C; --purple-wash: #3A2230;
+  --gold: #F5BC45;    --gold-deep: #C88F1E;   --gold-wash: #36291A; --gold-text: #F5BC45;
+  --green: #77C994;   --green-deep: #4E9A6A;  --green-wash: #1C2B21;
+  --sky: #74C6BF;     --sky-deep: #4A9993;    --sky-wash: #172B2A;
+  --clay: #F09C76;    --clay-deep: #C0714F;   --clay-wash: #3A231A;
+  --on-face: #1E1416; --on-gold: #1E1416;
+  --green-face: #77C994; --green-edge: #4E9A6A;
+  --sky-face: #74C6BF;   --sky-edge: #4A9993;
+  --clay-face: #F09C76;  --clay-edge: #C0714F;
+  --green-text: #77C994; --sky-text: #74C6BF; --clay-text: #F09C76;
+  --line: #3A2E31;    --line-strong: #514246;
+  --focus: #F5BC45;
   color-scheme: dark;
 }
 
@@ -236,6 +256,7 @@ html[dir="rtl"] .tabbar a { font-size: .78rem; }
 }
 .quick-pick:active { transform: translateY(5px); box-shadow: 0 0 0 var(--c); }
 .quick-pick.sky   { --c: var(--sky);   --w: var(--sky-wash); }
+.quick-pick.clay  { --c: var(--clay);  --w: var(--clay-wash); }
 .quick-pick.green { --c: var(--green); --w: var(--green-wash); }
 .quick-pick.gold  { --c: var(--gold);  --w: var(--gold-wash); }
 .quick-ico {
@@ -244,7 +265,8 @@ html[dir="rtl"] .tabbar a { font-size: .78rem; }
 }
 .quick-pick.green .quick-ico { background: var(--green-face); }
 .quick-pick.sky .quick-ico   { background: var(--sky-face); }
-.quick-pick.gold .quick-ico  { color: var(--ink); }
+.quick-pick.clay .quick-ico  { background: var(--clay-face); }
+.quick-pick.gold .quick-ico  { color: var(--on-gold); }
 .quick-ico svg { width: 22px; height: 22px; }
 .quick-t { font-weight: 800; font-size: 1.02rem; line-height: 1.25; }
 .greet h1 { font-size: clamp(1.9rem, 7vw, 2.4rem); margin: 0; }
@@ -322,7 +344,7 @@ button.bulk-row[aria-checked="true"] {
 }
 .bulk-check svg { width: 25px; height: 25px; stroke-width: 3; }
 .bulk-row[aria-checked="true"] .bulk-check {
-  border-color: var(--green); background: var(--green); color: #fff;
+  border-color: var(--green); background: var(--green); color: var(--on-face);
 }
 .bulk-dock {
   position: fixed; z-index: 46; left: 0; right: 0;
@@ -341,8 +363,9 @@ body.bulk-mode { padding-bottom: calc(var(--tabbar) + 92px + env(safe-area-inset
 .shared-hero {
   position: relative;
   margin: 1rem 0; padding: 1.25rem;
-  border: 2px solid var(--line); border-bottom: 6px solid var(--purple); border-radius: var(--r-lg);
-  background: linear-gradient(160deg, var(--gold-wash) 0%, var(--purple-wash) 100%);
+  border: 2px solid var(--line); border-bottom-width: 6px; border-radius: var(--r-lg);
+  /* One warm hue fading into the page, not two colours fighting. */
+  background: linear-gradient(180deg, var(--gold-wash) 0%, var(--surface) 100%);
 }
 .shared-mascot { position: absolute; top: .6rem; inset-inline-end: .8rem; pointer-events: none; }
 .shared-mascot .et-kandili-slot { pointer-events: auto; }
@@ -490,7 +513,7 @@ body.has-tabs { --et-tabbar-h: var(--tabbar); }
   border: 1px solid var(--line);
 }
 .hero-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; max-width: none; }
-.hero-card .veil { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14,11,18,.15), rgba(14,11,18,.88)); }
+.hero-card .veil { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(30,20,22,.12), rgba(30,20,22,.86)); }
 .hero-card > * { position: relative; }
 .hero-card.shot { color: #fff; }
 .hero-card .kicker { font-size: .74rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; opacity: .9; }
@@ -535,7 +558,7 @@ body:not(.has-top):has(> main#main) { padding-top: 66px; }
   display: flex; align-items: center; gap: .4rem;
   padding: .55rem .85rem;
   border-radius: var(--r-pill);
-  background: var(--gold); color: #2A1B33;
+  background: var(--gold); color: var(--on-gold);
   font-weight: 800; font-size: .88rem; line-height: 1.3;
   white-space: nowrap; cursor: pointer;
   box-shadow: 0 10px 24px -10px rgba(0, 0, 0, .7);
@@ -592,7 +615,8 @@ body:not(.has-top):has(> main#main) { padding-top: 66px; }
 .btn[disabled] { opacity: .45; pointer-events: none; }
 
 .btn.green { --face: var(--green-face); --edge: var(--green-edge); }
-.btn.gold  { --face: var(--gold);  --edge: var(--gold-deep); color: #3A2A05; }
+.btn.gold  { --face: var(--gold);  --edge: var(--gold-deep); color: var(--on-gold); }
+.btn.clay  { --face: var(--clay-face); --edge: var(--clay-edge); }
 .btn.sky   { --face: var(--sky-face); --edge: var(--sky-edge); }
 /* Facebook's own blue is 4.2:1 under white; its pressed shade clears 4.5. */
 .btn.fb    { --face: #166FE5; --edge: #0B5BC4; color: #fff; }
@@ -866,14 +890,14 @@ input::placeholder { color: var(--ink-soft); font-weight: 500; }
 /* ----------------------------------------------------------------- notes */
 
 .note {
-  border: 2px solid var(--line);
-  border-inline-start: 6px solid var(--gold);
+  /* A whole soft tint, not a coloured stripe down one side. */
+  border: 2px solid color-mix(in srgb, var(--gold) 45%, transparent);
   border-radius: var(--r);
   background: var(--gold-wash);
   padding: .9rem 1.1rem;
 }
-.note.good { border-inline-start-color: var(--green); background: var(--green-wash); }
-.note.info { border-inline-start-color: var(--sky);   background: var(--sky-wash); }
+.note.good { border-color: color-mix(in srgb, var(--green) 35%, transparent); background: var(--green-wash); }
+.note.info { border-color: color-mix(in srgb, var(--sky) 35%, transparent);   background: var(--sky-wash); }
 .note strong { display: block; margin-bottom: .15rem; }
 .note strong svg { width: 20px; height: 20px; display: inline-block; vertical-align: -4px; }
 
@@ -881,7 +905,7 @@ input::placeholder { color: var(--ink-soft); font-weight: 500; }
 
 .sheet-back {
   position: fixed; inset: 0; z-index: 60;
-  background: rgba(20, 10, 26, .55);
+  background: rgba(30, 20, 22, .55);
   display: grid; align-items: end; justify-items: center;
 }
 .sheet {
@@ -949,7 +973,7 @@ html[dir="rtl"] .meter > span.busy { animation-direction: reverse; }
   width: 84px; height: 84px; margin: .6rem auto .4rem;
   display: grid; place-items: center;
   border-radius: 50%;
-  background: var(--green); color: #fff;
+  background: var(--green); color: var(--on-face);
   box-shadow: 0 5px 0 var(--green-deep);
 }
 .done-mark svg { width: 46px; height: 46px; stroke-width: 3; }
@@ -1159,7 +1183,7 @@ html[lang="am"] .kicker, html[lang="am"] .flabel, html[lang="am"] .eyebrow {
 /* ============================================================ front door
 
    The top of the first-run screen: a sunrise, not a night sky. A warm wash
-   from gold to lavender, dark words with one bright phrase, and the village
+   of morning gold, dark words with one plum phrase, and the village
    picture set in a chunky card like a sticker. Every colour is a theme
    variable, so the dark theme gets the Lantern Night version for free. Only
    transform and opacity move, and nothing moves under "reduce motion". */
@@ -1167,9 +1191,9 @@ html[lang="am"] .kicker, html[lang="am"] .flabel, html[lang="am"] .eyebrow {
 
 .lp-in { max-width: 72rem; margin: 0 auto; padding: 0 16px; }
 .lp-hero {
-  background:
-    radial-gradient(60rem 30rem at 85% -10%, var(--glow-wash, var(--gold-wash)), transparent 70%),
-    linear-gradient(180deg, var(--gold-wash) 0%, var(--purple-wash) 100%);
+  /* Morning light on paper: one warm hue fading into the page. No glow
+     orbs, no second colour, so the picture and the headline carry it. */
+  background: linear-gradient(180deg, var(--gold-wash) 0%, var(--ground) 100%);
   color: var(--ink);
   padding: max(2.25rem, calc(env(safe-area-inset-top) + 1.5rem)) 0 3rem;
   overflow: hidden;
@@ -1182,9 +1206,7 @@ html[lang="am"] .kicker, html[lang="am"] .flabel, html[lang="am"] .eyebrow {
   border-radius: var(--r-pill); background: var(--surface); color: var(--ink);
   border: 2px solid var(--line); font-size: .9rem; font-weight: 800;
 }
-.lp-chip::before { content: ""; width: .55rem; height: .55rem; border-radius: 50%; background: var(--dot, var(--green)); }
-.lp-chip:nth-child(2) { --dot: var(--gold); }
-.lp-chip:nth-child(3) { --dot: var(--sky); }
+.lp-chip::before { content: ""; width: .55rem; height: .55rem; border-radius: 50%; background: var(--gold-deep); }
 .lp-h {
   margin: 0 0 1rem; font-weight: 900; line-height: 1.04; letter-spacing: -.02em;
   font-size: clamp(2.4rem, 6.4vw, 4.2rem);
@@ -1198,7 +1220,7 @@ html[lang="am"] .kicker, html[lang="am"] .flabel, html[lang="am"] .eyebrow {
 .lp-art img {
   display: block; width: 100%; height: auto; aspect-ratio: 971 / 465; object-fit: cover;
   border-radius: var(--r-lg); border: 4px solid var(--surface);
-  box-shadow: 0 8px 0 var(--purple-deep), 0 24px 50px -12px rgba(79, 38, 150, .35);
+  box-shadow: 0 6px 0 var(--line-strong);
   transform: rotate(-1.2deg);
 }
 @media (max-width: 40rem) {
@@ -1220,18 +1242,16 @@ html[lang="am"] .kicker, html[lang="am"] .flabel, html[lang="am"] .eyebrow {
 .lp-step {
   display: flex; flex-direction: column; gap: .5rem;
   background: var(--surface); border-radius: var(--r-lg); padding: 1.4rem;
-  border: 2px solid var(--line); border-bottom: 6px solid var(--lip, var(--purple));
+  border: 2px solid var(--line); border-bottom-width: 6px;
 }
-.lp-step.sky  { --lip: var(--sky); }
-.lp-step.gold { --lip: var(--gold); }
 .lp-ico {
   width: 3.2rem; height: 3.2rem; border-radius: 1rem; margin-bottom: .4rem;
   display: flex; align-items: center; justify-content: center;
 }
 .lp-ico svg { width: 26px; height: 26px; }
-.lp-step.purple .lp-ico { background: var(--purple-wash); color: var(--purple); }
-.lp-step.sky .lp-ico    { background: var(--sky-wash);    color: var(--sky-text); }
-.lp-step.gold .lp-ico   { background: var(--gold-wash);   color: var(--gold-text); }
+.lp-ico { background: var(--purple-wash); color: var(--purple); }
+/* The last step is the one the whole product is for, so it alone gets gold. */
+.lp-step:last-child .lp-ico { background: var(--gold); color: var(--on-gold); }
 .lp-n { font-family: var(--display); font-weight: 800; font-size: 1.25rem; }
 .lp-partner-btn { border-radius: var(--r-pill); }
 .lp-partners-in { display: flex; flex-wrap: wrap; align-items: center; gap: 2rem 3rem; }
@@ -1251,14 +1271,12 @@ html[lang="am"] .kicker, html[lang="am"] .flabel, html[lang="am"] .eyebrow {
   --c: var(--purple);
   display: flex; flex-direction: column; gap: .2rem;
   background: var(--surface); border-radius: var(--r-lg); padding: 1.1rem 1.2rem;
-  border: 2px solid var(--line); border-bottom: 6px solid var(--c);
+  border: 2px solid var(--line); border-bottom-width: 6px;
   animation: et-pop-in .45s cubic-bezier(.34, 1.56, .64, 1) both;
 }
 .lp-stat strong { font-family: var(--display); font-size: clamp(1.9rem, 5vw, 2.6rem); font-weight: 900; line-height: 1.05; color: var(--c); }
 .lp-stat span { color: var(--ink-soft); font-weight: 600; line-height: 1.35; }
-.lp-stat.green { --c: var(--green-text); border-bottom-color: var(--green); }
-.lp-stat.gold  { --c: var(--gold-text);  border-bottom-color: var(--gold); }
-.lp-stat.sky   { --c: var(--sky-text);   border-bottom-color: var(--sky); }
+/* Numbers in one colour: they are one story, told four ways. */
 .lp-stat:nth-child(2) { animation-delay: .07s; }
 .lp-stat:nth-child(3) { animation-delay: .14s; }
 .lp-stat:nth-child(4) { animation-delay: .21s; }
@@ -1280,7 +1298,7 @@ html[lang="am"] .kicker, html[lang="am"] .flabel, html[lang="am"] .eyebrow {
 .lp-phase.next .lp-tag { background: var(--gold-wash); color: var(--ink); }
 .lp-phase.then { border-color: var(--purple); }
 .lp-phase.then .lp-tag { background: var(--purple-wash); color: var(--purple); }
-.lp-foot { padding: 2rem 0 2.5rem; background: var(--purple-deep); color: #FFFFFF; font-size: .95rem; }
+.lp-foot { padding: 2rem 0 2.5rem; background: var(--ink); color: var(--ground); font-size: .95rem; }
 
 /* ============================================================ delight
 
@@ -1327,12 +1345,12 @@ html[lang="am"] .kicker, html[lang="am"] .flabel, html[lang="am"] .eyebrow {
   content: ""; position: absolute; z-index: -1; left: 50%; top: 50%;
   width: 10px; height: 10px; border-radius: 50%; background: transparent;
   box-shadow:
-      0 -78px 0 var(--gold),   55px -55px 0 var(--purple),  78px 0 0 var(--green),
-     55px 55px 0 var(--sky),     0 78px 0 var(--gold),    -55px 55px 0 var(--purple),
-    -78px 0 0 var(--green),  -55px -55px 0 var(--sky),
-     30px -88px 0 -2px var(--sky),  88px -30px 0 -2px var(--gold),  88px 30px 0 -2px var(--purple),
-     30px 88px 0 -2px var(--green), -30px 88px 0 -2px var(--sky), -88px 30px 0 -2px var(--gold),
-    -88px -30px 0 -2px var(--purple), -30px -88px 0 -2px var(--green);
+      0 -78px 0 var(--gold),   55px -55px 0 var(--clay),  78px 0 0 var(--gold-deep),
+     55px 55px 0 var(--gold),    0 78px 0 var(--clay),    -55px 55px 0 var(--gold-deep),
+    -78px 0 0 var(--gold),   -55px -55px 0 var(--clay),
+     30px -88px 0 -2px var(--glow), 88px -30px 0 -2px var(--gold),  88px 30px 0 -2px var(--glow),
+     30px 88px 0 -2px var(--gold-deep), -30px 88px 0 -2px var(--glow), -88px 30px 0 -2px var(--gold),
+    -88px -30px 0 -2px var(--glow), -30px -88px 0 -2px var(--gold-deep);
   opacity: 0;
   animation: et-burst .9s cubic-bezier(.2, .8, .2, 1) .15s both;
 }

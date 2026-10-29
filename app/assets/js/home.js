@@ -127,7 +127,7 @@ window.ET.module('home', ['core', 'ui/shell', 'ui/covers', 'i18n'], function (ET
 
     // ---- quick picks: one big bright button per kind of thing, so the first
     // tap answers "what would you like today?" without reading a shelf.
-    var picks = [['film', 'film', 'purple'], ['scripture', 'book', 'sky'], ['audio-bible', 'wave', 'green'], ['audio', 'wave', 'gold']];
+    var picks = [['film', 'film', 'clay'], ['scripture', 'book', 'purple'], ['audio-bible', 'wave', 'sky'], ['audio', 'wave', 'sky']];
     var quick = picks.filter(function (p) {
       return R.some(function (r) { return r.type === p[0]; });
     }).slice(0, 3);
