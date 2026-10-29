@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delete my data · EasyTransfer</title>
+<meta name="description" content="Delete the analytics recorded from your phone or browser by the EasyTransfer website or The Library apps. No account needed.">
+<link rel="icon" href="assets/icon/favicon-32.png" sizes="32x32">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/components/button.css">
+<link rel="stylesheet" href="assets/css/components/card.css">
+<link rel="stylesheet" href="assets/css/components/chip.css">
+<link rel="stylesheet" href="assets/css/app.css">
+<link rel="stylesheet" href="assets/css/components/sheet.css">
+<link rel="stylesheet" href="assets/css/components/toast.css">
+<link rel="stylesheet" href="assets/css/consent.css">
+</head>
+<body>
+<main class="wrap privacy-page" lang="en" dir="ltr">
+  <a href="index.html">← Back to the library</a>
+  <p class="eyebrow" style="margin-top:2rem">YOUR DATA</p>
+  <h1>Delete my data</h1>
+  <p>The website and The Library apps have no accounts, so there is no account to delete. The only information we keep about your use is analytics, and only if you accepted them. Those records carry a random number stored on your phone, not your name.</p>
+  <p>The button below turns analytics off on this phone or browser and deletes every record sent with its random number, straight away.</p>
+  <p><button class="btn" id="forget" type="button">Delete my data</button></p>
+  <p id="forget-status" role="status" aria-live="polite"></p>
+  <section>
+    <h2>What gets deleted</h2>
+    <ul>
+      <li><strong>Straight away:</strong> every analytics record sent from this phone or browser (pages opened, items played, saved or shared, times and a broad country).</li>
+      <li><strong>On your phone:</strong> removing the app, or clearing this site’s data in your browser, deletes your settings, the random number and any films or books you kept.</li>
+      <li><strong>Kept:</strong> nothing that can be linked to you. Daily counts of printed QR code scans hold no identifier at all, and short-lived abuse counters expire within a day.</li>
+    </ul>
+    <p>If you turned analytics off earlier, this phone no longer holds the random number, so no record can be matched to you. Those records are deleted automatically within 90 days.</p>
+  </section>
+  <section>
+    <h2>Ask us instead</h2>
+    <p>Email <a href="mailto:villageserverinitiative@gmail.com?subject=Delete%20my%20data">villageserverinitiative@gmail.com</a> with the subject “Delete my data”. If you emailed us before, say so and we will delete those emails too. We reply within 30 days.</p>
+    <p>See the <a href="privacy.html">privacy policy</a> for everything we collect and why.</p>
+  </section>
+</main>
+<!-- Help needs the shelves, not every chapter link: the light catalogue. -->
+<script defer src="data/catalog-home.js"></script>
+<script defer src="api/visibility"></script>
+<script defer src="assets/js/visibility.js"></script>
+<script defer src="assets/js/core.js"></script>
+<script defer src="assets/js/ui/icons.js"></script>
+<script defer src="assets/js/ui/sheet.js"></script>
+<script defer src="assets/js/ui/toast.js"></script>
+<script defer src="assets/js/ui/shell.js"></script>
+<script src="assets/js/i18n-load.js"></script>
+<script defer src="assets/js/i18n.js"></script>
+<script defer src="assets/js/analytics.js"></script>
+<script>(function () {
+  var button = document.getElementById('forget'), status = document.getElementById('forget-status');
+  button.addEventListener('click', function () {
+    button.disabled = true;
+    status.textContent = 'Deleting…';
+    ET.analytics.forget().then(function (result) {
+      status.textContent = result.nothing
+        ? 'Done. Analytics are off, and this phone had no analytics records to delete.'
+        : 'Done. Analytics are off and ' + result.deleted + (result.deleted === 1 ? ' record was' : ' records were') + ' deleted.';
+    }, function () {
+      button.disabled = false;
+      status.textContent = 'Analytics are off, but we could not reach the site to delete the records. Try again when you are online, or email us.';
+    });
+  });
+})();</script>
+</body>
+</html>

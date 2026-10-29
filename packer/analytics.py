@@ -62,8 +62,15 @@ STATUSES = frozenset((
 FIELDS = frozenset((
     "id", "type", "at", "path", "language", "resource", "channel", "status",
     "referrer", "shareId", "visitorId", "sessionId", "bytes", "duration",
-    "depth", "parentShareId",
+    "depth", "parentShareId", "platform", "appVersion",
 ))
+# Where an event came from: the website (and card or Pi copies) or one of the
+# store apps, with the app's version so a bad release shows up in the reports.
+PLATFORMS = frozenset(("web", "ios", "android"))
+APP_VERSION = re.compile(r"^\d{1,4}(?:\.\d{1,4}){0,2}$")
+# "Delete my data": a phone sends its own random analytics ID and every event
+# carrying it is removed. Limited so it can't be used to load the database.
+FORGET_LIMITS = (("forget", 10, 3600, "ip"), ("forget-all", 500, 86400, "site"))
 # Printed QR codes open https://bibletransfer123.org/<slug>?src=qr. Vercel
 # redirects those to /api/qr (a rewrite would lose to the <slug>/ folder),
 # which adds one to a per-day count and redirects to the library. The count has no visitor ID, cookie or address, so it covers
@@ -240,6 +247,14 @@ def clean_event(event, now, country):
             raise APIError(400, "Invalid event metadata.")
         result[field] = value
     result["referrer"] = clean_referrer(event.get("referrer", ""))
+    platform = event.get("platform", "web")
+    if platform not in PLATFORMS:
+        raise APIError(400, "Invalid platform.")
+    result["platform"] = platform
+    if "appVersion" in event:
+        if platform == "web" or not isinstance(event["appVersion"], str) or not APP_VERSION.fullmatch(event["appVersion"]):
+            raise APIError(400, "Invalid app version.")
+        result["appVersion"] = event["appVersion"]
     result["country"] = country if re.fullmatch(r"[A-Z]{2}", country) else ""
     # Sharing chain: the step a share is at, and the share it was passed on from.
     if "depth" in event:
@@ -312,6 +327,10 @@ class SQLiteStore:
             db.execute("DELETE FROM events WHERE at <= ?", (now - RETENTION_SECONDS,))
             rows = db.execute("SELECT body FROM events WHERE at >= ? AND at <= ? ORDER BY at DESC, id DESC LIMIT ?", (start, now + 300, MAX_ANALYSIS_EVENTS + 1)).fetchall()
             return [json.loads(row[0]) for row in rows[:MAX_ANALYSIS_EVENTS]], len(rows) > MAX_ANALYSIS_EVENTS
+
+    def forget(self, visitor_id, now):
+        with self.connect() as db:
+            return db.execute("DELETE FROM events WHERE json_extract(body, '$.visitorId') = ?", (visitor_id,)).rowcount
 
     def count_qr(self, day, slug, country, now):
         with self.connect() as db:
@@ -403,6 +422,16 @@ class RedisStore:
         except (ValueError, TypeError):
             raise APIError(503, "Analytics storage is temporarily unavailable.") from None
         return events, truncated
+
+    def forget(self, visitor_id, now):
+        # Events are indexed by time, not visitor, so this reads the 90 days
+        # (the same read the dashboard makes) and deletes the matches.
+        events, _ = self.read(now - RETENTION_SECONDS, now)
+        ids = [event["id"] for event in events if event.get("visitorId") == visitor_id and isinstance(event.get("id"), str)]
+        for offset in range(0, len(ids), 500):
+            chunk = ids[offset:offset + 500]
+            self.request([["DEL"] + [PREFIX + "event:" + event_id for event_id in chunk], ["ZREM", PREFIX + "index"] + chunk], pipeline=True)
+        return len(ids)
 
     def count_qr(self, day, slug, country, now):
         key = PREFIX + "qr:" + day
@@ -734,7 +763,7 @@ def aggregate(events, days, now, truncated=False):
     summary = {"visitors": len({event["visitorId"] for event in events}), "sessions": len({event["sessionId"] for event in events}), "pageViews": 0, "shareIntents": 0, "shareCompletions": 0, "sharedVisits": 0, "downloads": 0, "transfers": 0}
     counts = {name: collections.Counter() for name in (
         "channels", "countries", "languages", "resources", "referrers", "pages",
-        "eventTypes", "statuses", "shareOutcomes", "downloadOutcomes", "transferOutcomes",
+        "eventTypes", "statuses", "shareOutcomes", "downloadOutcomes", "transferOutcomes", "platforms", "appVersions",
     )}
     channels, countries, languages, resources = (counts[name] for name in ("channels", "countries", "languages", "resources"))
     coverage = {"pageViewsWithCountry": 0, "pageViewsWithReferrer": 0, "sharedVisitsWithShareId": 0, "errorEvents": 0, "cancelledEvents": 0, "distinctResources": 0}
@@ -814,6 +843,9 @@ def aggregate(events, days, now, truncated=False):
             languages[event.get("language") or "Unspecified"] += 1
             counts["referrers"][event.get("referrer") or "Direct / unknown"] += 1
             counts["pages"][event["path"]] += 1
+            counts["platforms"][event.get("platform") or "web"] += 1
+            if event.get("appVersion"):
+                counts["appVersions"][event.get("platform", "") + " " + event["appVersion"]] += 1
             coverage["pageViewsWithCountry"] += int(bool(event.get("country")))
             coverage["pageViewsWithReferrer"] += int(bool(event.get("referrer")))
         if kind == "share_intent":
@@ -957,6 +989,13 @@ def dispatch(path, method, headers, raw=b"", client_ip="", production=False, pub
                 raise APIError(400, "Invalid JSON.") from None
         if route.path == "/api/visibility":
             return dispatch_visibility(route, method, headers, payload, production, public_root, now, output_headers)
+        if route.path == "/api/analytics" and isinstance(payload, dict) and set(payload) == {"forget"}:
+            request = payload["forget"]
+            if not isinstance(request, dict) or set(request) != {"visitorId"} or not isinstance(request["visitorId"], str) or not IDENTIFIER.fullmatch(request["visitorId"]):
+                raise APIError(400, "Send the visitorId to delete.")
+            store = get_store(production, public_root)
+            check_limits(store, FORGET_LIMITS, client_ip, now, "Too many delete requests. Try again later.")
+            return 200, {"ok": True, "deleted": store.forget(request["visitorId"], now)}, output_headers
         if route.path == "/api/analytics":
             country = headers.get("x-vercel-ip-country", "") if production else ""
             events = validate_events(payload, now, country)

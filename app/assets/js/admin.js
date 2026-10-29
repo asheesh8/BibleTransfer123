@@ -65,7 +65,7 @@
   // Tabbed dashboard cards: card id → [tab key, label] and the selected tab.
   var cardTabs = {
     'top-content': [['opens', 'Opened'], ['plays', 'Played'], ['saves', 'Saved'], ['shares', 'Shared']],
-    'top-places': [['countries', 'Countries'], ['languages', 'Languages']],
+    'top-places': [['countries', 'Countries'], ['languages', 'Languages'], ['platforms', 'Website / apps']],
     'top-sources': [['referrers', 'Referrers'], ['channels', 'Share methods'], ['qr', 'QR scans']]
   };
   var cardSelected = { 'top-content': 'opens', 'top-places': 'countries', 'top-sources': 'referrers' };
@@ -156,6 +156,10 @@
   function channelName(value) {
     var names = { native: 'Native share sheet', 'web-share': 'Native share sheet', native_share: 'Native share sheet', clipboard: 'Copied link', copy: 'Copied link', 'copy-link': 'Copied link', copy_link: 'Copied link', whatsapp: 'WhatsApp', telegram: 'Telegram', facebook: 'Facebook', email: 'Email', sms: 'SMS', nearby: 'Nearby transfer', bluetooth: 'Bluetooth', wifi: 'Wi-Fi', sd_card: 'SD card', usb: 'USB', qr: 'QR code', guide: 'Sharing guide', unknown: 'Unknown method' };
     return names[value] || readable(value);
+  }
+
+  function platformName(value) {
+    return { web: 'Website', ios: 'iPhone app', android: 'Android app' }[value] || readable(value);
   }
 
   function statusName(value) {
@@ -419,6 +423,7 @@
     var verbs = { opens: 'openings', plays: 'plays', saves: 'saves', shares: 'share attempts' };
     renderBars('top-content', tableRows(data.resourceTable, key) || (key === 'opens' ? data.resources : null), { label: resourceTitle, tooltip: resourceTooltip, sub: function (row) { return resourceMeta(row.name); }, total: totals[key], unit: verbs[key], filter: 'resource', empty: 'Items appear here once someone ' + { opens: 'opens', plays: 'plays', saves: 'saves', shares: 'shares' }[key] + ' one.' });
     if (cardSelected['top-places'] === 'countries') renderBars('top-places', tableRows(data.countryTable, 'visitors') || data.countries, { label: countryLabel, total: totals.visitors, unit: 'visitor browsers', filter: 'country', sub: function (row) { return row.extra ? plural(row.extra.pageViews, 'page view', 'page views') : ''; }, empty: 'Countries appear after the first recorded visit.' });
+    else if (cardSelected['top-places'] === 'platforms') renderBars('top-places', data.platforms, { label: platformName, total: totalFor(data, 'platforms', totals.pageViews), unit: 'page views', sub: function (row) { return (data.appVersions || []).filter(function (v) { return v.name.indexOf(row.name + ' ') === 0; }).slice(0, 3).map(function (v) { return 'v' + v.name.slice(row.name.length + 1) + ' · ' + formatNumber(v.count); }).join(', '); }, empty: 'Page views appear after the first recorded visit.' });
     else renderBars('top-places', tableRows(data.languageTable, 'visitors') || data.languages, { label: languageName, total: totals.visitors, unit: 'visitor browsers', filter: 'language', sub: function (row) { return row.extra ? plural(row.extra.opens, 'item opened', 'items opened') : ''; }, empty: 'Languages appear after the first recorded visit.' });
     if (cardSelected['top-sources'] === 'referrers') renderBars('top-sources', data.referrers, { label: referrerName, total: totalFor(data, 'referrers', totals.pageViews), unit: 'page views', empty: 'Referring sites appear after the first recorded visit.' });
     else if (cardSelected['top-sources'] === 'qr') renderBars('top-sources', qrScans(data) && qrScans(data).languages, { label: languageName, total: qrScans(data) && qrScans(data).total, unit: 'scans', filter: 'language', empty: 'Languages appear after the first printed QR code is scanned.' });
