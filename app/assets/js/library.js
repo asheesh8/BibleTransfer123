@@ -105,15 +105,8 @@ window.ET.module('library', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save'], f
       '</span>';
   }
 
-  // A sample card on a preview shelf matches the kind and words being searched.
-  function sampleMatches(s) {
-    if (state.type && s.type !== state.type) return false;
-    if (state.from) return false;
-    var hay = (s.title + ' ' + s.sub).toLowerCase();
-    return state.q.toLowerCase().split(/\s+/).filter(Boolean).every(function (w) {
-      return hay.indexOf(w) > -1;
-    });
-  }
+  // A partner's empty shelf shows while browsing, not in search results.
+  function shelfShown() { return !state.q && !state.from; }
 
   function present(list) {
     var seen = {};
@@ -343,19 +336,19 @@ window.ET.module('library', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save'], f
     counted.forEach(function (r) { n[partnerOf(r)]++; });
     // A preview shelf named in the link waits for the preview to arrive.
     if (state.partner && !partnerById(state.partner) && !(demoOn && !preview.length)) state.partner = '';
-    var list = partners().filter(function (p) { return p.samples || n[p.id]; });
+    var list = partners().filter(function (p) { return p.preview || n[p.id]; });
     // With nothing but DBS there is nothing to choose between.
     box.hidden = list.length < 2;
     ET.$('#partner-label').hidden = box.hidden;
     if (box.hidden) return;
     var scroll = box.scrollLeft;
     box.innerHTML = list.map(function (p) {
-      var soon = !!p.samples;
+      var soon = !!p.preview;
       return '<button class="fchip partner-tile partner-tile--' + p.tone + '" data-partner="' + p.id +
         '" aria-pressed="' + (state.partner === p.id) + '">' +
         partnerMark(p) +
         '<span class="partner-name" dir="auto">' + ET.esc(partnerName(p)) + '</span>' +
-        '<span class="partner-n">' + (soon ? '<span lang="en">Coming soon</span>' : h('lib.countall', { n: n[p.id] })) +
+        '<span class="partner-n">' + (soon ? '<span lang="en">Empty, help us fill it</span>' : h('lib.countall', { n: n[p.id] })) +
         '</span></button>';
     }).join('');
     box.scrollLeft = scroll;
@@ -370,11 +363,11 @@ window.ET.module('library', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save'], f
 
   // The branded band that opens a partner's section of the list.
   function partnerHead(p, count) {
-    var soon = !!p.samples;
+    var soon = !!p.preview;
     return '<header class="partner-head partner-head--' + p.tone + '">' +
       partnerMark(p) +
       '<span class="partner-head__text">' +
-        (soon ? '<span class="partner-soon" lang="en">Partner preview · coming soon</span>'
+        (soon ? '<span class="partner-soon" lang="en">Empty shelf · waiting for you</span>'
               : p.id === 'dbs' ? '<span class="partner-soon">' + h('lib.partner.main') + '</span>'
               : p.kicker ? '<span class="partner-soon" lang="en">' + ET.esc(p.kicker) + '</span>' : '') +
         '<h2 dir="auto">' + ET.esc(partnerName(p)) + '</h2>' +
@@ -385,14 +378,16 @@ window.ET.module('library', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save'], f
       '</span></header>';
   }
 
-  function sampleCard(p, s, i) {
-    var fake = { id: p.id + '-' + i, type: s.type, title: s.title };
-    return '<button type="button" class="rowi partner-sample" data-sample="' + p.id + ':' + i + '">' +
-      '<span class="art">' + ET.use('ui/covers').artHTML(fake, false) + '</span>' +
-      '<span class="meta"><span class="kicker">' + h('type.' + s.type) + ' · <span lang="en">Sample</span></span>' +
-        '<span class="name" lang="en">' + ET.esc(s.title) + '</span>' +
-        '<span class="sub" lang="en">' + ET.esc(s.sub) + '</span></span>' +
-      '<span class="go go--soon" lang="en">Preview</span></button>';
+  /* Where a partner's library will go: an empty, dashed shelf that says so
+     and asks for help filling it, with a button to how it would travel. */
+  function emptyShelf(p) {
+    return '<div class="partner-empty" lang="en" dir="ltr">' +
+      '<p class="partner-empty__title">This shelf is empty, for now.</p>' +
+      '<p class="partner-empty__text">It is waiting for ' + ET.esc(p.name) + '. ' + ET.esc(p.tagline) +
+        ' would sit right here, and we would love your help to fill it. Everything placed here plays, saves and passes from phone to phone, ' +
+        'in every language this library carries.</p>' +
+      '<button type="button" class="et-btn et-btn--quiet partner-empty__go" data-shelf="' + p.id + '">' +
+        'See how it would be shared</button></div>';
   }
 
   /* The list, in sections: DBS, then each partner in the preview, then every
@@ -407,14 +402,11 @@ window.ET.module('library', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save'], f
     hits.forEach(function (r) { by[partnerOf(r)].push(r); });
     var list = partners().filter(function (p) {
       if (state.partner && state.partner !== p.id) return false;
-      return p.samples ? p.samples.some(sampleMatches) : by[p.id].length > 0;
+      return p.preview ? shelfShown() : by[p.id].length > 0;
     });
     var cap = demoOn && !state.partner && !state.q && list.length > 1;
     return list.map(function (p) {
-      if (p.samples) {
-        return '<section class="partner-section">' + partnerHead(p) +
-          p.samples.map(function (s, i) { return sampleMatches(s) ? sampleCard(p, s, i) : ''; }).join('') + '</section>';
-      }
+      if (p.preview) return '<section class="partner-section">' + partnerHead(p) + emptyShelf(p) + '</section>';
       var items = by[p.id], more = cap && items.length > SHELF;
       return '<section class="partner-section">' + partnerHead(p, items.length) +
         (more ? items.slice(0, SHELF) : items).map(card).join('') +
@@ -424,9 +416,9 @@ window.ET.module('library', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save'], f
     }).join('');
   }
 
-  function samplesShown() {
+  function shelvesShown() {
     return preview.some(function (p) {
-      return (!state.partner || state.partner === p.id) && p.samples.some(sampleMatches);
+      return (!state.partner || state.partner === p.id) && shelfShown();
     });
   }
 
@@ -492,10 +484,10 @@ window.ET.module('library', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save'], f
       });
     });
     if (!state.bulk && preview.length) {
-      ET.$$('#results [data-sample]').forEach(function (b) {
+      ET.$$('#results [data-shelf]').forEach(function (b) {
         b.addEventListener('click', function () {
-          var at = b.getAttribute('data-sample').split(':');
-          ET.partnerPreview.open(partnerById(at[0]), +at[1], hits.filter(function (r) { return partnerOf(r) === 'dbs'; })[0]);
+          ET.partnerPreview.open(partnerById(b.getAttribute('data-shelf')),
+            hits.filter(function (r) { return partnerOf(r) === 'dbs'; })[0]);
         });
       });
     }
@@ -514,12 +506,12 @@ window.ET.module('library', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save'], f
     var scopeLang = lockedLang || state.lang;
     var total = scopeLang ? lib.resources.filter(function (r) { return r.lang === scopeLang; }).length
                           : lib.resources.length;
-    var onPreview = state.partner && !hits.length && samplesShown();
-    ET.$('#count').innerHTML = onPreview ? '<span lang="en">Sample shelf: where this partner\'s library would appear</span>'
+    var onPreview = state.partner && !hits.length && shelvesShown();
+    ET.$('#count').innerHTML = onPreview ? '<span lang="en">An empty shelf, ready for this partner\'s library</span>'
       : hits.length === total
       ? h('lib.countall', { n: total })
       : h('lib.count', { n: hits.length, total: total });
-    var any = hits.length > 0 || (!state.bulk && samplesShown());
+    var any = hits.length > 0 || (!state.bulk && shelvesShown());
     ET.$('#empty').hidden = any;
     ET.$('#results').hidden = !any;
     syncUrl();
