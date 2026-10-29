@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sharing with no internet: the receiving app fetches films over plain HTTP
+     from the sending phone's own Wi-Fi (HotspotServer, http://192.168.x.y:8080).
+     That address changes every time, so plain HTTP cannot be limited to one
+     host. Everything else the app fetches is https. -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

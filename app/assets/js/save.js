@@ -43,7 +43,11 @@ window.ET.module('save', ['core', 'ui/shell', 'i18n'], function (ET) {
     var k = kept()[new URL(url, location.href).href];
     return k ? window.Capacitor.convertFileSrc(k.uri) : url;
   }
+  /* job.from, when set, is where the bytes come from (another phone nearby,
+     features/hotspot.js); the copy is still remembered by its own address,
+     so the film plays from the phone wherever it was first found. */
   function keepInApp(job, url, signal, onProgress) {
+    var src = job.from || url;
     // Two films can share a title, so the address picks the folder.
     var id = 0;
     for (var i = 0; i < url.length; i++) id = (id * 31 + url.charCodeAt(i)) >>> 0;
@@ -59,12 +63,12 @@ window.ET.module('save', ['core', 'ui/shell', 'i18n'], function (ET) {
       .then(function (r) {
         uri = r.uri;
         return CAP.FileTransfer.addListener('progress', function (e) {
-          if (e.url !== url) return;
+          if (e.url !== src) return;
           if (e.lengthComputable && e.contentLength) size = e.contentLength;
           onProgress(e.bytes, size);
         });
       })
-      .then(function (h) { handle = h; return CAP.FileTransfer.downloadFile({ url: url, path: uri, progress: true }); })
+      .then(function (h) { handle = h; return CAP.FileTransfer.downloadFile({ url: src, path: uri, progress: true }); })
       .then(function () {
         if (handle) handle.remove();
         // Stopped part-way: the plugin cannot be interrupted, so the copy it

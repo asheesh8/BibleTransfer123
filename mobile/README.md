@@ -48,10 +48,11 @@ init script in `~/.gradle/init.d/` (`https://maven-central.storage-download.goog
 
 - **Scan** (header, and Nearby → Receive): `app/assets/js/features/scan.js` reads codes with the camera inside the app and opens our links among the app's files (`www/routes.json` holds the website's short links).
 - **Share with no internet** (Android, Nearby): `HotspotPlugin.java` opens the phone's own Wi-Fi (LocalOnlyHotspot) and `HotspotServer.java` serves only the chosen kept files on port 8080. The page shows two QR codes: join the Wi-Fi, then open the list. The other phone needs no app or internet. iPhone apps cannot open a network like this, so in a mixed pair the Android phone shares.
+- **Receive with no internet** (both apps, Send tab): scan the sharing phone's first code; the Android app joins its Wi-Fi by itself (`HotspotPlugin.join`, Android 10+), an iPhone joins in Settings and scans the second code. The app reads `/list.json` and saves the films into its own storage under their original addresses, so they play offline and show under "Saved on this phone". Plain HTTP to the other phone is allowed by `res/xml/network_security_config.xml` (Android) and `NSAllowsLocalNetworking` (iOS).
 
 ## Not done yet (Phase 1 and 2)
 
 - Downloads that continue with the screen locked (kept files are listed under "Saved on this phone" on Home, with Delete)
-- Receiving into the app over the hotspot (today the other phone saves into its browser's downloads), and joining the Wi-Fi from the in-app scanner
+- iPhone as the sharing phone (Multipeer Connectivity, or serving files on the receiver's network), and joining the Wi-Fi from the iPhone app (needs the Hotspot Configuration entitlement)
 - Native share sheet (Android WebView has no `navigator.share`)
 - Store listings, signing, TestFlight and Play internal testing

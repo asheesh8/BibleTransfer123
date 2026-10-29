@@ -23,6 +23,8 @@ import java.util.regex.Pattern;
  *
  *   GET /             the page the app built (the list of files, in the
  *                     reader's language), served as it is
+ *   GET /list.json    the same list for the app on the other phone: each
+ *                     file's place, name, size, and the film it belongs to
  *   GET /f/<n>/<name> file n of the list, with Range so a browser can play
  *                     it or carry on a broken download
  *
@@ -41,14 +43,16 @@ class HotspotServer {
     private final int port;
     private final List<Entry> files;
     private final byte[] page;
+    private final byte[] list;
     private final AtomicInteger served = new AtomicInteger();
     private ServerSocket socket;
     private ExecutorService pool;
 
-    HotspotServer(int port, List<Entry> files, String page) {
+    HotspotServer(int port, List<Entry> files, String page, String list) {
         this.port = port;
         this.files = files;
         this.page = page.getBytes(StandardCharsets.UTF_8);
+        this.list = list.getBytes(StandardCharsets.UTF_8);
     }
 
     int served() { return served.get(); }
@@ -112,6 +116,14 @@ class HotspotServer {
                     "Content-Length: " + page.length + "\r\nCache-Control: no-store\r\nConnection: close\r\n\r\n")
                     .getBytes(StandardCharsets.US_ASCII));
                 if (!head) out.write(page);
+                out.flush();
+                return;
+            }
+            if (target.equals("/list.json")) {
+                out.write(("HTTP/1.1 200 OK\r\nContent-Type: application/json; charset=utf-8\r\n" +
+                    "Content-Length: " + list.length + "\r\nCache-Control: no-store\r\nConnection: close\r\n\r\n")
+                    .getBytes(StandardCharsets.US_ASCII));
+                if (!head) out.write(list);
                 out.flush();
                 return;
             }

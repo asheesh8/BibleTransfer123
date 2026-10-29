@@ -565,7 +565,11 @@ window.ET.module('item', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save', 'data
           b.href = composerUrl(k, composerIntent.url);
         } else if (k === 'nearby') {
           ET.analytics.track('share_intent', { resource: r.id, language: r.lang, channel: 'nearby', status: 'started' });
-          location.href = ET.scopedUrl('nearby.html', { id: r.id });
+          // Kept in the Android app: straight to sharing with no internet.
+          var kf = ET.keptFiles();
+          var keptHere = ET.native && window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.Hotspot &&
+            Object.keys(kf).some(function (u) { return kf[u].id === r.id; });
+          location.href = ET.scopedUrl('nearby.html', keptHere ? { id: r.id, offline: 'send' } : { id: r.id });
         }
       });
     });
