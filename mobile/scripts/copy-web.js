@@ -11,9 +11,10 @@
                      pages play them from the live site instead, so the app
                      download stays small; their posters stay in the app
 
-   And one change on the way: pages load the admin's library switches with
-   <script src="api/visibility">, which the app has no server to answer, so the
-   copies ask the live site instead. Offline that fails quietly and the switches
+   On the way, core.js gains window.ET_APP_VERSION, the app's version. And
+   pages load the admin's library switches with <script src="api/visibility">,
+   which the app has no server to answer, so the copies ask the live site
+   instead. Offline that fails quietly and the switches
    built into the catalogue apply, exactly as off a card.
 
    Plus routes.json: the website's short links (/kisii, /pidgin, /privacy)
@@ -26,6 +27,10 @@ const path = require('path');
 const SRC = path.resolve(__dirname, '..', '..', 'app');
 const OUT = path.resolve(__dirname, '..', 'www');
 const LIVE = 'https://www.bibletransfer123.org';
+// The app's version (mobile/package.json, kept equal to Android's versionName
+// and iPhone's MARKETING_VERSION by tests/test_mobile_release.py), for
+// features/app.js and analytics.
+const VERSION = require('../package.json').version;
 const SKIP = new Set(['admin', 'assets/og', 'assets/library', 'sw.js']);
 
 function copy(rel) {
@@ -44,7 +49,8 @@ function copy(rel) {
     fs.writeFileSync(to, fs.readFileSync(from, 'utf8')
       .replace(/src="api\/visibility"/g, `src="${LIVE}/api/visibility"`));
   } else if (rel.endsWith('.js')) {
-    fs.writeFileSync(to, fs.readFileSync(from, 'utf8')
+    fs.writeFileSync(to, (rel === 'assets/js/core.js' ? `window.ET_APP_VERSION = '${VERSION}';\n` : '') +
+      fs.readFileSync(from, 'utf8')
       .replace(/<source src="assets\/media\//g, `<source src="${LIVE}/assets/media/`));
   } else {
     fs.copyFileSync(from, to);

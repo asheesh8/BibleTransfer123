@@ -81,24 +81,31 @@ window.ET = (function () {
     };
   }
 
-  /* Android's WebView has no navigator.share, so in the app the phone's own
-     share sheet comes from Capacitor's Share plugin. Pages keep calling
-     navigator.share as they do on the web; a closed sheet rejects with an
-     AbortError there too. */
-  if (native && typeof navigator.share !== 'function' && window.Capacitor.Plugins &&
-      window.Capacitor.Plugins.Share) {
+  /* Online features VillageServer can switch off in every app at once, from
+     registry/app-config.json, without a new release. features/app.js keeps
+     the last answer from /api/app-config; until there is one, all are on. The
+     website and cards always have them all. */
+  function feature(name) {
+    if (!native) return true;
     try {
-      navigator.share = function (data) {
-        data = data || {};
-        return window.Capacitor.Plugins.Share.share({ title: data.title, text: data.text, url: data.url })
-          .then(function () {}, function (err) {
-            var e = new Error((err && err.message) || 'Share cancelled');
-            e.name = /cancel/i.test(e.message) ? 'AbortError' : 'Error';
-            throw e;
-          });
-      };
-    } catch (e) { /* navigator is read-only here; the share row stays hidden */ }
+      var c = JSON.parse(window.localStorage.getItem('et.appconfig') || 'null');
+      return !(c && c.data && c.data.features && c.data.features[name] === false);
+    } catch (e) { return true; }
   }
+
+  /* Android's WebView has no navigator.share, so the app's share sheet comes
+     from Capacitor's Share plugin; a closed sheet rejects with AbortError. */
+  var Share = native && window.Capacitor.Plugins && window.Capacitor.Plugins.Share;
+  if (Share && typeof navigator.share !== 'function') try {
+    navigator.share = function (d) {
+      d = d || {};
+      return Share.share({ title: d.title, text: d.text, url: d.url }).then(function () {}, function (err) {
+        var e = new Error((err && err.message) || 'Share cancelled');
+        e.name = /cancel/i.test(e.message) ? 'AbortError' : 'Error';
+        throw e;
+      });
+    };
+  } catch (e) { /* read-only navigator: the share row stays hidden */ }
 
   // ------------------------------------------------------------- modules
   // Each file registers one module and names the modules it needs. Pages
@@ -374,7 +381,7 @@ window.ET = (function () {
 
   var api = {
     keptFiles: keptFiles, forgetKept: forgetKept,
-    native: native, online: online, publicOrigin: publicOrigin, publicHref: publicHref,
+    native: native, online: online, publicOrigin: publicOrigin, publicHref: publicHref, feature: feature,
     store: store, esc: esc, qs: qs, human: human, pad: pad, $: $, $$: $$,
     theme: theme, library: library, byId: byId, displayTitle: displayTitle,
     canInstall: canInstall, onInstallable: onInstallable,

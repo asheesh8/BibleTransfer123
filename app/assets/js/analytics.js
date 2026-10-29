@@ -455,7 +455,8 @@ window.ET.module('analytics', ['core', 'i18n'], function (ET) {
   }
   function allowed() {
     var c = consent();
-    return web && navigator.globalPrivacyControl !== true && !!(c && c.analytics);
+    return web && navigator.globalPrivacyControl !== true && !!(c && c.analytics) &&
+      (!ET.feature || ET.feature('analytics'));
   }
   function uuid() {
     if (!window.crypto || !window.crypto.getRandomValues) return '';

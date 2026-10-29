@@ -521,5 +521,13 @@
   "sharevid.sub": "Short video, each one na about 30 seconds. Di video dey for English.",
   "sharevid.facebook": "For Facebook",
   "sharevid.email": "Use email or Gmail",
-  "sharevid.whatsapp": "For WhatsApp"
+  "sharevid.whatsapp": "For WhatsApp",
+  "app.update.title": "Abeg update di app",
+  "app.update.body": "Dis version of di app no dey work again. Get di new one from di store. Di films wey you save go still dey dis phone.",
+  "app.update.go": "Update",
+  "app.update.available": "New version of di app don ready for di store.",
+  "app.privacy": "Privacy",
+  "app.delete": "Delete my data",
+  "app.help": "Help and contact",
+  "app.version": "Version {v}"
 };

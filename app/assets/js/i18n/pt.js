@@ -521,5 +521,13 @@
   "sharevid.sub": "Vídeos curtos, de cerca de 30 segundos cada. Os vídeos estão em inglês.",
   "sharevid.facebook": "No Facebook",
   "sharevid.email": "Por e-mail ou Gmail",
-  "sharevid.whatsapp": "No WhatsApp"
+  "sharevid.whatsapp": "No WhatsApp",
+  "app.update.title": "Atualize o aplicativo",
+  "app.update.body": "Esta versão do aplicativo já não funciona. Instale a nova na loja. Os seus filmes guardados ficam neste telefone.",
+  "app.update.go": "Atualizar",
+  "app.update.available": "Há uma nova versão do aplicativo pronta na loja.",
+  "app.privacy": "Privacidade",
+  "app.delete": "Apagar os meus dados",
+  "app.help": "Ajuda e contacto",
+  "app.version": "Versão {v}"
 };

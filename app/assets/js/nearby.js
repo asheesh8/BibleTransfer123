@@ -380,7 +380,7 @@ window.ET.module('nearby', ['core', 'ui/shell', 'i18n', 'save'], function (ET) {
                      : '<div class="note info"><p>' + h('offline.iphone') + '</p></div>') +
             tile('r-offrecv', 'scan', 'sky', h('offline.receive'), h('offline.receive.sub')) +
           '</div>' +
-          (S.kind && S.kind !== 'none'
+          (S.kind && S.kind !== 'none' && ET.feature('nearbyOnline')
             ? '<p class="flabel" style="margin-top:1.4rem">' + h('offline.online') + '</p><div class="stack">' + online + '</div>'
             : '')
         : '<p class="muted">' + h('nearby.lead') + '</p><div class="stack">' + online + '</div>'));

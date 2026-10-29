@@ -521,5 +521,13 @@
   "sharevid.sub": "Horonan-tsary fohy, eo amin'ny 30 segondra avy. Amin'ny teny anglisy ireo horonan-tsary.",
   "sharevid.facebook": "Amin'ny Facebook",
   "sharevid.email": "Amin'ny mailaka na Gmail",
-  "sharevid.whatsapp": "Amin'ny WhatsApp"
+  "sharevid.whatsapp": "Amin'ny WhatsApp",
+  "app.update.title": "Havaozy ny fampiharana azafady",
+  "app.update.body": "Tsy mandeha intsony ity kinovan’ny fampiharana ity. Alaivo ao amin’ny fivarotana ilay vaovao. Hijanona ato amin’ity finday ity ireo sarimihetsika notehirizinao.",
+  "app.update.go": "Havaozy",
+  "app.update.available": "Misy kinovan’ny fampiharana vaovao vonona ao amin’ny fivarotana.",
+  "app.privacy": "Fiainana manokana",
+  "app.delete": "Fafao ny angon-drakitro",
+  "app.help": "Fanampiana sy fifandraisana",
+  "app.version": "Kinova {v}"
 };
