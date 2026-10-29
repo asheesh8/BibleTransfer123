@@ -23,8 +23,13 @@ There is one codebase: a change to `app/` reaches the website, the microSD card,
   app's own storage (`LIBRARY_NO_CLOUD/library/`) with the native FileTransfer plugin, and records
   it under `et.kept`. `ET.save.local(url)` turns a kept address into its on-phone copy, so
   `item.js` plays films and audio from the phone with no internet. `tests/test_keep_in_app.js`.
-- `scripts/make_icons.py` redraws the launcher icons and splash screens from
-  `app/assets/icon/icon-512.png`.
+- `node scripts/make-icons.js` draws the launcher icons (plum, plus Android's adaptive and
+  themed layers) and the splash screens (Kandili asleep on cream, or near-black in dark mode)
+  from `app/assets/js/brand/mascot.js` itself, with Playwright's Chromium. The splash stays up
+  (`@capacitor/splash-screen`, `launchAutoHide: false`) until `features/launch.js` has drawn
+  the same Kandili on the same spot; then he wakes, waves and the library fades in. Loaded by
+  `ui/shell.js` once per app start, never holding the splash more than 4 s. See it on the
+  website with `?launch`.
 
 ## Building
 

@@ -1,36 +1,16 @@
 /* ============================================================================
-   ET.mascot: Kandili, the lantern, drawn and brought to life.
+   ET.mascot: Kandili, the lantern, drawn and brought to life (needs core.js
+   and css/components/mascot.css). SVG parts rigged like a puppet: handle,
+   flame and arms hang off the body on their own pivots. A pose swaps parts,
+   a move is Web Animations, a mood is a CSS loop on data-mood; only transform
+   and opacity animate, no Lottie or Rive (docs/decisions/0003). The idle
+   never repeats: layered loops, blinks, glances, the odd fidget.
 
-   Depends on: core.js (the module registry) and css/components/mascot.css for the
-   looping moods. Classic script on window.ET, runs on file://.
-
-   HOW IT IS BUILT
-   Flat art cut into SVG groups, nested like a puppet rig: the body carries
-   cap, glass, face and base; handle, flame and arms hang off it on their own
-   pivots. A pose swaps parts, a move is Web Animations, a mood is a CSS loop
-   on data-mood. Only transform and opacity animate, and there is no Lottie
-   or Rive runtime. See docs/decisions/0003-mascot-cutout-svg.md.
-
-   HOW IT MOVES
-   Every move uses the classic principles: anticipation (a crouch before a
-   jump), squash and stretch that keeps volume, follow-through (handle,
-   flame and arms lag and settle after the body), overshoot, and an idle
-   whose layers never line up the same way twice, with blinks and glances.
-
-   Features never animate parts themselves. They call one of:
-
-     var k = ET.mascot.create(el, { pose: 'hello', mood: 'idle', size: '8rem' });
-     k.moment('saved');        // pose + move + mood for a moment in the app
-     k.play('hop');            // one move; returns a Promise
-     k.pose('offline');        // swap the drawing, no motion
-     k.mood('doze');           // change the loop
-     k.destroy();
-
-     ET.mascot.markup('share', { size: 48 })   // a still SVG string
-     ET.mascot.mount(document)                  // upgrade every [data-kandili]
-
-   The drawing follows Ashish's final ChatGPT art (brand/mascot in the
-   project files).
+     var k = ET.mascot.create(el, { pose: 'hello', size: '8rem', tappable: true });
+     k.moment('saved');   k.play('hop');   k.pose('offline');   k.mood('doze');
+     k.say(1200);         // the mouth moves while a bubble speaks
+     k.look(el);          // the eyes turn to something on the page
+     ET.mascot.markup('share', { size: 48 }); ET.mascot.mount(document);
    ========================================================================= */
 
 window.ET.module('brand/mascot', ['core'], function (ET) {
@@ -45,10 +25,9 @@ window.ET.module('brand/mascot', ['core'], function (ET) {
     fire: '#F28C1C', gold: '#FFC93C', warm: '#F6DFAE'
   };
 
-  // ------------------------------------------------------------------ parts
-  // Stage frame: the lantern stands on y = 120, the glass is centred on the
-  // origin, and the viewer's right is +x. Flat fills with one darker tone
-  // per part for volume, no outlines, no gradients.
+  // ---- parts
+  // Stage frame: feet on y = 120, glass centred on the origin, viewer's
+  // right is +x. Flat fills, one darker tone per part, no outlines.
   var f = function (c) { return ' fill="' + c + '"'; };
   var line = function (c, w) { return ' stroke="' + c + '" stroke-width="' + w + '" stroke-linecap="round" stroke-linejoin="round" fill="none"'; };
   var W = '#fff';
@@ -97,7 +76,7 @@ window.ET.module('brand/mascot', ['core'], function (ET) {
     '<circle cx="-84" cy="0" r="10"' + f(C.mid) + '/><circle cx="84" cy="0" r="10"' + f(C.mid) + '/>' +
     '<circle cx="-85" cy="-2" r="4.5"' + f(C.brass) + '/><circle cx="83" cy="-2" r="4.5"' + f(C.brass) + '/>';
 
-  // What shows through the glass when Kandili turns its back (twirl).
+  // Seen through the glass when it turns its back (twirl).
   var BACK = '<g class="k-back" opacity="0"><path d="M0,-34 C-14,-12 -26,2 -24,22 C-22,40 -10,48 0,48 C10,48 22,40 24,22 C26,2 14,-12 0,-34z"' + f(C.warm) + '/>' +
              '<path d="M0,-6 C-6,6 -11,14 -10,24 C-9,32 -4,36 0,36 C4,36 9,32 10,24 C11,14 6,6 0,-6z"' + f(C.glow) + '/></g>';
 
@@ -112,7 +91,7 @@ window.ET.module('brand/mascot', ['core'], function (ET) {
   var CHEEKS = '<ellipse cx="-47" cy="30" rx="10" ry="6"' + f(C.blush) + ' opacity=".8"/>' +
                '<ellipse cx="47" cy="30" rx="10" ry="6"' + f(C.blush) + ' opacity=".8"/>';
 
-  // The little flame left on the ground when Kandili flies off to a friend.
+  // The flame left on the ground when it flies off to a friend.
   var EMBER = '<path d="M0,86 C-10,100 -9,110 0,115 C9,110 10,100 0,86z"' + f(C.fire) + '/>' +
               '<path d="M0,98 C-4,104 -4,109 0,112 C4,109 4,104 0,98z"' + f(C.gold) + '/>';
 
@@ -148,9 +127,8 @@ window.ET.module('brand/mascot', ['core'], function (ET) {
     tiny:   '<ellipse cx="0" cy="39" rx="3.6" ry="3"' + f(C.face) + '/>'
   };
 
-  // A mitten hanging from the shoulder at (0, 0); the pose turns it. The
-  // .k-arm group pivots on the shoulder, so swings and follow-through act
-  // from there. k-arm--r is the arm on the viewer's right, the one that waves.
+  // A mitten hung from the shoulder; .k-arm pivots there, so swings act
+  // from it. k-arm--r (viewer's right) is the one that waves.
   var arm = function (side, deg) {
     var s = side === 'r' ? 1 : -1, n = function (v) { return s * v; };
     return '<g transform="translate(' + n(82) + ',30)"><g class="k-arm k-arm--' + side + '">' +
@@ -170,8 +148,7 @@ window.ET.module('brand/mascot', ['core'], function (ET) {
     hold:  [50, 50]
   };
 
-  // Props are held in both hands, centred low on the glass, so a mirrored
-  // pose still offers with both hands and nothing points one way.
+  // Props sit centred in both hands, so a mirrored pose still gives with both.
   var PROP = {
     none: '',
     play: '<circle cx="0" cy="62" r="23"' + f(C.go) + '/><path d="M-7,51 L12,62 L-7,73z"' + f(W) + '/>',
@@ -196,7 +173,7 @@ window.ET.module('brand/mascot', ['core'], function (ET) {
              '<circle class="k-bubble" cx="68" cy="-150" r="4"' + f(C.sky) + '/>'
   };
 
-  // ------------------------------------------------------------------ poses
+  // ---- poses
   // One row per moment in the Kandili brief, section 5.
   var POSES = {
     neutral:  { eyes: 'open',    mouth: 'smile',  flame: 'normal', arms: 'none',  prop: 'none',  fx: 'none',     glow: 1 },
@@ -211,9 +188,9 @@ window.ET.module('brand/mascot', ['core'], function (ET) {
     sleeping: { eyes: 'closed',  mouth: 'tiny',   flame: 'ember',  arms: 'none',  prop: 'none',  fx: 'bubbles',  glow: .4 }
   };
 
-  // ------------------------------------------------------------------ moves
-  // Each is a list of [selector, keyframes, options], under 1.4 s, never
-  // blocking a tap. k(offset, transform[, opacity]) builds one keyframe.
+  // ---- moves
+  // [selector, keyframes, options] lists, under 1.5 s, never blocking a tap.
+  // k(offset, transform[, opacity]) builds one keyframe.
   var k = function (o, t, op) { var r = { offset: o, transform: t }; if (op != null) r.opacity = op; return r; };
   var E = {
     out: 'cubic-bezier(.2,.8,.2,1)',          // fast start, soft landing
@@ -225,16 +202,14 @@ window.ET.module('brand/mascot', ['core'], function (ET) {
   var fall = function (fr) { fr.easing = 'cubic-bezier(.5,0,.8,.4)'; return fr; };   // gravity
   var T = function (d, e) { return { duration: d, easing: e || 'linear' }; };
 
-  // The body's squash-and-stretch jump, shared by hop and twirl. Volume is
-  // kept: when it is wider it is shorter.
+  // Squash-and-stretch jump for hop and twirl; wider is always shorter.
   var jump = function (h, spin) {
     var t = function (o, y, sx, sy) { return k(o, 'translateY(' + y + 'px) scale(' + sx + ',' + sy + ')'); };
     // With spin, x scale runs through -1: a flat flip, the back shown midway.
     return [t(0, 0, 1, 1), t(.16, 0, 1.14, .84), t(.32, -h * .7, .88, 1.14), t(.46, -h, spin ? -1 : 1, 1),
             t(.66, -4, .94, 1.08), t(.74, 0, 1.18, .8), t(.86, 0, .95, 1.05), t(.94, 0, 1.02, .98), t(1, 0, 1, 1)];
   };
-  // Parts that hang off the body lag it: they swing up as it falls and
-  // settle a beat after it lands.
+  // Hanging parts lag the body and settle a beat after it lands.
   var lag = function (amp) {
     var at = [0, .18, .34, .5, .7, .82, .92, 1], by = [0, -.4, 1, -.3, -1, .6, -.25, 0];
     return at.map(function (o, i) { return k(o, 'rotate(' + by[i] * amp + 'deg)'); });
@@ -260,7 +235,6 @@ window.ET.module('brand/mascot', ['core'], function (ET) {
     ],
     twirl: [
       ['.k-body', jump(64, true), T(1100)],
-      // The back view: the face goes while the lantern faces away.
       ['.k-face', turn(1), T(1100)],
       ['.k-back', turn(0), T(1100)],
       ['.k-handle', lag(20), T(1250)],
@@ -274,8 +248,7 @@ window.ET.module('brand/mascot', ['core'], function (ET) {
       ], T(1100)]
     ],
     fly: [
-      // Crouch, launch like a sky lantern, sway up and away, then drop back
-      // in from above and land with a squash.
+      // Crouch, rise like a sky lantern, drop back in and land with a squash.
       ['.k-fly', [[0, 0, 0, 0, 1], [.1, 0, 6, 0, 1], [.3, -8, -80, -7, 1], [.46, 10, -170, 6, 1],
                   [.56, 0, -240, -3, 0], [.66, 0, -160, 0, 0], [.8, 0, -20, 0, 1], [.86, 0, 0, 0, 1], [1, 0, 0, 0, 1]].map(function (x) {
         return k(x[0], 'translate(' + x[1] + 'px,' + x[2] + 'px) rotate(' + x[3] + 'deg)', x[4]);
@@ -309,8 +282,7 @@ window.ET.module('brand/mascot', ['core'], function (ET) {
       ], T(1200, E.inout)]
     ],
     glow: [
-      // The card drops in; Kandili catches it with a squash and a happy
-      // wiggle while the light swells.
+      // The card drops in, caught with a squash and a wiggle; the light swells.
       ['.k-prop', [
         k(0, 'translateY(-150px) scale(.6)', 0), fall(k(.18, 'translateY(-150px) scale(.6)', 1)),
         k(.48, 'translateY(6px) scale(1.08,.92)', 1), k(.6, 'translateY(-4px) scale(.97,1.03)', 1),
@@ -331,6 +303,18 @@ window.ET.module('brand/mascot', ['core'], function (ET) {
       ['.k-handle', lag(10), T(760)],
       ['.k-flame', sc([[0, 1, 1], [.2, 1.2, .8], [.42, .88, 1.2], [.7, 1.04, .97], [1, 1, 1]]), T(620)]
     ],
+    // Fidgets: small things it does on its own while idle.
+    flare: [
+      ['.k-flame', sc([[0, 1, 1], [.3, 1.2, 1.3], [.5, .92, 1.06], [.7, 1.04, .98], [1, 1, 1]]), T(900, E.out)],
+      ['.k-glowwrap', [k(0, 'scale(1)'), k(.35, 'scale(1.18)'), k(1, 'scale(1)')], T(900, E.inout)],
+      ['.k-body', sc([[0, 1, 1], [.3, .97, 1.04], [.6, 1.01, .99], [1, 1, 1]]), T(900, E.inout)]
+    ],
+    jiggle: [
+      ['.k-body', rs([[0, 0, 1, 1], [.2, -5, 1, 1], [.4, 4, 1, 1], [.6, -2, 1, 1], [.8, 1, 1, 1], [1, 0, 1, 1]]), T(800, E.inout)],
+      ['.k-handle', lag(14), T(1000)],
+      ['.k-arm--l', lag(-14), T(950)],
+      ['.k-arm--r', lag(14), T(950)]
+    ],
     dim: [
       // The flame gutters: a shiver, a shrink, and the light drops.
       ['.k-flame', [
@@ -345,7 +329,7 @@ window.ET.module('brand/mascot', ['core'], function (ET) {
 
   var MOODS = ['idle', 'doze', 'dim', 'think', 'still'];
 
-  // Moments: what features ask for. Pose, then the move, then the loop.
+  // Moments, what features ask for: a pose, a move, then a loop.
   var MOMENTS = {
     welcome:  { pose: 'hello',    move: 'wave',  mood: 'idle' },
     play:     { pose: 'play',     move: 'hop',   mood: 'idle' },
@@ -359,21 +343,11 @@ window.ET.module('brand/mascot', ['core'], function (ET) {
     ready:    { pose: 'saved',    move: 'hop',   mood: 'idle' },
     tap:      { pose: null,       move: 'nod',   mood: null }
   };
-  // The mood names in decision record 0003, kept as aliases.
+  // Mood names from decision record 0003, as aliases.
   var ALIASES = { idle: 'welcome', wave: 'welcome', cheer: 'milestone', fly: 'shared',
                   think: 'notfound', sad: 'offline', sleep: 'empty' };
 
-  // ----------------------------------------------------------------- motion
-  ET.motion = ET.motion || {
-    reduced: function () {
-      var forced = document.documentElement.getAttribute('data-motion');
-      if (forced === 'reduce') return true;
-      if (forced === 'full') return false;
-      return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-    }
-  };
-
-  // ----------------------------------------------------------------- markup
+  // ---- markup
   function inner(p) {
     var arms = ARMS[p.arms] || ARMS.none;
     var eyes = EYES[p.eyes];
@@ -416,7 +390,7 @@ window.ET.module('brand/mascot', ['core'], function (ET) {
       inner(POSES[name]) + '</svg>';
   }
 
-  // ---------------------------------------------------------- the instance
+  // ---- the instance
   function Kandili(host, opts) {
     opts = opts || {};
     this.host = host;
@@ -425,32 +399,69 @@ window.ET.module('brand/mascot', ['core'], function (ET) {
     if (opts.tappable) {
       this.svg.classList.add('is-tappable');
       var self = this;
-      this.svg.addEventListener('click', function () { self.play('nod'); });
+      // A tap nods; a third quick tap spins it.
+      this._taps = 0;
+      this.svg.addEventListener('click', function () {
+        clearTimeout(self._tapT);
+        self._tapT = setTimeout(function () { self._taps = 0; }, 900);
+        if (++self._taps < 3) return self.play('nod');
+        self._taps = 0;
+        self.play('twirl');
+      });
     }
     this._running = [];
-    this._blink = null;
-    this._glance = null;
     this._watch();
     this.mood(opts.mood || 'idle');
   }
 
-  Kandili.prototype.pose = function (name) {
+  // A new pose pops in with a squash, not a cut (pop false: a move follows).
+  Kandili.prototype.pose = function (name, pop) {
     name = resolvePose(name);
+    var was = this.svg.getAttribute('data-pose');
     this.svg.setAttribute('data-pose', name);
     this.svg.innerHTML = inner(POSES[name]);
+    var b = this.svg.querySelector('.k-body');
+    if (pop !== false && was !== name && b.animate && !ET.motion.reduced())
+      b.animate(sc([[0, 1.08, .9], [.45, .96, 1.05], [1, 1, 1]]), T(320, E.out));
+    return this;
+  };
+
+  // Talking: the mouth opens and closes while words show beside it.
+  Kandili.prototype.say = function (ms) {
+    var m = this.svg.querySelector('.k-mouth');
+    if (!m || !m.animate || ET.motion.reduced()) return this;
+    m.animate(sc([[0, 1, 1], [.3, 1.1, .45], [.6, .95, 1.25], [1, 1, 1]]),
+      { duration: 210, iterations: Math.max(1, Math.round((ms || 900) / 210)), easing: E.inout });
+    return this;
+  };
+
+  // The eyes turn to a thing on the page for a moment (a choice just made).
+  Kandili.prototype.look = function (el) {
+    if (!el) return this;
+    var a = this.svg.getBoundingClientRect(), b = el.getBoundingClientRect();
+    var dx = b.left + b.width / 2 - a.left - a.width / 2, dy = b.top + b.height / 2 - a.top - a.height / 2;
+    var d = Math.sqrt(dx * dx + dy * dy) || 1, rtl = this.svg.closest('[dir="rtl"]') ? -1 : 1;
+    return this._eyes(rtl * 7 * dx / d, 5 * dy / d, 1300);
+  };
+  Kandili.prototype._eyes = function (x, y, ms) {
+    var at = this.svg.querySelector('.k-look'), to = 'translate(' + x + 'px,' + y + 'px)';
+    if (at && at.animate && !ET.motion.reduced())
+      at.animate([k(0, 'translate(0,0)'), k(.16, to), k(.82, to), k(1, 'translate(0,0)')], { duration: ms, easing: E.inout });
     return this;
   };
 
   Kandili.prototype.mood = function (name) {
     if (MOODS.indexOf(name) === -1) name = 'idle';
+    var idle = name === 'idle';
     this.svg.setAttribute('data-mood', name);
-    this._scheduleBlink(name === 'idle' || name === 'think');
-    this._scheduleGlance(name === 'idle');
+    this._every('_blink', idle || name === 'think', 2500, 3500, this._doBlink);
+    this._every('_glance', idle, 5000, 5000, this._doGlance);
+    this._every('_fidget', idle, 8000, 8000, this._doFidget);
     return this;
   };
 
-  // Plays one move. Resolves when it ends (at once under reduced motion,
-  // where the pose simply shows). A new move cancels the one before it.
+  // One move; resolves when it ends (at once under reduced motion). A new
+  // move cancels the one before it.
   Kandili.prototype.play = function (name) {
     var steps = MOVES[name], svg = this.svg, self = this;
     this._cancel();
@@ -463,21 +474,21 @@ window.ET.module('brand/mascot', ['core'], function (ET) {
     this._running = players;
     return Promise.all(players.map(function (p) {
       return p.finished ? p.finished.catch(function () {}) : new Promise(function (r) { p.onfinish = r; });
-    })).then(function () { return self; });
+    })).then(function () { if (self._running === players) self._running = []; return self; });
   };
 
   Kandili.prototype.moment = function (name) {
     var m = MOMENTS[name] || MOMENTS[ALIASES[name]];
     if (!m) return Promise.resolve(this);
-    if (m.pose) this.pose(m.pose);
+    if (m.pose) this.pose(m.pose, !m.move);
     if (m.mood) this.mood(m.mood);
     return m.move ? this.play(m.move) : Promise.resolve(this);
   };
 
   Kandili.prototype.destroy = function () {
+    var self = this;
     this._cancel();
-    clearTimeout(this._blink);
-    clearTimeout(this._glance);
+    ['_blink', '_glance', '_fidget', '_tapT'].forEach(function (t) { clearTimeout(self[t]); });
     if (this._io) this._io.disconnect();
     document.removeEventListener('visibilitychange', this._onVis);
     this.host.innerHTML = '';
@@ -490,43 +501,35 @@ window.ET.module('brand/mascot', ['core'], function (ET) {
 
   Kandili.prototype._idle = function () { return !ET.motion.reduced() && !this._paused && !this._running.length; };
 
-  // Blinks at a random 2.5 to 6 s, one time in four a double blink; never
-  // under reduced motion, never while paused.
-  Kandili.prototype._scheduleBlink = function (on) {
+  // Calls fn every min to min + span ms, a fresh random wait each time.
+  Kandili.prototype._every = function (key, on, min, span, fn) {
     var self = this;
-    clearTimeout(this._blink);
-    if (!on) return;
-    this._blink = setTimeout(function () {
-      var eyes = self.svg.querySelector('.k-eyes');
-      if (eyes && eyes.animate && !ET.motion.reduced() && !self._paused) {
-        var once = [{ transform: 'scaleY(1)' }, { transform: 'scaleY(.08)', offset: .45 }, { transform: 'scaleY(1)' }];
-        var twice = [{ transform: 'scaleY(1)' }, { transform: 'scaleY(.08)', offset: .2 }, { transform: 'scaleY(1)', offset: .42 },
-                     { transform: 'scaleY(.08)', offset: .66 }, { transform: 'scaleY(1)' }];
-        var double = Math.random() < .25;
-        eyes.animate(double ? twice : once, { duration: double ? 380 : 170, easing: 'ease-in-out' });
-      }
-      self._scheduleBlink(true);
-    }, 2500 + Math.random() * 3500);
+    clearTimeout(this[key]);
+    if (on) this[key] = setTimeout(function () { fn.call(self); self._every(key, true, min, span, fn); }, min + Math.random() * span);
   };
 
-  // Now and then a curious look to one side, so the idle never loops.
-  Kandili.prototype._scheduleGlance = function (on) {
-    var self = this;
-    clearTimeout(this._glance);
-    if (!on) return;
-    this._glance = setTimeout(function () {
-      var look = self.svg.querySelector('.k-look');
-      if (look && look.animate && self._idle()) {
-        var dx = (Math.random() < .5 ? -1 : 1) * 5;
-        look.animate([
-          k(0, 'translate(0,0)'), k(.15, 'translate(' + dx + 'px,-1px)'), k(.8, 'translate(' + dx + 'px,-1px)'), k(1, 'translate(0,0)')
-        ], { duration: 1600, easing: E.inout });
-      }
-      self._scheduleGlance(true);
-    }, 5000 + Math.random() * 5000);
+  // Blinks, one in four a double, never under reduced motion or paused.
+  Kandili.prototype._doBlink = function () {
+    var eyes = this.svg.querySelector('.k-eyes'), two = Math.random() < .25;
+    if (eyes && eyes.animate && !ET.motion.reduced() && !this._paused)
+      eyes.animate(sc(two ? [[0, 1, 1], [.2, 1, .08], [.42, 1, 1], [.66, 1, .08], [1, 1, 1]] : [[0, 1, 1], [.45, 1, .08], [1, 1, 1]]),
+        { duration: two ? 380 : 170, easing: 'ease-in-out' });
+  };
+  // A curious look to one side now and then.
+  Kandili.prototype._doGlance = function () {
+    if (this._idle()) this._eyes((Math.random() < .5 ? -1 : 1) * 5, -1, 1600);
+  };
+  // A fidget (flare, jiggle, rarely a hop), one lantern on the page at a
+  // time so a screen of them never dances.
+  var lastFidget = 0;
+  Kandili.prototype._doFidget = function () {
+    var now = Date.now(), r = Math.random();
+    if (!this._idle() || now - lastFidget < 6000) return;
+    lastFidget = now;
+    this.play(r < .45 ? 'flare' : r < .85 ? 'jiggle' : 'hop');
   };
 
-  // Loops cost battery. Pause them off screen and in a hidden tab.
+  // Loops cost battery: pause them off screen and in a hidden tab.
   Kandili.prototype._watch = function () {
     var self = this;
     var set = function (paused) { self._paused = paused; self.svg.classList.toggle('is-paused', paused); };
@@ -541,27 +544,18 @@ window.ET.module('brand/mascot', ['core'], function (ET) {
     }
   };
 
-  // ------------------------------------------------------------------ mount
+  // ---- mount
   // <div data-kandili data-pose="hello" data-mood="idle" data-size="8rem"
   //      data-moment="welcome" data-label="…"></div>
   function mount(root) {
-    var els = (root || document).querySelectorAll('[data-kandili]:not([data-kandili-on])');
-    var made = [];
-    for (var i = 0; i < els.length; i++) {
-      var el = els[i];
+    return [].map.call((root || document).querySelectorAll('[data-kandili]:not([data-kandili-on])'), function (el) {
+      var a = function (n) { return el.getAttribute('data-' + n); };
       el.setAttribute('data-kandili-on', '');
-      var kd = new Kandili(el, {
-        pose: el.getAttribute('data-pose') || 'neutral',
-        mood: el.getAttribute('data-mood') || 'idle',
-        size: el.getAttribute('data-size') || null,
-        label: el.getAttribute('data-label') || '',
-        tappable: el.hasAttribute('data-tappable')
-      });
-      el.kandili = kd;
-      if (el.getAttribute('data-moment')) kd.moment(el.getAttribute('data-moment'));
-      made.push(kd);
-    }
-    return made;
+      var kd = el.kandili = new Kandili(el, { pose: a('pose') || 'neutral', mood: a('mood') || 'idle', size: a('size'),
+        label: a('label') || '', tappable: el.hasAttribute('data-tappable') });
+      if (a('moment')) kd.moment(a('moment'));
+      return kd;
+    });
   }
 
   ET.mascot = {
@@ -572,7 +566,10 @@ window.ET.module('brand/mascot', ['core'], function (ET) {
     MOVES: Object.keys(MOVES),
     MOODS: MOODS.slice(),
     MOMENTS: Object.keys(MOMENTS),
-    COLORS: C
+    COLORS: C,
+    // A feature's own move, built with the same helpers (features/launch.js).
+    addMove: function (name, steps) { if (!MOVES[name]) this.MOVES.push(name); MOVES[name] = steps; },
+    kit: { k: k, sc: sc, lag: lag, T: T, E: E }
   };
   return ET.mascot;
 });

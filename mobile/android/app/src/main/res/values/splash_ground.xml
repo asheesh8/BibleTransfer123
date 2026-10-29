@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The splash page (docs/design/color.md); values-night has the dark one.
+         features/launch.js paints the same colour as the app opens. -->
+    <color name="splash_ground">#FBF7F1</color>
+</resources>
