@@ -1201,7 +1201,7 @@ html[dir="rtl"] .ob-bubble::before { transform: rotate(-45deg); }
 .tour-art { flex: none; margin: 0 0 1.1rem; }
 .tour-art img {
   display: block; width: 100%; height: auto; max-height: 34vh;
-  aspect-ratio: 16 / 10; object-fit: cover; object-position: 62% 50%;
+  aspect-ratio: 16 / 10; object-fit: cover; object-position: 45% 40%;
   border-radius: var(--r-lg); border: 3px solid var(--surface);
   box-shadow: 0 10px 28px -14px rgba(42, 30, 34, .45);
 }
