@@ -382,11 +382,11 @@ window.ET.module('i18n', ['core'], function (ET) {
     if (guess) hello.unshift(guess);
     return '' +
       '<section class="ob-screen tour-hello" data-step="hello" lang="en" dir="ltr" aria-labelledby="tour-h-hello">' +
-        // Kandili over a village at dusk, flames drifting down to phones:
-        // the whole idea in one picture. 23 KB, size held so nothing jumps.
+        // A visiting pastor in a village at dusk, Kandili on his shoulder as the
+        // helper, phones passed hand to hand. 31 KB, size held so nothing jumps.
         '<div class="tour-art"><picture><source srcset="assets/art/kandili-village.webp" type="image/webp">' +
           '<img src="assets/art/kandili-village.jpg" width="971" height="465" decoding="async" ' +
-          'alt="Kandili the lantern floats over a village at night, sending small flames down to the phones people hold up."></picture></div>' +
+          'alt="A pastor with a Bible sits with families in a village at night, Kandili the little lantern on his shoulder, while people share phones hand to hand."></picture></div>' +
         '<p class="tour-brand">BibleTransfer<span>123</span></p>' +
         '<h1 class="tour-h display" id="tour-h-hello" tabindex="-1">Light that travels <span>phone to phone.</span></h1>' +
         '<p class="tour-sub">Bible films, audio Bibles and Scripture in your own language. Save them once, then pass them on. No internet needed.</p>' +
