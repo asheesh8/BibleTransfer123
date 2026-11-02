@@ -1,0 +1,2611 @@
+{
+ "generated": "DBS rendered Hindko inventory — 2026-11-02",
+ "languages": {
+  "hno": {
+   "name": "Hindko",
+   "native": "ہندکو",
+   "region": "Pakistan",
+   "speakers": "~5 million",
+   "blurb": "ہندکو میں بائبل، فلمیں اور مسیحی آڈیو۔",
+   "code": "hno",
+   "script": "arab",
+   "dir": "rtl",
+   "font": "naskh"
+  }
+ },
+ "resources": [
+  {
+   "id": "hno-film-hno-hindko-northern-jesus",
+   "lang": "hno",
+   "type": "film",
+   "title": "JESUS",
+   "native": "یسوع",
+   "langName": "ہندکو",
+   "source": "https://dbs.org/video/jesus/hno_hindko-northern_jesus",
+   "org": "Jesus Film Project",
+   "desc": "بائبل پر مبنی فلم، ہندکو میں۔ جو حصہ دیکھنا یا محفوظ کرنا چاہیں، اسے چنیں۔",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_01_the-beginning_1_jf6101-0-0_low.mp4",
+     "label": "حصہ ۱ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_02_birth-of-jesus_1_jf6102-0-0_low.mp4",
+     "label": "حصہ ۲ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_03_childhood-of-jesus_1_jf6103-0-0_low.mp4",
+     "label": "حصہ ۳ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_04_baptism-of-jesus-by-john_1_jf6104-0-0_low.mp4",
+     "label": "حصہ ۴ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_05_the-devil-tempts-jesus_1_jf6105-0-0_low.mp4",
+     "label": "حصہ ۵ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_06_jesus-proclaims-fulfillment-of-the-scriptures_1_jf6106-0-0_low.mp4",
+     "label": "حصہ ۶ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_07_parable-of-the-pharisee-and-tax-collector_1_jf6107-0-0_low.mp4",
+     "label": "حصہ ۷ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_08_miraculous-catch-of-fish_1_jf6108-0-0_low.mp4",
+     "label": "حصہ ۸ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_09_jairuss-daughter-brought-back-to-life_1_jf6109-0-0_low.mp4",
+     "label": "حصہ ۹ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_10_disciples-chosen_1_jf6110-0-0_low.mp4",
+     "label": "حصہ ۱۰ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_11_beatitudes_1_jf6111-0-0_low.mp4",
+     "label": "حصہ ۱۱ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_12_sermon-on-the-mount_1_jf6112-0-0_low.mp4",
+     "label": "حصہ ۱۲ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_13_blessed-are-those-who-hear-and-obey_1_jf6113-0-0_low.mp4",
+     "label": "حصہ ۱۳ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_14_sinful-woman-forgiven_1_jf6114-0-0_low.mp4",
+     "label": "حصہ ۱۴ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_15_women-disciples_1_jf6115-0-0_low.mp4",
+     "label": "حصہ ۱۵ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_16_john-the-baptist-in-prison_1_jf6116-0-0_low.mp4",
+     "label": "حصہ ۱۶ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_17_parable-of-the-sower-and-the-seed_1_jf6117-0-0_low.mp4",
+     "label": "حصہ ۱۷ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_18_parable-of-the-lamp_1_jf6118-0-0_low.mp4",
+     "label": "حصہ ۱۸ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_19_jesus-calms-the-storm_1_jf6119-0-0_low.mp4",
+     "label": "حصہ ۱۹ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_20_healing-of-the-demoniac_1_jf6120-0-0_low.mp4",
+     "label": "حصہ ۲۰ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_21_jesus-feeds-5000_1_jf6121-0-0_low.mp4",
+     "label": "حصہ ۲۱ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_22_peter-declares-jesus-to-be-the-christ_1_jf6122-0-0_low.mp4",
+     "label": "حصہ ۲۲ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_23_the-transfiguration_1_jf6123-0-0_low.mp4",
+     "label": "حصہ ۲۳ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_24_jesus-heals-boy-from-evil-spirit_1_jf6124-0-0_low.mp4",
+     "label": "حصہ ۲۴ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_25_the-lords-prayer_1_jf6125-0-0_low.mp4",
+     "label": "حصہ ۲۵ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_26_teaching-about-prayer-and-faith_1_jf6126-0-0_low.mp4",
+     "label": "حصہ ۲۶ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_27_woe-to-those-who-cause-others-to-sin_1_jf6127-0-0_low.mp4",
+     "label": "حصہ ۲۷ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_28_the-kingdom-of-god-as-a-mustard-seed_1_jf6128-0-0_low.mp4",
+     "label": "حصہ ۲۸ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_29_jesus-spends-time-with-sinners_1_jf6129-0-0_low.mp4",
+     "label": "حصہ ۲۹ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_30_healing-on-the-sabbath_1_jf6130-0-0_low.mp4",
+     "label": "حصہ ۳۰ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_31_parable-of-the-good-samaritan_1_jf6131-0-0_low.mp4",
+     "label": "حصہ ۳۱ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_32_healing-of-bartimaeus_1_jf6132-0-0_low.mp4",
+     "label": "حصہ ۳۲ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_33_jesus-and-zaccheus_1_jf6133-0-0_low.mp4",
+     "label": "حصہ ۳۳ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_34_jesus-predicts-his-death-and-resurrection_1_jf6134-0-0_low.mp4",
+     "label": "حصہ ۳۴ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_35_jesuss-triumphal-entry_1_jf6135-0-0_low.mp4",
+     "label": "حصہ ۳۵ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_36_jesus-weeps-over-jerusalem_1_jf6136-0-0_low.mp4",
+     "label": "حصہ ۳۶ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_37_jesus-drives-out-money-changers_1_jf6137-0-0_low.mp4",
+     "label": "حصہ ۳۷ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_38_widows-offering_1_jf6138-0-0_low.mp4",
+     "label": "حصہ ۳۸ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_39_annas-questions-jesuss-authority_1_jf6139-0-0_low.mp4",
+     "label": "حصہ ۳۹ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_40_parable-of-the-vineyard-and-tenants_1_jf6140-0-0_low.mp4",
+     "label": "حصہ ۴۰ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_41_paying-taxes-to-caesar_1_jf6141-0-0_low.mp4",
+     "label": "حصہ ۴۱ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_42_the-last-supper_1_jf6142-0-0_low.mp4",
+     "label": "حصہ ۴۲ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_43_upper-room-teaching_1_jf6143-0-0_low.mp4",
+     "label": "حصہ ۴۳ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_44_jesus-is-betrayed-and-arrested_1_jf6144-0-0_low.mp4",
+     "label": "حصہ ۴۴ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_45_peter-disowns-jesus_1_jf6145-0-0_low.mp4",
+     "label": "حصہ ۴۵ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_46_jesus-is-mocked-and-questioned_1_jf6146-0-0_low.mp4",
+     "label": "حصہ ۴۶ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_47_jesus-is-brought-to-pilate_1_jf6147-0-0_low.mp4",
+     "label": "حصہ ۴۷ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_48_jesus-is-brought-to-herod_1_jf6148-0-0_low.mp4",
+     "label": "حصہ ۴۸ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_49_jesus-is-sentenced_1_jf6149-0-0_low.mp4",
+     "label": "حصہ ۴۹ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_50_jesus-carries-his-cross_1_jf6150-0-0_low.mp4",
+     "label": "حصہ ۵۰ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_51_jesus-is-crucified_1_jf6151-0-0_low.mp4",
+     "label": "حصہ ۵۱ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_52_soldiers-gamble-for-jesuss-clothes_1_jf6152-0-0_low.mp4",
+     "label": "حصہ ۵۲ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_53_sign-on-the-cross_1_jf6153-0-0_low.mp4",
+     "label": "حصہ ۵۳ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_54_crucified-convicts_1_jf6154-0-0_low.mp4",
+     "label": "حصہ ۵۴ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_55_death-of-jesus_1_jf6155-0-0_low.mp4",
+     "label": "حصہ ۵۵ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_56_burial-of-jesus_1_jf6156-0-0_low.mp4",
+     "label": "حصہ ۵۶ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_57_angels-at-the-tomb_1_jf6157-0-0_low.mp4",
+     "label": "حصہ ۵۷ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_58_the-tomb-is-empty_1_jf6158-0-0_low.mp4",
+     "label": "حصہ ۵۸ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_59_resurrected-jesus-appears_1_jf6159-0-0_low.mp4",
+     "label": "حصہ ۵۹ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_60_great-commission-and-ascension_1_jf6160-0-0_low.mp4",
+     "label": "حصہ ۶۰ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_61_invitation-to-know-jesus-personally_1_jf6161-0-0_low.mp4",
+     "label": "حصہ ۶۱ (MP4)"
+    },
+    {
+     "url": "https://download.dbs.org/Jesus/hno_hindko-northern/hno_jesus_chapters_high.zip",
+     "label": "تمام حصے (ZIP)"
+    },
+    {
+     "url": "https://download.dbs.org/Jesus/hno_hindko-northern/hno_jesus_chapters_low.zip",
+     "label": "تمام حصے (ZIP)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/films/hno_hindko-northern/hno_JESUS_low.mp4",
+     "label": "پوری فلم (MP4) · SD"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/films/hno_hindko-northern/hno_JESUS.mp4",
+     "label": "پوری فلم (MP4) · HD"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/video/jesus/hno_hindko-northern_jesus",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "duration": "2:07:53",
+   "year": null,
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_01_the-beginning_1_jf6101-0-0_low.mp4",
+      "title": "حصہ ۱"
+     },
+     {
+      "n": 2,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_02_birth-of-jesus_1_jf6102-0-0_low.mp4",
+      "title": "حصہ ۲"
+     },
+     {
+      "n": 3,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_03_childhood-of-jesus_1_jf6103-0-0_low.mp4",
+      "title": "حصہ ۳"
+     },
+     {
+      "n": 4,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_04_baptism-of-jesus-by-john_1_jf6104-0-0_low.mp4",
+      "title": "حصہ ۴"
+     },
+     {
+      "n": 5,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_05_the-devil-tempts-jesus_1_jf6105-0-0_low.mp4",
+      "title": "حصہ ۵"
+     },
+     {
+      "n": 6,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_06_jesus-proclaims-fulfillment-of-the-scriptures_1_jf6106-0-0_low.mp4",
+      "title": "حصہ ۶"
+     },
+     {
+      "n": 7,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_07_parable-of-the-pharisee-and-tax-collector_1_jf6107-0-0_low.mp4",
+      "title": "حصہ ۷"
+     },
+     {
+      "n": 8,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_08_miraculous-catch-of-fish_1_jf6108-0-0_low.mp4",
+      "title": "حصہ ۸"
+     },
+     {
+      "n": 9,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_09_jairuss-daughter-brought-back-to-life_1_jf6109-0-0_low.mp4",
+      "title": "حصہ ۹"
+     },
+     {
+      "n": 10,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_10_disciples-chosen_1_jf6110-0-0_low.mp4",
+      "title": "حصہ ۱۰"
+     },
+     {
+      "n": 11,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_11_beatitudes_1_jf6111-0-0_low.mp4",
+      "title": "حصہ ۱۱"
+     },
+     {
+      "n": 12,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_12_sermon-on-the-mount_1_jf6112-0-0_low.mp4",
+      "title": "حصہ ۱۲"
+     },
+     {
+      "n": 13,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_13_blessed-are-those-who-hear-and-obey_1_jf6113-0-0_low.mp4",
+      "title": "حصہ ۱۳"
+     },
+     {
+      "n": 14,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_14_sinful-woman-forgiven_1_jf6114-0-0_low.mp4",
+      "title": "حصہ ۱۴"
+     },
+     {
+      "n": 15,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_15_women-disciples_1_jf6115-0-0_low.mp4",
+      "title": "حصہ ۱۵"
+     },
+     {
+      "n": 16,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_16_john-the-baptist-in-prison_1_jf6116-0-0_low.mp4",
+      "title": "حصہ ۱۶"
+     },
+     {
+      "n": 17,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_17_parable-of-the-sower-and-the-seed_1_jf6117-0-0_low.mp4",
+      "title": "حصہ ۱۷"
+     },
+     {
+      "n": 18,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_18_parable-of-the-lamp_1_jf6118-0-0_low.mp4",
+      "title": "حصہ ۱۸"
+     },
+     {
+      "n": 19,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_19_jesus-calms-the-storm_1_jf6119-0-0_low.mp4",
+      "title": "حصہ ۱۹"
+     },
+     {
+      "n": 20,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_20_healing-of-the-demoniac_1_jf6120-0-0_low.mp4",
+      "title": "حصہ ۲۰"
+     },
+     {
+      "n": 21,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_21_jesus-feeds-5000_1_jf6121-0-0_low.mp4",
+      "title": "حصہ ۲۱"
+     },
+     {
+      "n": 22,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_22_peter-declares-jesus-to-be-the-christ_1_jf6122-0-0_low.mp4",
+      "title": "حصہ ۲۲"
+     },
+     {
+      "n": 23,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_23_the-transfiguration_1_jf6123-0-0_low.mp4",
+      "title": "حصہ ۲۳"
+     },
+     {
+      "n": 24,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_24_jesus-heals-boy-from-evil-spirit_1_jf6124-0-0_low.mp4",
+      "title": "حصہ ۲۴"
+     },
+     {
+      "n": 25,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_25_the-lords-prayer_1_jf6125-0-0_low.mp4",
+      "title": "حصہ ۲۵"
+     },
+     {
+      "n": 26,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_26_teaching-about-prayer-and-faith_1_jf6126-0-0_low.mp4",
+      "title": "حصہ ۲۶"
+     },
+     {
+      "n": 27,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_27_woe-to-those-who-cause-others-to-sin_1_jf6127-0-0_low.mp4",
+      "title": "حصہ ۲۷"
+     },
+     {
+      "n": 28,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_28_the-kingdom-of-god-as-a-mustard-seed_1_jf6128-0-0_low.mp4",
+      "title": "حصہ ۲۸"
+     },
+     {
+      "n": 29,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_29_jesus-spends-time-with-sinners_1_jf6129-0-0_low.mp4",
+      "title": "حصہ ۲۹"
+     },
+     {
+      "n": 30,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_30_healing-on-the-sabbath_1_jf6130-0-0_low.mp4",
+      "title": "حصہ ۳۰"
+     },
+     {
+      "n": 31,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_31_parable-of-the-good-samaritan_1_jf6131-0-0_low.mp4",
+      "title": "حصہ ۳۱"
+     },
+     {
+      "n": 32,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_32_healing-of-bartimaeus_1_jf6132-0-0_low.mp4",
+      "title": "حصہ ۳۲"
+     },
+     {
+      "n": 33,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_33_jesus-and-zaccheus_1_jf6133-0-0_low.mp4",
+      "title": "حصہ ۳۳"
+     },
+     {
+      "n": 34,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_34_jesus-predicts-his-death-and-resurrection_1_jf6134-0-0_low.mp4",
+      "title": "حصہ ۳۴"
+     },
+     {
+      "n": 35,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_35_jesuss-triumphal-entry_1_jf6135-0-0_low.mp4",
+      "title": "حصہ ۳۵"
+     },
+     {
+      "n": 36,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_36_jesus-weeps-over-jerusalem_1_jf6136-0-0_low.mp4",
+      "title": "حصہ ۳۶"
+     },
+     {
+      "n": 37,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_37_jesus-drives-out-money-changers_1_jf6137-0-0_low.mp4",
+      "title": "حصہ ۳۷"
+     },
+     {
+      "n": 38,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_38_widows-offering_1_jf6138-0-0_low.mp4",
+      "title": "حصہ ۳۸"
+     },
+     {
+      "n": 39,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_39_annas-questions-jesuss-authority_1_jf6139-0-0_low.mp4",
+      "title": "حصہ ۳۹"
+     },
+     {
+      "n": 40,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_40_parable-of-the-vineyard-and-tenants_1_jf6140-0-0_low.mp4",
+      "title": "حصہ ۴۰"
+     },
+     {
+      "n": 41,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_41_paying-taxes-to-caesar_1_jf6141-0-0_low.mp4",
+      "title": "حصہ ۴۱"
+     },
+     {
+      "n": 42,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_42_the-last-supper_1_jf6142-0-0_low.mp4",
+      "title": "حصہ ۴۲"
+     },
+     {
+      "n": 43,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_43_upper-room-teaching_1_jf6143-0-0_low.mp4",
+      "title": "حصہ ۴۳"
+     },
+     {
+      "n": 44,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_44_jesus-is-betrayed-and-arrested_1_jf6144-0-0_low.mp4",
+      "title": "حصہ ۴۴"
+     },
+     {
+      "n": 45,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_45_peter-disowns-jesus_1_jf6145-0-0_low.mp4",
+      "title": "حصہ ۴۵"
+     },
+     {
+      "n": 46,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_46_jesus-is-mocked-and-questioned_1_jf6146-0-0_low.mp4",
+      "title": "حصہ ۴۶"
+     },
+     {
+      "n": 47,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_47_jesus-is-brought-to-pilate_1_jf6147-0-0_low.mp4",
+      "title": "حصہ ۴۷"
+     },
+     {
+      "n": 48,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_48_jesus-is-brought-to-herod_1_jf6148-0-0_low.mp4",
+      "title": "حصہ ۴۸"
+     },
+     {
+      "n": 49,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_49_jesus-is-sentenced_1_jf6149-0-0_low.mp4",
+      "title": "حصہ ۴۹"
+     },
+     {
+      "n": 50,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_50_jesus-carries-his-cross_1_jf6150-0-0_low.mp4",
+      "title": "حصہ ۵۰"
+     },
+     {
+      "n": 51,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_51_jesus-is-crucified_1_jf6151-0-0_low.mp4",
+      "title": "حصہ ۵۱"
+     },
+     {
+      "n": 52,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_52_soldiers-gamble-for-jesuss-clothes_1_jf6152-0-0_low.mp4",
+      "title": "حصہ ۵۲"
+     },
+     {
+      "n": 53,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_53_sign-on-the-cross_1_jf6153-0-0_low.mp4",
+      "title": "حصہ ۵۳"
+     },
+     {
+      "n": 54,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_54_crucified-convicts_1_jf6154-0-0_low.mp4",
+      "title": "حصہ ۵۴"
+     },
+     {
+      "n": 55,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_55_death-of-jesus_1_jf6155-0-0_low.mp4",
+      "title": "حصہ ۵۵"
+     },
+     {
+      "n": 56,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_56_burial-of-jesus_1_jf6156-0-0_low.mp4",
+      "title": "حصہ ۵۶"
+     },
+     {
+      "n": 57,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_57_angels-at-the-tomb_1_jf6157-0-0_low.mp4",
+      "title": "حصہ ۵۷"
+     },
+     {
+      "n": 58,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_58_the-tomb-is-empty_1_jf6158-0-0_low.mp4",
+      "title": "حصہ ۵۸"
+     },
+     {
+      "n": 59,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_59_resurrected-jesus-appears_1_jf6159-0-0_low.mp4",
+      "title": "حصہ ۵۹"
+     },
+     {
+      "n": 60,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_60_great-commission-and-ascension_1_jf6160-0-0_low.mp4",
+      "title": "حصہ ۶۰"
+     },
+     {
+      "n": 61,
+      "file": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_61_invitation-to-know-jesus-personally_1_jf6161-0-0_low.mp4",
+      "title": "حصہ ۶۱"
+     }
+    ]
+   }
+  },
+  {
+   "id": "hno-film-hno-ps-northern-hindko",
+   "lang": "hno",
+   "type": "film",
+   "title": "The Prophets' Story",
+   "native": "پیغمبراں دی کہانی",
+   "langName": "ہندکو",
+   "source": "https://dbs.org/video/ps/hno_ps_northern_hindko",
+   "org": "Prophets' Story",
+   "desc": "بائبل پر مبنی فلم، ہندکو میں۔",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/PS/films/hno_Prophets_Story_پیغمبراں_دی_کہانی_Northern_Hindko.mp4",
+     "label": "پوری فلم (MP4) · HD"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/video/ps/hno_ps_northern_hindko",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "duration": "0:10:15",
+   "year": null,
+   "play": {
+    "kind": "file",
+    "hd": "https://video.dbs.org/PS/films/hno_Prophets_Story_پیغمبراں_دی_کہانی_Northern_Hindko.mp4"
+   }
+  },
+  {
+   "id": "hno-film-hno-hindko-ibible-salvation",
+   "lang": "hno",
+   "type": "film",
+   "title": "iBible: Salvation Story",
+   "native": "iBible: یسوع دا حقیقی کہانڑی",
+   "langName": "ہندکو",
+   "source": "https://dbs.org/video/ibible/hno-hindko-ibible_salvation",
+   "org": "RevelationMedia",
+   "desc": "بائبل پر مبنی فلم، ہندکو میں۔",
+   "downloads": [
+    {
+     "url": "https://download.dbs.org/ibible/hno-hindko-ibible_salvation.zip",
+     "label": "پوری فلم (ZIP)"
+    },
+    {
+     "url": "https://video.dbs.org/ibible/films_low/hno-hindko-ibible_salvation-sd.mp4",
+     "label": "پوری فلم (MP4) · SD"
+    },
+    {
+     "url": "https://video.dbs.org/ibible/films/hno-hindko-ibible_salvation-hd.mp4",
+     "label": "پوری فلم (MP4) · HD"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/video/ibible/hno-hindko-ibible_salvation",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "duration": "9:17",
+   "year": null,
+   "play": {
+    "kind": "file",
+    "sd": "https://video.dbs.org/ibible/films_low/hno-hindko-ibible_salvation-sd.mp4",
+    "hd": "https://video.dbs.org/ibible/films/hno-hindko-ibible_salvation-hd.mp4"
+   }
+  },
+  {
+   "id": "hno-story-jesus",
+   "lang": "hno",
+   "type": "audio",
+   "title": "Story of Jesus",
+   "native": "یسوع کی کہانی (آڈیو)",
+   "langName": "ہندکو",
+   "source": "https://dbs.org/audio/collections/hno_StoryJesus_hindko_northern",
+   "org": "Story of Jesus",
+   "desc": "یسوع کی کہانی آڈیو میں: پوری ریکارڈنگ ایک ساتھ یا ۸ حصوں میں۔ جو چاہیں سنیں یا محفوظ کریں۔",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/soj/hno_StoryJesus_hindko_northern_full.mp3",
+     "label": "پوری کہانی (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/hno_StoryJesus_hindko_northern/StoryJesus_Hindko_Northern_1/StoryJesus_Hindko_Northern_Part_1.mp3",
+     "label": "حصہ ۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/hno_StoryJesus_hindko_northern/StoryJesus_Hindko_Northern_2/StoryJesus_Hindko_Northern_Part_2.mp3",
+     "label": "حصہ ۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/hno_StoryJesus_hindko_northern/StoryJesus_Hindko_Northern_3/StoryJesus_Hindko_Northern_Part_3.mp3",
+     "label": "حصہ ۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/hno_StoryJesus_hindko_northern/StoryJesus_Hindko_Northern_4/StoryJesus_Hindko_Northern_Part_4.mp3",
+     "label": "حصہ ۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/hno_StoryJesus_hindko_northern/StoryJesus_Hindko_Northern_5/StoryJesus_Hindko_Northern_Part_5.mp3",
+     "label": "حصہ ۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/hno_StoryJesus_hindko_northern/StoryJesus_Hindko_Northern_6/StoryJesus_Hindko_Northern_Part_6.mp3",
+     "label": "حصہ ۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/hno_StoryJesus_hindko_northern/StoryJesus_Hindko_Northern_7/StoryJesus_Hindko_Northern_Part_7.mp3",
+     "label": "حصہ ۷ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/hno_StoryJesus_hindko_northern/StoryJesus_Hindko_Northern_8/StoryJesus_Hindko_Northern_Part_8.mp3",
+     "label": "حصہ ۸ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/hno_StoryJesus_hindko_northern.zip",
+     "label": "تمام ریکارڈنگز (ZIP)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/hno_StoryJesus_hindko_northern_full.zip",
+     "label": "پوری کہانی (ZIP)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/hno_StoryJesus_hindko_northern",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/soj/hno_StoryJesus_hindko_northern",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/soj/hno_StoryJesus_hindko_northern_full.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/soj/hno_StoryJesus_hindko_northern_full.mp3",
+      "title": "پوری کہانی"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/soj/hno_StoryJesus_hindko_northern/StoryJesus_Hindko_Northern_1/StoryJesus_Hindko_Northern_Part_1.mp3",
+      "title": "حصہ ۱"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/soj/hno_StoryJesus_hindko_northern/StoryJesus_Hindko_Northern_2/StoryJesus_Hindko_Northern_Part_2.mp3",
+      "title": "حصہ ۲"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/soj/hno_StoryJesus_hindko_northern/StoryJesus_Hindko_Northern_3/StoryJesus_Hindko_Northern_Part_3.mp3",
+      "title": "حصہ ۳"
+     },
+     {
+      "n": 5,
+      "file": "https://media.dbs.org/audio/soj/hno_StoryJesus_hindko_northern/StoryJesus_Hindko_Northern_4/StoryJesus_Hindko_Northern_Part_4.mp3",
+      "title": "حصہ ۴"
+     },
+     {
+      "n": 6,
+      "file": "https://media.dbs.org/audio/soj/hno_StoryJesus_hindko_northern/StoryJesus_Hindko_Northern_5/StoryJesus_Hindko_Northern_Part_5.mp3",
+      "title": "حصہ ۵"
+     },
+     {
+      "n": 7,
+      "file": "https://media.dbs.org/audio/soj/hno_StoryJesus_hindko_northern/StoryJesus_Hindko_Northern_6/StoryJesus_Hindko_Northern_Part_6.mp3",
+      "title": "حصہ ۶"
+     },
+     {
+      "n": 8,
+      "file": "https://media.dbs.org/audio/soj/hno_StoryJesus_hindko_northern/StoryJesus_Hindko_Northern_7/StoryJesus_Hindko_Northern_Part_7.mp3",
+      "title": "حصہ ۷"
+     },
+     {
+      "n": 9,
+      "file": "https://media.dbs.org/audio/soj/hno_StoryJesus_hindko_northern/StoryJesus_Hindko_Northern_8/StoryJesus_Hindko_Northern_Part_8.mp3",
+      "title": "حصہ ۸"
+     }
+    ]
+   }
+  },
+  {
+   "id": "hno-grn-74979",
+   "lang": "hno",
+   "type": "audio",
+   "title": "Good News (Men)",
+   "native": "خوشخبری (مردوں کے لیے)",
+   "langName": "ہندکو",
+   "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+   "org": "Global Recordings Network",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20001%20Picture%201%20In%20the%20Beginning%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20002%20Picture%202%20The%20Word%20of%20God%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20003%20Picture%203%20Creation%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20004%20Picture%204%20Adam%20and%20Eve%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20005%20Picture%205%20Cain%20and%20Abel%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20006%20Picture%206%20Noah%27s%20Ark%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20007%20Picture%207%20The%20Flood%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۷ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20008%20Picture%208%20Abraham%20Sarah%20and%20Isaac%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۸ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20009%20Picture%209%20Moses%20and%20the%20Law%20of%20God%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۹ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20010%20Picture%2010%20The%20Ten%20Commandments%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۱۰ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20011%20Picture%2011%20Sacrifice%20for%20Sin%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۱۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20012%20Picture%2012%20A%20Saviour%20Promised%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۱۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20013%20Picture%2013%20The%20Birth%20of%20Jesus%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۱۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20014%20Picture%2014%20Jesus%20the%20Teacher%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۱۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20015%20Picture%2015%20Miracles%20of%20Jesus%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۱۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20016%20Picture%2016%20Jesus%20Suffers%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۱۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20017%20Picture%2017%20Jesus%20is%20Crucified%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۱۷ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20018%20Picture%2018%20The%20Resurrection%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۱۸ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20019%20Picture%2019%20Thomas%20Believes%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۱۹ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20020%20Picture%2020%20The%20Ascension%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۲۰ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20021%20Picture%2021%20The%20Empty%20Cross%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۲۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20022%20Picture%2022%20The%20Two%20Roads%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۲۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20023%20Picture%2023%20God%27s%20Children%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۲۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20024%20Picture%2024%20Born%20Again%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۲۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20025%20Picture%2025%20The%20Holy%20Spirit%20Comes%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۲۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20026%20Picture%2026%20Walking%20in%20the%20Light%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۲۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20027%20Picture%2027%20A%20New%20Person%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۲۷ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20028%20Picture%2028%20The%20Christian%20Family%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۲۸ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20029%20Picture%2029%20Love%20Your%20Enemies%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۲۹ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20030%20Picture%2030%20Jesus%20is%20the%20Powerful%20One%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۳۰ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20031%20Picture%2031%20Casting%20out%20Evil%20Spirits%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۳۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20032%20Picture%2032%20Temptation%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۳۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20033%20Picture%2033%20If%20We%20Sin%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۳۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20034%20Picture%2034%20Sickness%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۳۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20035%20Picture%2035%20Death%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۳۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20036%20Picture%2036%20The%20Body%20of%20Christ%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۳۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20037%20Picture%2037%20Meeting%20for%20Worship%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۳۷ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20038%20Picture%2038%20Jesus%20Will%20Return%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۳۸ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20039%20Picture%2039%20Bearing%20Fruit%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۳۹ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20040%20Picture%2040%20Witnessing%2074979.mp3",
+     "label": "خوشخبری (مردوں کے لیے) · حصہ ۴۰ (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/grn/hno_GlobalRecordings_hindko_hazara",
+   "stats": "40",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20001%20Picture%201%20In%20the%20Beginning%2074979.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20001%20Picture%201%20In%20the%20Beginning%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۱"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20002%20Picture%202%20The%20Word%20of%20God%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۲"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20003%20Picture%203%20Creation%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۳"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20004%20Picture%204%20Adam%20and%20Eve%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۴"
+     },
+     {
+      "n": 5,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20005%20Picture%205%20Cain%20and%20Abel%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۵"
+     },
+     {
+      "n": 6,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20006%20Picture%206%20Noah%27s%20Ark%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۶"
+     },
+     {
+      "n": 7,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20007%20Picture%207%20The%20Flood%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۷"
+     },
+     {
+      "n": 8,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20008%20Picture%208%20Abraham%20Sarah%20and%20Isaac%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۸"
+     },
+     {
+      "n": 9,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20009%20Picture%209%20Moses%20and%20the%20Law%20of%20God%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۹"
+     },
+     {
+      "n": 10,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20010%20Picture%2010%20The%20Ten%20Commandments%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۱۰"
+     },
+     {
+      "n": 11,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20011%20Picture%2011%20Sacrifice%20for%20Sin%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۱۱"
+     },
+     {
+      "n": 12,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20012%20Picture%2012%20A%20Saviour%20Promised%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۱۲"
+     },
+     {
+      "n": 13,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20013%20Picture%2013%20The%20Birth%20of%20Jesus%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۱۳"
+     },
+     {
+      "n": 14,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20014%20Picture%2014%20Jesus%20the%20Teacher%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۱۴"
+     },
+     {
+      "n": 15,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20015%20Picture%2015%20Miracles%20of%20Jesus%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۱۵"
+     },
+     {
+      "n": 16,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20016%20Picture%2016%20Jesus%20Suffers%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۱۶"
+     },
+     {
+      "n": 17,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20017%20Picture%2017%20Jesus%20is%20Crucified%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۱۷"
+     },
+     {
+      "n": 18,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20018%20Picture%2018%20The%20Resurrection%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۱۸"
+     },
+     {
+      "n": 19,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20019%20Picture%2019%20Thomas%20Believes%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۱۹"
+     },
+     {
+      "n": 20,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20020%20Picture%2020%20The%20Ascension%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۲۰"
+     },
+     {
+      "n": 21,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20021%20Picture%2021%20The%20Empty%20Cross%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۲۱"
+     },
+     {
+      "n": 22,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20022%20Picture%2022%20The%20Two%20Roads%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۲۲"
+     },
+     {
+      "n": 23,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20023%20Picture%2023%20God%27s%20Children%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۲۳"
+     },
+     {
+      "n": 24,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20024%20Picture%2024%20Born%20Again%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۲۴"
+     },
+     {
+      "n": 25,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20025%20Picture%2025%20The%20Holy%20Spirit%20Comes%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۲۵"
+     },
+     {
+      "n": 26,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20026%20Picture%2026%20Walking%20in%20the%20Light%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۲۶"
+     },
+     {
+      "n": 27,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20027%20Picture%2027%20A%20New%20Person%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۲۷"
+     },
+     {
+      "n": 28,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20028%20Picture%2028%20The%20Christian%20Family%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۲۸"
+     },
+     {
+      "n": 29,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20029%20Picture%2029%20Love%20Your%20Enemies%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۲۹"
+     },
+     {
+      "n": 30,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20030%20Picture%2030%20Jesus%20is%20the%20Powerful%20One%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۳۰"
+     },
+     {
+      "n": 31,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20031%20Picture%2031%20Casting%20out%20Evil%20Spirits%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۳۱"
+     },
+     {
+      "n": 32,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20032%20Picture%2032%20Temptation%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۳۲"
+     },
+     {
+      "n": 33,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20033%20Picture%2033%20If%20We%20Sin%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۳۳"
+     },
+     {
+      "n": 34,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20034%20Picture%2034%20Sickness%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۳۴"
+     },
+     {
+      "n": 35,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20035%20Picture%2035%20Death%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۳۵"
+     },
+     {
+      "n": 36,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20036%20Picture%2036%20The%20Body%20of%20Christ%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۳۶"
+     },
+     {
+      "n": 37,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20037%20Picture%2037%20Meeting%20for%20Worship%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۳۷"
+     },
+     {
+      "n": 38,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20038%20Picture%2038%20Jesus%20Will%20Return%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۳۸"
+     },
+     {
+      "n": 39,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20039%20Picture%2039%20Bearing%20Fruit%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۳۹"
+     },
+     {
+      "n": 40,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20040%20Picture%2040%20Witnessing%2074979.mp3",
+      "title": "خوشخبری (مردوں کے لیے) · حصہ ۴۰"
+     }
+    ]
+   }
+  },
+  {
+   "id": "hno-grn-74969",
+   "lang": "hno",
+   "type": "audio",
+   "title": "Good News 1-20 (Women)",
+   "native": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے)",
+   "langName": "ہندکو",
+   "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+   "org": "Global Recordings Network",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20001%20Introduction%20Picture%201%20In%20the%20Beginning%2074969.mp3",
+     "label": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20002%20Picture%202%20The%20Word%20of%20God%2074969.mp3",
+     "label": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20003%20Picture%203%20Creation%2074969.mp3",
+     "label": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20004%20Picture%204%20Adam%20and%20Eve%2074969.mp3",
+     "label": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20005%20Picture%205%20Cain%20and%20Abel%2074969.mp3",
+     "label": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20006%20Picture%206%20Noah%27s%20Ark%2074969.mp3",
+     "label": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20007%20Picture%207%20The%20Flood%2074969.mp3",
+     "label": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۷ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20008%20Picture%208%20Abraham%20Sarah%20and%20Isaac%2074969.mp3",
+     "label": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۸ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20009%20Picture%209%20Moses%20and%20the%20Law%20of%20God%2074969.mp3",
+     "label": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۹ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20010%20Picture%2010%20The%20Ten%20Commandments%2074969.mp3",
+     "label": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۱۰ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20011%20Picture%2011%20Sacrifice%20for%20Sin%2074969.mp3",
+     "label": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۱۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20012%20Picture%2012%20A%20Saviour%20Promised%2074969.mp3",
+     "label": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۱۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20013%20Picture%2013%20The%20Birth%20of%20Jesus%2074969.mp3",
+     "label": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۱۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20014%20Picture%2014%20Jesus%20the%20Teacher%2074969.mp3",
+     "label": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۱۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20015%20Picture%2015%20Miracles%20of%20Jesus%2074969.mp3",
+     "label": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۱۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20016%20Picture%2016%20Jesus%20Suffers%2074969.mp3",
+     "label": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۱۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20017%20Picture%2017%20Jesus%20is%20Crucified%2074969.mp3",
+     "label": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۱۷ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20018%20Picture%2018%20The%20Resurrection%2074969.mp3",
+     "label": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۱۸ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20019%20Picture%2019%20Thomas%20Believes%2074969.mp3",
+     "label": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۱۹ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20020%20Picture%2020%20The%20Ascension%2074969.mp3",
+     "label": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۲۰ (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/grn/hno_GlobalRecordings_hindko_hazara",
+   "stats": "20",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20001%20Introduction%20Picture%201%20In%20the%20Beginning%2074969.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20001%20Introduction%20Picture%201%20In%20the%20Beginning%2074969.mp3",
+      "title": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۱"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20002%20Picture%202%20The%20Word%20of%20God%2074969.mp3",
+      "title": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۲"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20003%20Picture%203%20Creation%2074969.mp3",
+      "title": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۳"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20004%20Picture%204%20Adam%20and%20Eve%2074969.mp3",
+      "title": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۴"
+     },
+     {
+      "n": 5,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20005%20Picture%205%20Cain%20and%20Abel%2074969.mp3",
+      "title": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۵"
+     },
+     {
+      "n": 6,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20006%20Picture%206%20Noah%27s%20Ark%2074969.mp3",
+      "title": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۶"
+     },
+     {
+      "n": 7,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20007%20Picture%207%20The%20Flood%2074969.mp3",
+      "title": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۷"
+     },
+     {
+      "n": 8,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20008%20Picture%208%20Abraham%20Sarah%20and%20Isaac%2074969.mp3",
+      "title": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۸"
+     },
+     {
+      "n": 9,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20009%20Picture%209%20Moses%20and%20the%20Law%20of%20God%2074969.mp3",
+      "title": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۹"
+     },
+     {
+      "n": 10,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20010%20Picture%2010%20The%20Ten%20Commandments%2074969.mp3",
+      "title": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۱۰"
+     },
+     {
+      "n": 11,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20011%20Picture%2011%20Sacrifice%20for%20Sin%2074969.mp3",
+      "title": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۱۱"
+     },
+     {
+      "n": 12,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20012%20Picture%2012%20A%20Saviour%20Promised%2074969.mp3",
+      "title": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۱۲"
+     },
+     {
+      "n": 13,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20013%20Picture%2013%20The%20Birth%20of%20Jesus%2074969.mp3",
+      "title": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۱۳"
+     },
+     {
+      "n": 14,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20014%20Picture%2014%20Jesus%20the%20Teacher%2074969.mp3",
+      "title": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۱۴"
+     },
+     {
+      "n": 15,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20015%20Picture%2015%20Miracles%20of%20Jesus%2074969.mp3",
+      "title": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۱۵"
+     },
+     {
+      "n": 16,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20016%20Picture%2016%20Jesus%20Suffers%2074969.mp3",
+      "title": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۱۶"
+     },
+     {
+      "n": 17,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20017%20Picture%2017%20Jesus%20is%20Crucified%2074969.mp3",
+      "title": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۱۷"
+     },
+     {
+      "n": 18,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20018%20Picture%2018%20The%20Resurrection%2074969.mp3",
+      "title": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۱۸"
+     },
+     {
+      "n": 19,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20019%20Picture%2019%20Thomas%20Believes%2074969.mp3",
+      "title": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۱۹"
+     },
+     {
+      "n": 20,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20020%20Picture%2020%20The%20Ascension%2074969.mp3",
+      "title": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے) · حصہ ۲۰"
+     }
+    ]
+   }
+  },
+  {
+   "id": "hno-grn-2970",
+   "lang": "hno",
+   "type": "audio",
+   "title": "Words of Life",
+   "native": "زندگی کے کلمات",
+   "langName": "ہندکو",
+   "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+   "org": "Global Recordings Network",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Words%20of%20Life%2002970/Hindko%20Hazara%20Words%20of%20Life%20001%20Heart%20of%20man%2002970.mp3",
+     "label": "زندگی کے کلمات · حصہ ۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Words%20of%20Life%2002970/Hindko%20Hazara%20Words%20of%20Life%20002%20Creation%20and%20Redemption%2002970.mp3",
+     "label": "زندگی کے کلمات · حصہ ۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Words%20of%20Life%2002970/Hindko%20Hazara%20Words%20of%20Life%20003%20Behold%20Jesus%2002970.mp3",
+     "label": "زندگی کے کلمات · حصہ ۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Words%20of%20Life%2002970/Hindko%20Hazara%20Words%20of%20Life%20004%20God%27s%20Scales%2002970.mp3",
+     "label": "زندگی کے کلمات · حصہ ۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Words%20of%20Life%2002970/Hindko%20Hazara%20Words%20of%20Life%20005%20The%20Prodigal%20Son%2002970.mp3",
+     "label": "زندگی کے کلمات · حصہ ۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Words%20of%20Life%2002970/Hindko%20Hazara%20Words%20of%20Life%20006%20The%20Heart%20of%20Man%2002970.mp3",
+     "label": "زندگی کے کلمات · حصہ ۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Words%20of%20Life%2002970/Hindko%20Hazara%20Words%20of%20Life%20007%20The%20woman%20at%20the%20well%2002970.mp3",
+     "label": "زندگی کے کلمات · حصہ ۷ (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/grn/hno_GlobalRecordings_hindko_hazara",
+   "stats": "7",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Words%20of%20Life%2002970/Hindko%20Hazara%20Words%20of%20Life%20001%20Heart%20of%20man%2002970.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Words%20of%20Life%2002970/Hindko%20Hazara%20Words%20of%20Life%20001%20Heart%20of%20man%2002970.mp3",
+      "title": "زندگی کے کلمات · حصہ ۱"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Words%20of%20Life%2002970/Hindko%20Hazara%20Words%20of%20Life%20002%20Creation%20and%20Redemption%2002970.mp3",
+      "title": "زندگی کے کلمات · حصہ ۲"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Words%20of%20Life%2002970/Hindko%20Hazara%20Words%20of%20Life%20003%20Behold%20Jesus%2002970.mp3",
+      "title": "زندگی کے کلمات · حصہ ۳"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Words%20of%20Life%2002970/Hindko%20Hazara%20Words%20of%20Life%20004%20God%27s%20Scales%2002970.mp3",
+      "title": "زندگی کے کلمات · حصہ ۴"
+     },
+     {
+      "n": 5,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Words%20of%20Life%2002970/Hindko%20Hazara%20Words%20of%20Life%20005%20The%20Prodigal%20Son%2002970.mp3",
+      "title": "زندگی کے کلمات · حصہ ۵"
+     },
+     {
+      "n": 6,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Words%20of%20Life%2002970/Hindko%20Hazara%20Words%20of%20Life%20006%20The%20Heart%20of%20Man%2002970.mp3",
+      "title": "زندگی کے کلمات · حصہ ۶"
+     },
+     {
+      "n": 7,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Words%20of%20Life%2002970/Hindko%20Hazara%20Words%20of%20Life%20007%20The%20woman%20at%20the%20well%2002970.mp3",
+      "title": "زندگی کے کلمات · حصہ ۷"
+     }
+    ]
+   }
+  },
+  {
+   "id": "hno-grn-74968",
+   "lang": "hno",
+   "type": "audio",
+   "title": "Genesis",
+   "native": "پیدائش",
+   "langName": "ہندکو",
+   "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+   "org": "Global Recordings Network",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20001%2074968.mp3",
+     "label": "پیدائش · حصہ ۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20002%2074968.mp3",
+     "label": "پیدائش · حصہ ۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20003%2074968.mp3",
+     "label": "پیدائش · حصہ ۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20004%2074968.mp3",
+     "label": "پیدائش · حصہ ۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20005%2074968.mp3",
+     "label": "پیدائش · حصہ ۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20006%2074968.mp3",
+     "label": "پیدائش · حصہ ۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20007%2074968.mp3",
+     "label": "پیدائش · حصہ ۷ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20008%2074968.mp3",
+     "label": "پیدائش · حصہ ۸ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20009%2074968.mp3",
+     "label": "پیدائش · حصہ ۹ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20010%2074968.mp3",
+     "label": "پیدائش · حصہ ۱۰ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20011%2074968.mp3",
+     "label": "پیدائش · حصہ ۱۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20012%2074968.mp3",
+     "label": "پیدائش · حصہ ۱۲ (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/grn/hno_GlobalRecordings_hindko_hazara",
+   "stats": "12",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20001%2074968.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20001%2074968.mp3",
+      "title": "پیدائش · حصہ ۱"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20002%2074968.mp3",
+      "title": "پیدائش · حصہ ۲"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20003%2074968.mp3",
+      "title": "پیدائش · حصہ ۳"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20004%2074968.mp3",
+      "title": "پیدائش · حصہ ۴"
+     },
+     {
+      "n": 5,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20005%2074968.mp3",
+      "title": "پیدائش · حصہ ۵"
+     },
+     {
+      "n": 6,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20006%2074968.mp3",
+      "title": "پیدائش · حصہ ۶"
+     },
+     {
+      "n": 7,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20007%2074968.mp3",
+      "title": "پیدائش · حصہ ۷"
+     },
+     {
+      "n": 8,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20008%2074968.mp3",
+      "title": "پیدائش · حصہ ۸"
+     },
+     {
+      "n": 9,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20009%2074968.mp3",
+      "title": "پیدائش · حصہ ۹"
+     },
+     {
+      "n": 10,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20010%2074968.mp3",
+      "title": "پیدائش · حصہ ۱۰"
+     },
+     {
+      "n": 11,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20011%2074968.mp3",
+      "title": "پیدائش · حصہ ۱۱"
+     },
+     {
+      "n": 12,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20012%2074968.mp3",
+      "title": "پیدائش · حصہ ۱۲"
+     }
+    ]
+   }
+  },
+  {
+   "id": "hno-grn-74963",
+   "lang": "hno",
+   "type": "audio",
+   "title": "Exodus",
+   "native": "خروج",
+   "langName": "ہندکو",
+   "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+   "org": "Global Recordings Network",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20001%20Exodus%201%2074963.mp3",
+     "label": "خروج · حصہ ۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20002%20Exodus%202%2074963.mp3",
+     "label": "خروج · حصہ ۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20003%20Exodus%203%2074963.mp3",
+     "label": "خروج · حصہ ۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20004%20Exodus%204%2074963.mp3",
+     "label": "خروج · حصہ ۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20005%20Exodus%205%2074963.mp3",
+     "label": "خروج · حصہ ۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20006%20Exodus%206%2074963.mp3",
+     "label": "خروج · حصہ ۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20007%20Exodus%207%2074963.mp3",
+     "label": "خروج · حصہ ۷ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20008%20Exodus%208%2074963.mp3",
+     "label": "خروج · حصہ ۸ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20009%20Exodus%209%2074963.mp3",
+     "label": "خروج · حصہ ۹ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20010%20Exodus%2010%2074963.mp3",
+     "label": "خروج · حصہ ۱۰ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20011%20Exodus%2011%2074963.mp3",
+     "label": "خروج · حصہ ۱۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20012%20Exodus%2012%2074963.mp3",
+     "label": "خروج · حصہ ۱۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20013%20Exodus%2013%2074963.mp3",
+     "label": "خروج · حصہ ۱۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20014%20Exodus%2014%2074963.mp3",
+     "label": "خروج · حصہ ۱۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20015%20Exodus%2015%2074963.mp3",
+     "label": "خروج · حصہ ۱۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20016%20Exodus%2016%2074963.mp3",
+     "label": "خروج · حصہ ۱۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20017%20Exodus%2017%2074963.mp3",
+     "label": "خروج · حصہ ۱۷ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20018%20Exodus%2018%2074963.mp3",
+     "label": "خروج · حصہ ۱۸ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20019%20Exodus%2019%2074963.mp3",
+     "label": "خروج · حصہ ۱۹ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20020%20Exodus%2020%2074963.mp3",
+     "label": "خروج · حصہ ۲۰ (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/grn/hno_GlobalRecordings_hindko_hazara",
+   "stats": "20",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20001%20Exodus%201%2074963.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20001%20Exodus%201%2074963.mp3",
+      "title": "خروج · حصہ ۱"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20002%20Exodus%202%2074963.mp3",
+      "title": "خروج · حصہ ۲"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20003%20Exodus%203%2074963.mp3",
+      "title": "خروج · حصہ ۳"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20004%20Exodus%204%2074963.mp3",
+      "title": "خروج · حصہ ۴"
+     },
+     {
+      "n": 5,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20005%20Exodus%205%2074963.mp3",
+      "title": "خروج · حصہ ۵"
+     },
+     {
+      "n": 6,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20006%20Exodus%206%2074963.mp3",
+      "title": "خروج · حصہ ۶"
+     },
+     {
+      "n": 7,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20007%20Exodus%207%2074963.mp3",
+      "title": "خروج · حصہ ۷"
+     },
+     {
+      "n": 8,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20008%20Exodus%208%2074963.mp3",
+      "title": "خروج · حصہ ۸"
+     },
+     {
+      "n": 9,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20009%20Exodus%209%2074963.mp3",
+      "title": "خروج · حصہ ۹"
+     },
+     {
+      "n": 10,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20010%20Exodus%2010%2074963.mp3",
+      "title": "خروج · حصہ ۱۰"
+     },
+     {
+      "n": 11,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20011%20Exodus%2011%2074963.mp3",
+      "title": "خروج · حصہ ۱۱"
+     },
+     {
+      "n": 12,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20012%20Exodus%2012%2074963.mp3",
+      "title": "خروج · حصہ ۱۲"
+     },
+     {
+      "n": 13,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20013%20Exodus%2013%2074963.mp3",
+      "title": "خروج · حصہ ۱۳"
+     },
+     {
+      "n": 14,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20014%20Exodus%2014%2074963.mp3",
+      "title": "خروج · حصہ ۱۴"
+     },
+     {
+      "n": 15,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20015%20Exodus%2015%2074963.mp3",
+      "title": "خروج · حصہ ۱۵"
+     },
+     {
+      "n": 16,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20016%20Exodus%2016%2074963.mp3",
+      "title": "خروج · حصہ ۱۶"
+     },
+     {
+      "n": 17,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20017%20Exodus%2017%2074963.mp3",
+      "title": "خروج · حصہ ۱۷"
+     },
+     {
+      "n": 18,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20018%20Exodus%2018%2074963.mp3",
+      "title": "خروج · حصہ ۱۸"
+     },
+     {
+      "n": 19,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20019%20Exodus%2019%2074963.mp3",
+      "title": "خروج · حصہ ۱۹"
+     },
+     {
+      "n": 20,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20020%20Exodus%2020%2074963.mp3",
+      "title": "خروج · حصہ ۲۰"
+     }
+    ]
+   }
+  },
+  {
+   "id": "hno-grn-74978",
+   "lang": "hno",
+   "type": "audio",
+   "title": "Matthew",
+   "native": "متی",
+   "langName": "ہندکو",
+   "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+   "org": "Global Recordings Network",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20001%20Scripture%2074978.mp3",
+     "label": "متی · حصہ ۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20002%20Scripture%2074978.mp3",
+     "label": "متی · حصہ ۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20003%20Matthew%2011%2074978.mp3",
+     "label": "متی · حصہ ۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20004%20Matthew%2012%2074978.mp3",
+     "label": "متی · حصہ ۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20005%20Matthew%2013%2074978.mp3",
+     "label": "متی · حصہ ۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20006%20Matthew%2014%2074978.mp3",
+     "label": "متی · حصہ ۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20007%20Matthew%2015%2074978.mp3",
+     "label": "متی · حصہ ۷ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20008%20Matthew%2016%2074978.mp3",
+     "label": "متی · حصہ ۸ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20009%20Matthew%2017%2074978.mp3",
+     "label": "متی · حصہ ۹ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20010%20Matthew%2018%2074978.mp3",
+     "label": "متی · حصہ ۱۰ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20011%20Matthew%2019%2074978.mp3",
+     "label": "متی · حصہ ۱۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20012%20Matthew%2020%2074978.mp3",
+     "label": "متی · حصہ ۱۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20013%20Matthew%2021%2074978.mp3",
+     "label": "متی · حصہ ۱۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20014%20Matthew%2022%2074978.mp3",
+     "label": "متی · حصہ ۱۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20015%20Matthew%2023%2074978.mp3",
+     "label": "متی · حصہ ۱۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20016%20Matthew%2024%2074978.mp3",
+     "label": "متی · حصہ ۱۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20017%20Matthew%2025%2074978.mp3",
+     "label": "متی · حصہ ۱۷ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20018%20Matthew%2026%2074978.mp3",
+     "label": "متی · حصہ ۱۸ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20019%20Matthew%2027%2074978.mp3",
+     "label": "متی · حصہ ۱۹ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20020%20Matthew%2028%2074978.mp3",
+     "label": "متی · حصہ ۲۰ (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/grn/hno_GlobalRecordings_hindko_hazara",
+   "stats": "20",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20001%20Scripture%2074978.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20001%20Scripture%2074978.mp3",
+      "title": "متی · حصہ ۱"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20002%20Scripture%2074978.mp3",
+      "title": "متی · حصہ ۲"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20003%20Matthew%2011%2074978.mp3",
+      "title": "متی · حصہ ۳"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20004%20Matthew%2012%2074978.mp3",
+      "title": "متی · حصہ ۴"
+     },
+     {
+      "n": 5,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20005%20Matthew%2013%2074978.mp3",
+      "title": "متی · حصہ ۵"
+     },
+     {
+      "n": 6,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20006%20Matthew%2014%2074978.mp3",
+      "title": "متی · حصہ ۶"
+     },
+     {
+      "n": 7,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20007%20Matthew%2015%2074978.mp3",
+      "title": "متی · حصہ ۷"
+     },
+     {
+      "n": 8,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20008%20Matthew%2016%2074978.mp3",
+      "title": "متی · حصہ ۸"
+     },
+     {
+      "n": 9,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20009%20Matthew%2017%2074978.mp3",
+      "title": "متی · حصہ ۹"
+     },
+     {
+      "n": 10,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20010%20Matthew%2018%2074978.mp3",
+      "title": "متی · حصہ ۱۰"
+     },
+     {
+      "n": 11,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20011%20Matthew%2019%2074978.mp3",
+      "title": "متی · حصہ ۱۱"
+     },
+     {
+      "n": 12,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20012%20Matthew%2020%2074978.mp3",
+      "title": "متی · حصہ ۱۲"
+     },
+     {
+      "n": 13,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20013%20Matthew%2021%2074978.mp3",
+      "title": "متی · حصہ ۱۳"
+     },
+     {
+      "n": 14,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20014%20Matthew%2022%2074978.mp3",
+      "title": "متی · حصہ ۱۴"
+     },
+     {
+      "n": 15,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20015%20Matthew%2023%2074978.mp3",
+      "title": "متی · حصہ ۱۵"
+     },
+     {
+      "n": 16,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20016%20Matthew%2024%2074978.mp3",
+      "title": "متی · حصہ ۱۶"
+     },
+     {
+      "n": 17,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20017%20Matthew%2025%2074978.mp3",
+      "title": "متی · حصہ ۱۷"
+     },
+     {
+      "n": 18,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20018%20Matthew%2026%2074978.mp3",
+      "title": "متی · حصہ ۱۸"
+     },
+     {
+      "n": 19,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20019%20Matthew%2027%2074978.mp3",
+      "title": "متی · حصہ ۱۹"
+     },
+     {
+      "n": 20,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20020%20Matthew%2028%2074978.mp3",
+      "title": "متی · حصہ ۲۰"
+     }
+    ]
+   }
+  },
+  {
+   "id": "hno-grn-74981",
+   "lang": "hno",
+   "type": "audio",
+   "title": "Luke",
+   "native": "لوقا",
+   "langName": "ہندکو",
+   "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+   "org": "Global Recordings Network",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Luke%2074981/Hindko%20Hazara%20Luke%20001%20Scripture%2074981.mp3",
+     "label": "لوقا · حصہ ۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Luke%2074981/Hindko%20Hazara%20Luke%20002%20Scripture%2074981.mp3",
+     "label": "لوقا · حصہ ۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Luke%2074981/Hindko%20Hazara%20Luke%20003%20Scripture%2074981.mp3",
+     "label": "لوقا · حصہ ۳ (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/grn/hno_GlobalRecordings_hindko_hazara",
+   "stats": "3",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Luke%2074981/Hindko%20Hazara%20Luke%20001%20Scripture%2074981.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Luke%2074981/Hindko%20Hazara%20Luke%20001%20Scripture%2074981.mp3",
+      "title": "لوقا · حصہ ۱"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Luke%2074981/Hindko%20Hazara%20Luke%20002%20Scripture%2074981.mp3",
+      "title": "لوقا · حصہ ۲"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Luke%2074981/Hindko%20Hazara%20Luke%20003%20Scripture%2074981.mp3",
+      "title": "لوقا · حصہ ۳"
+     }
+    ]
+   }
+  },
+  {
+   "id": "hno-grn-74967",
+   "lang": "hno",
+   "type": "audio",
+   "title": "Acts",
+   "native": "اعمال",
+   "langName": "ہندکو",
+   "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+   "org": "Global Recordings Network",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Acts%2074967/Hindko%20Hazara%20Acts%20001%20Scripture%2074967.mp3",
+     "label": "اعمال · حصہ ۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Acts%2074967/Hindko%20Hazara%20Acts%20002%20Scripture%2074967.mp3",
+     "label": "اعمال · حصہ ۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Acts%2074967/Hindko%20Hazara%20Acts%20003%20Scripture%2074967.mp3",
+     "label": "اعمال · حصہ ۳ (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/grn/hno_GlobalRecordings_hindko_hazara",
+   "stats": "3",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Acts%2074967/Hindko%20Hazara%20Acts%20001%20Scripture%2074967.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Acts%2074967/Hindko%20Hazara%20Acts%20001%20Scripture%2074967.mp3",
+      "title": "اعمال · حصہ ۱"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Acts%2074967/Hindko%20Hazara%20Acts%20002%20Scripture%2074967.mp3",
+      "title": "اعمال · حصہ ۲"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Acts%2074967/Hindko%20Hazara%20Acts%20003%20Scripture%2074967.mp3",
+      "title": "اعمال · حصہ ۳"
+     }
+    ]
+   }
+  },
+  {
+   "id": "hno-grn-74974",
+   "lang": "hno",
+   "type": "audio",
+   "title": "Romans",
+   "native": "رومیوں",
+   "langName": "ہندکو",
+   "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+   "org": "Global Recordings Network",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20001%20Romans%201%2074974.mp3",
+     "label": "رومیوں · حصہ ۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20002%20Romans%202%2074974.mp3",
+     "label": "رومیوں · حصہ ۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20003%20Romans%203%2074974.mp3",
+     "label": "رومیوں · حصہ ۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20004%20Romans%204%2074974.mp3",
+     "label": "رومیوں · حصہ ۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20005%20Romans%205%2074974.mp3",
+     "label": "رومیوں · حصہ ۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20006%20Romans%206%2074974.mp3",
+     "label": "رومیوں · حصہ ۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20007%20Romans%207%2074974.mp3",
+     "label": "رومیوں · حصہ ۷ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20008%20Romans%208%2074974.mp3",
+     "label": "رومیوں · حصہ ۸ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20009%20Romans%209%2074974.mp3",
+     "label": "رومیوں · حصہ ۹ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20010%20Romans%2010%2074974.mp3",
+     "label": "رومیوں · حصہ ۱۰ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20011%20Romans%2011%2074974.mp3",
+     "label": "رومیوں · حصہ ۱۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20012%20Romans%2012%2074974.mp3",
+     "label": "رومیوں · حصہ ۱۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20013%20Romans%2013%2074974.mp3",
+     "label": "رومیوں · حصہ ۱۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20014%20Romans%2014%2074974.mp3",
+     "label": "رومیوں · حصہ ۱۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20015%20Romans%2015%2074974.mp3",
+     "label": "رومیوں · حصہ ۱۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20016%20Romans%2016%2074974.mp3",
+     "label": "رومیوں · حصہ ۱۶ (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/grn/hno_GlobalRecordings_hindko_hazara",
+   "stats": "16",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20001%20Romans%201%2074974.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20001%20Romans%201%2074974.mp3",
+      "title": "رومیوں · حصہ ۱"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20002%20Romans%202%2074974.mp3",
+      "title": "رومیوں · حصہ ۲"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20003%20Romans%203%2074974.mp3",
+      "title": "رومیوں · حصہ ۳"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20004%20Romans%204%2074974.mp3",
+      "title": "رومیوں · حصہ ۴"
+     },
+     {
+      "n": 5,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20005%20Romans%205%2074974.mp3",
+      "title": "رومیوں · حصہ ۵"
+     },
+     {
+      "n": 6,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20006%20Romans%206%2074974.mp3",
+      "title": "رومیوں · حصہ ۶"
+     },
+     {
+      "n": 7,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20007%20Romans%207%2074974.mp3",
+      "title": "رومیوں · حصہ ۷"
+     },
+     {
+      "n": 8,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20008%20Romans%208%2074974.mp3",
+      "title": "رومیوں · حصہ ۸"
+     },
+     {
+      "n": 9,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20009%20Romans%209%2074974.mp3",
+      "title": "رومیوں · حصہ ۹"
+     },
+     {
+      "n": 10,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20010%20Romans%2010%2074974.mp3",
+      "title": "رومیوں · حصہ ۱۰"
+     },
+     {
+      "n": 11,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20011%20Romans%2011%2074974.mp3",
+      "title": "رومیوں · حصہ ۱۱"
+     },
+     {
+      "n": 12,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20012%20Romans%2012%2074974.mp3",
+      "title": "رومیوں · حصہ ۱۲"
+     },
+     {
+      "n": 13,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20013%20Romans%2013%2074974.mp3",
+      "title": "رومیوں · حصہ ۱۳"
+     },
+     {
+      "n": 14,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20014%20Romans%2014%2074974.mp3",
+      "title": "رومیوں · حصہ ۱۴"
+     },
+     {
+      "n": 15,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20015%20Romans%2015%2074974.mp3",
+      "title": "رومیوں · حصہ ۱۵"
+     },
+     {
+      "n": 16,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20016%20Romans%2016%2074974.mp3",
+      "title": "رومیوں · حصہ ۱۶"
+     }
+    ]
+   }
+  },
+  {
+   "id": "hno-grn-74962",
+   "lang": "hno",
+   "type": "audio",
+   "title": "Galatians & Philippians",
+   "native": "گلتیوں اور فلپیوں",
+   "langName": "ہندکو",
+   "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+   "org": "Global Recordings Network",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Galatians%20Philippians%2074962/Hindko%20Hazara%20Galatians%20Philippians%20001%20Scripture%2074962.mp3",
+     "label": "گلتیوں اور فلپیوں · حصہ ۱ (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/grn/hno_GlobalRecordings_hindko_hazara",
+   "stats": "1",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Galatians%20Philippians%2074962/Hindko%20Hazara%20Galatians%20Philippians%20001%20Scripture%2074962.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Galatians%20Philippians%2074962/Hindko%20Hazara%20Galatians%20Philippians%20001%20Scripture%2074962.mp3",
+      "title": "گلتیوں اور فلپیوں · حصہ ۱"
+     }
+    ]
+   }
+  },
+  {
+   "id": "hno-grn-74982",
+   "lang": "hno",
+   "type": "audio",
+   "title": "Ephesians & Colossians",
+   "native": "افسیوں اور کلسیوں",
+   "langName": "ہندکو",
+   "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+   "org": "Global Recordings Network",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Ephesians%20Colossians%2074982/Hindko%20Hazara%20Ephesians%20Colossians%20001%20Scripture%2074982.mp3",
+     "label": "افسیوں اور کلسیوں · حصہ ۱ (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/grn/hno_GlobalRecordings_hindko_hazara",
+   "stats": "1",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Ephesians%20Colossians%2074982/Hindko%20Hazara%20Ephesians%20Colossians%20001%20Scripture%2074982.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Ephesians%20Colossians%2074982/Hindko%20Hazara%20Ephesians%20Colossians%20001%20Scripture%2074982.mp3",
+      "title": "افسیوں اور کلسیوں · حصہ ۱"
+     }
+    ]
+   }
+  },
+  {
+   "id": "hno-grn-74964",
+   "lang": "hno",
+   "type": "audio",
+   "title": "1 & 2 Thessalonians",
+   "native": "۱ اور ۲ تھسلنیکیوں",
+   "langName": "ہندکو",
+   "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+   "org": "Global Recordings Network",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%201%202%20Thessalonians%2074964/Hindko%20Hazara%201%202%20Thessalonians%20001%20Scripture%2074964.mp3",
+     "label": "۱ اور ۲ تھسلنیکیوں · حصہ ۱ (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/grn/hno_GlobalRecordings_hindko_hazara",
+   "stats": "1",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%201%202%20Thessalonians%2074964/Hindko%20Hazara%201%202%20Thessalonians%20001%20Scripture%2074964.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%201%202%20Thessalonians%2074964/Hindko%20Hazara%201%202%20Thessalonians%20001%20Scripture%2074964.mp3",
+      "title": "۱ اور ۲ تھسلنیکیوں · حصہ ۱"
+     }
+    ]
+   }
+  },
+  {
+   "id": "hno-grn-74985",
+   "lang": "hno",
+   "type": "audio",
+   "title": "1 & 2 Peter",
+   "native": "۱ اور ۲ پطرس",
+   "langName": "ہندکو",
+   "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+   "org": "Global Recordings Network",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%201%202%20Peter%2074985/Hindko%20Hazara%201%202%20Peter%20001%20Scripture%2074985.mp3",
+     "label": "۱ اور ۲ پطرس · حصہ ۱ (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/grn/hno_GlobalRecordings_hindko_hazara",
+   "stats": "1",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%201%202%20Peter%2074985/Hindko%20Hazara%201%202%20Peter%20001%20Scripture%2074985.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%201%202%20Peter%2074985/Hindko%20Hazara%201%202%20Peter%20001%20Scripture%2074985.mp3",
+      "title": "۱ اور ۲ پطرس · حصہ ۱"
+     }
+    ]
+   }
+  },
+  {
+   "id": "hno-grn-74973",
+   "lang": "hno",
+   "type": "audio",
+   "title": "James; 1, 2, 3 John; Jude",
+   "native": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ",
+   "langName": "ہندکو",
+   "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+   "org": "Global Recordings Network",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20001%20James%201%2074973.mp3",
+     "label": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20002%20James%202%2074973.mp3",
+     "label": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20003%20James%203%2074973.mp3",
+     "label": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20004%20James%204%2074973.mp3",
+     "label": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20005%20James%205%2074973.mp3",
+     "label": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20006%201%20John%201%2074973.mp3",
+     "label": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20007%201%20John%202%2074973.mp3",
+     "label": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۷ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20008%201%20John%203%2074973.mp3",
+     "label": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۸ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20009%201%20John%204%2074973.mp3",
+     "label": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۹ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20010%201%20John%205%2074973.mp3",
+     "label": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۱۰ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20011%202%20John%2074973.mp3",
+     "label": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۱۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20012%203%20John%2074973.mp3",
+     "label": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۱۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20013%20Jude%2074973.mp3",
+     "label": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۱۳ (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/grn/hno_GlobalRecordings_hindko_hazara",
+   "stats": "13",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20001%20James%201%2074973.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20001%20James%201%2074973.mp3",
+      "title": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۱"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20002%20James%202%2074973.mp3",
+      "title": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۲"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20003%20James%203%2074973.mp3",
+      "title": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۳"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20004%20James%204%2074973.mp3",
+      "title": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۴"
+     },
+     {
+      "n": 5,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20005%20James%205%2074973.mp3",
+      "title": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۵"
+     },
+     {
+      "n": 6,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20006%201%20John%201%2074973.mp3",
+      "title": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۶"
+     },
+     {
+      "n": 7,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20007%201%20John%202%2074973.mp3",
+      "title": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۷"
+     },
+     {
+      "n": 8,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20008%201%20John%203%2074973.mp3",
+      "title": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۸"
+     },
+     {
+      "n": 9,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20009%201%20John%204%2074973.mp3",
+      "title": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۹"
+     },
+     {
+      "n": 10,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20010%201%20John%205%2074973.mp3",
+      "title": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۱۰"
+     },
+     {
+      "n": 11,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20011%202%20John%2074973.mp3",
+      "title": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۱۱"
+     },
+     {
+      "n": 12,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20012%203%20John%2074973.mp3",
+      "title": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۱۲"
+     },
+     {
+      "n": 13,
+      "file": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20013%20Jude%2074973.mp3",
+      "title": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ · حصہ ۱۳"
+     }
+    ]
+   }
+  }
+ ],
+ "notCarried": {
+  "https://find.bible/?abbr=HNOZZZ": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "http://cdn.createinternational.com.s3.amazonaws.com/non-create_videos/PS/The-Prophets-Story_Hindko-North_sm.mp4": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://globalrecordings.net/en/program/74969": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://globalrecordings.net/en/program/74979": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://globalrecordings.net/en/program/2970": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://globalrecordings.net/en/program/74968": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://globalrecordings.net/en/program/74963": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://globalrecordings.net/en/program/74970": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://globalrecordings.net/en/program/74978": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://globalrecordings.net/en/program/74981": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://globalrecordings.net/en/program/74967": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://globalrecordings.net/en/program/74974": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://globalrecordings.net/en/program/74962": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://globalrecordings.net/en/program/74982": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://globalrecordings.net/en/program/74964": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://globalrecordings.net/en/program/74985": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://globalrecordings.net/en/program/74973": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it."
+ }
+}

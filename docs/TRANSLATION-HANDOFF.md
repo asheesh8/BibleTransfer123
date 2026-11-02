@@ -1095,3 +1095,19 @@ Added three shelves and pages with the Swahili interface (`swh`): `/meru` (conte
 DBS titles the Turkana audio Bible "Bible in Tuvalu BSSP" with a Tuvaluan subtitle, an ISO mix-up (Turkana is tuv, Tuvaluan tvl), but its books are named in Turkana ("Akisiakinet", "Ngilawi"), so it is carried as the Turkana Bible. A Turkana speaker should confirm the recording when one is available. Meru and Turkana have no text Bible on DBS. Every audio Bible chapter was checked (Meru 931, Turkana 1,189, Teso 1,489), all valid.
 
 Rebuild with `python3 packer/build_dbs_audit.py mer tuv teo`, then `npm run dbs:import`.
+
+### Saraiki, Balochi and Hindko — 2026-11-02
+
+Added three right-to-left shelves and pages with the Urdu interface (`ur`): `/saraiki` (content `skr`, also `/seraiki`, `/siraiki`, `/multani`), `/balochi` (`bal`, also `/baluchi`, `/baloch`, `/bcc`, `/bgn`, `/bgp`) and `/hindko` (`hno`, also `/hindku`). Readers of all three in Pakistan read Urdu, and none has a reviewed interface translation, so the menus are Urdu, the way Kenya's smaller languages use Swahili. Every description, label and book name the builder adds (packer/build_dbs_pakistan.py) is Urdu; titles DBS gives in the language itself stay ("پیغمبراں دی کہانی", "یسوع دی سچی کہانڑی"). The pages use a new `ur` set of page text in registry/languages.json, so search and filter text is Urdu before scripts run.
+
+New Urdu strings: Urdu book names (`ur` in app/assets/js/data/bible-books.js, the Kitab-e-Muqaddas names; the Urdu page's audio Bibles now use them too) and `lib.partner`, `lib.partner.main`, `lib.partner.all` in i18n/ur.js. An Urdu reader should check the builder's wording ("دیکھو، سنو اور جیو" for Look, Listen & Live, "زندگی کے کلمات" for Words of Life).
+
+| Shelf | Resources | Shown by default |
+|---|---|---|
+| Saraiki | 25 | FCBH's dramatised Gospels and Davar's New Testament (audio); JESUS; LUMO Luke and John; iBible |
+| Balochi | 26 | Southern Balochi portions (text); Southern Balochi portions and New Testament (audio); JESUS in Southern, Western and Eastern Balochi; The Prophets' Story in all three; LUMO Luke; Visual Bible Matthew |
+| Hindko | 18 | JESUS; The Prophets' Story; iBible (GRN's Bible readings, from Genesis to Jude, are under recordings) |
+
+Balochi is one shelf from DBS's four Balochi pages (bal umbrella, bcc Southern, bgn Western, bgp Eastern); every item names its variety. Saraiki's GRN programmes name theirs (Derawali, Jangli, Multani, Riasiti). DBS's Southern Hindko page (hnd) lists only the Hindi Easy-to-Read Bible, so Hindko is DBS's Northern Hindko (Hazara). Every audio Bible chapter was checked (Saraiki 349, Balochi 538), all valid.
+
+Rebuild with `python3 packer/build_dbs_audit.py skr bal hno`, then `npm run dbs:import`.
