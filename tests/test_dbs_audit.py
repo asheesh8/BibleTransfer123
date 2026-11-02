@@ -1,4 +1,4 @@
-"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Arabic, Haitian Creole, Kuria, Spanish, Saamia, Luhya, Bukusu, Maragoli, Idakho-Isukha-Tiriki, Kabras, Tachoni, Banyala, Marachi, Kamba, Kalenjin, Giryama, Digo, Duruma, Meru, Turkana and Teso: complete, verified and DBS-hosted."""
+"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Arabic, Haitian Creole, Kuria, Spanish, Saamia, Luhya, Bukusu, Maragoli, Idakho-Isukha-Tiriki, Kabras, Tachoni, Banyala, Marachi, Kamba, Kalenjin, Giryama, Digo, Duruma, Meru, Turkana, Teso, Saraiki, Balochi and Hindko: complete, verified and DBS-hosted."""
 import json
 import pathlib
 import re
@@ -23,14 +23,16 @@ SHELVES = {'xho': ('xhosa', 'xh', 13), 'nya': ('chichewa', 'ny', 34),
            'nle': ('banyala', 'swh', 12), 'lri': ('marachi', 'swh', 14),
            'kam': ('kamba', 'swh', 22), 'kln': ('kalenjin', 'swh', 97),
            'nyf': ('giryama', 'swh', 26), 'dig': ('digo', 'swh', 21), 'dug': ('duruma', 'swh', 16),
-           'mer': ('meru', 'swh', 14), 'tuv': ('turkana', 'swh', 20), 'teo': ('teso', 'swh', 23)}
+           'mer': ('meru', 'swh', 14), 'tuv': ('turkana', 'swh', 20), 'teo': ('teso', 'swh', 23),
+           'skr': ('saraiki', 'ur', 25), 'bal': ('balochi', 'ur', 26), 'hno': ('hindko', 'ur', 18)}
 DATES = {'ara': '2026-10-07', 'hat': '2026-10-13', 'kuj': '2026-10-14', 'spa': '2026-10-15',
          'lsm': '2026-10-20', 'luy': '2026-10-20', 'bxk': '2026-10-20',
          'rag': '2026-10-21', 'ida': '2026-10-21',
          'lkb': '2026-10-24', 'lts': '2026-10-24', 'nle': '2026-10-24', 'lri': '2026-10-24',
          'kam': '2026-10-24', 'kln': '2026-10-24',
          'nyf': '2026-10-24', 'dig': '2026-10-24', 'dug': '2026-10-24',
-         'mer': '2026-10-24', 'tuv': '2026-10-24', 'teo': '2026-10-24'}
+         'mer': '2026-10-24', 'tuv': '2026-10-24', 'teo': '2026-10-24',
+         'skr': '2026-11-02', 'bal': '2026-11-02', 'hno': '2026-11-02'}
 
 
 def urls(r):
@@ -112,6 +114,8 @@ class DbsAuditTest(unittest.TestCase):
         # Bible; Teso's whole Bible, New Testament, and Mark and Luke.
         self.assertEqual((totals['mer'], totals['tuv'], totals['teo']), (929 + 2, 1189, 1189 + 260 + 40))
         # Three full Bibles, the Reina-Valera 1960 Old Testament and three New Testaments.
+        self.assertEqual((totals['skr'], totals['bal']), (89 + 260, 278 + 260))
+        self.assertNotIn('hno', totals)   # DBS has no Hindko audio Bible; GRN's readings are carried
         self.assertEqual(totals['spa'], 1189 * 3 + 929 + 260 * 3)
 
     def test_moved_audio_bibles_are_left_out(self):
@@ -242,8 +246,9 @@ class DbsAuditTest(unittest.TestCase):
             self.assertIn(f'"lang":"{code}","ui":"{ui}","slug":"{slug}"', page)
             self.assertIn(f'data/catalog-{code}-shelf.js', page)
             self.assertIn(f"'{slug}/index.html', 'data/catalog-{code}.js'", sw)
-            # Kuria uses the Swahili interface, whose own code is the Swahili page's route.
-            for path in (slug, code) + ((ui,) if ui != 'swh' else ()):
+            # Kuria uses the Swahili interface, whose own code is the Swahili page's route;
+            # Saraiki, Balochi and Hindko use Urdu's the same way.
+            for path in (slug, code) + ((ui,) if ui not in ('swh', 'ur') else ()):
                 self.assertEqual(routes['/' + path], f'/{slug}/index.html')
             self.assertIn(f"{{ code: '{ui}',", i18n)
             self.assertTrue((ROOT / f'app/assets/js/i18n/{ui}.js').exists(), ui)
@@ -465,6 +470,42 @@ class DbsAuditTest(unittest.TestCase):
             self.assertIn(f'"{slug}": (', (ROOT / 'packer/library_mail.py').read_text())
         vercel = (ROOT / 'vercel.json').read_text()
         for slug, aliases in (('meru', ('meru', 'kimeru', 'mer')), ('turkana', ('turkana', 'tuv')), ('teso', ('teso', 'ateso', 'teo'))):
+            for alias in aliases:
+                self.assertIn('{ "source": "/' + alias + '", "destination": "/' + slug + '/index.html" }', vercel)
+
+
+    def test_saraiki_balochi_and_hindko(self):
+        skr, bal, hno = self.shelf('skr'), self.shelf('bal'), self.shelf('hno')
+        for code, slug in (('skr', 'saraiki'), ('bal', 'balochi'), ('hno', 'hindko')):
+            lang = self.built[code]['languages'][code]
+            self.assertEqual((lang['dir'], lang['script'], lang['font']), ('rtl', 'arab', 'naskh'))
+            page = (ROOT / f'app/{slug}/index.html').read_text()
+            self.assertIn(f'"lang":"{code}","ui":"ur","slug":"{slug}"', page)
+            self.assertIn('dir="rtl"', page)
+            self.assertIn(f'"{slug}": (', (ROOT / 'packer/library_mail.py').read_text())
+            # Every word the library adds is Urdu, in Arabic script.
+            for r in self.shelf(code):
+                self.assertRegex(r['desc'], '[\u0600-\u06ff]', r['id'])
+                self.assertRegex(r['native'], '[\u0600-\u06ff]', r['id'])
+        # DBS's pickers give English or romanised capitals; the books take Urdu names.
+        self.assertEqual(skr[0]['play']['bookNames']['Matthew'], 'متی')
+        self.assertEqual(skr[1]['title'], 'Saraiki New Testament')            # DBS: "Saraiki Bible Stories"
+        self.assertEqual(next(r for r in bal if r['id'] == 'bal-ab-bccbnt-davr-nt-n')['play']['bookNames']['Revelation'], 'مکاشفہ')
+        # One Balochi shelf from four DBS pages: each item names its variety.
+        self.assertEqual({r['id']: r.get('scope') for r in bal if r['id'].endswith('-jesus')},
+                         {'bal-film-bcc-balochi-southern-jesus': 'Southern Balochi',
+                          'bal-film-bgn-balochi-western-jesus': 'Western Balochi',
+                          'bal-film-bgp-balochi-eastern-jesus': 'Eastern Balochi'})
+        self.assertIn('https://dbs.org/audio/collections/grn/bal_GlobalRecordings_baluchi', self.built['bal']['notCarried'])
+        self.assertIn('https://dbs.org/bibles/audio/BCCPBS_DAVR_NT_N', self.built['bal']['notCarried'])
+        # Saraiki's GRN programmes name their variety; Hindko's Bible readings follow the Bible's order.
+        self.assertEqual(next(r for r in skr if r['id'] == 'skr-grn-63871')['scope'], 'Derawali')
+        readings = [r['title'] for r in hno if r['id'].startswith('hno-grn-')]
+        self.assertLess(readings.index('Genesis'), readings.index('Matthew'))
+        self.assertLess(readings.index('Matthew'), readings.index('Romans'))
+        vercel = (ROOT / 'vercel.json').read_text()
+        for slug, aliases in (('saraiki', ('saraiki', 'seraiki', 'siraiki', 'skr')),
+                              ('balochi', ('balochi', 'baluchi', 'bal')), ('hindko', ('hindko', 'hno'))):
             for alias in aliases:
                 self.assertIn('{ "source": "/' + alias + '", "destination": "/' + slug + '/index.html" }', vercel)
 

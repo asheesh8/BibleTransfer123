@@ -64,6 +64,15 @@
       "noneSub": "جرّب كلمة أقصر، أو اضغط «الكل».",
       "clear": "مسح عوامل التصفية"
     },
+    "ur": {
+      "email": "یہ لائبریری ای میل کریں",
+      "copy": "لنک کاپی کریں",
+      "search": "نام سے تلاش کریں",
+      "kind": "قسم",
+      "none": "اس سے کوئی چیز نہیں ملی",
+      "noneSub": "چھوٹا لفظ لکھ کر دیکھیں، یا \"سب\" پر دبائیں۔",
+      "clear": "صاف کریں"
+    },
     "ht": {
       "email": "Voye bibliyotèk sa a pa imèl",
       "copy": "Kopye lyen an",
@@ -407,6 +416,51 @@
       "badge": "سنڌي only",
       "lead": "Everything on this page is in سنڌي.",
       "pageText": "en"
+    },
+    {
+      "slug": "saraiki",
+      "lang": "skr",
+      "ui": "ur",
+      "name": "Saraiki",
+      "native": "سرائیکی",
+      "htmlLang": "ur",
+      "dir": "rtl",
+      "aliases": ["seraiki", "siraiki", "multani", "skr"],
+      "title": "سرائیکی بائبل لائبریری",
+      "description": "سرائیکی میں بائبل، فلمیں اور مسیحی آڈیو۔",
+      "badge": "صرف سرائیکی",
+      "lead": "اس لائبریری کی ہر چیز سرائیکی میں ہے۔",
+      "pageText": "ur"
+    },
+    {
+      "slug": "balochi",
+      "lang": "bal",
+      "ui": "ur",
+      "name": "Balochi",
+      "native": "بلوچی",
+      "htmlLang": "ur",
+      "dir": "rtl",
+      "aliases": ["baluchi", "baloch", "bal", "bcc", "bgn", "bgp"],
+      "title": "بلوچی بائبل لائبریری",
+      "description": "بلوچی میں بائبل، فلمیں اور مسیحی آڈیو۔",
+      "badge": "صرف بلوچی",
+      "lead": "اس لائبریری کی ہر چیز بلوچی میں ہے۔",
+      "pageText": "ur"
+    },
+    {
+      "slug": "hindko",
+      "lang": "hno",
+      "ui": "ur",
+      "name": "Hindko",
+      "native": "ہندکو",
+      "htmlLang": "ur",
+      "dir": "rtl",
+      "aliases": ["hindku", "hno"],
+      "title": "ہندکو بائبل لائبریری",
+      "description": "ہندکو میں بائبل، فلمیں اور مسیحی آڈیو۔",
+      "badge": "صرف ہندکو",
+      "lead": "اس لائبریری کی ہر چیز ہندکو میں ہے۔",
+      "pageText": "ur"
     },
     {
       "slug": "luganda",

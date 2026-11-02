@@ -18,7 +18,7 @@
     }
   },
   "redirects": [
-    { "source": "/:slug(english|mandarin|hindi|marathi|urdu|swahili|zulu|western-punjabi|cantonese|pashto|eastern-punjabi|nepali|sindhi|luganda|luo|malagasy|kirundi|akan|tigrinya|arabic|haitian|spanish|kuria|luhya|bukusu|saamia|maragoli|idakho|tiriki|kabras|tachoni|banyala|marachi|kamba|kalenjin|giryama|digo|duruma|meru|turkana|teso|chichewa|kinyarwanda|xhosa|shona|hausa|lingala|nigerian-pidgin|yoruba|portuguese|amharic|french|igbo|oromo|kikuyu|gusii|maasai)", "has": [{ "type": "query", "key": "src", "value": "qr" }], "destination": "/api/qr?l=:slug", "permanent": false }
+    { "source": "/:slug(english|mandarin|hindi|marathi|urdu|swahili|zulu|western-punjabi|cantonese|pashto|eastern-punjabi|nepali|sindhi|saraiki|balochi|hindko|luganda|luo|malagasy|kirundi|akan|tigrinya|arabic|haitian|spanish|kuria|luhya|bukusu|saamia|maragoli|idakho|tiriki|kabras|tachoni|banyala|marachi|kamba|kalenjin|giryama|digo|duruma|meru|turkana|teso|chichewa|kinyarwanda|xhosa|shona|hausa|lingala|nigerian-pidgin|yoruba|portuguese|amharic|french|igbo|oromo|kikuyu|gusii|maasai)", "has": [{ "type": "query", "key": "src", "value": "qr" }], "destination": "/api/qr?l=:slug", "permanent": false }
   ],
   "rewrites": [
     { "source": "/admin", "destination": "/admin/index.html" },
@@ -46,6 +46,21 @@
     { "source": "/punjabi", "destination": "/eastern-punjabi/index.html" },
     { "source": "/nepali", "destination": "/nepali/index.html" },
     { "source": "/sindhi", "destination": "/sindhi/index.html" },
+    { "source": "/saraiki", "destination": "/saraiki/index.html" },
+    { "source": "/seraiki", "destination": "/saraiki/index.html" },
+    { "source": "/siraiki", "destination": "/saraiki/index.html" },
+    { "source": "/multani", "destination": "/saraiki/index.html" },
+    { "source": "/skr", "destination": "/saraiki/index.html" },
+    { "source": "/balochi", "destination": "/balochi/index.html" },
+    { "source": "/baluchi", "destination": "/balochi/index.html" },
+    { "source": "/baloch", "destination": "/balochi/index.html" },
+    { "source": "/bal", "destination": "/balochi/index.html" },
+    { "source": "/bcc", "destination": "/balochi/index.html" },
+    { "source": "/bgn", "destination": "/balochi/index.html" },
+    { "source": "/bgp", "destination": "/balochi/index.html" },
+    { "source": "/hindko", "destination": "/hindko/index.html" },
+    { "source": "/hindku", "destination": "/hindko/index.html" },
+    { "source": "/hno", "destination": "/hindko/index.html" },
     { "source": "/luganda", "destination": "/luganda/index.html" },
     { "source": "/luo", "destination": "/luo/index.html" },
     { "source": "/dholuo", "destination": "/luo/index.html" },

@@ -11,6 +11,10 @@
   "title": "مكتبة الكتاب المقدس: العربية",
   "description": "أفلام وتسجيلات صوتية ونصوص من الكتاب المقدس مجاناً باللغة العربية. شاهد واستمع واقرأ على أي هاتف، ثم شاركه مع غيرك!"
  },
+ "balochi": {
+  "title": "بلوچی بائبل لائبریری",
+  "description": "بلوچی میں مفت بائبل فلمیں، آڈیو اور کلامِ مقدس۔ کسی بھی فون پر دیکھیں، سنیں اور پڑھیں، پھر دوسروں تک پہنچائیں!"
+ },
  "banyala": {
   "title": "Maktaba ya Biblia ya Olunyala",
   "description": "Filamu za Biblia, sauti na Maandiko bure kwa Olunyala. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
@@ -66,6 +70,10 @@
  "hindi": {
   "title": "हिन्दी बाइबल पुस्तकालय",
   "description": "हिन्दी में मुफ़्त बाइबल फ़िल्में, ऑडियो और पवित्र शास्त्र। किसी भी फ़ोन पर देखें, सुनें और पढ़ें, फिर दूसरों तक पहुँचाएँ!"
+ },
+ "hindko": {
+  "title": "ہندکو بائبل لائبریری",
+  "description": "ہندکو میں مفت بائبل فلمیں، آڈیو اور کلامِ مقدس۔ کسی بھی فون پر دیکھیں، سنیں اور پڑھیں، پھر دوسروں تک پہنچائیں!"
  },
  "home": {
   "title": "The Library: free Bible films, audio and Scripture",
@@ -174,6 +182,10 @@
  "saamia": {
   "title": "Maktaba ya Biblia ya Olusaamia",
   "description": "Filamu za Biblia, sauti na Maandiko bure kwa Olusaamia. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
+ },
+ "saraiki": {
+  "title": "سرائیکی بائبل لائبریری",
+  "description": "سرائیکی میں مفت بائبل فلمیں، آڈیو اور کلامِ مقدس۔ کسی بھی فون پر دیکھیں، سنیں اور پڑھیں، پھر دوسروں تک پہنچائیں!"
  },
  "shona": {
   "title": "Raibhurari yeBhaibheri — chiShona",

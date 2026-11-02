@@ -62,7 +62,7 @@ Registry fields:
 |---|---|---|
 | `slug` | yes | URL and folder: `/<slug>`, `app/<slug>/index.html`. Never rename or remove one; printed QR codes use it. |
 | `lang` | yes | ISO 639-3 code of the content. Also the catalogue, `app/data/catalog-<lang>.js`. |
-| `ui` | yes | Interface language code in `i18n.js`. Kenyan languages without a reviewed translation use `swh`. |
+| `ui` | yes | Interface language code in `i18n.js`. Kenyan languages without a reviewed translation use `swh`; Saraiki, Balochi and Hindko use `ur`. |
 | `name`, `native` | yes | English and own-language names (page data, emails, share list). |
 | `htmlLang` | yes | The page's `<html lang>`, usually the BCP 47 code of the interface. |
 | `dir` | no | `rtl` for Arabic-script pages; omit for `ltr`. |

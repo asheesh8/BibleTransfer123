@@ -24,7 +24,7 @@ their second language, maybe with no signal. Every rule comes from them:
 | Icon plus word on every action | Helps a reader who cannot read the word, and one who cannot read the icon |
 | The verbs are Play, Save and Share, the same on every screen | Plain words for a slow reader |
 | Body text 17 px; every text colour 4.5:1 or better on its ground, both themes | Readable in sunlight without zooming |
-| Arabic script never tracked or broken mid-word; Ethiopic, Devanagari, Chinese get their own faces and leading | 57 languages, several right-to-left |
+| Arabic script never tracked or broken mid-word; Ethiopic, Devanagari, Chinese get their own faces and leading | 60 languages, several right-to-left |
 | Motion is short, never blocks a tap, uses transform and opacity only, and stops under "reduce motion" | Cheap phones and people who get motion-sick |
 | Nothing downloaded: system fonts, inline SVG icons, no animation runtime | It runs off a microSD card with no internet |
 
