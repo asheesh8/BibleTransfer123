@@ -11,10 +11,6 @@
   "title": "مكتبة الكتاب المقدس: العربية",
   "description": "أفلام وتسجيلات صوتية ونصوص من الكتاب المقدس مجاناً باللغة العربية. شاهد واستمع واقرأ على أي هاتف، ثم شاركه مع غيرك!"
  },
- "balochi": {
-  "title": "بلوچی بائبل لائبریری",
-  "description": "بلوچی میں مفت بائبل فلمیں، آڈیو اور کلامِ مقدس۔ کسی بھی فون پر دیکھیں، سنیں اور پڑھیں، پھر دوسروں تک پہنچائیں!"
- },
  "banyala": {
   "title": "Maktaba ya Biblia ya Olunyala",
   "description": "Filamu za Biblia, sauti na Maandiko bure kwa Olunyala. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
@@ -38,6 +34,10 @@
  "duruma": {
   "title": "Maktaba ya Biblia ya Chiduruma",
   "description": "Filamu za Biblia, sauti na Maandiko bure kwa Chiduruma. Tazama, sikiliza na usome kwenye simu yoyote, kisha uwashirikishe wengine!"
+ },
+ "eastern-balochi": {
+  "title": "مشرقی بلوچی بائبل لائبریری",
+  "description": "مشرقی بلوچی میں مفت بائبل فلمیں، آڈیو اور کلامِ مقدس۔ کسی بھی فون پر دیکھیں، سنیں اور پڑھیں، پھر دوسروں تک پہنچائیں!"
  },
  "eastern-punjabi": {
   "title": "ਪੰਜਾਬੀ ਬਾਈਬਲ ਲਾਇਬ੍ਰੇਰੀ",
@@ -195,6 +195,10 @@
   "title": "سنڌي بائيبل لائبريري",
   "description": "سنڌي ۾ مفت بائبل فلمون، آڊيو ۽ پاڪ ڪلام. ڪنهن به فون تي ڏسو، ٻڌو ۽ پڙهو، پوءِ ٻين تائين پهچايو!"
  },
+ "southern-balochi": {
+  "title": "جنوبی بلوچی بائبل لائبریری",
+  "description": "جنوبی بلوچی میں مفت بائبل فلمیں، آڈیو اور کلامِ مقدس۔ کسی بھی فون پر دیکھیں، سنیں اور پڑھیں، پھر دوسروں تک پہنچائیں!"
+ },
  "spanish": {
   "title": "Biblioteca bíblica · Español",
   "description": "Películas bíblicas, audio y Escrituras gratis en Español. Mire, escuche y lea en cualquier teléfono, ¡y compártalo con otros!"
@@ -226,6 +230,10 @@
  "urdu": {
   "title": "اردو بائبل لائبریری",
   "description": "اردو میں مفت بائبل فلمیں، آڈیو اور کلامِ مقدس۔ کسی بھی فون پر دیکھیں، سنیں اور پڑھیں، پھر دوسروں تک پہنچائیں!"
+ },
+ "western-balochi": {
+  "title": "مغربی بلوچی بائبل لائبریری",
+  "description": "مغربی بلوچی میں مفت بائبل فلمیں، آڈیو اور کلامِ مقدس۔ کسی بھی فون پر دیکھیں، سنیں اور پڑھیں، پھر دوسروں تک پہنچائیں!"
  },
  "western-punjabi": {
   "title": "پنجابی بائبل لائبریری",

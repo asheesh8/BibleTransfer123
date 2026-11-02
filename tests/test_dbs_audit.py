@@ -1,4 +1,4 @@
-"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Arabic, Haitian Creole, Kuria, Spanish, Saamia, Luhya, Bukusu, Maragoli, Idakho-Isukha-Tiriki, Kabras, Tachoni, Banyala, Marachi, Kamba, Kalenjin, Giryama, Digo, Duruma, Meru, Turkana, Teso, Saraiki, Balochi and Hindko: complete, verified and DBS-hosted."""
+"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Arabic, Haitian Creole, Kuria, Spanish, Saamia, Luhya, Bukusu, Maragoli, Idakho-Isukha-Tiriki, Kabras, Tachoni, Banyala, Marachi, Kamba, Kalenjin, Giryama, Digo, Duruma, Meru, Turkana, Teso, Saraiki, Southern, Eastern and Western Balochi, and Hindko: complete, verified and DBS-hosted."""
 import json
 import pathlib
 import re
@@ -9,6 +9,8 @@ from packer.et.profiles import PROFILES
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATE = '2026-10-06'
+# Shelves split from one audit: Balochi's three varieties share DBS's Balochi audit.
+AUDIT = {'bcc': 'balochi', 'bgp': 'balochi', 'bgn': 'balochi'}
 ARA_COUNT = 263
 SPA_COUNT = 84
 SHELVES = {'xho': ('xhosa', 'xh', 13), 'nya': ('chichewa', 'ny', 34),
@@ -24,7 +26,8 @@ SHELVES = {'xho': ('xhosa', 'xh', 13), 'nya': ('chichewa', 'ny', 34),
            'kam': ('kamba', 'swh', 22), 'kln': ('kalenjin', 'swh', 97),
            'nyf': ('giryama', 'swh', 26), 'dig': ('digo', 'swh', 21), 'dug': ('duruma', 'swh', 16),
            'mer': ('meru', 'swh', 14), 'tuv': ('turkana', 'swh', 20), 'teo': ('teso', 'swh', 23),
-           'skr': ('saraiki', 'ur', 25), 'bal': ('balochi', 'ur', 26), 'hno': ('hindko', 'ur', 18)}
+           'skr': ('saraiki', 'ur', 25), 'bcc': ('southern-balochi', 'ur', 14),
+           'bgp': ('eastern-balochi', 'ur', 7), 'bgn': ('western-balochi', 'ur', 5), 'hno': ('hindko', 'ur', 18)}
 DATES = {'ara': '2026-10-07', 'hat': '2026-10-13', 'kuj': '2026-10-14', 'spa': '2026-10-15',
          'lsm': '2026-10-20', 'luy': '2026-10-20', 'bxk': '2026-10-20',
          'rag': '2026-10-21', 'ida': '2026-10-21',
@@ -32,7 +35,8 @@ DATES = {'ara': '2026-10-07', 'hat': '2026-10-13', 'kuj': '2026-10-14', 'spa': '
          'kam': '2026-10-24', 'kln': '2026-10-24',
          'nyf': '2026-10-24', 'dig': '2026-10-24', 'dug': '2026-10-24',
          'mer': '2026-10-24', 'tuv': '2026-10-24', 'teo': '2026-10-24',
-         'skr': '2026-11-02', 'bal': '2026-11-02', 'hno': '2026-11-02'}
+         'skr': '2026-11-02', 'bcc': '2026-11-02', 'bgp': '2026-11-02', 'bgn': '2026-11-02',
+         'hno': '2026-11-02'}
 
 
 def urls(r):
@@ -45,8 +49,14 @@ class DbsAuditTest(unittest.TestCase):
     def setUpClass(cls):
         cls.lib = catalog.load(ROOT / 'catalog/resources.json')
         cls.cards = {r['id']: r for r in build.card_catalog(cls.lib, [], PROFILES['pocket'], {})['resources']}
-        cls.audit = {c: json.loads((ROOT / f'catalog/source/dbs-audit-{s}-{DATES.get(c, DATE)}.json').read_text())
+        cls.audit = {c: json.loads((ROOT / f'catalog/source/dbs-audit-{AUDIT.get(c, s)}-{DATES.get(c, DATE)}.json').read_text())
                      for c, (s, _, _) in SHELVES.items()}
+        # Each Balochi shelf answers only for the DBS links that belong to its variety.
+        import sys
+        sys.path.insert(0, str(ROOT / 'packer'))
+        import build_dbs_pakistan
+        for c in AUDIT:
+            cls.audit[c]['sections'] = build_dbs_pakistan.PakistanShelf(c).audit['sections']
         cls.built = {c: json.loads((ROOT / f'catalog/{s}.json').read_text()) for c, (s, _, _) in SHELVES.items()}
 
     def shelf(self, code):
@@ -114,7 +124,9 @@ class DbsAuditTest(unittest.TestCase):
         # Bible; Teso's whole Bible, New Testament, and Mark and Luke.
         self.assertEqual((totals['mer'], totals['tuv'], totals['teo']), (929 + 2, 1189, 1189 + 260 + 40))
         # Three full Bibles, the Reina-Valera 1960 Old Testament and three New Testaments.
-        self.assertEqual((totals['skr'], totals['bal']), (89 + 260, 278 + 260))
+        self.assertEqual((totals['skr'], totals['bcc']), (89 + 260, 278 + 260))
+        self.assertNotIn('bgp', totals)
+        self.assertNotIn('bgn', totals)
         self.assertNotIn('hno', totals)   # DBS has no Hindko audio Bible; GRN's readings are carried
         self.assertEqual(totals['spa'], 1189 * 3 + 929 + 260 * 3)
 
@@ -475,8 +487,10 @@ class DbsAuditTest(unittest.TestCase):
 
 
     def test_saraiki_balochi_and_hindko(self):
-        skr, bal, hno = self.shelf('skr'), self.shelf('bal'), self.shelf('hno')
-        for code, slug in (('skr', 'saraiki'), ('bal', 'balochi'), ('hno', 'hindko')):
+        skr, bcc, hno = self.shelf('skr'), self.shelf('bcc'), self.shelf('hno')
+        pages = (('skr', 'saraiki'), ('bcc', 'southern-balochi'), ('bgp', 'eastern-balochi'),
+                 ('bgn', 'western-balochi'), ('hno', 'hindko'))
+        for code, slug in pages:
             lang = self.built[code]['languages'][code]
             self.assertEqual((lang['dir'], lang['script'], lang['font']), ('rtl', 'arab', 'naskh'))
             page = (ROOT / f'app/{slug}/index.html').read_text()
@@ -490,14 +504,21 @@ class DbsAuditTest(unittest.TestCase):
         # DBS's pickers give English or romanised capitals; the books take Urdu names.
         self.assertEqual(skr[0]['play']['bookNames']['Matthew'], 'متی')
         self.assertEqual(skr[1]['title'], 'Saraiki New Testament')            # DBS: "Saraiki Bible Stories"
-        self.assertEqual(next(r for r in bal if r['id'] == 'bal-ab-bccbnt-davr-nt-n')['play']['bookNames']['Revelation'], 'مکاشفہ')
-        # One Balochi shelf from four DBS pages: each item names its variety.
-        self.assertEqual({r['id']: r.get('scope') for r in bal if r['id'].endswith('-jesus')},
-                         {'bal-film-bcc-balochi-southern-jesus': 'Southern Balochi',
-                          'bal-film-bgn-balochi-western-jesus': 'Western Balochi',
-                          'bal-film-bgp-balochi-eastern-jesus': 'Eastern Balochi'})
-        self.assertIn('https://dbs.org/audio/collections/grn/bal_GlobalRecordings_baluchi', self.built['bal']['notCarried'])
-        self.assertIn('https://dbs.org/bibles/audio/BCCPBS_DAVR_NT_N', self.built['bal']['notCarried'])
+        self.assertEqual(next(r for r in bcc if r['id'] == 'bcc-ab-bccbnt-davr-nt-n')['play']['bookNames']['Revelation'], 'مکاشفہ')
+        # Balochi is three libraries, as DBS lists it: each takes only its own variety's
+        # items, and the umbrella page's Matthew film and 1899 Matthew go to Southern.
+        jesus = {code: [r['id'] for r in self.shelf(code) if r['id'].endswith('-jesus') and r['type'] == 'film']
+                 for code in ('bcc', 'bgp', 'bgn')}
+        self.assertEqual(jesus, {'bcc': ['bcc-film-bcc-balochi-southern-jesus'],
+                                 'bgp': ['bgp-film-bgp-balochi-eastern-jesus'],
+                                 'bgn': ['bgn-film-bgn-balochi-western-jesus']})
+        self.assertEqual({r['id'] for r in self.shelf('bgn') if r['type'] == 'audio'},
+                         {'bgn-grn-16501', 'bgn-grn-8130', 'bgn-grn-5750'})
+        self.assertIn('bcc-film-bal-matthew-vb-baluchi', [r['id'] for r in bcc])
+        self.assertIn('bcc-scan-balochi-1899-matthew', [r['id'] for r in bcc])
+        self.assertTrue(all('scope' not in r for code in ('bcc', 'bgp', 'bgn') for r in self.shelf(code)))
+        self.assertIn('https://dbs.org/audio/collections/grn/bal_GlobalRecordings_baluchi', self.built['bcc']['notCarried'])
+        self.assertIn('https://dbs.org/bibles/audio/BCCPBS_DAVR_NT_N', self.built['bcc']['notCarried'])
         # Saraiki's GRN programmes name their variety; Hindko's Bible readings follow the Bible's order.
         self.assertEqual(next(r for r in skr if r['id'] == 'skr-grn-63871')['scope'], 'Derawali')
         readings = [r['title'] for r in hno if r['id'].startswith('hno-grn-')]
@@ -505,10 +526,16 @@ class DbsAuditTest(unittest.TestCase):
         self.assertLess(readings.index('Matthew'), readings.index('Romans'))
         vercel = (ROOT / 'vercel.json').read_text()
         for slug, aliases in (('saraiki', ('saraiki', 'seraiki', 'siraiki', 'skr')),
+                              ('southern-balochi', ('southern-balochi', 'southern-baluchi', 'bcc')),
+                              ('eastern-balochi', ('eastern-balochi', 'bgp')),
+                              ('western-balochi', ('western-balochi', 'bgn')),
                               ('balochi', ('balochi', 'baluchi', 'bal')), ('hindko', ('hindko', 'hno'))):
             for alias in aliases:
                 self.assertIn('{ "source": "/' + alias + '", "destination": "/' + slug + '/index.html" }', vercel)
-
+        # /balochi is a chooser that links to all three.
+        chooser = (ROOT / 'app/balochi/index.html').read_text()
+        for slug in ('southern-balochi', 'eastern-balochi', 'western-balochi'):
+            self.assertIn(f'href="{slug}/"', chooser)
 
 if __name__ == '__main__':
     unittest.main()

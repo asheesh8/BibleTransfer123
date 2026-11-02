@@ -1,0 +1,1696 @@
+{
+ "generated": "DBS rendered Eastern Balochi inventory — 2026-11-02",
+ "languages": {
+  "bgp": {
+   "name": "Eastern Balochi",
+   "native": "مشرقی بلوچی",
+   "region": "Pakistan",
+   "speakers": "",
+   "blurb": "مشرقی بلوچی میں بائبل، فلمیں اور مسیحی آڈیو۔",
+   "code": "bgp",
+   "script": "arab",
+   "dir": "rtl",
+   "font": "naskh"
+  }
+ },
+ "resources": [
+  {
+   "id": "bgp-film-bgp-balochi-eastern-jesus",
+   "lang": "bgp",
+   "type": "film",
+   "title": "JESUS",
+   "native": "یسوع",
+   "langName": "مشرقی بلوچی",
+   "source": "https://dbs.org/video/jesus/bgp_balochi-eastern_jesus",
+   "org": "Jesus Film Project",
+   "desc": "بائبل پر مبنی فلم، مشرقی بلوچی میں۔ جو حصہ دیکھنا یا محفوظ کرنا چاہیں، اسے چنیں۔",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_01_the-beginning_1_jf6101-0-0_low.mp4",
+     "label": "حصہ ۱ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_02_birth-of-jesus_1_jf6102-0-0_low.mp4",
+     "label": "حصہ ۲ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_03_childhood-of-jesus_1_jf6103-0-0_low.mp4",
+     "label": "حصہ ۳ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_04_baptism-of-jesus-by-john_1_jf6104-0-0_low.mp4",
+     "label": "حصہ ۴ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_05_the-devil-tempts-jesus_1_jf6105-0-0_low.mp4",
+     "label": "حصہ ۵ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_06_jesus-proclaims-fulfillment-of-the-scriptures_1_jf6106-0-0_low.mp4",
+     "label": "حصہ ۶ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_07_parable-of-the-pharisee-and-tax-collector_1_jf6107-0-0_low.mp4",
+     "label": "حصہ ۷ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_08_miraculous-catch-of-fish_1_jf6108-0-0_low.mp4",
+     "label": "حصہ ۸ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_09_jairuss-daughter-brought-back-to-life_1_jf6109-0-0_low.mp4",
+     "label": "حصہ ۹ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_10_disciples-chosen_1_jf6110-0-0_low.mp4",
+     "label": "حصہ ۱۰ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_11_beatitudes_1_jf6111-0-0_low.mp4",
+     "label": "حصہ ۱۱ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_12_sermon-on-the-mount_1_jf6112-0-0_low.mp4",
+     "label": "حصہ ۱۲ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_13_blessed-are-those-who-hear-and-obey_1_jf6113-0-0_low.mp4",
+     "label": "حصہ ۱۳ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_14_sinful-woman-forgiven_1_jf6114-0-0_low.mp4",
+     "label": "حصہ ۱۴ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_15_women-disciples_1_jf6115-0-0_low.mp4",
+     "label": "حصہ ۱۵ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_16_john-the-baptist-in-prison_1_jf6116-0-0_low.mp4",
+     "label": "حصہ ۱۶ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_17_parable-of-the-sower-and-the-seed_1_jf6117-0-0_low.mp4",
+     "label": "حصہ ۱۷ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_18_parable-of-the-lamp_1_jf6118-0-0_low.mp4",
+     "label": "حصہ ۱۸ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_19_jesus-calms-the-storm_1_jf6119-0-0_low.mp4",
+     "label": "حصہ ۱۹ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_20_healing-of-the-demoniac_1_jf6120-0-0_low.mp4",
+     "label": "حصہ ۲۰ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_21_jesus-feeds-5000_1_jf6121-0-0_low.mp4",
+     "label": "حصہ ۲۱ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_22_peter-declares-jesus-to-be-the-christ_1_jf6122-0-0_low.mp4",
+     "label": "حصہ ۲۲ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_23_the-transfiguration_1_jf6123-0-0_low.mp4",
+     "label": "حصہ ۲۳ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_24_jesus-heals-boy-from-evil-spirit_1_jf6124-0-0_low.mp4",
+     "label": "حصہ ۲۴ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_25_the-lords-prayer_1_jf6125-0-0_low.mp4",
+     "label": "حصہ ۲۵ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_26_teaching-about-prayer-and-faith_1_jf6126-0-0_low.mp4",
+     "label": "حصہ ۲۶ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_27_woe-to-those-who-cause-others-to-sin_1_jf6127-0-0_low.mp4",
+     "label": "حصہ ۲۷ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_28_the-kingdom-of-god-as-a-mustard-seed_1_jf6128-0-0_low.mp4",
+     "label": "حصہ ۲۸ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_29_jesus-spends-time-with-sinners_1_jf6129-0-0_low.mp4",
+     "label": "حصہ ۲۹ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_30_healing-on-the-sabbath_1_jf6130-0-0_low.mp4",
+     "label": "حصہ ۳۰ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_31_parable-of-the-good-samaritan_1_jf6131-0-0_low.mp4",
+     "label": "حصہ ۳۱ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_32_healing-of-bartimaeus_1_jf6132-0-0_low.mp4",
+     "label": "حصہ ۳۲ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_33_jesus-and-zaccheus_1_jf6133-0-0_low.mp4",
+     "label": "حصہ ۳۳ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_34_jesus-predicts-his-death-and-resurrection_1_jf6134-0-0_low.mp4",
+     "label": "حصہ ۳۴ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_35_jesuss-triumphal-entry_1_jf6135-0-0_low.mp4",
+     "label": "حصہ ۳۵ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_36_jesus-weeps-over-jerusalem_1_jf6136-0-0_low.mp4",
+     "label": "حصہ ۳۶ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_37_jesus-drives-out-money-changers_1_jf6137-0-0_low.mp4",
+     "label": "حصہ ۳۷ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_38_widows-offering_1_jf6138-0-0_low.mp4",
+     "label": "حصہ ۳۸ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_39_annas-questions-jesuss-authority_1_jf6139-0-0_low.mp4",
+     "label": "حصہ ۳۹ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_40_parable-of-the-vineyard-and-tenants_1_jf6140-0-0_low.mp4",
+     "label": "حصہ ۴۰ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_41_paying-taxes-to-caesar_1_jf6141-0-0_low.mp4",
+     "label": "حصہ ۴۱ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_42_the-last-supper_1_jf6142-0-0_low.mp4",
+     "label": "حصہ ۴۲ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_43_upper-room-teaching_1_jf6143-0-0_low.mp4",
+     "label": "حصہ ۴۳ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_44_jesus-is-betrayed-and-arrested_1_jf6144-0-0_low.mp4",
+     "label": "حصہ ۴۴ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_45_peter-disowns-jesus_1_jf6145-0-0_low.mp4",
+     "label": "حصہ ۴۵ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_46_jesus-is-mocked-and-questioned_1_jf6146-0-0_low.mp4",
+     "label": "حصہ ۴۶ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_47_jesus-is-brought-to-pilate_1_jf6147-0-0_low.mp4",
+     "label": "حصہ ۴۷ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_48_jesus-is-brought-to-herod_1_jf6148-0-0_low.mp4",
+     "label": "حصہ ۴۸ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_49_jesus-is-sentenced_1_jf6149-0-0_low.mp4",
+     "label": "حصہ ۴۹ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_50_jesus-carries-his-cross_1_jf6150-0-0_low.mp4",
+     "label": "حصہ ۵۰ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_51_jesus-is-crucified_1_jf6151-0-0_low.mp4",
+     "label": "حصہ ۵۱ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_52_soldiers-gamble-for-jesuss-clothes_1_jf6152-0-0_low.mp4",
+     "label": "حصہ ۵۲ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_53_sign-on-the-cross_1_jf6153-0-0_low.mp4",
+     "label": "حصہ ۵۳ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_54_crucified-convicts_1_jf6154-0-0_low.mp4",
+     "label": "حصہ ۵۴ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_55_death-of-jesus_1_jf6155-0-0_low.mp4",
+     "label": "حصہ ۵۵ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_56_burial-of-jesus_1_jf6156-0-0_low.mp4",
+     "label": "حصہ ۵۶ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_57_angels-at-the-tomb_1_jf6157-0-0_low.mp4",
+     "label": "حصہ ۵۷ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_58_the-tomb-is-empty_1_jf6158-0-0_low.mp4",
+     "label": "حصہ ۵۸ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_59_resurrected-jesus-appears_1_jf6159-0-0_low.mp4",
+     "label": "حصہ ۵۹ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_60_great-commission-and-ascension_1_jf6160-0-0_low.mp4",
+     "label": "حصہ ۶۰ (MP4)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_61_invitation-to-know-jesus-personally_1_jf6161-0-0_low.mp4",
+     "label": "حصہ ۶۱ (MP4)"
+    },
+    {
+     "url": "https://download.dbs.org/Jesus/bgp_balochi-eastern/bgp_jesus_chapters_high.zip",
+     "label": "تمام حصے (ZIP)"
+    },
+    {
+     "url": "https://download.dbs.org/Jesus/bgp_balochi-eastern/bgp_jesus_chapters_low.zip",
+     "label": "تمام حصے (ZIP)"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/films/bgp_balochi-eastern/bgp_JESUS_low.mp4",
+     "label": "پوری فلم (MP4) · SD"
+    },
+    {
+     "url": "https://video.dbs.org/Jesus/films/bgp_balochi-eastern/bgp_JESUS.mp4",
+     "label": "پوری فلم (MP4) · HD"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/video/jesus/bgp_balochi-eastern_jesus",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "duration": "2:01:44",
+   "year": null,
+   "play": {
+    "kind": "chapters",
+    "base": "",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_01_the-beginning_1_jf6101-0-0_low.mp4",
+      "title": "حصہ ۱"
+     },
+     {
+      "n": 2,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_02_birth-of-jesus_1_jf6102-0-0_low.mp4",
+      "title": "حصہ ۲"
+     },
+     {
+      "n": 3,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_03_childhood-of-jesus_1_jf6103-0-0_low.mp4",
+      "title": "حصہ ۳"
+     },
+     {
+      "n": 4,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_04_baptism-of-jesus-by-john_1_jf6104-0-0_low.mp4",
+      "title": "حصہ ۴"
+     },
+     {
+      "n": 5,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_05_the-devil-tempts-jesus_1_jf6105-0-0_low.mp4",
+      "title": "حصہ ۵"
+     },
+     {
+      "n": 6,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_06_jesus-proclaims-fulfillment-of-the-scriptures_1_jf6106-0-0_low.mp4",
+      "title": "حصہ ۶"
+     },
+     {
+      "n": 7,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_07_parable-of-the-pharisee-and-tax-collector_1_jf6107-0-0_low.mp4",
+      "title": "حصہ ۷"
+     },
+     {
+      "n": 8,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_08_miraculous-catch-of-fish_1_jf6108-0-0_low.mp4",
+      "title": "حصہ ۸"
+     },
+     {
+      "n": 9,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_09_jairuss-daughter-brought-back-to-life_1_jf6109-0-0_low.mp4",
+      "title": "حصہ ۹"
+     },
+     {
+      "n": 10,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_10_disciples-chosen_1_jf6110-0-0_low.mp4",
+      "title": "حصہ ۱۰"
+     },
+     {
+      "n": 11,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_11_beatitudes_1_jf6111-0-0_low.mp4",
+      "title": "حصہ ۱۱"
+     },
+     {
+      "n": 12,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_12_sermon-on-the-mount_1_jf6112-0-0_low.mp4",
+      "title": "حصہ ۱۲"
+     },
+     {
+      "n": 13,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_13_blessed-are-those-who-hear-and-obey_1_jf6113-0-0_low.mp4",
+      "title": "حصہ ۱۳"
+     },
+     {
+      "n": 14,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_14_sinful-woman-forgiven_1_jf6114-0-0_low.mp4",
+      "title": "حصہ ۱۴"
+     },
+     {
+      "n": 15,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_15_women-disciples_1_jf6115-0-0_low.mp4",
+      "title": "حصہ ۱۵"
+     },
+     {
+      "n": 16,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_16_john-the-baptist-in-prison_1_jf6116-0-0_low.mp4",
+      "title": "حصہ ۱۶"
+     },
+     {
+      "n": 17,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_17_parable-of-the-sower-and-the-seed_1_jf6117-0-0_low.mp4",
+      "title": "حصہ ۱۷"
+     },
+     {
+      "n": 18,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_18_parable-of-the-lamp_1_jf6118-0-0_low.mp4",
+      "title": "حصہ ۱۸"
+     },
+     {
+      "n": 19,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_19_jesus-calms-the-storm_1_jf6119-0-0_low.mp4",
+      "title": "حصہ ۱۹"
+     },
+     {
+      "n": 20,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_20_healing-of-the-demoniac_1_jf6120-0-0_low.mp4",
+      "title": "حصہ ۲۰"
+     },
+     {
+      "n": 21,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_21_jesus-feeds-5000_1_jf6121-0-0_low.mp4",
+      "title": "حصہ ۲۱"
+     },
+     {
+      "n": 22,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_22_peter-declares-jesus-to-be-the-christ_1_jf6122-0-0_low.mp4",
+      "title": "حصہ ۲۲"
+     },
+     {
+      "n": 23,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_23_the-transfiguration_1_jf6123-0-0_low.mp4",
+      "title": "حصہ ۲۳"
+     },
+     {
+      "n": 24,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_24_jesus-heals-boy-from-evil-spirit_1_jf6124-0-0_low.mp4",
+      "title": "حصہ ۲۴"
+     },
+     {
+      "n": 25,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_25_the-lords-prayer_1_jf6125-0-0_low.mp4",
+      "title": "حصہ ۲۵"
+     },
+     {
+      "n": 26,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_26_teaching-about-prayer-and-faith_1_jf6126-0-0_low.mp4",
+      "title": "حصہ ۲۶"
+     },
+     {
+      "n": 27,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_27_woe-to-those-who-cause-others-to-sin_1_jf6127-0-0_low.mp4",
+      "title": "حصہ ۲۷"
+     },
+     {
+      "n": 28,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_28_the-kingdom-of-god-as-a-mustard-seed_1_jf6128-0-0_low.mp4",
+      "title": "حصہ ۲۸"
+     },
+     {
+      "n": 29,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_29_jesus-spends-time-with-sinners_1_jf6129-0-0_low.mp4",
+      "title": "حصہ ۲۹"
+     },
+     {
+      "n": 30,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_30_healing-on-the-sabbath_1_jf6130-0-0_low.mp4",
+      "title": "حصہ ۳۰"
+     },
+     {
+      "n": 31,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_31_parable-of-the-good-samaritan_1_jf6131-0-0_low.mp4",
+      "title": "حصہ ۳۱"
+     },
+     {
+      "n": 32,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_32_healing-of-bartimaeus_1_jf6132-0-0_low.mp4",
+      "title": "حصہ ۳۲"
+     },
+     {
+      "n": 33,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_33_jesus-and-zaccheus_1_jf6133-0-0_low.mp4",
+      "title": "حصہ ۳۳"
+     },
+     {
+      "n": 34,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_34_jesus-predicts-his-death-and-resurrection_1_jf6134-0-0_low.mp4",
+      "title": "حصہ ۳۴"
+     },
+     {
+      "n": 35,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_35_jesuss-triumphal-entry_1_jf6135-0-0_low.mp4",
+      "title": "حصہ ۳۵"
+     },
+     {
+      "n": 36,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_36_jesus-weeps-over-jerusalem_1_jf6136-0-0_low.mp4",
+      "title": "حصہ ۳۶"
+     },
+     {
+      "n": 37,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_37_jesus-drives-out-money-changers_1_jf6137-0-0_low.mp4",
+      "title": "حصہ ۳۷"
+     },
+     {
+      "n": 38,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_38_widows-offering_1_jf6138-0-0_low.mp4",
+      "title": "حصہ ۳۸"
+     },
+     {
+      "n": 39,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_39_annas-questions-jesuss-authority_1_jf6139-0-0_low.mp4",
+      "title": "حصہ ۳۹"
+     },
+     {
+      "n": 40,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_40_parable-of-the-vineyard-and-tenants_1_jf6140-0-0_low.mp4",
+      "title": "حصہ ۴۰"
+     },
+     {
+      "n": 41,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_41_paying-taxes-to-caesar_1_jf6141-0-0_low.mp4",
+      "title": "حصہ ۴۱"
+     },
+     {
+      "n": 42,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_42_the-last-supper_1_jf6142-0-0_low.mp4",
+      "title": "حصہ ۴۲"
+     },
+     {
+      "n": 43,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_43_upper-room-teaching_1_jf6143-0-0_low.mp4",
+      "title": "حصہ ۴۳"
+     },
+     {
+      "n": 44,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_44_jesus-is-betrayed-and-arrested_1_jf6144-0-0_low.mp4",
+      "title": "حصہ ۴۴"
+     },
+     {
+      "n": 45,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_45_peter-disowns-jesus_1_jf6145-0-0_low.mp4",
+      "title": "حصہ ۴۵"
+     },
+     {
+      "n": 46,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_46_jesus-is-mocked-and-questioned_1_jf6146-0-0_low.mp4",
+      "title": "حصہ ۴۶"
+     },
+     {
+      "n": 47,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_47_jesus-is-brought-to-pilate_1_jf6147-0-0_low.mp4",
+      "title": "حصہ ۴۷"
+     },
+     {
+      "n": 48,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_48_jesus-is-brought-to-herod_1_jf6148-0-0_low.mp4",
+      "title": "حصہ ۴۸"
+     },
+     {
+      "n": 49,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_49_jesus-is-sentenced_1_jf6149-0-0_low.mp4",
+      "title": "حصہ ۴۹"
+     },
+     {
+      "n": 50,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_50_jesus-carries-his-cross_1_jf6150-0-0_low.mp4",
+      "title": "حصہ ۵۰"
+     },
+     {
+      "n": 51,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_51_jesus-is-crucified_1_jf6151-0-0_low.mp4",
+      "title": "حصہ ۵۱"
+     },
+     {
+      "n": 52,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_52_soldiers-gamble-for-jesuss-clothes_1_jf6152-0-0_low.mp4",
+      "title": "حصہ ۵۲"
+     },
+     {
+      "n": 53,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_53_sign-on-the-cross_1_jf6153-0-0_low.mp4",
+      "title": "حصہ ۵۳"
+     },
+     {
+      "n": 54,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_54_crucified-convicts_1_jf6154-0-0_low.mp4",
+      "title": "حصہ ۵۴"
+     },
+     {
+      "n": 55,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_55_death-of-jesus_1_jf6155-0-0_low.mp4",
+      "title": "حصہ ۵۵"
+     },
+     {
+      "n": 56,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_56_burial-of-jesus_1_jf6156-0-0_low.mp4",
+      "title": "حصہ ۵۶"
+     },
+     {
+      "n": 57,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_57_angels-at-the-tomb_1_jf6157-0-0_low.mp4",
+      "title": "حصہ ۵۷"
+     },
+     {
+      "n": 58,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_58_the-tomb-is-empty_1_jf6158-0-0_low.mp4",
+      "title": "حصہ ۵۸"
+     },
+     {
+      "n": 59,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_59_resurrected-jesus-appears_1_jf6159-0-0_low.mp4",
+      "title": "حصہ ۵۹"
+     },
+     {
+      "n": 60,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_60_great-commission-and-ascension_1_jf6160-0-0_low.mp4",
+      "title": "حصہ ۶۰"
+     },
+     {
+      "n": 61,
+      "file": "https://video.dbs.org/Jesus/chapters/bgp_balochi-eastern/bgp_jesus_chapter_61_invitation-to-know-jesus-personally_1_jf6161-0-0_low.mp4",
+      "title": "حصہ ۶۱"
+     }
+    ]
+   }
+  },
+  {
+   "id": "bgp-film-bgp-ps-eastern-balochi",
+   "lang": "bgp",
+   "type": "film",
+   "title": "The Prophets' Story",
+   "native": "پیگمبر انی کہسو",
+   "langName": "مشرقی بلوچی",
+   "source": "https://dbs.org/video/ps/bgp_ps_eastern_balochi",
+   "org": "Prophets' Story",
+   "desc": "بائبل پر مبنی فلم، مشرقی بلوچی میں۔",
+   "downloads": [
+    {
+     "url": "https://video.dbs.org/PS/films/bgp_Prophets_Story_پیگمبر_انی_کہسو_Eastern_Balochi.mp4",
+     "label": "پوری فلم (MP4) · HD"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/video/ps/bgp_ps_eastern_balochi",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "duration": "0:09:13",
+   "year": null,
+   "play": {
+    "kind": "file",
+    "hd": "https://video.dbs.org/PS/films/bgp_Prophets_Story_پیگمبر_انی_کہسو_Eastern_Balochi.mp4"
+   }
+  },
+  {
+   "id": "bgp-story-jesus",
+   "lang": "bgp",
+   "type": "audio",
+   "title": "Story of Jesus",
+   "native": "یسوع کی کہانی (آڈیو)",
+   "langName": "مشرقی بلوچی",
+   "source": "https://dbs.org/audio/collections/bgp_StoryJesus_balochi_eastern",
+   "org": "Story of Jesus",
+   "desc": "یسوع کی کہانی آڈیو میں: پوری ریکارڈنگ ایک ساتھ یا ۸ حصوں میں۔ جو چاہیں سنیں یا محفوظ کریں۔",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/soj/bgp_StoryJesus_balochi_eastern_full.mp3",
+     "label": "پوری کہانی (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/bgp_StoryJesus_balochi_eastern/StoryJesus_Balochi_Eastern_1/StoryJesus_Balochi_Eastern_Part_1.mp3",
+     "label": "حصہ ۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/bgp_StoryJesus_balochi_eastern/StoryJesus_Balochi_Eastern_2/StoryJesus_Balochi_Eastern_Part_2.mp3",
+     "label": "حصہ ۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/bgp_StoryJesus_balochi_eastern/StoryJesus_Balochi_Eastern_3/StoryJesus_Balochi_Eastern_Part_3.mp3",
+     "label": "حصہ ۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/bgp_StoryJesus_balochi_eastern/StoryJesus_Balochi_Eastern_4/StoryJesus_Balochi_Eastern_Part_4.mp3",
+     "label": "حصہ ۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/bgp_StoryJesus_balochi_eastern/StoryJesus_Balochi_Eastern_5/StoryJesus_Balochi_Eastern_Part_5.mp3",
+     "label": "حصہ ۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/bgp_StoryJesus_balochi_eastern/StoryJesus_Balochi_Eastern_6/StoryJesus_Balochi_Eastern_Part_6.mp3",
+     "label": "حصہ ۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/bgp_StoryJesus_balochi_eastern/StoryJesus_Balochi_Eastern_7/StoryJesus_Balochi_Eastern_Part_7.mp3",
+     "label": "حصہ ۷ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/bgp_StoryJesus_balochi_eastern/StoryJesus_Balochi_Eastern_8/StoryJesus_Balochi_Eastern_Part_8.mp3",
+     "label": "حصہ ۸ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/bgp_StoryJesus_balochi_eastern.zip",
+     "label": "تمام ریکارڈنگز (ZIP)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/soj/bgp_StoryJesus_balochi_eastern_full.zip",
+     "label": "پوری کہانی (ZIP)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/bgp_StoryJesus_balochi_eastern",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/soj/bgp_StoryJesus_balochi_eastern",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/soj/bgp_StoryJesus_balochi_eastern_full.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/soj/bgp_StoryJesus_balochi_eastern_full.mp3",
+      "title": "پوری کہانی"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/soj/bgp_StoryJesus_balochi_eastern/StoryJesus_Balochi_Eastern_1/StoryJesus_Balochi_Eastern_Part_1.mp3",
+      "title": "حصہ ۱"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/soj/bgp_StoryJesus_balochi_eastern/StoryJesus_Balochi_Eastern_2/StoryJesus_Balochi_Eastern_Part_2.mp3",
+      "title": "حصہ ۲"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/soj/bgp_StoryJesus_balochi_eastern/StoryJesus_Balochi_Eastern_3/StoryJesus_Balochi_Eastern_Part_3.mp3",
+      "title": "حصہ ۳"
+     },
+     {
+      "n": 5,
+      "file": "https://media.dbs.org/audio/soj/bgp_StoryJesus_balochi_eastern/StoryJesus_Balochi_Eastern_4/StoryJesus_Balochi_Eastern_Part_4.mp3",
+      "title": "حصہ ۴"
+     },
+     {
+      "n": 6,
+      "file": "https://media.dbs.org/audio/soj/bgp_StoryJesus_balochi_eastern/StoryJesus_Balochi_Eastern_5/StoryJesus_Balochi_Eastern_Part_5.mp3",
+      "title": "حصہ ۵"
+     },
+     {
+      "n": 7,
+      "file": "https://media.dbs.org/audio/soj/bgp_StoryJesus_balochi_eastern/StoryJesus_Balochi_Eastern_6/StoryJesus_Balochi_Eastern_Part_6.mp3",
+      "title": "حصہ ۶"
+     },
+     {
+      "n": 8,
+      "file": "https://media.dbs.org/audio/soj/bgp_StoryJesus_balochi_eastern/StoryJesus_Balochi_Eastern_7/StoryJesus_Balochi_Eastern_Part_7.mp3",
+      "title": "حصہ ۷"
+     },
+     {
+      "n": 9,
+      "file": "https://media.dbs.org/audio/soj/bgp_StoryJesus_balochi_eastern/StoryJesus_Balochi_Eastern_8/StoryJesus_Balochi_Eastern_Part_8.mp3",
+      "title": "حصہ ۸"
+     }
+    ]
+   }
+  },
+  {
+   "id": "bgp-grn-67798",
+   "lang": "bgp",
+   "type": "audio",
+   "title": "Good News (67798)",
+   "native": "خوشخبری (67798)",
+   "langName": "مشرقی بلوچی",
+   "source": "https://dbs.org/audio/collections/bgp_GlobalRecordings_balochi_eastern",
+   "org": "Global Recordings Network",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات مشرقی بلوچی میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20001%20Picture%201%20In%20the%20Beginning%2067798.mp3",
+     "label": "خوشخبری · حصہ ۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20002%20Picture%202%20The%20Word%20of%20God%2067798.mp3",
+     "label": "خوشخبری · حصہ ۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20003%20Picture%203%20Creation%2067798.mp3",
+     "label": "خوشخبری · حصہ ۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20004%20Picture%204%20Adam%20and%20Eve%2067798.mp3",
+     "label": "خوشخبری · حصہ ۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20005%20Picture%205%20Cain%20and%20Abel%2067798.mp3",
+     "label": "خوشخبری · حصہ ۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20006%20Picture%206%20Noah%27s%20Ark%2067798.mp3",
+     "label": "خوشخبری · حصہ ۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20007%20Picture%207%20The%20Flood%2067798.mp3",
+     "label": "خوشخبری · حصہ ۷ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20008%20Picture%208%20Abraham%20Sarah%20and%20Isaac%2067798.mp3",
+     "label": "خوشخبری · حصہ ۸ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20009%20Picture%209%20Moses%20and%20the%20Law%20of%20God%2067798.mp3",
+     "label": "خوشخبری · حصہ ۹ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20010%20Picture%2010%20The%20Ten%20Commandments%2067798.mp3",
+     "label": "خوشخبری · حصہ ۱۰ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20011%20Picture%2011%20Sacrifice%20for%20Sin%2067798.mp3",
+     "label": "خوشخبری · حصہ ۱۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20012%20Picture%2012%20A%20Saviour%20Promised%2067798.mp3",
+     "label": "خوشخبری · حصہ ۱۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20013%20Picture%2013%20The%20Birth%20of%20Jesus%2067798.mp3",
+     "label": "خوشخبری · حصہ ۱۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20014%20Picture%2014%20Jesus%20the%20Teacher%2067798.mp3",
+     "label": "خوشخبری · حصہ ۱۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20015%20Picture%2015%20Miracles%20of%20Jesus%2067798.mp3",
+     "label": "خوشخبری · حصہ ۱۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20016%20Picture%2016%20Jesus%20Suffers%2067798.mp3",
+     "label": "خوشخبری · حصہ ۱۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20017%20Picture%2017%20Jesus%20is%20Crucified%2067798.mp3",
+     "label": "خوشخبری · حصہ ۱۷ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20018%20Picture%2018%20The%20Resurrection%2067798.mp3",
+     "label": "خوشخبری · حصہ ۱۸ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20019%20Picture%2019%20Thomas%20Believes%2067798.mp3",
+     "label": "خوشخبری · حصہ ۱۹ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20020%20Picture%2020%20The%20Ascension%2067798.mp3",
+     "label": "خوشخبری · حصہ ۲۰ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20021%20Picture%2021%20The%20Empty%20Cross%2067798.mp3",
+     "label": "خوشخبری · حصہ ۲۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20022%20Picture%2022%20The%20Two%20Roads%2067798.mp3",
+     "label": "خوشخبری · حصہ ۲۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20023%20Picture%2023%20God%27s%20Children%2067798.mp3",
+     "label": "خوشخبری · حصہ ۲۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20024%20Picture%2024%20Born%20Again%2067798.mp3",
+     "label": "خوشخبری · حصہ ۲۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20025%20Picture%2025%20The%20Holy%20Spirit%20Comes%2067798.mp3",
+     "label": "خوشخبری · حصہ ۲۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20026%20Picture%2026%20Walking%20in%20the%20Light%2067798.mp3",
+     "label": "خوشخبری · حصہ ۲۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20027%20Picture%2027%20A%20New%20Person%2067798.mp3",
+     "label": "خوشخبری · حصہ ۲۷ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20028%20Picture%2028%20The%20Christian%20Family%2067798.mp3",
+     "label": "خوشخبری · حصہ ۲۸ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20029%20Picture%2029%20Love%20Your%20Enemies%2067798.mp3",
+     "label": "خوشخبری · حصہ ۲۹ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20030%20Picture%2030%20Jesus%20is%20the%20Powerful%20One%2067798.mp3",
+     "label": "خوشخبری · حصہ ۳۰ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20031%20Picture%2031%20Casting%20out%20Evil%20Spirits%2067798.mp3",
+     "label": "خوشخبری · حصہ ۳۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20032%20Picture%2032%20Temptation%2067798.mp3",
+     "label": "خوشخبری · حصہ ۳۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20033%20Picture%2033%20If%20We%20Sin%2067798.mp3",
+     "label": "خوشخبری · حصہ ۳۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20034%20Picture%2034%20Sickness%2067798.mp3",
+     "label": "خوشخبری · حصہ ۳۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20035%20Picture%2035%20Death%2067798.mp3",
+     "label": "خوشخبری · حصہ ۳۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20036%20Picture%2036%20The%20Body%20of%20Christ%2067798.mp3",
+     "label": "خوشخبری · حصہ ۳۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20037%20Picture%2037%20Meeting%20for%20Worship%2067798.mp3",
+     "label": "خوشخبری · حصہ ۳۷ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20038%20Picture%2038%20Jesus%20Will%20Return%2067798.mp3",
+     "label": "خوشخبری · حصہ ۳۸ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20039%20Picture%2039%20Bearing%20Fruit%2067798.mp3",
+     "label": "خوشخبری · حصہ ۳۹ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20040%20Picture%2040%20Witnessing%2067798.mp3",
+     "label": "خوشخبری · حصہ ۴۰ (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/bgp_GlobalRecordings_balochi_eastern",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/grn/bgp_GlobalRecordings_balochi_eastern",
+   "stats": "40",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20001%20Picture%201%20In%20the%20Beginning%2067798.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20001%20Picture%201%20In%20the%20Beginning%2067798.mp3",
+      "title": "خوشخبری · حصہ ۱"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20002%20Picture%202%20The%20Word%20of%20God%2067798.mp3",
+      "title": "خوشخبری · حصہ ۲"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20003%20Picture%203%20Creation%2067798.mp3",
+      "title": "خوشخبری · حصہ ۳"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20004%20Picture%204%20Adam%20and%20Eve%2067798.mp3",
+      "title": "خوشخبری · حصہ ۴"
+     },
+     {
+      "n": 5,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20005%20Picture%205%20Cain%20and%20Abel%2067798.mp3",
+      "title": "خوشخبری · حصہ ۵"
+     },
+     {
+      "n": 6,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20006%20Picture%206%20Noah%27s%20Ark%2067798.mp3",
+      "title": "خوشخبری · حصہ ۶"
+     },
+     {
+      "n": 7,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20007%20Picture%207%20The%20Flood%2067798.mp3",
+      "title": "خوشخبری · حصہ ۷"
+     },
+     {
+      "n": 8,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20008%20Picture%208%20Abraham%20Sarah%20and%20Isaac%2067798.mp3",
+      "title": "خوشخبری · حصہ ۸"
+     },
+     {
+      "n": 9,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20009%20Picture%209%20Moses%20and%20the%20Law%20of%20God%2067798.mp3",
+      "title": "خوشخبری · حصہ ۹"
+     },
+     {
+      "n": 10,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20010%20Picture%2010%20The%20Ten%20Commandments%2067798.mp3",
+      "title": "خوشخبری · حصہ ۱۰"
+     },
+     {
+      "n": 11,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20011%20Picture%2011%20Sacrifice%20for%20Sin%2067798.mp3",
+      "title": "خوشخبری · حصہ ۱۱"
+     },
+     {
+      "n": 12,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20012%20Picture%2012%20A%20Saviour%20Promised%2067798.mp3",
+      "title": "خوشخبری · حصہ ۱۲"
+     },
+     {
+      "n": 13,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20013%20Picture%2013%20The%20Birth%20of%20Jesus%2067798.mp3",
+      "title": "خوشخبری · حصہ ۱۳"
+     },
+     {
+      "n": 14,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20014%20Picture%2014%20Jesus%20the%20Teacher%2067798.mp3",
+      "title": "خوشخبری · حصہ ۱۴"
+     },
+     {
+      "n": 15,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20015%20Picture%2015%20Miracles%20of%20Jesus%2067798.mp3",
+      "title": "خوشخبری · حصہ ۱۵"
+     },
+     {
+      "n": 16,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20016%20Picture%2016%20Jesus%20Suffers%2067798.mp3",
+      "title": "خوشخبری · حصہ ۱۶"
+     },
+     {
+      "n": 17,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20017%20Picture%2017%20Jesus%20is%20Crucified%2067798.mp3",
+      "title": "خوشخبری · حصہ ۱۷"
+     },
+     {
+      "n": 18,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20018%20Picture%2018%20The%20Resurrection%2067798.mp3",
+      "title": "خوشخبری · حصہ ۱۸"
+     },
+     {
+      "n": 19,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20019%20Picture%2019%20Thomas%20Believes%2067798.mp3",
+      "title": "خوشخبری · حصہ ۱۹"
+     },
+     {
+      "n": 20,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20020%20Picture%2020%20The%20Ascension%2067798.mp3",
+      "title": "خوشخبری · حصہ ۲۰"
+     },
+     {
+      "n": 21,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20021%20Picture%2021%20The%20Empty%20Cross%2067798.mp3",
+      "title": "خوشخبری · حصہ ۲۱"
+     },
+     {
+      "n": 22,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20022%20Picture%2022%20The%20Two%20Roads%2067798.mp3",
+      "title": "خوشخبری · حصہ ۲۲"
+     },
+     {
+      "n": 23,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20023%20Picture%2023%20God%27s%20Children%2067798.mp3",
+      "title": "خوشخبری · حصہ ۲۳"
+     },
+     {
+      "n": 24,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20024%20Picture%2024%20Born%20Again%2067798.mp3",
+      "title": "خوشخبری · حصہ ۲۴"
+     },
+     {
+      "n": 25,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20025%20Picture%2025%20The%20Holy%20Spirit%20Comes%2067798.mp3",
+      "title": "خوشخبری · حصہ ۲۵"
+     },
+     {
+      "n": 26,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20026%20Picture%2026%20Walking%20in%20the%20Light%2067798.mp3",
+      "title": "خوشخبری · حصہ ۲۶"
+     },
+     {
+      "n": 27,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20027%20Picture%2027%20A%20New%20Person%2067798.mp3",
+      "title": "خوشخبری · حصہ ۲۷"
+     },
+     {
+      "n": 28,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20028%20Picture%2028%20The%20Christian%20Family%2067798.mp3",
+      "title": "خوشخبری · حصہ ۲۸"
+     },
+     {
+      "n": 29,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20029%20Picture%2029%20Love%20Your%20Enemies%2067798.mp3",
+      "title": "خوشخبری · حصہ ۲۹"
+     },
+     {
+      "n": 30,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20030%20Picture%2030%20Jesus%20is%20the%20Powerful%20One%2067798.mp3",
+      "title": "خوشخبری · حصہ ۳۰"
+     },
+     {
+      "n": 31,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20031%20Picture%2031%20Casting%20out%20Evil%20Spirits%2067798.mp3",
+      "title": "خوشخبری · حصہ ۳۱"
+     },
+     {
+      "n": 32,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20032%20Picture%2032%20Temptation%2067798.mp3",
+      "title": "خوشخبری · حصہ ۳۲"
+     },
+     {
+      "n": 33,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20033%20Picture%2033%20If%20We%20Sin%2067798.mp3",
+      "title": "خوشخبری · حصہ ۳۳"
+     },
+     {
+      "n": 34,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20034%20Picture%2034%20Sickness%2067798.mp3",
+      "title": "خوشخبری · حصہ ۳۴"
+     },
+     {
+      "n": 35,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20035%20Picture%2035%20Death%2067798.mp3",
+      "title": "خوشخبری · حصہ ۳۵"
+     },
+     {
+      "n": 36,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20036%20Picture%2036%20The%20Body%20of%20Christ%2067798.mp3",
+      "title": "خوشخبری · حصہ ۳۶"
+     },
+     {
+      "n": 37,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20037%20Picture%2037%20Meeting%20for%20Worship%2067798.mp3",
+      "title": "خوشخبری · حصہ ۳۷"
+     },
+     {
+      "n": 38,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20038%20Picture%2038%20Jesus%20Will%20Return%2067798.mp3",
+      "title": "خوشخبری · حصہ ۳۸"
+     },
+     {
+      "n": 39,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20039%20Picture%2039%20Bearing%20Fruit%2067798.mp3",
+      "title": "خوشخبری · حصہ ۳۹"
+     },
+     {
+      "n": 40,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Good%20News%2067798/Balochi%20Eastern%20Good%20News%20040%20Picture%2040%20Witnessing%2067798.mp3",
+      "title": "خوشخبری · حصہ ۴۰"
+     }
+    ]
+   }
+  },
+  {
+   "id": "bgp-grn-64274",
+   "lang": "bgp",
+   "type": "audio",
+   "title": "Good News (64274)",
+   "native": "خوشخبری (64274)",
+   "langName": "مشرقی بلوچی",
+   "source": "https://dbs.org/audio/collections/bgp_GlobalRecordings_balochi_eastern",
+   "org": "Global Recordings Network",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات مشرقی بلوچی میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20001%20Introduction%20Picture%201%20In%20the%20Beginning%2064274.mp3",
+     "label": "خوشخبری · حصہ ۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20002%20Picture%202%20The%20Word%20of%20God%2064274.mp3",
+     "label": "خوشخبری · حصہ ۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20003%20Picture%203%20Creation%2064274.mp3",
+     "label": "خوشخبری · حصہ ۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20004%20Picture%204%20Adam%20and%20Eve%2064274.mp3",
+     "label": "خوشخبری · حصہ ۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20005%20Picture%205%20Cain%20and%20Abel%2064274.mp3",
+     "label": "خوشخبری · حصہ ۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20006%20Picture%206%20Noah%27s%20Ark%2064274.mp3",
+     "label": "خوشخبری · حصہ ۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20007%20Picture%207%20The%20Flood%2064274.mp3",
+     "label": "خوشخبری · حصہ ۷ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20008%20Picture%208%20Abraham%20Sarah%20and%20Isaac%2064274.mp3",
+     "label": "خوشخبری · حصہ ۸ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20009%20Picture%209%20Moses%20and%20the%20Law%20of%20God%2064274.mp3",
+     "label": "خوشخبری · حصہ ۹ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20010%20Picture%2010%20The%20Ten%20Commandments%2064274.mp3",
+     "label": "خوشخبری · حصہ ۱۰ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20011%20Picture%2011%20Sacrifice%20for%20Sin%2064274.mp3",
+     "label": "خوشخبری · حصہ ۱۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20012%20Picture%2012%20A%20Saviour%20Promised%2064274.mp3",
+     "label": "خوشخبری · حصہ ۱۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20013%20Picture%2013%20The%20Birth%20of%20Jesus%2064274.mp3",
+     "label": "خوشخبری · حصہ ۱۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20014%20Picture%2014%20Jesus%20the%20Teacher%2064274.mp3",
+     "label": "خوشخبری · حصہ ۱۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20015%20Picture%2015%20Miracles%20of%20Jesus%2064274.mp3",
+     "label": "خوشخبری · حصہ ۱۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20016%20Picture%2016%20Jesus%20Suffers%2064274.mp3",
+     "label": "خوشخبری · حصہ ۱۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20017%20Picture%2017%20Jesus%20is%20Crucified%2064274.mp3",
+     "label": "خوشخبری · حصہ ۱۷ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20018%20Picture%2018%20The%20Resurrection%2064274.mp3",
+     "label": "خوشخبری · حصہ ۱۸ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20019%20Picture%2019%20Thomas%20Believes%2064274.mp3",
+     "label": "خوشخبری · حصہ ۱۹ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20020%20Picture%2020%20The%20Ascension%2064274.mp3",
+     "label": "خوشخبری · حصہ ۲۰ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20021%20Picture%2021%20The%20Empty%20Cross%2064274.mp3",
+     "label": "خوشخبری · حصہ ۲۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20022%20Picture%2022%20The%20Two%20Roads%2064274.mp3",
+     "label": "خوشخبری · حصہ ۲۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20023%20Picture%2023%20God%27s%20Children%2064274.mp3",
+     "label": "خوشخبری · حصہ ۲۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20024%20Picture%2024%20Born%20Again%2064274.mp3",
+     "label": "خوشخبری · حصہ ۲۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20025%20Picture%2025%20The%20Holy%20Spirit%20Comes%2064274.mp3",
+     "label": "خوشخبری · حصہ ۲۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20026%20Picture%2026%20Walking%20in%20the%20Light%2064274.mp3",
+     "label": "خوشخبری · حصہ ۲۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20027%20Picture%2027%20A%20New%20Person%2064274.mp3",
+     "label": "خوشخبری · حصہ ۲۷ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20028%20Picture%2028%20The%20Christian%20Family%2064274.mp3",
+     "label": "خوشخبری · حصہ ۲۸ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20029%20Picture%2029%20Love%20Your%20Enemies%2064274.mp3",
+     "label": "خوشخبری · حصہ ۲۹ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20030%20Picture%2030%20Jesus%20is%20the%20Powerful%20One%2064274.mp3",
+     "label": "خوشخبری · حصہ ۳۰ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20031%20Picture%2031%20Casting%20out%20Evil%20Spirits%2064274.mp3",
+     "label": "خوشخبری · حصہ ۳۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20032%20Picture%2032%20Temptation%2064274.mp3",
+     "label": "خوشخبری · حصہ ۳۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20033%20Picture%2033%20If%20We%20Sin%2064274.mp3",
+     "label": "خوشخبری · حصہ ۳۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20034%20Picture%2034%20Sickness%2064274.mp3",
+     "label": "خوشخبری · حصہ ۳۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20035%20Picture%2035%20Death%2064274.mp3",
+     "label": "خوشخبری · حصہ ۳۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20036%20Picture%2036%20The%20Body%20of%20Christ%2064274.mp3",
+     "label": "خوشخبری · حصہ ۳۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20037%20Picture%2037%20Meeting%20for%20Worship%2064274.mp3",
+     "label": "خوشخبری · حصہ ۳۷ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20038%20Picture%2038%20Jesus%20Will%20Return%2064274.mp3",
+     "label": "خوشخبری · حصہ ۳۸ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20039%20Picture%2039%20Bearing%20Fruit%2064274.mp3",
+     "label": "خوشخبری · حصہ ۳۹ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20040%20Picture%2040%20Witnessing%2064274.mp3",
+     "label": "خوشخبری · حصہ ۴۰ (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/bgp_GlobalRecordings_balochi_eastern",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/grn/bgp_GlobalRecordings_balochi_eastern",
+   "stats": "40",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20001%20Introduction%20Picture%201%20In%20the%20Beginning%2064274.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20001%20Introduction%20Picture%201%20In%20the%20Beginning%2064274.mp3",
+      "title": "خوشخبری · حصہ ۱"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20002%20Picture%202%20The%20Word%20of%20God%2064274.mp3",
+      "title": "خوشخبری · حصہ ۲"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20003%20Picture%203%20Creation%2064274.mp3",
+      "title": "خوشخبری · حصہ ۳"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20004%20Picture%204%20Adam%20and%20Eve%2064274.mp3",
+      "title": "خوشخبری · حصہ ۴"
+     },
+     {
+      "n": 5,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20005%20Picture%205%20Cain%20and%20Abel%2064274.mp3",
+      "title": "خوشخبری · حصہ ۵"
+     },
+     {
+      "n": 6,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20006%20Picture%206%20Noah%27s%20Ark%2064274.mp3",
+      "title": "خوشخبری · حصہ ۶"
+     },
+     {
+      "n": 7,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20007%20Picture%207%20The%20Flood%2064274.mp3",
+      "title": "خوشخبری · حصہ ۷"
+     },
+     {
+      "n": 8,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20008%20Picture%208%20Abraham%20Sarah%20and%20Isaac%2064274.mp3",
+      "title": "خوشخبری · حصہ ۸"
+     },
+     {
+      "n": 9,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20009%20Picture%209%20Moses%20and%20the%20Law%20of%20God%2064274.mp3",
+      "title": "خوشخبری · حصہ ۹"
+     },
+     {
+      "n": 10,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20010%20Picture%2010%20The%20Ten%20Commandments%2064274.mp3",
+      "title": "خوشخبری · حصہ ۱۰"
+     },
+     {
+      "n": 11,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20011%20Picture%2011%20Sacrifice%20for%20Sin%2064274.mp3",
+      "title": "خوشخبری · حصہ ۱۱"
+     },
+     {
+      "n": 12,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20012%20Picture%2012%20A%20Saviour%20Promised%2064274.mp3",
+      "title": "خوشخبری · حصہ ۱۲"
+     },
+     {
+      "n": 13,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20013%20Picture%2013%20The%20Birth%20of%20Jesus%2064274.mp3",
+      "title": "خوشخبری · حصہ ۱۳"
+     },
+     {
+      "n": 14,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20014%20Picture%2014%20Jesus%20the%20Teacher%2064274.mp3",
+      "title": "خوشخبری · حصہ ۱۴"
+     },
+     {
+      "n": 15,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20015%20Picture%2015%20Miracles%20of%20Jesus%2064274.mp3",
+      "title": "خوشخبری · حصہ ۱۵"
+     },
+     {
+      "n": 16,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20016%20Picture%2016%20Jesus%20Suffers%2064274.mp3",
+      "title": "خوشخبری · حصہ ۱۶"
+     },
+     {
+      "n": 17,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20017%20Picture%2017%20Jesus%20is%20Crucified%2064274.mp3",
+      "title": "خوشخبری · حصہ ۱۷"
+     },
+     {
+      "n": 18,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20018%20Picture%2018%20The%20Resurrection%2064274.mp3",
+      "title": "خوشخبری · حصہ ۱۸"
+     },
+     {
+      "n": 19,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20019%20Picture%2019%20Thomas%20Believes%2064274.mp3",
+      "title": "خوشخبری · حصہ ۱۹"
+     },
+     {
+      "n": 20,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20020%20Picture%2020%20The%20Ascension%2064274.mp3",
+      "title": "خوشخبری · حصہ ۲۰"
+     },
+     {
+      "n": 21,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20021%20Picture%2021%20The%20Empty%20Cross%2064274.mp3",
+      "title": "خوشخبری · حصہ ۲۱"
+     },
+     {
+      "n": 22,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20022%20Picture%2022%20The%20Two%20Roads%2064274.mp3",
+      "title": "خوشخبری · حصہ ۲۲"
+     },
+     {
+      "n": 23,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20023%20Picture%2023%20God%27s%20Children%2064274.mp3",
+      "title": "خوشخبری · حصہ ۲۳"
+     },
+     {
+      "n": 24,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20024%20Picture%2024%20Born%20Again%2064274.mp3",
+      "title": "خوشخبری · حصہ ۲۴"
+     },
+     {
+      "n": 25,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20025%20Picture%2025%20The%20Holy%20Spirit%20Comes%2064274.mp3",
+      "title": "خوشخبری · حصہ ۲۵"
+     },
+     {
+      "n": 26,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20026%20Picture%2026%20Walking%20in%20the%20Light%2064274.mp3",
+      "title": "خوشخبری · حصہ ۲۶"
+     },
+     {
+      "n": 27,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20027%20Picture%2027%20A%20New%20Person%2064274.mp3",
+      "title": "خوشخبری · حصہ ۲۷"
+     },
+     {
+      "n": 28,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20028%20Picture%2028%20The%20Christian%20Family%2064274.mp3",
+      "title": "خوشخبری · حصہ ۲۸"
+     },
+     {
+      "n": 29,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20029%20Picture%2029%20Love%20Your%20Enemies%2064274.mp3",
+      "title": "خوشخبری · حصہ ۲۹"
+     },
+     {
+      "n": 30,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20030%20Picture%2030%20Jesus%20is%20the%20Powerful%20One%2064274.mp3",
+      "title": "خوشخبری · حصہ ۳۰"
+     },
+     {
+      "n": 31,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20031%20Picture%2031%20Casting%20out%20Evil%20Spirits%2064274.mp3",
+      "title": "خوشخبری · حصہ ۳۱"
+     },
+     {
+      "n": 32,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20032%20Picture%2032%20Temptation%2064274.mp3",
+      "title": "خوشخبری · حصہ ۳۲"
+     },
+     {
+      "n": 33,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20033%20Picture%2033%20If%20We%20Sin%2064274.mp3",
+      "title": "خوشخبری · حصہ ۳۳"
+     },
+     {
+      "n": 34,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20034%20Picture%2034%20Sickness%2064274.mp3",
+      "title": "خوشخبری · حصہ ۳۴"
+     },
+     {
+      "n": 35,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20035%20Picture%2035%20Death%2064274.mp3",
+      "title": "خوشخبری · حصہ ۳۵"
+     },
+     {
+      "n": 36,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20036%20Picture%2036%20The%20Body%20of%20Christ%2064274.mp3",
+      "title": "خوشخبری · حصہ ۳۶"
+     },
+     {
+      "n": 37,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20037%20Picture%2037%20Meeting%20for%20Worship%2064274.mp3",
+      "title": "خوشخبری · حصہ ۳۷"
+     },
+     {
+      "n": 38,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20038%20Picture%2038%20Jesus%20Will%20Return%2064274.mp3",
+      "title": "خوشخبری · حصہ ۳۸"
+     },
+     {
+      "n": 39,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20039%20Picture%2039%20Bearing%20Fruit%2064274.mp3",
+      "title": "خوشخبری · حصہ ۳۹"
+     },
+     {
+      "n": 40,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%2064274/%D8%A8%D9%84%DA%86%D9%8A%20Good%20News%20040%20Picture%2040%20Witnessing%2064274.mp3",
+      "title": "خوشخبری · حصہ ۴۰"
+     }
+    ]
+   }
+  },
+  {
+   "id": "bgp-grn-16821",
+   "lang": "bgp",
+   "type": "audio",
+   "title": "Words of Life",
+   "native": "زندگی کے کلمات",
+   "langName": "مشرقی بلوچی",
+   "source": "https://dbs.org/audio/collections/bgp_GlobalRecordings_balochi_eastern",
+   "org": "Global Recordings Network",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات مشرقی بلوچی میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%2016821/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%20001%20No%20Language%20Instrumental%20-%20BALUCHI%2016821.mp3",
+     "label": "زندگی کے کلمات · حصہ ۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%2016821/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%20002%20Life%20_%20Instrumental%20-%20BALUCHI%2016821.mp3",
+     "label": "زندگی کے کلمات · حصہ ۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%2016821/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%20003%20Gehazi%20_%20Instrumental%20-%20BALUCHI%2016821.mp3",
+     "label": "زندگی کے کلمات · حصہ ۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%2016821/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%20004%20God%27s%20Scales%20_%20Instrumental%20-%20BALUCHI%2016821.mp3",
+     "label": "زندگی کے کلمات · حصہ ۴ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%2016821/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%20005%20No%20Language%20Instrumental%20-%20BALUCHI%2016821.mp3",
+     "label": "زندگی کے کلمات · حصہ ۵ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%2016821/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%20006%20Life%20_%20Instrumental%20-%20BALUCHI%2016821.mp3",
+     "label": "زندگی کے کلمات · حصہ ۶ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%2016821/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%20007%20Gehazi%20_%20Instrumental%20-%20BALUCHI%2016821.mp3",
+     "label": "زندگی کے کلمات · حصہ ۷ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%2016821/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%20008%20God%27s%20Scales%20_%20Instrumental%20-%20BALUCHI%2016821.mp3",
+     "label": "زندگی کے کلمات · حصہ ۸ (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/bgp_GlobalRecordings_balochi_eastern",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/grn/bgp_GlobalRecordings_balochi_eastern",
+   "stats": "8",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%2016821/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%20001%20No%20Language%20Instrumental%20-%20BALUCHI%2016821.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%2016821/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%20001%20No%20Language%20Instrumental%20-%20BALUCHI%2016821.mp3",
+      "title": "زندگی کے کلمات · حصہ ۱"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%2016821/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%20002%20Life%20_%20Instrumental%20-%20BALUCHI%2016821.mp3",
+      "title": "زندگی کے کلمات · حصہ ۲"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%2016821/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%20003%20Gehazi%20_%20Instrumental%20-%20BALUCHI%2016821.mp3",
+      "title": "زندگی کے کلمات · حصہ ۳"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%2016821/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%20004%20God%27s%20Scales%20_%20Instrumental%20-%20BALUCHI%2016821.mp3",
+      "title": "زندگی کے کلمات · حصہ ۴"
+     },
+     {
+      "n": 5,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%2016821/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%20005%20No%20Language%20Instrumental%20-%20BALUCHI%2016821.mp3",
+      "title": "زندگی کے کلمات · حصہ ۵"
+     },
+     {
+      "n": 6,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%2016821/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%20006%20Life%20_%20Instrumental%20-%20BALUCHI%2016821.mp3",
+      "title": "زندگی کے کلمات · حصہ ۶"
+     },
+     {
+      "n": 7,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%2016821/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%20007%20Gehazi%20_%20Instrumental%20-%20BALUCHI%2016821.mp3",
+      "title": "زندگی کے کلمات · حصہ ۷"
+     },
+     {
+      "n": 8,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/%D8%A8%D9%84%DA%86%D9%8A/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%2016821/%D8%A8%D9%84%DA%86%D9%8A%20Words%20of%20Life%20008%20God%27s%20Scales%20_%20Instrumental%20-%20BALUCHI%2016821.mp3",
+      "title": "زندگی کے کلمات · حصہ ۸"
+     }
+    ]
+   }
+  },
+  {
+   "id": "bgp-grn-35510",
+   "lang": "bgp",
+   "type": "audio",
+   "title": "Jesus Story",
+   "native": "یسوع کی کہانی",
+   "langName": "مشرقی بلوچی",
+   "source": "https://dbs.org/audio/collections/bgp_GlobalRecordings_balochi_eastern",
+   "org": "Global Recordings Network",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات مشرقی بلوچی میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "downloads": [
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Jesus%20Story%2035510/Balochi%20Eastern%20Jesus%20Story%20001%20Jesus%20Story%201%20Part%201%2035510.mp3",
+     "label": "یسوع کی کہانی · حصہ ۱ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Jesus%20Story%2035510/Balochi%20Eastern%20Jesus%20Story%20002%20Jesus%20Story%201%20Part%202%2035510.mp3",
+     "label": "یسوع کی کہانی · حصہ ۲ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Jesus%20Story%2035510/Balochi%20Eastern%20Jesus%20Story%20003%20Jesus%20Story%202%20Part%201%2035510.mp3",
+     "label": "یسوع کی کہانی · حصہ ۳ (MP3)"
+    },
+    {
+     "url": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Jesus%20Story%2035510/Balochi%20Eastern%20Jesus%20Story%20004%20Jesus%20Story%202%20Part%202%2035510.mp3",
+     "label": "یسوع کی کہانی · حصہ ۴ (MP3)"
+    }
+   ],
+   "links": [
+    {
+     "url": "https://dbs.org/audio/collections/bgp_GlobalRecordings_balochi_eastern",
+     "label": "DBS پر دیکھیں"
+    }
+   ],
+   "dbsListedUrl": "https://dbs.org/audio/collections/grn/bgp_GlobalRecordings_balochi_eastern",
+   "stats": "4",
+   "play": {
+    "kind": "audio-collection",
+    "sample": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Jesus%20Story%2035510/Balochi%20Eastern%20Jesus%20Story%20001%20Jesus%20Story%201%20Part%201%2035510.mp3",
+    "items": [
+     {
+      "n": 1,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Jesus%20Story%2035510/Balochi%20Eastern%20Jesus%20Story%20001%20Jesus%20Story%201%20Part%201%2035510.mp3",
+      "title": "یسوع کی کہانی · حصہ ۱"
+     },
+     {
+      "n": 2,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Jesus%20Story%2035510/Balochi%20Eastern%20Jesus%20Story%20002%20Jesus%20Story%201%20Part%202%2035510.mp3",
+      "title": "یسوع کی کہانی · حصہ ۲"
+     },
+     {
+      "n": 3,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Jesus%20Story%2035510/Balochi%20Eastern%20Jesus%20Story%20003%20Jesus%20Story%202%20Part%201%2035510.mp3",
+      "title": "یسوع کی کہانی · حصہ ۳"
+     },
+     {
+      "n": 4,
+      "file": "https://media.dbs.org/audio/grn/bgp_GlobalRecordings_balochi_eastern/Balochi%20Eastern/Balochi%20Eastern%20Jesus%20Story%2035510/Balochi%20Eastern%20Jesus%20Story%20004%20Jesus%20Story%202%20Part%202%2035510.mp3",
+      "title": "یسوع کی کہانی · حصہ ۴"
+     }
+    ]
+   }
+  }
+ ],
+ "notCarried": {
+  "https://find.bible/?abbr=BGPZZZ": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://globalrecordings.net/en/program/35510": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://globalrecordings.net/en/program/64274": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it.",
+  "https://globalrecordings.net/en/program/16821": "Not hosted by DBS; its DBS-hosted media is carried where DBS has it."
+ }
+}

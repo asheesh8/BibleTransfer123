@@ -18,7 +18,7 @@
     }
   },
   "redirects": [
-    { "source": "/:slug(english|mandarin|hindi|marathi|urdu|swahili|zulu|western-punjabi|cantonese|pashto|eastern-punjabi|nepali|sindhi|saraiki|balochi|hindko|luganda|luo|malagasy|kirundi|akan|tigrinya|arabic|haitian|spanish|kuria|luhya|bukusu|saamia|maragoli|idakho|tiriki|kabras|tachoni|banyala|marachi|kamba|kalenjin|giryama|digo|duruma|meru|turkana|teso|chichewa|kinyarwanda|xhosa|shona|hausa|lingala|nigerian-pidgin|yoruba|portuguese|amharic|french|igbo|oromo|kikuyu|gusii|maasai)", "has": [{ "type": "query", "key": "src", "value": "qr" }], "destination": "/api/qr?l=:slug", "permanent": false }
+    { "source": "/:slug(english|mandarin|hindi|marathi|urdu|swahili|zulu|western-punjabi|cantonese|pashto|eastern-punjabi|nepali|sindhi|saraiki|southern-balochi|eastern-balochi|western-balochi|hindko|luganda|luo|malagasy|kirundi|akan|tigrinya|arabic|haitian|spanish|kuria|luhya|bukusu|saamia|maragoli|idakho|tiriki|kabras|tachoni|banyala|marachi|kamba|kalenjin|giryama|digo|duruma|meru|turkana|teso|chichewa|kinyarwanda|xhosa|shona|hausa|lingala|nigerian-pidgin|yoruba|portuguese|amharic|french|igbo|oromo|kikuyu|gusii|maasai)", "has": [{ "type": "query", "key": "src", "value": "qr" }], "destination": "/api/qr?l=:slug", "permanent": false }
   ],
   "rewrites": [
     { "source": "/admin", "destination": "/admin/index.html" },
@@ -30,6 +30,10 @@
     { "source": "/support", "destination": "/support.html" },
     { "source": "/contact", "destination": "/support.html" },
     { "source": "/share-libraries", "destination": "/share-libraries/index.html" },
+    { "source": "/balochi", "destination": "/balochi/index.html" },
+    { "source": "/baluchi", "destination": "/balochi/index.html" },
+    { "source": "/baloch", "destination": "/balochi/index.html" },
+    { "source": "/bal", "destination": "/balochi/index.html" },
     { "source": "/english", "destination": "/english/index.html" },
     { "source": "/mandarin", "destination": "/mandarin/index.html" },
     { "source": "/hindi", "destination": "/hindi/index.html" },
@@ -51,13 +55,16 @@
     { "source": "/siraiki", "destination": "/saraiki/index.html" },
     { "source": "/multani", "destination": "/saraiki/index.html" },
     { "source": "/skr", "destination": "/saraiki/index.html" },
-    { "source": "/balochi", "destination": "/balochi/index.html" },
-    { "source": "/baluchi", "destination": "/balochi/index.html" },
-    { "source": "/baloch", "destination": "/balochi/index.html" },
-    { "source": "/bal", "destination": "/balochi/index.html" },
-    { "source": "/bcc", "destination": "/balochi/index.html" },
-    { "source": "/bgn", "destination": "/balochi/index.html" },
-    { "source": "/bgp", "destination": "/balochi/index.html" },
+    { "source": "/southern-balochi", "destination": "/southern-balochi/index.html" },
+    { "source": "/southern-baluchi", "destination": "/southern-balochi/index.html" },
+    { "source": "/makrani", "destination": "/southern-balochi/index.html" },
+    { "source": "/bcc", "destination": "/southern-balochi/index.html" },
+    { "source": "/eastern-balochi", "destination": "/eastern-balochi/index.html" },
+    { "source": "/eastern-baluchi", "destination": "/eastern-balochi/index.html" },
+    { "source": "/bgp", "destination": "/eastern-balochi/index.html" },
+    { "source": "/western-balochi", "destination": "/western-balochi/index.html" },
+    { "source": "/western-baluchi", "destination": "/western-balochi/index.html" },
+    { "source": "/bgn", "destination": "/western-balochi/index.html" },
     { "source": "/hindko", "destination": "/hindko/index.html" },
     { "source": "/hindku", "destination": "/hindko/index.html" },
     { "source": "/hno", "destination": "/hindko/index.html" },
