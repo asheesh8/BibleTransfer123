@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Build Saraiki, Balochi and Hindko from their browser audits: Pakistan's three
-biggest languages that had no library yet, all with the Urdu interface.
+"""Build Saraiki, the three Balochis and Hindko from their browser audits:
+Pakistan's biggest languages that had no library yet, all with the Urdu interface.
 
     python3 packer/build_dbs_pakistan.py            # all three
     python3 packer/build_dbs_audit.py skr           # one (the same)
@@ -21,9 +21,13 @@ in Arabic script, right to left (Naskh, like Urdu's own page).
     Davar's Saraiki New Testament, JESUS, LUMO Luke and John, iBible, Story of
     Jesus and GRN. GRN's programmes come from five Saraiki varieties
     (Derawali, Jangli, Multani, Riasiti); each names its variety.
-  · Balochi (bal): one shelf for DBS's four Balochi pages, the umbrella (bal)
-    and Southern (bcc), Western (bgn) and Eastern (bgp) Balochi, the way
-    Akan merges its dialects. Every item names its variety.
+  · Balochi: three shelves, one for each of DBS's Balochi languages, as DBS
+    lists them: Southern (bcc), Eastern (bgp) and Western (bgn) Balochi. All
+    three come from one audit (DBS's three pages and its umbrella page, bal).
+    The umbrella page's GRN collection repeats the three varieties'
+    programmes, so it is left out; its two other items, the Visual Bible's
+    Matthew and the 1899 Matthew, go to Southern Balochi, whose code DBS
+    gives its own "Gospel of Matthew in Balochi" (find.bible BCCMAT).
   · Hindko (hno): DBS's Northern Hindko page (Hazara, the Hindko of
     Abbottabad and Mansehra). JESUS, The Prophets' Story, iBible, Story of
     Jesus, and GRN's readings of Genesis, Exodus, Psalms and much of the New
@@ -58,18 +62,24 @@ def words(name, native):
 
 base.LANGS['skr'] = dict(slug='saraiki', name='Saraiki', native='سرائیکی', region='Pakistan',
                          speakers='~26 million', **words('Saraiki', 'سرائیکی'))
-base.LANGS['bal'] = dict(slug='balochi', name='Balochi', native='بلوچی', region='Pakistan, Iran & Afghanistan',
-                         speakers='~8 million', **words('Balochi', 'بلوچی'))
+BALOCHI = {
+    'bcc': ('southern-balochi', 'Southern Balochi', 'جنوبی بلوچی', 'Pakistan, Iran & Oman'),
+    'bgp': ('eastern-balochi', 'Eastern Balochi', 'مشرقی بلوچی', 'Pakistan'),
+    'bgn': ('western-balochi', 'Western Balochi', 'مغربی بلوچی', 'Pakistan, Afghanistan, Iran & Turkmenistan'),
+}
+for _code, (_slug, _name, _native, _region) in BALOCHI.items():
+    base.LANGS[_code] = dict(slug=_slug, name=_name, native=_native, region=_region, speakers='',
+                             audit='balochi', **words(_name, _native))
+base.EXCLUDED.setdefault('bcc', {})['https://dbs.org/audio/collections/grn/bal_GlobalRecordings_baluchi'] = (
+    "DBS's umbrella Balochi GRN collection repeats the three varieties' programmes, "
+    'carried on each variety\'s own library.')
 base.LANGS['hno'] = dict(slug='hindko', name='Hindko', native='ہندکو', region='Pakistan',
                          speakers='~5 million', **words('Hindko', 'ہندکو'))
-CODES = ('skr', 'bal', 'hno')
+CODES = ('skr', 'bcc', 'bgp', 'bgn', 'hno')
 
-# Varieties, by the DBS page (ISO code) or GRN folder an item comes from:
+# Saraiki's varieties, by the GRN folder an item comes from:
 # English name and Urdu name.
 VARIETY = {
-    'bcc': ('Southern Balochi', 'جنوبی بلوچی'),
-    'bgn': ('Western Balochi', 'مغربی بلوچی'),
-    'bgp': ('Eastern Balochi', 'مشرقی بلوچی'),
     'Saraiki Derawali': ('Derawali', 'ڈیروی'),
     'Saraiki Jangli': ('Jangli', 'جانگلی'),
     'Saraiki Multani': ('Multani', 'ملتانی'),
@@ -133,15 +143,40 @@ ARABIC = re.compile('[؀-ۿ]')
 DIGITS = str.maketrans('0123456789', '۰۱۲۳۴۵۶۷۸۹')
 
 
+def balochi_owner(url, grn):
+    """Which Balochi shelf one listed DBS link belongs to: bcc, bgp or bgn,
+    or None for the umbrella page's GRN collection (a copy of the three)."""
+    last = url.rstrip('/').rsplit('/', 1)[1]
+    if 'globalrecordings.net' in url:
+        return grn.get(last.lstrip('0'), 'bcc')
+    m = re.search(r'(?:abbr=|^)(bcc|bgp|bgn)', last, re.I)
+    if m:
+        return m[1].lower()
+    if last.startswith('bal_GlobalRecordings'):
+        return None
+    return 'bcc'      # the umbrella page's Matthew film and 1899 Matthew, and other sites
+
+
 class PakistanShelf(Shelf):
     def __init__(self, code):
         super().__init__(code)
-        # DBS's umbrella Balochi GRN page repeats the variety pages' programmes;
-        # read it last so each programme is credited to its own variety.
-        rows = self.audit['sections'].get('Audio Collections', [])
-        rows.sort(key=lambda r: r['url'].rsplit('/', 1)[1].startswith('bal_'))
+        if code in BALOCHI:
+            # The GRN programme number of every variety page's recordings, so
+            # globalrecordings.net links go to the variety that has them.
+            grn = {}
+            for url, page in self.audit['pages'].items():
+                iso = url.rsplit('/', 1)[1][:3]
+                if '/grn/' in url and iso in BALOCHI:
+                    for l in page['links']:
+                        if l['url'].endswith('.mp3'):
+                            grn[urllib.parse.unquote(l['url']).split('/')[-2].rsplit(' ', 1)[1].lstrip('0')] = iso
+            self.audit['sections'] = {
+                section: [r for r in rows if balochi_owner(r['url'], grn) == code]
+                for section, rows in self.audit['sections'].items()}
 
     def variety(self, key):
+        if self.code in BALOCHI:
+            return None       # one variety per shelf: the page already names it
         return VARIETY.get(key)
 
     def tag(self, r, key):

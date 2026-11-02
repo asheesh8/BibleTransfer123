@@ -792,7 +792,8 @@ class Shelf:
     def __init__(self, code):
         self.code, self.L = code, LANGS[code]
         self.date = self.L.get('date', DATE)
-        self.audit = json.loads((ROOT / f"catalog/source/dbs-audit-{self.L['slug']}-{self.date}.json").read_text())
+        # Shelves split from one audit (Balochi's three varieties) name it with `audit`.
+        self.audit = json.loads((ROOT / f"catalog/source/dbs-audit-{self.L.get('audit', self.L['slug'])}-{self.date}.json").read_text())
         self.files = self.audit['files']
         self.out = []
         self.missing = {}
@@ -1357,9 +1358,9 @@ class Shelf:
 
 
 def main():
-    for code in (sys.argv[1:] or list(LANGS) + ['ara', 'spa', 'skr', 'bal', 'hno']):
-        if code in ('skr', 'bal', 'hno'):
-            import build_dbs_pakistan    # Saraiki, Balochi, Hindko: the Urdu interface, right to left
+    for code in (sys.argv[1:] or list(LANGS) + ['ara', 'spa', 'skr', 'bcc', 'bgp', 'bgn', 'hno']):
+        if code in ('skr', 'bcc', 'bgp', 'bgn', 'hno'):
+            import build_dbs_pakistan    # Saraiki, the three Balochis, Hindko: the Urdu interface, right to left
             build_dbs_pakistan.main([code])
             continue
         if code == 'spa':

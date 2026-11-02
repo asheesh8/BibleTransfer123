@@ -1110,4 +1110,18 @@ New Urdu strings: Urdu book names (`ur` in app/assets/js/data/bible-books.js, th
 
 Balochi is one shelf from DBS's four Balochi pages (bal umbrella, bcc Southern, bgn Western, bgp Eastern); every item names its variety. Saraiki's GRN programmes name theirs (Derawali, Jangli, Multani, Riasiti). DBS's Southern Hindko page (hnd) lists only the Hindi Easy-to-Read Bible, so Hindko is DBS's Northern Hindko (Hazara). Every audio Bible chapter was checked (Saraiki 349, Balochi 538), all valid.
 
-Rebuild with `python3 packer/build_dbs_audit.py skr bal hno`, then `npm run dbs:import`.
+Rebuild with `python3 packer/build_dbs_audit.py skr bcc bgp bgn hno`, then `npm run dbs:import`. (Balochi was split into three libraries the same day; see below.)
+
+### Balochi split into Southern, Eastern and Western — 2026-11-02
+
+DBS lists Balochi as three languages, so the one Balochi shelf is now three libraries, all with the Urdu interface, right to left, built from the same audit (catalog/source/dbs-audit-balochi-2026-11-02.json, `audit='balochi'` in packer/build_dbs_pakistan.py):
+
+| Library | Content | Also at | Resources |
+|---|---|---|---|
+| `/southern-balochi` | `bcc` | `/southern-baluchi`, `/makrani`, `/bcc` | 14: Bible portions (text and audio), New Testament (audio), JESUS, The Prophets' Story, LUMO Luke, Visual Bible Matthew, Story of Jesus, 5 GRN programmes, the 1899 Matthew |
+| `/eastern-balochi` | `bgp` | `/eastern-baluchi`, `/bgp` | 7: JESUS, The Prophets' Story, Story of Jesus, 4 GRN programmes |
+| `/western-balochi` | `bgn` | `/western-baluchi`, `/bgn` | 5: JESUS, The Prophets' Story, 3 GRN programmes |
+
+Items no longer carry a variety tag: the library names it. DBS's umbrella Balochi page (`bal`) adds the Visual Bible's Matthew and the 1899 Matthew; both go to Southern Balochi, the variety DBS codes its "Gospel of Matthew in Balochi" with (find.bible BCCMAT). The umbrella page's GRN collection repeats the three varieties' programmes and is not carried.
+
+`/balochi` (and `/baluchi`, `/baloch`, `/bal`) is now a hand-written chooser page (app/balochi/index.html, in `OTHER_PAGES` in packer/et/generate.py) linking to the three, so links and QR codes already shared for /balochi still work.
