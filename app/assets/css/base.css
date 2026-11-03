@@ -128,6 +128,11 @@ button, a, input, select, [role="button"] { touch-action: manipulation; }
                system-ui, sans-serif;
   line-height: 1.75;
 }
+:lang(te) {
+  font-family: "Noto Sans Telugu", "Kohinoor Telugu", "Telugu Sangam MN", Gautami,
+               "Nirmala UI", system-ui, sans-serif;
+  line-height: 1.8;
+}
 /* Ethiopic faces come from the device, so nothing is downloaded. */
 :lang(am), :lang(ti) {
   font-family: "Noto Sans Ethiopic", Nyala, Kefa, "Abyssinica SIL",
@@ -138,7 +143,7 @@ button, a, input, select, [role="button"] { touch-action: manipulation; }
    scripts apart. */
 :lang(cmn) .et-kicker, :lang(yue) .et-kicker, :lang(zh) .et-kicker,
 :lang(hi) .et-kicker, :lang(mr) .et-kicker, :lang(ne) .et-kicker,
-:lang(pa) .et-kicker, :lang(am) .et-kicker, :lang(ti) .et-kicker {
+:lang(pa) .et-kicker, :lang(am) .et-kicker, :lang(ti) .et-kicker, :lang(te) .et-kicker {
   text-transform: none; letter-spacing: 0;
 }
 

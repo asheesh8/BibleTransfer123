@@ -84,6 +84,8 @@ LIBRARIES = {
     "spanish": ("Spanish", "Español"),
     "swahili": ("Swahili", "Kiswahili"),
     "tachoni": ("Tachoni", "Lutachoni"),
+    "tagalog": ("Tagalog", "Tagalog"),
+    "telugu": ("Telugu", "తెలుగు"),
     "teso": ("Teso", "Ateso"),
     "tigrinya": ("Tigrinya", "ትግርኛ"),
     "tiriki": ("Tiriki", "Lutirichi"),

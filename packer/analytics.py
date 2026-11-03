@@ -104,6 +104,8 @@ QR_LIBRARIES = {
     "arabic": "ara",
     "haitian": "hat",
     "spanish": "spa",
+    "tagalog": "tgl",
+    "telugu": "tel",
     "kuria": "kuj",
     "luhya": "luy",
     "bukusu": "bxk",

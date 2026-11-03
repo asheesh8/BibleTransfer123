@@ -29,6 +29,8 @@ window.ET.module('share-libraries', ['core', 'ui/shell', 'i18n'], function (ET) 
     ['arabic', 'ara', 'Arabic', 'العربية'],
     ['haitian', 'hat', 'Haitian Creole', 'Kreyòl ayisyen'],
     ['spanish', 'spa', 'Spanish', 'Español'],
+    ['tagalog', 'tgl', 'Tagalog (Filipino)', 'Tagalog'],
+    ['telugu', 'tel', 'Telugu', 'తెలుగు'],
     ['kuria', 'kuj', 'Kuria', 'Igikuria'],
     ['luhya', 'luy', 'Luhya', 'Oluluhya'],
     ['bukusu', 'bxk', 'Bukusu', 'Lubukusu'],

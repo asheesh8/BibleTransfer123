@@ -31,13 +31,13 @@ in someone's hands.
 | Same app on web, Pi, card and PWA | One codebase to test | Feature-detect (`location.protocol`, service worker support), never fork the code. |
 | Service worker caches the shell, never media | A card holds tens of GB | `VERSION` in `app/sw.js` is a hash of the shell, set by `npm run generate`; without a new one installed copies keep the old page. |
 | Built for a shared, cracked phone outdoors | Our users | 56 px touch targets, icon plus word, Play / Save / Share verbs, RTL-aware, no pinch zoom. |
-| Every public URL keeps working | 60 language links and printed QR codes are in circulation | Slugs and aliases in `vercel.json` are never removed, only added. |
+| Every public URL keeps working | 64 language links and printed QR codes are in circulation | Slugs and aliases in `vercel.json` are never removed, only added. |
 
 ## The front end today
 
 | Layer | Files | Notes |
 |---|---|---|
-| Pages | `app/*.html`, `app/<slug>/index.html` (60 language pages) | Each page lists its own scripts in load order. |
+| Pages | `app/*.html`, `app/<slug>/index.html` (64 language pages) | Each page lists its own scripts in load order. |
 | Shared code | `app/assets/js/core.js` | Module registry, storage, DOM helpers, library scope, theme, catalogue, content language, file safety, offline install (about 300 lines). |
 | Design kit | `app/assets/js/ui/icons.js`, `ui/sheet.js`, `ui/toast.js`; `css/tokens.css`, `css/components/*.css` | On every page since October 2026: every sheet and toast in the app is the kit's. The rest of the kit (buttons, chips, cards, rows) is on `styleguide.html`, waiting for screens to move onto it. |
 | Shared screens | `app/assets/js/ui/shell.js`, `ui/covers.js` | Header, tab bar, legacy icons, step header, and `ET.sheet`/`ET.toast` (which open the kit's); cover art and item rows. |

@@ -1037,6 +1037,11 @@ html[lang="pa"] body {
                "Nirmala UI", system-ui, sans-serif;
   line-height: 1.75;
 }
+html[lang="te"] body {
+  font-family: "Noto Sans Telugu", "Kohinoor Telugu", "Telugu Sangam MN", Gautami,
+               "Nirmala UI", system-ui, sans-serif;
+  line-height: 1.8;
+}
 /* Chinese has no letter case and no word spaces: uppercase tracking on a label
    just pushes the characters apart. */
 html[lang="cmn"] .kicker, html[lang="yue"] .kicker,
@@ -1047,7 +1052,8 @@ html[lang="cmn"] .eyebrow, html[lang="yue"] .eyebrow {
 html[lang="hi"] .kicker, html[lang="hi"] .flabel, html[lang="hi"] .eyebrow,
 html[lang="mr"] .kicker, html[lang="mr"] .flabel, html[lang="mr"] .eyebrow,
 html[lang="ne"] .kicker, html[lang="ne"] .flabel, html[lang="ne"] .eyebrow,
-html[lang="pa"] .kicker, html[lang="pa"] .flabel, html[lang="pa"] .eyebrow {
+html[lang="pa"] .kicker, html[lang="pa"] .flabel, html[lang="pa"] .eyebrow,
+html[lang="te"] .kicker, html[lang="te"] .flabel, html[lang="te"] .eyebrow {
   text-transform: none; letter-spacing: 0; font-size: .86rem;
 }
 
