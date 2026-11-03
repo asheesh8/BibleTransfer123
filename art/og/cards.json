@@ -71,10 +71,6 @@
   "title": "हिन्दी बाइबल पुस्तकालय",
   "description": "हिन्दी में मुफ़्त बाइबल फ़िल्में, ऑडियो और पवित्र शास्त्र। किसी भी फ़ोन पर देखें, सुनें और पढ़ें, फिर दूसरों तक पहुँचाएँ!"
  },
- "hindko": {
-  "title": "ہندکو بائبل لائبریری",
-  "description": "ہندکو میں مفت بائبل فلمیں، آڈیو اور کلامِ مقدس۔ کسی بھی فون پر دیکھیں، سنیں اور پڑھیں، پھر دوسروں تک پہنچائیں!"
- },
  "home": {
   "title": "The Library: free Bible films, audio and Scripture",
   "description": "Films, audio Bibles and Scripture in 40+ languages. Watch, listen and read on any phone, then pass it on."
@@ -167,6 +163,10 @@
   "title": "Bible Library for Naija Pidgin",
   "description": "Free Bible film, audio and Scripture for Naija Pidgin. Watch, listen and read for any phone, then share am give oda people!"
  },
+ "northern-hindko": {
+  "title": "شمالی ہندکو بائبل لائبریری",
+  "description": "شمالی ہندکو میں مفت بائبل فلمیں، آڈیو اور کلامِ مقدس۔ کسی بھی فون پر دیکھیں، سنیں اور پڑھیں، پھر دوسروں تک پہنچائیں!"
+ },
  "oromo": {
   "title": "Laayibrarii Kitaaba Qulqulluu — Afaan Oromoo",
   "description": "Fiilmii Macaafa Qulqulluu, sagalee fi Katabbii Qulqulluu bilisaan (Afaan Oromoo). Bilbila kamiinuu ilaalaa, dhaggeeffadhaa fi dubbisaa, achiis warra kaaniif dabarsaa!"
@@ -198,6 +198,10 @@
  "southern-balochi": {
   "title": "جنوبی بلوچی بائبل لائبریری",
   "description": "جنوبی بلوچی میں مفت بائبل فلمیں، آڈیو اور کلامِ مقدس۔ کسی بھی فون پر دیکھیں، سنیں اور پڑھیں، پھر دوسروں تک پہنچائیں!"
+ },
+ "southern-hindko": {
+  "title": "جنوبی ہندکو بائبل لائبریری",
+  "description": "جنوبی ہندکو میں مفت بائبل فلمیں، آڈیو اور کلامِ مقدس۔ کسی بھی فون پر دیکھیں، سنیں اور پڑھیں، پھر دوسروں تک پہنچائیں!"
  },
  "spanish": {
   "title": "Biblioteca bíblica · Español",

@@ -10,7 +10,7 @@ from packer.et.profiles import PROFILES
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATE = '2026-10-06'
 # Shelves split from one audit: Balochi's three varieties share DBS's Balochi audit.
-AUDIT = {'bcc': 'balochi', 'bgp': 'balochi', 'bgn': 'balochi'}
+AUDIT = {'bcc': 'balochi', 'bgp': 'balochi', 'bgn': 'balochi', 'hno': 'hindko'}
 ARA_COUNT = 263
 SPA_COUNT = 84
 SHELVES = {'xho': ('xhosa', 'xh', 13), 'nya': ('chichewa', 'ny', 34),
@@ -27,7 +27,8 @@ SHELVES = {'xho': ('xhosa', 'xh', 13), 'nya': ('chichewa', 'ny', 34),
            'nyf': ('giryama', 'swh', 26), 'dig': ('digo', 'swh', 21), 'dug': ('duruma', 'swh', 16),
            'mer': ('meru', 'swh', 14), 'tuv': ('turkana', 'swh', 20), 'teo': ('teso', 'swh', 23),
            'skr': ('saraiki', 'ur', 25), 'bcc': ('southern-balochi', 'ur', 14),
-           'bgp': ('eastern-balochi', 'ur', 7), 'bgn': ('western-balochi', 'ur', 5), 'hno': ('hindko', 'ur', 18),
+           'bgp': ('eastern-balochi', 'ur', 7), 'bgn': ('western-balochi', 'ur', 5), 'hno': ('northern-hindko', 'ur', 18),
+           'hnd': ('southern-hindko', 'ur', 4),
            'tgl': ('tagalog', 'tl', 39), 'tel': ('telugu', 'te', 33)}
 DATES = {'ara': '2026-10-07', 'hat': '2026-10-13', 'kuj': '2026-10-14', 'spa': '2026-10-15',
          'lsm': '2026-10-20', 'luy': '2026-10-20', 'bxk': '2026-10-20',
@@ -37,7 +38,7 @@ DATES = {'ara': '2026-10-07', 'hat': '2026-10-13', 'kuj': '2026-10-14', 'spa': '
          'nyf': '2026-10-24', 'dig': '2026-10-24', 'dug': '2026-10-24',
          'mer': '2026-10-24', 'tuv': '2026-10-24', 'teo': '2026-10-24',
          'skr': '2026-11-02', 'bcc': '2026-11-02', 'bgp': '2026-11-02', 'bgn': '2026-11-02',
-         'hno': '2026-11-02', 'tgl': '2026-11-03', 'tel': '2026-11-03'}
+         'hno': '2026-11-02', 'hnd': '2026-11-03', 'tgl': '2026-11-03', 'tel': '2026-11-03'}
 
 
 def urls(r):
@@ -132,6 +133,7 @@ class DbsAuditTest(unittest.TestCase):
         self.assertNotIn('bgp', totals)
         self.assertNotIn('bgn', totals)
         self.assertNotIn('hno', totals)   # DBS has no Hindko audio Bible; GRN's readings are carried
+        self.assertNotIn('hnd', totals)   # DBS's Southern Hindko Bible is the Hindi ERV, not carried
         self.assertEqual(totals['spa'], 1189 * 3 + 929 + 260 * 3)
 
     def test_moved_audio_bibles_are_left_out(self):
@@ -494,7 +496,7 @@ class DbsAuditTest(unittest.TestCase):
     def test_saraiki_balochi_and_hindko(self):
         skr, bcc, hno = self.shelf('skr'), self.shelf('bcc'), self.shelf('hno')
         pages = (('skr', 'saraiki'), ('bcc', 'southern-balochi'), ('bgp', 'eastern-balochi'),
-                 ('bgn', 'western-balochi'), ('hno', 'hindko'))
+                 ('bgn', 'western-balochi'), ('hno', 'northern-hindko'), ('hnd', 'southern-hindko'))
         for code, slug in pages:
             lang = self.built[code]['languages'][code]
             self.assertEqual((lang['dir'], lang['script'], lang['font']), ('rtl', 'arab', 'naskh'))
@@ -534,13 +536,25 @@ class DbsAuditTest(unittest.TestCase):
                               ('southern-balochi', ('southern-balochi', 'southern-baluchi', 'bcc')),
                               ('eastern-balochi', ('eastern-balochi', 'bgp')),
                               ('western-balochi', ('western-balochi', 'bgn')),
-                              ('balochi', ('balochi', 'baluchi', 'bal')), ('hindko', ('hindko', 'hno'))):
+                              ('balochi', ('balochi', 'baluchi', 'bal')),
+                              ('northern-hindko', ('northern-hindko', 'hno')),
+                              ('southern-hindko', ('southern-hindko', 'hnd')),
+                              ('hindko', ('hindko', 'hindku'))):
             for alias in aliases:
                 self.assertIn('{ "source": "/' + alias + '", "destination": "/' + slug + '/index.html" }', vercel)
         # /balochi is a chooser that links to all three.
         chooser = (ROOT / 'app/balochi/index.html').read_text()
         for slug in ('southern-balochi', 'eastern-balochi', 'western-balochi'):
             self.assertIn(f'href="{slug}/"', chooser)
+        # Hindko is two libraries, as DBS lists it, and /hindko chooses between them.
+        chooser = (ROOT / 'app/hindko/index.html').read_text()
+        for slug in ('northern-hindko', 'southern-hindko'):
+            self.assertIn(f'href="{slug}/"', chooser)
+        self.assertEqual([r['id'] for r in self.shelf('hnd')],
+                         ['hnd-film-hnd-hindko-southern-jesus', 'hnd-film-hnd-ps-southern-hindko',
+                          'hnd-grn-64270', 'hnd-grn-6350'])
+        self.assertIn('https://dbs.org/bibles/HNDWTC', self.built['hnd']['notCarried'])
+        self.assertTrue(all('scope' not in r for code in ('hno', 'hnd') for r in self.shelf(code)))
     def test_tagalog_and_telugu(self):
         tgl, tel = self.shelf('tgl'), self.shelf('tel')
         self.assertEqual(self.built['tel']['languages']['tel']['script'], 'telu')

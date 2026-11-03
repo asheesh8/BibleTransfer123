@@ -1359,13 +1359,13 @@ class Shelf:
 
 
 def main():
-    for code in (sys.argv[1:] or list(LANGS) + ['ara', 'spa', 'skr', 'bcc', 'bgp', 'bgn', 'hno', 'tgl', 'tel']):
+    for code in (sys.argv[1:] or list(LANGS) + ['ara', 'spa', 'skr', 'bcc', 'bgp', 'bgn', 'hno', 'hnd', 'tgl', 'tel']):
         if code in ('tgl', 'tel'):
             import build_dbs_asia        # Tagalog and Telugu: their own interfaces
             build_dbs_asia.main([code])
             continue
-        if code in ('skr', 'bcc', 'bgp', 'bgn', 'hno'):
-            import build_dbs_pakistan    # Saraiki, the three Balochis, Hindko: the Urdu interface, right to left
+        if code in ('skr', 'bcc', 'bgp', 'bgn', 'hno', 'hnd'):
+            import build_dbs_pakistan    # Saraiki, the three Balochis, the two Hindkos: the Urdu interface, right to left
             build_dbs_pakistan.main([code])
             continue
         if code == 'spa':

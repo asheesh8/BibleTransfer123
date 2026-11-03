@@ -1140,3 +1140,14 @@ New strings: `app/assets/js/i18n/tl.js` and `te.js` (the same 461 keys as Spanis
 DBS links two audio Bibles only from a text Bible's page (TGLTAB_ISA_NT_N, TELERV_ISA_FB_N); they were added to the audits' Bibles. DBS's IRV audio (TELBCS_DAVR_FB_N) has moved and is not carried. The Telugu Bible Society (BSI) text opens only on find.bible, so Telugu's default Scripture text is the IRV. Every audio Bible chapter was checked (Tagalog 518, Telugu 2,637), all valid.
 
 Rebuild with `python3 packer/build_dbs_audit.py tgl tel`, then `npm run dbs:import`.
+
+### Hindko split into Northern and Southern — 2026-11-03
+
+DBS lists Hindko as two languages, so the Hindko library is now two, both with the Urdu interface, right to left:
+
+| Library | Content | Also at | Resources |
+|---|---|---|---|
+| `/northern-hindko` | `hno` | `/northern-hindku`, `/hazara-hindko`, `/hno` | 18: the former Hindko shelf (JESUS, The Prophets' Story, iBible, Story of Jesus, 14 GRN programmes and Bible readings) |
+| `/southern-hindko` | `hnd` | `/southern-hindku`, `/peshawari-hindko`, `/hnd` | 4: JESUS, The Prophets' Story, GRN Good News and Words of Life |
+
+Southern Hindko comes from a new browser audit (catalog/source/dbs-audit-southern-hindko-2026-11-03.json). DBS's one "Southern Hindko" Bible (HNDWTC, 2007 Easy-to-Read Version) is the Hindi ERV in Devanagari, so it is not carried. `/hindko` (and `/hindku`) is now a hand-written chooser page (app/hindko/index.html, in `OTHER_PAGES`), so links and QR codes already shared for /hindko still work.
