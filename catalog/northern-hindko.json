@@ -1,12 +1,12 @@
 {
- "generated": "DBS rendered Hindko inventory — 2026-11-02",
+ "generated": "DBS rendered Northern Hindko inventory — 2026-11-02",
  "languages": {
   "hno": {
-   "name": "Hindko",
-   "native": "ہندکو",
+   "name": "Northern Hindko",
+   "native": "شمالی ہندکو",
    "region": "Pakistan",
-   "speakers": "~5 million",
-   "blurb": "ہندکو میں بائبل، فلمیں اور مسیحی آڈیو۔",
+   "speakers": "",
+   "blurb": "شمالی ہندکو میں بائبل، فلمیں اور مسیحی آڈیو۔",
    "code": "hno",
    "script": "arab",
    "dir": "rtl",
@@ -20,10 +20,10 @@
    "type": "film",
    "title": "JESUS",
    "native": "یسوع",
-   "langName": "ہندکو",
+   "langName": "شمالی ہندکو",
    "source": "https://dbs.org/video/jesus/hno_hindko-northern_jesus",
    "org": "Jesus Film Project",
-   "desc": "بائبل پر مبنی فلم، ہندکو میں۔ جو حصہ دیکھنا یا محفوظ کرنا چاہیں، اسے چنیں۔",
+   "desc": "بائبل پر مبنی فلم، شمالی ہندکو میں۔ جو حصہ دیکھنا یا محفوظ کرنا چاہیں، اسے چنیں۔",
    "downloads": [
     {
      "url": "https://video.dbs.org/Jesus/chapters/hno_hindko-northern/hno_jesus_chapter_01_the-beginning_1_jf6101-0-0_low.mp4",
@@ -612,10 +612,10 @@
    "type": "film",
    "title": "The Prophets' Story",
    "native": "پیغمبراں دی کہانی",
-   "langName": "ہندکو",
+   "langName": "شمالی ہندکو",
    "source": "https://dbs.org/video/ps/hno_ps_northern_hindko",
    "org": "Prophets' Story",
-   "desc": "بائبل پر مبنی فلم، ہندکو میں۔",
+   "desc": "بائبل پر مبنی فلم، شمالی ہندکو میں۔",
    "downloads": [
     {
      "url": "https://video.dbs.org/PS/films/hno_Prophets_Story_پیغمبراں_دی_کہانی_Northern_Hindko.mp4",
@@ -641,10 +641,10 @@
    "type": "film",
    "title": "iBible: Salvation Story",
    "native": "iBible: یسوع دا حقیقی کہانڑی",
-   "langName": "ہندکو",
+   "langName": "شمالی ہندکو",
    "source": "https://dbs.org/video/ibible/hno-hindko-ibible_salvation",
    "org": "RevelationMedia",
-   "desc": "بائبل پر مبنی فلم، ہندکو میں۔",
+   "desc": "بائبل پر مبنی فلم، شمالی ہندکو میں۔",
    "downloads": [
     {
      "url": "https://download.dbs.org/ibible/hno-hindko-ibible_salvation.zip",
@@ -679,7 +679,7 @@
    "type": "audio",
    "title": "Story of Jesus",
    "native": "یسوع کی کہانی (آڈیو)",
-   "langName": "ہندکو",
+   "langName": "شمالی ہندکو",
    "source": "https://dbs.org/audio/collections/hno_StoryJesus_hindko_northern",
    "org": "Story of Jesus",
    "desc": "یسوع کی کہانی آڈیو میں: پوری ریکارڈنگ ایک ساتھ یا ۸ حصوں میں۔ جو چاہیں سنیں یا محفوظ کریں۔",
@@ -794,10 +794,10 @@
    "type": "audio",
    "title": "Good News (Men)",
    "native": "خوشخبری (مردوں کے لیے)",
-   "langName": "ہندکو",
+   "langName": "شمالی ہندکو",
    "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
    "org": "Global Recordings Network",
-   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات شمالی ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%20%28Men%29%2074979/Hindko%20Hazara%20Good%20News%20%28Men%29%20001%20Picture%201%20In%20the%20Beginning%2074979.mp3",
@@ -1181,10 +1181,10 @@
    "type": "audio",
    "title": "Good News 1-20 (Women)",
    "native": "خوشخبری ۱ تا ۲۰ (خواتین کے لیے)",
-   "langName": "ہندکو",
+   "langName": "شمالی ہندکو",
    "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
    "org": "Global Recordings Network",
-   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات شمالی ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%2074969/Hindko%20Hazara%20Good%20News%201-20%20%28Women%29%20001%20Introduction%20Picture%201%20In%20the%20Beginning%2074969.mp3",
@@ -1388,10 +1388,10 @@
    "type": "audio",
    "title": "Words of Life",
    "native": "زندگی کے کلمات",
-   "langName": "ہندکو",
+   "langName": "شمالی ہندکو",
    "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
    "org": "Global Recordings Network",
-   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات شمالی ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Words%20of%20Life%2002970/Hindko%20Hazara%20Words%20of%20Life%20001%20Heart%20of%20man%2002970.mp3",
@@ -1478,10 +1478,10 @@
    "type": "audio",
    "title": "Genesis",
    "native": "پیدائش",
-   "langName": "ہندکو",
+   "langName": "شمالی ہندکو",
    "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
    "org": "Global Recordings Network",
-   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات شمالی ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Genesis%2074968/Hindko%20Hazara%20Genesis%20001%2074968.mp3",
@@ -1613,10 +1613,10 @@
    "type": "audio",
    "title": "Exodus",
    "native": "خروج",
-   "langName": "ہندکو",
+   "langName": "شمالی ہندکو",
    "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
    "org": "Global Recordings Network",
-   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات شمالی ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Exodus%2074963/Hindko%20Hazara%20Exodus%20001%20Exodus%201%2074963.mp3",
@@ -1820,10 +1820,10 @@
    "type": "audio",
    "title": "Matthew",
    "native": "متی",
-   "langName": "ہندکو",
+   "langName": "شمالی ہندکو",
    "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
    "org": "Global Recordings Network",
-   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات شمالی ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Matthew%2074978/Hindko%20Hazara%20Matthew%20001%20Scripture%2074978.mp3",
@@ -2027,10 +2027,10 @@
    "type": "audio",
    "title": "Luke",
    "native": "لوقا",
-   "langName": "ہندکو",
+   "langName": "شمالی ہندکو",
    "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
    "org": "Global Recordings Network",
-   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات شمالی ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Luke%2074981/Hindko%20Hazara%20Luke%20001%20Scripture%2074981.mp3",
@@ -2081,10 +2081,10 @@
    "type": "audio",
    "title": "Acts",
    "native": "اعمال",
-   "langName": "ہندکو",
+   "langName": "شمالی ہندکو",
    "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
    "org": "Global Recordings Network",
-   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات شمالی ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Acts%2074967/Hindko%20Hazara%20Acts%20001%20Scripture%2074967.mp3",
@@ -2135,10 +2135,10 @@
    "type": "audio",
    "title": "Romans",
    "native": "رومیوں",
-   "langName": "ہندکو",
+   "langName": "شمالی ہندکو",
    "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
    "org": "Global Recordings Network",
-   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات شمالی ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Romans%2074974/Hindko%20Hazara%20Romans%20001%20Romans%201%2074974.mp3",
@@ -2306,10 +2306,10 @@
    "type": "audio",
    "title": "Galatians & Philippians",
    "native": "گلتیوں اور فلپیوں",
-   "langName": "ہندکو",
+   "langName": "شمالی ہندکو",
    "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
    "org": "Global Recordings Network",
-   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات شمالی ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Galatians%20Philippians%2074962/Hindko%20Hazara%20Galatians%20Philippians%20001%20Scripture%2074962.mp3",
@@ -2342,10 +2342,10 @@
    "type": "audio",
    "title": "Ephesians & Colossians",
    "native": "افسیوں اور کلسیوں",
-   "langName": "ہندکو",
+   "langName": "شمالی ہندکو",
    "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
    "org": "Global Recordings Network",
-   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات شمالی ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20Ephesians%20Colossians%2074982/Hindko%20Hazara%20Ephesians%20Colossians%20001%20Scripture%2074982.mp3",
@@ -2378,10 +2378,10 @@
    "type": "audio",
    "title": "1 & 2 Thessalonians",
    "native": "۱ اور ۲ تھسلنیکیوں",
-   "langName": "ہندکو",
+   "langName": "شمالی ہندکو",
    "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
    "org": "Global Recordings Network",
-   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات شمالی ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%201%202%20Thessalonians%2074964/Hindko%20Hazara%201%202%20Thessalonians%20001%20Scripture%2074964.mp3",
@@ -2414,10 +2414,10 @@
    "type": "audio",
    "title": "1 & 2 Peter",
    "native": "۱ اور ۲ پطرس",
-   "langName": "ہندکو",
+   "langName": "شمالی ہندکو",
    "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
    "org": "Global Recordings Network",
-   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات شمالی ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%201%202%20Peter%2074985/Hindko%20Hazara%201%202%20Peter%20001%20Scripture%2074985.mp3",
@@ -2450,10 +2450,10 @@
    "type": "audio",
    "title": "James; 1, 2, 3 John; Jude",
    "native": "یعقوب، ۱، ۲ اور ۳ یوحنا، یہوداہ",
-   "langName": "ہندکو",
+   "langName": "شمالی ہندکو",
    "source": "https://dbs.org/audio/collections/hno_GlobalRecordings_hindko_hazara",
    "org": "Global Recordings Network",
-   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
+   "desc": "بائبل کی کہانیاں اور مسیحی پیغامات شمالی ہندکو میں، جنہیں Global Recordings Network نے ریکارڈ کیا۔",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/hno_GlobalRecordings_hindko_hazara/Hindko%20Hazara/Hindko%20Hazara%20James%201%202%203%20John%20Jude%2074973/Hindko%20Hazara%20James%201%202%203%20John%20Jude%20001%20James%201%2074973.mp3",

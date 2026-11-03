@@ -30,7 +30,7 @@ class Generated(unittest.TestCase):
 
     def test_registry_covers_every_page_type(self):
         languages = self.registry["languages"]
-        self.assertEqual(len(languages), 64)
+        self.assertEqual(len(languages), 65)
         self.assertTrue(any(e.get("dir") == "rtl" for e in languages))
         for entry in languages:
             with self.subTest(slug=entry["slug"]):

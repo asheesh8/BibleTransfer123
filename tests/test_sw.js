@@ -225,7 +225,7 @@ test('New language library pages remain available offline after installation', a
   const h = harness();
   await h.lifecycle('install');
   h.offline(true);
-  for (const slug of ['kikuyu', 'marathi', 'luganda', 'luo', 'oromo', 'igbo', 'hausa', 'malagasy', 'chichewa', 'kinyarwanda', 'xhosa', 'shona', 'kirundi', 'akan', 'tigrinya', 'arabic', 'haitian', 'spanish', 'kuria', 'luhya', 'bukusu', 'saamia', 'maragoli', 'idakho', 'tiriki', 'kabras', 'tachoni', 'banyala', 'marachi', 'kamba', 'kalenjin', 'giryama', 'digo', 'duruma', 'meru', 'turkana', 'teso', 'saraiki', 'southern-balochi', 'eastern-balochi', 'western-balochi', 'hindko', 'tagalog', 'telugu']) {
+  for (const slug of ['kikuyu', 'marathi', 'luganda', 'luo', 'oromo', 'igbo', 'hausa', 'malagasy', 'chichewa', 'kinyarwanda', 'xhosa', 'shona', 'kirundi', 'akan', 'tigrinya', 'arabic', 'haitian', 'spanish', 'kuria', 'luhya', 'bukusu', 'saamia', 'maragoli', 'idakho', 'tiriki', 'kabras', 'tachoni', 'banyala', 'marachi', 'kamba', 'kalenjin', 'giryama', 'digo', 'duruma', 'meru', 'turkana', 'teso', 'saraiki', 'southern-balochi', 'eastern-balochi', 'western-balochi', 'northern-hindko', 'southern-hindko', 'tagalog', 'telugu']) {
     const result = await h.dispatch('/' + slug + '/index.html');
     assert.equal(result.intercepted, true);
     assert.equal(result.response.body, 'server:/' + slug + '/index.html');
@@ -237,8 +237,8 @@ test('the smaller home and all language catalogues remain usable offline', async
   await h.lifecycle('install');
   h.offline(true);
   const catalogues = h.context.SHELL.filter(filename => filename.startsWith('data/catalog'));
-  assert.equal(catalogues.length, 128);
-  assert.equal(catalogues.filter(filename => filename.endsWith('-shelf.js')).length, 63);
+  assert.equal(catalogues.length, 130);
+  assert.equal(catalogues.filter(filename => filename.endsWith('-shelf.js')).length, 64);
   for (const filename of catalogues) {
     const result = await h.dispatch('/' + filename);
     assert.equal(result.response.body, 'server:/' + filename);

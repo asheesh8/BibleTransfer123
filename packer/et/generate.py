@@ -35,7 +35,7 @@ from packer import write_og_tags  # noqa: E402
 APP = ROOT / "app"
 REGISTRY = ROOT / "registry" / "languages.json"
 # app/ folders that hold a page but are not language libraries.
-OTHER_PAGES = {"admin", "share-libraries", "balochi"}   # balochi: chooser for the three Balochi libraries
+OTHER_PAGES = {"admin", "share-libraries", "balochi", "hindko"}   # choosers: the three Balochi, the two Hindko libraries
 TEXT = {".html", ".js", ".css", ".json", ".webmanifest", ".svg"}
 SW_START = "  // generated:languages:start"
 SW_END = "  // generated:languages:end"

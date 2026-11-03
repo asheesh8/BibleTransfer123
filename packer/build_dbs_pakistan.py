@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build Saraiki, the three Balochis and Hindko from their browser audits:
+"""Build Saraiki, the three Balochis and the two Hindkos from their browser audits:
 Pakistan's biggest languages that had no library yet, all with the Urdu interface.
 
     python3 packer/build_dbs_pakistan.py            # all three
@@ -28,11 +28,15 @@ in Arabic script, right to left (Naskh, like Urdu's own page).
     programmes, so it is left out; its two other items, the Visual Bible's
     Matthew and the 1899 Matthew, go to Southern Balochi, whose code DBS
     gives its own "Gospel of Matthew in Balochi" (find.bible BCCMAT).
-  · Hindko (hno): DBS's Northern Hindko page (Hazara, the Hindko of
+  · Hindko: two shelves, as DBS lists them (split 2026-11-03).
+    Northern Hindko (hno): DBS's Northern Hindko page (Hazara, the Hindko of
     Abbottabad and Mansehra). JESUS, The Prophets' Story, iBible, Story of
     Jesus, and GRN's readings of Genesis, Exodus, Psalms and much of the New
-    Testament. DBS's Southern Hindko page (hnd) lists only the Hindi
-    Easy-to-Read Bible, so it is not part of this shelf.
+    Testament (audit of 2026-11-02, catalog/source/dbs-audit-hindko-…).
+    Southern Hindko (hnd): DBS's Southern Hindko page (Peshawar, Kohat,
+    Attock). JESUS, The Prophets' Story and GRN's Good News and Words of
+    Life. DBS also lists a "2007 Easy-to-Read Version" there, but its text is
+    the Hindi ERV in Devanagari (HNDWTC), not Hindko, so it is left out.
 """
 import re
 import urllib.parse
@@ -73,9 +77,15 @@ for _code, (_slug, _name, _native, _region) in BALOCHI.items():
 base.EXCLUDED.setdefault('bcc', {})['https://dbs.org/audio/collections/grn/bal_GlobalRecordings_baluchi'] = (
     "DBS's umbrella Balochi GRN collection repeats the three varieties' programmes, "
     'carried on each variety\'s own library.')
-base.LANGS['hno'] = dict(slug='hindko', name='Hindko', native='ہندکو', region='Pakistan',
-                         speakers='~5 million', **words('Hindko', 'ہندکو'))
-CODES = ('skr', 'bcc', 'bgp', 'bgn', 'hno')
+base.LANGS['hno'] = dict(slug='northern-hindko', name='Northern Hindko', native='شمالی ہندکو', region='Pakistan',
+                         speakers='', audit='hindko', **words('Northern Hindko', 'شمالی ہندکو'))
+base.LANGS['hnd'] = dict(slug='southern-hindko', name='Southern Hindko', native='جنوبی ہندکو', region='Pakistan',
+                         speakers='', **{**words('Southern Hindko', 'جنوبی ہندکو'), 'date': '2026-11-03'})
+base.EXCLUDED.setdefault('hnd', {})['https://dbs.org/bibles/HNDWTC'] = (
+    "DBS lists it under Southern Hindko, but the text is the Hindi Easy-to-Read Version "
+    '(Devanagari, हिन्दी बाइबिल), not Hindko.')
+HINDKO = ('hno', 'hnd')
+CODES = ('skr', 'bcc', 'bgp', 'bgn', 'hno', 'hnd')
 
 # Saraiki's varieties, by the GRN folder an item comes from:
 # English name and Urdu name.
@@ -173,9 +183,13 @@ class PakistanShelf(Shelf):
             self.audit['sections'] = {
                 section: [r for r in rows if balochi_owner(r['url'], grn) == code]
                 for section, rows in self.audit['sections'].items()}
+        gone = base.EXCLUDED.get(code, {})
+        if gone:      # listed by DBS but not carried (the reason goes to notCarried)
+            self.audit['sections'] = {section: [r for r in rows if r['url'] not in gone]
+                                      for section, rows in self.audit['sections'].items()}
 
     def variety(self, key):
-        if self.code in BALOCHI:
+        if self.code in BALOCHI or self.code in HINDKO:
             return None       # one variety per shelf: the page already names it
         return VARIETY.get(key)
 
