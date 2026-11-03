@@ -1125,3 +1125,18 @@ DBS lists Balochi as three languages, so the one Balochi shelf is now three libr
 Items no longer carry a variety tag: the library names it. DBS's umbrella Balochi page (`bal`) adds the Visual Bible's Matthew and the 1899 Matthew; both go to Southern Balochi, the variety DBS codes its "Gospel of Matthew in Balochi" with (find.bible BCCMAT). The umbrella page's GRN collection repeats the three varieties' programmes and is not carried.
 
 `/balochi` (and `/baluchi`, `/baloch`, `/bal`) is now a hand-written chooser page (app/balochi/index.html, in `OTHER_PAGES` in packer/et/generate.py) linking to the three, so links and QR codes already shared for /balochi still work.
+
+### Tagalog (Filipino) and Telugu — 2026-11-03
+
+Added two shelves and pages, each with its own new interface language: `/tagalog` (content `tgl`, interface `tl`, also `/filipino`, `/pilipino`, `/tagalog-filipino`, `/tgl`, `/fil`, `/tl`) and `/telugu` (content `tel`, interface `te`, also `/tel`, `/te`). Built by `packer/build_dbs_asia.py` from DBS's Tagalog, Filipino and Telugu pages; every word the library adds is Filipino or Telugu.
+
+New strings: `app/assets/js/i18n/tl.js` and `te.js` (the same 461 keys as Spanish), their welcome lines in `SAY`, privacy notice copy (`analytics.js`), Kandili's first-visit lines (`onboarding-strings.js`, Kandili written కందిలి in Telugu), book names (`tl`: Ang Dating Biblia names; `te`: the Bible Society of India names), item email copy (regenerated), and page text in `registry/languages.json`. Both translations were written by Claude and have not had a native reader's review yet. Filipino uses the everyday informal "mo" register common in Philippine apps, with English loanwords people use on phones (iseyb, i-download, Wi-Fi); Telugu uses the polite మీరు form, గ్రంథాలయం for library and లేఖనాలు for Scripture. A native reader should check those choices and the builder's wording ("Tumingin, Makinig at Mabuhay" and "చూడండి, వినండి, జీవించండి" for Look, Listen & Live).
+
+| Shelf | Resources | Shown by default |
+|---|---|---|
+| Tagalog | 39 | Ang Dating Biblia 1905 (text); Magandang Balita and Ang Dating Biblia New Testaments (audio); JESUS, LUMO, Visual Bible Matthew and Acts, BibleProject, The HOPE, iBible and the other films |
+| Telugu | 33 | Indian Revised Version (text); the BSI Bible, the Easy-to-Read Bible and the Anjar New Testament (audio); JESUS in Telugu and Nethakani, LUMO, Visual Bible Matthew, BibleProject, The HOPE and the other films |
+
+DBS links two audio Bibles only from a text Bible's page (TGLTAB_ISA_NT_N, TELERV_ISA_FB_N); they were added to the audits' Bibles. DBS's IRV audio (TELBCS_DAVR_FB_N) has moved and is not carried. The Telugu Bible Society (BSI) text opens only on find.bible, so Telugu's default Scripture text is the IRV. Every audio Bible chapter was checked (Tagalog 518, Telugu 2,637), all valid.
+
+Rebuild with `python3 packer/build_dbs_audit.py tgl tel`, then `npm run dbs:import`.

@@ -18,7 +18,7 @@
     }
   },
   "redirects": [
-    { "source": "/:slug(english|mandarin|hindi|marathi|urdu|swahili|zulu|western-punjabi|cantonese|pashto|eastern-punjabi|nepali|sindhi|saraiki|southern-balochi|eastern-balochi|western-balochi|hindko|luganda|luo|malagasy|kirundi|akan|tigrinya|arabic|haitian|spanish|kuria|luhya|bukusu|saamia|maragoli|idakho|tiriki|kabras|tachoni|banyala|marachi|kamba|kalenjin|giryama|digo|duruma|meru|turkana|teso|chichewa|kinyarwanda|xhosa|shona|hausa|lingala|nigerian-pidgin|yoruba|portuguese|amharic|french|igbo|oromo|kikuyu|gusii|maasai)", "has": [{ "type": "query", "key": "src", "value": "qr" }], "destination": "/api/qr?l=:slug", "permanent": false }
+    { "source": "/:slug(english|mandarin|hindi|marathi|urdu|swahili|zulu|western-punjabi|cantonese|pashto|eastern-punjabi|nepali|sindhi|saraiki|southern-balochi|eastern-balochi|western-balochi|hindko|luganda|luo|malagasy|kirundi|akan|tigrinya|arabic|haitian|spanish|tagalog|telugu|kuria|luhya|bukusu|saamia|maragoli|idakho|tiriki|kabras|tachoni|banyala|marachi|kamba|kalenjin|giryama|digo|duruma|meru|turkana|teso|chichewa|kinyarwanda|xhosa|shona|hausa|lingala|nigerian-pidgin|yoruba|portuguese|amharic|french|igbo|oromo|kikuyu|gusii|maasai)", "has": [{ "type": "query", "key": "src", "value": "qr" }], "destination": "/api/qr?l=:slug", "permanent": false }
   ],
   "rewrites": [
     { "source": "/admin", "destination": "/admin/index.html" },
@@ -102,6 +102,16 @@
     { "source": "/castellano", "destination": "/spanish/index.html" },
     { "source": "/spa", "destination": "/spanish/index.html" },
     { "source": "/es", "destination": "/spanish/index.html" },
+    { "source": "/tagalog", "destination": "/tagalog/index.html" },
+    { "source": "/filipino", "destination": "/tagalog/index.html" },
+    { "source": "/pilipino", "destination": "/tagalog/index.html" },
+    { "source": "/tagalog-filipino", "destination": "/tagalog/index.html" },
+    { "source": "/tgl", "destination": "/tagalog/index.html" },
+    { "source": "/fil", "destination": "/tagalog/index.html" },
+    { "source": "/tl", "destination": "/tagalog/index.html" },
+    { "source": "/telugu", "destination": "/telugu/index.html" },
+    { "source": "/tel", "destination": "/telugu/index.html" },
+    { "source": "/te", "destination": "/telugu/index.html" },
     { "source": "/kuria", "destination": "/kuria/index.html" },
     { "source": "/igikuria", "destination": "/kuria/index.html" },
     { "source": "/kikuria", "destination": "/kuria/index.html" },

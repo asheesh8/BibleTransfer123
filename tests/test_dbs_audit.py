@@ -1,4 +1,4 @@
-"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Arabic, Haitian Creole, Kuria, Spanish, Saamia, Luhya, Bukusu, Maragoli, Idakho-Isukha-Tiriki, Kabras, Tachoni, Banyala, Marachi, Kamba, Kalenjin, Giryama, Digo, Duruma, Meru, Turkana, Teso, Saraiki, Southern, Eastern and Western Balochi, and Hindko: complete, verified and DBS-hosted."""
+"""Xhosa, Chichewa, Kinyarwanda, Shona, Kirundi, Akan, Tigrinya, Arabic, Haitian Creole, Kuria, Spanish, Saamia, Luhya, Bukusu, Maragoli, Idakho-Isukha-Tiriki, Kabras, Tachoni, Banyala, Marachi, Kamba, Kalenjin, Giryama, Digo, Duruma, Meru, Turkana, Teso, Saraiki, Southern, Eastern and Western Balochi, Hindko, Tagalog and Telugu: complete, verified and DBS-hosted."""
 import json
 import pathlib
 import re
@@ -27,7 +27,8 @@ SHELVES = {'xho': ('xhosa', 'xh', 13), 'nya': ('chichewa', 'ny', 34),
            'nyf': ('giryama', 'swh', 26), 'dig': ('digo', 'swh', 21), 'dug': ('duruma', 'swh', 16),
            'mer': ('meru', 'swh', 14), 'tuv': ('turkana', 'swh', 20), 'teo': ('teso', 'swh', 23),
            'skr': ('saraiki', 'ur', 25), 'bcc': ('southern-balochi', 'ur', 14),
-           'bgp': ('eastern-balochi', 'ur', 7), 'bgn': ('western-balochi', 'ur', 5), 'hno': ('hindko', 'ur', 18)}
+           'bgp': ('eastern-balochi', 'ur', 7), 'bgn': ('western-balochi', 'ur', 5), 'hno': ('hindko', 'ur', 18),
+           'tgl': ('tagalog', 'tl', 39), 'tel': ('telugu', 'te', 33)}
 DATES = {'ara': '2026-10-07', 'hat': '2026-10-13', 'kuj': '2026-10-14', 'spa': '2026-10-15',
          'lsm': '2026-10-20', 'luy': '2026-10-20', 'bxk': '2026-10-20',
          'rag': '2026-10-21', 'ida': '2026-10-21',
@@ -36,7 +37,7 @@ DATES = {'ara': '2026-10-07', 'hat': '2026-10-13', 'kuj': '2026-10-14', 'spa': '
          'nyf': '2026-10-24', 'dig': '2026-10-24', 'dug': '2026-10-24',
          'mer': '2026-10-24', 'tuv': '2026-10-24', 'teo': '2026-10-24',
          'skr': '2026-11-02', 'bcc': '2026-11-02', 'bgp': '2026-11-02', 'bgn': '2026-11-02',
-         'hno': '2026-11-02'}
+         'hno': '2026-11-02', 'tgl': '2026-11-03', 'tel': '2026-11-03'}
 
 
 def urls(r):
@@ -123,6 +124,9 @@ class DbsAuditTest(unittest.TestCase):
         # Meru's Old Testament (Daniel has 14 chapters, with Susanna and Bel); Turkana's whole
         # Bible; Teso's whole Bible, New Testament, and Mark and Luke.
         self.assertEqual((totals['mer'], totals['tuv'], totals['teo']), (929 + 2, 1189, 1189 + 260 + 40))
+        # Tagalog: two New Testaments (DBS's Ang Dating Biblia picker lists 258 chapters). Telugu: the BSI Bible, the Easy-to-Read Bible (DBS's
+        # picker lists 1,188 of its chapters) and the Anjar New Testament.
+        self.assertEqual((totals['tgl'], totals['tel']), (260 + 258, 1189 + 1188 + 260))
         # Three full Bibles, the Reina-Valera 1960 Old Testament and three New Testaments.
         self.assertEqual((totals['skr'], totals['bcc']), (89 + 260, 278 + 260))
         self.assertNotIn('bgp', totals)
@@ -259,7 +263,8 @@ class DbsAuditTest(unittest.TestCase):
             self.assertIn(f'data/catalog-{code}-shelf.js', page)
             self.assertIn(f"'{slug}/index.html', 'data/catalog-{code}.js'", sw)
             # Kuria uses the Swahili interface, whose own code is the Swahili page's route;
-            # Saraiki, Balochi and Hindko use Urdu's the same way.
+            # Saraiki, Balochi and Hindko use Urdu's the same way. Tagalog and Telugu answer to
+            # their interface codes too (tl, te).
             for path in (slug, code) + ((ui,) if ui not in ('swh', 'ur') else ()):
                 self.assertEqual(routes['/' + path], f'/{slug}/index.html')
             self.assertIn(f"{{ code: '{ui}',", i18n)
@@ -536,6 +541,40 @@ class DbsAuditTest(unittest.TestCase):
         chooser = (ROOT / 'app/balochi/index.html').read_text()
         for slug in ('southern-balochi', 'eastern-balochi', 'western-balochi'):
             self.assertIn(f'href="{slug}/"', chooser)
+    def test_tagalog_and_telugu(self):
+        tgl, tel = self.shelf('tgl'), self.shelf('tel')
+        self.assertEqual(self.built['tel']['languages']['tel']['script'], 'telu')
+        # The classic Bible leads each shelf: it is the one Scripture text shown by default.
+        self.assertEqual(tgl[0]['id'], 'tgl-text-tgltab')
+        self.assertEqual(tel[0]['id'], 'tel-text-telotb')
+        visibility = (ROOT / 'app/assets/js/visibility.js').read_text()
+        self.assertIn("tgl: ['tgl-text-tgltab']", visibility)
+        self.assertIn("tel: ['tel-text-telotb']", visibility)
+        # Every word the library adds is in the interface language.
+        for r in tel:
+            self.assertRegex(r['native'], '[\u0c00-\u0c7f]', r['id'])
+            self.assertRegex(r['desc'], '[\u0c00-\u0c7f]', r['id'])
+        for r in tgl:
+            self.assertRegex(r['desc'], r'\b(sa|ng|ang|mga)\b', r['id'])
+        # Audio Bibles DBS links only from a text Bible's page are carried; the moved IRV audio is not.
+        ids = {r['id'] for r in tgl + tel}
+        self.assertTrue({'tgl-ab-tgltab-isa-nt-n', 'tel-ab-telerv-isa-fb-n'} <= ids)
+        self.assertIn('https://dbs.org/bibles/audio/TELBCS_DAVR_FB_N', self.built['tel']['notCarried'])
+        bsi = next(r for r in tel if r['id'] == 'tel-ab-telbov-davr-fb-n')
+        self.assertEqual(bsi['play']['bookNames']['Deuteronomy'], 'ద్వితీయోపదేశకాండము')   # DBS's picker cuts it short
+        self.assertEqual(next(r for r in tgl if r['id'] == 'tgl-ab-tglpbs-fcbh-nt-n')['play']['bookNames']['Acts'], 'Mga Gawa')
+        # DBS's Filipino page's one film is on the Tagalog shelf; Telugu's Nethakani JESUS names its variety.
+        self.assertIn('tgl-film-fil-filipino', ids)
+        self.assertEqual(next(r for r in tel if r['id'] == 'tel-film-tel-nethakani-jesus')['scope'], 'Nethakani')
+        # The HOPE numbers its events straight through, named by its Telugu sections.
+        hope = next(r for r in tel if r['id'] == 'tel-film-tel-telugu-the-hope')['play']['items']
+        self.assertEqual([i['n'] for i in hope], list(range(1, len(hope) + 1)))
+        vercel = (ROOT / 'vercel.json').read_text()
+        for slug, aliases in (('tagalog', ('tagalog', 'filipino', 'pilipino', 'tgl', 'fil', 'tl')),
+                              ('telugu', ('telugu', 'tel', 'te'))):
+            for alias in aliases:
+                self.assertIn('{ "source": "/' + alias + '", "destination": "/' + slug + '/index.html" }', vercel)
+
 
 if __name__ == '__main__':
     unittest.main()

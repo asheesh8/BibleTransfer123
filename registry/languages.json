@@ -91,6 +91,24 @@
       "noneSub": "Pruebe una palabra más corta o toque Todo.",
       "clear": "Borrar filtros"
     },
+    "tl": {
+      "email": "I-email ang aklatang ito",
+      "copy": "Kopyahin ang link",
+      "search": "Maghanap ayon sa pangalan",
+      "kind": "Uri",
+      "none": "Walang tumugma",
+      "noneSub": "Subukan ang mas maikling salita, o pindutin ang Lahat.",
+      "clear": "Burahin"
+    },
+    "te": {
+      "email": "ఈ గ్రంథాలయాన్ని ఈమెయిల్ చేయండి",
+      "copy": "లింక్ కాపీ చేయండి",
+      "search": "పేరుతో వెతకండి",
+      "kind": "రకం",
+      "none": "ఏదీ సరిపోలలేదు",
+      "noneSub": "చిన్న పదం ప్రయత్నించండి, లేదా అన్నీ నొక్కండి.",
+      "clear": "తొలగించండి"
+    },
     "swh": {
       "email": "Tuma maktaba hii kwa barua pepe",
       "copy": "Nakili kiungo",
@@ -617,6 +635,35 @@
       "description": "La Biblia, películas y grabaciones cristianas en español.",
       "badge": "Idioma: Español",
       "lead": "Idioma de los recursos de esta biblioteca: Español.",
+      "reloadGuard": "i18n"
+    },
+    {
+      "slug": "tagalog",
+      "lang": "tgl",
+      "ui": "tl",
+      "name": "Tagalog",
+      "native": "Tagalog",
+      "htmlLang": "tl",
+      "aliases": ["filipino", "pilipino", "tagalog-filipino", "tgl", "fil", "tl"],
+      "title": "Aklatan ng Bibliya sa Tagalog",
+      "description": "Bibliya, mga pelikula at Kristiyanong audio sa Tagalog (Filipino).",
+      "badge": "Tagalog lamang",
+      "lead": "Nasa Tagalog ang lahat ng nasa aklatang ito.",
+      "shareName": "Tagalog (Filipino)",
+      "reloadGuard": "i18n"
+    },
+    {
+      "slug": "telugu",
+      "lang": "tel",
+      "ui": "te",
+      "name": "Telugu",
+      "native": "తెలుగు",
+      "htmlLang": "te",
+      "aliases": ["tel", "te"],
+      "title": "తెలుగు బైబిల్ గ్రంథాలయం",
+      "description": "తెలుగులో బైబిల్, సినిమాలు, క్రైస్తవ ఆడియో.",
+      "badge": "తెలుగు మాత్రమే",
+      "lead": "ఈ గ్రంథాలయంలోని ప్రతిదీ తెలుగులో ఉంది.",
       "reloadGuard": "i18n"
     },
     {

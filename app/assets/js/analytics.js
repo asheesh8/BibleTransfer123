@@ -345,6 +345,28 @@ window.ET.module('analytics', ['core', 'i18n'], function (ET) {
       disabled: "Las estadísticas están desactivadas.",
       signal: "Su navegador envía una preferencia de privacidad, así que las estadísticas seguirán desactivadas."
     },
+    tl: {
+      title: "Cookies at ang iyong privacy",
+      body: "Kung papayag ka, gagamitin namin ang storage ng browser para bilangin ang mga pagbisita, ang mga nilalamang ginamit, ang mga paraan ng pagbabahagi, at ang mga pagbisitang galing sa mga ibinahaging link. Maaaring ipakita ng mga ulat ang iyong bansa at ang site na nagdala sa iyo rito. Itinatago namin ang aktibidad nang 90 araw. Hindi namin nakikita kung sino ang tumanggap ng mga link, ang mga pribadong mensahe, o kung saan idinikit ang mga kinopyang link.",
+      accept: "Payagan ang estadistika",
+      reject: "Tanggihan ang estadistika",
+      settings: "Settings ng cookies",
+      details: "Basahin ang abiso sa privacy",
+      enabled: "Naka-on na ang estadistika.",
+      disabled: "Naka-off na ang estadistika.",
+      signal: "Nagpapadala ang browser mo ng kagustuhan sa privacy, kaya mananatiling naka-off ang estadistika."
+    },
+    te: {
+      title: "కుకీలు, మీ గోప్యత",
+      body: "మీరు అనుమతిస్తే, సందర్శనలు, వాడిన వనరులు, పంచుకున్న మార్గాలు, పంచుకున్న లింక్‌ల ద్వారా వచ్చిన సందర్శనలను లెక్కించడానికి బ్రౌజర్ స్టోరేజ్ వాడతాం. నివేదికలు మీ దేశాన్ని, మిమ్మల్ని ఇక్కడికి తెచ్చిన సైట్‌ను చూపించవచ్చు. కార్యకలాపాలను 90 రోజులు ఉంచుతాం. లింక్‌లు ఎవరికి అందాయో, ప్రైవేట్ సందేశాలను, కాపీ చేసిన లింక్‌లు ఎక్కడ పేస్ట్ అయ్యాయో మేము చూడలేం.",
+      accept: "గణాంకాలను అనుమతించండి",
+      reject: "గణాంకాలను తిరస్కరించండి",
+      settings: "కుకీ సెట్టింగ్‌లు",
+      details: "గోప్యతా ప్రకటన చదవండి",
+      enabled: "గణాంకాలు ఇప్పుడు ఆన్‌లో ఉన్నాయి.",
+      disabled: "గణాంకాలు ఇప్పుడు ఆఫ్‌లో ఉన్నాయి.",
+      signal: "మీ బ్రౌజర్ గోప్యతా ప్రాధాన్యతను పంపుతోంది, కాబట్టి గణాంకాలు ఆఫ్‌లోనే ఉంటాయి."
+    },
     ha: {
       title: "Kukis da sirrinka",
       body: "Da izininka, muna amfani da ma'ajiyar burauza don auna ziyarori, kayan da aka yi amfani da su, hanyoyin rabawa da ziyarorin da suka fito daga hanyoyin haɗin da aka raba. Rahotanni na iya nuna ƙasarka da gidan yanar gizon da ya kawo ka nan. Muna adana bayanan ayyuka na tsawon kwanaki 90. Ba za mu iya ganin waɗanda suka karɓa ba, ko saƙonni na sirri, ko inda aka liƙa hanyoyin haɗin da aka kwafa.",

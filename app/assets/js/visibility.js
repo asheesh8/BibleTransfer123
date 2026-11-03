@@ -73,6 +73,8 @@
     run: ['run-text-runbsb'],
     sna: ['sna-text-snaibs'],
     spa: ['spa-text-sparv09'],                                   // Reina-Valera 1909
+    tgl: ['tgl-text-tgltab'],                                    // Ang Dating Biblia (1905)
+    tel: ['tel-text-telotb'],                                    // Telugu Indian Revised Version (the BSI Bible is audio only)
     swh: ['swh-text-swhulb'],
     tir: ['tir-text-tirtbi'],
     urd: ['urd-text-urdpnt'],                                    // Kitáb i Muqaddas
