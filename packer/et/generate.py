@@ -311,12 +311,19 @@ def vercel(registry):
     config = (ROOT / "vercel.json").read_text(encoding="utf-8")
     block = re.search(r'(  "rewrites": \[\n)(.*?)(\n  \])', config, re.S)
     language_pages = {"/%s/index.html" % e["slug"] for e in registry["languages"]}
-    kept = [line for line in block.group(2).split(",\n")
-            if REWRITE.search(line) and REWRITE.search(line).group(2) not in language_pages]
     rows = []
     for entry in registry["languages"]:
         for path in [entry["slug"]] + entry["aliases"] + entry.get("stubs", []):
             rows.append('    { "source": "/%s", "destination": "/%s/index.html" }' % (path, entry["slug"]))
+    # A kept rewrite is dropped when it repeats one, or when a language now owns
+    # its path (a library split into a chooser leaves its old rows behind).
+    taken = {REWRITE.search(row).group(1) for row in rows}
+    kept, seen = [], set()
+    for line in block.group(2).split(",\n"):
+        m = REWRITE.search(line)
+        if m and m.group(2) not in language_pages and m.group(1) not in taken | seen:
+            kept.append(line)
+            seen.add(m.group(1))
     config = config[:block.start(2)] + ",\n".join(kept + rows) + config[block.end(2):]
     slugs = "|".join(e["slug"] for e in registry["languages"])
     config, count = re.subn(r'"source": "/:slug\([^)]*\)"', lambda _: '"source": "/:slug(%s)"' % slugs, config)

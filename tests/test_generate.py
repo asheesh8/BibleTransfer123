@@ -49,6 +49,15 @@ class Generated(unittest.TestCase):
         for path in ("/admin", "/admin/library", "/privacy", "/share-libraries"):
             self.assertIn('"source": "%s"' % path, vercel)
 
+    def test_vercel_sends_each_url_to_one_page(self):
+        # A path listed twice goes wherever the first row says; after the Hindko
+        # split /hno still went to the /hindko chooser that way.
+        import re
+        sources = re.findall(r'"source": "(/[^":]*)", "destination"', (ROOT / "vercel.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(sources), len(set(sources)))
+        self.assertIn('{ "source": "/hno", "destination": "/northern-hindko/index.html" }',
+                      (ROOT / "vercel.json").read_text(encoding="utf-8"))
+
     def test_shell_version_follows_shell_contents(self):
         registry = copy.deepcopy(self.registry)
         registry["languages"][0]["lead"] += "!"
