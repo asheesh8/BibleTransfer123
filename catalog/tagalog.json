@@ -1,12 +1,12 @@
 {
- "generated": "DBS rendered Tagalog inventory — 2026-11-03",
+ "generated": "DBS rendered Filipino (Tagalog) inventory — 2026-11-03",
  "languages": {
   "tgl": {
-   "name": "Tagalog",
-   "native": "Tagalog",
+   "name": "Filipino (Tagalog)",
+   "native": "Filipino",
    "region": "Philippines",
    "speakers": "~83 million (with Filipino)",
-   "blurb": "Bibliya, mga pelikula at Kristiyanong audio sa Tagalog (Filipino).",
+   "blurb": "Bibliya, mga pelikula at Kristiyanong audio sa Filipino (Tagalog).",
    "code": "tgl",
    "script": "latn",
    "dir": "ltr",
@@ -20,10 +20,10 @@
    "type": "scripture",
    "title": "Ang Dating Biblia (1905)",
    "native": "Ang Dating Biblia",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/bibles/TGLTAB",
    "org": "British and Foreign Bible Society · American Bible Society",
-   "desc": "Bibliya sa Tagalog. Basahin sa app o iseyb ang PDF, EPUB o HTML.",
+   "desc": "Bibliya sa Filipino. Basahin sa app o iseyb ang PDF, EPUB o HTML.",
    "downloads": [
     {
      "url": "https://bibles.dbs.org/TGLTAB/pdf/TGLTAB.pdf",
@@ -60,10 +60,10 @@
    "type": "scripture",
    "title": "Tagalog Unlocked Literal Bible (ULB)",
    "native": "Banal na Bibliya",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/bibles/TGLULB",
    "org": "Door43 World Missions Community",
-   "desc": "Bibliya sa Tagalog. Basahin sa app o iseyb ang PDF, EPUB o HTML.",
+   "desc": "Bibliya sa Filipino. Basahin sa app o iseyb ang PDF, EPUB o HTML.",
    "downloads": [
     {
      "url": "https://bibles.dbs.org/TGLULB/pdf/TGLULB.pdf",
@@ -96,10 +96,10 @@
    "type": "audio-bible",
    "title": "Magandang Balita Biblia: New Testament",
    "native": "Magandang Balita Biblia: Bagong Tipan",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/bibles/audio/TGLPBS_FCBH_NT_N",
    "org": "Faith Comes By Hearing",
-   "desc": "Bagong Tipan sa Tagalog na audio: 27 aklat, 260 kabanata. Piliin ang aklat at kabanatang gusto mong pakinggan o iseyb.",
+   "desc": "Bagong Tipan sa Filipino na audio: 27 aklat, 260 kabanata. Piliin ang aklat at kabanatang gusto mong pakinggan o iseyb.",
    "downloads": [
     {
      "url": "https://scripture.dbs.org/audio_zip/TGLPBS_FCBH_NT_N.zip",
@@ -158,10 +158,10 @@
    "type": "audio-bible",
    "title": "Ang Dating Biblia: New Testament",
    "native": "Ang Dating Biblia: Bagong Tipan",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/bibles/audio/TGLTAB_ISA_NT_N",
    "org": "Digital Bible Society",
-   "desc": "Bagong Tipan sa Tagalog na audio: 27 aklat, 258 kabanata. Piliin ang aklat at kabanatang gusto mong pakinggan o iseyb.",
+   "desc": "Bagong Tipan sa Filipino na audio: 27 aklat, 258 kabanata. Piliin ang aklat at kabanatang gusto mong pakinggan o iseyb.",
    "downloads": [
     {
      "url": "https://scripture.dbs.org/audio_zip/TGLTAB_ISA_NT_N.zip",
@@ -220,10 +220,10 @@
    "type": "film",
    "title": "JESUS",
    "native": "Hesus",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/video/jesus/tgl_tagalog_jesus",
    "org": "Jesus Film Project",
-   "desc": "Pelikulang batay sa Bibliya, sa Tagalog. Piliin ang bahaging gusto mong panoorin o iseyb.",
+   "desc": "Pelikulang batay sa Bibliya, sa Filipino. Piliin ang bahaging gusto mong panoorin o iseyb.",
    "downloads": [
     {
      "url": "https://video.dbs.org/Jesus/chapters/tgl_tagalog/tgl_jesus_chapter_01_the_beginning_1_jf6101_0_0_low.mp4",
@@ -812,10 +812,10 @@
    "type": "film",
    "title": "Magdalena",
    "native": "Magdalena",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/video/magdalena/tgl_tagalog_magdalena",
    "org": "Jesus Film Project",
-   "desc": "Pelikulang batay sa Bibliya, sa Tagalog.",
+   "desc": "Pelikulang batay sa Bibliya, sa Filipino.",
    "downloads": [
     {
      "url": "https://video.dbs.org/Magdalena/films/tgl_tagalog/tgl_Magdalena_low.mp4",
@@ -846,10 +846,10 @@
    "type": "film",
    "title": "Story of Jesus for Children",
    "native": "Ang Kuwento ni Hesus para sa mga Bata",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/video/storyjesus/tgl_tagalog_story_of_jesus_for_children",
    "org": "Jesus Film Project",
-   "desc": "Pelikulang batay sa Bibliya, sa Tagalog.",
+   "desc": "Pelikulang batay sa Bibliya, sa Filipino.",
    "downloads": [
     {
      "url": "https://video.dbs.org/StoryJesus/films/tgl_tagalog/tgl_Story_of_Jesus_for_Children_low.mp4",
@@ -880,10 +880,10 @@
    "type": "film",
    "title": "The Savior",
    "native": "Ang Tagapagligtas",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/video/savior/tgl_tagalog_the_savior",
    "org": "Jesus Film Project",
-   "desc": "Pelikulang batay sa Bibliya, sa Tagalog.",
+   "desc": "Pelikulang batay sa Bibliya, sa Filipino.",
    "downloads": [
     {
      "url": "https://video.dbs.org/Savior/films/tgl_tagalog/tgl_The_Savior_low.mp4",
@@ -914,10 +914,10 @@
    "type": "film",
    "title": "Creation to Christ",
    "native": "Mula sa Paglikha Hanggang kay Cristo",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/video/c2c/tgl-creation-tagalog",
    "org": "Creation to Christ Stories",
-   "desc": "Pelikulang batay sa Bibliya, sa Tagalog. Piliin ang bahaging gusto mong panoorin o iseyb.",
+   "desc": "Pelikulang batay sa Bibliya, sa Filipino. Piliin ang bahaging gusto mong panoorin o iseyb.",
    "downloads": [
     {
      "url": "https://video.dbs.org/C2C/films/tgl-creation-tagalog/tgl_Creation_To_Christ_PART_1_Tagalog.mp4",
@@ -1012,10 +1012,10 @@
    "type": "film",
    "title": "BibleProject: Book Overviews",
    "native": "BibleProject: Mga Buod ng mga Aklat ng Bibliya",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/video/bp/tgl-tagalog-overview",
    "org": "BibleProject",
-   "desc": "Pelikulang batay sa Bibliya, sa Tagalog. Piliin ang bahaging gusto mong panoorin o iseyb.",
+   "desc": "Pelikulang batay sa Bibliya, sa Filipino. Piliin ang bahaging gusto mong panoorin o iseyb.",
    "downloads": [
     {
      "url": "https://video.dbs.org/BP/videos/tgl-tagalog/Book_Overview_OT/tgl_Tagalog_Old_Testament_Overview_TaNaK___Old_Testament_Overview_OT-024-001_low.mp4",
@@ -1705,10 +1705,10 @@
    "type": "film",
    "title": "BibleProject: Themes",
    "native": "BibleProject: Mga Tema ng Bibliya",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/video/bp/tgl-tagalog-themes",
    "org": "BibleProject",
-   "desc": "Pelikulang batay sa Bibliya, sa Tagalog. Piliin ang bahaging gusto mong panoorin o iseyb.",
+   "desc": "Pelikulang batay sa Bibliya, sa Filipino. Piliin ang bahaging gusto mong panoorin o iseyb.",
    "downloads": [
     {
      "url": "https://video.dbs.org/BP/videos/tgl-tagalog/Theme_Video/tgl_Tagalog_Biblical_Themes_The_Messiah_TH-024-003_low.mp4",
@@ -1768,10 +1768,10 @@
    "type": "film",
    "title": "LUMO: The Gospel of Matthew",
    "native": "LUMO: Ang Ebanghelyo ayon kay Mateo",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/video/lumo-matthew/tgl_tagalog_matthew",
    "org": "LUMO Project",
-   "desc": "Pelikulang batay sa Bibliya, sa Tagalog. Piliin ang bahaging gusto mong panoorin o iseyb.",
+   "desc": "Pelikulang batay sa Bibliya, sa Filipino. Piliin ang bahaging gusto mong panoorin o iseyb.",
    "downloads": [
     {
      "url": "https://video.dbs.org/Lumo-Matthew/films_low/tgl_Tagalog_Matthew_Magandang-Balita-Biblia_low/tgl_LUMO_Tagalog_Matthew_Magandang-Balita-Biblia_01_360.mp4",
@@ -2047,10 +2047,10 @@
    "type": "film",
    "title": "LUMO: The Covenant",
    "native": "LUMO: Ang Tipan",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/video/lumo-covenant/tgl_tagalog_covenant",
    "org": "LUMO Project",
-   "desc": "Pelikulang batay sa Bibliya, sa Tagalog. Piliin ang bahaging gusto mong panoorin o iseyb.",
+   "desc": "Pelikulang batay sa Bibliya, sa Filipino. Piliin ang bahaging gusto mong panoorin o iseyb.",
    "downloads": [
     {
      "url": "https://video.dbs.org/Lumo-Covenant/films_low/tgl_Tagalog_Covenant_Magandang-Balita-Biblia/tgl_Covenant_Tagalog_Magandang-Balita-Biblia_01_360.mp4",
@@ -2186,10 +2186,10 @@
    "type": "film",
    "title": "Days of Creation",
    "native": "Ang mga Araw ng Paglikha",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/video/creation/tgl_tagalog_creation",
    "org": "Days of Creation",
-   "desc": "Pelikulang batay sa Bibliya, sa Tagalog.",
+   "desc": "Pelikulang batay sa Bibliya, sa Filipino.",
    "downloads": [
     {
      "url": "https://download.dbs.org/Creation/tgl_tagalog_creation.zip",
@@ -2219,10 +2219,10 @@
    "type": "film",
    "title": "The HOPE",
    "native": "Ang Pag-asa",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/video/hope/tgl_tagalog_the_hope",
    "org": "Mars Hill Productions",
-   "desc": "Pelikulang batay sa Bibliya, sa Tagalog.",
+   "desc": "Pelikulang batay sa Bibliya, sa Filipino.",
    "downloads": [
     {
      "url": "https://download.dbs.org/HOPE/tgl_tagalog_the_hope.zip",
@@ -2257,10 +2257,10 @@
    "type": "film",
    "title": "iBible: Salvation Story",
    "native": "iBible: Ang Tunay na Kwento ni Jesus",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/video/ibible/tgl-tagalog-ibible_salvation",
    "org": "RevelationMedia",
-   "desc": "Pelikulang batay sa Bibliya, sa Tagalog.",
+   "desc": "Pelikulang batay sa Bibliya, sa Filipino.",
    "downloads": [
     {
      "url": "https://download.dbs.org/ibible/tgl-tagalog-ibible_salvation.zip",
@@ -2295,10 +2295,10 @@
    "type": "film",
    "title": "The Visual Bible: Matthew",
    "native": "Ang Bibliya sa Pelikula: Mateo",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/video/matthew/tgl-matthew-vb-tagalog",
    "org": "Visual Bible Int.",
-   "desc": "Pelikulang batay sa Bibliya, sa Tagalog. Piliin ang bahaging gusto mong panoorin o iseyb.",
+   "desc": "Pelikulang batay sa Bibliya, sa Filipino. Piliin ang bahaging gusto mong panoorin o iseyb.",
    "downloads": [
     {
      "url": "https://video.dbs.org/Matthew/chapters/tgl-matthew-vb-tagalog/tgl-matthew-vb-tagalog-chapter-01.mp4",
@@ -2582,10 +2582,10 @@
    "type": "film",
    "title": "The Visual Bible: Acts",
    "native": "Ang Bibliya sa Pelikula: Mga Gawa",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/video/acts_vb/tgl-acts-vb-tagalog",
    "org": "Visual Bible Int.",
-   "desc": "Pelikulang batay sa Bibliya, sa Tagalog. Piliin ang bahaging gusto mong panoorin o iseyb.",
+   "desc": "Pelikulang batay sa Bibliya, sa Filipino. Piliin ang bahaging gusto mong panoorin o iseyb.",
    "downloads": [
     {
      "url": "https://video.dbs.org/Acts_VB/chapters/tgl-acts-vb-tagalog/tgl-acts-vb-tagalog-chapter-01.mp4",
@@ -2869,10 +2869,10 @@
    "type": "film",
    "title": "Rescue Project Deaf Gospel",
    "native": "Ang Ebanghelyo para sa mga Bingi",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/video/deafproject/tgl_tagalog_rescue_project_deaf_gospel",
    "org": "Jesus Film Project",
-   "desc": "Ang Ebanghelyo para sa mga bingi, sa wikang pasenyas, na may Tagalog.",
+   "desc": "Ang Ebanghelyo para sa mga bingi, sa wikang pasenyas, na may Filipino.",
    "downloads": [
     {
      "url": "https://video.dbs.org/DeafProject/films/tgl_tagalog/tgl_Rescue_Project_Deaf_Gospel_low.mp4",
@@ -2903,10 +2903,10 @@
    "type": "film",
    "title": "King of Glory",
    "native": "Hari ng Kaluwalhatian",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/video/rock/fil-filipino",
    "org": "King of Glory",
-   "desc": "Pelikulang batay sa Bibliya, sa Tagalog. Piliin ang bahaging gusto mong panoorin o iseyb.",
+   "desc": "Pelikulang batay sa Bibliya, sa Filipino. Piliin ang bahaging gusto mong panoorin o iseyb.",
    "downloads": [
     {
      "url": "https://video.dbs.org/ROCK/films/fil-filipino/fil-filipino_hari_ng_kaluwalhatian_the_king_foretells_his_plan_part1_low.mp4",
@@ -2956,10 +2956,10 @@
    "type": "audio",
    "title": "A Christian Life (dialogue)",
    "native": "Buhay Kristiyano (usapan)",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/audio/collections/tgl_GlobalRecordings_tagalog",
    "org": "Global Recordings Network",
-   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Tagalog, inirekord ng Global Recordings Network.",
+   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Filipino, inirekord ng Global Recordings Network.",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/tgl_GlobalRecordings_tagalog/Tagalog/Tagalog%20A%20Christian%20Life%20-%20dialogue%2063187/Tagalog%20A%20Christian%20Life%20-%20dialogue%20001%20Creation%20and%20Redemption%2063187.mp3",
@@ -3046,10 +3046,10 @@
    "type": "audio",
    "title": "Good News",
    "native": "Mabuting Balita",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/audio/collections/tgl_GlobalRecordings_tagalog",
    "org": "Global Recordings Network",
-   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Tagalog, inirekord ng Global Recordings Network.",
+   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Filipino, inirekord ng Global Recordings Network.",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/tgl_GlobalRecordings_tagalog/Tagalog/Tagalog%20Good%20News%2017170/Tagalog%20Good%20News%20001%20Picture%201%20In%20the%20Beginning%2017170.mp3",
@@ -3433,10 +3433,10 @@
    "type": "audio",
    "title": "LLL 1 Beginning with GOD",
    "native": "Tumingin, Makinig at Mabuhay 1: Ang Pasimula Kasama ang Diyos",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/audio/collections/tgl_GlobalRecordings_tagalog",
    "org": "Global Recordings Network",
-   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Tagalog, inirekord ng Global Recordings Network.",
+   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Filipino, inirekord ng Global Recordings Network.",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/tgl_GlobalRecordings_tagalog/Tagalog/Tagalog%20LLL%201%20Ang%20Pasimula%20Kasama%20ang%20Diyos%2074730/Tagalog%20LLL%201%20Ang%20Pasimula%20Kasama%20ang%20Diyos%20001%20Picture%201%20Adam%20and%20the%20Animals%2074730.mp3",
@@ -3676,10 +3676,10 @@
    "type": "audio",
    "title": "LLL 2 Mighty Men of GOD",
    "native": "Tumingin, Makinig at Mabuhay 2: Ang Magigiting na Lingkod ng Diyos",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/audio/collections/tgl_GlobalRecordings_tagalog",
    "org": "Global Recordings Network",
-   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Tagalog, inirekord ng Global Recordings Network.",
+   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Filipino, inirekord ng Global Recordings Network.",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/tgl_GlobalRecordings_tagalog/Tagalog/Tagalog%20LLL%202%20Ang%20Magigiting%20na%20Lingkod%20ng%20Diyos%2074731/Tagalog%20LLL%202%20Ang%20Magigiting%20na%20Lingkod%20ng%20Diyos%20001%20Introduction%20Picture%201%20The%20Two%20Broth%2074731.mp3",
@@ -3919,10 +3919,10 @@
    "type": "audio",
    "title": "LLL 3 Victory through GOD",
    "native": "Tumingin, Makinig at Mabuhay 3: Tagumpay sa pamamagitan ng Diyos",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/audio/collections/tgl_GlobalRecordings_tagalog",
    "org": "Global Recordings Network",
-   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Tagalog, inirekord ng Global Recordings Network.",
+   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Filipino, inirekord ng Global Recordings Network.",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/tgl_GlobalRecordings_tagalog/Tagalog/Tagalog%20LLL%203%20Tagumpay%20sa%20pamamagitan%20ng%20Diyos%2066683/Tagalog%20LLL%203%20Tagumpay%20sa%20pamamagitan%20ng%20Diyos%20001%20Introduction%2066683.mp3",
@@ -4171,10 +4171,10 @@
    "type": "audio",
    "title": "LLL 4 Servants of GOD",
    "native": "Tumingin, Makinig at Mabuhay 4: Ang mga Lingkod ng Diyos",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/audio/collections/tgl_GlobalRecordings_tagalog",
    "org": "Global Recordings Network",
-   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Tagalog, inirekord ng Global Recordings Network.",
+   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Filipino, inirekord ng Global Recordings Network.",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/tgl_GlobalRecordings_tagalog/Tagalog/Tagalog%20LLL%204%20Ang%20mga%20alagad%20ng%20Diyos%2066684/Tagalog%20LLL%204%20Ang%20mga%20alagad%20ng%20Diyos%20001%20Title%20Introduction%2066684.mp3",
@@ -4423,10 +4423,10 @@
    "type": "audio",
    "title": "LLL 5 On Trial for GOD",
    "native": "Tumingin, Makinig at Mabuhay 5: Nililitis Dahil sa Diyos",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/audio/collections/tgl_GlobalRecordings_tagalog",
    "org": "Global Recordings Network",
-   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Tagalog, inirekord ng Global Recordings Network.",
+   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Filipino, inirekord ng Global Recordings Network.",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/tgl_GlobalRecordings_tagalog/Tagalog/Tagalog%20LLL%205%20Ang%20Hamon%20para%20sa%20Diyos%2065085/Tagalog%20LLL%205%20Ang%20Hamon%20para%20sa%20Diyos%20001%20Title%20Introduction%2065085.mp3",
@@ -4675,10 +4675,10 @@
    "type": "audio",
    "title": "LLL 6 JESUS - Teacher Healer",
    "native": "Tumingin, Makinig at Mabuhay 6: Si Hesus, Guro at Manggagamot",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/audio/collections/tgl_GlobalRecordings_tagalog",
    "org": "Global Recordings Network",
-   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Tagalog, inirekord ng Global Recordings Network.",
+   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Filipino, inirekord ng Global Recordings Network.",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/tgl_GlobalRecordings_tagalog/Tagalog/Tagalog%20LLL%206%20Si%20Hesus%20Ang%20Tagapagturo%2065086/Tagalog%20LLL%206%20Si%20Hesus%20Ang%20Tagapagturo%20001%20Introduction%2065086.mp3",
@@ -4927,10 +4927,10 @@
    "type": "audio",
    "title": "LLL 7 JESUS - Lord Saviour",
    "native": "Tumingin, Makinig at Mabuhay 7: Si Hesus, Panginoon at Tagapagligtas",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/audio/collections/tgl_GlobalRecordings_tagalog",
    "org": "Global Recordings Network",
-   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Tagalog, inirekord ng Global Recordings Network.",
+   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Filipino, inirekord ng Global Recordings Network.",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/tgl_GlobalRecordings_tagalog/Tagalog/Tagalog%20LLL%207%20Si%20Hesus%20Panginoon%20at%20Tagapagligtas%2066913/Tagalog%20LLL%207%20Si%20Hesus%20Panginoon%20at%20Tagapagligtas%20001%20Title%2066913.mp3",
@@ -5197,10 +5197,10 @@
    "type": "audio",
    "title": "LLL 8 Acts of the HOLY SPIRIT",
    "native": "Tumingin, Makinig at Mabuhay 8: Ang mga Gawa ng Banal na Espiritu",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/audio/collections/tgl_GlobalRecordings_tagalog",
    "org": "Global Recordings Network",
-   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Tagalog, inirekord ng Global Recordings Network.",
+   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Filipino, inirekord ng Global Recordings Network.",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/tgl_GlobalRecordings_tagalog/Tagalog/Tagalog%20LLL%208%20Ang%20Mga%20Gawa%20ng%20Banal%20na%20Espiritu%2066914/Tagalog%20LLL%208%20Ang%20Mga%20Gawa%20ng%20Banal%20na%20Espiritu%20001%20Introduction%2066914.mp3",
@@ -5449,10 +5449,10 @@
    "type": "audio",
    "title": "Portrait of Jesus",
    "native": "Larawan ni Hesus",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/audio/collections/tgl_GlobalRecordings_tagalog",
    "org": "Global Recordings Network",
-   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Tagalog, inirekord ng Global Recordings Network.",
+   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Filipino, inirekord ng Global Recordings Network.",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/tgl_GlobalRecordings_tagalog/Tagalog/Tagalog%20Portrait%20of%20Jesus%2033880/Tagalog%20Portrait%20of%20Jesus%20001%20Portrait%20of%20Jesus%20-%20part%201%2033880.mp3",
@@ -5584,10 +5584,10 @@
    "type": "audio",
    "title": "Words of Life 1",
    "native": "Mga Salita ng Buhay 1",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/audio/collections/tgl_GlobalRecordings_tagalog",
    "org": "Global Recordings Network",
-   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Tagalog, inirekord ng Global Recordings Network.",
+   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Filipino, inirekord ng Global Recordings Network.",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/tgl_GlobalRecordings_tagalog/Tagalog/Tagalog%20Words%20of%20Life%201%2002860/Tagalog%20Words%20of%20Life%201%20001%20Open%20My%20Eyes%2002860.mp3",
@@ -5773,10 +5773,10 @@
    "type": "audio",
    "title": "Words of Life 2",
    "native": "Mga Salita ng Buhay 2",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/audio/collections/tgl_GlobalRecordings_tagalog",
    "org": "Global Recordings Network",
-   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Tagalog, inirekord ng Global Recordings Network.",
+   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Filipino, inirekord ng Global Recordings Network.",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/tgl_GlobalRecordings_tagalog/Tagalog/Tagalog%20Words%20of%20Life%202%2002861/Tagalog%20Words%20of%20Life%202%20001%20No%20Language%20Music%2002861.mp3",
@@ -5971,10 +5971,10 @@
    "type": "audio",
    "title": "Words of Life for Children",
    "native": "Mga Salita ng Buhay para sa mga Bata",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/audio/collections/tgl_GlobalRecordings_tagalog",
    "org": "Global Recordings Network",
-   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Tagalog, inirekord ng Global Recordings Network.",
+   "desc": "Mga kuwento sa Bibliya at Kristiyanong mensahe sa Filipino, inirekord ng Global Recordings Network.",
    "downloads": [
     {
      "url": "https://media.dbs.org/audio/grn/tgl_GlobalRecordings_tagalog/Tagalog/Tagalog%20Words%20of%20Life%20for%20Children%2002871/Tagalog%20Words%20of%20Life%20for%20Children%20001%20A%20New%20Heart%2002871.mp3",
@@ -6151,7 +6151,7 @@
    "type": "audio",
    "title": "Story of Jesus",
    "native": "Ang Kuwento ni Hesus (audio)",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/audio/collections/tgl_StoryJesus_tagalog",
    "org": "Story of Jesus",
    "desc": "Ang kuwento ni Hesus sa audio: isang buong recording o 7 bahagi. Pakinggan o iseyb ang gusto mo.",
@@ -6257,7 +6257,7 @@
    "type": "audio",
    "title": "StoryRunners Bible story set",
    "native": "Mga Kuwento sa Bibliya",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/audio/collections/tgl_storyset_tagalog",
    "org": "StoryRunners",
    "desc": "43 kuwento sa Bibliya, mula sa paglikha hanggang sa bagong langit at bagong lupa, inirekord ng StoryRunners.",
@@ -6675,7 +6675,7 @@
    "type": "historic",
    "title": "Tagalog (1933) Ang Bagon Tipan New Testament",
    "native": "Ang Bagong Tipan (1933)",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/bibles/historic/Tagalog-1933-Ang-Bagon-Tipan-New-Testament",
    "org": "Digital Bible Society",
    "desc": "Lumang limbag na edisyon, na-scan bilang PDF. Maaaring iba ang baybay ng ilang salita ngayon.",
@@ -6703,7 +6703,7 @@
    "type": "historic",
    "title": "Tagalog (1978) Genesis Portion",
    "native": "Aklat ng Genesis (1978)",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/bibles/historic/Tagalog-1978-Genesis-Portion-Ang-Kasaysay-ng-Paglikha",
    "org": "Digital Bible Society",
    "desc": "Lumang limbag na edisyon, na-scan bilang PDF. Maaaring iba ang baybay ng ilang salita ngayon.",
@@ -6731,7 +6731,7 @@
    "type": "historic",
    "title": "Tagalog John (Book)",
    "native": "Ang Ebanghelyo ayon kay Juan (aklat)",
-   "langName": "Tagalog",
+   "langName": "Filipino",
    "source": "https://dbs.org/bibles/historic/Tagalog-John-book",
    "org": "Digital Bible Society",
    "desc": "Lumang limbag na edisyon, na-scan bilang PDF. Maaaring iba ang baybay ng ilang salita ngayon.",
