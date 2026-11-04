@@ -116,10 +116,10 @@ window.ET.module('help', ['core', 'ui/shell', 'i18n'], function (ET) {
   ];
 
   function render() {
-    var out = '<a class="et-tile" href="' + ET.esc(ET.scopedUrl('save-guide.html')) + '" lang="en" dir="ltr">' +
+    var out = '<a class="et-tile" href="' + ET.esc(ET.scopedUrl('save-guide.html')) + '">' +
       '<span class="et-tile__icon">' + ET.icon('laptop') + '</span>' +
-      '<span class="et-tile__text"><span class="et-tile__title">Save to your computer</span>' +
-      '<span class="et-tile__sub">Screenshot guide · English · Mac + Windows</span></span>' +
+      '<span class="et-tile__text"><span class="et-tile__title">' + ET.i18n.h('sg.tile') + '</span>' +
+      '<span class="et-tile__sub">' + ET.i18n.h('sg.tile.sub') + '</span></span>' +
       '<span class="et-tile__end">' + ET.icon('chev') + '</span></a>';
     // Three short walkthroughs: sharing on Facebook, by email and on WhatsApp.
     out += '<section class="et-card share-videos" aria-labelledby="share-videos-title"><h2 id="share-videos-title">' +

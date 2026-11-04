@@ -9,7 +9,7 @@
    VERSION must change whenever the shell changes, or an installed copy keeps
    serving the old one. packer/et/generate.py (`npm run generate`) sets it from a
    hash of every SHELL file, and `easytransfer build` stamps card copies. */
-var VERSION = 'shell-f1d47edbc31a';
+var VERSION = 'shell-0cd01591cd02';
 
 var SHELL = [
   'index.html', 'library.html', 'item.html', 'share.html', 'help.html', 'nearby.html',
@@ -96,18 +96,14 @@ var SHELL = [
   'gusii/index.html', 'ekegusii/index.html', 'kisii/index.html', 'data/catalog-guz.js', 'data/catalog-guz-shelf.js',
   'maasai/index.html', 'data/catalog-mas.js', 'data/catalog-mas-shelf.js',
   // generated:languages:end
-  'assets/save-guide/macos/slide-01.webp', 'assets/save-guide/macos/slide-02.webp',
-  'assets/save-guide/macos/slide-03.webp', 'assets/save-guide/macos/slide-04.webp',
-  'assets/save-guide/macos/slide-05.webp', 'assets/save-guide/macos/slide-06.webp',
-  'assets/save-guide/macos/slide-07.webp', 'assets/save-guide/macos/slide-08.webp',
-  'assets/save-guide/macos/slide-09.webp', 'assets/save-guide/macos/slide-10.webp',
-  'assets/save-guide/macos/slide-11.webp', 'assets/save-guide/macos/slide-12.webp',
-  'assets/save-guide/windows/slide-01.webp', 'assets/save-guide/windows/slide-02.webp',
-  'assets/save-guide/windows/slide-03.webp', 'assets/save-guide/windows/slide-04.webp',
-  'assets/save-guide/windows/slide-05.webp', 'assets/save-guide/windows/slide-06.webp',
-  'assets/save-guide/windows/slide-07.webp', 'assets/save-guide/windows/slide-08.webp',
-  'assets/save-guide/windows/slide-09.webp', 'assets/save-guide/windows/slide-10.webp',
-  'assets/save-guide/windows/slide-11.webp', 'assets/save-guide/windows/slide-12.webp',
+  'assets/save-guide/en/s02.webp', 'assets/save-guide/en/s03.webp',
+  'assets/save-guide/en/s04.webp', 'assets/save-guide/en/s05.webp',
+  'assets/save-guide/en/s06.webp', 'assets/save-guide/en/s07.webp',
+  'assets/save-guide/en/s12.webp', 'assets/save-guide/en/s13.webp',
+  'assets/save-guide/shared/cover.webp', 'assets/save-guide/shared/mac-finder.webp',
+  'assets/save-guide/shared/mac-preview.webp', 'assets/save-guide/shared/win-edge.webp',
+  'assets/save-guide/shared/win-explorer.webp', 'assets/save-guide/shared/zip-mac.webp',
+  'assets/save-guide/shared/zip-win.webp',
   'assets/media/village-server-deployment.jpg'
 ];
 

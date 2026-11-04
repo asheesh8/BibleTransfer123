@@ -261,8 +261,8 @@ window.ET.module('item', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save', 'data
 
     if (canSave) {
       html += '<a class="save-guide-entry" href="' + ET.esc(ET.scopedUrl('save-guide.html', { id: r.id })) +
-        '" lang="en" dir="ltr">' + ET.icon('laptop') +
-        '<span>Save to your computer — screenshot guide <small>(English)</small></span></a>';
+        '">' + ET.icon('laptop') +
+        '<span>' + ET.i18n.h('sg.entry.item') + '</span></a>';
     }
 
     var links = (r.links || []).filter(function (link) {

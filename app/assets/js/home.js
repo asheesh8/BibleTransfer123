@@ -143,17 +143,17 @@ window.ET.module('home', ['core', 'ui/shell', 'ui/covers', 'i18n'], function (ET
 
     // ---- headline: the VillageServer deployment film, the first thing on Home, in
     // every language. It lives in the app folder, so a card plays it offline.
-    out += '<section class="hero-card headline" lang="en" dir="ltr">' +
-      '<video controls playsinline preload="none" poster="assets/media/village-server-deployment.jpg">' +
+    out += '<section class="hero-card headline">' +
+      '<video lang="en" controls playsinline preload="none" poster="assets/media/village-server-deployment.jpg">' +
       '<source src="assets/media/village-server-deployment.mp4" type="video/mp4"></video>' +
       '<span class="cap"><span class="kicker">VillageServer Initiative</span>' +
-      '<h2>Village Server deployment</h2>' +
-      '<span class="sub">Film · 6 min</span></span></section>';
+      '<h2>' + ET.i18n.h('home.vs.title') + '</h2>' +
+      '<span class="sub">' + ET.i18n.h('home.vs.sub') + '</span></span></section>';
 
-    out += '<a class="et-tile desk-only" href="' + ET.esc(ET.scopedUrl('save-guide.html')) + '" lang="en" dir="ltr">' +
+    out += '<a class="et-tile desk-only" href="' + ET.esc(ET.scopedUrl('save-guide.html')) + '">' +
       '<span class="et-tile__icon">' + ET.icon('laptop') + '</span>' +
-      '<span class="et-tile__text"><span class="et-tile__title">Save to your computer</span>' +
-      '<span class="et-tile__sub">Screenshot guide · English · Mac + Windows</span></span>' +
+      '<span class="et-tile__text"><span class="et-tile__title">' + ET.i18n.h('sg.tile') + '</span>' +
+      '<span class="et-tile__sub">' + ET.i18n.h('sg.tile.sub') + '</span></span>' +
       '<span class="et-tile__end">' + ET.icon('chev') + '</span></a>';
 
     // ---- carry on

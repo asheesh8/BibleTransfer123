@@ -375,8 +375,14 @@ window.ET.module('data/onboarding-strings', ['core'], function (ET) {
       'Laiburari yao igo ere tayari!', 'Igora laiburari yane'],
     // Maa: only lines a reviewer has a model for; the rest stay English
     // until a Maa speaker fills them in (docs/TRANSLATION-HANDOFF.md).
-    mas: ['Supa! Nanu Kandili.', null, null, null, null,
-      'Kainyoo iyieu taata?']
+    mas: ['Supa! Nanu Kandili.', 'Enkata {n} te {total}', 'Aibelekenyu', 'Aigil', 'Aitoki',
+      'Kainyoo iyieu taata?', 'Ingor ifilim e Biblia', 'Ining Biblia', 'Isom Biblia', 'Ining inkatitin o inkiteng\'enat e Biblia', 'Kiti te pooki',
+      '{n} etii', 'Ishilu sidai!',
+      'Kanu iingira intaneti?', 'Wi-Fi anaa data kumok', 'Data kiti', 'Meingira',
+      'Sidai! Ishum kiti taata, ore ing\'ar ilchoreta oomeeta data.',
+      'Ishum nabo te Wi-Fi, ore ing\'ar te esimu o esimu. Meyieu ilchoreta lino data.',
+      'Meeta enaishoo. Eidim olchore airriwaa ifilim o Biblia te esimu ino meeta intaneti.',
+      'Ikeper!', 'Ibol BibleTransfer123']
   };
 
   var table = {};

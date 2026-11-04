@@ -526,8 +526,8 @@ window.ET.module('library', ['core', 'ui/shell', 'ui/covers', 'i18n', 'save'], f
   // Language landing pages use this script too, with a smaller HTML shell.
   if (!saveGuide && ET.$('#bulk-controls')) {
     ET.$('#bulk-controls').insertAdjacentHTML('afterend',
-      '<a class="save-guide-entry" id="library-save-guide" href="save-guide.html#step-12" lang="en" dir="ltr">' +
-      '<span id="save-guide-ico"></span><span>Saving on Mac or Windows? See the screenshot guide <small>(English)</small></span></a>');
+      '<a class="save-guide-entry" id="library-save-guide" href="save-guide.html#step-12">' +
+      '<span id="save-guide-ico"></span><span data-i18n="sg.entry.lib">' + ET.i18n.h('sg.entry.lib') + '</span></a>');
     saveGuide = ET.$('#library-save-guide');
   }
   if (saveGuide) saveGuide.href = ET.scopedUrl('save-guide.html') + '#step-12';

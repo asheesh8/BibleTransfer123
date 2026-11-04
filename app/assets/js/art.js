@@ -100,7 +100,7 @@ window.ET.module('art', ['core'], function (ET) {
       '<path d="M24 46l10 10 18-20" stroke="var(--green)" stroke-width="5" ' +
       'stroke-linecap="round" stroke-linejoin="round" fill="none"/>' +
       '<rect x="27" y="88" width="18" height="4" rx="2" fill="var(--line-strong)"/></g>',
-      'Light passing from one phone to another');
+      (ET.i18n && ET.i18n.tOr ? ET.i18n.tOr('art.pass', 'Light passing from one phone to another') : 'Light passing from one phone to another'));
   }
 
   /* Empty search: the lantern looking, and not finding. Deliberately not sad —

@@ -25,25 +25,25 @@
 </script>
 </head>
 <body class="save-guide-page">
-<a class="guide-skip" id="guide-skip" href="#guide-choice">Skip to the guide</a>
+<a class="guide-skip" id="guide-skip" href="#guide-choice" data-i18n="sg.skip">Skip to the guide</a>
 <header class="guide-top">
   <div class="guide-wrap">
-    <a class="guide-brand" href="index.html" id="guide-home">The Library</a>
-    <button class="fchip" id="guide-theme" type="button" aria-label="Switch light or dark appearance">Light / dark</button>
+    <a class="guide-brand" href="index.html" id="guide-home" data-i18n="app.name">The Library</a>
+    <button class="fchip" id="guide-theme" type="button" data-i18n-aria="sg.theme.aria" data-i18n="sg.theme" aria-label="Switch light or dark appearance">Light / dark</button>
   </div>
 </header>
-<main class="guide-wrap" lang="en" dir="ltr">
-  <a class="guide-back" href="library.html" id="guide-back">← Back to the library</a>
+<main class="guide-wrap">
+  <a class="guide-back" href="library.html" id="guide-back" data-i18n="sg.back">← Back to the library</a>
   <div class="guide-heading">
-    <p class="eyebrow">EASY, STEP-BY-STEP HELP</p>
-    <h1 id="guide-heading">Save to your computer</h1>
-    <p class="muted" id="guide-intro">Pick your computer below. We’ll show you what to click, one step at a time.</p>
+    <p class="eyebrow" data-i18n="sg.eyebrow">EASY, STEP-BY-STEP HELP</p>
+    <h1 id="guide-heading" data-i18n="sg.heading">Save to your computer</h1>
+    <p class="muted" id="guide-intro" data-i18n="sg.intro">Pick your computer below. We’ll show you what to click, one step at a time.</p>
   </div>
 
   <section class="guide-choice" id="guide-choice" tabindex="-1" aria-labelledby="guide-choice-title">
-    <h2 id="guide-choice-title">Which one looks like your computer?</h2>
+    <h2 id="guide-choice-title" data-i18n="sg.choice">Which one looks like your computer?</h2>
     <div class="guide-platform-choices">
-      <button class="guide-platform-card guide-platform-mac" type="button" data-guide-platform="macos" aria-controls="guide-path" aria-label="Start Mac guide">
+      <button class="guide-platform-card guide-platform-mac" type="button" data-guide-platform="macos" aria-controls="guide-path" data-i18n-aria="sg.mac.start" aria-label="Start Mac guide">
         <svg class="guide-computer-picture" viewBox="0 0 320 180" aria-hidden="true" focusable="false">
           <defs><linearGradient id="guide-mac-screen" x2="1" y2="1"><stop stop-color="#332044"/><stop offset="1" stop-color="#8D609D"/></linearGradient></defs>
           <rect x="47" y="12" width="226" height="142" rx="12" fill="#BFC4CB"/>
@@ -55,10 +55,10 @@
           <path d="M25 169h270" stroke="#9FA7B2" stroke-width="2"/>
         </svg>
         <strong class="guide-platform-name">Mac</strong>
-        <span class="guide-platform-description">Apple computers<br>MacBook or iMac</span>
-        <span class="guide-platform-cta">Start Mac guide <span aria-hidden="true">→</span></span>
+        <span class="guide-platform-description"><span data-i18n="sg.mac.desc">Apple computers</span><br><span data-i18n="sg.mac.desc2">MacBook or iMac</span></span>
+        <span class="guide-platform-cta"><span data-i18n="sg.mac.start">Start Mac guide</span> <span aria-hidden="true">→</span></span>
       </button>
-      <button class="guide-platform-card guide-platform-windows" type="button" data-guide-platform="windows" aria-controls="guide-path" aria-label="Start Windows guide">
+      <button class="guide-platform-card guide-platform-windows" type="button" data-guide-platform="windows" aria-controls="guide-path" data-i18n-aria="sg.win.start" aria-label="Start Windows guide">
         <svg class="guide-computer-picture" viewBox="0 0 320 180" aria-hidden="true" focusable="false">
           <defs><linearGradient id="guide-windows-screen" x2="1" y2="1"><stop stop-color="#092E61"/><stop offset="1" stop-color="#1BADE6"/></linearGradient></defs>
           <rect x="47" y="12" width="226" height="142" rx="9" fill="#525C6B"/>
@@ -70,15 +70,15 @@
           <path d="M25 169h270" stroke="#455164" stroke-width="2"/>
         </svg>
         <strong class="guide-platform-name">Windows</strong>
-        <span class="guide-platform-description">Windows computers<br>Dell, HP, Lenovo, Surface, and more</span>
-        <span class="guide-platform-cta">Start Windows guide <span aria-hidden="true">→</span></span>
+        <span class="guide-platform-description"><span data-i18n="sg.win.desc">Windows computers</span><br><span data-i18n="sg.win.desc2">Dell, HP, Lenovo, Surface, and more</span></span>
+        <span class="guide-platform-cta"><span data-i18n="sg.win.start">Start Windows guide</span> <span aria-hidden="true">→</span></span>
       </button>
     </div>
-    <p class="guide-choice-reassurance"><span class="guide-example-circle" aria-hidden="true"></span>Pictures show each step. Gold circles show you where to click.</p>
+    <p class="guide-choice-reassurance"><span class="guide-example-circle" aria-hidden="true"></span><span data-i18n="sg.reassure">Pictures show each step. Gold circles show you where to click.</span></p>
 
     <section class="guide-phone-choice" aria-labelledby="guide-phone-title">
-      <h2 id="guide-phone-title">Using a phone or tablet?</h2>
-      <p class="muted">Choose your phone for help finding files you have saved.</p>
+      <h2 id="guide-phone-title" data-i18n="sg.phone.title">Using a phone or tablet?</h2>
+      <p class="muted" data-i18n="sg.phone.sub">Choose your phone for help finding files you have saved.</p>
       <div class="guide-phone-choices">
         <a class="guide-phone-card" href="help.html#phone-apple" id="guide-phone-apple">
           <svg class="guide-phone-picture" viewBox="0 0 160 164" aria-hidden="true" focusable="false">
@@ -89,9 +89,9 @@
             <rect x="43" y="18" width="29" height="8" rx="4" fill="#D4D7DD"/>
             <path transform="translate(37 62) scale(1.65)" fill="#FFFFFF" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/>
           </svg>
-          <strong>iPhone or iPad</strong>
+          <strong data-i18n="sg.phone.apple">iPhone or iPad</strong>
           <span class="guide-phone-description">Apple</span>
-          <span class="guide-phone-cta">Find my saved files <span aria-hidden="true">→</span></span>
+          <span class="guide-phone-cta"><span data-i18n="sg.phone.cta">Find my saved files</span> <span aria-hidden="true">→</span></span>
         </a>
         <a class="guide-phone-card" href="help.html#phone-samsung" id="guide-phone-samsung">
           <svg class="guide-phone-picture" viewBox="0 0 160 164" aria-hidden="true" focusable="false">
@@ -102,8 +102,8 @@
             <text x="80" y="83" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="12" font-weight="800" letter-spacing=".5">SAMSUNG</text>
           </svg>
           <strong>Samsung</strong>
-          <span class="guide-phone-description">Galaxy phone or tablet</span>
-          <span class="guide-phone-cta">Find my saved files <span aria-hidden="true">→</span></span>
+          <span class="guide-phone-description" data-i18n="sg.phone.samsung">Galaxy phone or tablet</span>
+          <span class="guide-phone-cta"><span data-i18n="sg.phone.cta">Find my saved files</span> <span aria-hidden="true">→</span></span>
         </a>
         <a class="guide-phone-card" href="help.html#phone-android" id="guide-phone-android">
           <svg class="guide-phone-picture" viewBox="0 0 160 164" aria-hidden="true" focusable="false">
@@ -118,31 +118,31 @@
               <circle cx="69" cy="67" r="2" fill="#14392E" stroke="none"/><circle cx="91" cy="67" r="2" fill="#14392E" stroke="none"/>
             </g>
           </svg>
-          <strong>Other Android</strong>
-          <span class="guide-phone-description">Pixel, Motorola, and more</span>
-          <span class="guide-phone-cta">Find my saved files <span aria-hidden="true">→</span></span>
+          <strong data-i18n="sg.phone.android">Other Android</strong>
+          <span class="guide-phone-description" data-i18n="sg.phone.android.desc">Pixel, Motorola, and more</span>
+          <span class="guide-phone-cta"><span data-i18n="sg.phone.cta">Find my saved files</span> <span aria-hidden="true">→</span></span>
         </a>
       </div>
     </section>
   </section>
 
   <div id="guide-path" hidden>
-  <div class="guide-platform-switch" role="group" aria-label="Choose a different computer">
-    <span>Computer:</span>
+  <div class="guide-platform-switch" role="group" data-i18n-aria="sg.switch.aria" aria-label="Choose a different computer">
+    <span data-i18n="sg.switch">Computer:</span>
     <button class="fchip" type="button" data-guide-platform="macos" aria-pressed="false" aria-controls="guide-path">Mac</button>
     <button class="fchip" type="button" data-guide-platform="windows" aria-pressed="false" aria-controls="guide-path">Windows</button>
   </div>
-  <nav class="guide-sections" aria-label="Jump to a guide section">
-    <a href="#step-2" data-guide-step="2">Website steps</a>
+  <nav class="guide-sections" data-i18n-aria="sg.nav.aria" aria-label="Jump to a part of the guide">
+    <a href="#step-2" data-guide-step="2" data-i18n="sg.nav.web">Website steps</a>
     <a href="#step-8" data-guide-step="8" id="guide-os-link">Find and open your file</a>
-    <a href="#step-12" data-guide-step="12">Several items</a>
-    <a href="#step-14" data-guide-step="14">ZIP files</a>
+    <a href="#step-12" data-guide-step="12" data-i18n="sg.nav.many">Several items</a>
+    <a href="#step-14" data-guide-step="14" data-i18n="sg.nav.zip">ZIP files</a>
   </nav>
 
   <section class="guide-viewer" id="guide-viewer" tabindex="-1" aria-label="Save guide slideshow" aria-roledescription="carousel">
     <div class="guide-toolbar">
       <p id="guide-counter"></p>
-      <button class="fchip" type="button" id="guide-fullscreen" hidden aria-pressed="false">Full screen</button>
+      <button class="fchip" type="button" id="guide-fullscreen" hidden aria-pressed="false" data-i18n="sg.fullscreen">Full screen</button>
     </div>
     <div class="guide-slide" role="group" aria-roledescription="slide" aria-labelledby="guide-title">
       <figure class="guide-picture">
@@ -154,33 +154,33 @@
         <h2 id="guide-title"></h2>
         <p id="guide-body"></p>
         <p class="guide-hint" id="guide-hint"></p>
-        <a id="guide-image-link" target="_blank" rel="noopener">Open full-size slide <span class="guide-small">(new tab)</span></a>
-        <p class="guide-image-error" id="guide-image-error" hidden>The screenshot could not load. You can still follow the instructions here.</p>
+        <a id="guide-image-link" target="_blank" rel="noopener"><span data-i18n="sg.openfull">Open full-size picture</span> <span class="guide-small" data-i18n="sg.newtab">(new tab)</span></a>
+        <p class="guide-image-error" id="guide-image-error" hidden data-i18n="sg.imgerror">The picture could not load. You can still follow the steps written here.</p>
       </div>
     </div>
     <div class="guide-controls">
-      <button class="btn ghost" id="guide-prev" type="button" disabled aria-label="Previous slide">← Previous</button>
-      <label for="guide-step" class="guide-step-label">Go to slide
+      <button class="btn ghost" id="guide-prev" type="button" disabled data-i18n-aria="sg.prev.aria" aria-label="Previous slide" data-i18n="sg.prev">← Previous</button>
+      <label for="guide-step" class="guide-step-label"><span data-i18n="sg.goto">Go to slide</span>
         <select id="guide-step"></select>
       </label>
-      <button class="btn" id="guide-next" type="button" aria-label="Next slide">Next →</button>
+      <button class="btn" id="guide-next" type="button" data-i18n-aria="sg.next.aria" aria-label="Next slide" data-i18n="sg.next">Next →</button>
     </div>
-    <p class="guide-keyboard">Use ← and → on your keyboard. Slides stay put until you choose the next one.</p>
+    <p class="guide-keyboard" data-i18n="sg.keyboard">You can also use the ← and → keys. Slides only move when you choose.</p>
     <p class="guide-sr-only" id="guide-status" role="status" aria-live="polite" aria-atomic="true"></p>
   </section>
   </div>
 
   <details class="guide-notes">
-    <summary>Helpful tips <span class="guide-tip-summary">Before you save</span></summary>
+    <summary><span data-i18n="sg.tips">Helpful tips</span> <span class="guide-tip-summary" data-i18n="sg.tips.sub">Before you save</span></summary>
     <div class="guide-notes-content">
-    <h2>Before you close the tab</h2>
-    <p>Keep it open while the website is saving. With <strong>Save to Downloads</strong>, also check that the browser download has finished. A file saved directly to a chosen folder may bypass the browser’s download list.</p>
-    <p>Several selected items may create several files. Allow multiple downloads if your browser asks, and leave enough space for ZIP files and their extracted contents. EPUB files need a compatible reader.</p>
-    <p>This guide saves content files. To keep a complete offline library from a card, copy the whole card with its folder names intact.</p>
-    <a href="help.html" id="guide-help">More help opening saved files</a>
+    <h2 data-i18n="sg.tips.h">Before you close the tab</h2>
+    <p data-i18n="sg.tips.p1">Keep the tab open while the website is saving. Then check that your browser’s download has finished too. A file saved straight into a folder you chose may not show in the browser’s download list.</p>
+    <p data-i18n="sg.tips.p2">Several items may make several files. If your browser asks, allow it to download more than one file. Leave enough space for ZIP files and the files they unpack. EPUB files need an ebook reader app.</p>
+    <p data-i18n="sg.tips.p3">This guide saves single files. To keep a whole library from a card, copy the whole card and keep its folder names.</p>
+    <a href="help.html" id="guide-help" data-i18n="sg.tips.help">More help opening saved files</a>
     </div>
   </details>
-  <p class="guide-footer"><span id="guide-platform-disclosure"></span> <a href="privacy.html">Privacy and cookie choices</a></p>
+  <p class="guide-footer"><span id="guide-platform-disclosure"></span> <a href="privacy.html" data-i18n="sg.privacy">Privacy and cookie choices</a></p>
   <noscript><p class="note">The slideshow needs JavaScript to move between slides. The download tips above are still available.</p></noscript>
 </main>
 <script>
