@@ -70,12 +70,18 @@ Raise `versionCode` in `android/app/build.gradle` for every upload; Play refuses
 No Mac needed: **Actions → iPhone app to TestFlight** builds on GitHub's Mac and uploads.
 Once the Apple developer account is open:
 
-1. In App Store Connect, **Apps → +**: bundle ID `org.villageservers.library`, SKU `the-library`.
-2. **Users and Access → Integrations → App Store Connect API → +**, access **App Manager**.
-   Download the `.p8` (only once) and note the Key ID and Issuer ID.
-3. Add the repository secrets `APPLE_TEAM_ID` (Membership details), `ASC_KEY_ID`,
-   `ASC_ISSUER_ID` and `ASC_KEY_P8` (the whole `.p8` file).
-4. Run the workflow. The build number is the run number; the version is `MARKETING_VERSION`
+1. At developer.apple.com, **Certificates, Identifiers & Profiles → Identifiers → +**:
+   App IDs, App, description "The Library", explicit bundle ID `org.villageservers.library`.
+   No extra capabilities are needed.
+2. In App Store Connect, **Apps → + → New App**: iOS, name "The Library: Bible and Films",
+   language English (U.S.), bundle ID `org.villageservers.library`, SKU `the-library`.
+3. **Users and Access → Integrations → App Store Connect API → +**, access **Admin**.
+   Admin is needed: the workflow signs with a cloud-managed distribution certificate,
+   which App Manager keys cannot use. Download the `.p8` (only once) and note the Key ID
+   and Issuer ID.
+4. In GitHub, **Settings → Secrets and variables → Actions**, add `APPLE_TEAM_ID`
+   (Membership details), `ASC_KEY_ID`, `ASC_ISSUER_ID` and `ASC_KEY_P8` (the whole `.p8` file).
+5. Run the workflow. The build number is the run number; the version is `MARKETING_VERSION`
    in `ios/App/App.xcodeproj` (1.0.0). Signing is automatic. The build shows in TestFlight in
    about 15 minutes.
 
